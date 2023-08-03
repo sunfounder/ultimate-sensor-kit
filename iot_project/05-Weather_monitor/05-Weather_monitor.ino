@@ -86,7 +86,7 @@ void sendData() {
   sendATCommand("AT+CIPSEND=0," + String(sendData.length() + 4), 1000, DEBUG);       // Send the GET request
   espSerial.find(">");                                                         // Wait for the ">" character from the ESP8266
   espSerial.println(sendData);                                                 // Send the GET request
-  Serial.print(sendData);
+  Serial.println(sendData);
 
   // Print the values
   Serial.println("Value to be sent: ");
