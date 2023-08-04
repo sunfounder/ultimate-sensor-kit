@@ -20,9 +20,9 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-3in1-kit comes with ABSOLUTELY NO WARRANTY; for details run ./show w. This is free software, and you are welcome to redistribute it under certain conditions; run ./show c for details.
+Ultimate Sensor Kit comes with ABSOLUTELY NO WARRANTY; for details run ./show w. This is free software, and you are welcome to redistribute it under certain conditions; run ./show c for details.
 
-SunFounder, Inc., hereby disclaims all copyright interest in the program '3in1-kit' (which makes passes at compilers).
+SunFounder, Inc., hereby disclaims all copyright interest in the program 'Ultimate Sensor Kit' (which makes passes at compilers).
 
 Mike Huang, 21 August 2015
 
