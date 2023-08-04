@@ -1,7 +1,7 @@
 .. _cpn_pir_motion:
 
 PIR Motion Module (HC-SR501)
-==========================
+=====================================
 
 .. image:: img/13_pir_module.png
     :width: 300

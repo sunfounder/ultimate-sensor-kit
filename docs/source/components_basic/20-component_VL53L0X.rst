@@ -1,7 +1,7 @@
 .. _cpn_VL53L0X:
 
 Time of Flight Micro-LIDAR Distance Sensor (VL53L0X)
-==========================
+===============================================================
 
 .. image:: img/20_VL53L0X_module.png
     :width: 350

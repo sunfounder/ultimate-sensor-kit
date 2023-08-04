@@ -1,7 +1,7 @@
 .. _cpn_ir_obstacle:
 
 IR Obstacle Avoidance Sensor Module
-==========================
+=====================================
 
 .. image:: img/09_IR_obstacle_module.png
     :width: 400

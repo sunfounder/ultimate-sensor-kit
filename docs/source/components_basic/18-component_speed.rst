@@ -1,7 +1,7 @@
 .. _cpn_speed:
 
 Infrared Speed Sensor Module (LM393)
-==========================
+=====================================
 
 .. image:: img/18_LM393_module.png
     :width: 300

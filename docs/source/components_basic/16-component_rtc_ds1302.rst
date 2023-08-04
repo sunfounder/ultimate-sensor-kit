@@ -1,7 +1,7 @@
 .. _cpn_rtc_ds1302:
 
 Real Time Clock Module (DS1302)
-==========================
+=====================================
 
 .. image:: img/16_DS1302_module.png
     :width: 400

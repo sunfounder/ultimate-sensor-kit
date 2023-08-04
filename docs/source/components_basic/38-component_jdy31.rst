@@ -1,7 +1,7 @@
 .. _cpn_jdy31:
 
 JDY-31 Bluetooth Module
-=================
+=====================================
 
 .. image:: img/38_JDY31_1.jpg
     :align: center

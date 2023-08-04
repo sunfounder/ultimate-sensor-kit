@@ -1,7 +1,7 @@
 .. _cpn_bmp280:
 
 Temperature, Humidity & Pressure Sensor (BMP280)
-==========================
+===============================================================
 
 .. image:: img/14_gy_bme280_3.3_module.png
     :width: 300

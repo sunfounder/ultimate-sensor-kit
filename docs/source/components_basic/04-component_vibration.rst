@@ -1,7 +1,7 @@
 .. _cpn_vibration:
 
 Vibration Sensor Module (SW-420)
-==========================
+=====================================
 
 .. image:: img/04_sw420_vibration_module.png
     :width: 400

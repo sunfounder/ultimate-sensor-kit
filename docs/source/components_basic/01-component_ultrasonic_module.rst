@@ -1,7 +1,7 @@
 .. _cpn_ultrasonic:
 
 Ultrasonic Sensor Module (HC-SR04)
-================================
+=====================================
 
 .. image:: img/01_ultrasonic.png
     :width: 400

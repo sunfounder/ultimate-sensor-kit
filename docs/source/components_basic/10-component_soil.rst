@@ -1,7 +1,7 @@
 .. _cpn_soil:
 
 Capacitive Soil Moisture Module
-==========================
+=====================================
 
 .. image:: img/10_soil_mositure_module.png
     :width: 600

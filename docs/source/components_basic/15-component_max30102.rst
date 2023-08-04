@@ -1,7 +1,7 @@
 .. _cpn_max30102:
 
 Pulse Oximeter and Heart Rate Sensor (MAX30102)
-==========================
+===============================================================
 
 .. image:: img/15_gy_max30102_module.png
     :width: 300
@@ -18,7 +18,7 @@ The MAX30102 works by shining both lights onto the finger or earlobe (or essenti
 The working of MAX30102 can be divided into two parts: Heart Rate Measurement and Pulse Oximetry (measuring the oxygen level of the blood).
 
 Heart Rate Measurement
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 The oxygenated hemoglobin (HbO2) in the arterial blood has the characteristic of absorbing IR light. The redder the blood (the higher the hemoglobin), the more IR light is absorbed. As the blood is pumped through the finger with each heartbeat, the amount of reflected light changes, creating a changing waveform at the output of the photodetector. As you continue to shine light and take photodetector readings, you quickly start to get a heart-beat (HR) pulse reading.
 
 

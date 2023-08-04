@@ -1,7 +1,7 @@
 .. _cpn_gas:
 
 Gas/Smoke Sensor Module (MQ2) 
-==========================
+=====================================
 
 .. image:: img/02_mq2_gas_module.png
     :width: 350
