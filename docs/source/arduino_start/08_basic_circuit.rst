@@ -146,9 +146,6 @@ About Ohm's law we can do a simple experiment.
 By changing the wire connecting 5V to 3.3V , the LED gets dimmer.
 If you change the resistor from 220ohm to 1000ohm (color ring: brown, black, black, brown, and brown), you will notice that the LED becomes dimmer than before. The larger the resistor, the dimmer the LED.
 
-.. note::
-    For an introduction to resistors and how to calculate resistance values, see :ref:`cpn_resistor`.
-
 Most packaged modules only require access to the proper voltage (usually 3.3V or 5V), such as ultrasonic module.
 
 However, in your self-built circuits, you need to be aware of the supply voltage and resistor usage for electrical devices.
