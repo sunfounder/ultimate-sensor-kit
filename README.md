@@ -12,7 +12,7 @@ Quick Links:
 
 <a id="about_this_kit"></a>
 ## About this kit: 
-ultimate-sensor-kit.rtfd.io
+[SunFounder Ultimate Sensor Kit Tutorials](https://ultimate-sensor-kit.readthedocs.io/en/latest/index.html)
 
 <a id="update"></a>
 ## Update:
