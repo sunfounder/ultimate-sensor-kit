@@ -145,7 +145,7 @@ Connect ESP8266 and SunFounder R3 board.
 
     #. Download firmware and burn-in tool.
 
-        * :download:`ESP8266 Firmware <https://github.com/sunfounder/3in1-kit/raw/main/iot_project/esp8266_firmware.zip>`
+        * :download:`ESP8266 Firmware <https://raw.githubusercontent.com/sunfounder/ultimate-sensor-kit/main/iot_project/esp8266_firmware.zip>`
 
     #. After unzipping, you will see 4 files.
 
@@ -181,7 +181,7 @@ Connect ESP8266 and SunFounder R3 board.
 
     #. Download firmware.
 
-        * :download:`ESP8266 Firmware <https://github.com/sunfounder/3in1-kit/raw/main/iot_project/esp8266_firmware.zip>`
+        * :download:`ESP8266 Firmware <https://raw.githubusercontent.com/sunfounder/ultimate-sensor-kit/main/iot_project/esp8266_firmware.zip>`
 
     #. After unzipping, you will see 3 files.
 
