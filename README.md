@@ -11,7 +11,8 @@ Quick Links:
  * [Contact us](#contact_us)
 
 <a id="about_this_kit"></a>
-## About this kit: ultimate-sensor-kit.rtfd.io
+## About this kit: 
+ultimate-sensor-kit.rtfd.io
 
 <a id="update"></a>
 ## Update:
