@@ -6,7 +6,7 @@ Light control switch
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
-      <source src="/_static/video/fun/03-fun_Light_control_switch.mp4"  type="video/mp4">
+      <source src="../_static/video/fun/03-fun_Light_control_switch.mp4"  type="video/mp4">
       Your browser does not support the video tag.
    </video>
 

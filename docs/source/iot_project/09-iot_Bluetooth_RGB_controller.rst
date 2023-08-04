@@ -7,7 +7,7 @@ Bluetooth RGB controller
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
-      <source src="/_static/video/iot/09-iot_Bluetooth_RGB_controller.mp4"  type="video/mp4">
+      <source src="../_static/video/iot/09-iot_Bluetooth_RGB_controller.mp4"  type="video/mp4">
       Your browser does not support the video tag.
    </video>
 

@@ -6,7 +6,7 @@ Smart trashcan
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
-      <source src="/_static/video/fun/01-fun_Smart_trashcan.mp4"  type="video/mp4">
+      <source src="../_static/video/fun/01-fun_Smart_trashcan.mp4"  type="video/mp4">
       Your browser does not support the video tag.
    </video>
 

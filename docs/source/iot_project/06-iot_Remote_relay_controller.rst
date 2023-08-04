@@ -7,7 +7,7 @@ Remote Relay Controller with Blynk
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
-      <source src="/_static/video/iot/06-iot_Remote_relay_controller.mp4"  type="video/mp4">
+      <source src="../_static/video/iot/06-iot_Remote_relay_controller.mp4"  type="video/mp4">
       Your browser does not support the video tag.
    </video>
 

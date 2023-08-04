@@ -7,7 +7,7 @@ Weather monitor with ThingSpeak
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
-      <source src="/_static/video/iot/05-iot_Weather_monitor.mp4"  type="video/mp4">
+      <source src="../_static/video/iot/05-iot_Weather_monitor.mp4"  type="video/mp4">
       Your browser does not support the video tag.
    </video>
 

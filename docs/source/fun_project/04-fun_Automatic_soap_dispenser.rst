@@ -6,7 +6,7 @@ Automatic soap dispenser
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
-      <source src="/_static/video/fun/04-fun_Automatic_soap_dispenser.mp4"  type="video/mp4">
+      <source src="../_static/video/fun/04-fun_Automatic_soap_dispenser.mp4"  type="video/mp4">
       Your browser does not support the video tag.
    </video>
 

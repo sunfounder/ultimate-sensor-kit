@@ -6,7 +6,7 @@ Gas leak alarm
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
-      <source src="/_static/video/fun/02-fun_Gas_leak_alarm.mp4"  type="video/mp4">
+      <source src="../_static/video/fun/02-fun_Gas_leak_alarm.mp4"  type="video/mp4">
       Your browser does not support the video tag.
    </video>
 
