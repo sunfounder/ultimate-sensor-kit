@@ -4,6 +4,13 @@
 Bluetooth lock controller
 =============================
 
+.. raw:: html
+
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/video/iot/08-iot_Bluetooth_lock_controller.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
 This project uses an Android app created with MIT App Inventor to remotely control a servo motor via Bluetooth, simulating a locking mechanism. Users can command the servo to move to either the "locked" or "unlocked" position by sending specific messages through the app.
 
 The system uses a JDY-31 Bluetooth module to receive these messages and instructs an Arduino Uno board to adjust the servo motor's angle accordingly. The servo transitions to a "locked" position upon receiving the '1' message and to an "unlocked" position upon receipt of the '0' message.
