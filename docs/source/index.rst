@@ -1,6 +1,10 @@
 SunFounder Ultimate Sensor Kit
 ==================================================
 
+.. image:: img/ultimate-sensor-kit-cover.png
+    :width: 800
+
+
 Ever been disappointed by an online learning kit that came with just a basic guide? Have you dreamed of delving into the world of electronics, but felt overwhelmed by the complexity?
 
 Seen brilliant electronic projects showcased by enthusiasts and wondered how they got started?
@@ -19,13 +23,45 @@ Why just be a spectator when you can be a creator? Begin your journey into the c
 
 If you have any questions or other interesting ideas, feel free to send an email to cs@sunfounder.com.
 
+**About the display language**
+
+In addition to English, we are working on other languages for this course. Please contact service@sunfounder.com if you are interested in helping, and we will give you a free product in return. 
+In the meantime, we recommend using Google Translate to convert English to the language you want to see.
+
+The steps are as follows.
+
+* In this course page, right-click and select **Translate to xx**. If the current language is not what you want, you can change it later.
+
+.. image:: img/new/translate1_shadow.png
+    :align: center
+
+* There will be a language popup in the upper right corner. Click on the menu button to **choose another language**.
+
+.. image:: img/new/translate2_shadow.png
+    :align: center
+
+* Select the language from the inverted triangle box, and then click **Done**.
+
+.. image:: img/new/translate3_shadow.png
+    :align: center
+
+.. raw:: html
+    
+    <br/>   <br/>   
+
 **Table of contents**
 
 .. toctree:: 
     :maxdepth: 2
 
     About Ultimate Sensor Kit <self>
-    
+    arduino_start/00_get_start
+    download_code
+    components_basic/00-component_list
+    iot_project/00-iot_project
+    fun_project/fun_project
+    faq/00_faq
+    thank-learning
 
 Copyright Notice
 -----------------------

@@ -1,1 +1,3 @@
-build2
+build*
+*demo.rst
+deprecated
