@@ -205,5 +205,8 @@ rst_epilog = """
 
     <a href="http://javl.github.io/image2cpp/" target="_blank">image2cpp</a>
 
+.. |link_arduino-songs| raw:: html
+
+    <a href="https://github.com/robsoncouto/arduino-songs" target="_blank">robsoncouto/arduino-songs</a>    
 
 """

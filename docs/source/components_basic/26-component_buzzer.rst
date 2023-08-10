@@ -110,7 +110,7 @@ Code explanation
 Additional Ideas
 ^^^^^^^^^^^^^^^^^^^^
 
-- Modify the melody: You can experiment by changing the notes and durations in the ``melody[]`` and ``noteDurations[]`` arrays to create your own tunes.
+- Modify the melody: You can experiment by changing the notes and durations in the ``melody[]`` and ``noteDurations[]`` arrays to create your own tunes. If you are interested, there is a repository (|link_arduino-songs|) on GitHub that provides Arduino code for playing different songs. Although their approach may be different from this project, you can refer to their notes and durations.
 - Add a button: Integrate a push-button to the circuit and modify the code to play the melody when the button is pressed.
 
 More Projects
