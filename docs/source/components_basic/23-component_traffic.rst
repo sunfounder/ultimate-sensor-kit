@@ -111,4 +111,5 @@ Additional Ideas
 
 More Projects
 ---------------------------
+* :ref:`fun_touch_toggle_light`
 * :ref:`iot_Remote_relay_controller`

@@ -145,4 +145,6 @@ Additional Ideas
 - Integrate a temperature sensor and display the current room temperature on the LCD.
 
 
-
+More Projects
+---------------------------
+* :ref:`fun_potentiometer_scale_value`

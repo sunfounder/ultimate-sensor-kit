@@ -111,3 +111,6 @@ Additional Ideas
 - Use the distance data to trigger other components, such as LEDs or buzzers, when an object comes within a specific range.
 
 
+More Projects
+---------------------------
+* :ref:`fun_tof_distance_monitor`

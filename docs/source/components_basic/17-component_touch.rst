@@ -105,4 +105,6 @@ Additional Ideas
 - The touch sensor could be used to control more complex elements, like a motor or a relay. 
 
 
-
+More Projects
+---------------------------
+* :ref:`fun_touch_toggle_light`

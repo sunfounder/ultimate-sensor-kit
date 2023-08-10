@@ -95,4 +95,6 @@ Additional Ideas
 - Use the button with if statements to control different outcomes in a program.
 - Make the button toggle an LED on and off instead of just printing to serial monitor. 
 
-
+More Projects
+---------------------------
+* :ref:`fun_doorbell`

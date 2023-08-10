@@ -15,6 +15,10 @@ In this chapter, you will find some fun projects. These projects involve the use
     04-fun_Automatic_soap_dispenser
     05-fun_Motion_triggered_relay
     06-fun_Heart_rate_monitor
+    07-fun_Doorbell
+    08-fun-Touch_toggle_light
+    09-fun_ToF_distance_monitor
+    10-fun-Potentiometer_scale_value
     
     
 

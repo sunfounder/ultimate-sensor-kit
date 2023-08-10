@@ -115,6 +115,5 @@ Additional Ideas
 
 More Projects
 ---------------------------
+* :ref:`fun_doorbell`
 * :ref:`fun_gas_leak_alarm`
-
-

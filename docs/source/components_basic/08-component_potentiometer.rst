@@ -109,3 +109,6 @@ Additional Ideas
    
 - Control a Servo Motor's Position: By mapping the analog value to the range of the servo's position (usually 0 to 180 degrees), the potentiometer could be used as a controller for the servo motor.
 
+More Projects
+---------------------------
+* :ref:`fun_potentiometer_scale_value`

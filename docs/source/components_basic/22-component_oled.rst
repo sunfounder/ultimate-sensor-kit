@@ -119,4 +119,5 @@ Additional Ideas
 More Projects
 ---------------------------
 * :ref:`fun_heartrate_monitor`
+* :ref:`fun_tof_distance_monitor`
 
