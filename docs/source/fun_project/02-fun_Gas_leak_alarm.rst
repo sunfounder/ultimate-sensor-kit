@@ -27,7 +27,7 @@ This project revolves around simulating a gas leak detection scenario using an A
 2. Code
 -----------------------------
 
-#. Open the ``02-Gas_leak_alarm.ino`` file under the path of ``iot-sensor-kit\fun_project\02-Gas_leak_alarm``, or copy this code into **Arduino IDE**.
+#. Open the ``02-Gas_leak_alarm.ino`` file under the path of ``ultimate-sensor-kit\fun_project\02-Gas_leak_alarm``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

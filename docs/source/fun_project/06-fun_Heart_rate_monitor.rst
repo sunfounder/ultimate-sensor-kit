@@ -26,7 +26,7 @@ This Arduino project aims to build a simple Heart Rate Monitor using a MAX30102 
 2. Code
 -----------------------------
 
-#. Open the ``06-Heart_rate_monitor.ino`` file under the path of ``iot-sensor-kit\fun_project\06-Heart_rate_monitor``, or copy this code into **Arduino IDE**.
+#. Open the ``06-Heart_rate_monitor.ino`` file under the path of ``ultimate-sensor-kit\fun_project\06-Heart_rate_monitor``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

@@ -147,7 +147,7 @@ In case you need to edit the template, you can click on the edit button in the u
 3. Run the Code
 -----------------------------
 
-#. Open the ``01-Flame_alert_system.ino`` file under the path of ``iot-sensor-kit\iot_project\01-Flame_alert_system``, or copy this code into **Arduino IDE**.
+#. Open the ``01-Flame_alert_system.ino`` file under the path of ``ultimate-sensor-kit\iot_project\01-Flame_alert_system``, or copy this code into **Arduino IDE**.
 
 
    .. raw:: html

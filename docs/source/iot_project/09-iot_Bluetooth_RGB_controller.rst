@@ -44,7 +44,7 @@ Now, let's begin.
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``Control_RGB_LED.aia`` file located in the path ``iot-sensor-kit\iot_project\09-Bluetooth_RGB_controller``.
+#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``Control_RGB_LED.aia`` file located in the path ``ultimate-sensor-kit\iot_project\09-Bluetooth_RGB_controller``.
 
    You can also directly download here: :download:`Control_RGB_LED.aia</_static/other/Control_RGB_LED.aia>`
 
@@ -81,7 +81,7 @@ Now, let's begin.
 3. Upload the Code
 -----------------------------
 
-#. Open the ``09-Bluetooth_RGB_controller.ino`` file under the path of ``iot-sensor-kit\iot_project\09-Bluetooth_RGB_controller``, or copy this code into **Arduino IDE**.
+#. Open the ``09-Bluetooth_RGB_controller.ino`` file under the path of ``ultimate-sensor-kit\iot_project\09-Bluetooth_RGB_controller``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

@@ -27,7 +27,7 @@ The Automatic Soap Dispenser project uses an Arduino Uno board along with an inf
 2. Code
 -----------------------------
 
-#. Open the ``04-Automatic_soap_dispenser.ino`` file under the path of ``iot-sensor-kit\fun_project\04-Automatic_soap_dispenser``, or copy this code into **Arduino IDE**.
+#. Open the ``04-Automatic_soap_dispenser.ino`` file under the path of ``ultimate-sensor-kit\fun_project\04-Automatic_soap_dispenser``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

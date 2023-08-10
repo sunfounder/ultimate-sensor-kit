@@ -27,7 +27,7 @@ This project revolves around the concept of a smart trash can. The primary aim i
 2. Code
 -----------------------------
 
-#. Open the ``01-Smart_trashcan.ino`` file under the path of ``iot-sensor-kit\fun_project\01-Smart_trashcan``, or copy this code into **Arduino IDE**.
+#. Open the ``01-Smart_trashcan.ino`` file under the path of ``ultimate-sensor-kit\fun_project\01-Smart_trashcan``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

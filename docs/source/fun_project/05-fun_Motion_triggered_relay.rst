@@ -33,7 +33,7 @@ This Arduino project aims to control a relay-operated light using a passive infr
 2. Code
 -----------------------------
 
-#. Open the ``05-Motion_triggered_relay.ino`` file under the path of ``iot-sensor-kit\fun_project\05-Motion_triggered_relay``, or copy this code into **Arduino IDE**.
+#. Open the ``05-Motion_triggered_relay.ino`` file under the path of ``ultimate-sensor-kit\fun_project\05-Motion_triggered_relay``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

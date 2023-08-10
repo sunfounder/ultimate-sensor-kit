@@ -33,7 +33,7 @@ This project is a light control switch system. The main idea is to use a photore
 2. Code
 -----------------------------
 
-#. Open the ``03-fun_Light_control_switch.ino`` file under the path of ``iot-sensor-kit\fun_project\03-fun_Light_control_switch``, or copy this code into **Arduino IDE**.
+#. Open the ``03-fun_Light_control_switch.ino`` file under the path of ``ultimate-sensor-kit\fun_project\03-fun_Light_control_switch``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

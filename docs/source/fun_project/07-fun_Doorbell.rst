@@ -27,7 +27,7 @@ The "doorbell" project aims to simulate the function of a doorbell. When a butto
 2. Code
 -----------------------------
 
-#. Open the ``07-Doorbell.ino`` file under the path of ``iot-sensor-kit\fun_project\07-Doorbell``, or copy this code into **Arduino IDE**.
+#. Open the ``07-Doorbell.ino`` file under the path of ``ultimate-sensor-kit\fun_project\07-Doorbell``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

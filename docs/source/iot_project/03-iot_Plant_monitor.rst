@@ -104,7 +104,7 @@ At last, remember to save the template.
 3. Run the Code
 -----------------------------
 
-#. Open the ``03-Plant_monitor.ino`` file under the path of ``iot-sensor-kit\iot_project\03-Plant_monitor``, or copy this code into **Arduino IDE**.
+#. Open the ``03-Plant_monitor.ino`` file under the path of ``ultimate-sensor-kit\iot_project\03-Plant_monitor``, or copy this code into **Arduino IDE**.
 
 
    .. raw:: html

@@ -27,7 +27,7 @@ The project involves creating a simple traffic light control mechanism using a t
 2. Code
 -----------------------------
 
-#. Open the ``08-Touch_toggle_light.ino`` file under the path of ``iot-sensor-kit\fun_project\08-Touch_toggle_light``, or copy this code into **Arduino IDE**.
+#. Open the ``08-Touch_toggle_light.ino`` file under the path of ``ultimate-sensor-kit\fun_project\08-Touch_toggle_light``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

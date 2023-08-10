@@ -27,7 +27,7 @@ This project is designed to measure and display the distance to an object using 
 2. Code
 -----------------------------
 
-#. Open the ``09-ToF_distance_monitor.ino`` file under the path of ``iot-sensor-kit\fun_project\09-ToF_distance_monitor``, or copy this code into **Arduino IDE**.
+#. Open the ``09-ToF_distance_monitor.ino`` file under the path of ``ultimate-sensor-kit\fun_project\09-ToF_distance_monitor``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

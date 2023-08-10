@@ -88,7 +88,7 @@ Configure the Web Dashboard according to the following diagram. We used widgets 
 3. Run the Code
 -----------------------------
 
-#. Open the ``07-Auto_watering_system.ino`` file under the path of ``iot-sensor-kit\iot_project\07-Auto_watering_system``, or copy this code into **Arduino IDE**.
+#. Open the ``07-Auto_watering_system.ino`` file under the path of ``ultimate-sensor-kit\iot_project\07-Auto_watering_system``, or copy this code into **Arduino IDE**.
 
 
    .. raw:: html

@@ -27,7 +27,7 @@ This project is designed to read the value from a potentiometer and display the 
 2. Code
 -----------------------------
 
-#. Open the ``10-Potentiometer_scale_value.ino`` file under the path of ``iot-sensor-kit\fun_project\10-Potentiometer_scale_value``, or copy this code into **Arduino IDE**.
+#. Open the ``10-Potentiometer_scale_value.ino`` file under the path of ``ultimate-sensor-kit\fun_project\10-Potentiometer_scale_value``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        
