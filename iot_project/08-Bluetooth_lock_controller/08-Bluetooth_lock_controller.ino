@@ -4,7 +4,7 @@
   when the message is 0. 
 
   Board: Arduino Uno R4 or R3
-  Component:  JDY-31 Bluetooth Module
+  Component:  JDY-31 bluetooth module and servo motor(SG90)
 */
 
 
