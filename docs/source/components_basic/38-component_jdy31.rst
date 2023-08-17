@@ -44,9 +44,36 @@ Pins of JDY-31 and their functions:
 
 patch application: general application only need to connect VCC, GND, RXD, TXD 4 pins, if you need to actively disconnect in the connection state, send AT+DISC in the connection state.
 
+AT Command Set
+---------------------------
+
++------------+-------------------------------------+-------------+
+|   Command  |               Function              |   Default   |
++============+=====================================+=============+
+| AT+VERSION | Version Number                      | JDY-31-V1.2 |
++------------+-------------------------------------+-------------+
+| AT+RESET   | Soft reset                          |             |
++------------+-------------------------------------+-------------+
+| AT+DISC    | Disconnect (valid when connected)   |             |
++------------+-------------------------------------+-------------+
+| AT+LADDR   | Query the MAC address of the module |             |
++------------+-------------------------------------+-------------+
+| AT+PIN     | Set or query connection password    | 1234        |
++------------+-------------------------------------+-------------+
+| AT+BAUD    | Set or query baud rate              | 9600        |
++------------+-------------------------------------+-------------+
+| AT+NAME    | Set or query broadcast name         | JDY-31-SPP  |
++------------+-------------------------------------+-------------+
+| AT+DEFAUL  | Factory reset                       |             |
++------------+-------------------------------------+-------------+
+| AT+ENLOG   | Serial port status output           | 1           |
++------------+-------------------------------------+-------------+
 
 More Projects
 ---------------------------
 
 * :ref:`iot_Bluetooth_lock_controller`
 * :ref:`iot_Bluetooth_RGB_controller`
+* :ref:`iot_Bluetooth_environmental_monitor`
+* :ref:`iot_Bluetooth_piano`
+

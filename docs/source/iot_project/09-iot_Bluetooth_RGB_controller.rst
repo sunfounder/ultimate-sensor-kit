@@ -32,7 +32,7 @@ This project control an RGB LED connected to an Arduino Uno via a JDY-31 Bluetoo
 2. Create the Android App
 -----------------------------
 
-The Android application will be fashioned using a free web application known as |link_appinventor|. 
+The Android application will be developed using a free web application known as |link_appinventor|. 
 MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop 
 features allowing for the creation of simplistic applications.
 

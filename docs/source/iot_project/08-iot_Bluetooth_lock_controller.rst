@@ -15,7 +15,7 @@ This project uses an Android app created with MIT App Inventor to remotely contr
 
 The system uses a JDY-31 Bluetooth module to receive these messages and instructs an Arduino Uno board to adjust the servo motor's angle accordingly. The servo transitions to a "locked" position upon receiving the '1' message and to an "unlocked" position upon receipt of the '0' message.
 
-The Android application will be constructed utilizing a complimentary web-based platform known as MIT App Inventor. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone.
+This Android application will be constructed utilizing a complimentary web-based platform known as |link_appinventor|. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone.
 
 
 1. Build the Cirduit
@@ -32,7 +32,7 @@ The Android application will be constructed utilizing a complimentary web-based 
 2. Create the Android App
 -----------------------------
 
-The Android application will be fashioned using a free web application known as |link_appinventor|. 
+The Android application will be developed using a free web application known as |link_appinventor|. 
 MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop 
 features allowing for the creation of simplistic applications.
 
@@ -118,7 +118,7 @@ Ensure that the application created earlier is installed on your smartphone.
       :width: 25%
       :align: center
 
-#. In the APP, click on **Connect Bluetooth** to establish a connection between the APP and Bluetooth module.
+#. In the APP, click on the **lock icon** to establish a connection between the APP and Bluetooth module.
 
    .. image:: img/new/08-app_5_shadow.png
       :width: 60%

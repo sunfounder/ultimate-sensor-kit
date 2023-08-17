@@ -27,6 +27,7 @@ Here we will guide you how to make Arduino connect to `BLYNK <https://blynk.io/>
     03-iot_Plant_monitor
     04-iot_Vibration_alert_system
     05-iot_Weather_monitor
+    10-iot_Bluetooth_environmental_monitor
 
 **Remote control**
 
@@ -37,4 +38,6 @@ Here we will guide you how to make Arduino connect to `BLYNK <https://blynk.io/>
     07-iot_Auto_watering_system
     08-iot_Bluetooth_lock_controller
     09-iot_Bluetooth_RGB_controller
+    11-iot_Bluetooth_piano
+    12-iot_Bluetooth_oled
 
