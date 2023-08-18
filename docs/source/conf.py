@@ -209,4 +209,12 @@ rst_epilog = """
 
     <a href="https://github.com/robsoncouto/arduino-songs" target="_blank">robsoncouto/arduino-songs</a>    
 
+.. |link_speech_recognition| raw:: html
+
+    <a href="https://play.google.com/store/apps/details?id=com.google.android.tts" target="_blank">Speech Recognition & Synthesis</a>  
+
+.. |language tag| raw:: html
+
+    <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank">List of ISO 639-1 codes</a>  
+
 """

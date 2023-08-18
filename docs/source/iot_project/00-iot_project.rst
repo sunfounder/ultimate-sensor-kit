@@ -40,4 +40,6 @@ Here we will guide you how to make Arduino connect to `BLYNK <https://blynk.io/>
     09-iot_Bluetooth_RGB_controller
     11-iot_Bluetooth_piano
     12-iot_Bluetooth_oled
+    13-iot_Bluetooth_remote_relay
+    14-iot_Bluetooth_voice_control_relay
 
