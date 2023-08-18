@@ -6,6 +6,8 @@
 
   Board: Arduino Uno R4 (or R3)
   Component:  JDY-31 Bluetooth Module and OLED Module
+  Library: https://github.com/adafruit/Adafruit_SSD1306 (Adafruit SSD1306 by Adafruit)  
+           https://github.com/adafruit/Adafruit-GFX-Library (Adafruit GFX Library by Adafruit) 
 */
 
 // Set up Bluetooth module communication

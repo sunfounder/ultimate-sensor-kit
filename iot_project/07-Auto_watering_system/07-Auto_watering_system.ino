@@ -7,6 +7,7 @@
 
   Board: Arduino Uno R4 (or R3)
   Component: Capacitive soil moisture sensor and water pump
+  Library: https://github.com/blynkkk/blynk-library
 */
 
 // Template ID, Device Name and Auth Token are provided by the Blynk Cloud

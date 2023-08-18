@@ -5,6 +5,7 @@
   
   Board: Arduino Uno R4 or R3
   Component:  JDY-31 Bluetooth module and DHT11 module
+  Library: https://github.com/adafruit/DHT-sensor-library  (DHT sensor library by Adafruit)
 */
 
 // Set up Bluetooth module communication
