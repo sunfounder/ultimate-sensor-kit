@@ -71,7 +71,7 @@ Now, let's begin.
 
    * You can generate a ``.apk`` file. After selecting this option, a page will appear allowing you to choose between downloading a ``.apk`` file or scanning a QR code for installation. Follow the installation guide to complete the application installation. 
 
-     You can also directly download here: :download:`Bluetooth_controlled_lock.apk</_static/other/Bluetooth_controlled_lock.apk>`
+     You also download our pre-compiled APK here: :download:`Bluetooth_controlled_lock.apk</_static/other/Bluetooth_controlled_lock.apk>`
 
    * If you wish to upload this app to Google Play or another app marketplace, you can generate a ``.aab`` file.
 
