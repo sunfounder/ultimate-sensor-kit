@@ -1,7 +1,7 @@
 
 .. _iot_Bluetooth_RGB_controller:
 
-Bluetooth RGB controller
+Bluetooth RGB Controller
 =============================
 
 .. raw:: html

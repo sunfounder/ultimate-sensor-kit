@@ -1,7 +1,7 @@
 
 .. _iot_Bluetooth_environmental_monitor:
 
-Bluetooth environmental monitor
+Bluetooth Environmental Monitor
 =================================
 
 .. raw:: html

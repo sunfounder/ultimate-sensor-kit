@@ -1,7 +1,7 @@
 
 .. _iot_Bluetooth_lock_controller:
 
-Bluetooth lock controller
+Bluetooth Lock Controller
 =============================
 
 .. raw:: html

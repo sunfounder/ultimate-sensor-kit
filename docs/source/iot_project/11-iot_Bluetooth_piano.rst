@@ -1,7 +1,7 @@
 
 .. _iot_Bluetooth_piano:
 
-Bluetooth piano
+Bluetooth Piano
 =============================
 
 .. raw:: html

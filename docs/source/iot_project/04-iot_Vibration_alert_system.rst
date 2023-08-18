@@ -1,7 +1,7 @@
 
 .. _iot_Intrusion_alert_system:
 
-Vibration alert system with IFTTT
+Vibration Alert System with IFTTT
 =====================================
 
 .. raw:: html

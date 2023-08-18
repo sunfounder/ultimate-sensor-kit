@@ -1,7 +1,7 @@
 
 .. _iot_Bluetooth_voice_control_relay:
 
-Bluetooth voice control relay
+Bluetooth Voice-control Relay
 =================================
 
 .. raw:: html

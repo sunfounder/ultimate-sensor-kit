@@ -1,7 +1,7 @@
 
 .. _iot_Bluetooth_remote_relay:
 
-Bluetooth remote relay
+Bluetooth Remote Relay
 =================================
 
 .. raw:: html

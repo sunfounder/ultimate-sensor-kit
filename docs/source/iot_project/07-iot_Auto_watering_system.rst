@@ -1,7 +1,7 @@
 
 .. _iot_Auto_watering_system:
 
-Auto watering system with Blynk
+Auto Watering System with Blynk
 ===================================
 
 .. raw:: html

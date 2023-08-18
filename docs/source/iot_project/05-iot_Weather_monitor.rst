@@ -1,7 +1,7 @@
 
 .. _iot_Weather_monitor:
 
-Weather monitor with ThingSpeak
+Weather Monitor with ThingSpeak
 ====================================
 
 .. raw:: html
