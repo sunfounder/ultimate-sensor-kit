@@ -117,3 +117,4 @@ More Projects
 * :ref:`fun_light_control_switch`
 * :ref:`fun_motion_triggered_relay`
 * :ref:`iot_Bluetooth_RGB_controller`
+* :ref:`iot_Bluetooth_remote_relay`

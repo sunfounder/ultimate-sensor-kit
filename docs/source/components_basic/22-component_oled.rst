@@ -120,4 +120,5 @@ More Projects
 ---------------------------
 * :ref:`fun_heartrate_monitor`
 * :ref:`fun_tof_distance_monitor`
+* :ref:`iot_Bluetooth_oled`
 

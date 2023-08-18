@@ -144,5 +144,5 @@ Additional Ideas
 More Projects
 ---------------------------
 * :ref:`iot_Plant_monitor`
-
+* :ref:`iot_Bluetooth_environmental_monitor`
 
