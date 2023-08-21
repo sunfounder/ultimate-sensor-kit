@@ -71,7 +71,7 @@ Now, let's begin.
 
    In this project, we take English recognition as an example. If you want to apply recognition of other languages, you need to modify the code block below and then compile the APK by yourself.
 
-   Firstly, you need to set ``SpeechRecognizer1.Language`` to the **language tag** of the language you want to recognize. Language is specified using a language tag with an optional region suffix, such as ``en``, ``de`` or ``ja``. The language tag can be found at |language tag|.
+   Firstly, you need to set ``SpeechRecognizer1.Language`` to the **language tag** of the language you want to recognize. Language is specified using a language tag with an optional region suffix, such as ``en``, ``de`` or ``ja``. The language tag can be found at |link_language_tag|.
 
    .. image:: img/new/14-ai_intro_3-1_shadow.png
       :width: 80%

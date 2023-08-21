@@ -37,6 +37,7 @@ Here we will guide you how to make Arduino connect to `BLYNK <https://blynk.io/>
 .. toctree::
     :maxdepth: 1
 
+    00-iot_bluetooth_start
     08-iot_Bluetooth_lock_controller
     09-iot_Bluetooth_RGB_controller
     10-iot_Bluetooth_environmental_monitor

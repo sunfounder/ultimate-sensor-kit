@@ -213,8 +213,12 @@ rst_epilog = """
 
     <a href="https://play.google.com/store/apps/details?id=com.google.android.tts" target="_blank">Speech Recognition & Synthesis</a>  
 
-.. |language tag| raw:: html
+.. |link_language_tag| raw:: html
 
     <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank">List of ISO 639-1 codes</a>  
+
+.. |link_serial_bluetooth_terminal| raw:: html
+
+    <a href="https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal" target="_blank">Serial Bluetooth Terminal</a>  
 
 """
