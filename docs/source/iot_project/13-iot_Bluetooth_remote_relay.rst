@@ -48,7 +48,7 @@ Now, let's begin.
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``RemoteRelay.aia`` file located in the path ``ultimate-sensor-kit\iot_project\13-Bluetooth_remote_relay``.
+#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``RemoteRelay.aia`` file located in the path ``ultimate-sensor-kit\iot_project\bluetooth\08-Bluetooth_remote_relay``.
 
    You can also directly download here: :download:`RemoteRelay.aia</_static/other/RemoteRelay.aia>`
 
@@ -83,7 +83,7 @@ Now, let's begin.
 3. Upload the Code
 -----------------------------
 
-#. Open the ``13-Bluetooth_remote_relay.ino`` file under the path of ``ultimate-sensor-kit\iot_project\13-Bluetooth_remote_relay``, or copy this code into **Arduino IDE**.
+#. Open the ``13-Bluetooth_remote_relay.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\08-Bluetooth_remote_relay``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

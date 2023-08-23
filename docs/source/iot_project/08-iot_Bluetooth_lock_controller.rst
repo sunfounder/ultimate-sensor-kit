@@ -44,7 +44,7 @@ Now, let's begin.
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``Bluetooth_controlled_lock.aia`` file located in the path ``ultimate-sensor-kit\iot_project\08-Bluetooth_lock_controller``.
+#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``Bluetooth_controlled_lock.aia`` file located in the path ``ultimate-sensor-kit\iot_project\bluetooth\03-Bluetooth_lock_controller``.
 
    You can also directly download here: :download:`Bluetooth_controlled_lock.aia</_static/other/Bluetooth_controlled_lock.aia>`
 
@@ -79,7 +79,7 @@ Now, let's begin.
 3. Upload the Code
 -----------------------------
 
-#. Open the ``08-Bluetooth_lock_controller.ino`` file under the path of ``ultimate-sensor-kit\iot_project\08-Bluetooth_lock_controller``, or copy this code into **Arduino IDE**.
+#. Open the ``08-Bluetooth_lock_controller.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\03-Bluetooth_lock_controller``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

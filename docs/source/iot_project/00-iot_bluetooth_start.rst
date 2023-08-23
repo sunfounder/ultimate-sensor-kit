@@ -19,7 +19,7 @@ Firstly, we need to set up the circuit and use software serial communication. Co
 2. Upload the code
 -----------------------------
 
-Open the ``00-Bluetooth_start.ino`` file under the path of ``ultimate-sensor-kit\iot_project\00-Bluetooth_start``, or copy this code into **Arduino IDE**.
+Open the ``00-Bluetooth_start.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\00-Bluetooth_start``, or copy this code into **Arduino IDE**.
 
 The code establishes a software serial communication using Arduino’s SoftwareSerial library, allowing the Arduino to communicate with the JDY-31 Bluetooth module through its digital pins 3 and 4 (as Rx and Tx). It checks for data transfer between them, forwarding received messages from one to the other at a baud rate of 9600. **With this code, you can use the Arduino’s serial monitor to send AT commands to the JDY-31 Bluetooth module and receive its responses**.
 

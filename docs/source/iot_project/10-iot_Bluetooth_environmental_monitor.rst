@@ -43,7 +43,7 @@ Now, let's begin.
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``Bluetooth_controlled_lock.aia`` file located in the path ``ultimate-sensor-kit\iot_project\10-Bluetooth_environmental_monitor``.
+#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``Bluetooth_controlled_lock.aia`` file located in the path ``ultimate-sensor-kit\iot_project\bluetooth\05-Bluetooth_environmental_monitor``.
 
    You can also directly download here: :download:`Bluetooth_Environmental_Monitor.aia</_static/other/Bluetooth_Environmental_Monitor.aia>`
 
@@ -78,7 +78,7 @@ Now, let's begin.
 3. Upload the Code
 -----------------------------
 
-#. Open the ``10-Bluetooth_environmental_monitor.ino`` file under the path of ``ultimate-sensor-kit\iot_project\10-Bluetooth_environmental_monitor``, or copy this code into **Arduino IDE**.
+#. Open the ``10-Bluetooth_environmental_monitor.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\05-Bluetooth_environmental_monitor``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

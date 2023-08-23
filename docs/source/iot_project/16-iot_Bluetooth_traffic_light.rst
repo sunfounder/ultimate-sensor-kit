@@ -20,7 +20,7 @@ This project is designed to control a traffic light (Red, Yellow, Green LEDs) us
 2. Upload the Code
 -----------------------------
 
-#. Open the ``16-Bluetooth_traffic_light.ino`` file under the path of ``ultimate-sensor-kit\iot_project\16-Bluetooth_traffic_light``, or copy this code into **Arduino IDE**.
+#. Open the ``16-Bluetooth_traffic_light.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\02-Bluetooth_traffic_light``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

@@ -11,7 +11,7 @@
 
   .. image:: img/wiring_r4_quickstart.png
 
-#. Open the ``00-Blynk_quick_start.ino`` file under the path of ``ultimate-sensor-kit\iot_project\00-Blynk_quick_start``. Or copy this code into **Arduino IDE**.
+#. Open the ``00-Blynk_quick_start.ino`` file under the path of ``ultimate-sensor-kit\iot_project\wifi\00-Blynk_quick_start``. Or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

@@ -82,7 +82,7 @@ Configure the Web Dashboard according to the following diagram. Be sure to bind 
 3. Run the Code
 -----------------------------
 
-#. Open the ``06-Remote_relay_controller.ino`` file under the path of ``ultimate-sensor-kit\iot_project\06-Remote_relay_controller``, or copy this code into **Arduino IDE**.
+#. Open the ``06-Remote_relay_controller.ino`` file under the path of ``ultimate-sensor-kit\iot_project\wifi\06-Remote_relay_controller``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

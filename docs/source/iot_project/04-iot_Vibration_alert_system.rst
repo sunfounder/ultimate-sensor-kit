@@ -155,7 +155,7 @@ According to the following steps, complete the creation of the Applet.
 3. Run the Code
 -----------------------------
 
-#. Open the ``04-Vibration_alert_system.ino`` file under the path of ``ultimate-sensor-kit\iot_project\04-Vibration_alert_system``, or copy this code into **Arduino IDE**.
+#. Open the ``04-Vibration_alert_system.ino`` file under the path of ``ultimate-sensor-kit\iot_project\wifi\04-Vibration_alert_system``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

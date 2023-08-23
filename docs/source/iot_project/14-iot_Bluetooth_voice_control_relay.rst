@@ -48,7 +48,7 @@ Now, let's begin.
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``VoiceControl.aia`` file located in the path ``ultimate-sensor-kit\iot_project\14-Bluetooth_voice_control_relay``.
+#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``VoiceControl.aia`` file located in the path ``ultimate-sensor-kit\iot_project\bluetooth\09-Bluetooth_voice_control_relay``.
 
    You can also directly download here: :download:`VoiceControl.aia</_static/other/VoiceControl.aia>`
 
@@ -97,7 +97,7 @@ Now, let's begin.
 3. Upload the Code
 -----------------------------
 
-#. Open the ``14-Bluetooth_voice_control_relay.ino`` file under the path of ``ultimate-sensor-kit\iot_project\14-Bluetooth_voice_control_relay``, or copy this code into **Arduino IDE**.
+#. Open the ``14-Bluetooth_voice_control_relay.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\09-Bluetooth_voice_control_relay``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

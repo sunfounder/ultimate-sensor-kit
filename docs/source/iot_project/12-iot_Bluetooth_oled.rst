@@ -43,7 +43,7 @@ Now, let's begin.
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``oled.aia`` file located in the path ``ultimate-sensor-kit\iot_project\12-Bluetooth_oled``.
+#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``oled.aia`` file located in the path ``ultimate-sensor-kit\iot_project\bluetooth\07-Bluetooth_oled``.
 
    You can also directly download here: :download:`oled.aia</_static/other/oled.aia>`
 
@@ -78,7 +78,7 @@ Now, let's begin.
 3. Upload the Code
 -----------------------------
 
-#. Open the ``12-Bluetooth_oled.ino`` file under the path of ``ultimate-sensor-kit\iot_project\12-Bluetooth_oled``, or copy this code into **Arduino IDE**.
+#. Open the ``12-Bluetooth_oled.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\07-Bluetooth_oled``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

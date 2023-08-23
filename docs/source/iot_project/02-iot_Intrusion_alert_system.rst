@@ -137,7 +137,7 @@ At last, remember to save the template.
 3. Run the Code
 -----------------------------
 
-#. Open the ``02-Intrusion_alert_system.ino`` file under the path of ``ultimate-sensor-kit\iot_project\02-Intrusion_alert_system``, or copy this code into **Arduino IDE**.
+#. Open the ``02-Intrusion_alert_system.ino`` file under the path of ``ultimate-sensor-kit\iot_project\wifi\02-Intrusion_alert_system``, or copy this code into **Arduino IDE**.
 
 
    .. raw:: html

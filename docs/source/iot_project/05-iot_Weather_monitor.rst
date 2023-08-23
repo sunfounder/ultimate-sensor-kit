@@ -79,7 +79,7 @@ For this project, we need to create a channel called "**Weather Monitor**" with 
 3. Run the Code
 -----------------------------
 
-#. Open the ``05-Weather_monitor.ino`` file under the path of ``ultimate-sensor-kit\iot_project\05-Weather_monitor``, or copy this code into **Arduino IDE**.
+#. Open the ``05-Weather_monitor.ino`` file under the path of ``ultimate-sensor-kit\iot_project\wifi\05-Weather_monitor``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

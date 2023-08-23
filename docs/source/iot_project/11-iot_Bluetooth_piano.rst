@@ -43,7 +43,7 @@ Now, let's begin.
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``piano.aia`` file located in the path ``ultimate-sensor-kit\iot_project\11-Bluetooth_piano``.
+#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``piano.aia`` file located in the path ``ultimate-sensor-kit\iot_project\bluetooth\06-Bluetooth_piano``.
 
    You can also directly download here: :download:`piano.aia</_static/other/piano.aia>`
 
@@ -78,7 +78,7 @@ Now, let's begin.
 3. Upload the Code
 -----------------------------
 
-#. Open the ``11-Bluetooth_piano.ino`` file under the path of ``ultimate-sensor-kit\iot_project\11-Bluetooth_piano``, or copy this code into **Arduino IDE**.
+#. Open the ``11-Bluetooth_piano.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\06-Bluetooth_piano``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        
