@@ -7,7 +7,7 @@ After opening the package, please check whether the quantity of components is co
 * :download:`SunFounder Ultimate Sensor Kit Components List </_static/pdf/sunfounder_ultimate_sensor_kit_components_list.pdf>`
 
 
-Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
+The following is an introduction to each component, including its working principle and corresponding project. **Each component has a simple code example to help you get started quickly.**
 
 **Control Board**
 
