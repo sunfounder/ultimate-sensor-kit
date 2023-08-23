@@ -6,7 +6,6 @@
   After processing the data, it resets the buffer for the next input.
 
   Board: Arduino Uno R4 (or R3)
-  Board: Arduino Uno R4 (or R3)
   Component:  JDY-31 bluetooth module and RGB LED module
 */
 
