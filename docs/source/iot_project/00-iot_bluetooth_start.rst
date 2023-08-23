@@ -84,7 +84,7 @@ Please refer to the table below for more AT commands.
 4. Communicating through Bluetooth debugging tools on mobile phones
 -----------------------------------------------------------------------------------
 
-We can use an app called "Serial Bluetooth Terminal" to send messages from the Bluetooth module to Arduino, simulating the process of Bluetooth interaction. The Bluetooth module will send received messages to Arduino through serial port, and similarly, Arduino can also send messages to itself through serial port.
+We can use an app called "Serial Bluetooth Terminal" to send messages from the Bluetooth module to Arduino, simulating the process of Bluetooth interaction. The Bluetooth module will send received messages to Arduino through serial port, and similarly, Arduino can also send messages to bluetooth module through serial port.
 
 a. **Install Serial Bluetooth Terminal**
 

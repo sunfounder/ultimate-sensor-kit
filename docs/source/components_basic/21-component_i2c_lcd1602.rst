@@ -148,3 +148,4 @@ Additional Ideas
 More Projects
 ---------------------------
 * :ref:`fun_potentiometer_scale_value`
+* :ref:`iot_Bluetooth_lcd`

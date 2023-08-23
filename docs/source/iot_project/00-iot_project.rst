@@ -8,15 +8,6 @@ This kit features the ESP8266 Wifi module and the JDY-31 Bluetooth Module. The E
 Here we will guide you how to make Arduino connect to `BLYNK <https://blynk.io/>`_ platform with the help of ESP8266 Wifi module to do some interesting IoT projects. Alternatively, with the Bluetooth module, you can create projects using apps developed with App Inventor.
 
 
-.. **Basic** 
-
-.. .. todo blutooth basic
-
-.. .. toctree::
-..     :maxdepth: 1
-
-..     blynk_start/00-blynk_start
-
 **Wi-Fi**
 
 .. toctree::
@@ -38,6 +29,8 @@ Here we will guide you how to make Arduino connect to `BLYNK <https://blynk.io/>
     :maxdepth: 1
 
     00-iot_bluetooth_start
+    15-iot_Bluetooth_lcd
+    16-iot_Bluetooth_traffic_light
     08-iot_Bluetooth_lock_controller
     09-iot_Bluetooth_RGB_controller
     10-iot_Bluetooth_environmental_monitor

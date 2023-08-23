@@ -76,6 +76,8 @@ More Projects
 ---------------------------
 
 * :ref:`iot_Bluetooth_start`
+* :ref:`iot_Bluetooth_lcd`
+* :ref:`iot_Bluetooth_traffic_light`
 * :ref:`iot_Bluetooth_lock_controller`
 * :ref:`iot_Bluetooth_RGB_controller`
 * :ref:`iot_Bluetooth_environmental_monitor`
