@@ -48,6 +48,9 @@ Usage
 Code
 ^^^^^^^^^^^^^^^^^^^^
 
+.. note:: 
+   To install the library, use the Arduino Library Manager and search for **"Adafruit SSD1306"** and **"Adafruit GFX"** and install it. 
+
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/fee9cc72-22bb-408c-81cf-fb4589121276/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
@@ -72,7 +75,7 @@ Code explanation
    - **Adafruit GFX Library**: This is a core graphics library for displaying text, producing colors, drawing shapes, etc., on various screens including OLEDs.
 
    .. note:: 
-      To install library, use the Arduino Library Manager and search for **"Adafruit SSD1306"** and **"Adafruit GFX"** and install the library. 
+      To install the library, use the Arduino Library Manager and search for **"Adafruit SSD1306"** and **"Adafruit GFX"** and install it. 
 
    .. code-block:: arduino
     

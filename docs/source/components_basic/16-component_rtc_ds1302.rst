@@ -38,6 +38,9 @@ Usage
 Code
 ^^^^^^^^^^^^^^^^^^^^
 
+.. note:: 
+   To install the library, use the Arduino Library Manager and search for **"Rtc by Makuna"** and install it. 
+
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/f923ec19-a2f0-4d74-b68b-826da12a17f3/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
@@ -57,7 +60,7 @@ Code explanation
 #. Initialization and library inclusion
 
    .. note:: 
-      To install library, use the Arduino Library Manager and search for **"Rtc by Makuna"** and install the library. 
+      To install the library, use the Arduino Library Manager and search for **"Rtc by Makuna"** and install it. 
 
    Here, necessary libraries are included for the DS1302 RTC module.
 

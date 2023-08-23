@@ -81,6 +81,9 @@ For this project, we need to create a channel called "**Weather Monitor**" with 
 
 #. Open the ``05-Weather_monitor.ino`` file under the path of ``ultimate-sensor-kit\iot_project\wifi\05-Weather_monitor``, or copy this code into **Arduino IDE**.
 
+   .. note:: 
+      To install the library, use the Arduino Library Manager and search for **"Adafruit BMP280"** and install it. 
+
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/195c180e-72fa-4bea-9370-7c75920c7933/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>

@@ -93,6 +93,9 @@ Usage
 Code
 ^^^^^^^^^^^^^^^^^^^^
 
+.. note:: 
+   To install the library, use the Arduino Library Manager and search for **"LiquidCrystal I2C"** and install it.
+
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/b19d0aac-7dbd-460c-9634-31dd1c0310f9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
@@ -113,7 +116,7 @@ Code explanation
    The LiquidCrystal I2C library is included to provide functions and methods for LCD interfacing. Following that, an LCD object is created using the LiquidCrystal_I2C class, specifying the I2C address, number of columns, and number of rows.
 
    .. note:: 
-      To install library, use the Arduino Library Manager and search for **"LiquidCrystal I2C"** and install the library.  
+      To install the library, use the Arduino Library Manager and search for **"LiquidCrystal I2C"** and install it.  
 
    .. code-block:: arduino
 

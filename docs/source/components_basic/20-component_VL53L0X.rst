@@ -43,6 +43,9 @@ Usage
 Code
 ^^^^^^^^^^^^^^^^^^^^
 
+.. note:: 
+   To install the library, use the Arduino Library Manager and search for **"Adafruit_VL53L0X"** and install it.
+
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d1f540b1-8a29-40cd-ba12-84c34f0ab4a3/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
@@ -62,7 +65,7 @@ Code explanation
 #. Including the necessary library and initializing the sensor object. We start by including the library for the VL53L0X sensor and creating an instance of the Adafruit_VL53L0X class.
 
    .. note:: 
-      To install library, use the Arduino Library Manager and search for **"Adafruit_VL53L0X"** and install the library.  
+      To install the library, use the Arduino Library Manager and search for **"Adafruit_VL53L0X"** and install it.  
 
    .. code-block:: arduino
 

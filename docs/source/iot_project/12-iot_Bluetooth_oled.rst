@@ -80,6 +80,9 @@ Now, let's begin.
 
 #. Open the ``12-Bluetooth_oled.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\07-Bluetooth_oled``, or copy this code into **Arduino IDE**.
 
+   .. note:: 
+      To install the library, use the Arduino Library Manager and search for **"Adafruit SSD1306"** and **"Adafruit GFX"** and install it. 
+
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/aafe675c-be6c-49a0-8c73-596d8b85e3cc/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>

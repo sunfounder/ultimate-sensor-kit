@@ -57,6 +57,9 @@ Usage
 Code
 ^^^^^^^^^^^^^^^^^^^^
 
+.. note:: 
+   To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and install it. 
+
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/34796700-4b94-4796-815a-314a25f60638/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
@@ -77,7 +80,7 @@ Code explanation
    This part of the code includes the DHT sensor library and defines the pin number and sensor type used in this project.
 
    .. note:: 
-      To install, use the Arduino Library Manager and search for **"DHT sensor library"** and install the library. 
+      To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and install it. 
 
    .. code-block:: arduino
     

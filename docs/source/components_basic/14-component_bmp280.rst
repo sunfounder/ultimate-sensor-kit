@@ -39,6 +39,9 @@ Usage
 Code
 ^^^^^^^^^^^^^^^^^^^^
 
+.. note:: 
+   To install the library, use the Arduino Library Manager and search for **"Adafruit BMP280"** and install it. 
+
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/e1f581e4-76c8-48a0-b1cc-d15604267183/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
@@ -57,7 +60,7 @@ Code explanation
 1. Including Libraries and Initialization. Necessary libraries are included and the BMP280 sensor is initialized for communication using the I2C interface.
 
    .. note:: 
-      To install, use the Arduino Library Manager and search for **"Adafruit BMP280"** and install the library. 
+      To install the library, use the Arduino Library Manager and search for **"Adafruit BMP280"** and install it. 
 
    - Adafruit BMP280 Library: This library provides an easy-to-use interface for the BMP280 sensor, allowing the user to read temperature, pressure, and altitude. 
    - Wire.h: Used for I2C communication.

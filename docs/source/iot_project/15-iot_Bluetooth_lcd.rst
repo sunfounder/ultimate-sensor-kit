@@ -23,7 +23,7 @@ The project receives messages through a Bluetooth module connected to the UNO bo
 #. Open the ``15-Bluetooth_lcd.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\01-Bluetooth_lcd``, or copy this code into **Arduino IDE**.
 
    .. note:: 
-      To install library, use the Arduino Library Manager and search for **"LiquidCrystal I2C"** and install the library.  
+      To install the library, use the Arduino Library Manager and search for **"LiquidCrystal I2C"** and install it.  
 
    .. raw:: html
        

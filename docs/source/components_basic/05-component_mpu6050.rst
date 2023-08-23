@@ -85,6 +85,9 @@ Usage
 Code
 ^^^^^^^^^^^^^^^^^^^^
 
+.. note:: 
+      To install the library, use the Arduino Library Manager and search for **"Adafruit MPU6050"** and install it.  
+
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/e5160412-ce6c-4742-a0f3-0aa259bb9770/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
@@ -104,7 +107,7 @@ Code explanation
 1. The code starts by including the necessary libraries and creating an object for the MPU6050 sensor. This code uses the Adafruit_MPU6050 library, Adafruit_Sensor library, and Wire library. The ``Adafruit_MPU6050`` library is used to interact with the MPU6050 sensor and retrieve acceleration, rotation, and temperature data. The ``Adafruit_Sensor`` library provides a common interface for various types of sensors. The ``Wire`` library is used for I2C communication, which is necessary to communicate with the MPU6050 sensor.
 
    .. note:: 
-       To install, use the Arduino Library Manager and search for **"Adafruit MPU6050"** and install the library. 
+       To install the library, use the Arduino Library Manager and search for **"Adafruit MPU6050"** and install it. 
    
    .. code-block:: arduino
    

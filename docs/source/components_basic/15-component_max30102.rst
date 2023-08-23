@@ -53,6 +53,9 @@ Code
 .. warning::
     This sketch detects heart-rate optically. This method is tricky and prone to give false readings. So please **DO NOT** use it for actual medical diagnosis.
 
+.. note:: 
+   To install the library, use the Arduino Library Manager and search for **"SparkFun MAX3010x"** and install it. 
+
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/8fd9aa35-11df-477e-87ea-879172104d03/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
@@ -73,7 +76,7 @@ Code explanation
    The essential libraries are imported, the sensor object is instantiated, and global variables for data management are set.
 
    .. note:: 
-      To install library, use the Arduino Library Manager and search for **"SparkFun MAX3010x"** and install the library. 
+      To install the library, use the Arduino Library Manager and search for **"SparkFun MAX3010x"** and install it. 
    
    .. code-block:: arduino
     
