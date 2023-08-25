@@ -4,6 +4,13 @@
 Bluetooth Traffic Light
 =============================
 
+.. raw:: html
+
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/video/iot/16-iot_Bluetooth_traffic_light.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
 This project is designed to control a traffic light (Red, Yellow, Green LEDs) using Bluetooth communication. The user can send a character ('R', 'Y', or 'G') from a Bluetooth device. When the Arduino receives one of these characters, it lights up the corresponding LED, while ensuring the other two LEDs are turned off.
 
 
@@ -70,7 +77,17 @@ d. **Send command**
 
    Use the Serial Bluetooth Terminal app to send commands to Arduino via Bluetooth. Send R to turn on the red light, Y for yellow, and G for green.
 
-   .. **【todo 3pic】**
+   .. image:: img/new/16-R_shadow.png 
+      :width: 85%
+      :align: center
+
+   .. image:: img/new/16-Y_shadow.png 
+      :width: 85%
+      :align: center
+
+   .. image:: img/new/16-G_shadow.png 
+      :width: 85%
+      :align: center
 
 
 4. Code explanation

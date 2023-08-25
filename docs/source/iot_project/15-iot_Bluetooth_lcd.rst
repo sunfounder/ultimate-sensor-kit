@@ -4,6 +4,13 @@
 Bluetooth LCD
 =============================
 
+.. raw:: html
+
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/video/iot/15-iot_Bluetooth_lcd.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
 The project receives messages through a Bluetooth module connected to the UNO board and displays the received messages on an LCD screen.
 
 
@@ -73,7 +80,9 @@ d. **Send command**
 
    Use the Serial Bluetooth Terminal app to send messages to Arduino via Bluetooth. The message sent to Bluetooth will be displayed on the LCD.
 
-   .. **【todo 1pic】**
+   .. image:: img/new/15-lcd_shadow.png
+      :width: 100%
+      :align: center
 
 
 4. Code explanation
