@@ -18,8 +18,8 @@ int sensorValue;
 const int buzzerPin = 9;
 
 // Define pin numbers for the RGB LED
-const int RPin = 6;  // R channel of RGB LED
-const int GPin = 5;  // G channel of RGB LED
+const int RPin = 5;  // R channel of RGB LED
+const int GPin = 6;  // G channel of RGB LED
 
 void setup() {
   Serial.begin(9600);  // Start serial communication at 9600 baud rate

@@ -7,8 +7,8 @@
 */
 
 // Pin numbers for each color channel
-const int rledPin = 10;  // pin connected to the red color channel
-const int gledPin = 9;  // pin connected to the green color channel
+const int rledPin = 9;  // pin connected to the red color channel
+const int gledPin = 10;  // pin connected to the green color channel
 const int bledPin = 11;   // pin connected to the blue color channel
 
 void setup() {

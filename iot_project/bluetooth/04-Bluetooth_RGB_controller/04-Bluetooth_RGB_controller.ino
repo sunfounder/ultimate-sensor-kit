@@ -21,8 +21,8 @@ char r_char;             // Character read from serial input
 byte currentIndex = 0;   // Current index in the message buffer
 
 // Define the RGB LED pins
-const int redPin = 10;
-const int greenPin = 9;
+const int redPin = 9;
+const int greenPin = 10;
 const int bluePin = 11;
 
 // Initialize the RGB color values
