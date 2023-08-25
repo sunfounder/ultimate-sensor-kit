@@ -24,7 +24,7 @@ The Android application will be constructed utilizing a complimentary web-based 
     The following example demonstrates using a relay to control an LED module. 
     **While you can connect the relay to other appliances in actual applications, extreme caution is required when dealing with HIGH AC voltage. Improper or incorrect use can lead to severe injury or even death. Therefore, it is intended for people who are familiar with and knowledgeable about HIGH AC voltage. Always prioritize safety.**
 
-.. image:: img/12-Wiring_Bluetooth_remote_relay.png
+.. image:: img/13-Wiring_Bluetooth_remote_relay.png
     :width: 75%
 
 * :ref:`cpn_uno`

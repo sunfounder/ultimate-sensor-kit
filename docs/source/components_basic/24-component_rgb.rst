@@ -1,6 +1,6 @@
 .. _cpn_rgb:
 
-RGB Module (KY-009)
+RGB Module
 ==========================
 
 .. image:: img/24_rgb_module.png
@@ -9,11 +9,11 @@ RGB Module (KY-009)
 
 Introduction
 ---------------------------
-The KY-009 RGB Full Color LED module emits a range of colors by mixing red, green, and blue light. Each color is adjusted by using PWM.It can be used to create colorful lighting effects or to learn how to use PWM (pulse-width modulation) with Arduino.
+The RGB Full Color LED module emits a range of colors by mixing red, green, and blue light. Each color is adjusted by using PWM.It can be used to create colorful lighting effects or to learn how to use PWM (pulse-width modulation) with Arduino.
 
 Principle
 ---------------------------
-The KY-009 RGB MODULE works by using a full-color LED that uses R, G, and B pins with adjustable PWM voltage input. 
+The RGB MODULE works by using a full-color LED that uses R, G, and B pins with adjustable PWM voltage input. 
 Colors from the LED can be combined. For example, mix blue light and green light give cyan light, red light and green light give yellow light. This is called "The additive method of color mixing".
 
 * `Additive color - Wikipedia <https://en.wikipedia.org/wiki/Additive_color>`_
@@ -68,8 +68,8 @@ Code explanation
 
    .. code-block:: arduino
        
-      const int rledPin = 10;  // pin connected to the red color channel
-      const int gledPin = 9;   // pin connected to the green color channel
+      const int rledPin = 9;  // pin connected to the red color channel
+      const int gledPin = 10;   // pin connected to the green color channel
       const int bledPin = 11;  // pin connected to the blue color channel
 
 2. The ``setup()`` function initializes these pins as OUTPUT. This means we are sending signals OUT from these pins to the RGB LED module.

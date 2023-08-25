@@ -53,8 +53,8 @@ The core principle of the project revolves around continuously monitoring the ga
       const int buzzerPin = 9;
    
       // Define pin numbers for the RGB LED
-      const int RPin = 6;  // R channel of RGB LED
-      const int GPin = 5;  // G channel of RGB LED
+      const int RPin = 5;  // R channel of RGB LED
+      const int GPin = 6;  // G channel of RGB LED
    
 
 2. Initialization in ``setup()``
