@@ -178,8 +178,8 @@ Ensure that the application created earlier is installed on your smartphone.
       char r_char;             
       byte currentIndex = 0;
 
-      const int redPin = 10;
-      const int greenPin = 9;
+      const int redPin = 9;
+      const int greenPin = 10;
       const int bluePin = 11;
 
       int redValue = 0;
