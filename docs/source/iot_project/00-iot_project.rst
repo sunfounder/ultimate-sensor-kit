@@ -5,7 +5,9 @@ IoT Projects
 
 This kit features the ESP8266 Wifi module and the JDY-31 Bluetooth Module. The ESP8266 allows your Arduino to connect to the internet for IoT experiments, while the Bluetooth module facilitates short-range wireless communication.
 
-Here we will guide you how to make Arduino connect to `BLYNK <https://blynk.io/>`_ platform with the help of ESP8266 Wifi module to do some interesting IoT projects. Alternatively, with the Bluetooth module, you can create projects using apps developed with App Inventor.
+With the ESP8266 WiFi module, you'll explore a range of IoT projects that allow you to connect your Arduino to the internet. We provide step-by-step guides to work with platforms like |link_blynk| and |link_thingspeak|, enabling you to set up alert systems, remote controllers, and environmental monitors, among other applications.
+
+On the other hand, the JDY-31 Bluetooth module opens doors to localized wireless communication. We will guide you through pairing your Arduino with smartphones or other Bluetooth-enabled devices for various controls and monitoring tasks. And you can create projects using apps developed with |link_appinventor|.
 
 
 **Wi-Fi**

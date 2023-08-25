@@ -25,37 +25,37 @@ Why just be a spectator when you can be a creator? Begin your journey into the c
 
 If you have any questions or other interesting ideas, feel free to send an email to cs@sunfounder.com.
 
-* :ref:`About the display language`
-* :ref:`Table of contents`
-* :ref:`Copyright Notice`
+.. * :ref:`About the display language`
+.. * :ref:`Table of contents`
+.. * :ref:`Copyright Notice`
 
 
-About the display language
---------------------------------
+.. About the display language
+.. --------------------------------
 
-In addition to English, we are working on other languages for this course. Please contact service@sunfounder.com if you are interested in helping, and we will give you a free product in return. 
-In the meantime, we recommend using Google Translate to translate English into your desired language.
+.. In addition to English, we are working on other languages for this course. Please contact service@sunfounder.com if you are interested in helping, and we will give you a free product in return. 
+.. In the meantime, we recommend using Google Translate to translate English into your desired language.
 
-The steps are as follows.
+.. The steps are as follows.
 
-* In this course page, right-click and select **Translate to xx**. If the current language is not what you want, you can change it later.
+.. * In this course page, right-click and select **Translate to xx**. If the current language is not what you want, you can change it later.
 
-.. image:: img/new/translate1_shadow.png
-    :align: center
+.. .. image:: img/new/translate1_shadow.png
+..     :align: center
 
-* There will be a language popup in the upper right corner. Click on the menu button to **choose another language**.
+.. * There will be a language popup in the upper right corner. Click on the menu button to **choose another language**.
 
-.. image:: img/new/translate2_shadow.png
-    :align: center
+.. .. image:: img/new/translate2_shadow.png
+..     :align: center
 
-* Select the language from the inverted triangle box, and then click **Done**.
+.. * Select the language from the inverted triangle box, and then click **Done**.
 
-.. image:: img/new/translate3_shadow.png
-    :align: center
+.. .. image:: img/new/translate3_shadow.png
+..     :align: center
 
-.. raw:: html
+.. .. raw:: html
     
-    <br/>   <br/>   
+..     <br/>   <br/>   
 
 Table of contents
 --------------------------------

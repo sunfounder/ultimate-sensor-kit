@@ -221,4 +221,10 @@ rst_epilog = """
 
     <a href="https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal" target="_blank">Serial Bluetooth Terminal</a>  
 
+.. |link_blynk| raw:: html
+
+    <a href="https://blynk.io/" target="_blank">Blynk</a> 
+
+
+    
 """
