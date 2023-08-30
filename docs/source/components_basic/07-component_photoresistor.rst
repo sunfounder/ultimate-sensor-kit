@@ -1,41 +1,40 @@
 .. _cpn_photoresistor:
 
-Photoresistor Module
+フォトレジスタモジュール
 ==========================
 
 .. image:: img/07_photoresistor_module.png
     :width: 400
     :align: center
 
-Introduction
+概要
 ---------------------------
-A photoresistor module is a device that can detect the intensity of light in the environment. It can be used for various purposes, such as adjusting the brightness of a device, detecting day and night, or activating a light switch.
+フォトレジスタモジュールは、周囲の光の強度を検出するデバイスです。明るさの調整、昼夜の検出、照明スイッチの作動など、多様な用途に使用することができます。
 
-An important component of the photoresistor module is the photoresistor. A photoresistor is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity; in other words, it exhibits photo conductivity.
+フォトレジスタモジュールの重要な部品はフォトレジスタです。フォトレジスタは光によって抵抗値が変動する可変抵抗器です。つまり、光が当たると抵抗値が下がる、すなわち光導電性を有しています。
 
-A photoresistor can be applied in light-sensitive detector circuits and light-activated and dark-activated switching circuits acting as a resistance semiconductor. In the dark, a photoresistor can have a resistance as high as several megaohms (MΩ), while in the light, a photoresistor can have a resistance as low as a few hundred ohms.
+暗闇では数メガオーム（MΩ）に達することもあり、明るい状態では数百オームまで抵抗値が下がることがあります。フォトレジスタは、光感応検出回路や光起動・暗起動スイッチング回路において、抵抗半導体として応用されます。
 
-Here is the electronic symbol of photoresistor.
+以下は、フォトレジスタの電子記号です。
 
 .. image:: img/07_photoresistor_symbol_2.png
     :width: 200
     :align: center
 
-Principle
+原理
 ---------------------------
-The photoresistor module works on the principle of changing resistance in response to different light intensities. The sensor has a built-in potentiometer that adjusts the sensor's digital output (D0) threshold. When the intensity of light exceeds a certain threshold, the resistance of the sensor changes. This change in resistance is then converted to an electrical signal that can be read by the Arduino board.
+フォトレジスタモジュールは、異なる光の強度に対して抵抗値を変更する原理に基づいて動作します。このセンサーには、センサーのデジタル出力（D0）の閾値を調整するための内蔵ポテンショメータがあります。光の強度が一定の閾値を超えると、センサーの抵抗値が変わります。この抵抗値の変化が電気信号に変換され、Arduinoボードで読み取ることができます。
 
-
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Photoresistor Module * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- フォトレジスタモジュール * 1
+- ジャンパーワイヤー
 
-**Circuit Assembly**
+**回路組立て**
 
 .. image:: img/07_photoresistor_module_circuit.png
     :width: 400
@@ -45,7 +44,7 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -61,16 +60,16 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-#. This line of code defines the pin number to which the photoresistance sensor is connected on the Arduino board.
+#. このコード行では、Arduinoボード上でフォトレジスタセンサーが接続されているピン番号を定義しています。
 
    .. code-block:: arduino
 
       const int sensorPin = 7;
 
-#. The ``setup()`` function is a special function in Arduino that is executed only once when the Arduino is powered on or reset. In this project, the sensorPin is set as INPUT because we are reading values from it. The Serial.begin(9600) command initiates serial communication at a baud rate of 9600.
+#. ``setup()`` 関数はArduinoで一度だけ実行される特別な関数です。このプロジェクトでは、sensorPinは値を読み取るためにINPUTとして設定されています。Serial.begin(9600) コマンドは、ボーレート9600でシリアル通信を開始します。
 
    .. code-block:: arduino
 
@@ -79,7 +78,7 @@ Code explanation
         Serial.begin(9600);         
       }
 
-#. The ``loop()`` function is the main function where the program runs repeatedly. In this function, the digitalRead function reads the digital value from the photoresistor sensor and prints it to the serial monitor using Serial.println. The ``delay(50)`` command makes the program wait for 50 milliseconds before taking the next reading.
+#. ``loop()`` 関数はプログラムが繰り返し実行される主要な関数です。この関数内で、digitalRead関数はフォトレジスタセンサーからデジタル値を読み取り、Serial.printlnを使用してシリアルモニターに表示します。 ``delay(50)`` コマンドは、次の読み取りを行う前にプログラムを50ミリ秒間待機させます。
 
    .. code-block:: arduino
 
@@ -89,14 +88,12 @@ Code explanation
       }
 
 
-Additional Ideas
+追加のアイディア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Use the sensor to turn on/off an LED or relay. 
-- Plot the **analog output** instead of just digital HIGH/LOW. Use **AO** pin.
+- センサーを使ってLEDやリレーをオン/オフする。
+- デジタルのHIGH/LOWだけでなく、 **アナログ出力** をプロットする。 **AO** ピンを使用。
 
-
-More Projects
+さらなるプロジェクト
 ---------------------------
 * :ref:`fun_light_control_switch`
-

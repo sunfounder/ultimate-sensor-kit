@@ -1,19 +1,18 @@
-.. _fun_doorbell:
+.. _fun_doorbell_jp:
 
-Doorbell
+ドアベル
 ==========================
 
 .. raw:: html
 
    <video controls autoplay style = "max-width:100%">
       <source src="../_static/video/fun/07-fun_Doorbell.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      ご利用のブラウザはビデオタグをサポートしていません。
    </video>
 
-The "doorbell" project aims to simulate the function of a doorbell. When a button is pressed, the Arduino plays a predefined melody using a passive buzzer module.
+この「ドアベル」プロジェクトは、ボタンが押された際にArduinoを使って事前に定義されたメロディをパッシブブザーモジュールで再生する、というドアベルの機能をシミュレートすることを目的としています。
 
-
-1. Build the Cirduit
+1. 回路の組み立て
 -----------------------------
 
 .. image:: img/07-fun_Doorbell_circuit.png
@@ -24,22 +23,22 @@ The "doorbell" project aims to simulate the function of a doorbell. When a butto
 * :ref:`cpn_buzzer`
 
 
-2. Code
+2. コード
 -----------------------------
 
-#. Open the ``07-Doorbell.ino`` file under the path of ``ultimate-sensor-kit\fun_project\07-Doorbell``, or copy this code into **Arduino IDE**.
+#. ``ultimate-sensor-kit\fun_project\07-Doorbell`` のパス下で ``07-Doorbell.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーしてください。
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/a6511078-ed6f-49d0-a4a5-2cafc3d63e4e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-3. Code explanation
+3. コード解説
 -----------------------------
 
-The main idea behind this project is to use the Arduino Uno board to detect a button press and, in response, play a melody on the passive buzzer. The melody consists of a sequence of notes (defined by their pitches) and their durations.
+このプロジェクトの主要なコンセプトは、Arduino Unoボードを使ってボタンの押下を検出し、それに応じてパッシブブザーでメロディを再生することです。このメロディは、音のピッチ（定義された音程）とその持続時間によって構成されます。
 
-#. Setting up necessary libraries and global variables
+#. 必要なライブラリとグローバル変数の設定
 
    .. code-block:: arduino
    
@@ -52,9 +51,9 @@ The main idea behind this project is to use the Arduino Uno board to detect a bu
       int melody[] = {...};
       int noteDurations[] = {...};
 
-   This segment includes the necessary library for musical notes and sets up the pins for our components. Additionally, the melody and its durations are defined in arrays.
+   このセグメントには、音符のための必要なライブラリが含まれ、コンポーネント用のピンが設定されます。さらに、メロディとその長さは配列で定義されています。
 
-#. Initializing the button and starting serial communication
+#. ボタンの初期化とシリアル通信の開始
 
    .. code-block:: arduino
    
@@ -63,9 +62,9 @@ The main idea behind this project is to use the Arduino Uno board to detect a bu
         pinMode(buttonPin, INPUT);    // Set the button pin as an input
       }
 
-   In the ``setup()`` function, we start serial communication and configure the buttonPin to act as an input.
+   ``setup()`` 関数では、シリアル通信を開始し、buttonPinを入力として構成します。
 
-#. Monitoring the button press to play the melody
+#. ボタンの押下を監視し、メロディを再生
 
    .. code-block:: arduino
    
@@ -78,9 +77,9 @@ The main idea behind this project is to use the Arduino Uno board to detect a bu
         }
       }
 
-   Here, we continuously check the state of the button in the loop. If pressed, a message is sent to the serial monitor, and the ``buzzer()`` function (which plays the melody) is called.
+   ここでは、ループ内でボタンの状態を常にチェックしています。もし押された場合は、シリアルモニターにメッセージが送信され、 ``buzzer()`` 関数（メロディを演奏する）が呼び出されます。
 
-#. The ``buzzer()`` function to play the melody
+#. ``buzzer()`` 関数でメロディを再生
 
    .. code-block:: arduino
       
@@ -97,8 +96,5 @@ The main idea behind this project is to use the Arduino Uno board to detect a bu
         }
       }
 
-   In the ``buzzer()`` function, the melody's notes are played sequentially. The ``tone()`` function generates a tone on the buzzer for a specified duration. After playing each note, there's a brief pause before playing the next note.
-
-
-
+   ``buzzer()`` 関数では、メロディの音符が順番に演奏されます。 ``tone()`` 関数は、指定された時間だけブザーでトーンを生成します。各音符を演奏した後、次の音符を演奏する前に短い休止があります。
 

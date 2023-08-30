@@ -1,23 +1,21 @@
-
 .. _iot_Bluetooth_environmental_monitor:
 
-Bluetooth Environmental Monitor
+Bluetooth環境モニター
 =================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/iot/10-iot_Bluetooth_environmental_monitor.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      ご利用のブラウザはビデオタグをサポートしていません。
    </video>
 
 
-This project uses an Android app created with MIT App Inventor to receive and display environmental data from an Arduino board. The Arduino board fetches data from a DHT11 sensor to measure temperature and humidity. Once the data is collected, it's transmitted over Bluetooth using the JDY-31 module.APP will display the data on the screen once it receives it.
+このプロジェクトでは、MIT App Inventorで作成されたAndroidアプリを使用して、Arduinoボードから環境データを受信・表示します。Arduinoボードは、DHT11センサーから温度と湿度のデータを取得します。データ収集後、JDY-31モジュールを用いてBluetooth経由で送信され、アプリがそれを画面上で表示します。
 
-The Android application will be constructed utilizing a complimentary web-based platform known as |link_appinventor|. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone. 
+Androidアプリは、|link_appinventor| という無料のWebベースプラットフォームを利用して構築されます。このプロジェクトは、Arduinoとスマートフォンのインターフェースに慣れる絶好の機会です。
 
-
-1. Build the Cirduit
+1. 回路の作成
 -----------------------------
 
 .. image:: img/10-Wiring_Bluetooth_environmental_monitor.png
@@ -28,142 +26,140 @@ The Android application will be constructed utilizing a complimentary web-based 
 * :ref:`cpn_dht11`
 
 
-2. Create the Android App
+2. Androidアプリの作成
 -----------------------------
 
-The Android application will be developed using a free web application known as |link_appinventor|. 
-MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop 
-features allowing for the creation of simplistic applications.
+Androidアプリは、|link_appinventor| という無料のWebアプリケーションを使用して開発されます。MIT App Inventorは、直感的なドラッグアンドドロップ機能で簡単なアプリケーションを作成できるため、Android開発の優れたスタート地点となります。
 
-Now, let's begin.
+それでは始めましょう。
 
-#. Go to |link_appinventor_login|, and click "online tool" to login. You will require a Google account to register with MIT App Inventor.
+#. |link_appinventor_login| に移動し、「online tool」というボタンをクリックしてログインします。MIT App Inventorに登録するにはGoogleアカウントが必要です。
 
    .. image:: img/new/09-ai_signup_shadow.png
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``Bluetooth_controlled_lock.aia`` file located in the path ``ultimate-sensor-kit\iot_project\bluetooth\05-Bluetooth_environmental_monitor``.
+#. ログイン後、 **Projects** -> **Import project (.aia) from my computer** へ移動して、 ``ultimate-sensor-kit\iot_project\bluetooth\05-Bluetooth_environmental_monitor`` 内の ``Bluetooth_controlled_lock.aia`` ファイルをアップロードします。
 
-   You can also directly download here: :download:`Bluetooth_Environmental_Monitor.aia</_static/other/Bluetooth_Environmental_Monitor.aia>`
+   こちらからもダウンロードできます: :download:`Bluetooth_Environmental_Monitor.aia</_static/other/Bluetooth_Environmental_Monitor.aia>`
 
    .. image:: img/new/09-ai_import_shadow.png
         :align: center
 
-#. Upon uploading the ``.aia`` file, you will see the application on the MIT App Inventor software. This is a pre-configured template. You can modify this template after you have familiarized yourself with MIT App Inventor through the following steps.
+#. ``.aia`` ファイルをアップロードした後、MIT App Inventorソフトウェアでアプリが表示されます。これは事前に設定されたテンプレートであり、次のステップでMIT App Inventorに慣れた後に、このテンプレートを変更できます。
 
-#. In MIT App Inventor, you have 2 primary sections: the **Designer** and the **Blocks**. You can switch between these two sections in the upper right corner of the page.
+#. MIT App Inventorには2つの主要なセクションがあります： **Designer** と **Blocks** です。ページの右上隅でこれらのセクション間を切り替えることができます。
 
    .. image:: img/new/09-ai_intro_1_shadow.png
 
-#. The **Designer** allows you to add buttons, text, screens, and modify the overall aesthetic of your application.
+#. **Designer** では、ボタン、テキスト、画面を追加し、アプリの全体的な見た目を変更できます。
 
    .. image:: img/new/10-ai_intro_2_shadow.png
-   
-#. Next, there's the **Blocks** section. This section lets you craft custom functionalities for your app, allowing you to program each component on the app's GUI to achieve desired features.
+
+#. 次に、 **Blocks** セクションがあります。このセクションでは、アプリにカスタム機能を追加でき、アプリのGUI上の各コンポーネントをプログラムして、目的の機能を実現できます。
 
    .. image:: img/new/10-ai_intro_3_shadow.png
 
-#. To install the application on a smartphone, navigate to the **Build** tab.
+#. スマートフォンにアプリをインストールするには、 **Build** タブに移動します。
 
    .. image:: img/new/08-ai_intro_4_shadow.png
 
-   * You can generate a ``.apk`` file. After selecting this option, a page will appear allowing you to choose between downloading a ``.apk`` file or scanning a QR code for installation. Follow the installation guide to complete the application installation. 
+   * ``.apk`` ファイルを生成できます。このオプションを選択すると、 ``.apk`` ファイルをダウンロードするか、QRコードをスキャンしてインストールするかを選ぶページが表示されます。インストールガイドに従ってアプリのインストールを完了してください。
 
-     You also download our pre-compiled APK here: :download:`Bluetooth_Environmental_Monitor.apk</_static/other/Bluetooth_Environmental_Monitor.apk>`
+     また、事前にコンパイルされたAPKはこちらからダウンロードできます: :download:`Bluetooth_Environmental_Monitor.apk</_static/other/Bluetooth_Environmental_Monitor.apk>`
 
-   * If you wish to upload this app to Google Play or another app marketplace, you can generate a ``.aab`` file.
+   * Google Playや他のアプリマーケットにこのアプリをアップロードする場合、 ``.aab`` ファイルを生成できます。
 
 
-3. Upload the Code
+3. コードのアップロード
 -----------------------------
 
-#. Open the ``10-Bluetooth_environmental_monitor.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\05-Bluetooth_environmental_monitor``, or copy this code into **Arduino IDE**.
-   
+#. ``ultimate-sensor-kit\iot_project\bluetooth\05-Bluetooth_environmental_monitor`` のパス下で ``10-Bluetooth_environmental_monitor.ino`` ファイルを開く、またはこのコードを **Arduino IDE** にコピーしてください。
+
    .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and install it. 
+      ライブラリをインストールするには、Arduinoライブラリマネージャーで **"DHT sensor library"** を検索してインストールしてください。
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/97605897-2fae-4e4e-97f3-d254796636a1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. ボードとポートを選択した後、 **書き込み** ボタンをクリックしてください。
 
-#. Open the Serial monitor(set baudrate to **9600**) to view debug messages. 
+#. シリアルモニターを開き（ボーレートは **9600** に設定）、デバッグメッセージを確認してください。
 
-4. App and Bluetooth moudule Connection
+4. アプリとBluetoothモジュールの接続
 -----------------------------------------------
 
-Ensure that the application created earlier is installed on your smartphone.
+スマートフォンに先ほど作成したアプリがインストールされていることを確認してください。
 
-#. Initially, turn on **Bluetooth** on your smartphone.
+#. まず、スマートフォンの **Bluetooth** をオンにします。
 
    .. image:: img/new/09-app_1_shadow.png
       :width: 60%
       :align: center
 
-#. Navigate to the **Bluetooth settings** on your smartphone and look for names like **JDY-31-SPP**.
+#. スマートフォンの **Bluetooth設定** に移動し、 **JDY-31-SPP** といった名前を探してください。
 
    .. image:: img/new/09-app_2_shadow.png
       :width: 60%
       :align: center
 
-#. After clicking it, agree to the **Pair** request in the pop-up window. If prompted for a pairing code, please enter "1234".
+#. クリックした後、ポップアップウィンドウで **ペアリング** のリクエストに同意してください。ペアリングコードが必要な場合は「1234」を入力してください。
 
    .. image:: img/new/09-app_3_shadow.png
       :width: 60%
       :align: center
 
-#. Now open the newly installed **Environmental Monitor** APP.
+#. 新しくインストールされた **Environmental Monitor** アプリを開きます。
 
    .. image:: img/new/10-app_4_shadow.png
       :width: 25%
       :align: center
 
-#. In the APP, click on **Connect** button to establish a connection between the APP and Bluetooth module.
+#. アプリ内で **Connect** ボタンをクリックして、アプリとBluetoothモジュールの間に接続を確立します。
 
    .. image:: img/new/10-app_5_shadow.png
       :width: 60%
       :align: center
 
-#. This page displays a list of all paired Bluetooth devices. Choose the ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` option from the list. The name of each device is listed next to its MAC address.
+#. このページには、すべてのペアリング済みBluetoothデバイスのリストが表示されます。リストから ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` オプションを選択してください。各デバイスの名前は、そのMACアドレスの隣に表示されます。
 
    .. image:: img/new/10-app_6_shadow.png
       :width: 60%
       :align: center
 
-#. If you don't see any devices on the page shown above, it could be because this app is not authorized to scan for nearby devices. In such a case, you will need to adjust the settings manually.
+#. 上記のページにデバイスが表示されない場合、このアプリは近くのデバイスをスキャンする権限がない可能性があります。その場合は、設定を手動で調整する必要があります。
 
-   * To access the **APP Info** page, long-press the app icon and select it. Alternatively, if you have another method to reach this page, use that instead.
+   * **アプリ情報** ページにアクセスするには、アプリのアイコンを長押しして選択します。別の方法でこのページにアクセスできる場合は、それを使用してください。
 
    .. image:: img/new/10-app_8_shadow.png
          :width: 60%
          :align: center
 
-   * Navigate to the **Permissions** page.
+   * **権限** ページに移動します。
 
    .. image:: img/new/08-app_9_shadow.png
          :width: 60%
          :align: center
 
-   * To enable the APP to scan for nearby devices, go to **Nearby devices** and select **Always**.
+   * アプリが近くのデバイスをスキャンできるようにするために、 **近くのデバイス** に移動し、 **常に許可** を選択します。
 
    .. image:: img/new/08-app_10_shadow.png
          :width: 60%
          :align: center
 
-   * Now, restart the APP and repeat steps 5 and 6 to successfully connect to Bluetooth.
+   * その後、アプリを再起動し、ステップ5と6を繰り返して、Bluetoothに正常に接続します。
 
-#. After a successful connection, you will be redirected to the main page where it will display temperature and humidity.
+#. 接続が成功した後、主なページにリダイレクトされ、温度と湿度が表示されます。
 
    .. image:: img/new/10-app_7_shadow.png
       :width: 60%
       :align: center
 
-5. Code explanation
+5. コードの説明
 -----------------------------------------------
 
-1. Setting up Bluetooth communication and DHT11 sensor.
+1. Bluetooth通信とDHT11センサーの設定。
 
    .. code-block:: arduino
 
@@ -177,9 +173,9 @@ Ensure that the application created earlier is installed on your smartphone.
       #define DHTTYPE DHT11
       DHT dht(DHTPIN, DHTTYPE);
 
-   The code includes necessary libraries and defines pins for the Bluetooth module and DHT11 sensor. It also declares objects for Bluetooth communication and DHT11.
+   このコードは、必要なライブラリを含め、BluetoothモジュールとDHT11センサーのピンを定義します。また、Bluetooth通信とDHT11用のオブジェクトを宣言しています。
 
-2. Initialization in setup function.
+2. setup()関数での初期化。
 
    .. code-block:: arduino
 
@@ -189,9 +185,9 @@ Ensure that the application created earlier is installed on your smartphone.
         dht.begin();
       }
 
-   This segment initializes serial communication for debugging, Bluetooth module, and the DHT sensor.
+   この部分は、デバッグ用のシリアル通信、Bluetoothモジュール、およびDHTセンサーを初期化します。
 
-3. Reading data and sending via Bluetooth.
+3. データの読み取りとBluetooth経由での送信。
 
    .. code-block:: arduino
 
@@ -222,4 +218,4 @@ Ensure that the application created earlier is installed on your smartphone.
         bleSerial.println(sensorData);  // Send temperature and humidity values to the Bluetooth module
       }
 
-   This segment reads temperature and humidity from the DHT11 sensor every 2 seconds. If the reading fails, it prints an error message. Otherwise, it prints the readings to the Serial Monitor and sends them via the Bluetooth module in a comma-separated format. When the app receives data in the format of "temperature,humidity", it will parse the information and present it on the user interface.
+   この部分では、DHT11センサーから2秒ごとに温度と湿度を読み取ります。読み取りに失敗した場合は、エラーメッセージを出力します。それ以外の場合、シリアルモニターに読み取り値を出力し、カンマ区切りの形式でBluetoothモジュール経由で送信します。アプリは「温度,湿度」という形式のデータを受信したら、その情報を解析し、ユーザーインターフェースに表示します。

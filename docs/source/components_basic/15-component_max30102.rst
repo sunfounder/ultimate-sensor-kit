@@ -1,43 +1,41 @@
 .. _cpn_max30102:
 
-Pulse Oximeter and Heart Rate Sensor (MAX30102)
+脈拍酸素計および心拍数センサー（MAX30102）
 ===============================================================
 
 .. image:: img/15_gy_max30102_module.png
     :width: 300
     :align: center
 
-Introduction
+概要
 ---------------------------
-MAX30102 is a sensor that combines a pulse oximeter and a heart rate monitor. It's an optical sensor that measures the absorbance of pulsating blood through a photodetector after emitting two wavelengths of light from two LEDs - a red and an infrared one. This particular LED colour combination is designed to allow data to be read with the tip of one's finger.
+MAX30102は、脈拍酸素計と心拍数モニターを一体化したセンサーです。この光学センサーは、赤色と赤外線の二つのLEDから発される光の波長を用いて、脈動する血液の吸光度を光検出器で測定します。この特定のLEDカラーの組み合わせは、指先でデータを簡単に読み取ることができるように設計されています。
 
-Principle
+原理
 ---------------------------
-The MAX30102 works by shining both lights onto the finger or earlobe (or essentially anywhere where the skin isn’t too thick, so both lights can easily penetrate the tissue) and measuring the amount of reflected light using a photodetector. This method of pulse detection through light is called Photoplethysmogram.
+MAX30102は、指や耳たぶ（または、皮膚が厚すぎない場所）に両方の光を照射し、光検出器を用いて反射光の量を測定する仕組みです。この光による脈拍検出法は、光電容積脈波図（Photoplethysmogram）と呼ばれています。
 
-The working of MAX30102 can be divided into two parts: Heart Rate Measurement and Pulse Oximetry (measuring the oxygen level of the blood).
+MAX30102の動作は大きく二つに分けられます：心拍数の測定と脈拍酸素計（血中の酸素レベルを測定）。
 
-Heart Rate Measurement
+心拍数の測定
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-The oxygenated hemoglobin (HbO2) in the arterial blood has the characteristic of absorbing IR light. The redder the blood (the higher the hemoglobin), the more IR light is absorbed. As the blood is pumped through the finger with each heartbeat, the amount of reflected light changes, creating a changing waveform at the output of the photodetector. As you continue to shine light and take photodetector readings, you quickly start to get a heart-beat (HR) pulse reading.
+動脈血中の酸素飽和度の高いヘモグロビン（HbO2）は、赤外線（IR）を吸収する特性があります。血の赤み（ヘモグロビンの量）が高いほど、赤外線は多く吸収されます。心拍ごとに血液が指を通過する際、反射される光の量が変化し、これが光検出器の出力で変動する波形を生み出します。
 
-
-Pulse Oximetry
+脈拍酸素計
 ^^^^^^^^^^^^^^^^^^^^
-Pulse oximetry is based on the principle that the amount of RED and IR light absorbed varies depending on the amount of oxygen in your blood. 
+脈拍酸素計は、血中の酸素量に応じて吸収される赤色と赤外線の光の量が異なるという原理に基づいています。
 
-
-Usage
+使用方法
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Pulse Oximeter and Heart Rate Sensor(MAX30102) * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- 脈拍酸素計および心拍数センサー（MAX30102）* 1
+- ジャンパーワイヤー
 
 
-**Circuit Assembly**
+**回路の組み立て**
 
 .. image:: img/15_gy_max30102_module_circuit.png
     :width: 400
@@ -47,14 +45,14 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. warning::
-    This sketch detects heart-rate optically. This method is tricky and prone to give false readings. So please **DO NOT** use it for actual medical diagnosis.
+    このスケッチは光学的な方法で心拍数を検出します。この方法は誤読を引き起こす可能性がありますので、医療診断には **使用しないでください** 。
 
 .. note:: 
-   To install the library, use the Arduino Library Manager and search for **"SparkFun MAX3010x"** and install it. 
+   ライブラリをインストールするには、Arduinoライブラリマネージャーで  **"SparkFun MAX3010x"** と検索し、インストールしてください。
 
 .. raw:: html
     
@@ -68,16 +66,16 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-1. **Including Libraries & Initializing Global Variables**:
+1. **ライブラリのインクルードとグローバル変数の初期化**:
 
-   The essential libraries are imported, the sensor object is instantiated, and global variables for data management are set.
+   必要なライブラリがインポートされ、センサーオブジェクトが生成され、データ管理のためのグローバル変数が設定されます。
 
    .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"SparkFun MAX3010x"** and install it. 
-   
+      ライブラリをインストールするには、Arduinoライブラリマネージャーで **"SparkFun MAX3010x"** と検索し、インストールしてください。
+
    .. code-block:: arduino
     
       #include <Wire.h>
@@ -86,10 +84,10 @@ Code explanation
       MAX30105 particleSensor;
       // ... (other global variables)
 
-2. **Setup Function & Sensor Initialization**:
+2. **setup()関数とセンサーの初期化**:
 
-   The Serial communication is initialized at a baud rate of 9600. The sensor's connection is checked, and if successful, an initialization sequence is run. An error message is displayed if the sensor isn't detected.
-   
+   シリアル通信は9600のボーレートで初期化されます。センサーとの接続が確認されたら、初期化処理が実行されます。センサーが検出されない場合はエラーメッセージが表示されます。
+
    .. code-block:: arduino
 
       void setup() {
@@ -100,9 +98,9 @@ Code explanation
         }
         // ... (further setup)
 
-3. **Reading IR Value & Checking for Heartbeat**:
+3. **赤外線値の読み取りと心拍の確認**:
 
-   The IR value, which is indicative of the blood flow, is fetched from the sensor. The `checkForBeat()` function assesses if a heartbeat is detected based on this value.
+   センサーから取得した赤外線の値が血流を示しています。この値に基づいて、``checkForBeat()``関数は心拍が検出されたかどうかを評価します。
 
    .. code-block:: arduino
 
@@ -111,9 +109,9 @@ Code explanation
           // ... (heartbeat detected actions)
       }
 
-4. **Calculating Beats Per Minute (BPM)**:
+4. **分間心拍数（BPM）の計算**:
 
-   Upon detecting a heartbeat, the BPM is calculated based on the time difference since the last detected heartbeat. The code also ensures the BPM falls within a realistic range before updating the average.
+   心拍が検出された場合、最後に検出された心拍からの時間差に基づいてBPMが計算されます。コードは、BPMが現実的な範囲内にあるか確認し、その後で平均を更新します。
 
    .. code-block:: arduino
 
@@ -122,11 +120,10 @@ Code explanation
       if (beatsPerMinute < 255 && beatsPerMinute > 20) {
           // ... (store and average BPM)
       }
-      
 
-5. **Printing Values to the Serial Monitor**:
+5. **シリアルモニターへの値の出力**:
 
-   The IR value, current BPM, and average BPM are printed to the Serial Monitor. Additionally, the code checks if the IR value is too low, suggesting the absence of a finger.
+   赤外線の値、現在のBPM、および平均BPMがシリアルモニターに出力されます。さらに、赤外線値が低すぎる場合、指がない可能性があると警告されます。
 
    .. code-block:: arduino
 
@@ -141,13 +138,12 @@ Code explanation
       if (irValue < 50000)
         Serial.print(" No finger?");
 
-
-Additional Ideas
+追加のアイデア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Add LEDs to flash with each detected beat  
-- Use a small OLED or LCD screen to display real-time BPM values and other relevant data.
+- 検出された心拍ごとにLEDを点滅させる  
+- 小型のOLEDまたはLCDスクリーンを使用して、リアルタイムのBPM値などの関連データを表示する。
 
-More Projects
+その他のプロジェクト
 ---------------------------
 * :ref:`fun_heartrate_monitor`

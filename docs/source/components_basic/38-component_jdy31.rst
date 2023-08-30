@@ -1,78 +1,78 @@
 .. _cpn_jdy31:
 
-JDY-31 Bluetooth Module
+JDY-31 Bluetooth モジュール
 =====================================
 
 .. image:: img/38_JDY31_1.jpg
     :align: center
 
 .. warning::
-  This module **does not support Apple device** connections, so tutorials involving this module require an Android phone or tablet.
+  このモジュールは **Apple製デバイスとの接続はサポートしていません**。したがって、このモジュールを使用したチュートリアルは、Androidのスマートフォンかタブレットが必要です。
 
-The JDY-31 Bluetooth module is a pin-compatible replacement for the HC-06 Bluetooth module. It is simpler and easier to use than the HC-06 and is often available at a slightly lower cost. 
+JDY-31 Bluetoothモジュールは、HC-06 Bluetoothモジュールとピン互換の交換品です。HC-06よりもシンプルで使いやすく、多少のコスト削減も期待できます。
 
-The JDY-31 Bluetooth module is based on Bluetooth 3.0 SPP design and can support Windows, Linux, and Android data transmission. The working frequency of the JDY-31 Bluetooth module is 2.4 GHz with modulation mode GFSK. The maximum transmission power is 8 dB, and the maximum transmission distance is 30 meters. Users can modify the device name through AT command, baud rate, and other instructions.
+このJDY-31 Bluetoothモジュールは、Bluetooth 3.0 SPP設計に基づいており、Windows、Linux、Androidデータ転送に対応しています。動作周波数は2.4 GHzで、変調方式はGFSKです。最大送信電力は8 dBで、最大通信距離は30メートルです。ユーザーはATコマンドを用いてデバイス名、ボーレートなどを変更できます。
 
-Pins of JDY-31 and their functions:
+JDY-31のピンとその機能:
 
 .. image:: img/38_JDY31_2.jpg
     :align: center
 
 
-.. list-table:: JDY-31 Pins
+.. list-table:: JDY-31 ピン
    :widths: 25 25 100
    :header-rows: 1
 
-   * - Pin	
-     - Name	
-     - Description
+   * - ピン	
+     - 名称	
+     - 説明
    * - 1	
      - STATE
-     - Connection status pin (not connected low level, output high level after connectio) 
+     - 接続状態ピン（未接続はローレベル、接続後はハイレベル出力） 
    * - 2	
      - RXD	
-     - Receiver pin, this pin must connect to TX pin of next device.
+     - 受信ピン、このピンは次のデバイスのTXピンに接続する必要があります。
    * - 3	
      - TXD
-     - Transmitter pin, this pin must connect to RX pin of next device.
+     - 送信ピン、このピンは次のデバイスのRXピンに接続する必要があります。
    * - 4		
      - GND
      - GND
    * - 5	
      - VCC
-     - Power Supply(1.8-3.6V, 3.3v recommended)
+     - 電源供給（1.8-3.6V、3.3V推奨）
    * - 6	
      - EN
-     - enable or disable the module. When this pin is held high, the module is enabled and begins transmitting and receiving data.
+     - モジュールの有効/無効。このピンがハイレベルの場合、モジュールが有効になりデータの送受信を開始します。
 
-patch application: general application only need to connect VCC, GND, RXD, TXD 4 pins, if you need to actively disconnect in the connection state, send AT+DISC in the connection state.
+一般的な使用法では、VCC、GND、RXD、TXDの4つのピンに接続するだけで十分です。接続状態で積極的に切断する必要がある場合は、接続状態でAT+DISCを送信してください。
 
-AT Command Set
+ATコマンドセット
 ---------------------------
 
-+------------+-------------------------------------+-------------+
-|   Command  |               Function              |   Default   |
-+============+=====================================+=============+
-| AT+VERSION | Version Number                      | JDY-31-V1.2 |
-+------------+-------------------------------------+-------------+
-| AT+RESET   | Soft reset                          |             |
-+------------+-------------------------------------+-------------+
-| AT+DISC    | Disconnect (valid when connected)   |             |
-+------------+-------------------------------------+-------------+
-| AT+LADDR   | Query the MAC address of the module |             |
-+------------+-------------------------------------+-------------+
-| AT+PIN     | Set or query connection password    | 1234        |
-+------------+-------------------------------------+-------------+
-| AT+BAUD    | Set or query baud rate              | 9600        |
-+------------+-------------------------------------+-------------+
-| AT+NAME    | Set or query broadcast name         | JDY-31-SPP  |
-+------------+-------------------------------------+-------------+
-| AT+DEFAULT | Factory reset                       |             |
-+------------+-------------------------------------+-------------+
-| AT+ENLOG   | Serial port status output           | 1           |
-+------------+-------------------------------------+-------------+
++------------+-----------------------------------+-------------+
+| コマンド   | 機能                              | デフォルト  |
++============+===================================+=============+
+| AT+VERSION | バージョン番号                    | JDY-31-V1.2 |
++------------+-----------------------------------+-------------+
+| AT+RESET   | ソフトリセット                    |             |
++------------+-----------------------------------+-------------+
+| AT+DISC    | 切断（接続時有効）                |             |
++------------+-----------------------------------+-------------+
+| AT+LADDR   | モジュールのMACアドレスを照会する |             |
++------------+-----------------------------------+-------------+
+| AT+PIN     | 接続パスワードの設定・照会        | 1234        |
++------------+-----------------------------------+-------------+
+| AT+BAUD    | ボーレートの設定・照会            | 9600        |
++------------+-----------------------------------+-------------+
+| AT+NAME    | ブロードキャスト名の設定・照会    | JDY-31-SPP  |
++------------+-----------------------------------+-------------+
+| AT+DEFAULT | 工場出荷状態にリセット            |             |
++------------+-----------------------------------+-------------+
+| AT+ENLOG   | シリアルポートステータス出力      | 1           |
++------------+-----------------------------------+-------------+
 
-More Projects
+その他のプロジェクト
 ---------------------------
 
 * :ref:`iot_Bluetooth_start`

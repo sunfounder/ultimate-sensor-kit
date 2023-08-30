@@ -1,18 +1,18 @@
 .. _fun_heartrate_monitor:
 
-Heart rate monitor
+心拍数モニター
 ==========================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/fun/06-fun_Heart_rate_monitor.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      ご利用のブラウザはビデオタグをサポートしていません。
    </video>
 
-This Arduino project aims to build a simple Heart Rate Monitor using a MAX30102 pulse oximeter sensor and an SSD1306 OLED Display. The code takes measurements of the heart rate by determining the time between heartbeats. By taking four measurements, it computes their average and presents the resultant average heart rate on an OLED screen. If the sensor doesn't detect a finger, it sends a prompt to the user to position their finger correctly on the sensor.
+このArduinoプロジェクトは、MAX30102パルスオキシメーターセンサーとSSD1306 OLEDディスプレイを使用してシンプルな心拍数モニターを作成することを目的としています。コードは心拍間の時間を測定することで心拍数を計測します。4回の測定を行った後、その平均を計算し、結果として得られた平均心拍数をOLEDスクリーンに表示します。センサーが指を検出しない場合、ユーザーにセンサー上で指を正確に配置するよう促します。
 
-1. Build the Cirduit
+1. 回路の組み立て
 -----------------------------
 
 .. image:: img/06-fun_Heart_rate_monitor_circuit.png
@@ -23,25 +23,24 @@ This Arduino project aims to build a simple Heart Rate Monitor using a MAX30102 
 * :ref:`cpn_olde`
 
 
-2. Code
+2. コード
 -----------------------------
 
-#. Open the ``06-Heart_rate_monitor.ino`` file under the path of ``ultimate-sensor-kit\fun_project\06-Heart_rate_monitor``, or copy this code into **Arduino IDE**.
+#. ``ultimate-sensor-kit\fun_project\06-Heart_rate_monitor`` のパスの下で ``06-Heart_rate_monitor.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーペーストしてください。
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/62989671-0ed0-479a-a91c-9c8f37c170ab/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-3. Code explanation
+3. コードの解説
 -----------------------------
 
-The main principle behind this project is to capture the pulsation of blood flow through a finger using the MAX30102 sensor. As blood pumps through the body, it causes tiny changes in the volume of blood in the vessels of the fingertip. By shining light through the finger and measuring the amount of light that gets absorbed or reflected back, the sensor detects these minute volume changes. The time interval between subsequent pulses is then used to calculate the heart rate in beats per minute (BPM). This value is then averaged over four measurements and displayed on the OLED screen.
+このプロジェクトの主要な原理は、MAX30102センサーを使用して指先の血流の脈動をキャプチャすることです。血液が体内を流れると、指先の血管内の血液量が微量に変化します。このセンサーは指を透過して光を照射し、吸収または反射された光の量を測定することで、これらの微量な容量変化を検出します。次に、連続する脈動の間隔を使用して、1分あたりの心拍数（BPM）を計算します。この値は4回の測定で平均化され、OLEDスクリーンに表示されます。
 
+1. **ライブラリのインクルードと初期宣言**:
 
-1. **Library Inclusions and Initial Declarations**:
-
-   The code begins by including necessary libraries for the OLED display, MAX30102 sensor, and heart rate calculation. Additionally, the configuration for the OLED display and the variables for heart rate calculation are declared.
+   コードは、OLEDディスプレイ、MAX30102センサー、および心拍数計算に必要なライブラリを含むように始まります。さらに、OLEDディスプレイの設定と心拍数計算の変数が宣言されます。
 
    .. code-block:: arduino
 
@@ -53,8 +52,7 @@ The main principle behind this project is to capture the pulsation of blood flow
 
       // ... Variables and OLED configuration
 
-   In this project, we've also whipped up a couple of bitmaps. The ``PROGMEM`` keyword denotes that the array is stored in the program memory of the Arduino microcontroller. Storing data in program memory(PROGMEM) instead of RAM can be helpful for large amounts of data, which would otherwise take up too much space in RAM.
-
+   このプロジェクトでは、いくつかのビットマップも用意しました。 ``PROGMEM`` キーワードは、配列がArduinoマイクロコントローラーのプログラムメモリに格納されることを示しています。プログラムメモリ（PROGMEM）にデータを格納することは、RAMのスペースを多く取る可能性のある大量のデータにとって便利です。
 
    .. code-block:: arduino
 
@@ -62,9 +60,9 @@ The main principle behind this project is to capture the pulsation of blood flow
 
       static const unsigned char PROGMEM beat2_bmp[] = {...}
 
-2. **Setup Function**:
+2. **セットアップ関数**:
 
-   Initializes I2C communication, starts serial communication, initializes the OLED display, and sets up the MAX30102 sensor.
+   I2C通信を初期化し、シリアル通信を開始し、OLEDディスプレイを初期化し、MAX30102センサーを設定します。
 
    .. code-block:: arduino
 
@@ -74,11 +72,11 @@ The main principle behind this project is to capture the pulsation of blood flow
           display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS);
           // ... Rest of the setup code
 
-3. **Main Loop**:
+3. **メインループ**:
 
-   The core functionality resides here. The IR value is read from the sensor. If a finger is detected (IR value greater than 50,000), the program checks if a heartbeat is sensed. When a heartbeat is detected, the OLED screen displays the BPM and the time between heartbeats is used to calculate BPM. Otherwise, it prompts the user to place their finger on the sensor.
-   
-   We have also prepared two bitmaps with heartbeats, and by switching between these two bitmaps, we can achieve a dynamic visual effect.
+   ここに主要な機能があります。IR値がセンサーから読み取られます。指が検出された場合（IR値が50,000以上）、プログラムは心拍が感知されたかどうかを確認します。心拍が検出されると、OLED画面にBPMが表示され、心拍の間隔がBPMの計算に使用されます。それ以外の場合は、ユーザーにセンサーに指を置くように促します。
+
+   また、2つの心拍ビットマップも用意しました。これらのビットマップを切り替えることで、ダイナミックな視覚効果を実現できます。
 
    .. code-block:: arduino
 
@@ -106,5 +104,3 @@ The main principle behind this project is to capture the pulsation of blood flow
           // ... Prompt to place the finger on the sensor
         }
       }
-      
-

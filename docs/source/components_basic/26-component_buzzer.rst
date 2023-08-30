@@ -1,31 +1,31 @@
 .. _cpn_buzzer:
 
-Passive Buzzer Module
+パッシブブザーモジュール
 ==========================
 
 .. image:: img/26_passive_buzzer_module.png
     :width: 400
     :align: center
 
-Introduction
+概要
 ---------------------------
-A passive buzzer is a device that generates sound when an electrical signal is applied to it. It is called passive because it does not have an internal oscillator to generate sound on its own. Instead, it relies on an external signal from a microcontroller like Arduino to produce sound. The passive buzzer module is a small electronic component that contains a passive buzzer and some additional circuitry that makes it easier to use with Arduino.
+パッシブブザーは、電気信号がかかると音を発生する装置です。内部に発振器を持っていないため「パッシブ」と呼ばれます。音を発生させるためには、Arduinoのようなマイクロコントローラからの外部信号が必要です。パッシブブザーモジュールは、パッシブブザーとそれをArduinoで簡単に使用できるようにする追加の回路を含む小型の電子部品です。
 
-Principle
+原理
 ---------------------------
-The working principle of the passive buzzer module is based on the piezoelectric effect. When an electrical signal is applied to the buzzer, it causes a piezoelectric crystal inside the buzzer to vibrate at a specific frequency. This vibration produces sound waves that we can hear. The frequency of the sound produced by the buzzer depends on the frequency of the electrical signal applied to it. By changing the frequency of the signal, we can change the pitch of the sound produced by the buzzer.
+パッシブブザーモジュールの動作原理は、圧電効果に基づいています。電気信号がブザーにかかると、ブザー内部の圧電結晶が特定の周波数で振動します。この振動が我々が聞くことのできる音波を発生させます。ブザーによって発生する音の周波数は、かかる電気信号の周波数に依存します。信号の周波数を変更することで、ブザーによって発生する音のピッチを変更できます。
 
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Passive Buzzer Module * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- パッシブブザーモジュール * 1
+- ジャンパーワイヤ
 
 
-**Circuit Assembly**
+**回路の組み立て**
 
 .. image:: img/26_passive_buzzer_module_circuit.png
     :width: 400
@@ -35,13 +35,12 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/5b24a3d9-8688-4dc2-ad3a-cce82f6bd3a7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
 
 .. raw:: html
 
@@ -51,23 +50,24 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-1. Including the pitches library:
-   This library provides the frequency values for various musical notes, allowing you to use musical notation in your code.
+1. pitchesライブラリをインクルード：
+
+   このライブラリは、各音符の周波数値を提供し、コード内で音楽記号を使えるようにします。
 
    .. code-block:: arduino
        
       #include "pitches.h"
 
-2. Defining constants and arrays:
+2. 定数と配列の定義：
 
-   * ``buzzerPin`` is the digital pin on the Arduino where the buzzer is connected.
+   * ``buzzerPin`` はブザーが接続されているArduinoのデジタルピンです。
 
-   * ``melody[]`` is an array that stores the sequence of notes to be played.
+   * ``melody[]`` は、演奏される音符の配列です。
 
-   * ``noteDurations[]`` is an array that stores the duration of each note in the melody.
+   * ``noteDurations[]`` は、メロディ内の各音符の長さを格納する配列です。
 
    .. code-block:: arduino
    
@@ -79,17 +79,15 @@ Code explanation
         4, 8, 8, 4, 4, 4, 4, 4
       };
 
-3. Playing the melody:
+3. メロディの演奏：
 
-   * The ``for`` loop iterates over each note in the melody.
+   * ``for`` ループは、メロディの各音符を反復処理します。
 
-   * The ``tone()`` function plays a note on the buzzer for a specific duration.
+   * ``tone()`` 関数は、指定された長さの音符をブザーで演奏します。
 
-   * A delay is added between notes to distinguish them.
+   * 音符間には遅延が追加され、それぞれを区別します。
 
-   * The ``noTone()`` function stops the sound.
-
-
+   * ``noTone()`` 関数は音を停止します。
 
    .. code-block:: arduino
    
@@ -103,18 +101,18 @@ Code explanation
         }
       }
 
-4. Empty loop function:
-   Since the melody is played only once in the setup, there's no code in the loop function.
+4. 空のループ関数：
+   メロディはsetup()で一度だけ演奏されるため、loop()関数内にはコードがありません。
 
-
-Additional Ideas
+追加のアイデア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Modify the melody: You can experiment by changing the notes and durations in the ``melody[]`` and ``noteDurations[]`` arrays to create your own tunes. If you are interested, there is a repository (|link_arduino-songs|) on GitHub that provides Arduino code for playing different songs. Although their approach may be different from this project, you can refer to their notes and durations.
-- Add a button: Integrate a push-button to the circuit and modify the code to play the melody when the button is pressed.
+- メロディを変更： ``melody[]`` と ``noteDurations[]`` 配列内の音符と長さを変更して、独自の曲を作成できます。興味があれば、GitHubにArduinoで様々な曲を演奏するコードを提供するリポジトリ（|link_arduino-songs|）もあります。
+- ボタンを追加：プッシュボタンを回路に組み込み、ボタンが押されたときにメロディを演奏するようにコードを変更します。
 
-More Projects
+さらに多くのプロジェクト
 ---------------------------
 * :ref:`fun_doorbell`
 * :ref:`fun_gas_leak_alarm`
 * :ref:`iot_Bluetooth_piano`
+

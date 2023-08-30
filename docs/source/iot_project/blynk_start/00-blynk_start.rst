@@ -1,16 +1,16 @@
 .. _iot_blynk_start:
 
-Get Started with Blynk
+Blynkで始める方法
 =============================
 
-Blynk is a full suite of software required to prototype, deploy, and remotely manage connected electronic devices at any scale: from personal IoT projects to millions of commercial connected products.
-With Blynk anyone can connect their hardware to the cloud and build a no-code iOS, Android, and web applications to analyze real-time and historical data coming from devices, control them remotely from anywhere in the world, receive important notifications, and much more.
+Blynkは、プロトタイピングからデプロイ、遠隔管理に至るまで、個人的なIoTプロジェクトから商用接続製品に至る何百万もの電子デバイスをサポートするための一式のソフトウェアです。
+Blynkを使えば、誰でもハードウェアをクラウドに接続し、リアルタイムおよび過去のデータを分析するiOS、Android、Webアプリケーションをコードレスで構築できます。また、世界中のどこからでもデバイスをリモート制御でき、重要な通知を受け取ることができます。
 
 .. image:: img/blynk-iot.png
 
-Getting the R4 board to communicate with Blynk requires some configuration when you first use Blynk.
+R4ボードをBlynkと通信させるためには、初めてBlynkを使用する際にいくつかの設定が必要です。
 
-Follow the steps below, and note that you must do them in order and not skip any chapters.
+以下の手順に従ってください。章をスキップせずに、順番に進める必要があります。
 
 .. toctree::
     :maxdepth: 2

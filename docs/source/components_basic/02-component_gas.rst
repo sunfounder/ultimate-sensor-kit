@@ -1,32 +1,32 @@
 .. _cpn_gas:
 
-Gas/Smoke Sensor Module (MQ2) 
+ガス/煙センサーモジュール（MQ2）
 =====================================
 
 .. image:: img/02_mq2_gas_module.png
     :width: 350
     :align: center
 
-Introduction
+概要
 ---------------------------
-The MQ-2 sensor is a versatile gas sensor capable of detecting a wide range of gases including alcohol, carbon monoxide, hydrogen, isobutene, liquefied petroleum gas, methane, propane, and smoke. It is popular among beginners due to its low cost and easy-to-use features.
+MQ-2センサーは、アルコール、一酸化炭素、水素、イソブテン、液化石油ガス、メタン、プロパン、煙など、多種多様なガスを検出できる高機能なガスセンサーです。低コストで使いやすいため、初心者にも人気があります。
 
-Principle
+原理
 ---------------------------
-The MQ-2 sensor works on the principle of resistance changes in the presence of different gases. When the target gas comes in contact with the heated MOS(Metal Oxide Semiconductor) material, it undergoes oxidation or reduction reactions that change the resistance of the MOS material. It is noteworthy that the MQ2 gas sensor is capable of detecting multiple gases, but lacks the ability to differentiate between them. This is a common characteristic of most gas sensors. 
+MQ-2センサーは、異なるガスの存在下で抵抗値が変化するという原理で動作します。対象となるガスが加熱されたMOS（Metal Oxide Semiconductor）材料と接触すると、酸化または還元反応が起こり、MOS材料の抵抗値が変化します。特筆すべきは、MQ2ガスセンサーは多種のガスを検出できるものの、それらを識別する能力はありません。これは多くのガスセンサーに共通の特性です。
 
-The sensor has a built-in potentiometer that allows you to adjust the sensor digital output (D0) threshold. When the concentration of gas in the air exceeds a certain threshold value, the resistance of the sensor changes. This change in resistance is then converted into an electrical signal that can be read by an Arduino board.
+センサーには、センサーのデジタル出力（D0）の閾値を調整できる内蔵ポテンショメーターがあります。空気中のガス濃度が一定の閾値を超えると、センサーの抵抗値が変化します。この抵抗値の変化は、Arduinoボードで読み取れる電気信号に変換されます。
 
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Gas Sensor Module(MQ2) * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- ガスセンサーモジュール（MQ2） * 1
+- ジャンパーワイヤー
 
-**Circuit Assembly**
+**回路組立て**
 
 .. image:: img/02_mq2_sensor_circuit.png
     :width: 520
@@ -36,31 +36,31 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/1de900bf-d3bf-411a-8f6b-23e53b704bf5/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/02-component_gas.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザはビデオタグをサポートしていません。
    </video>
    <br/><br/>  
 
-Code explanation
+
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. The first line of code is a constant integer declaration for the gas sensor pin. We use the analog pin A0 to read the output from the gas sensor.
+1. コードの最初の行は、ガスセンサーのピンに対する整数型の定数を宣言しています。アナログピンA0を使用して、ガスセンサーからの出力を読み取ります。
 
    .. code-block:: arduino
    
       const int sensorPin = A0;
 
-2. The ``setup()`` function is where we initialize our serial communication at a baud rate of 9600. This is necessary to print the readings from the gas sensor to the serial monitor.
+2. ``setup()``関数では、シリアル通信を9600ボーレートで初期化します。この設定は、ガスセンサーの読み取り値をシリアルモニターに出力するために必要です。
 
    .. code-block:: arduino
    
@@ -68,7 +68,7 @@ Code explanation
         Serial.begin(9600);  // Start serial communication at 9600 baud rate
       }
 
-3. The ``loop()`` function is where we continuously read the analog value from the gas sensor and print it to the serial monitor. We use the ``analogRead()`` function to read the analog value from the sensor. We then wait for 50 milliseconds before the next reading. This delay gives some breathing space for the serial monitor to process the data.
+3. ``loop()``関数では、ガスセンサーからのアナログ値を連続して読み取り、それをシリアルモニターに出力します。``analogRead()``関数を使用してセンサーからのアナログ値を読み取ります。次の読み取りまで50ミリ秒間待ちます。この遅延は、シリアルモニターがデータを処理する猶予を与えます。
 
    .. code-block:: arduino
    
@@ -80,17 +80,13 @@ Code explanation
 
 .. note:: 
 
-  MQ2 is a heating-driven sensor that usually requires preheating before use. During the preheating period, the sensor typically reads high and gradually decreases until it stabilizes.
+  MQ2は、使用前に通常予熱が必要な加熱駆動型のセンサーです。予熱期間中、センサーは通常高い値を示し、次第に減少して安定します。
 
-Additional Ideas
+追加アイデア
 ^^^^^^^^^^^^^^^^
 
--  add a visual or auditory warning system (using LEDs or a buzzer) that triggers when gas concentrations exceed certain thresholds.
+- ガス濃度が特定の閾値を超えた際に作動する視覚または音声の警告システム（LEDやブザーを使用）を追加する。
 
-
-More Projects
+その他のプロジェクト
 ---------------------------
 * :ref:`fun_gas_leak_alarm`
-
-
-

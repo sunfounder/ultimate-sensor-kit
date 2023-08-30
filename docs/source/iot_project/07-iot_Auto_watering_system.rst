@@ -1,24 +1,23 @@
-
 .. _iot_Auto_watering_system:
 
-Auto Watering System with Blynk
+Blynkを使った自動散水システム
 ===================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/iot/07-iot_Auto_watering_system.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      ご利用のブラウザはビデオタグをサポートしていません。
    </video>
 
-This project aims to demonstrate an automated irrigation system that utilizes soil moisture sensors and water pumps. The Blynk app is used for user interaction, where it receives the soil moisture data and sends watering threshold and automatic mode status to the system. When the soil moisture drops below the threshold while in automatic mode, the system activates the water pump.
+このプロジェクトは、土壌湿度センサーと水ポンプを活用した自動散水システムを示すことを目的としています。Blynkアプリはユーザーとのインタラクションに使用され、土壌の湿度データを受信し、散水閾値と自動モードのステータスをシステムに送信します。自動モードで土壌の湿度が閾値を下回ると、システムは水ポンプを起動します。
 
-1. Build the Cirduit
+1. 配線を組み立てる
 -----------------------------
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
+    ESP8266モジュールは安定した動作環境を提供するために高電流が必要なため、9Vのバッテリーが接続されていることを確認してください。
 
 
 .. image:: img/07-Wiring_Auto_watering.png
@@ -31,50 +30,51 @@ This project aims to demonstrate an automated irrigation system that utilizes so
 * :ref:`cpn_pump`
 
 
-2. Configure Blynk
+2. Blynkを設定する
 -----------------------------
 
 .. note::
-    If you are not familiar with Blynk, it is strongly recommended that you read these two tutorials first. :ref:`iot_blynk_start` is a beginner's guide for Blynk, which includes how to configure ESP8266 and register with Blynk. And :ref:`iot_Flame` is a simple example, but the description of the steps will be more detailed.
 
-**2.1 Create template**
+    Blynkに慣れていない場合、最初にこれらの2つのチュートリアルを読むことを強くお勧めします。:ref:`iot_blynk_start` はBlynkの初心者向けガイドで、ESP8266の設定方法とBlynkへの登録方法が含まれています。また、:ref:`iot_Flame` は簡単な例ですが、手順の説明がより詳細です。
+
+**2.1 テンプレートの作成**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Firstly, we need to establish a template on Blynk. Create a **"Auto watering system"** template. 
+まず、Blynk上で **「Auto watering system」** というテンプレートを作成する必要があります。
 
-**2.2 Datastream**
+**2.2 データストリーム**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Create **Datastreams** of type **Virtual Pin** in the **Datastream** page receive data from esp8266 and uno r4 board. 
+esp8266およびuno r4ボードからのデータを受け取るために、 **Datastream** ページで **Virtual Pin** タイプの **Datastream** を 作成します。
 
-* Create Virtual Pin V0 according to the following diagram: 
-   
-  Set the name of the **Virtual Pin V0** to **Moisture Percentage**. Set the **DATA TYPE** to **Double** and MIN and MAX to **0** and **100**. Set the **UNITS** to **Percentage,%**.
+* 以下の図に従って仮想ピンV0を作成：
+
+  **Virtual Pin V0** の名前を **「Moisture Percentage」** に設定します。 **DATA TYPE** を **Double** に設定し、最小値と最大値を **0** と **100** に設定します。 **UNITS** は **「Percentage,%」** に設定します。
 
   .. image:: img/new/07-datastream_1_shadow.png
       :width: 90%
 
-* Create Virtual Pin V1 according to the following diagram: 
-   
-  Set the name of the **Virtual Pin V1** to **Water Threshold**. Set the **DATA TYPE** to **Double** and MIN and MAX to **0** and **100**. Set the **UNITS** to **Percentage,%**.
+* 以下の図に従って仮想ピンV1を作成：
+
+  **Virtual Pin V1** の名前を **「Water Threshold」** に設定します。 **DATA TYPE** を **Double** に設定し、最小値と最大値を **0** と **100** に設定します。 **UNITS** は **「Percentage,%」** に設定します。
 
   .. image:: img/new/07-datastream_2_shadow.png
       :width: 90%
 
-* Create Virtual Pin V2 according to the following diagram: 
-   
-  Set the name of the **Virtual Pin V2** to **Auto Mode**. Set the **DATA TYPE** to **Integer** and MIN and MAX to **0** and **1**.
+* 以下の図に従って仮想ピンV2を作成：
+
+  **Virtual Pin V2** の名前を **「Auto Mode」** に設定します。 **DATA TYPE** を **Integer** に設定し、最小値と最大値を **0** と **1** に設定します。
 
   .. image:: img/new/07-datastream_3_shadow.png
       :width: 90%
 
 
-**2.3 Web Dashboard**
+**2.3 Webダッシュボード**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We also need to configure the **Web Dashboard** to interact with the Auto watering system.
+自動散水システムと対話するために **Web Dashboard** も設定する必要があります。
 
-Configure the Web Dashboard according to the following diagram. We used widgets such as label, gauge, switch, slider and chart. Be sure to bind each widget to its corresponding virtual pin.
+以下の図に従ってWebダッシュボードを設定します。ラベル、ゲージ、スイッチ、スライダー、チャートなどのウィジェットを使用しています。各ウィジェットを対応する仮想ピンにバインドしてください。
 
 .. image:: img/new/07-web_dashboard_1_shadow.png
     :width: 55%
@@ -85,35 +85,34 @@ Configure the Web Dashboard according to the following diagram. We used widgets 
     <br/>  
 
 
-3. Run the Code
+
+3. コードの実行
 -----------------------------
 
-#. Open the ``07-Auto_watering_system.ino`` file under the path of ``ultimate-sensor-kit\iot_project\wifi\07-Auto_watering_system``, or copy this code into **Arduino IDE**.
-
+#. ``ultimate-sensor-kit\iot_project\wifi\07-Auto_watering_system`` のパス内にある ``07-Auto_watering_system.ino`` ファイルを開く、またはこのコードを **Arduino IDE** にコピーアンドペーストします。
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/5132407f-90f9-4a0d-8446-60af041d0d3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Create a Blynk device using the "Auto watering system" template. Then, replace the ``BLYNK_TEMPLATE_ID``, ``BLYNK_TEMPLATE_NAME``, and ``BLYNK_AUTH_TOKEN`` with your own. 
+#. 「Auto watering system」のテンプレートを使用してBlynkデバイスを作成します。次に、 ``BLYNK_TEMPLATE_ID`` 、 ``BLYNK_TEMPLATE_NAME`` 、 ``BLYNK_AUTH_TOKEN`` を自分のものに置き換えます。
 
    .. code-block:: arduino
     
       #define BLYNK_TEMPLATE_ID "TMPxxxxxxx"
-      #define BLYNK_TEMPLATE_NAME "Flame Detection Alert"
+      #define BLYNK_TEMPLATE_NAME "Auto watering system"
       #define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxx"
 
-
-#. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. 
+#. 使用しているWiFiの ``ssid`` と ``password`` も入力する必要があります。
 
    .. code-block:: arduino
 
     char ssid[] = "your_ssid";
     char pass[] = "your_password";
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. 正しいボードとポートを選択した後、 **書き込み** ボタンをクリックします。
 
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+#. シリアルモニター（ボーレートを115200に設定）を開き、成功した接続などのプロンプトが表示されるまで待ちます。
 
    .. image:: img/new/02-ready_1_shadow.png
     :width: 80%
@@ -121,35 +120,37 @@ Configure the Web Dashboard according to the following diagram. We used widgets 
 
    .. note::
 
-       If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+       接続時に「ESP is not responding（ESPが応答していません）」というメッセージが表示された場合、以下の手順に従ってください。
 
-       * Make sure the 9V battery is plugged in.
-       * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-       * Press the reset button on the R4 board.
+       * 9Vバッテリーが接続されていることを確認してください。
+       * RSTピンを1秒間GNDに接続して、ESP8266モジュールをリセットします。その後、ピンを抜きます。
+       * R4ボード上のリセットボタンを押します。
 
-       Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+       これらの操作は3～5回繰り返す必要がある場合もありますので、ご注意ください。
 
 
-4. Code explanation
+
+
+4. コードの解説
 -----------------------------
 
-#. **Blynk Cloud Setup and Library Imports**
+#. **Blynkクラウドの設定とライブラリのインポート**
    
-   These lines define unique IDs and tokens required to identify and authenticate your Arduino device with the Blynk cloud. Additionally, essential libraries are imported for using the ESP8266 WiFi module, Blynk functionalities, and software serial communication.
+   以下の行は、ArduinoデバイスをBlynkクラウドに識別・認証するための固有のIDとトークンを定義しています。さらに、ESP8266 WiFiモジュール、Blynkの機能、ソフトウェアシリアル通信を使用するための基本的なライブラリがインポートされています。
 
    .. code-block:: arduino
          
       #define BLYNK_TEMPLATE_ID "TMPLxxxxxx"
-      #define BLYNK_TEMPLATE_NAME "Auto water"
+      #define BLYNK_TEMPLATE_NAME "Auto watering system"
       #define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxxxx"
       #define BLYNK_PRINT Serial
       #include <ESP8266_Lib.h>
       #include <BlynkSimpleShieldEsp8266.h>
       #include <SoftwareSerial.h>
 
-#. **WiFi and Hardware Configuration**
+#. **WiFiとハードウェアの設定**
    
-   WiFi credentials (``ssid`` and ``pass``) are defined here. The pins ``2`` (RX) and ``3`` (TX) are set for software serial communication between the Arduino and the ESP8266. The baud rate for this communication is defined as ``115200``.
+   ここではWiFiの認証情報( ``ssid`` および ``pass``)を定義しています。また、ArduinoとESP8266間のソフトウェアシリアル通信のためのピン ``2`` (RX)と ``3`` (TX)を設定しています。この通信のボーレートは ``115200`` として定義されています。
 
    .. code-block:: arduino
 
@@ -159,12 +160,11 @@ Configure the Web Dashboard according to the following diagram. We used widgets 
       #define ESP8266_BAUD 115200
       ESP8266 wifi(&EspSerial);
 
+#. **ピンとグローバル変数の定義**
 
-#. Define pins and global variables
+   水ポンプの制御と土壌湿度センサのピンが定義され、センサの値、しきい値、モードなどを格納するためのグローバル変数も定義されています。
 
-   Pins for the water pump control and soil moisture sensor are defined along with global variables to store sensor values, thresholds, modes etc.
-
-   You need to measure your own ``moistureInAir`` and ``moistureInWater`` according to the your actual situation. To avoid the calculated ``moisturePercentage`` exceeding the range of 0-100%, adjust the ``moistureInAir`` reading upwards to account for sensor fluctuations. Conversely, adjust the ``moistureInWater`` reading downwards when recording to compensate for these fluctuations.
+   実際の状況に応じて、自分の ``moistureInAir`` と ``moistureInWater`` を測定する必要があります。計算された ``moisturePercentage`` が0-100%の範囲を超えないように、センサの変動を考慮して ``moistureInAir`` の読取りを上方に調整します。逆に、これらの変動を補償するために、記録時に ``moistureInWater`` の読取りを下方に調整します。
 
    .. code-block:: arduino
 
@@ -183,13 +183,13 @@ Configure the Web Dashboard according to the following diagram. We used widgets 
      int waterThreshold = 0;        // The soil moisture percentage threshold to activate watering
      float moisturePercentage = 0;  // The calculated soil moisture percentage
 
-#. **Initial Configurations in the setup() Function**
+#. **setup()関数内の初期設定**
    
-   We set two timers:
+   2つのタイマーを設定します：
 
-   - We use ``timer.setInterval(10000L, updateDataTimer)`` to set the timer interval, here we set to execute the ``updateDataTimer()`` function every **10000ms**. You can modify the first parameter to change the interval between ``updateDataTimer()`` executions.
+   - ``timer.setInterval(10000L, updateDataTimer)`` を使用してタイマー間隔を設定し、ここでは ``updateDataTimer()`` 関数を **10000ms** ごとに実行するように設定します。 ``updateDataTimer()`` 実行の間隔を変更するには、最初のパラメータを変更します。
 
-   - We use ``timer.setInterval(35000L, autoWaterTimer)`` to set the timer interval, here we set to execute the ``autoWaterTimer()`` function every **35000ms**. You can modify the first parameter to change the interval between ``autoWaterTimer()`` executions.
+   - ``timer.setInterval(35000L, autoWaterTimer)`` を使用してタイマー間隔を設定し、ここでは ``autoWaterTimer()`` 関数を **35000ms** ごとに実行するように設定します。 ``autoWaterTimer()`` 実行の間隔を変更するには、最初のパラメータを変更します。
 
    .. raw:: html
     
@@ -215,26 +215,27 @@ Configure the Web Dashboard according to the following diagram. We used widgets 
         timer.setInterval(35000L, autoWaterTimer);   // Check watering conditions every 35 seconds
       }
 
-#. **loop() Function**
+#. **loop()関数**
    
-   This continuously running loop allows the Blynk library to check for updates and handles the defined timer events.
+   この関数は常に呼び出されるので、通常はこの関数内で時間のかかる処理を避けるようにしています。この関数では、 ``Blynk.run()`` 関数と ``timer.run()`` 関数を実行しています。
 
    .. code-block:: arduino
-
+         
       void loop() {
-         Blynk.run();
-         timer.run();
+        Blynk.run();
+        timer.run();
       }
 
-#. **Blynk App Interaction**
-   
-   These functions are triggered based on specific interactions with the Blynk app:
 
-   - ``BLYNK_CONNECTED()``: Called when the device connects to Blynk. Syncs the initial states of the virtual pins.
-
-   - ``BLYNK_WRITE(V1)``: Triggered when Virtual Pin 1 changes (water threshold).
+#. **Blynkアプリとの対話**
    
-   - ``BLYNK_WRITE(V2)``: Triggered when Virtual Pin 2 changes (auto mode status).
+   以下の関数は、Blynkアプリで特定の操作が行われたときにトリガーされます。
+
+   - ``BLYNK_CONNECTED()``: デバイスがBlynkに接続したときに呼び出されます。仮想ピンの初期状態を同期します。
+  
+   - ``BLYNK_WRITE(V1)``: 仮想ピン1（水分量の閾値）が変更されたときにトリガーされます。
+  
+   - ``BLYNK_WRITE(V2)``: 仮想ピン2（自動モードの状態）が変更されたときにトリガーされます。
 
    .. raw:: html
     
@@ -266,14 +267,14 @@ Configure the Web Dashboard according to the following diagram. We used widgets 
         }
       }
 
-#. **Timer Callbacks and Automatic Watering Logic**
-   
-   These functions handle the tasks that the timers run:
+#. **タイマーのコールバックと自動水やりロジック**
 
-   - ``updateDataTimer()``: Calls ``sendData()`` to send current moisture data to Blynk. 
-   - ``autoWaterTimer()``: Calls ``autoWater()`` to check if watering is required.
-   - ``sendData()``: Calculates soil moisture percentage, logs it, and sends it to the Blynk app.
-   - ``autoWater()``: Checks whether the soil needs watering based on the set threshold and if automatic mode is on.
+   これらの関数は、タイマーが実行するタスクを処理します：
+
+   - ``updateDataTimer()``: ``sendData()`` を呼び出して、現在の土壌湿度データをBlynkに送信します。
+   - ``autoWaterTimer()``: ``autoWater()`` を呼び出して、水やりが必要かどうかをチェックします。
+   - ``sendData()``: 土壌の湿度のパーセンテージを計算し、それをBlynkアプリに送信します。
+   - ``autoWater()``: 設定された閾値と自動モードがオンかどうかに基づいて、土壌に水が必要かどうかを確認します。
 
    .. raw:: html
     
@@ -321,30 +322,26 @@ Configure the Web Dashboard according to the following diagram. We used widgets 
         }
       }
 
+#. **ポンプ制御関数**
 
-#. **Pump Control Functions**
-   
-   These functions directly control the operation of the water pump:
+   これらの関数は、水ポンプの操作を直接制御します：
 
-   - ``turnOnPump()``: Activates the pump.
-   - ``turnOffPump()``: Deactivates the pump.
+   - ``turnOnPump()``: ポンプを作動させます。
+   - ``turnOffPump()``: ポンプを停止させます。
 
    .. code-block:: arduino
 
-      // Function to turn on the water pump
       void turnOnPump() {
         digitalWrite(pump1A, HIGH);
         pumpStatus = 1;
       }
       
-      // Function to turn off the water pump
       void turnOffPump() {
         digitalWrite(pump1A, LOW);
         pumpStatus = 0;
       }
 
-
-**Reference**
+**参考資料**
 
 - |link_blynk_doc|
 - |link_blynk_timer|

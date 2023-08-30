@@ -1,41 +1,40 @@
 .. _cpn_rgb:
 
-RGB Module
+RGB モジュール
 ==========================
 
 .. image:: img/24_rgb_module.png
     :width: 350
     :align: center
 
-Introduction
+概要
 ---------------------------
-The RGB Full Color LED module emits a range of colors by mixing red, green, and blue light. Each color is adjusted by using PWM.It can be used to create colorful lighting effects or to learn how to use PWM (pulse-width modulation) with Arduino.
+このRGBフルカラーLEDモジュールは、赤、緑、青の光を混合することで多彩な色を発生させます。各色はPWM（パルス幅変調）を使用して調整されます。このモジュールは、カラフルな照明効果を作成したり、ArduinoでPWMを使用する方法を学ぶためにも利用できます。
 
-Principle
+原理
 ---------------------------
-The RGB MODULE works by using a full-color LED that uses R, G, and B pins with adjustable PWM voltage input. 
-Colors from the LED can be combined. For example, mix blue light and green light give cyan light, red light and green light give yellow light. This is called "The additive method of color mixing".
+RGBモジュールは、可変PWM電圧入力付きのR、G、Bピンを使って全色LEDを制御します。  
+LEDからの色は組み合わせることができ、例えば青と緑を混合するとシアンに、赤と緑を混合すると黄色になります。これを「加法混色法」と呼びます。
 
-* `Additive color - Wikipedia <https://en.wikipedia.org/wiki/Additive_color>`_
+* `加法混色 - Wikipedia <https://ja.wikipedia.org/wiki/加法混色>`_
 
 .. image:: img/24_rgb_module_2.png
     :width: 200
     :align: center
 
-Based on this method, we can use the three primary colors to mix the visible light of any color according to different proportions. For example, orange can be produced by more red and less green.
-The strength of the primary colors (red, blue, green) is adjusted in order to achieve full color mixing effect.PWM is a technique where the duty cycle of a digital signal is modified, adjusting the percentage of time that the signal remains active within a given period. By changing the duty cycle, we can make the LED appear brighter or dimmer.
+この方法に基づいて、三原色をさまざまな比率で混合することで、任意の可視光の色を生成することができます。例えば、赤を多くして緑を少なくすると、オレンジ色が生じます。
+PWMはデューティサイクルを変更することで、LEDの明るさを調整する技術です。
 
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- RGB Module * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- RGB モジュール * 1
+- ジャンパーワイヤ
 
-
-**Circuit Assembly**
+**回路組立**
 
 .. image:: img/24_rgb_module_circuit.png
     :width: 400
@@ -45,26 +44,25 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ac279eab-cbc6-4c51-a8b5-4d1b9048ec92/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/24-component_rgb.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザはビデオタグをサポートしていません。
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-1. The first segment of the code declares and initializes the pins to which each color channel of the RGB LED module is connected.
+1. コードの最初の部分で、RGB LEDモジュールの各色チャネルに接続されているピンを宣言および初期化します。
 
    .. code-block:: arduino
        
@@ -72,7 +70,7 @@ Code explanation
       const int gledPin = 10;   // pin connected to the green color channel
       const int bledPin = 11;  // pin connected to the blue color channel
 
-2. The ``setup()`` function initializes these pins as OUTPUT. This means we are sending signals OUT from these pins to the RGB LED module.
+2. ``setup()`` 関数では、これらのピンをOUTPUTとして初期化します。これは、これらのピンからRGB LEDモジュールへ信号を送り出すという意味です。
 
    .. code-block:: arduino
    
@@ -82,7 +80,7 @@ Code explanation
         pinMode(bledPin, OUTPUT);
       }
 
-3. In the ``loop()`` function, the ``setColor()`` function is called with different parameters to display different colors. The ``delay()`` function is used after setting each color to pause for 1000 milliseconds (or 1 second) before moving on to the next color.
+3. ``loop()`` 関数内で、 ``setColor()`` 関数が異なるパラメータで呼び出され、様々な色を表示します。各色を設定した後で、 ``delay()`` 関数を使用して1000ミリ秒（または1秒）次の色に移る前に一時停止します。
 
    .. code-block:: arduino
    
@@ -94,7 +92,7 @@ Code explanation
         // The rest of the color sequence...
       }
 
-4. The ``setColor()`` function uses the ``analogWrite()`` function to adjust the brightness of each color channel on the RGB LED module. The ``analogWrite()`` function employs Pulse Width Modulation (PWM) to simulate varying voltage outputs. By controlling the PWM duty cycle (the percentage of time a signal is HIGH within a fixed period), the brightness of each color channel can be controlled, allowing the mixing of various colors.
+4. ``setColor()`` 関数は、 ``analogWrite()`` 関数を使用してRGB LEDモジュールの各色チャネルの明るさを調整します。この関数はPWMを用いて、変動する電圧出力を模倣します。デューティサイクル（信号がHIGHである固定期間内の時間の割合）を制御することで、各色チャネルの明るさをコントロールし、多様な色の混合が可能になります。
 
    .. code-block:: arduino
 
@@ -104,14 +102,13 @@ Code explanation
         analogWrite(bledPin, B);  // Use PWM to control the brightness of the blue color channel
       }
 
-
-Additional Ideas
+追加アイデア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Try displaying other colors
-- Integrate the RGB LED with sensors, and display different colors based on the sensor's value.
+- 他の色を表示してみてください。
+- RGB LEDをセンサーと組み合わせて、センサーの値に基づいて色を変更してみてください。
 
-More Projects
+さらに多くのプロジェクト
 ---------------------------
 * :ref:`fun_gas_leak_alarm`
 * :ref:`fun_light_control_switch`

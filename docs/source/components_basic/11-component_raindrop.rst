@@ -1,34 +1,33 @@
 .. _cpn_raindrop:
 
-Raindrop Detection Module
+雨滴検出モジュール
 ==========================
 
 .. image:: img/11_raindrop_detection_module.jpg
     :width: 300
     :align: center
 
-Introduction
+概要
 ---------------------------
 
-A raindrop sensor, or raindrop detection sensor, is used to detect whether it is raining and also the rainfall. It is widely used in the automatic wiper system, smart lighting system and sunroof system of automobiles.
+雨滴センサー、または雨滴検出センサーは、雨が降っているか、そしてその降雨量を検出するために使用されます。このセンサーは、自動車の自動ワイパーシステム、スマート照明システム、およびサンルーフシステムで広く活用されています。
 
-Principle
+原理
 ---------------------------
 
-Raindrop sensor is basically a board on which nickel is coated in the form of lines. It works on the principal of resistance. When there is no rain drop on board. Resistance is high so we gets high voltage according to V=IR. When rain drop present it reduces the resistance because water is conductor of electricity and presence of water connects nickel lines in parallel so reduced resistance and reduced voltage drop across it. The more intense the rainfall the lower the resistance.
+雨滴センサーは基本的に、ニッケルが線形にコーティングされた基板です。このセンサーは、抵抗の原理に基づいて動作します。基板上に雨滴がない場合、抵抗は高く、V=IRに従って高い電圧が得られます。雨滴が存在すると、水は電気の導体であり、水の存在によりニッケルの線が並列に接続されるため、抵抗が減少し、それに伴い電圧も低下します。降雨が激しいほど、抵抗は低くなります。
 
-
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Raindrop Detection Module * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- 雨滴検出モジュール * 1
+- ジャンパーワイヤー
 
 
-**Circuit Assembly**
+**回路組み立て**
 
 .. image:: img/11_raindrop_detection_module_circuit.png
     :width: 400
@@ -38,34 +37,33 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/5dbd8745-a9a9-4b19-b245-02c073d89ce8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/11-component_raindrop.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザはビデオタグをサポートしていません。
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-1. Defining sensor pin
-Here, a constant integer named ``sensorPin`` is defined and assigned the value 7. This corresponds to the digital pin on the Arduino board where the raindrops detection sensor is connected.
+1. センサーピンの定義
+ここでは、 ``sensorPin`` という名前の定数整数を定義し、値7を割り当てます。これは、Arduinoボードのデジタルピンに雨滴検出センサーが接続される場所に対応しています。
 
 .. code-block:: arduino
 
     const int sensorPin = 7;
 
-2. Setting up the pin mode and initiating serial communication
-In the ``setup()`` function, two essential steps are performed. Firstly, ``pinMode()`` is used to set the ``sensorPin`` as an input, enabling us to read digital values from the raindrops sensor. Secondly, serial communication is initialized with a baud rate of 9600.
+2. ピンモードの設定とシリアル通信の初期化
+``setup()`` 関数では、二つの主要な手順を実施します。まず、 ``pinMode()``  で ``sensorPin`` を入力モードに設定し、雨滴センサーからデジタル値を読むことができるようにします。次に、9600のボーレートでシリアル通信を開始します。
 
 .. code-block:: arduino
 
@@ -74,8 +72,8 @@ In the ``setup()`` function, two essential steps are performed. Firstly, ``pinMo
       Serial.begin(9600);
     }
 
-3. Reading the digital value and sending it to the serial monitor. 
-The ``loop()`` function reads the digital value from the raindrops sensor using ``digitalRead()``. This value (either HIGH or LOW) is printed to the Serial Monitor. The program then waits for 50 milliseconds before the next reading.
+3. デジタル値の読み取りとシリアルモニタへの送信
+``loop()`` 関数で、 ``digitalRead()`` を用いて雨滴センサーからデジタル値を読み取ります。この値（HIGH または LOW）はシリアルモニターに出力されます。その後、次回の読み取りまで50ミリ秒待機します。
 
 .. code-block:: arduino
 
@@ -84,10 +82,8 @@ The ``loop()`` function reads the digital value from the raindrops sensor using 
       delay(50);
     }
 
-Additional Ideas
+追加のアイディア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Add an LED indicator that lights up when rain is detected
-- Connect a buzzer to the Arduino to sound an alert when rain is detected, which can act as an early warning system for events like picnics or outdoor activities.
-
-
+- 雨が検出された際に点灯するLEDインジケーターを追加する。
+- Arduinoにブザーを接続し、雨を検出したときに警告音を鳴らす。これはピクニックや屋外活動などのイベントにおける早期警告システムとして使用できる。

@@ -1,13 +1,13 @@
 .. _iot_projects:
 
-IoT Projects
+IoTプロジェクト
 ====================
 
-This kit features the ESP8266 Wifi module and the JDY-31 Bluetooth Module. The ESP8266 allows your Arduino to connect to the internet for IoT experiments, while the Bluetooth module facilitates short-range wireless communication.
+このキットには、ESP8266 WiFiモジュールとJDY-31 Bluetoothモジュールが含まれています。ESP8266は、Arduinoをインターネットに接続してIoT実験を行うためのもので、Bluetoothモジュールは短距離の無線通信をサポートします。
 
-With the ESP8266 WiFi module, you'll explore a range of IoT projects that allow you to connect your Arduino to the internet. We provide step-by-step guides to work with platforms like |link_blynk| and |link_thingspeak|, enabling you to set up alert systems, remote controllers, and environmental monitors, among other applications.
+ESP8266 WiFiモジュールを用いて、Arduinoをインターネットに接続するさまざまなIoTプロジェクトを探究できます。|link_blynk| や |link_thingspeak| などのプラットフォームを活用するステップバイステップのガイドを提供し、警報システムやリモートコントローラ、環境モニターなど、多様な用途で活用できます。
 
-On the other hand, the JDY-31 Bluetooth module opens doors to localized wireless communication. We will guide you through pairing your Arduino with smartphones or other Bluetooth-enabled devices for various controls and monitoring tasks. And you can create projects using apps developed with |link_appinventor|.
+一方で、JDY-31 Bluetoothモジュールは、ローカルエリアでの無線通信の可能性を広げます。Arduinoをスマートフォンや他のBluetooth対応デバイスとペアリングする方法を指南し、|link_appinventor| で開発されたアプリを用いて様々な制御やモニタリングのプロジェクトを作成できます。
 
 
 **Wi-Fi**
@@ -40,4 +40,3 @@ On the other hand, the JDY-31 Bluetooth module opens doors to localized wireless
     12-iot_Bluetooth_oled
     13-iot_Bluetooth_remote_relay
     14-iot_Bluetooth_voice_control_relay
-

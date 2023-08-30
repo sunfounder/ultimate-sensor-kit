@@ -1,19 +1,18 @@
 .. _fun_tof_distance_monitor:
 
-ToF distance monitor
+ToF 距離モニター
 ==========================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/fun/09-fun_ToF_distance_monitor.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      ブラウザがビデオタグをサポートしていません。
    </video>
 
-This project is designed to measure and display the distance to an object using the VL53L0X Time of Flight (ToF) Micro-LIDAR Distance Sensor. The measured distance in millimeters is displayed on an OLED screen, and the values are also output to the serial monitor. The VL53L0X can measure a range of approximately 50mm to 1200mm. 
+このプロジェクトは、VL53L0X 時間飛行（ToF）マイクロLIDAR距離センサーを使用して、対象物までの距離を測定し、OLEDスクリーンに表示します。測定された距離（ミリメートル単位）はシリアルモニターにも出力されます。VL53L0Xはおおよそ50mmから1200mmの範囲を測定できます。
 
-
-1. Build the Cirduit
+1. 回路を組む
 -----------------------------
 
 .. image:: img/09-fun_ToF_distance_monitor_circuit.png
@@ -24,22 +23,24 @@ This project is designed to measure and display the distance to an object using 
 * :ref:`cpn_olde`
 
 
-2. Code
+2. コード
 -----------------------------
 
-#. Open the ``09-ToF_distance_monitor.ino`` file under the path of ``ultimate-sensor-kit\fun_project\09-ToF_distance_monitor``, or copy this code into **Arduino IDE**.
+#. ``ultimate-sensor-kit\fun_project\09-ToF_distance_monitor`` のパス内の ``09-ToF_distance_monitor.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/8077aa45-8e0c-4c13-9211-b23926b79462/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-3. Code explanation
------------------------------
 
-This project uses the VL53L0X Time of Flight sensor to measure distances by measuring the time it takes for light to travel to an object and return to the sensor. The OLED display then shows the distance measurement in millimeters. Serial communication is also used to print the measurement values for monitoring and debugging. Both the OLED display and the VL53L0X sensor communicate with the Arduino using the I2C protocol.
 
-#. Include necessary libraries and initialize components
+3. コードの説明
+-------------------------
+
+本プロジェクトでは、VL53L0X Time of Flight（ToF）センサーを用いて、光が対象物まで到達して戻ってくるまでの時間を測定し、距離を計算します。測定した距離はミリメートル単位でOLEDディスプレイに表示されます。シリアル通信も利用して、測定値をモニタリングやデバッグのために出力します。OLEDディスプレイとVL53L0Xセンサーは、共にArduinoとI2Cプロトコルで通信します。
+
+#. 必要なライブラリをインクルードし、コンポーネントを初期化
 
    .. code-block:: arduino
 
@@ -56,10 +57,10 @@ This project uses the VL53L0X Time of Flight sensor to measure distances by meas
       Adafruit_VL53L0X lox = Adafruit_VL53L0X();
    
    
-   - Necessary libraries for handling I2C communication, the distance sensor, SPI protocol, and the OLED display are included.
-   - The OLED display and the VL53L0X distance sensor are initialized.
+   - I2C通信、距離センサー、SPIプロトコル、OLEDディスプレイを操作するための必要なライブラリがインクルードされています。
+   - OLEDディスプレイとVL53L0X距離センサーが初期化されています。
 
-#. Initialize the serial communication and prepare the display as well as the VL53L0X distance sensor.
+#. シリアル通信を初期化し、ディスプレイとVL53L0X距離センサーを準備
 
    .. code-block:: arduino
 
@@ -87,13 +88,13 @@ This project uses the VL53L0X Time of Flight sensor to measure distances by meas
       }
    
    
-   - Start serial communication at 9600 baud.
-   - Initialize the OLED display with its I2C address.
-   - Begin I2C communication.
-   - Check if the VL53L0X distance sensor is initialized properly. If not, an error message is displayed, and the Arduino enters an infinite loop.
-   - Set text size and color for the OLED display.
+   - 9600ボーのシリアル通信を開始。
+   - OLEDディスプレイをそのI2Cアドレスで初期化。
+   - I2C通信を開始。
+   - VL53L0X距離センサーが正しく初期化されたか確認。もし初期化に失敗した場合、エラーメッセージを表示してArduinoは無限ループに入ります。
+   - OLEDディスプレイのテキストサイズと色を設定。
 
-#. Main loop() to measure the distance and display the result.
+#. 主なループ()：距離を測定し、結果を表示
 
    .. code-block:: arduino
 
@@ -119,8 +120,8 @@ This project uses the VL53L0X Time of Flight sensor to measure distances by meas
       }
    
    
-   - Create a variable to store the measurement data.
-   - Take a measurement using the VL53L0X sensor.
-   - Check if the measurement is valid (i.e., no phase failures).
-   - If the measurement is valid, clear the OLED display, set the cursor position, and display the measured distance.
-   - Else, refresh the display and clear it for the next reading.
+   - 測定データを格納する変数を作成。
+   - VL53L0Xセンサーを使用して測定を実行。
+   - 測定が有効であるか（すなわち、フェーズ失敗がないか）を確認。
+   - 測定が有効な場合、OLEDディスプレイをクリアし、カーソルの位置を設定して、測定された距離を表示。
+   - それ以外の場合、ディスプレイをリフレッシュし、次の読み取りのためにクリアします。

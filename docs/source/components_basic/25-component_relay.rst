@@ -1,55 +1,52 @@
 .. _cpn_relay:
 
-5V Relay Module
+5V リレーモジュール
 ==========================
 
 .. image:: img/25_relay_module.png
     :width: 400
     :align: center
 
-Introduction
+概要
 ---------------------------
-5V relay modules are devices that can switch high voltage or high current devices on and off using a 5V signal from Arduino. They can be used to control devices such as lights, fans, motors, solenoids, etc. 5V relay has three high voltage terminals (NC, C, and NO) which connect to the device you want to control. The other side has three low voltage pins (Ground, Vcc, and Signal) which connect to the Arduino.
+5Vリレーモジュールは、Arduinoからの5V信号を使って高電圧または高電流デバイスを制御することができる装置です。照明、扇風機、モーター、ソレノイドなど、多様なデバイスの制御に使用可能です。5Vリレーには、制御したいデバイスに接続する高電圧端子（NC、C、NO）と、Arduinoに接続する低電圧ピン（GND、Vcc、Signal）がそれぞれ3つずつあります。
 
-
-Principle
+原理
 ---------------------------
-A relay is a device which is used to provide connection between two or more points or devices in response to the input signal applied. In other words, relays provide isolation between the controller and devices, which may operate on either AC or DC. However, they receive signals from a microcontroller which works on DC hence requiring a relay to bridge the gap. Relay is extremely useful when you need to control a large amount of current or voltage with small electrical signal.
+リレーは、入力信号に応じて二つ以上のポイントやデバイスを接続するための装置です。言い換えれば、リレーは、コントローラとACまたはDCで動作するデバイスとの間で隔離を提供します。リレーは、DCで動作するマイクロコントローラから信号を受け取るため、そのギャップを埋める必要があります。
 
-There are 5 parts in every relay:
+リレーには以下の5つの部分があります：
 
 .. image:: img/25_relay_2.jpeg
     :width: 500
     :align: center
 
-Electromagnet - It consists of an iron core wounded by coil of wires. When electricity is passed through, it becomes magnetic. Therefore, it is called electromagnet.
+電磁石 - 鉄の芯にコイル線が巻かれています。電気が流れると磁力が発生するため、電磁石と呼ばれます。
 
-Armature - The movable magnetic strip is known as armature. When current flows through them, the coil gets energized thus producing a magnetic field which is used to make or break the normally open (N/O) or normally close (N/C) points. And the armature can be moved with direct current (DC) as well as alternating current (AC).
+アーマチュア - 可動する磁気ストリップです。電流が流れると、コイルが励起され、磁場が発生し、通常開（N/O）または通常閉（N/C）の点を開閉します。
 
-Spring - When no currents flow through the coil on the electromagnet, the spring pulls the armature away so the circuit cannot be completed.
+バネ - コイルに電流が流れていないとき、バネはアーマチュアを引っ張り、回路を開きます。
 
-Set of electrical contacts - There are two contact points:
+接点セット - 二つの接点があります：
 
-* Normally open - connected when the relay is activated, and disconnected when it is inactive.
-* Normally closed - not connected when the relay is activated, and connected when it is inactive.
+* NO - リレーが動作しているときに接続し、動作していないときに切断します。
+* NC - リレーが動作しているときに切断し、動作していないときに接続します。
 
-Molded frame - This is typically made of plastic and provides structural support and protection for the relay.
+成型フレーム - 通常はプラスチック製で、リレーの構造的なサポートと保護を提供します。
 
-The working principle of relay is simple. When power is supplied to the relay, currents start flowing through the control coil; as a result, the electromagnet starts energizing. Then the armature is attracted to the coil, pulling down the moving contact together thus connecting with the normally open contacts. So the circuit with the load is energized. Then breaking the circuit would be a similar case, as the moving contact will be pulled up to the normally closed contacts under the force of the spring. In this way, the switching on and off of the relay can control the state of a load circuit.
-
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- 5V Relay Module * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- 5Vリレーモジュール * 1
+- ジャンパーワイヤー
 
-**Circuit Assembly**
+**回路の組み立て**
 
 .. image:: img/25_relay_module_circuit.png
-    :width: 600
+    :width: 100%
     :align: center
 
 .. raw:: html
@@ -57,10 +54,10 @@ Usage
     <br/><br/>   
 
 .. warning ::
-    The following example demonstrates using a relay to control an LED module. 
-    **While you can connect the relay to other appliances in actual applications, extreme caution is required when dealing with HIGH AC voltage. Improper or incorrect use can lead to severe injury or even death. Therefore, it is intended for people who are familiar with and knowledgeable about HIGH AC voltage. Always prioritize safety.**
+    以下の例はLEDモジュールを制御するためにリレーを使用する方法を示しています。
+    **実際の用途で他の機器にリレーを接続する場合、高電圧ACに取り扱う際は極度の注意が必要です。不適切または誤った使用は重傷や死につながる可能性があります。したがって、高電圧ACに精通しているか、それについて十分な知識がある人向けです。常に安全を最優先してください。**
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -72,22 +69,22 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/25-component_relay.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      ご使用のブラウザはこのビデオタグをサポートしていません。
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-#. Setting up the relay pin:
-   - The relay module is connected to pin 6 of the Arduino. This pin is defined as ``relayPin`` for ease of reference in the code.
+1. リレーピンの設定:
+   - リレーモジュールはArduinoのピン6に接続されています。このピンはコード内で ``relayPin`` として定義されています。
 
    .. code-block:: arduino
     
       const int relayPin = 6;
 
-#. Configuring the relay pin as an output:
-   - In the ``setup()`` function, the relay pin is set as an OUTPUT using the ``pinMode()`` function. This means the Arduino will send signals (either HIGH or LOW) to this pin.
+2. リレーピンを出力として設定:
+   - ``setup()`` 関数内で、リレーピンは ``pinMode()`` 関数を使用してOUTPUTとして設定されています。
 
    .. code-block:: arduino
 
@@ -95,10 +92,10 @@ Code explanation
         pinMode(relayPin, OUTPUT);
       }
 
-#. Toggling the relay ON and OFF:
-   - In the ``loop()`` function, the relay is first set to the OFF state using ``digitalWrite(relayPin, LOW)``. It remains in this state for 3 seconds (``delay(3000)``).
-   - Then, the relay is set to the ON state using ``digitalWrite(relayPin, HIGH)``. Again, it remains in this state for 3 seconds.
-   - This cycle repeats indefinitely.
+3. リレーをON/OFFで切り替え:
+   - ``loop()`` 関数内で、最初にリレーは ``digitalWrite(relayPin, LOW)`` を使用してOFF状態にされます。この状態は3秒間続きます（ ``delay(3000)`` ）。
+   - 次に、リレーは ``digitalWrite(relayPin, HIGH)`` を使用してON状態にされます。これも3秒間続きます。
+   - このサイクルは無限に繰り返されます。
 
    .. code-block:: arduino
 
@@ -110,17 +107,18 @@ Code explanation
         delay(3000);
       }
 
-Additional Ideas
+追加のアイデア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Introduce a physical button to manually control the relay's state.
+- 物理的なボタンを導入して、リレーの状態を手動で制御します。
+  
+- 温度センサーや光センサーなどのセンサーを組み込み、環境条件に基づいてリレーをトリガーします。
 
-- Integrate sensors (like a temperature or light sensor) to trigger the relay based on environmental conditions.
-
-More Projects
+さらに多くのプロジェクト
 ---------------------------
 * :ref:`fun_light_control_switch`
 * :ref:`fun_motion_triggered_relay`
 * :ref:`iot_Remote_relay_controller`
 * :ref:`iot_Bluetooth_remote_relay`
 * :ref:`iot_Bluetooth_voice_control_relay`
+

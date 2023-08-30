@@ -1,54 +1,54 @@
-Arduino Program Structure
-===========================
+Arduino プログラムの構造
+========================
 
-Let's take a look at the new sketch file. Although it has a few lines of code itself, it is actually an "empty" sketch. 
-Uploading this sketch to the development board will cause nothing to happen.
+新しいスケッチファイルに目を通してみましょう。数行のコードが含まれているものの、実際には「空の」スケッチです。
+このスケッチを開発ボードにアップロードしても、何も実行されません。
 
-.. code-block:: C
+.. code-block:: arduino
 
     void setup() {
-    // put your setup code here, to run once:
+    // 初期設定のコードはここに記述します。一度だけ実行されます：
 
     }
 
     void loop() {
-    // put your main code here, to run repeatedly:
+    // メインのコードはここに記述します。これは繰り返し実行されます：
 
     }
 
-If we remove ``setup()`` and ``loop()`` and make the sketch a real ``blank`` file, you will find that it does not pass the verification. 
-They are the equivalent of the human skeleton, and they are indispensable.
+もし ``setup()`` と ``loop()`` を削除してスケッチを真に「空白」にした場合、検証に失敗することに気付くでしょう。
+これらは人間の骨格に相当し、欠かせない要素です。
 
-During sketching, ``setup()`` is run first, and the code inside it (inside ``{}``) is run after the board is powered up or reset and only once. 
-``loop()`` is used to write the main feature, and the code inside it will run in a loop after ``setup()`` is executed.
+スケッチ作成の過程で、 ``setup()`` が最初に一度だけ実行されます。開発ボードが電源投入またはリセットされた後、その中のコード（ ``{}`` 内）が一度だけ実行されます。
+``loop()`` は主要な機能を実装するために使用され、 ``setup()`` 実行後にその中のコードは繰り返し実行されます。
 
-To better understand setup() and loop(), let's use four sketches. Their purpose is to make the on-board LED of the Arduino blink. Please run each experiment in turn and record their specific effects.
+``setup()`` と ``loop()`` の動作をより深く理解するために、4つのスケッチを用いてみましょう。それぞれの目的は、Arduino のオンボードLEDを点滅させることです。各実験を順番に行い、その具体的な効果を記録してください。
 
-* Sketch 1: Make the on-board LED blink continuously.
+* スケッチ1：オンボードLEDを連続して点滅させる。
 
-.. code-block:: C
+.. code-block:: arduino
     :emphasize-lines: 8,9,10,11
 
     void setup() {
-        // put your setup code here, to run once:
+        // 初期設定のコードはここに記述します。一度だけ実行されます：
         pinMode(13,OUTPUT); 
     }
 
     void loop() {
-        // put your main code here, to run repeatedly:
+        // メインのコードはここに記述します。これは繰り返し実行されます：
         digitalWrite(13,HIGH);
         delay(500);
         digitalWrite(13,LOW);
         delay(500);
     }
 
-* Sketch 2: Make the on-board LED blink only once. 
+* スケッチ2：オンボードLEDを一回だけ点滅させる。
 
-.. code-block:: C
+.. code-block:: arduino
     :emphasize-lines: 4,5,6,7
 
     void setup() {
-        // put your setup code here, to run once:
+        // 初期設定のコードはここに記述します。一度だけ実行されます：
         pinMode(13,OUTPUT);
         digitalWrite(13,HIGH);
         delay(500);
@@ -57,16 +57,17 @@ To better understand setup() and loop(), let's use four sketches. Their purpose 
     }
 
     void loop() {
-        // put your main code here, to run repeatedly:
+        // メインのコードはここに記述します。これは繰り返し実行されます：
     }
 
-* Sketch 3: Make the on-board LED blink slowly once and then blink quickly. 
 
-.. code-block:: C
+* スケッチ3：オンボードLEDを一回ゆっくり点滅させ、その後速く点滅させる。
+
+.. code-block:: arduino
     :emphasize-lines: 4,5,6,7,12,13,14,15
 
     void setup() {
-        // put your setup code here, to run once:
+        // 初期設定のコードはここに記述します。一度だけ実行されます：
         pinMode(13,OUTPUT);
         digitalWrite(13,HIGH);
         delay(1000);
@@ -75,20 +76,20 @@ To better understand setup() and loop(), let's use four sketches. Their purpose 
     }
 
     void loop() {
-        // put your main code here, to run repeatedly:
+        // メインのコードはここに記述します。これは繰り返し実行されます：
         digitalWrite(13,HIGH);
         delay(200);
         digitalWrite(13,LOW);
         delay(200);
     }    
 
-* Sketch 4: Report an error.
+* スケッチ4：エラーを報告する。
 
-.. code-block:: C
+.. code-block:: arduino
     :emphasize-lines: 6,7,8,9
 
     void setup() {
-        // put your setup code here, to run once:
+        // 初期設定のコードはここに記述します。一度だけ実行されます：
         pinMode(13,OUTPUT);
     }
 
@@ -98,17 +99,15 @@ To better understand setup() and loop(), let's use four sketches. Their purpose 
     delay(1000);
 
     void loop() {
-        // put your main code here, to run repeatedly:
+        // メインのコードはここに記述します。これは繰り返し実行されます：
     }    
 
-With the help of these sketches, we can summarize several features of ``setup-loop``.
+これらのスケッチを活用して、 ``setup-loop`` のいくつかの特性を総括することができます。
 
-* ``loop()`` will be run repeatedly after the board is powered up. 
-* ``setup()`` will run only once after the board is powered up. 
-* After the board is powered up, ``setup()`` will run first, followed by ``loop()``. 
-* The code needs to be written within the ``{}`` scope of ``setup()`` or ``loop()``, out of the framework will be an error.
+* 開発ボードが電源投入後、 ``loop()`` は繰り返し実行されます。
+* 開発ボードが電源投入後、 ``setup()`` は一度だけ実行されます。
+* 開発ボードが電源投入後、最初に ``setup()`` が実行され、その後 ``loop()`` が続きます。
+* コードは ``setup()`` または ``loop()`` の ``{}`` スコープ内で記述する必要があり、フレームワークの外で書かれた場合はエラーとなります。
 
 .. note::  
-    Statements such as ``digitalWrite(13,HIGH)`` are used to control the on-board LED, and we will talk about their usage in detail in later chapters.
-
-
+    ``digitalWrite(13,HIGH)`` のような文は、オンボードLEDの制御に使用され、後の章でその詳細な使い方について説明します。

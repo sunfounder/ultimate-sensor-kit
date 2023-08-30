@@ -1,19 +1,18 @@
 .. _fun_potentiometer_scale_value:
 
-Potentiometer scale value
+ポテンショメータのスケール値
 ==========================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/fun/10-fun-Potentiometer_scale_value.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザはビデオタグをサポートしていません。
    </video>
 
-This project is designed to read the value from a potentiometer and display the read value on an LCD 1620 with an I2C interface. The value is also sent to the serial monitor for real-time viewing. A unique feature of this project is the visual representation of the potentiometer's value on the LCD, displaying a bar that varies in length corresponding to the value.
+このプロジェクトは、ポテンショメータから値を読み取り、I2Cインターフェースを持つLCD 1620にその読み取り値を表示するように設計されています。また、シリアルモニタにも値がリアルタイムで送信されます。このプロジェクトのユニークな特長は、LCD上でポテンショメータの値を視覚的に表現し、その値に応じて長さが変わるバーを表示する点です。
 
-
-1. Build the Cirduit
+1. 回路の組み立て
 -----------------------------
 
 .. image:: img/10-fun-Potentiometer_scale_value_circuit.png
@@ -24,22 +23,22 @@ This project is designed to read the value from a potentiometer and display the 
 * :ref:`cpn_i2c_lcd1602`
 
 
-2. Code
+2. コード
 -----------------------------
 
-#. Open the ``10-Potentiometer_scale_value.ino`` file under the path of ``ultimate-sensor-kit\fun_project\10-Potentiometer_scale_value``, or copy this code into **Arduino IDE**.
+#.  ``ultimate-sensor-kit\fun_project\10-Potentiometer_scale_value`` パスの下にある ``10-Potentiometer_scale_value.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/8adabab1-9d8b-4b84-9007-18f86eda247a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-3. Code explanation
+3. コードの説明
 -----------------------------
 
-The project functions by continually reading the value from a connected potentiometer. This value is then mapped to a smaller scale (0-16) and represented both numerically and visually on the LCD. By checking the difference between consecutive readings, the code ensures that only significant changes are reflected on the display, thereby reducing jitter. Reducing jitter helps avoid undesirable visual effects resulting from frequent refreshing of the LCD screen.
+このプロジェクトは、接続されたポテンショメータから値を連続的に読み取ります。この値は小さいスケール（0-16）にマッピングされ、LCD上で数値と視覚的にも表示されます。連続した読み取りの差を確認することで、表示上に重要な変化だけが反映され、ジッターが低減されます。ジッターを低減することで、LCD画面の頻繁なリフレッシュによる望ましくない視覚効果を防ぎます。
 
-1. **Library Inclusion and Initialization**:
+1. **ライブラリのインクルードと初期化**:
 
    .. code-block:: arduino
    
@@ -47,30 +46,30 @@ The project functions by continually reading the value from a connected potentio
       #include <LiquidCrystal_I2C.h>
       LiquidCrystal_I2C lcd(0x27, 16, 2);
 
-   Here, the required libraries (``Wire`` for I2C communication and ``LiquidCrystal_I2C`` for the LCD) are included. An LCD object is created with the I2C address ``0x27`` and is defined to have ``16`` columns and ``2`` rows.
+   ここでは、必要なライブラリ（I2C通信の ``Wire`` とLCD用の ``LiquidCrystal_I2C`` ）がインクルードされています。I2Cアドレス ``0x27`` を持つLCDオブジェクトが作成され、 ``16`` 列と ``2`` 行で定義されています。
 
-2. **Variable Declaration**:
+2. **変数宣言**:
 
    .. code-block:: arduino
    
-      int lastRead = 0;     // Previous potentiometer value
-      int currentRead = 0;  // Current potentiometer value
+      int lastRead = 0;     // 前回のポテンショメータの値
+      int currentRead = 0;  // 現在のポテンショメータの値
 
-   ``lastRead`` stores the previously read potentiometer value. ``currentRead`` will store the current reading from the potentiometer.
+   ``lastRead`` は前回読み取ったポテンショメータの値を格納します。 ``currentRead`` はポテンショメータからの現在の読み取りを格納するために使用されます。
 
-3. **setup() Function**:
+3. **setup()関数**:
 
    .. code-block:: arduino
    
       void setup() {
-        lcd.init();          // Initialize the LCD
-        lcd.backlight();     // Turn on the LCD backlight
-        Serial.begin(9600);  // Start serial communication at 9600 baud rate
+        lcd.init();          // LCDの初期化
+        lcd.backlight();     // LCDのバックライトをオンにする
+        Serial.begin(9600);  // 9600ボーのレートでシリアル通信を開始
       }
 
-   The LCD is initialized, its backlight is turned on, and serial communication is started at a baud rate of ``9600``.
+   LCDが初期化され、そのバックライトが点灯し、9600ボーのレートでシリアル通信が開始されます。
 
-4. **Main Loop**:
+4. **メインループ**:
 
    .. code-block:: arduino
    
@@ -93,8 +92,8 @@ The project functions by continually reading the value from a connected potentio
         delay(200);
       }
 
-   * The potentiometer value is read and mapped to a bar length (0-16).
-   * If the difference between the last and current reading is more than ``2``, the LCD is updated.
-   * The value is printed on the first row and a bar (based on the mapped value) on the second row.
-   * The value is also sent to the serial monitor.
-   * Before the next iteration, ``lastRead`` is updated, and a delay of ``200ms`` is introduced for stability.
+   * ポテンショメータの値が読み取られ、バーの長さ（0-16）にマッピングされます。
+   * 最後の読み取りと現在の読み取りとの差が ``2`` 以上ならば、LCDが更新されます。
+   * 値が第一行に、マッピングされた値に基づいたバーが第二行に表示されます。
+   * その値はまたシリアルモニタにも送信されます。
+   * 次の反復の前に、 ``lastRead`` が更新され、安定性のために ``200ms`` の遅延が導入されます。

@@ -1,82 +1,73 @@
 .. _cpn_esp8266:
 
-ESP8266 Module
+ESP8266モジュール
 =================
 
 .. image:: img/37_esp8266.jpg
     :align: center
 
-The ESP8266 is a low-cost Wi-Fi microchip, 
-with built-in TCP/IP networking software, 
-and microcontroller capability, produced by Espressif Systems in Shanghai, China.
+ESP8266は、中国上海のEspressif Systemsが製造している、低価格なWi-Fiマイクロチップです。
+内蔵されているTCP/IPネットワークソフトウェアとマイクロコントローラ機能を備えています。
 
-The chip first came to the attention of Western makers in August 2014 with the ESP-01 module, 
-made by a third-party manufacturer Ai-Thinker. 
-This small module allows microcontrollers to connect to a Wi-Fi network and make simple TCP/IP connections using Hayes-style commands. 
-However, at first, there was almost no English-language documentation on the chip and the commands it accepted. 
-The very low price and the fact that there were very few external components on the module, 
-which suggested that it could eventually be very inexpensive in volume, 
-attracted many hackers to explore the module, 
-the chip, and the software on it, as well as to translate the Chinese documentation.
+2014年8月に西洋のメーカーたちの注目を集めたのは、第三者メーカーであるAi-Thinkerが製造したESP-01モジュールでした。
+この小型モジュールは、マイクロコントローラがWi-Fiネットワークに接続し、Hayes式のコマンドを使用して簡単なTCP/IP接続を行うことを可能にします。
+ただし、当初はこのチップやそれが受け入れるコマンドに関する英語の文献はほとんどありませんでした。
+非常に低価格で、モジュール上の外部部品も非常に少ないことから、多くのハッカーがこのモジュールやチップ、ソフトウェアを探求し、中国語の文献を翻訳しました。
 
-Pins of ESP8266 and their functions:
+ESP8266のピンとその機能:
 
 .. image:: img/37_ESP8266_pinout.png
 
-
-.. list-table:: ESP8266-01 Pins
+.. list-table:: ESP8266-01 ピン
    :widths: 25 25 100
    :header-rows: 1
 
-   * - Pin	
-     - Name	
-     - Description
-   * - 1	
-     - TXD	
-     - UART_TXD, sending; General Purpose Input/Outpu: GPIO1; Pull-down is not allowed when startup.
-   * - 2	
+   * - ピン
+     - 名前
+     - 説明
+   * - 1
+     - TXD
+     - UART_TXD、送信; GPIO1 汎用入出力; 起動時にプルダウンは許可されない。
+   * - 2
      - GND
      - GND
-   * - 3	
-     - CU_PD	
-     - Working at high level; Power off when low level is supplied.
-   * - 4		
+   * - 3
+     - CU_PD
+     - 高レベルで動作; 低レベルが供給された場合は電源オフ。
+   * - 4
      - GPIO2
-     - It should be high level when power on, hardware pull-down is not allowed; Pull-up by default;
-   * - 5	
-     - RST	
-     - External Reset signal, reset when low level is supplied; work when high level is supplied (high level by default);
-   * - 6	
-     - GPIO0	
-     - WiFi Status indicator; Operation mode selection: Pull-up: Flash Boot, operation mode; Pull-down: UART Download, download mode
-   * - 7	
-     - VCC	
-     - Power Supply(3.3V)
-   * - 8	
-     - RXD	
-     - UART_RXD，Receiving; General Purpose Input/Output: GPIO3;
-
+     - 電源オン時は高レベルである必要があり、ハードウェアプルダウンは許可されない; デフォルトでプルアップ。
+   * - 5
+     - RST
+     - 外部リセット信号、低レベルが供給された場合はリセット; 高レベルが供給された場合に動作（デフォルトは高レベル）。
+   * - 6
+     - GPIO0
+     - WiFiステータスインジケータ; 操作モード選択: プルアップ: フラッシュブート, 操作モード; プルダウン: UARTダウンロード, ダウンロードモード。
+   * - 7
+     - VCC
+     - 電源供給（3.3V）
+   * - 8
+     - RXD
+     - UART_RXD、受信; GPIO3 汎用入出力。
 
 * `ESP8266 - Espressif <https://www.espressif.com/en/products/socs/esp8266>`_
 * |link_esp8266_at|
 
-ESP8266 Adapter
+ESP8266アダプタ
 ---------------
 
 .. image:: img/37_esp8266_adapter.png
     :width: 300
     :align: center
 
-The ESP8266 adapter is an expansion board that allows the ESP8266 module to be used on a breadboard.
+ESP8266アダプタは、ESP8266モジュールをブレッドボードで使用できるようにする拡張ボードです。
+ESP8266自体のピンに完璧に合わせてあり、さらにArduinoボードから電圧を受け取る5Vピンも追加されています。統合されたAMS1117チップは、電圧を3.3Vに降圧してからESP8266モジュールを駆動します。
 
-It perfectly matches the pins of the ESP8266 itself, and also adds a 5V pin to receive the voltage from the Arduino board. The integrated AMS1117 chip is used to drive the ESP8266 module after dropping the voltage to 3.3V.
-
-The schematic diagram is as follows:
+回路図は以下の通りです:
 
 .. image:: img/37_sch_esp8266adapter.png
 
-
-More Projects
+さらに多くのプロジェクト
 ---------------------------
 
-* :ref:`iot_projects` 
+* :ref:`iot_projects`

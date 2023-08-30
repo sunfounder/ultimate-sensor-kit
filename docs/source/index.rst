@@ -5,65 +5,33 @@ SunFounder Ultimate Sensor Kit
     :width: 800
 
 
-Ever been disappointed by an online learning kit that came with just a basic guide? Have you dreamed of delving into the world of electronics, but felt overwhelmed by the complexity?
+ベーシックなガイドしか付いていないオンライン学習キットにがっかりしたことはありませんか？電子機器の世界に飛び込みたいと夢見ているが、その複雑さに圧倒されていませんか？
 
-Seen brilliant electronic projects showcased by enthusiasts and wondered how they got started?
+エンスージアストたちが披露する素晴らしい電子プロジェクトを見て、どうやって始めたのか疑問に思ったことはありますか？
 
-Introducing: The Ultimate Sensor Kit with Arduino Uno R4 Minima. The answer to all your creative challenges in one compact package.
+ご紹介します：Arduino Uno R4 Minima搭載の究極のセンサーキット。あなたの創造的な挑戦に応える一体型のパッケージです。
 
-Driven by the revolutionary Arduino R4, this kit signifies a new era for open-source enthusiasts. With a powerful 32-bit processor, ample memory, and more, it's designed to seamlessly integrate with both new and existing projects.
+革命的なArduino R4によって駆動されるこのキットは、オープンソース愛好者にとって新しい時代を象徴します。強力な32ビットプロセッサ、豊富なメモリなど、新旧のプロジェクトにスムーズに統合するように設計されています。
 
-Not only does it come with over 30 state-of-the-art modules like the Ultrasonic Sensor, Flame Sensor, Accelerometer & Gyroscope, and even the Pulse Oximeter and Heart Rate Sensor, but each component is paired with a beginner-friendly code example. This ensures you not only possess the tools but also the initial know-how.
+超音波センサー、炎センサー、加速度計＆ジャイロスコープ、さらには脈酸素計と心拍数センサーなど、30種類以上の先進的なモジュールが付属しています。それぞれのコンポーネントは、初心者に優しいコード例とペアリングされています。これにより、ツールだけでなく初期のノウハウも手に入れることができます。
 
-Dive deep into the world of IoT with tailored projects that link the Arduino to platforms like Blynk via the ESP8266 WiFi module. Unleash your innovation by designing projects such as the Flame Alert System, Intrusion Alert System, and even a Bluetooth-controlled environmental monitor.
+ESP8266 WiFiモジュールを介してArduinoをBlynkなどのプラットフォームにリンクさせる、IoTに特化したプロジェクトで深く探究しましょう。炎警報システム、侵入警報システム、さらにはBluetooth制御の環境モニターなど、革新的なプロジェクトを設計してみてください。
 
-But that's not all; dive into an array of engaging projects! Construct a smart trash can, develop an automatic soap dispenser, or perhaps a motion-triggered relay. The kit expands your horizons, allowing you to translate imagination into tangible creations.
+だがそれだけではありません。多くの魅力的なプロジェクトに没頭しましょう！スマートなゴミ箱を作る、自動石鹸ディスペンサーを開発する、あるいは動きに反応するリレーを設計するなど、キットはあなたの視野を広げ、具現化する力を与えます。
 
-This isn't just about following steps; it’s about understanding, experimenting, and inventing. Instead of merely replicating, you'll be crafting projects that are uniquely yours.
+これは単なる手順を追うだけのことではありません。理解し、実験し、発明することです。単に模倣するのではなく、あなた自身の独自のプロジェクトを作り出します。
 
-Why just be a spectator when you can be a creator? Begin your journey into the captivating world of electronics with the Ultimate Sensor Kit. Your adventure starts here!
+ただ観察者でいるのではなく、創造者になりませんか？究極のセンサーキットで電子機器の魅力的な世界への旅を始めましょう。冒険はここから始まります！
 
-If you have any questions or other interesting ideas, feel free to send an email to cs@sunfounder.com.
+質問や他に面白いアイデアがあれば、cs@sunfounder.com までメールをお送りください。
 
-.. * :ref:`About the display language`
-.. * :ref:`Table of contents`
-.. * :ref:`Copyright Notice`
-
-
-.. About the display language
-.. --------------------------------
-
-.. In addition to English, we are working on other languages for this course. Please contact service@sunfounder.com if you are interested in helping, and we will give you a free product in return. 
-.. In the meantime, we recommend using Google Translate to translate English into your desired language.
-
-.. The steps are as follows.
-
-.. * In this course page, right-click and select **Translate to xx**. If the current language is not what you want, you can change it later.
-
-.. .. image:: img/new/translate1_shadow.png
-..     :align: center
-
-.. * There will be a language popup in the upper right corner. Click on the menu button to **choose another language**.
-
-.. .. image:: img/new/translate2_shadow.png
-..     :align: center
-
-.. * Select the language from the inverted triangle box, and then click **Done**.
-
-.. .. image:: img/new/translate3_shadow.png
-..     :align: center
-
-.. .. raw:: html
-    
-..     <br/>   <br/>   
-
-Table of contents
+目次
 --------------------------------
 
 .. toctree:: 
     :maxdepth: 2
 
-    About Ultimate Sensor Kit <self>
+    Ultimate Sensor Kitについて <self>
     arduino_start/00_get_start
     download_code
     components_basic/00-component_list
@@ -72,7 +40,7 @@ Table of contents
     faq/00_faq
     thank-learning
 
-Copyright Notice
+著作権通知
 -----------------------
 
-All contents including but not limited to texts, images, and code in this manual are owned by the SunFounder Company. You should only use it for personal study, investigation, enjoyment, or other non-commercial or nonprofit purposes, under the related regulations and copyrights laws, without infringing the legal rights of the author and relevant right holders. For any individual or organization that uses these for commercial profit without permission, the Company reserves the right to take legal action.
+このマニュアルに含まれるテキスト、画像、コード等のすべての内容はSunFounder社が所有しています。関連する規制と著作権法に従い、著者と関連する権利者の法的権利を侵害しない範囲で、個人的な学習、調査、楽しみ、またはその他の非営利目的または非営利団体による目的でのみ使用してください。許可なく商業的利益を追求する個人または組織に対しては、当社は法的手段を講じる権利を留保します。

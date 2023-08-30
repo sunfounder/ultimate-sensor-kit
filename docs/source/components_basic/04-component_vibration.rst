@@ -1,31 +1,30 @@
 .. _cpn_vibration:
 
-Vibration Sensor Module (SW-420)
+振動センサーモジュール（SW-420）
 =====================================
 
 .. image:: img/04_sw420_vibration_module.png
     :width: 400
     :align: center
 
-Introduction
+概要
 ---------------------------
-SW-420 vibration sensor is a module that can detect vibrations or shocks on a surface. It can be used for various purposes, such as detecting door knocks, machine malfunctions, car collisions, or alarm systems. It operates from 3.3 V to 5 V. The module has three peripherals, two LEDs, one for the power status and the other for the sensor output. In addition, there is a potentiometer that can be further used to control the threshold point of the vibration.
+SW-420振動センサーは、表面の振動や衝撃を検出できるモジュールです。ドアのノック検出、機械の故障、自動車の衝突、警報システムなど、多様な用途で利用可能です。動作電圧は3.3Vから5Vです。モジュールには、電源状態用とセンサー出力用の2つのLEDと、振動の閾値を調整できるポテンショメーターが搭載されています。
 
-
-Principle
+原理
 ---------------------------
-SW-420 vibration sensor module consists of a SW-420 vibration switch and an LM393 voltage comparator. A SW-420 vibration switch is a device that has a spring and a rod inside a tube. When the switch is exposed to a vibration, the spring touches the rod and closes the circuit. The vibration sensor in the module detects these oscillations and converts them into electrical signals. The LM393 comparator chip then compares these signals with a reference voltage set by the potentiometer. If the amplitude of the signal exceeds this reference voltage, the output of the comparator goes high (1), otherwise it goes low (0).
+SW-420振動センサーモジュールは、SW-420振動スイッチとLM393電圧比較器で構成されています。SW-420振動スイッチは、筒の中にバネと棒が備えられている装置です。このスイッチが振動にさらされると、バネが棒に接触し、回路が閉じます。モジュール内の振動センサーは、これらの振動を検出し、電気信号に変換します。その後、LM393比較器チップは、ポテンショメーターで設定された基準電圧とこれらの信号を比較します。信号の振幅がこの基準電圧を超えた場合、比較器の出力は高（1）になり、それ以外の場合は低（0）になります。
 
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Vibration Sensor Module(SW-420) * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- 振動センサーモジュール（SW-420） * 1
+- ジャンパーワイヤー
 
-**Circuit Assembly**
+**回路組み立て**
 
 .. image:: img/04_vibration_module_circuit.png
     :width: 400
@@ -35,13 +34,12 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/690d9d6c-1049-48cd-99af-7bc6cd9c1ae4/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
 
 .. raw:: html
 
@@ -51,16 +49,17 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+
+コード解説
 ^^^^^^^^^^^^^^^^^^^^
 
-1. The first line of code is a constant integer declaration for the vibration sensor pin. We use digital pin 7 to read the output from the vibration sensor.
+1. 最初のコード行は、振動センサーピンの定数整数宣言です。振動センサーからの出力を読むためにデジタルピン7を使用します。
 
    .. code-block:: arduino
    
       const int sensorPin = 7;
 
-2. In the ``setup()`` function, we initialize the serial communication at a baud rate of 9600 to print readings from the vibration sensor to the serial monitor. We also set the vibration sensor pin as an input.
+2. ``setup()`` 関数では、振動センサーからの読み取りをシリアルモニターに表示するため、9600のボーレートでシリアル通信を初期化します。また、振動センサーピンを入力として設定します。
 
    .. code-block:: arduino
    
@@ -69,7 +68,7 @@ Code explanation
         pinMode(sensorPin, INPUT);  // Set the sensorPin as an input pin
       }
 
-3. The ``loop()`` function is where we continuously check for any vibrations detected by the sensor. If the sensor detects a vibration, it prints "Detected vibration..." to the serial monitor. If no vibration is detected, it prints "...". The loop repeats every 100 milliseconds.
+3. ``loop()`` 関数は、センサーが検出した振動を継続的にチェックする場所です。センサーが振動を検出すると、シリアルモニターに「Detected vibration...」と表示します。振動が検出されない場合は、「...」と表示します。このループは100ミリ秒ごとに繰り返されます。
 
    .. code-block:: arduino
    
@@ -84,14 +83,12 @@ Code explanation
         delay(100);
       }
 
-Additional Ideas
+追加のアイデア
 ^^^^^^^^^^^^^^^^
 
-- Could connect an LED to turn ON when vibration is detected
-- An alarm sound or buzzer could be triggered on vibration sense 
+- 振動が検出された際に点灯するLEDを接続可能
+- 振動を感知した際に警報音またはブザーが鳴るように設定できます
 
-More Projects
+その他のプロジェクト
 ---------------------------
 * :ref:`iot_Intrusion_alert_system`
-
-

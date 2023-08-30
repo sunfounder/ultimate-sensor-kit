@@ -1,7 +1,7 @@
-Thank You
+ありがとうございます
 ====================
 
-Thanks to the evaluators who evaluated our products, the veterans who provided suggestions for the tutorial, and the users who have been following and supporting us.
-Your valuable suggestions to us are our motivation to provide better products!
+製品を評価してくださった皆様、チュートリアルへの有益なアドバイスを提供してくださった先輩方、そして長らく私たちを応援し続けてくれているユーザーの皆様、心より感謝申し上げます。
+貴重なご意見は、より優れた製品を提供するための私たちの原動力となっています。
 
-If you have any questions or other interesting ideas, feel free to send an email to cs@sunfounder.com.
+質問や興味深いアイデアがあれば、どうぞお気軽 にcs@sunfounder.com までメールをお送りください。

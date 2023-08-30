@@ -1,19 +1,18 @@
 .. _config_esp8266:
 
-1.1 Configuring the ESP8266
+1.1 ESP8266の設定
 ===============================
 
-The ESP8266 module that comes with the kit is already pre-burned with AT firmware, but you still need to modify its configuration by following the steps below.
+このキットに付属しているESP8266モジュールは、すでにATファームウェアが書き込まれていますが、以下の手順に従って設定を変更する必要があります。
 
-
-1. Build the circuit.
+1. 回路を作成する。
 
    .. image:: img/wiring_r4_configure.png
        :width: 800
 
-2. Open the ``00-Set_software_serial.ino`` file under the path of ``ultimate-sensor-kit\iot_project\wifi\00-Set_software_serial``. Or copy this code into Arduino IDE. And upload the code.
+2. パス ``ultimate-sensor-kit\iot_project\wifi\00-Set_software_serial`` 下の ``00-Set_software_serial.ino`` ファイルを開くか、このコードをArduino IDEにコピーアンドペーストして、コードをアップロードします。
 
-   The code establishes a software serial communication using Arduino's SoftwareSerial library, allowing the Arduino to communicate with the ESP8266 module through its digital pins 2 and 3 (as Rx and Tx). It checks for data transfer between them, forwarding received messages from one to the other at a baud rate of 115200. **With this code, you can use the Arduino's serial monitor to send AT firmware commands to the ESP8266 module and receive its responses.**
+   このコードはArduinoのSoftwareSerialライブラリを用いてソフトウェアシリアル通信を確立し、Arduinoがデジタルピン2と3（RxとTxとして）を介してESP8266モジュールと通信できるようにします。このコードにより、ボーレート115200でArduinoのシリアルモニタを使用して、ESP8266モジュールにATファームウェアコマンドを送信し、その応答を受け取ることができます。
 
    .. code-block:: Arduino
 
@@ -36,31 +35,30 @@ The ESP8266 module that comes with the kit is already pre-burned with AT firmwar
        }
 
 
-3. Click the magnifying glass icon (Serial Monitor) in the upper right corner and set the baud rate to **115200**. (You may have some printed information like me, or you may not, it doesn’t matter, just go to the next step.)
+3. 右上隅の虫眼鏡アイコン（シリアルモニタ）をクリックし、ボーレートを **115200** に設定します。（表示される情報があってもなくても問題ありません。次のステップに進んでください。）
 
    .. image:: img/esp01_configurie_1.png
 
    .. warning::
+
+        * ``ready`` が表示されない場合は、ESP8266モジュール（RSTをGNDに接続）をリセットして、シリアルモニタを再度開いてください。
         
-        * If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.
+        * 結果が ``OK`` の場合は、ファームウェアを再書き込む必要があるかもしれません。詳細は :ref:`burn_firmware` を参照してください。それでも解決しない場合は、シリアルモニタのスクリーンショットを sevice@sunfounder.com に送信してください。できるだけ早く問題を解決いたします。
 
-        * In addition, if the result is ``OK``, you may need to re-burn the firmware, please refer to :ref:`burn_firmware` for details. If you still can't solve it, please take a screenshot of the serial monitor and send it to sevice@sunfounder.com, we will help you solve the problem as soon as possible.
-
-4. Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with R3 board.
+4. **NEWLINE DROPDOWN BOX** をクリックし、ドロップダウンオプションで ``both NL & CR`` を選択し、 ``AT`` を入力します。OKが返ってきたら、ESP8266はR4ボードと正常に接続されたことを意味します。
 
    .. image:: img/esp01_configurie_2.png
 
    .. image:: img/esp01_configurie_3.png
 
-5. Enter ``AT+CWMODE=3`` and the managed mode will be changed to **Station and AP** coexistence.
+5. ``AT+CWMODE=3`` を入力すると、管理モードが **StationとAPの共存** に変更されます。
 
    .. image:: img/esp01_configurie_4.png
 
-.. 6. In order to use the software serial later, you must input ``AT+UART=9600,8,1,0,0`` to modify the ESP8266's baud rate to 9600.
+.. 6. ソフトウェアシリアルを後で使用するために、``AT+UART=9600,8,1,0,0``を入力して、ESP8266のボーレートを9600に変更する必要があります。
 
 ..    .. image:: img/esp01_configurie_5.png
 
-
-**Reference**
+**参考**
 
 * |link_esp8266_at|

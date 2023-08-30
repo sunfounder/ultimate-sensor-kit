@@ -1,23 +1,21 @@
-
 .. _iot_Bluetooth_piano:
 
-Bluetooth Piano
+Bluetoothピアノ
 =============================
 
 .. raw:: html
 
    <video controls style = "max-width:100%">
       <source src="../_static/video/iot/11-iot_Bluetooth_piano.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      ご使用のブラウザはビデオタグをサポートしていません。
    </video>
    <br/><br/>
 
-This project uses an Android app created with MIT App Inventor to enable a straightforward "piano" feature by utilizing a JDY-31 Bluetooth module and a Passive Buzzer Module. The Bluetooth piano project allows users to play different musical notes on a passive buzzer module using a JDY-31 Bluetooth module. By sending specific note instructions via Bluetooth to the Arduino, users can generate corresponding tones on the buzzer. 
+このプロジェクトは、MIT App Inventorで作成されたAndroidアプリを使用して、JDY-31 Bluetoothモジュールとパッシブブザーモジュールを活用したシンプルな「ピアノ」機能を提供します。Bluetoothピアノプロジェクトでは、JDY-31 Bluetoothモジュールを使用してパッシブブザーモジュールで様々な音階を演奏することができます。ArduinoにBluetooth経由で特定の音符指令を送信することで、ブザー上で対応する音を生成できます。
 
-The Android application will be constructed utilizing a complimentary web-based platform known as |link_appinventor|. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone. 
+Androidアプリケーションは、 |link_appinventor| という無料のWebベースのプラットフォームを用いて構築されます。このプロジェクトは、スマートフォンとArduinoの連携についての知識を深める絶好の機会となります。
 
-
-1. Build the Cirduit
+1. 回路を組む
 -----------------------------
 
 .. image:: img/11-Wiring_Bluetooth_piano.png
@@ -27,140 +25,140 @@ The Android application will be constructed utilizing a complimentary web-based 
 * :ref:`cpn_jdy31`
 * :ref:`cpn_buzzer`
 
-
-2. Create the Android App
+2. Androidアプリを作成する
 -----------------------------
 
-The Android application will be developed using a free web application known as |link_appinventor|. 
-MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop 
-features allowing for the creation of simplistic applications.
+Androidアプリは、 |link_appinventor| という無料のWebアプリケーションを使用して開発されます。
+MIT App Inventorは、直感的なドラッグアンドドロップ機能によってシンプルなアプリケーションを作成するのに適した素晴らしいスタートポイントです。
 
-Now, let's begin.
+それでは始めましょう。
 
-#. Go to |link_appinventor_login|, and click "online tool" to login. You will require a Google account to register with MIT App Inventor.
+#. |link_appinventor_login| にアクセスし、「online tool」をクリックしてログインします。MIT App Inventorに登録するためにはGoogleアカウントが必要です。
 
    .. image:: img/new/09-ai_signup_shadow.png
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``piano.aia`` file located in the path ``ultimate-sensor-kit\iot_project\bluetooth\06-Bluetooth_piano``.
+#. ログイン後、 **Projects** -> **Import project (.aia) from my computer** に移動します。その後、 ``ultimate-sensor-kit\iot_project\bluetooth\06-Bluetooth_piano`` にある ``piano.aia`` ファイルをアップロードします。
 
-   You can also directly download here: :download:`piano.aia</_static/other/piano.aia>`
+   または、直接こちらからダウンロードできます: :download:`piano.aia</_static/other/piano.aia>`
 
    .. image:: img/new/09-ai_import_shadow.png
         :align: center
 
-#. Upon uploading the ``.aia`` file, you will see the application on the MIT App Inventor software. This is a pre-configured template. You can modify this template after you have familiarized yourself with MIT App Inventor through the following steps.
+#. ``.aia`` ファイルをアップロードした後、MIT App Inventorソフトウェアでアプリケーションが表示されます。これは事前に設定されたテンプレートです。MIT App Inventorに慣れた後、このテンプレートを自由に編集できます。
 
-#. In MIT App Inventor, you have 2 primary sections: the **Designer** and the **Blocks**. You can switch between these two sections in the upper right corner of the page.
+#. MIT App Inventorには、 **Designer** と **Blocks** という2つの主要なセクションがあります。これらのセクションは、ページの右上隅で切り替えることができます。
 
    .. image:: img/new/09-ai_intro_1_shadow.png
 
-#. The **Designer** allows you to add buttons, text, screens, and modify the overall aesthetic of your application.
+#. **Designer** では、ボタン、テキスト、画面を追加したり、アプリの全体的な見た目を編集できます。
 
    .. image:: img/new/11-ai_intro_2_shadow.png
-   
-#. Next, there's the **Blocks** section. This section lets you craft custom functionalities for your app, allowing you to program each component on the app's GUI to achieve desired features.
+
+#. 次に、 **Blocks** セクションです。このセクションでは、アプリのGUI上の各コンポーネントをプログラムして、所望の機能を実装できます。
 
    .. image:: img/new/11-ai_intro_3_shadow.png
 
-#. To install the application on a smartphone, navigate to the **Build** tab.
+#. スマートフォンにアプリをインストールするためには、 **Build** タブに移動します。
 
    .. image:: img/new/08-ai_intro_4_shadow.png
 
-   * You can generate a ``.apk`` file. After selecting this option, a page will appear allowing you to choose between downloading a ``.apk`` file or scanning a QR code for installation. Follow the installation guide to complete the application installation. 
+   * ``.apk`` ファイルを生成することができます。このオプションを選択すると、 ``.apk`` ファイルをダウンロードするかQRコードをスキャンしてインストールするかを選べるページが表示されます。インストールガイドに従ってアプリケーションのインストールを完了させてください。
 
-     You also download our pre-compiled APK here: :download:`piano.apk</_static/other/piano.apk>`
+     事前にコンパイルされたAPKもこちらでダウンロードできます: :download:`piano.apk</_static/other/piano.apk>`
 
-   * If you wish to upload this app to Google Play or another app marketplace, you can generate a ``.aab`` file.
+   * Google Playや他のアプリマーケットにこのアプリをアップロードしたい場合は、 ``.aab`` ファイルを生成できます。
 
 
-3. Upload the Code
+
+3. コードをアップロードする
 -----------------------------
 
-#. Open the ``11-Bluetooth_piano.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\06-Bluetooth_piano``, or copy this code into **Arduino IDE**.
+#. ``ultimate-sensor-kit\iot_project\bluetooth\06-Bluetooth_piano`` パス内の ``11-Bluetooth_piano.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーしてください。
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/a9d0b7bf-0927-4a10-88b9-bbc4a9abc5c8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. 適切なボードとポートを選択したら、 **書き込み** ボタンをクリックします。
 
-#. Open the Serial monitor(set baudrate to **9600**) to view debug messages. 
+#. デバッグメッセージを見るために、シリアルモニタを開き（ボーレートを **9600** に設定してください）。
 
-4. App and Bluetooth moudule Connection
+4. アプリとBluetoothモジュールの接続
 -----------------------------------------------
 
-Ensure that the application created earlier is installed on your smartphone.
+既にスマートフォンに作成したアプリがインストールされていることを確認してください。
 
-#. Initially, turn on **Bluetooth** on your smartphone.
+#. 最初に、スマートフォンの **Bluetooth** をオンにします。
 
    .. image:: img/new/09-app_1_shadow.png
       :width: 60%
       :align: center
 
-#. Navigate to the **Bluetooth settings** on your smartphone and look for names like **JDY-31-SPP**.
+#. スマートフォンの **Bluetooth設定** に移動し、 **JDY-31-SPP** のような名前を探します。
 
    .. image:: img/new/09-app_2_shadow.png
       :width: 60%
       :align: center
 
-#. After clicking it, agree to the **Pair** request in the pop-up window. If prompted for a pairing code, please enter "1234".
+#. クリック後、ポップアップウィンドウで **ペアリング** リクエストに同意します。ペアリングコードが求められた場合は「1234」と入力してください。
 
    .. image:: img/new/09-app_3_shadow.png
       :width: 60%
       :align: center
 
-#. Now open the newly installed **Piano** APP.
+#. それでは、新しくインストールした **Piano** アプリを開きます。
 
    .. image:: img/new/11-app_4_shadow.png
       :width: 25%
       :align: center
 
-#. In the APP, click on **Connect** button to establish a connection between the APP and Bluetooth module.
+#. アプリ内で **Connect** ボタンをクリックして、アプリとBluetoothモジュールとの接続を確立します。
 
    .. image:: img/new/11-app_5_shadow.png
       :width: 85%
       :align: center
 
-#. This page displays a list of all paired Bluetooth devices. Choose the ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` option from the list. The name of each device is listed next to its MAC address.
+#. この画面には、すべてのペアリング済みBluetoothデバイスが一覧表示されます。 ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` というオプションをリストから選びます。各デバイスの名前は、MACアドレスの隣に表示されています。
 
    .. image:: img/new/11-app_6_shadow.png
       :width: 60%
       :align: center
 
-#. If you don't see any devices on the page shown above, it could be because this app is not authorized to scan for nearby devices. In such a case, you will need to adjust the settings manually.
+#. 上記のページにデバイスが表示されない場合、アプリが周辺のデバイスをスキャンする権限を持っていない可能性があります。その場合は、設定を手動で調整する必要があります。
 
-   * To access the **APP Info** page, long-press the app icon and select it. Alternatively, if you have another method to reach this page, use that instead.
+   * **APP情報** ページにアクセスするには、アプリのアイコンを長押しして選択します。別の方法でこのページにアクセスできる場合は、その方法を使用してください。
 
    .. image:: img/new/11-app_8_shadow.png
          :width: 60%
          :align: center
 
-   * Navigate to the **Permissions** page.
+   * **権限** ページに移動します。
 
    .. image:: img/new/08-app_9_shadow.png
          :width: 60%
          :align: center
 
-   * To enable the APP to scan for nearby devices, go to **Nearby devices** and select **Always**.
+   * アプリに周辺のデバイスをスキャンする機能を有効にするには、 **周辺のデバイス** に移動して **常に** を選択します。
 
    .. image:: img/new/08-app_10_shadow.png
          :width: 60%
          :align: center
 
-   * Now, restart the APP and repeat steps 5 and 6 to successfully connect to Bluetooth.
+   * それでは、アプリを再起動して手順5と6を繰り返し、Bluetoothに成功裏に接続してください。
 
-#. After a successful connection, you can click on the buttons in the app to play different notes, and even perform some simple songs.
+#. 接続に成功したら、アプリ内のボタンをクリックして異なる音符を演奏できます。簡単な曲も演奏可能です。
 
    .. image:: img/new/11-app_7_shadow.png
       :width: 85%
       :align: center
 
-5. Code explanation
+
+5. コードの解説
 -----------------------------------------------
 
-1. **Setting Up Libraries and Pins**
+1. **ライブラリとピンの設定**
 
    .. code-block:: arduino
    
@@ -170,29 +168,28 @@ Ensure that the application created earlier is installed on your smartphone.
       const int bluetoothRx = 4;
       SoftwareSerial bleSerial(bluetoothTx, bluetoothRx);
       const int buzzerPin = 2;
-   
 
-   - ``pitches.h``: This file contains the frequency values for musical notes.
+   - ``pitches.h`` : このファイルには、音楽の音符に対応する周波数値が格納されています。
 
    .. raw:: html
 
       <br/>
 
-2. **Variable Declarations for Storing Bluetooth Data**
+2. **Bluetoothデータを保存するための変数宣言**
 
    .. code-block:: arduino
    
       char character;
       String noteType;
-   
-   - ``character``: Stores individual characters received from Bluetooth.
-   - ``noteType``: Aggregates the characters to form the full note instruction.
+
+   - ``character`` : Bluetoothから受信した個々の文字を保存します。
+   - ``noteType`` : 受信した文字を集約して完全な音符指示を形成します。
 
    .. raw:: html
 
       <br/>
 
-3. **Setup Function - Initializing Serial Communications**
+3. **セットアップ関数 - シリアル通信の初期化**
 
    .. code-block:: arduino
    
@@ -201,10 +198,14 @@ Ensure that the application created earlier is installed on your smartphone.
         bleSerial.begin(9600);
       }
    
-   - Initializes serial communication at a baud rate of 9600.
-   - The standard ``Serial`` is for debugging while ``bleSerial`` is specifically for Bluetooth communication.
+   - ボーレート9600でシリアル通信を初期化します。
+   - 標準の ``Serial`` はデバッグ用で、 ``bleSerial`` はBluetooth通信専用です。
 
-4. **Main Loop - Reading Bluetooth Data and Playing Corresponding Notes**
+   .. raw:: html
+
+      <br/>
+
+4. **メインループ - Bluetoothデータの読み取りと対応する音符の演奏**
 
    .. code-block:: arduino
    
@@ -217,13 +218,13 @@ Ensure that the application created earlier is installed on your smartphone.
             Serial.println(noteType);
             if (noteType == "NOTE_C4") {
               tone(buzzerPin, NOTE_C4);
-            } // ... other notes check similarly ...
+            } // ...他の音符も同様にチェック...
             noteType = "";
             delay(200);
             noTone(buzzerPin);
           }
         }
       }
-
-   - Reads characters from Bluetooth and assembles the ``noteType``.
-   - If an asterisk ('*') is detected, it indicates the end of the note instruction. The note is then played, followed by a short delay and then stopped.
+   
+   - Bluetoothからの文字を読み取り、 ``noteType`` を組み立てます。
+   - アスタリスク（'*'）が検出されると、それは音符指示の終わりを示します。その後、短い遅延が続いて音符が停止します。

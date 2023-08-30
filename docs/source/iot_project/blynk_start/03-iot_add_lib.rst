@@ -1,31 +1,39 @@
 .. _iot_add_library:
 
-1.3 Adding the required libraries
+1.3 必要なライブラリの追加
 ---------------------------------------
 
-You need to add the correct libraries for the Arduino IDE to use Blynk.
+BlynkをArduino IDEで使用するには、適切なライブラリを追加する必要があります。
 
-#. Click |link_blynk_lib|, scroll down to **"Assets"** and download the first ``.zip`` file. 
+#. |link_blynk_lib| をクリックして、 **"Assets"** までスクロールし、最初の ``.zip`` ファイルをダウンロードします。
 
    .. note::
-    Please note that the version number shown in the image below may be outdated. We highly recommend downloading and installing the latest version available.
+    下の画像に表示されているバージョン番号は古い可能性があります。最新版をダウンロードしてインストールすることを強く推奨します。
 
    .. image:: img/sp220607_154840.png
 
-#. Unzip this file and then enter the ``libraries`` folder to see the following folders..
+#. このファイルを解凍し、 ``libraries`` フォルダに移動して次のようなフォルダを確認します。
 
     .. image:: img/add_lib_0.png
-    
-#. Copy them all and add them to the ``libraries`` folder of your sketchbook.
 
-    **Step 1:** You can find or change the location of your libraries folder at ``File > Preferences > Sketchbook location``.
+#. これらを全てコピーし、スケッチブックの ``libraries`` フォルダに追加します。
+
+    **ステップ1:** ``File > Preferences > Sketchbook location`` でライブラリフォルダの場所を探す、または変更できます。
 
     .. image:: img/add_lib_1.png
 
-    **Step 2:** Go to the location of your Sketchbook location(find from Arduino IDE). And find ``libraries`` folder, click to open it.
+    .. raw:: html
+
+        <br/><br/>
+
+    **ステップ2:** Arduino IDEからスケッチブックの場所を探し、``libraries`` フォルダをクリックして開きます。
 
     .. image:: img/add_lib_2.png
 
-    **Step 3:** Paste all the unzipped folders of ``Blynk_Release_vx.x.x\libraries`` into the libraries folder.
+    .. raw:: html
+
+        <br/><br/>
+
+    **ステップ3:** 解凍した ``Blynk_Release_vx.x.x\libraries`` フォルダ内の全てのフォルダを、librariesフォルダに貼り付けます。
 
     .. image:: img/add_lib_3.png

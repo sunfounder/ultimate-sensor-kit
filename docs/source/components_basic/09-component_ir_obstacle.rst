@@ -1,34 +1,34 @@
 .. _cpn_ir_obstacle:
 
-IR Obstacle Avoidance Sensor Module
+IR 赤外線障害物回避センサーモジュール
 =====================================
 
 .. image:: img/09_IR_obstacle_module.png
     :width: 400
     :align: center
 
-Introduction
+概要
 ---------------------------
-An IR Obstacle Sensor works in accordance with the infrared reflection principle to detect obstacles. When there is no object, the infrared receiver receives no signals; when there is an object ahead which blocks and reflects the infrared light, the infrared receiver will receive signals.
+IR障害物センサーは、赤外線反射原理に基づいて障害物を検出します。障害物が存在しない場合、赤外線受信器は信号を受信しません。障害物が前方にあり、赤外線を遮断して反射する場合、赤外線受信器は信号を受信します。
 
-Principle
+原理
 ---------------------------
-An obstacle avoidance sensor mainly consists of an infrared transmitter, an infrared receiver and a potentiometer. According to the reflecting character of an object, if there is no obstacle, the emitted infrared ray will weaken with the distance it spreads and finally disappear. If there is an obstacle, when the infrared ray encounters it, the ray will be reflected back to the infrared receiver. Then the infrared receiver detects this signal and confirms an obstacle in front. The detection range can be adjusted by the built-in potentiometer.
+障害物回避センサーは、主に赤外線送信器、赤外線受信器、およびポテンショメータで構成されています。対象物の反射特性により、障害物が存在しない場合、放出された赤外線は距離に応じて減衰し、最終的に消失します。障害物がある場合、赤外線はそれに当たり、赤外線受信器に反射されます。その後、赤外線受信器はこの信号を検出し、前方に障害物があることを確認します。検出範囲は、内蔵されたポテンショメータで調整することができます。
 
 .. image:: img/09_IR_obstacle_module_1.png
     :width: 600
     :align: center
 
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- IR Obstacle Avoidance Sensor Module * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- IR 障害物回避センサーモジュール * 1
+- ジャンパーワイヤ
 
-**Circuit Assembly**
+**回路組み立て**
 
 .. image:: img/09_IR_obstacle_module_circuit.png
     :width: 400
@@ -38,7 +38,7 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -54,18 +54,18 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-1. Define pin number for sensor connection:
+1. センサー接続用のピン番号を定義:
 
    .. code-block:: arduino
 
      const int sensorPin = 2;
 
-   Connect the sensor's output pin to Arduino pin 2.
+   センサーの出力ピンをArduinoの2番ピンに接続します。
 
-2. Setup serial communication and define sensor pin as input:
+2. シリアル通信のセットアップとセンサーピンを入力として定義:
 
    .. code-block:: arduino
 
@@ -74,10 +74,10 @@ Code explanation
        Serial.begin(9600);
      }
 
-   Initialize serial communication at 9600 baud rate to print to serial monitor.
-   Set sensor pin as input to read input signal.
+   シリアルモニターに出力するため、9600ボーの通信速度でシリアル通信を初期化します。
+   センサーピンを入力として設定し、入力信号を読み取ります。
 
-3. Read sensor value and print to serial monitor:
+3. センサー値を読み取り、シリアルモニターに出力:
 
    .. code-block:: arduino
 
@@ -85,25 +85,19 @@ Code explanation
        Serial.println(digitalRead(sensorPin));
        delay(50); 
      }
-   
-   Continuously read digital value from sensor pin using ``digitalRead()`` and print value to serial monitor using ``Serial.println()``.
-   Add 50ms delay between prints for better viewing.
 
-.. note:: 
+   ``digitalRead()`` を用いてセンサーピンからデジタル値を連続して読み取り、 ``Serial.println()`` でシリアルモニターに出力します。
+   見やすくするために、出力の間に50msの遅延を挿入します。
 
-   If the sensor is not working properly, adjust the IR transmitter and receiver to make them parallel. Additionally, you can adjust the detection range using the built-in potentiometer.
+.. note::
 
-Additional Ideas
+   センサーが正常に動作していない場合、IR送信機と受信機を平行に調整します。さらに、内蔵されたポテンショメーターを使用して検出範囲を調整できます。
+
+追加のアイデア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Add buzzer that beeps when obstacle is detected
+- 障害物を検出したときにブザーを鳴らす
 
-More Projects
+その他のプロジェクト
 ---------------------------
 * :ref:`fun_soap_dispenser`
-
-
-
-
-
-

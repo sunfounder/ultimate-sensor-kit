@@ -1,56 +1,57 @@
 .. _cpn_potentiometer:
 
-Potentiometer Module
+ポテンショメータモジュール
 ==========================
 
 .. image:: img/08_potentiomete_module.png
     :width: 300
     :align: center
 
-Introduction
+概要
 ---------------------------
-The potentiometer module is an electronic component that changes its resistance depending on the position of the twist knob.It can be used for various purposes, such as controlling the volume of a speaker, the brightness of a LED, or the speed of a motor.
+ポテンショメータモジュールは、ツイストノブの位置に応じてその抵抗値が変わる電子部品です。スピーカーの音量、LEDの明るさ、モーターの速度など、さまざまな目的で使用することができます。
 
-
-Principle
+原理
 ---------------------------
-Potentiometer is also a resistance component with 3 terminals and its resistance value can be adjusted according to some regular variation.
+ポテンショメータはまた、一定の規則に従って抵抗値を調整できる3端子の抵抗部品でもあります。
 
-Potentiometers come in various shapes, sizes, and values, but they all have the following things in common:
+ポテンショメータには様々な形状、サイズ、値がありますが、以下の共通点があります：
 
-- They have three terminals (or connection points).
-- They have a knob, screw, or slider that can be moved to vary the resistance between the middle terminal and either one of the outer terminals.
-- The resistance between the middle terminal and either one of the outer terminals varies from 0 Ω to the maximum resistance of the pot as the knob, screw, or slider is moved.
+- 三つの端子（または接続点）があります。
+- ノブ、ねじ、またはスライダーがあり、中央の端子とどちらかの外側の端子との間の抵抗を変えることができます。
+- ノブ、ねじ、またはスライダーが動かされると、中央の端子とどちらかの外側の端子との間の抵抗は0 Ωからポテンショメータの最大抵抗まで変わります。
 
-Here is the circuit symbol of potentiometer.
+以下はポテンショメータの回路記号です。
 
 .. image:: img/08_potentiometer_symbol_2.png
     :width: 200
     :align: center
 
-The functions of the potentiometer in the circuit are as follows:
+回路におけるポテンショメータの機能は以下の通りです：
 
-#. Serving as a voltage divider
-    Potentiometer is a continuously adjustable resistor. When you adjust the shaft or sliding handle of the potentiometer, the movable contact will slide on the resistor. At this point, a voltage can be output depending on the voltage applied onto the potentiometer and the angle the movable arm has rotated to or the travel it has made.
+#. 電圧分割器として機能する
 
-#. Serving as a rheostat
-    When the potentiometer is used as a rheostat, connect the middle pin and one of the other 2 pins in the circuit. Thus you can get a smoothly and continuously changed resistance value within the travel of the moving contact.
+   ポテンショメータは連続的に調整可能な抵抗器です。ポテンショメータのシャフトやスライディングハンドルを調整すると、可動接点は抵抗器上を滑ります。この時点で、ポテンショメータに印加された電圧と可動アームが回転した角度、または移動した距離に応じて、電圧を出力することができます。
 
-#. Serving as a current controller
-    When the potentiometer acts as a current controller, the sliding contact terminal must be connected as one of the output terminals.
+#. リオスタットとして機能する
+
+   ポテンショメータをリオスタットとして使用する場合、回路内で中央のピンと他の2ピンのうちの1つを接続します。これにより、移動接点の移動範囲内で抵抗値がスムーズかつ連続的に変化します。
+
+#. 電流コントローラーとして機能する
+
+   ポテンショメータが電流コントローラーとして機能する場合、スライディング接点端子は出力端子の1つとして接続されなければなりません。
 
 
-
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Potentiometer Module * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- ポテンショメータモジュール * 1
+- ジャンパーワイヤー
 
-**Circuit Assembly**
+**回路の組み立て**
 
 .. image:: img/08_potentiometer_module_circuit.png
     :width: 400
@@ -60,7 +61,7 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -76,16 +77,16 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-#. This line of code defines the pin number to which the potentiometer is connected on the Arduino board.
+#. このコード行は、Arduinoボード上でポテンショメータが接続されているピン番号を定義します。
 
    .. code-block:: arduino
 
       const int sensorPin = A0;
 
-#. The ``setup()`` function is a special function in Arduino that is executed only once when the Arduino is powered on or reset. In this project, the ``Serial.begin(9600)`` command initiates serial communication at a baud rate of 9600.
+#. ``setup()`` 関数は、Arduinoが電源投入またはリセットされた際に一度だけ実行される特別な関数です。このプロジェクトでは、 ``Serial.begin(9600)`` コマンドにより、9600のボーレートでシリアル通信が開始されます。
 
    .. code-block:: arduino
 
@@ -93,22 +94,15 @@ Code explanation
         Serial.begin(9600);  
       }
 
-#. The ``loop()`` function is the main function where the program runs repeatedly. In this function, the ``analogRead()`` function reads the analog value from the potentiometer and prints it to the serial monitor using ``Serial.println()``. The ``delay(50)`` command makes the program wait for 50 milliseconds before taking the next reading.
+#. ``loop()`` 関数は、プログラムが繰り返し実行される主要な関数です。この関数内で、 ``analogRead()`` 関数はポテンショメータからアナログ値を読み取り、 ``Serial.println()`` を使用してシリアルモニターに出力します。 ``delay(50)`` コマンドにより、次の読み取りが行われる前にプログラムが50ミリ秒待機します。
 
-   .. code-block:: arduino
-
-      void loop() {
-        Serial.println(analogRead(sensorPin));  
-        delay(50);
-      }
-
-Additional Ideas
+追加のアイデア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Control an LED's brightness: The potentiometer's analog value could be used to control the brightness of an LED connected to a PWM-enabled pin on the Arduino.
-   
-- Control a Servo Motor's Position: By mapping the analog value to the range of the servo's position (usually 0 to 180 degrees), the potentiometer could be used as a controller for the servo motor.
+- LEDの明るさを制御する：ポテンショメータのアナログ値を使用して、ArduinoのPWM対応ピンに接続されたLEDの明るさを制御できます。
+  
+- サーボモーターの位置を制御する：アナログ値をサーボモーターの位置範囲（通常は0〜180度）にマッピングすることで、ポテンショメータをサーボモーターのコントローラーとして使用できます。
 
-More Projects
+その他のプロジェクト
 ---------------------------
 * :ref:`fun_potentiometer_scale_value`

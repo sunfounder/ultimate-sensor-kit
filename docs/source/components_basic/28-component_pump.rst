@@ -1,6 +1,6 @@
 .. _cpn_pump:
 
-Centrifugal Pump
+遠心ポンプ
 ==========================
 
 .. image:: img/28_pump.png
@@ -10,29 +10,25 @@ Centrifugal Pump
 .. raw:: html
     
     <br/>
-    
-Introduction
+
+概要
 ---------------------------
-A centrifugal pump is a device that can move liquids from one place to another by using a rotating impeller. It can be used to pump water, oil, chemicals, etc. A centrifugal pump has two main parts: a motor and a pump. The motor provides power to the pump and the pump converts the rotational energy into pressure and flow.
+遠心ポンプは、回転するインペラを使用して液体を一か所から別の場所に移動させる装置です。水、油、化学薬品などをポンプアップするために使用できます。遠心ポンプには主にモーターとポンプの2つの部分があります。モーターはポンプに電力を供給し、ポンプは回転エネルギーを圧力と流れに変換します。
 
-
-Principle
+原理
 ---------------------------
+遠心ポンプは、流体の速度を増加させるために回転するインペラを使用して動作します。液体はインレットパイプを通じてポンプに引き込まれます。液体がインペラの外縁を出るとき、遠心力によってそれはアウトレットパイプを通じて外部に押し出され、その結果として圧力が増加します。インペラが早く回転するほど、液体の圧力と流れは高くなります。
 
-A centrifugal pump operates by using a spinning impeller which increases the velocity of the fluid, drawing it into the pump through an inlet pipe. As the liquid exits the impeller's outer edge, centrifugal force pushes it out through an outlet pipe, resulting in increased pressure. The faster the impeller spins, the higher the pressure and flow of the liquid.
-
-
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Centrifugal Pump * 1
-- Jumper Wires
+- Arduino Uno R4 または R3 ボード * 1
+- 遠心ポンプ * 1
+- ジャンパーワイヤー
 
-
-**Circuit Assembly**
+**回路組み立て**
 
 .. image:: img/28_pump_circuit.png
     :width: 600
@@ -42,38 +38,37 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/4c1aa3f1-7b17-4906-90e3-eb1e092fae09/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/28-component_pump.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      あなたのブラウザはこのビデオタグをサポートしていません。
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-1. Two pins are defined for controlling the motor, specifically ``motorB_1A`` and ``motorB_2A``. These pins will connect to the L9110 motor control board to control the direction and speed of the motor.
+1. モーターの制御のために2つのピンが定義されています。具体的には ``motorB_1A`` および ``motorB_2A`` です。これらのピンはL9110モーターコントロールボードに接続してモーターの方向と速度を制御します。
   
    .. code-block:: arduino
    
       const int motorB_1A = 9;
       const int motorB_2A = 10;
 
-2. Configuring the pins and controlling the motor:
+2. ピンの設定とモーターの制御：
 
-   - The ``setup()`` function initializes the pins as ``OUTPUT`` which means they can send signals to the motor control board.
-
-   - The ``analogWrite()`` function is used to set the motor speed. Here, setting one pin to ``HIGH`` and the other to ``LOW`` makes the pump spin in one direction. After a 5-second delay, both pins are set to 0, turning off the motor.
+   - ``setup()`` 関数は、ピンを ``OUTPUT`` として初期化します。これはモーター制御ボードに信号を送ることができることを意味します。
    
+   - ``analogWrite()`` 関数は、モーターの速度を設定するために使用されます。ここでは、1つのピンを ``HIGH`` に設定し、もう1つのピンを ``LOW`` に設定することで、ポンプが一方向に回転します。5秒間の遅延の後、両方のピンは0に設定され、モーターがオフになります。
+
    .. code-block:: arduino
    
       void setup() {
@@ -86,19 +81,18 @@ Code explanation
          analogWrite(motorB_2A, 0);
       }
 
-
-Additional Ideas
+追加のアイディア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Reverse the pump's direction by switching the ``HIGH`` and ``LOW`` values between the pins.
+- ピンの間で ``HIGH`` と ``LOW`` の値を切り替えることで、ポンプの方向を反転させます。
 
-- Implement a system where the pump toggles its state (on/off) using a button press.
+- ボタンプレスでポンプの状態（オン/オフ）を切り替えるシステムを実装します。
 
-- Implement a potentiometer to control the speed of the pump using PWM.
+- PWMを使用してポテンショメーターでポンプの速度を制御します。
 
-- Include sensors to automate the pump's operation based on certain conditions, e.g., turning the pump on/off depending on water level in a tank.
+- 特定の条件に基づいてポンプの動作を自動化するセンサーを組み込みます。例えば、タンク内の水位に応じてポンプをオン/オフにします。
 
-More Projects
+さらに多くのプロジェクト
 ---------------------------
 * :ref:`fun_soap_dispenser`
 * :ref:`iot_Auto_watering_system`

@@ -1,21 +1,21 @@
 .. _cpn_servo:
 
-Servo Motor (SG90)
+サーボモータ（SG90）
 ==========================
 
 .. image:: img/27_servo.png
     :width: 300
     :align: center
 
-Introduction
+はじめに
 ---------------------------
-Servo motors are devices that can rotate to a specific angle or position. They can be used to move robotic arms, steering wheels, camera gimbals, etc. Servo motors have three wires: power, ground and signal. The power wire is usually red and should be connected to the 5V pin on the Arduino board. The ground wire is usually black or brown and should be connected to a ground pin on the board. The signal wire is usually yellow or orange and should be connected to a PWM pin on the board.
+サーボモータは、特定の角度や位置に回転できる装置です。ロボットアーム、ステアリングホイール、カメラのジンバルなどに使用されます。サーボモータには電源、接地、信号の3本のケーブルがあります。通常、赤色の電源ケーブルはArduinoボードの5Vピンに、黒または茶色の接地ケーブルはボードのGNDピンに、黄色またはオレンジの信号ケーブルはボードのPWMピンに接続します。
 
-Principle
+原理
 ---------------------------
-A servo is generally composed of the following parts: case, shaft, gear system, potentiometer, DC motor, and embedded board.
+一般的なサーボは、ケース、軸、ギアシステム、ポテンショメータ、DCモータ、組み込みボードから構成されています。
 
-It works like this: The microcontroller sends out PWM signals to the servo, and then the embedded board in the servo receives the signals through the signal pin and controls the motor inside to turn. As a result, the motor drives the gear system and then rotates the shaft after deceleration. The shaft and potentiometer of the servo are connected together. When the shaft rotates, it drives the potentiometer, so the potentiometer outputs a voltage signal to the embedded board. Then the board determines the direction and speed of rotation based on the current position, so it can stop exactly at the right position as defined and hold there.
+動作は以下のようになります：マイクロコントローラがPWM信号をサーボに送信し、サーボ内の組み込みボードが信号ピンを通じてこれを受信します。それにより、モータがギアシステムを駆動し、減速後に軸を回転させます。サーボの軸とポテンショメータは連動しており、軸が回転するとポテンショメータも動き、組み込みボードに電圧信号を出力します。ボードはこの信号をもとに現在の位置と回転速度を決定し、指定された正確な位置で停止して保持します。
 
 .. image:: img/27_servo_internal.png
     :width: 450
@@ -25,7 +25,7 @@ It works like this: The microcontroller sends out PWM signals to the servo, and 
     
     <br/>
 
-The angle is determined by the duration of a pulse that is applied to the control wire. This is called Pulse width Modulation. The servo expects to see a pulse every 20 ms. The length of the pulse will determine how far the motor turns. For example, a 1.5ms pulse will make the motor turn to the 90 degree position (neutral position). When a pulse is sent to a servo that is less than 1.5 ms, the servo rotates to a position and holds its output shaft some number of degrees counterclockwise from the neutral point. When the pulse is wider than 1.5 ms the opposite occurs. The minimal width and the maximum width of pulse that will command the servo to turn to a valid position are functions of each servo. Generally the minimum pulse will be about 0.5 ms wide and the maximum pulse will be 2.5 ms wide.
+角度は、制御ワイヤーに印加されるパルスの持続時間によって決まります。これをパルス幅変調（PWM）と言います。サーボは20msごとにパルスを受け取ることを期待しています。パルスの長さによって、モータがどれだけ回転するかが決まります。例えば、1.5msのパルスでは、モータは90度の位置（中立位置）に回転します。1.5ms未満のパルスが送られた場合、サーボは中立点から反時計回りに何度か回転して、その位置で軸を保持します。1.5msよりも広いパルスが送られた場合は、逆の現象が起こります。最小幅と最大幅のパルスは、サーボごとに異なります。一般的に、最小幅のパルスは約0.5ms、最大幅のパルスは2.5msとなります。
 
 .. image:: img/27_servo_duty.png
     :width: 500
@@ -35,17 +35,16 @@ The angle is determined by the duration of a pulse that is applied to the contro
     
     <br/>
 
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Servo Motor * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- サーボモータ * 1
+- ジャンパワイヤ
 
-
-**Circuit Assembly**
+**回路組立て**
 
 .. image:: img/27_servo_circuit.png
     :width: 400
@@ -55,13 +54,12 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/de8e1877-4a8b-46c9-85c6-5dd83514d961/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
 
 .. raw:: html
 
@@ -71,19 +69,19 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-1. Here, the ``Servo`` library is included which allows for easy control of the servo motor. The pin connected to the servo and the initial angle of the servo are also defined.
+1. ここでは、サーボモータを簡単に制御するための ``Servo`` ライブラリを読み込んでいます。また、サーボに接続されたピンとサーボの初期角度も定義しています。
 
    .. code-block:: arduino
 
       #include <Servo.h>
-      const int servoPin = 9;  // Define the servo pin
-      int angle = 0;           // Initialize the angle variable to 0 degrees
-      Servo servo;             // Create a servo object
+      const int servoPin = 9;  // サーボピンの定義
+      int angle = 0;           // 角度変数を0度で初期化
+      Servo servo;             // Servoオブジェクトの作成
 
-2. The ``setup()`` function runs once when the Arduino starts. The servo is attached to the defined pin using the ``attach()`` function.
+2. ``setup()`` 関数はArduinoが起動したときに一度だけ実行されます。 ``attach()`` 関数を使用して、定義されたピンにサーボを接続します。
 
    .. code-block:: arduino
 
@@ -91,7 +89,7 @@ Code explanation
         servo.attach(servoPin);
       }
 
-3. The main loop has two ``for`` loops. The first loop increases the angle from 0 to 180 degrees, and the second loop decreases the angle from 180 to 0 degrees. The ``servo.write(angle)`` command sets the servo to the specified angle. The ``delay(15)`` causes the servo to wait for 15 milliseconds before moving to the next angle, controlling the speed of the scanning movement.
+3. メインループには2つの ``for`` ループがあります。最初のループは角度を0度から180度まで増加させ、次のループは180度から0度まで角度を減らします。 ``servo.write(angle)`` コマンドでサーボを指定された角度にセットします。 ``delay(15)`` はサーボが次の角度に移る前に15ミリ秒待機することで、走査動作の速度を制御します。
 
    .. code-block:: arduino
 
@@ -108,13 +106,12 @@ Code explanation
         }
       }
 
-Additional Ideas
+追加のアイディア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Control the servo’s motion using a potentiometer. The rotation of the potentiometer could be used to directly control the angle of the servo.
+- ポテンショメータを使用して、サーボの動きを制御します。ポテンショメータの回転により、サーボの角度を直接制御できます。
 
-More Projects
+さらに多くのプロジェクト
 ---------------------------
 * :ref:`fun_smart_trashcan`
 * :ref:`iot_Bluetooth_lock_controller`
-

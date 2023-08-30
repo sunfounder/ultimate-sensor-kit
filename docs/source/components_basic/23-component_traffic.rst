@@ -1,32 +1,31 @@
 .. _cpn_traffic:
 
-Traffic Light Module
+信号機モジュール
 ==========================
 
 .. image:: img/23_traffic_light.png
     :width: 400
     :align: center
 
-Introduction
+概要
 ---------------------------
-The traffic light module is a small device that can display red, yellow and green lights, just like a real traffic light. It can be used to make a traffic light system model or to learn how to control LEDs with Arduino. It is featured with its small size, simple wiring, targeted, and custom installation. It can be connected PWM pin to control the brightness of the LED.
+この信号機モジュールは、実際の信号機と同様に、赤・黄・緑の3色の光を表示する小型デバイスです。交通信号システムの模型を作成したり、ArduinoでLEDを制御する方法を学習するために使用できます。このモジュールの特長は、そのコンパクトなサイズ、簡単な配線、特定の用途に合わせたカスタムインストールが可能である点です。PWMピンに接続してLEDの明るさを制御することもできます。
 
-Principle
+原理
 ---------------------------
-The traffic light module can be controlled in two primary ways. The more straightforward method involves using digital inputs from the Arduino, where a HIGH or LOW signal directly turns the corresponding LED on or off. Alternatively, PWM (pulse-width modulation) can be used, especially when varying the brightness of the LED is desired. PWM is a technique where the duty cycle of a digital signal is changed to modulate the brightness of the LED. A duty cycle represents the percentage of time that a signal remains on during a specific period. For instance, a 50% duty cycle implies the signal is active for half the duration and inactive for the remainder. Adjusting the duty cycle allows for the LED's brightness modulation.
+信号機モジュールは主に2つの方法で制御できます。一つはArduinoからのデジタル入力を使用する単純な方法で、HIGHまたはLOWの信号で対応するLEDを直接点灯または消灯します。もう一つは、特にLEDの明るさを可変にしたい場合に使用されるPWM（パルス幅変調）です。PWMは、デジタル信号のデューティサイクルを変更してLEDの明るさを調整する技術です。デューティサイクルとは、特定の期間に信号がオンになっている割合を示します。例えば、50%のデューティサイクルは、その期間の半分で信号がアクティブで、残りの半分で非アクティブであることを意味します。
 
-
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Traffic Light Module * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- 信号機モジュール * 1
+- ジャンパーワイヤー
 
 
-**Circuit Assembly**
+**回路組み立て**
 
 .. image:: img/23_traffic_light_circuit.png
     :width: 600
@@ -36,26 +35,25 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/fb0a9599-5e59-458c-893b-97551f62aea8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/23-component_traffic.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザはビデオタグをサポートしていません。
    </video>
    <br/><br/>  
 
-Code explanation
+コード説明
 ^^^^^^^^^^^^^^^^^^^^
 
-1. Before any operations, we define constants for the pins where LEDs are connected. This makes our code easier to read and modify.
+1. まず最初に、LEDが接続されているピンに対応する定数を定義します。これにより、コードが読みやすく、修正も容易になります。
 
   .. code-block:: arduino
 
@@ -63,7 +61,7 @@ Code explanation
      const int yledPin = 8;  //yellow
      const int gledPin = 7;  //green
 
-2. Here, we specify the pin modes for our LED pins. They are all set to ``OUTPUT`` because we intend to send voltage to them.
+2. 次に、LEDピンのモードを指定します。すべて ``OUTPUT`` に設定されていますが、これはLEDに電圧を供給する intention です。
 
   .. code-block:: arduino
 
@@ -73,12 +71,12 @@ Code explanation
        pinMode(gledPin, OUTPUT);
      }
 
-3. This is where our traffic light cycle logic is implemented. The sequence of operations is:
+3. ここでは、信号機の動作サイクルのロジックが実装されています。具体的な手順は以下の通りです。
 
-    * Turn the green LED on for 5 seconds.
-    * Blink the yellow LED three times (each blink lasts for 0.5 seconds).
-    * Turn the red LED on for 5 seconds.
-    
+    * 緑のLEDを5秒間点灯。
+    * 黄色のLEDを三回点滅（各点滅は0.5秒）。
+    * 赤のLEDを5秒間点灯。
+
   .. code-block:: arduino
 
      void loop() {
@@ -104,14 +102,15 @@ Code explanation
        digitalWrite(rledPin, LOW);
      }
 
-Additional Ideas
+追加のアイデア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Integrate a buzzer to give sound alerts during the change from green to red, helping visually impaired individuals.
+- ブザーを組み込み、緑から赤への切り替わり時に音声で警告を出すことで、視覚障害者の方々にも配慮する。
 
-More Projects
+さらに多くのプロジェクト
 ---------------------------
 * :ref:`fun_touch_toggle_light`
 * :ref:`iot_Remote_relay_controller`
 * :ref:`iot_Bluetooth_voice_control_relay`
 * :ref:`iot_Bluetooth_traffic_light`
+

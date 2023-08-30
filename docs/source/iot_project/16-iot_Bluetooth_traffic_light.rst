@@ -1,20 +1,18 @@
-
 .. _iot_Bluetooth_traffic_light:
 
-Bluetooth Traffic Light
+Bluetooth信号機
 =============================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/iot/16-iot_Bluetooth_traffic_light.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      ご利用のブラウザはビデオタグをサポートしていません。
    </video>
 
-This project is designed to control a traffic light (Red, Yellow, Green LEDs) using Bluetooth communication. The user can send a character ('R', 'Y', or 'G') from a Bluetooth device. When the Arduino receives one of these characters, it lights up the corresponding LED, while ensuring the other two LEDs are turned off.
+このプロジェクトは、Bluetooth通信を用いて交通信号機（赤、黄、緑のLED）を制御するように設計されています。ユーザーはBluetoothデバイスから文字（'R'、'Y'、'G'）を送信可能です。Arduinoがこれらの文字のいずれかを受信すると、対応するLEDが点灯し、他の2つのLEDは消灯状態に保たれます。
 
-
-1. Build the Cirduit
+1. 回路を組む
 -----------------------------
 
 .. image:: img/16-Wiring_Bluetooth_traffic_light.png
@@ -24,58 +22,57 @@ This project is designed to control a traffic light (Red, Yellow, Green LEDs) us
 * :ref:`cpn_jdy31`
 * :ref:`cpn_traffic`
 
-2. Upload the Code
+2. コードをアップロード
 -----------------------------
 
-#. Open the ``16-Bluetooth_traffic_light.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\02-Bluetooth_traffic_light``, or copy this code into **Arduino IDE**.
+#. ``ultimate-sensor-kit\iot_project\bluetooth\02-Bluetooth_traffic_light`` のパスの下にある ``16-Bluetooth_traffic_light.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/e004fd36-1294-453e-b6fd-2bc7fc9410e8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. 正しいボードとポートを選択した後、 **書き込み** ボタンをクリックします。
 
-#. Open the Serial monitor(set baudrate to **9600**) to view debug messages. 
+#. シリアルモニターを開き（ボーレートを **9600** に設定）、デバッグメッセージを確認します。
 
-3. App and Bluetooth moudule Connection
+3. アプリとBluetoothモジュールの接続
 -----------------------------------------------
-We can use an app called "Serial Bluetooth Terminal" to send messages from the Bluetooth module to Arduino.
 
-a. **Install Serial Bluetooth Terminal**
+"Serial Bluetooth Terminal" というアプリを使用して、BluetoothモジュールからArduinoにメッセージを送ることができます。
 
-   Go to Google Play to download and install |link_serial_bluetooth_terminal| .
+a. **Serial Bluetooth Terminalをインストール**
 
+   Google Playから |link_serial_bluetooth_terminal| をダウンロードしてインストールします。
 
-b. **Connect Bluetooth**
+b. **Bluetooth接続**
 
-   Initially, turn on **Bluetooth** on your smartphone.
+   まず、スマートフォンの **Bluetooth** をオンにします。
    
       .. image:: img/new/09-app_1_shadow.png
          :width: 60%
          :align: center
    
-   Navigate to the **Bluetooth settings** on your smartphone and look for names like **JDY-31-SPP**.
+   スマートフォンの **Bluetooth設定** に移動し、 **JDY-31-SPP** のような名前を探します。
    
       .. image:: img/new/09-app_2_shadow.png
          :width: 60%
          :align: center
    
-   After clicking it, agree to the **Pair** request in the pop-up window. If prompted for a pairing code, please enter "1234".
+   クリックした後、ポップアップウィンドウで **ペアリング** のリクエストに同意します。ペアリングコードが求められた場合は、"1234"と入力します。
    
       .. image:: img/new/09-app_3_shadow.png
          :width: 60%
          :align: center
-   
 
-c. **Communicate with Bluetooth module**
+c. **Bluetoothモジュールと通信**
 
-   Open the Serial Bluetooth Terminal. Connect to "JDY-31-SPP".
+   Serial Bluetooth Terminalを開き、"JDY-31-SPP"に接続します。
 
    .. image:: img/new/00-bluetooth_serial_4_shadow.png 
 
-d. **Send command**
+d. **コマンド送信**
 
-   Use the Serial Bluetooth Terminal app to send commands to Arduino via Bluetooth. Send R to turn on the red light, Y for yellow, and G for green.
+   Serial Bluetooth Terminalアプリを使用して、Bluetooth経由でArduinoにコマンドを送信します。Rで赤色のライトを点灯、Yで黄色、Gで緑色です。
 
    .. image:: img/new/16-R_shadow.png 
       :width: 85%
@@ -90,33 +87,33 @@ d. **Send command**
       :align: center
 
 
-4. Code explanation
+4. コードの説明
 -----------------------------------------------
 
-#. Initialization and Bluetooth setup
+#. 初期化とBluetoothの設定
 
    .. code-block:: arduino
 
-      // Set up Bluetooth module communication
+      // Bluetoothモジュール通信の設定
       #include <SoftwareSerial.h>
       const int bluetoothTx = 3;
       const int bluetoothRx = 4;
       SoftwareSerial bleSerial(bluetoothTx, bluetoothRx);
-   
-   We begin by including the SoftwareSerial library to help us with Bluetooth communication. The Bluetooth module's TX and RX pins are then defined and associated with pins 3 and 4 on the Arduino. Finally, we initialize the ``bleSerial`` object for Bluetooth communication.
 
-#. LED Pin Definitions
+   SoftwareSerialライブラリをインクルードして、Bluetooth通信を助けます。続いて、BluetoothモジュールのTXとRXピンをArduinoの3ピンと4ピンに関連付けます。最後に、Bluetooth通信用の ``bleSerial`` オブジェクトを初期化します。
+
+#. LEDのピン定義
 
    .. code-block:: arduino
 
-      // Pin numbers for each LED
-      const int rledPin = 10;  //red
-      const int yledPin = 11;  //yellow
-      const int gledPin = 12;  //green
+      // 各LEDのピン番号
+      const int rledPin = 10;  // 赤
+      const int yledPin = 11;  // 黄
+      const int gledPin = 12;  // 緑
 
-   Here, we're defining which Arduino pins our LEDs are connected to. The red LED is on pin 10, yellow on 11, and green on 12.
+   ここでは、LEDが接続されているArduinoのピンを定義しています。赤いLEDは10ピン、黄色は11ピン、緑色は12ピンに接続されています。
 
-#. setup() Function
+#. setup()関数
 
    .. code-block:: arduino
 
@@ -129,9 +126,9 @@ d. **Send command**
          bleSerial.begin(9600);
       }
 
-   In the ``setup()`` function, we set the LED pins as ``OUTPUT``. We also start serial communication for both the Bluetooth module and the default serial (connected to the computer) at a baud rate of 9600.
+   ``setup()`` 関数内で、LEDのピンを ``OUTPUT`` として設定します。また、Bluetoothモジュールとデフォルトのシリアル（コンピュータに接続）の両方で9600のボーレートでシリアル通信を開始します。
 
-#. Main loop() for Bluetooth Communication
+#. Bluetooth通信のための主要なloop()関数
 
    .. code-block:: arduino
 
@@ -150,9 +147,9 @@ d. **Send command**
          }
       }
 
-   Inside our main ``loop()``, we continuously check if data is available from the Bluetooth module. If we receive data, we read the character and display it in the serial monitor. Depending on the character received (R, Y, or G), we toggle the respective LED using the ``toggleLights()`` function.
+   主要な ``loop()`` 関数内で、Bluetoothモジュールからデータが利用可能かどうかを継続的にチェックします。データを受信した場合、その文字を読み取り、シリアルモニターに表示します。受信した文字（R、Y、またはG）に応じて、 ``toggleLights()`` 関数を使用して該当するLEDを切り替えます。
 
-#. Toggle Lights Function
+#. トグルライト関数
 
    .. code-block:: arduino
 
@@ -164,4 +161,4 @@ d. **Send command**
          digitalWrite(targetLight, HIGH);
       }
 
-   This function, ``toggleLights()``, turns off all the LEDs first. After ensuring they are all off, it turns on the specified target LED. This ensures that only one LED is on at a time.
+   この関数、``toggleLights()`` は、最初にすべてのLEDを消灯します。その後、指定されたターゲットのLEDのみを点灯させます。これにより、一度に一つのLEDだけが点灯するように保証されます。

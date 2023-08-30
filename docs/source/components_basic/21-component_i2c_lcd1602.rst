@@ -7,19 +7,19 @@ I2C LCD 1602
     :width: 600
     :align: center
 
-Introduction
+はじめに
 ---------------------------
-An I2C LCD1602 is a device that can display text and characters on a 16x2 (16 columns and 2 rows) liquid crystal display (LCD) using the I2C protocol. You can use an I2C LCD1602 to show information from your Arduino projects, such as sensor readings, messages, menus, etc. The I2C module has a built-in PCF8574 I2C chip that converts I2C serial data to parallel data for the LCD display.        
+I2C LCD1602は、I2Cプロトコルを用いて16x2（16列と2行）の液晶ディスプレイ（LCD）にテキストやキャラクターを表示するデバイスです。Arduinoプロジェクトからの情報、例えばセンサーの読み取り値、メッセージ、メニューなどを表示するために使用できます。I2Cモジュールには、LCDディスプレイ用のパラレルデータにI2Cシリアルデータを変換するPCF8574 I2Cチップが内蔵されています。        
 
 * |link_PCF8574_Datasheet|
 
 
 
-Principle
+原理
 ---------------------------
-An I2C LCD1602 consists of a normal LCD1602 and an I2C module that is attached to the back of the LCD. The I2C module is a chip that can expand the I/O ports of the Arduino using the I2C protocol. The I2C protocol is a serial communication protocol that uses two wires: SDA (serial data) and SCL (serial clock). The I2C protocol allows multiple devices to communicate with each other using only two wires and unique addresses.
+I2C LCD1602は、通常のLCD1602と、その背面に取り付けられたI2Cモジュールで構成されています。このI2Cモジュールは、ArduinoのI/OポートをI2Cプロトコルを使用して拡張するチップです。I2Cプロトコルは、SDA（シリアルデータ）とSCL（シリアルクロック）の2本のワイヤーを使用するシリアル通信プロトコルです。複数のデバイスがこの2本のワイヤーとユニークなアドレスを用いて通信できます。
 
-The I2C module converts the signals from the Arduino into commands for the LCD. The LCD has 16x2 cells that can display characters or symbols. Each cell consists of 5x8 dots that can be turned on or off by applying voltage. The LCD can display different characters or symbols by turning on or off different combinations of dots.
+I2Cモジュールは、Arduinoからの信号をLCDのコマンドに変換します。LCDには、16x2のセルがあり、それぞれのセルは5x8のドットで構成されています。これらのドットは、電圧をかけることでオンまたはオフにできます。LCDは、ドットの異なる組み合わせをオンまたはオフにすることで、さまざまなキャラクターやシンボルを表示できます。
 
 .. image:: img/21_ic2_lcd_2.png
     :width: 500
@@ -29,11 +29,11 @@ The I2C module converts the signals from the Arduino into commands for the LCD. 
     
     <br/><br/> 
 
-**I2C Address**
+**I2Cアドレス**
 
-The default address is basically 0x27, in a few cases it may be 0x3F.
+基本的にデフォルトアドレスは0x27で、一部の場合には0x3Fになることもあります。
 
-Taking the default address of 0x27 as an example, the device address can be modified by shorting the A0/A1/A2 pads; in the default state, A0/A1/A2 is 1, and if the pad is shorted, A0/A1/A2 is 0.
+デフォルトアドレスの0x27を例に取ると、A0/A1/A2パッドを短絡することでデバイスアドレスを変更できます。デフォルト状態では、A0/A1/A2は1ですが、パッドが短絡されると、A0/A1/A2は0になります。
 
 .. image:: img/21_i2c_address.jpg
     :width: 600
@@ -43,9 +43,9 @@ Taking the default address of 0x27 as an example, the device address can be modi
     
     <br/>
 
-**Backlight/Contrast**
+**バックライト/コントラスト**
 
-Backlight can be enabled by jumper cap, unplugg the jumper cap to disable the backlight. The blue potentiometer on the back is used to adjust the contrast (the ratio of brightness between the brightest white and the darkest black).
+バックライトはジャンパーキャップで有効にでき、キャップを外すとバックライトが無効になります。背面の青いポテンショメーターは、コントラスト（最も明るい白と最も暗い黒との間の明るさの比率）を調整するために使用されます。
 
 .. image:: img/21_back_lcd1602.jpg
     :width: 600
@@ -55,11 +55,11 @@ Backlight can be enabled by jumper cap, unplugg the jumper cap to disable the ba
     
     <br/> 
 
-* **Shorting Cap**: Backlight can be enabled by this cap，unplugg this cap to disable the backlight.
-* **Potentiometer**: It is used to adjust the contrast (the clarity of the displayed text), which is increased in the clockwise direction and decreased in the counterclockwise direction.
+* **ジャンパーキャップ**: このキャップによりバックライトを有効にでき、キャップを外すとバックライトが無効になります。
+* **ポテンショメーター**: これは、表示されるテキストの鮮明度を調整するために使用されます。時計回りに回すと増加し、反時計回りに回すと減少します。
 
 .. note::
-    After wiring the LCD, you should turn on the Arduino and adjust the contrast by rotating the potentiometer on the I2C module until the first row of rectangles appear to ensure proper LCD operation.
+    LCDの配線が完了したら、Arduinoをオンにして、I2Cモジュール上のポテンショメーターを回して、最初の行に四角が表示されるまでコントラストを調整し、LCDが正常に動作することを確認してください。
 
 .. raw:: html
 
@@ -69,17 +69,17 @@ Backlight can be enabled by jumper cap, unplugg the jumper cap to disable the ba
    </video>
    <br/><br/>  
 
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
+- Arduino Uno R4またはR3ボード * 1
 - I2C LCD1602 * 1
-- Jumper Wires
+- ジャンパーワイヤー
 
 
-**Circuit Assembly**
+**回路の組立て**
 
 .. image:: img/21_I2C_lcd_circuit.png
     :width: 100%
@@ -90,11 +90,11 @@ Usage
     <br/><br/>  
 
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
-   To install the library, use the Arduino Library Manager and search for **"LiquidCrystal I2C"** and install it.
+   ライブラリをインストールするには、Arduinoライブラリマネージャーで **"LiquidCrystal I2C"** と検索してインストールしてください。
 
 .. raw:: html
     
@@ -109,22 +109,24 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-1. Library Inclusion and LCD Initialization:
-   The LiquidCrystal I2C library is included to provide functions and methods for LCD interfacing. Following that, an LCD object is created using the LiquidCrystal_I2C class, specifying the I2C address, number of columns, and number of rows.
+1. ライブラリの取り込みとLCDの初期化:
+
+   LiquidCrystal I2Cライブラリがインクルードされ、それに続いてLiquidCrystal_I2Cクラスを使用してLCDオブジェクトが作成されます。この際、I2Cアドレス、列数、行数が指定されます。
 
    .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"LiquidCrystal I2C"** and install it.  
+      ライブラリをインストールするには、Arduinoライブラリマネージャーで **"LiquidCrystal I2C"** と検索してインストールしてください。  
 
    .. code-block:: arduino
 
       #include <LiquidCrystal_I2C.h>
       LiquidCrystal_I2C lcd(0x27, 16, 2);
 
-2. Setup Function:
-   The ``setup()`` function is executed once when the Arduino starts. In this function, the LCD is initialized, cleared, and the backlight is turned on. Then, two messages are displayed on the LCD.
+2. ``setup()`` 関数:
+
+   ``setup()`` 関数はArduinoが起動すると一度だけ実行されます。この関数内で、LCDが初期化され、表示がクリアされ、バックライトがオンにされます。その後、LCDに2つのメッセージが表示されます。
 
    .. code-block:: arduino
 
@@ -142,13 +144,14 @@ Code explanation
       }
 
 
-Additional Ideas
+追加のアイデア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Integrate a temperature sensor and display the current room temperature on the LCD.
+- 温度センサーを組み込み、LCDに現在の室温を表示する。
 
 
-More Projects
+さらに多くのプロジェクト
 ---------------------------
 * :ref:`fun_potentiometer_scale_value`
 * :ref:`iot_Bluetooth_lcd`
+

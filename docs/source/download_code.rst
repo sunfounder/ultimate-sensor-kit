@@ -1,9 +1,8 @@
-Download the Code
+コードのダウンロード
 ========================
 
-Download the relevant code from the link below.
+以下のリンクから関連するコードをダウンロードしてください。
 
-* :download:`SunFounder Ultimate Sensor Kit Code <https://codeload.github.com/sunfounder/ultimate-sensor-kit/zip/refs/heads/main>`
+* :download:`SunFounder Ultimate Sensor Kitのコード <https://codeload.github.com/sunfounder/ultimate-sensor-kit/zip/refs/heads/main>`
 
-* Or check out the code at `SunFounder Ultimate Sensor Kit - GitHub <https://github.com/sunfounder/ultimate-sensor-kit>`_
-
+* または、 `SunFounder Ultimate Sensor Kit - GitHub <https://github.com/sunfounder/ultimate-sensor-kit>`_ でコードを確認できます。

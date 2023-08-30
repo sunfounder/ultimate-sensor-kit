@@ -1,50 +1,50 @@
 .. _cpn_dht11:
 
-Temperature and Humidity Sensor Moudle (DHT11)
+温度と湿度センサーモジュール（DHT11）
 ================================================
 
 .. image:: img/12_dht11_module.png
     :width: 400
     :align: center
 
-Introduction
+概要
 ---------------------------
-The digital temperature and humidity sensor DHT11 is a composite sensor that contains a calibrated digital signal output of temperature and humidity. The technology of a dedicated digital modules collection and the temperature and humidity sensing technology are applied to ensure that the product has high reliability and excellent long-term stability.
+デジタル温度湿度センサーDHT11は、温度と湿度の較正済みデジタル信号出力を有する複合センサーです。この製品は専用のデジタルモジュール技術と温湿度センシング技術を組み合わせており、高い信頼性と優れた長期安定性が保証されています。
 
-The sensor includes a resistive sense of wet component and an NTC temperature measurement device, and is connected with a high-performance 8-bit microcontroller.
+このセンサーは、抵抗性湿度検知コンポーネントとNTC温度計測デバイスを内蔵し、高性能8ビットマイクロコントローラーと接続されています。
 
-Principle
+原理
 ---------------------------
-Only three pins are available for use: VCC, GND, and DATA. The communication process begins with the DATA line sending start signals to DHT11, and DHT11 receives the signals and returns an answer signal. Then the host receives the answer signal and begins to receive 40-bit humidity and temperature data (8-bit humidity integer + 8-bit humidity decimal + 8-bit temperature integer + 8-bit temperature decimal + 8-bit checksum).
+利用可能なピンはVCC、GND、DATAの3つだけです。通信プロセスは、DATAラインからDHT11にスタート信号を送ることで始まり、DHT11はこの信号を受けて応答信号を返します。その後、ホストは応答信号を受け取り、40ビットの湿度と温度データ（8ビット湿度整数 + 8ビット湿度小数 + 8ビット温度整数 + 8ビット温度小数 + 8ビットチェックサム）を受け取ります。
 
 .. image:: img/12_dht11_module_2.png
     :width: 300
     :align: center
 
-For more information, please refer to the datasheet of DHT11.
+詳細情報はDHT11のデータシートを参照してください。
 
-The schematic diagram
+回路図
 
 .. figure:: img/12_dht11_module_3.png
     :width: 400
     :align: center
-    :alt: DHT11 schematic diagram
+    :alt: DHT11回路図
 
 .. raw:: html
     
     <br/><br/>   
 
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Temperature and Humidity Sensor Moudle(DHT11) * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- 温度と湿度センサーモジュール（DHT11） * 1
+- ジャンパーワイヤー
 
 
-**Circuit Assembly**
+**回路の組み立て**
 
 .. image:: img/12_dht11_module_circuit.png
     :width: 400
@@ -54,11 +54,11 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
-   To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and install it. 
+   ライブラリをインストールするには、Arduinoのライブラリマネージャーで **"DHT sensor library"** を検索してインストールしてください。
 
 .. raw:: html
     
@@ -69,18 +69,19 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/12-component_dht11.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザはビデオタグをサポートしていません。
    </video>
    <br/><br/>  
 
-Code explanation
+
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-#. Inclusion of necessary libraries and definition of constants.
-   This part of the code includes the DHT sensor library and defines the pin number and sensor type used in this project.
+#. 必要なライブラリと定数の定義。
+   この部分ではDHTセンサーライブラリを含め、このプロジェクトで使用されるピン番号とセンサータイプを定義しています。
 
-   .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and install it. 
+   .. note::
+      ライブラリをインストールするには、Arduinoのライブラリマネージャーで **"DHT sensor library"** と検索してインストールしてください。
 
    .. code-block:: arduino
     
@@ -88,14 +89,15 @@ Code explanation
       #define DHTPIN 2       // Define the pin used to connect the sensor
       #define DHTTYPE DHT11  // Define the sensor type
 
-#. Creation of DHT object.
-   Here we create a DHT object using the defined pin number and sensor type.
+#. DHTオブジェクトの作成。
+   ここで、定義したピン番号とセンサータイプを用いてDHTオブジェクトを作成します。
 
    .. code-block:: arduino
 
       DHT dht(DHTPIN, DHTTYPE);  // Create a DHT object
 
-#. This function is executed once when the Arduino starts. We initialize the serial communication and the DHT sensor in this function.
+#. Arduinoが起動したときに一度だけ実行される関数。
+   この関数でシリアル通信とDHTセンサーを初期化します。
 
    .. code-block:: arduino
 
@@ -105,12 +107,12 @@ Code explanation
         dht.begin();  // Initialize the DHT sensor
       }
 
-#. Main loop.
-   The ``loop()`` function runs continuously after the setup function. Here, we read the humidity and temperature values, calculate the heat index, and print these values to the serial monitor.  If the sensor read fails (returns NaN), it prints an error message.
+#. メインループ。
+   ``loop()`` 関数はsetup関数の後に繰り返し実行されます。ここでは、湿度と温度の値を読み取り、ヒートインデックスを計算し、これらの値をシリアルモニターに表示します。センサーの読み取りが失敗する（NaNを返す）場合、エラーメッセージが表示されます。
 
    .. note::
     
-      The |link_heat_index| is a way to measure how hot it feels outside by combining the air temperature and the humidity. It is also called the "felt air temperature" or "apparent temperature".
+      |link_heat_index| は、気温と湿度を組み合わせて、外部の暑さを感じる度合いを測定する方法です。これは「体感気温」または「顕在温度」とも呼ばれます。
 
    .. code-block:: arduino
 
@@ -138,13 +140,12 @@ Code explanation
         Serial.println(F("°F"));
       }
 
-    
-Additional Ideas
+追加アイデア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Display readings on an LCD or OLED display
+- LCDまたはOLEDディスプレイでの読み取り値の表示
 
-More Projects
+その他のプロジェクト
 ---------------------------
 * :ref:`iot_Plant_monitor`
 * :ref:`iot_Bluetooth_environmental_monitor`

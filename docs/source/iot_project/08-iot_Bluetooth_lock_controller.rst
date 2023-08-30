@@ -1,24 +1,23 @@
-
 .. _iot_Bluetooth_lock_controller:
 
-Bluetooth Lock Controller
+Bluetooth 錠前コントローラー
 =============================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/iot/08-iot_Bluetooth_lock_controller.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザはビデオタグをサポートしていません。
    </video>
 
-This project uses an Android app created with MIT App Inventor to remotely control a servo motor via Bluetooth, simulating a locking mechanism. Users can command the servo to move to either the "locked" or "unlocked" position by sending specific messages through the app.
+このプロジェクトは、MIT App Inventorで作成されたAndroidアプリを用いて、Bluetooth経由でサーボモーターをリモート制御し、錠前のメカニズムを模倣します。ユーザーは、アプリを通じて特定のメッセージを送ることで、サーボを「ロック」または「アンロック」の位置に動かせます。
 
-The system uses a JDY-31 Bluetooth module to receive these messages and instructs an Arduino Uno board to adjust the servo motor's angle accordingly. The servo transitions to a "locked" position upon receiving the '1' message and to an "unlocked" position upon receipt of the '0' message.
+システムは、JDY-31 Bluetoothモジュールを使用してこれらのメッセージを受信し、Arduino Unoボードがそれに応じてサーボモーターの角度を調整します。'1' メッセージを受信するとサーボが「ロック」位置に、'0' メッセージを受信すると「アンロック」位置に移動します。
 
-This Android application will be constructed utilizing a complimentary web-based platform known as |link_appinventor|. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone.
+このAndroidアプリケーションは、|link_appinventor| と呼ばれる無料のウェブベースのプラットフォームを用いて構築されます。このプロジェクトは、スマートフォンとArduinoの連携についての知識を深める絶好の機会です。
 
 
-1. Build the Cirduit
+1. 回路を組む
 -----------------------------
 
 .. image:: img/08-Wiring_Bluetooth_lock_controller.png
@@ -29,149 +28,149 @@ This Android application will be constructed utilizing a complimentary web-based
 * :ref:`cpn_servo`
 
 
-2. Create the Android App
+2. Androidアプリを作成
 -----------------------------
 
-The Android application will be developed using a free web application known as |link_appinventor|. 
-MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop 
-features allowing for the creation of simplistic applications.
+Androidアプリは、|link_appinventor| という無料のウェブアプリケーションを用いて開発されます。
+MIT App Inventorは、直感的なドラッグ&ドロップ機能によってシンプルなアプリケーションを作成できるため、Android開発の入門として理想的です。
 
-Now, let's begin.
+それでは、始めましょう。
 
-#. Go to |link_appinventor_login|, and click "online tool" to login. You will require a Google account to register with MIT App Inventor.
+#. |link_appinventor_login| にアクセスし、「online tool」をクリックしてログインします。MIT App Inventorに登録するにはGoogleアカウントが必要です。
 
    .. image:: img/new/09-ai_signup_shadow.png
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``Bluetooth_controlled_lock.aia`` file located in the path ``ultimate-sensor-kit\iot_project\bluetooth\03-Bluetooth_lock_controller``.
+#. ログイン後、 **Projects** -> **Import project (.aia) from my computer** に進み、 ``ultimate-sensor-kit\iot_project\bluetooth\03-Bluetooth_lock_controller`` のパスにある ``Bluetooth_controlled_lock.aia`` ファイルをアップロードします。
 
-   You can also directly download here: :download:`Bluetooth_controlled_lock.aia</_static/other/Bluetooth_controlled_lock.aia>`
+   直接ダウンロードも可能です: :download:`Bluetooth_controlled_lock.aia</_static/other/Bluetooth_controlled_lock.aia>`
 
    .. image:: img/new/09-ai_import_shadow.png
         :align: center
 
-#. Upon uploading the ``.aia`` file, you will see the application on the MIT App Inventor software. This is a pre-configured template. You can modify this template after you have familiarized yourself with MIT App Inventor through the following steps.
+#. ``.aia`` ファイルをアップロードすると、MIT App Inventorソフトウェア上でアプリが表示されます。これは事前に設定されたテンプレートです。次の手順でMIT App Inventorに慣れた後、このテンプレートを修正できます。
 
-#. In MIT App Inventor, you have 2 primary sections: the **Designer** and the **Blocks**. You can switch between these two sections in the upper right corner of the page.
+#. MIT App Inventorには、主に **Designer** と **Blocks** の2つのセクションがあります。ページの右上隅でこれらのセクションを切り替えることができます。
 
    .. image:: img/new/09-ai_intro_1_shadow.png
 
-#. The **Designer** allows you to add buttons, text, screens, and modify the overall aesthetic of your application.
+#. **Designer** では、ボタン、テキスト、画面を追加したり、アプリの全体的な見た目を変更できます。
 
    .. image:: img/new/08-ai_intro_2_shadow.png
-   
-#. Next, there's the **Blocks** section. This section lets you craft custom functionalities for your app, allowing you to program each component on the app's GUI to achieve desired features.
+
+#. 次に **Blocks** セクションです。このセクションでは、アプリのGUI上の各コンポーネントをプログラムして、望ましい機能を実現できます。
 
    .. image:: img/new/08-ai_intro_3_shadow.png
 
-#. To install the application on a smartphone, navigate to the **Build** tab.
+#. スマートフォンにアプリをインストールするには、 **Build** タブに移動します。
 
    .. image:: img/new/08-ai_intro_4_shadow.png
 
-   * You can generate a ``.apk`` file. After selecting this option, a page will appear allowing you to choose between downloading a ``.apk`` file or scanning a QR code for installation. Follow the installation guide to complete the application installation. 
+   * ``.apk`` ファイルを生成できます。このオプションを選ぶと、 ``.apk`` ファイルをダウンロードするか、QRコードをスキャンしてインストールするかを選ぶページが表示されます。インストールガイドに従ってアプリのインストールを完了してください。
 
-     You also download our pre-compiled APK here: :download:`Bluetooth_controlled_lock.apk</_static/other/Bluetooth_controlled_lock.apk>`
+     事前にコンパイルされたAPKもこちらからダウンロードできます: :download:`Bluetooth_controlled_lock.apk</_static/other/Bluetooth_controlled_lock.apk>`
 
-   * If you wish to upload this app to Google Play or another app marketplace, you can generate a ``.aab`` file.
+   * Google Playや他のアプリマーケットにこのアプリをアップロードする場合は、 ``.aab`` ファイルを生成できます。
 
 
-3. Upload the Code
+3. コードのアップロード
 -----------------------------
 
-#. Open the ``08-Bluetooth_lock_controller.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\03-Bluetooth_lock_controller``, or copy this code into **Arduino IDE**.
+#. ``ultimate-sensor-kit\iot_project\bluetooth\03-Bluetooth_lock_controller`` のパスにある ``08-Bluetooth_lock_controller.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーアンドペーストします。
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/b7d14207-953c-479c-89a8-b4a6d8c64e61/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. 対応するボードとポートを選択した後、 **書き込み** ボタンをクリックします。
 
-#. Open the Serial monitor(set baudrate to **9600**) to view debug messages. 
+#. デバッグメッセージを確認するために、シリアルモニターを開いて（ボーレートを **9600** に設定してください）。
 
-4. App and Bluetooth moudule Connection
+4. アプリとBluetoothモジュールの接続
 -----------------------------------------------
 
-Ensure that the application created earlier is installed on your smartphone.
+先に作成したアプリがスマートフォンにインストールされていることを確認してください。
 
-#. Initially, turn on **Bluetooth** on your smartphone.
+#. 最初に、スマートフォンで **Bluetooth** を有効にします。
 
    .. image:: img/new/09-app_1_shadow.png
       :width: 60%
       :align: center
 
-#. Navigate to the **Bluetooth settings** on your smartphone and look for names like **JDY-31-SPP**.
+#. スマートフォンの **Bluetooth設定** に移動して、 **JDY-31-SPP** のような名前を探します。
 
    .. image:: img/new/09-app_2_shadow.png
       :width: 60%
       :align: center
 
-#. After clicking it, agree to the **Pair** request in the pop-up window. If prompted for a pairing code, please enter "1234".
+#. それをクリックした後、ポップアップウィンドウで **ペアリング** リクエストに同意します。ペアリングコードが求められた場合は、「1234」を入力してください。
 
    .. image:: img/new/09-app_3_shadow.png
       :width: 60%
       :align: center
 
-#. Now open the newly installed **Control_RGB_LED** APP.
+#. これで新しくインストールされた **Control_RGB_LED** アプリを開きます。
 
    .. image:: img/new/08-app_4_shadow.png
       :width: 25%
       :align: center
 
-#. In the APP, click on the **lock icon** to establish a connection between the APP and Bluetooth module.
+#. アプリ内で **鍵アイコン** をクリックし、アプリとBluetoothモジュールの接続を確立します。
 
    .. image:: img/new/08-app_5_shadow.png
       :width: 60%
       :align: center
 
-#. This page displays a list of all paired Bluetooth devices. Choose the ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` option from the list. The name of each device is listed next to its MAC address.
+#. このページでは、ペアリングされているBluetoothデバイスのリストが表示されます。リストから ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` を選択します。各デバイスの名前は、MACアドレスの隣にリストされています。
 
    .. image:: img/new/08-app_6_shadow.png
       :width: 60%
       :align: center
 
-#. If you don't see any devices on the page shown above, it could be because this app is not authorized to scan for nearby devices. In such a case, you will need to adjust the settings manually.
+#. 上のページでデバイスが表示されない場合、このアプリが近くのデバイスをスキャンする権限を持っていない可能性があります。そのような場合は、設定を手動で調整する必要があります。
 
-   * To access the **APP Info** page, long-press the app icon and select it. Alternatively, if you have another method to reach this page, use that instead.
+   * **APP Info** ページにアクセスするには、アプリのアイコンを長押しして選択します。または、このページにアクセスする別の方法があれば、それを使用してください。
 
    .. image:: img/new/08-app_8_shadow.png
          :width: 60%
          :align: center
 
-   * Navigate to the **Permissions** page.
+   * **権限** ページに移動します。
 
    .. image:: img/new/08-app_9_shadow.png
          :width: 60%
          :align: center
 
-   * To enable the APP to scan for nearby devices, go to **Nearby devices** and select **Always**.
+   * アプリが近くのデバイスをスキャンできるようにするには、 **近くのデバイス** に行って、 **常に** を選択します。
 
    .. image:: img/new/08-app_10_shadow.png
          :width: 60%
          :align: center
 
-   * Now, restart the APP and repeat steps 5 and 6 to successfully connect to Bluetooth.
+   * それでは、アプリを再起動し、ステップ5と6を繰り返してBluetoothに正常に接続します。
 
-#. After a successful connection, you will be redirected to the main page where it will display "connected". Then, you can click on either "Unlock" or "Lock" to control the locking mechanism.
+#. 成功した接続の後、メインページにリダイレクトされ、"connected"と表示されます。その後、ロック機構を制御するために「Unlock」または「Lock」をクリックできます。
 
    .. image:: img/new/08-app_7_shadow.png
       :width: 60%
       :align: center
 
-5. Code explanation
+
+5. コードの解説
 -----------------------------------------------
 
-#. Define the communication pins and initialize the SoftwareSerial library
+#. 通信ピンを定義し、SoftwareSerialライブラリを初期化
 
    .. code-block:: arduino
 
       const int bluetoothTx = 3;  
-      const int bluetoothRx = 4;   
+      const int bluetoothRx = 4;  
       SoftwareSerial bleSerial(bluetoothTx, bluetoothRx);  
    
-   The above code defines the transmit (Tx) and receive (Rx) pins used by the JDY-31 Bluetooth module for communication. It then initializes the SoftwareSerial library, which allows the Bluetooth module to communicate with the Arduino board.
+   上記のコードは、JDY-31 Bluetoothモジュールが通信に使用する送信（Tx）と受信（Rx）ピンを定義します。その後、ArduinoボードとBluetoothモジュールとの通信を可能にするSoftwareSerialライブラリを初期化しています。
 
-#. Define servo-related constants and create a servo object
+#. サーボに関連する定数を定義し、サーボオブジェクトを作成
 
    .. code-block:: arduino
 
@@ -180,9 +179,9 @@ Ensure that the application created earlier is installed on your smartphone.
       const int unlockAngle = 90;
       Servo myservo;
 
-   Here, the pin attached to the servo is defined, along with the angles for "lock" and "unlock" positions. A Servo object ``myservo`` is also created for controlling the servo motor.
+   この部分では、サーボに接続されたピンと、"ロック"と"アンロック"の位置に対する角度を定義しています。また、サーボモーターを制御するためのServoオブジェクト``myservo``も作成されています。
 
-#. Initialize the servo and serial communications
+#. サーボとシリアル通信を初期化
 
    .. code-block:: arduino
 
@@ -192,7 +191,7 @@ Ensure that the application created earlier is installed on your smartphone.
         bleSerial.begin(9600);
       }
 
-#. Control servo based on Bluetooth module's input
+#. Bluetoothモジュールの入力に基づいてサーボを制御
 
    .. code-block:: arduino
 
@@ -210,4 +209,4 @@ Ensure that the application created earlier is installed on your smartphone.
         }
       }
 
-   The ``loop()`` function runs repeatedly. It reads incoming messages from the Bluetooth module. If the message is '1', the servo is moved to the "locked" position, and if the message is '0', the servo is moved to the "unlocked" position. The current status ("Locked" or "Unlocked") is printed to the Serial Monitor.
+   ``loop()`` 関数は繰り返し実行されます。この関数は、Bluetoothモジュールからの入力メッセージを読み取ります。メッセージが'1'であれば、サーボは"ロック"位置に動きます。'0'であれば、"アンロック"位置に動きます。現在の状態（"Locked"または"Unlocked"）は、シリアルモニターに出力されます。

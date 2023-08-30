@@ -1,4 +1,3 @@
-
 .. _iot_Bluetooth_oled:
 
 Bluetooth OLED
@@ -8,16 +7,14 @@ Bluetooth OLED
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/iot/12-iot_Bluetooth_oled.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザはビデオタグをサポートしていません。
    </video>
 
+このプロジェクトでは、MIT App Inventorで作成されたAndroidアプリを用いて、Bluetoothを介してArduinoデバイスにメッセージを送信します。Arduinoは受信したメッセージをOLEDスクリーンに表示します。Androidアプリは、ユーザーフレンドリーなインターフェースで設計されており、ユーザーはボタンを押すだけでメッセージを送信できます。
 
-This project uses an Android app created with MIT App Inventor to send messages over Bluetooth to an Arduino device. The Arduino, upon receiving the messages, displays them on an OLED screen. The Android app, designed with a user-friendly interface, allows users to input messages and send them with the press of a button. 
+Androidアプリケーションは、|link_appinventor| という無料のウェブベースのプラットフォームを用いて構築されます。このプロジェクトは、Arduinoとスマートフォンとのインターフェイスを熟練する絶好の機会です。
 
-The Android application will be constructed utilizing a complimentary web-based platform known as |link_appinventor|. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone. 
-
-
-1. Build the Cirduit
+1. 回路を作成する
 -----------------------------
 
 .. image:: img/12-Wiring_oled.png
@@ -27,112 +24,109 @@ The Android application will be constructed utilizing a complimentary web-based 
 * :ref:`cpn_jdy31`
 * :ref:`cpn_olde`
 
-
-2. Create the Android App
+2. Androidアプリを作成する
 -----------------------------
 
-The Android application will be developed using a free web application known as |link_appinventor|. 
-MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop 
-features allowing for the creation of simplistic applications.
+Androidアプリケーションは、|link_appinventor| という無料のウェブアプリケーションを使用して開発されます。
+MIT App Inventorは、直感的なドラッグ＆ドロップ機能で簡単なアプリケーションを作成できるため、Android開発の優れたスタート地点となります。
 
-Now, let's begin.
+さて、始めましょう。
 
-#. Go to |link_appinventor_login|, and click "online tool" to login. You will require a Google account to register with MIT App Inventor.
+#. |link_appinventor_login| に移動し、「online tool」としてログインをクリックします。MIT App Inventorに登録するためにはGoogleアカウントが必要です。
 
    .. image:: img/new/09-ai_signup_shadow.png
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``oled.aia`` file located in the path ``ultimate-sensor-kit\iot_project\bluetooth\07-Bluetooth_oled``.
+#. ログイン後、 **Projects** -> **Import project (.aia) from my computer** に進み、 ``ultimate-sensor-kit\iot_project\bluetooth\07-Bluetooth_oled`` にある ``oled.aia`` ファイルをアップロードします。
 
-   You can also directly download here: :download:`oled.aia</_static/other/oled.aia>`
+   直接ダウンロードはこちら: :download:`oled.aia</_static/other/oled.aia>`
 
    .. image:: img/new/09-ai_import_shadow.png
         :align: center
 
-#. Upon uploading the ``.aia`` file, you will see the application on the MIT App Inventor software. This is a pre-configured template. You can modify this template after you have familiarized yourself with MIT App Inventor through the following steps.
+#. ``.aia`` ファイルをアップロードすると、MIT App Inventorソフトウェア上でアプリケーションが表示されます。これは事前に設定されたテンプレートです。次のステップでMIT App Inventorに慣れた後にこのテンプレートを修正できます。
 
-#. In MIT App Inventor, you have 2 primary sections: the **Designer** and the **Blocks**. You can switch between these two sections in the upper right corner of the page.
+#. MIT App Inventorには、 **Designer** と **Blocks** という2つの主要なセクションがあります。ページの右上隅でこれらのセクションを切り替えることができます。
 
    .. image:: img/new/09-ai_intro_1_shadow.png
 
-#. The **Designer** allows you to add buttons, text, screens, and modify the overall aesthetic of your application.
+#. **Designer** は、ボタン、テキスト、画面を追加したり、アプリケーションの全体的な見た目を修正することができます。
 
    .. image:: img/new/12-ai_intro_2_shadow.png
-   
-#. Next, there's the **Blocks** section. This section lets you craft custom functionalities for your app, allowing you to program each component on the app's GUI to achieve desired features.
+
+#. 次に、 **Blocks** セクションがあります。このセクションで、アプリのGUIの各コンポーネントをプログラムして、希望する機能を実現できます。
 
    .. image:: img/new/12-ai_intro_3_shadow.png
 
-#. To install the application on a smartphone, navigate to the **Build** tab.
+#. スマートフォンにアプリケーションをインストールするには、 **Build** タブに移動します。
 
    .. image:: img/new/08-ai_intro_4_shadow.png
 
-   * You can generate a ``.apk`` file. After selecting this option, a page will appear allowing you to choose between downloading a ``.apk`` file or scanning a QR code for installation. Follow the installation guide to complete the application installation. 
+   * ``.apk`` ファイルを生成することができます。このオプションを選択すると、 ``.apk`` ファイルをダウンロードするか、QRコードをスキャンしてインストールするかを選べるページが表示されます。インストールガイドに従って、アプリケーションのインストールを完了します。
 
-     You also download our pre-compiled APK here: :download:`piano.apk</_static/other/piano.apk>`
+     また、事前にコンパイルされたAPKはこちらからダウンロードできます: :download:`piano.apk</_static/other/piano.apk>`
 
-   * If you wish to upload this app to Google Play or another app marketplace, you can generate a ``.aab`` file.
+   * Google Playや他のアプリマーケットにこのアプリをアップロードする場合、``.aab`` ファイルを生成できます。
 
-
-3. Upload the Code
+3. コードをアップロードする
 -----------------------------
 
-#. Open the ``12-Bluetooth_oled.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\07-Bluetooth_oled``, or copy this code into **Arduino IDE**.
+#. ``ultimate-sensor-kit\iot_project\bluetooth\07-Bluetooth_oled`` のパスにある ``12-Bluetooth_oled.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
    .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"Adafruit SSD1306"** and **"Adafruit GFX"** and install it. 
+      ライブラリをインストールするには、Arduino Library Managerを使用して **"Adafruit SSD1306"** および **"Adafruit GFX"** を検索し、それをインストールします。
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/aafe675c-be6c-49a0-8c73-596d8b85e3cc/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. 適切なボードとポートを選択したら、 **書き込み** ボタンをクリックします。
 
-#. Open the Serial monitor(set baudrate to **9600**) to view debug messages. 
+#. シリアルモニターを開き（ボーレートを **9600** に設定）、デバッグメッセージを表示します。
 
-4. App and Bluetooth moudule Connection
+4. アプリとBluetoothモジュールの接続
 -----------------------------------------------
 
-Ensure that the application created earlier is installed on your smartphone.
+事前にスマートフォンに作成したアプリがインストールされていることを確認してください。
 
-#. Initially, turn on **Bluetooth** on your smartphone.
+#. まず、スマートフォンの **Bluetooth** を有効にします。
 
    .. image:: img/new/09-app_1_shadow.png
       :width: 60%
       :align: center
 
-#. Navigate to the **Bluetooth settings** on your smartphone and look for names like **JDY-31-SPP**.
+#. スマートフォンの **Bluetooth設定** に移動し、 **JDY-31-SPP** といった名前を探します。
 
    .. image:: img/new/09-app_2_shadow.png
       :width: 60%
       :align: center
 
-#. After clicking it, agree to the **Pair** request in the pop-up window. If prompted for a pairing code, please enter "1234".
+#. 見つけたらクリックし、ポップアップウィンドウの **ペアリング** リクエストに同意します。ペアリングコードが要求された場合は、「1234」と入力してください。
 
    .. image:: img/new/09-app_3_shadow.png
       :width: 60%
       :align: center
 
-#. Now open the newly installed **OLED** APP.
+#. その後、新しくインストールされた **OLED** アプリを開きます。
 
    .. image:: img/new/12-app_4_shadow.png
       :width: 25%
       :align: center
 
-#. In the APP, click on **Connect** button to establish a connection between the APP and Bluetooth module.
+#. アプリ内で **Connect** ボタンをクリックし、アプリとBluetoothモジュール間の接続を確立します。
 
    .. image:: img/new/12-app_5_shadow.png
       :width: 60%
       :align: center
 
-#. This page displays a list of all paired Bluetooth devices. Choose the ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` option from the list. The name of each device is listed next to its MAC address.
+#. この画面では、すべてのペアリング済みBluetoothデバイスが一覧表示されます。 ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` といったオプションを選択してください。各デバイスの名前は、そのMACアドレスの隣に表示されます。
 
    .. image:: img/new/12-app_6_shadow.png
       :width: 60%
       :align: center
 
-   After a successful connection, the OLED display will switch from showing "Waiting for connection" to displaying the MAC address of the connected device.
+   接続が成功すると、OLEDディスプレイは「Waiting for connection」から接続済みデバイスのMACアドレスが表示されるように変わります。
 
    .. image:: img/12-app_6-1.png
       :width: 70%
@@ -142,40 +136,41 @@ Ensure that the application created earlier is installed on your smartphone.
 
       <br/>
 
-#. If you don't see any devices on the page shown above, it could be because this app is not authorized to scan for nearby devices. In such a case, you will need to adjust the settings manually.
+#. 上記の画面でデバイスが表示されない場合、アプリに近隣のデバイスをスキャンする権限がない可能性があります。その場合、設定を手動で調整する必要があります。
 
-   * To access the **APP Info** page, long-press the app icon and select it. Alternatively, if you have another method to reach this page, use that instead.
+   * **アプリ情報** ページにアクセスするには、アプリのアイコンを長押しして選択します。または、このページに別の方法でアクセスできる場合は、それを使用してください。
 
    .. image:: img/new/12-app_8_shadow.png
          :width: 60%
          :align: center
 
-   * Navigate to the **Permissions** page.
+   * **権限** ページに移動します。
 
    .. image:: img/new/08-app_9_shadow.png
          :width: 60%
          :align: center
 
-   * To enable the APP to scan for nearby devices, go to **Nearby devices** and select **Always**.
+   * アプリが近隣のデバイスをスキャンできるようにするには、 **近隣のデバイス** を選択し、 **常に** を選びます。
 
    .. image:: img/new/08-app_10_shadow.png
          :width: 60%
          :align: center
 
-   * Now, restart the APP and repeat steps 5 and 6 to successfully connect to Bluetooth.
+   * 次に、アプリを再起動し、手順5と6を繰り返して、Bluetoothに成功裏に接続します。
 
-#. After a successful connection, you will be redirected to the main page. Enter your desired message in the text box provided and click on the send button to display it on the OLED screen.
+#. 接続が成功すると、メインページにリダイレクトされます。提供されたテキストボックスに希望するメッセージを入力し、送信ボタンをクリックしてOLEDスクリーンに表示します。
 
    .. image:: img/new/12-app_7_shadow.png
       :width: 60%
       :align: center
 
-5. Code explanation
+
+5. コードの解説
 -----------------------------------------------
 
-1. **Setting Up Bluetooth Communication**:
+1. **Bluetooth通信の設定**:
    
-   This section includes the ``SoftwareSerial`` library and sets up the digital pins for Bluetooth communication. The standard ``Serial`` is for debugging while ``bleSerial`` is specifically for Bluetooth communication.
+   このセクションでは、 ``SoftwareSerial`` ライブラリをインクルードし、Bluetooth通信用のデジタルピンを設定します。標準的な ``Serial`` はデバッグ用で、 ``bleSerial`` はBluetooth通信専用です。
 
    .. code-block:: arduino
 
@@ -184,9 +179,9 @@ Ensure that the application created earlier is installed on your smartphone.
       const int bluetoothRx = 4;
       SoftwareSerial bleSerial(bluetoothTx, bluetoothRx);
 
-2. **Setting Up OLED Display**:
+2. **OLEDディスプレイの設定**:
 
-   The libraries and constants required to initialize and manage the OLED display are declared here.
+   OLEDディスプレイを初期化・管理するために必要なライブラリと定数がここで宣言されます。
 
    .. code-block:: arduino
 
@@ -200,9 +195,9 @@ Ensure that the application created earlier is installed on your smartphone.
       #define SCREEN_ADDRESS 0x3C
       Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-3. **Initialization**:
+3. **初期化**:
    
-   In the ``setup()`` function, serial communications are initialized. The OLED display is started, and an initial message "Waiting for connection" is displayed.
+   ``setup()`` 関数内で、シリアル通信が初期化されます。OLEDディスプレイが起動し、最初のメッセージ「接続待ち」と表示されます。
 
    .. code-block:: arduino
 
@@ -224,9 +219,9 @@ Ensure that the application created earlier is installed on your smartphone.
          display.display();
       }
 
-4. **Main Loop**:
+4. **メインループ**:
    
-   Within the ``loop()``, the code constantly checks for incoming data from the Bluetooth module. Once a full message (ending with a '#', the APP will automatically add a '#' at the end of the message that the user send) is received, it's displayed on the OLED. Also, the received message is printed to the serial monitor for debugging purposes.
+   ``loop()`` 内で、Bluetoothモジュールからの受信データを常に監視します。フルメッセージ（'#'で終わる、ユーザーが送信するメッセージの末尾にAPPは自動的に'#'を追加します）が受信されると、それがOLEDに表示されます。また、受信したメッセージはデバッグ目的でシリアルモニタに出力されます。
 
    .. code-block:: arduino
 

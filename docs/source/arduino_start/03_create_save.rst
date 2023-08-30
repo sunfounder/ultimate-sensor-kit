@@ -1,39 +1,35 @@
-How to create, open or Save the Sketch?
+スケッチの作成、開く、保存の方法
 =======================================
 
-
-#. When you open the Arduino IDE for the first time or create a new sketch, you will see a page like this, where the Arduino IDE creates a new file for you, which is called a "sketch".
+#. Arduino IDEを初めて開いた時、または新しいスケッチを作成する際には、次のような画面が表示されます。Arduino IDEは新しいファイル、いわゆる「スケッチ」を自動的に生成します。
 
    .. image:: img/sp221014_173458.png
 
-   These sketch files have a regular temporary name, from which you can tell the date the file was created. ``sketch_oct14a.ino`` means October 14th first sketch, ``.ino`` is the file format of this sketch.
+   このスケッチファイルには、ファイルが作成された日付が反映された一時的な名前が付けられています。例えば、``sketch_oct14a.ino`` は10月14日に作成された最初のスケッチであり、``.ino`` がそのファイル形式です。
 
-#. Now let's try to create a new sketch. Copy the following code into the Arduino IDE to replace the original code.
-
+#. 新しいスケッチを作成してみましょう。以下のコードをArduino IDEにコピーして、元のコードと置き換えます。
 
    .. image:: img/create1.png
 
    .. code-block:: Arduino
 
        void setup() {
-           // put your setup code here, to run once:
            pinMode(13,OUTPUT); 
        }
 
        void loop() {
-           // put your main code here, to run repeatedly:
            digitalWrite(13,HIGH);
            delay(500);
            digitalWrite(13,LOW);
            delay(500);
        }
 
-#. Press ``Ctrl+S`` or click **File** -> **Save**. The Sketch is saved in: ``C:\Users\{your_user}\Documents\Arduino`` by default, you can rename it or find a new path to save it.
+#. ``Ctrl+S`` を押すか、 **ファイル（File）** -> **保存（Save）** をクリックします。スケッチはデフォルトで ``C:\Users\{your_user}\Documents\Arduino`` に保存されます。名前を変更するか、新しい保存先を選ぶこともできます。
 
    .. image:: img/create2.png
 
-#. After successful saving, you will see that the name in the Arduino IDE has been updated.
+#. 保存が成功すると、Arduino IDE上での名前が更新されていることが確認できます。
 
    .. image:: img/create3.png
 
-Please continue with the next section to learn how to upload this created sketch to your Arduino board.
+次のセクションで、この作成したスケッチをArduinoボードにアップロードする方法を学んでいきましょう。

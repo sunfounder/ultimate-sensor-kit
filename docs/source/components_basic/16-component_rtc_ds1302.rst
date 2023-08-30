@@ -1,31 +1,31 @@
 .. _cpn_rtc_ds1302:
 
-Real Time Clock Module (DS1302)
+リアルタイムクロックモジュール（DS1302）
 =====================================
 
 .. image:: img/16_DS1302_module.png
     :width: 400
     :align: center
 
-Introduction
+概要
 ---------------------------
-A DS1302 real-time clock module is a device that can keep track of the date and time. It can help you create projects that need accurate timing and scheduling. It can also be used to create a digital clock with Arduino.
+DS1302リアルタイムクロックモジュールは、日付と時刻を正確に管理する装置です。正確なタイミングやスケジューリングが必要なプロジェクトに活用できます。Arduinoを用いてデジタル時計を作成する際にも使用可能です。
 
-Principle
+原理
 ---------------------------
-DS1302 is a trickle charging clock chip, launched by DALLAS in America. With a built-in real-time clock/calendar and a 31-byte static RAM, it can communicate with MCU through simple serial ports. The real-time clock/calendar circuit provides information about second, minute, hour, day, week, month, and year. DS1302 can automatically adjust the number of days per month and days in leap year. You can determine to use a 24-hour or 12-hour system by AM/PM selection. It can simply communicate with MCU in synchronous serial way and only needs to use three port cables: Reset (RST) cable, I/O data (SDA) cable and serial clock (SCL) cable.
+DS1302は、アメリカのDALLAS社が開発したトリックル充電クロックチップです。リアルタイムの時計・カレンダー機能と31バイトの静的RAMを内蔵し、MCUとはシンプルなシリアルポートを介して通信可能です。このクロック・カレンダーサーキットは、秒、分、時、日、週、月、年の情報を提供します。DS1302は、月ごとの日数や閏年の日数も自動で調整できます。24時間制と12時間制のどちらを使用するかはAM/PMで選択可能です。Reset（RST）ケーブル、I/Oデータ（SDA）ケーブル、シリアルクロック（SCL）ケーブルの3本のケーブルでMCUと簡単に通信できます。
 
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Real Time Clock Module(DS1302) * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- リアルタイムクロックモジュール（DS1302）* 1
+- ジャンパーワイヤ
 
 
-**Circuit Assembly**
+**回路組み立て**
 
 .. image:: img/16_DS1302_module_circuit.png
     :width: 400
@@ -35,11 +35,11 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
-   To install the library, use the Arduino Library Manager and search for **"Rtc by Makuna"** and install it. 
+   ライブラリのインストールにはArduinoライブラリマネージャを使用し、**「Rtc by Makuna」** と検索してインストールしてください。
 
 .. raw:: html
     
@@ -54,24 +54,24 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-#. Initialization and library inclusion
+1. 初期化とライブラリのインクルード
 
    .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"Rtc by Makuna"** and install it. 
+      ライブラリのインストールにはArduinoライブラリマネージャを使用し、 **「Rtc by Makuna」** と検索してインストールしてください。
 
-   Here, necessary libraries are included for the DS1302 RTC module.
+   DS1302 RTCモジュールに必要なライブラリをインクルードします。
 
    .. code-block:: arduino
 
       #include <ThreeWire.h>
       #include <RtcDS1302.h>
 
-#. Define pins and create RTC instance
+2. ピンの定義とRTCインスタンスの作成
 
-   Pins for communication are defined and an instance of the RTC is created.
+   通信用のピンを定義し、RTCのインスタンスを作成します。
 
    .. code-block:: arduino
 
@@ -82,10 +82,9 @@ Code explanation
       ThreeWire myWire(4, 5, 2);  // IO, SCLK, CE
       RtcDS1302<ThreeWire> Rtc(myWire);
 
+3. ``setup()`` 関数
 
-#. ``setup()`` function
-
-   This function initializes the serial communication and sets up the RTC module. Various checks are made to ensure the RTC is running correctly.
+   この関数は、シリアル通信を初期化し、RTCモジュールを設定します。RTCが正確に動作しているかいくつかのチェックを行います。
 
    .. code-block:: arduino
 
@@ -132,10 +131,9 @@ Code explanation
         }
       }
 
+4. ``loop()`` 関数
 
-#. ``loop()`` function
-
-   This function periodically fetches the current date and time from the RTC and prints it on the serial monitor. It also checks if the RTC is still maintaining a valid date and time.
+   この関数は、定期的にRTCから現在の日付と時刻を取得し、シリアルモニターに表示します。また、RTCがまだ有効な日付と時刻を維持しているかどうかを確認します。
 
    .. code-block:: arduino
 
@@ -154,11 +152,10 @@ Code explanation
         delay(5000);  // five seconds
       }
 
+5. 日付と時刻の表示関数
 
-#. Date and time printing function
-
-   A helper function that takes a ``RtcDateTime`` object and prints the formatted date and time to the serial monitor.
-
+   ``RtcDateTime`` オブジェクトを引数として受け取り、シリアルモニターに日付と時刻を整形して出力するヘルパー関数です。
+   
    .. code-block:: arduino
 
       void printDateTime(const RtcDateTime& dt) {
@@ -176,13 +173,9 @@ Code explanation
         Serial.print(datestring);
       }
 
-
-Additional Ideas
+追加のアイデア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Display time on LCD or serial monitor
-- Schedule events/alarms at certain times
-
-
-
+- LCDまたはシリアルモニターに時間を表示
+- 特定の時間にイベントやアラームをスケジュール
 

@@ -1,36 +1,32 @@
 .. _cpn_VL53L0X:
 
-Time of Flight Micro-LIDAR Distance Sensor (VL53L0X)
+飛行時間（ToF）マイクロLiDAR距離センサ（VL53L0X）
 ===============================================================
 
 .. image:: img/20_VL53L0X_module.png
     :width: 350
     :align: center
 
-
-
-Introduction
+概要
 ---------------------------
 
-The VL53L0X module is a Time of Flight (ToF) ranging sensor that can accurately measure distances up to 2 meters using laser technology. It is a multi-sensor module with an integrated laser emitter, detector, and microcontroller. The module has all required components such as pull-up resistors and capacitors. It can handle about 50 - 1200 mm of range distance.
+VL53L0Xモジュールは、レーザー技術を用いて最大2メートルまでの距離を精度よく測定できる飛行時間（ToF）測距センサです。このモジュールは、統合されたレーザー発生器、検出器、マイクロコントローラを搭載した多機能センサモジュールです。プルアップ抵抗やコンデンサなど、必要なコンポーネントがすべて搭載されています。対応可能な測定距離は約50〜1200mmです。
 
-
-Principle
+原理
 ---------------------------
-The VL53L0X module works on the principle of Time of Flight (ToF). It sends out a laser pulse and measures the time it takes for the pulse to bounce back. The time it takes for the pulse to return is proportional to the distance between the sensor and the object. The module uses a single photon avalanche diode (SPAD) array to detect the reflected light from the object. The SPAD array is capable of detecting even a single photon of light. The module also has an integrated microcontroller that processes the data from the SPAD array and calculates the distance between the sensor and the object.
+VL53L0Xモジュールは、飛行時間（ToF）原理に基づいて動作します。レーザーパルスを送出し、反射して戻ってくるまでの時間を測定します。この時間は、センサと物体との距離に比例します。モジュールは単一光子雪崩ダイオード（SPAD）アレイを用いて、物体から反射された光を検出します。SPADアレイは、一つの光子さえも検出する能力があります。さらに、このモジュールにはデータ処理を行う統合マイクロコントローラが搭載されています。
 
-
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Time of Flight Micro-LIDAR Distance Sensor * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- 飛行時間マイクロLiDAR距離センサ * 1
+- ジャンパーワイヤー
 
 
-**Circuit Assembly**
+**回路組み立て**
 
 .. image:: img/20_VL53L0X_module_circuit.png
     :width: 550
@@ -40,11 +36,11 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
-   To install the library, use the Arduino Library Manager and search for **"Adafruit_VL53L0X"** and install it.
+   ライブラリのインストールには、Arduinoライブラリマネージャで **「Adafruit_VL53L0X」** を検索してインストールします。
 
 .. raw:: html
     
@@ -59,20 +55,20 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-#. Including the necessary library and initializing the sensor object. We start by including the library for the VL53L0X sensor and creating an instance of the Adafruit_VL53L0X class.
+#. 必要なライブラリを含むとセンサオブジェクトを初期化。最初に、VL53L0Xセンサ用のライブラリを含み、Adafruit_VL53L0Xクラスのインスタンスを作成します。
 
    .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"Adafruit_VL53L0X"** and install it.  
+      ライブラリのインストールには、Arduinoライブラリマネージャで **「Adafruit_VL53L0X」** を検索してインストールします。
 
    .. code-block:: arduino
 
       #include <Adafruit_VL53L0X.h>
       Adafruit_VL53L0X lox = Adafruit_VL53L0X();
 
-#. Initialization in the ``setup()`` function. Here, we set up serial communication and initialize the distance sensor. If the sensor can't be initialized, the program halts.
+#. ``setup()`` 関数での初期化。ここでは、シリアル通信を設定し、距離センサを初期化します。センサの初期化ができない場合、プログラムは停止します。
 
    .. code-block:: arduino
 
@@ -90,7 +86,7 @@ Code explanation
         Serial.println(F("VL53L0X API Simple Ranging example\n\n"));
       }
 
-#. Capturing and displaying the measurements in the ``loop()`` function. Continuously, the Arduino captures a distance measurement using the ``rangingTest()`` method. If the measurement is valid, it's printed to the serial monitor.
+#. ``loop()`` 関数での測定値の取得と表示。Arduinoは、 ``rangingTest()`` メソッドを使用して、距離の測定を継続的に行います。測定が有効な場合、その値がシリアルモニタに表示されます。
 
    .. code-block:: arduino
        
@@ -107,13 +103,12 @@ Code explanation
         delay(100);
       }
 
-Additional Ideas
+追加のアイディア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Integrate the sensor with a display (like an OLED) to show the distance measurements.
-- Use the distance data to trigger other components, such as LEDs or buzzers, when an object comes within a specific range.
+- センサをディスプレイ（例：OLED）と連携させて、距離測定値を表示する。
+- 物体が特定の範囲内に入ったときに、他のコンポーネント（LEDやブザーなど）を作動させる。
 
-
-More Projects
+さらなるプロジェクト
 ---------------------------
 * :ref:`fun_tof_distance_monitor`

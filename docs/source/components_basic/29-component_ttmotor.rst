@@ -1,6 +1,6 @@
 .. _cpn_ttmotor:
 
-TT Motor
+TTモーター
 ==========================
 
 .. image:: img/29_tt_motor.jpg
@@ -11,31 +11,26 @@ TT Motor
     
     <br/>
 
-Introduction
+概要
 ---------------------------
-A TT motor is a type of DC motor that has a gearbox attached to it. The gearbox reduces the speed of the motor and increases its torque. A TT motor is commonly used in applications such as driving wheels, propellers, fans, among others. A TT motor has two wires: a positive wire and a negative wire. The positive wire is usually red and the negative wire is usually black.
+TTモーターは、ギアボックスが取り付けられた直流モーターの一種です。このギアボックスは、モーターの回転数を低減させ、トルクを増大させます。TTモーターは、車輪、プロペラ、扇風機などを駆動する用途でよく使用されます。TTモーターは赤と黒の2本のワイヤーがあり、通常、赤がプラス、黒がマイナスです。
 
-A TT DC gearbox motor with a 1:48 gear ratio is used in the product, it comes with 2 x 200mm wires with 0.1” male connectors that fit into a breadboard. Perfect for plugging into a breadboard or terminal block.
+製品には1:48のギア比を持つTT DCギアボックスモーターが使用されており、200mmのワイヤー2本が0.1インチのオスコネクターで付属しています。これにより、ブレッドボードまたはターミナルブロックに容易に接続できます。電源は3〜6VDCで、高電圧でより速く動作します。
 
-You can power these motors with 3 ~ 6VDC, but of course, they will go a little faster at higher voltages.
-
-
-Principle
+原理
 ---------------------------
-A TT motor works by converting electrical energy into mechanical energy. When a voltage is applied to the wires of the motor, it creates a magnetic field that causes the motor to spin. The speed and direction of the motor depend on the voltage and polarity of the power supply. The higher the voltage, the faster the motor spins. Reversing the polarity will cause the motor to spin in the opposite direction.
+TTモーターは電気エネルギーを機械エネルギーに変換する仕組みです。モーターのワイヤーに電圧を印加すると、磁場が発生してモーターが回転します。モーターの速度と回転方向は、供給される電源の電圧と極性に依存します。電圧が高いほど、モーターは速く回転します。極性を逆にすると、モーターは逆方向に回転します。
 
-
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- TT Motor * 1
-- Jumper Wires
+- Arduino Uno R4 または R3 ボード * 1
+- TTモーター * 1
+- ジャンパーワイヤー
 
-
-**Circuit Assembly**
+**回路の組み立て**
 
 .. image:: img/29_tt_motor_circuit.png
     :width: 400
@@ -45,7 +40,7 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -57,22 +52,22 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/29-component_ttmotor.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      ご使用のブラウザはこのビデオタグに対応していません。
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-1. The first part of the code defines the motor control pins. These are connected to the L9110 motor control board.
+1. コードの最初の部分では、モーター制御用のピンが定義されています。これらはL9110モーター制御ボードに接続されます。
 
    .. code-block:: arduino
    
-      // Define the motor pins
+      // モーターピンの定義
       const int motorB_1A = 9;
       const int motorB_2A = 10;
 
-2. The ``setup()`` function initializes the motor control pins as output using the ``pinMode()`` function. Then it uses ``analogWrite()`` to set the speed of the motor. The value passed to ``analogWrite()`` can range from 0 (off) to 255 (full speed). A ``delay()`` function is then used to pause the code for 5000 milliseconds (or 5 seconds), after which the motor speed is set to 0 (off).
+2. ``setup()`` 関数は、 ``pinMode()`` 関数を使用してモーター制御ピンを出力として初期化します。その後、 ``analogWrite()`` を使用してモーターの速度を設定します。 ``analogWrite()`` に渡す値は0（オフ）から255（全速）までです。次に、 ``delay()`` 関数でコードを5000ミリ秒（または5秒）一時停止させ、その後でモーターの速度を0（オフ）に設定します。
 
    .. code-block:: arduino
    
@@ -89,10 +84,7 @@ Code explanation
         analogWrite(motorB_2A, 0);
       }
 
-Additional Ideas
+追加のアイディア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Control Motor Speed with a Potentiometer: Instead of hardcoding the motor speed, you could use a potentiometer to dynamically control the speed of the motor.
-
-
-
+- ポテンショメーターでモーター速度を制御：モーターの速度を固定する代わりに、ポテンショメーターを使用して動的に速度を制御できます。

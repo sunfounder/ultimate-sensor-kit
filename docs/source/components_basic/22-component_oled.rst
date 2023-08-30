@@ -1,41 +1,40 @@
 .. _cpn_olde:
 
-OLED Display Module
+OLEDディスプレイモジュール
 ==========================
 
 .. image:: img/22_OLED.png
     :width: 300
     :align: center
 
-Introduction
+はじめに
 ---------------------------
-An OLED (Organic Light-Emitting Diode) display module is a device that can display text, graphics and images on a thin and flexible screen using organic materials that emit light when electric current is applied.
+OLED（Organic Light-Emitting Diode）ディスプレイモジュールは、有機材料を用いて電流が流れると発光する薄く、柔軟なスクリーン上にテキスト、グラフィック、画像を表示できるデバイスです。
 
-The main advantage of an OLED Display is that it emits its own light and doesn’t need another source of backlight. Due to this, OLED Displays often have better contrast, brightness and viewing angles when compared to LCD displays.
+OLEDディスプレイの最大の特長は、自ら発光するため、別のバックライト源が不要であることです。このため、LCDディスプレイと比較して、OLEDはより高いコントラスト、明るさ、視野角を持っています。
 
-Another important feature of OLED Displays is deep black levels. Since each pixel emits its own light in an OLED Display, to produce black color, the individual pixel can be turned OFF.
+さらに、OLEDディスプレイは「深い黒」を再現する能力もあります。各ピクセルが独自に発光するため、黒色を表示する際には該当ピクセルをオフにできます。
 
-Due to lower power consumption (only pixels which are lit up draw current), OLED displays are also popular in battery operated devices like Smart Watches, Health Trackers and other wearables.
+低い消費電力（点灯しているピクセルのみが電流を消費）もあり、スマートウォッチやヘルストラッカー、その他のウェアラブルデバイスでよく使用されています。
 
-Principle
+原理
 ---------------------------
-An OLED display module consists of an OLED panel and an OLED driver chip that is mounted on the back of the module. The OLED panel is made of many tiny pixels that can produce different colors of light. Each pixel consists of several layers of organic materials sandwiched between two electrodes (anode and cathode). When electric current flows through the electrodes, the organic materials emit light of different wavelengths depending on their composition.
+OLEDディスプレイモジュールは、OLEDパネルとその裏面に取り付けられたOLEDドライバーチップから構成されます。OLEDパネルは、さまざまな色の光を発生させることができる多くの小さなピクセルで構成されています。各ピクセルは、二つの電極（アノードとカソード）の間に挟まれた数層の有機材料から成り立っています。電流が電極を流れると、有機材料がその組成に応じて異なる波長の光を発光します。
 
-The OLED driver chip is a chip that can control the pixels of the OLED panel using a serial communication protocol called I2C (Inter-Integrated Circuit).
+OLEDドライバーチップは、I2C（Inter-Integrated Circuit）と呼ばれるシリアル通信プロトコルを用いてOLEDパネルのピクセルを制御できるチップです。
 
-The OLED driver chip converts the signals from the Arduino into commands for the OLED panel. The Arduino can send data to the OLED driver chip using a library that can control the I2C protocol. One such library is the Adafruit SSD1306 library1. With this library, you can initialize the OLED display module, set the brightness level, print text, graphics or images, etc.
+このドライバーチップは、Arduinoからの信号をOLEDパネルへのコマンドに変換します。Arduinoは、I2Cプロトコルを制御できるライブラリを用いて、OLEDドライバーチップにデータを送信できます。その一例がAdafruit SSD1306ライブラリ1です。このライブラリを使用すれば、OLEDディスプレイモジュールを初期化したり、明るさを設定したり、テキストやグラフィック、画像を表示したりできます。
 
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- OLED Display Module * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- OLEDディスプレイモジュール * 1
+- ジャンパーワイヤ
 
-
-**Circuit Assembly**
+**回路の組立て**
 
 .. image:: img/22_OLED_circuit.png
     :width: 600
@@ -45,11 +44,11 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
-   To install the library, use the Arduino Library Manager and search for **"Adafruit SSD1306"** and **"Adafruit GFX"** and install it. 
+   ライブラリのインストールには、Arduinoライブラリマネージャーで **"Adafruit SSD1306"** と **"Adafruit GFX"** を検索してインストールしてください。
 
 .. raw:: html
     
@@ -64,18 +63,18 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+コードの解説
 ^^^^^^^^^^^^^^^^^^^^
 
-1. **Library Inclusion and Initial Definitions**:
-   The necessary libraries for interfacing with the OLED are included. Following that, definitions regarding the OLED's dimensions and I2C address are provided.
+1. **ライブラリのインクルードと初期定義**：
 
+   OLEDとのインターフェースに必要なライブラリがインクルードされ、その後でOLEDの寸法やI2Cアドレスに関する定義が行われます。
 
-   - **Adafruit SSD1306**: This library is designed to help with the interfacing of the SSD1306 OLED display. It provides methods to initialize the display, control its settings, and display content.
-   - **Adafruit GFX Library**: This is a core graphics library for displaying text, producing colors, drawing shapes, etc., on various screens including OLEDs.
+   - **Adafruit SSD1306**: SSD1306 OLEDディスプレイとのインターフェースを補助するライブラリです。ディスプレイの初期化、設定の制御、コンテンツの表示に関するメソッドが提供されています。
+   - **Adafruit GFX Library**: OLEDを含む各種スクリーンでテキストを表示、色を生成、形を描くなどを行う基本的なグラフィックスライブラリです。
 
    .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"Adafruit SSD1306"** and **"Adafruit GFX"** and install it. 
+      ライブラリのインストールには、Arduinoライブラリマネージャーで **"Adafruit SSD1306"** と **"Adafruit GFX"** を検索してインストールしてください。 
 
    .. code-block:: arduino
     
@@ -84,25 +83,27 @@ Code explanation
       #include <Adafruit_GFX.h>
       #include <Adafruit_SSD1306.h>
 
-      #define SCREEN_WIDTH 128  // OLED display width, in pixels
-      #define SCREEN_HEIGHT 64  // OLED display height, in pixels
+      #define SCREEN_WIDTH 128
+      #define SCREEN_HEIGHT 64
 
       #define OLED_RESET -1
       #define SCREEN_ADDRESS 0x3C
 
-2. **Bitmap Data**:
-   Bitmap data for displaying a custom icon on the OLED screen. This data represents an image in a format that the OLED can interpret.
+2. **ビットマップデータ**：
 
-   You can use this online tool called |link_image2cpp| that can turn your image into an array. 
+   OLEDスクリーン上でカスタムアイコンを表示するためのビットマップデータです。このデータは、OLEDが解釈できる形式で画像を表現しています。
 
-   The ``PROGMEM`` keyword denotes that the array is stored in the program memory of the Arduino microcontroller. Storing data in program memory(PROGMEM) instead of RAM can be helpful for large amounts of data, which would otherwise take up too much space in RAM.
+   このオンラインツール |link_image2cpp| を使用して、画像を配列に変換することができます。
+
+   ``PROGMEM`` キーワードは、配列がArduinoのマイクロコントローラのプログラムメモリに格納されることを示しています。大量のデータをRAMではなくプログラムメモリ（PROGMEM）に格納することで、RAMのスペースを節約することができます。
 
    .. code-block:: arduino
 
       static const unsigned char PROGMEM sunfounderIcon[] = {...};
 
-3. **Setup Function (Initialization and Display)**:
-   The ``setup()`` function initializes the OLED and displays a series of patterns, texts, and animations.
+3. **セットアップ関数（初期化と表示）**：
+
+   ``setup()`` 関数は、OLEDを初期化し、いくつかのパターン、テキスト、アニメーションを表示します。
 
    .. code-block:: arduino
 
@@ -112,14 +113,14 @@ Code explanation
       }
 
 
-Additional Ideas
+追加のアイデア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Use buttons to change the displayed messages or toggle between different patterns and animations.
+- ボタンを使って表示されるメッセージを変更したり、異なるパターンやアニメーションを切り替えたりします。
 
-- Display sensor readings (like temperature or humidity) on the OLED in real-time.
+- センサーの読み取り値（例：温度や湿度）をリアルタイムでOLEDに表示します。
 
-More Projects
+さらに多くのプロジェクト
 ---------------------------
 * :ref:`fun_heartrate_monitor`
 * :ref:`fun_tof_distance_monitor`

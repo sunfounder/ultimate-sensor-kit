@@ -1,78 +1,79 @@
 .. _cpn_mpu6050:
 
-Accelerometer & Gyroscope Moudle (MPU6050)
+加速度センサー & ジャイロスコープモジュール（MPU6050）
 ===============================================================
 
 .. image:: img/05_mpu6050_1.png
     :width: 300
     :align: center
 
-Introduction
+概要
 ---------------------------
-The MPU-6050 is a 6-axis(combines 3-axis Gyroscope, 3-axis Accelerometer) motion tracking devices.Changes in motion, acceleration and rotation can be detected.It is commonly used in robotics, gaming controllers, and other electronic devices that require motion detection. Its high accuracy and cheap cost make it very popular among the DIY community.
+MPU-6050は、3軸のジャイロスコープと3軸の加速度センサーを組み合わせた6軸の動き検出デバイスです。動き、加速、回転の変化を検出することができます。ロボティクス、ゲームコントローラー、その他動き検出が必要な電子デバイスで一般的に使用されています。高い精度と低コストからDIYコミュニティで非常に人気があります。
 
-Principle
+原理
 ---------------------------
-An MPU-650 sensor module consists of a 3-axis accelerometer and a 3-axis gyroscope.
+MPU-6050センサーモジュールは、3軸加速度センサーと3軸ジャイロスコープから構成されています。
 
-Its three coordinate systems are defined as follows:
+この3つの座標系は次のように定義されています：
 
-Put MPU6050 flat on the table, assure that the face with label is upward and a dot on this surface is on the top left corner. Then the upright direction upward is the z-axis of the chip. The direction from left to right is regarded as the X-axis. Accordingly the direction from back to front is defined as the Y-axis.
+MPU6050をテーブルに平置きにし、ラベル面が上向きで、この面の左上隅にドットがある状態を確認します。その後、上方向がチップのz軸となります。左から右への方向がX軸と見なされます。それに対応して、後ろから前への方向がY軸と定義されています。
 
 .. image:: img/05_mpu_2.png
     :width: 300
     :align: center
 
-3-axis Accelerometer
+3軸加速度センサー
 ^^^^^^^^^^^^^^^^^^^^
-The accelerometer works on the principle of piezo electric effect, the ability of certain materials to generate an electric charge in response to applied mechanical stress.
+加速度センサーは、圧電効果の原理に基づいて動作します。この効果は、機械的なストレスが加わると電荷を発生させる特定の材料の能力です。
 
-Here, imagine a cuboidal box, having a small ball inside it, like in the picture above. The walls of this box are made with piezo electric crystals. Whenever you tilt the box, the ball is forced to move in the direction of the inclination, due to gravity. The wall with which the ball collides, creates tiny piezo electric currents. There are totally, three pairs of opposite walls in a cuboid. Each pair corresponds to an axis in 3D space: X, Y and Z axes. Depending on the current produced from the piezo electric walls, we can determine the direction of inclination and its magnitude.
+例として、上の図のような立方体の箱があり、その中に小さいボールが入っていると想像してください。この箱の壁は圧電結晶で作られています。箱を傾けると、重力によってボールは傾斜方向に移動します。このとき、ボールが衝突した壁が微小な圧電電流を発生させます。立方体には、対の壁が3組あります。各対は3D空間でX、Y、Z軸に対応します。圧電壁から発生した電流に基づいて、傾斜の方向とその大きさを決定できます。
 
 .. image:: img/05_mpu_3.png
     :width: 800
     :align: center
 
-We can use the MPU6050 to detect its acceleration on each coordinate axis (in the stationary desktop state, the Z-axis acceleration is 1 gravity unit, and the X and Y axes are 0). If it is tilted or in a weightless/overweight condition, the corresponding reading will change.
+MPU6050を使用して、各座標軸上での加速度を検出することができます（静止状態では、Z軸の加速度は1G、X軸とY軸は0）。傾斜したり、無重力/過重状態になった場合、対応する読み取り値が変わります。
 
-There are four kinds of measuring ranges that can be selected programmatically: +/-2g, +/-4g, +/-8g, and +/-16g (2g by default) corresponding to each precision. Values range from -32768 to 32767.
+計測範囲はプログラムで選択でき、+/-2g、+/-4g、+/-8g、+/-16g（デフォルトは2g）があります。値の範囲は-32768から32767です。
 
-The reading of accelerometer is converted to an acceleration value by mapping the reading from the reading range to the measuring range.
+加速度計の読み取りは、読み取り範囲から計測範囲にマッピングすることで加速度値に変換されます。
 
-Acceleration = (Accelerometer axis raw data / 65536 * full scale Acceleration range) g
+加速度 =（加速度計軸の生データ / 65536 * フルスケール加速度範囲）g
 
-Take the X-axis as an example, when Accelerometer X axis raw data is 16384 and the range is selected as +/-2g:
+例えば、X軸の加速度計の生データが16384で、範囲が+/-2gの場合：
 
-Acceleration along the X axis = (16384 / 65536 * 4) g =1g
+X軸に沿った加速度 =（16384 / 65536 * 4）g = 1g
 
-3-axis Gyroscope
+3軸ジャイロスコープ
 ^^^^^^^^^^^^^^^^^^^^
-Gyroscopes work on the principle of Coriolis acceleration. Imagine that there is a fork like structure, that is in constant back and forth motion. It is held in place using piezo electric crystals. Whenever, you try to tilt this arrangement, the crystals experience a force in the direction of inclination. This is caused as a result of the inertia of the moving fork. The crystals thus produce a current in consensus with the piezo electric effect, and this current is amplified.
+ジャイロスコープは、コリオリ加速度の原理に基づいて動作します。フォークのような構造があり、それが絶えず前後に動いています。この構造は、圧電結晶で固定されています。この配置を傾けると、結晶は傾斜方向に力を受けます。これは、動いているフォークの慣性の結果です。したがって、結晶は圧電効果によって電流を発生させ、この電流が増幅されます。
 
 .. image:: img/05_mpu_4.png
     :width: 800
     :align: center
 
-The Gyroscope also has four kinds of measuring ranges: +/- 250, +/- 500, +/- 1000, +/- 2000. The calculation method and Acceleration are basically consistent.
+ジャイロスコープにも4種類の計測範囲があります：+/- 250、+/- 500、+/- 1000、+/- 2000。計算方法と加速度は基本的に一致しています。
 
-The formula for converting the reading into angular velocity is as follows:
+角速度に読み取りを変換する式は以下の通りです：
 
-Angular velocity = (Gyroscope axis raw data / 65536 * full scale Gyroscope range) °/s
+角速度 =（ジャイロスコープ軸の生データ / 65536 * フルスケールジャイロスコープ範囲）°/秒
 
-The X axis, for example, the Accelerometer X axis raw data is 16384 and ranges + / - 250°/ s:
+例えば、加速度計のX軸の生データが16384で、範囲が+/- 250°/秒の場合：
 
-Angular velocity along the X axis = (16384 / 65536 * 500)°/s =125°/s
+X軸に沿った角速度 =（16384 / 65536 * 500）°/秒 = 125°/秒
 
-Usage
+
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Accelerometer & Gyroscope Moudle(MPU6050) * 1
-- Jumper Wires
+- Arduino Uno R4 または R3 ボード * 1
+- 加速度センサー & ジャイロスコープモジュール（MPU6050） * 1
+- ジャンパーワイヤ
 
-**Circuit Assembly**
+**回路の組み立て**
 
 .. image:: img/05_mpu6050_circuit.png
     :width: 400
@@ -82,41 +83,40 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"Adafruit MPU6050"** and install it.  
+      ライブラリをインストールするには、Arduinoのライブラリマネージャを使用し、 **"Adafruit MPU6050"** で検索してインストールしてください。  
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/e5160412-ce6c-4742-a0f3-0aa259bb9770/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/05-component_mpu6050.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      ご使用のブラウザはビデオタグをサポートしていません。
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-1. The code starts by including the necessary libraries and creating an object for the MPU6050 sensor. This code uses the Adafruit_MPU6050 library, Adafruit_Sensor library, and Wire library. The ``Adafruit_MPU6050`` library is used to interact with the MPU6050 sensor and retrieve acceleration, rotation, and temperature data. The ``Adafruit_Sensor`` library provides a common interface for various types of sensors. The ``Wire`` library is used for I2C communication, which is necessary to communicate with the MPU6050 sensor.
+1. コードは必要なライブラリをインクルードし、MPU6050センサーのオブジェクトを作成することから始まります。このコードでは、Adafruit_MPU6050ライブラリ、Adafruit_Sensorライブラリ、およびWireライブラリを使用しています。 ``Adafruit_MPU6050`` ライブラリはMPU6050センサーとやり取りをし、加速度、回転、温度のデータを取得するために使用されます。 ``Adafruit_Sensor`` ライブラリはさまざまなタイプのセンサーの共通インターフェースを提供します。 ``Wire`` ライブラリはMPU6050センサーと通信するために必要なI2C通信のために使用されます。
 
    .. note:: 
-       To install the library, use the Arduino Library Manager and search for **"Adafruit MPU6050"** and install it. 
-   
+       ライブラリをインストールするには、Arduinoのライブラリマネージャを使用し、 **"Adafruit MPU6050"** で検索してインストールしてください。
+
    .. code-block:: arduino
    
       #include <Adafruit_MPU6050.h>
       #include <Adafruit_Sensor.h>
       #include <Wire.h>
       Adafruit_MPU6050 mpu;
-   
-2. The ``setup()`` function initializes the serial communication and checks if the sensor is detected. If the sensor is not found, the Arduino enters an infinite loop with a "Failed to find MPU6050 chip" message. If found, the accelerometer range, gyro range, and filter bandwidth are set, and a delay is added for stability.
+
+2. ``setup()`` 関数は、シリアル通信を初期化し、センサーが検出されるかどうかを確認します。センサーが見つからない場合、Arduinoは「Failed to find MPU6050 chip」というメッセージとともに無限ループに入ります。見つかった場合は、加速度計の範囲、ジャイロの範囲、フィルター帯域幅が設定され、安定のために遅延が追加されます。
 
    .. code-block:: arduino
    
@@ -146,7 +146,7 @@ Code explanation
         delay(100);
       }
 
-3. In the ``loop()`` function, the program creates events to store the sensor readings and then retrieves the readings. The acceleration, rotation, and temperature values are then printed to the serial monitor.
+3. ``loop()`` 関数では、プログラムはセンサーの読み取りを保存するためのイベントを作成し、読み取りを取得します。次に、加速度、回転、温度の値がシリアルモニタに印刷されます。
 
    .. code-block:: arduino
    
@@ -162,11 +162,7 @@ Code explanation
         delay(1000);
       }
 
-Additional Ideas
+追加のアイディア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Visualize sensor data in graphical format on an LCD or OLED
-
-
-
-
+- LCDやOLEDでセンサーデータをグラフィカルに可視化する

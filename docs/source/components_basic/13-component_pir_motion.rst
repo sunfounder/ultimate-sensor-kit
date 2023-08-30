@@ -1,26 +1,25 @@
 .. _cpn_pir_motion:
 
-PIR Motion Module (HC-SR501)
+PIRモーションモジュール（HC-SR501）
 =====================================
 
 .. image:: img/13_pir_module.png
     :width: 300
     :align: center
 
-Introduction
+概要
 ---------------------------
-The Passive Infrared(PIR) Motion Sensor is a sensor that detects motion. It is commonly used in security systems and automatic lighting systems. The sensor has two slots that detect infrared radiation. When an object, such as a person, passes in front of the sensor, it detects a change in the amount of infrared radiation and triggers an output signal.
+受動赤外線（PIR）モーションセンサーは、動きを検出するセンサーです。これは、セキュリティシステムや自動照明システムでよく使用されています。センサーには、赤外線放射を検出するための二つのスロットがあります。物体（人間など）がセンサーの前を通過すると、赤外線放射量が変化するのを検出し、出力信号が生成されます。
 
-
-Principle
+原理
 ---------------------------
-The PIR sensor is split into two slots that are connected to a differential amplifier. Whenever a stationary object is in front of the sensor, the two slots receive the same amount of radiation and the output is zero. Whenever a moving object is in front of the sensor, one of the slots receives more radiation than the other , which makes the output fluctuate high or low. This change in output voltage is a result of detection of motion.
+PIRセンサーは、2つのスロットに分かれており、それぞれが差動アンプに接続されています。静止した物体がセンサーの前にある場合、2つのスロットは同じ量の放射線を受け、出力はゼロです。動く物体がセンサーの前にある場合、一方のスロットは他方よりも多くの放射線を受け、出力が高いまたは低いと変動します。この出力電圧の変化は、動きの検出によるものです。
 
 .. image:: img/13_pir_working_principle.jpg
     :width: 500
     :align: center
 
-After the sensing module is wired, there is a one-minute initialization. During the initialization, module will output for 0~3 times at intervals. Then the module will be in the standby mode. Please keep the interference of light source and other sources away from the surface of the module so as to avoid the misoperation caused by the interfering signal. Even you’d better use the module without too much wind, because the wind can also interfere with the sensor.
+感知モジュールが配線された後、1分間の初期化が行われます。初期化中には、モジュールは0〜3回の間隔で出力します。その後、モジュールはスタンバイモードになります。モジュールの表面から光源やその他の干渉源を遠ざけることで、干渉信号による誤動作を防ぎましょう。また、風の影響も避けるため、風が少ない環境での使用が望ましいです。
 
 .. image:: img/13_pir_module_back.png
     :width: 350
@@ -30,35 +29,35 @@ After the sensing module is wired, there is a one-minute initialization. During 
     
     <br/><br/> 
 
-Distance Adjustment
+感知距離の調整
 ^^^^^^^^^^^^^^^^^^^^
-Turning the knob of the distance adjustment potentiometer clockwise, the range of sensing distance increases, and the maximum sensing distance range is about 0-7 meters. If turn it anticlockwise, the range of sensing distance is reduced, and the minimum sensing distance range is about 0-3 meters.
+感知距離の調整用ポテンショメータのノブを時計回りに回すと、感知距離の範囲が広がり、最大で約0-7メートルになります。反時計回りに回すと、感知距離の範囲が狭まり、最小で約0-3メートルになります。
 
-Delay adjustment
+遅延時間の調整
 ^^^^^^^^^^^^^^^^^^^^
-Rotate the knob of the delay adjustment potentiometer clockwise, you can also see the sensing delay increasing. The maximum of the sensing delay can reach up to 300s. On the contrary, if rotate it anticlockwise, you can shorten the delay with a minimum of 5s.
+遅延調整用ポテンショメータのノブを時計回りに回すと、感知遅延が増加します。感知遅延の最大は約300秒です。反対に、反時計回りに回すと、最小5秒で遅延が短縮されます。
 
-Two Trigger Modes
+二つのトリガーモード
 ^^^^^^^^^^^^^^^^^^^^
-Choosing different modes by using the jumper cap.
+ジャンパーキャップを使用して、異なるモードを選択できます。
 
-* H: Repeatable trigger mode, after sensing the human body, the module outputs high level. During the subsequent delay period, if somebody enters the sensing range,the output will keep being the high level.
-* L: Non-repeatable trigger mode, outputs high level when it senses the human body. After the delay, the output will change from high level into low level automatically.
+* H: 連続トリガーモード。人体を感知した後、モジュールは高レベルを出力します。その後の遅延期間中も感知範囲内に誰かが入ると、出力は高レベルのままです。
+* L: 非連続トリガーモード。人体を感知すると高レベルを出力し、遅延後に自動的に低レベルに戻ります。
 
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- PIR Motion Module * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- PIRモーションモジュール * 1
+- ジャンパーワイヤー
 
 
-**Circuit Assembly**
+**回路の組み立て**
 
 .. note::
-    The pin markings are hidden by the Fresnel lens. You can open it to view.
+    フレネルレンズによってピンマーキングが隠れています。これを開いて確認することができます。
 
 .. image:: img/13_pir_module_circuit.png
     :width: 400
@@ -68,7 +67,7 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -80,21 +79,21 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/13-component_pir_motion.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザはビデオタグをサポートしていません。
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-1. Setting up the PIR Sensor Pin. The pin for the PIR sensor is defined as pin 2. 
+1. PIRセンサーピンの設定。PIRセンサーのピンは2番ピンとして定義されています。
 
    .. code-block:: arduino
 
       const int pirPin = 2;
       int state = 0;
 
-2. Initializing the PIR Sensor. In the ``setup()`` function, the PIR sensor pin is set as an input. This allows the Arduino to read the state of the PIR sensor.
+2. PIRセンサーの初期化。 ``setup()`` 関数内で、PIRセンサーのピンを入力として設定します。これにより、ArduinoがPIRセンサーの状態を読み取れるようになります。
 
    .. code-block:: arduino
 
@@ -103,7 +102,7 @@ Code explanation
         Serial.begin(9600);
       }
 
-3. Reading from the PIR Sensor and Displaying the Results. In the ``loop()`` function, the state of the PIR sensor is continuously read. 
+3. PIRセンサーからの読み取りと結果の表示。 ``loop()`` 関数内で、PIRセンサーの状態は継続的に読み取られます。
 
    .. code-block:: arduino
 
@@ -117,16 +116,16 @@ Code explanation
         }
       }
 
-   If the state is ``HIGH``, meaning motion is detected, a message "Somebody here!" is printed to the serial monitor. Otherwise, "Monitoring..." is printed.
+   もし状態が``HIGH``であれば、つまり動きが検出された場合、「誰かいる！」とシリアルモニターに表示されます。それ以外の場合は、「監視中...」と表示されます。
 
-Additional Ideas
+追加アイデア
 ^^^^^^^^^^^^^^^^^^^^
 
-- You can add an LED that turns on or blinks when motion is detected. This provides visual feedback in addition to the serial monitor message.
-- Integrate a buzzer to sound an alert when motion is detected.
+- 動きが検出された際に点灯または点滅するLEDを追加することができます。これにより、シリアルモニターメッセージに加えて視覚的なフィードバックが得られます。
+- 動きが検出されたときに警報音を鳴らすブザーを組み込むことができます。
 
-
-More Projects
+その他のプロジェクト
 ---------------------------
 * :ref:`fun_motion_triggered_relay`
 * :ref:`iot_Intrusion_alert_system`
+

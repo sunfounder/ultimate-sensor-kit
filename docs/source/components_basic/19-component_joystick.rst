@@ -1,38 +1,36 @@
 .. _cpn_joystick:
 
-Joystick Module
+ジョイスティックモジュール
 ==========================
 
 .. image:: img/19_joystick.png
     :width: 400
     :align: center
 
-Introduction
+概要
 ---------------------------
-A joystick module is a device that can measure the movement of a knob in two directions: horizontal (X-axis) and vertical (Y-axis). A joystick module can be used to control various things such as games, robots, cameras, etc.
+ジョイスティックモジュールは、ノブの動きを水平（X軸）および垂直（Y軸）の二方向で測定する装置です。ゲームやロボット、カメラなど、多種多様なアプリケーションでの操作に使用できます。
 
-
-Principle
+原理
 ---------------------------
-Joystick operates based on the resistance change of two potentiometers (usually 10-kilo ohms). By changing resistance in x and y directions, Arduino receives varying voltages which are interpreted to x and y coordinates. The processor needs an ADC unit to change the joystick’s analog values into digital values and perform necessary processing.
+ジョイスティックは、通常10キロオームの2つのポテンショメータに基づいて動作します。X軸とY軸の方向で抵抗が変わると、Arduinoはこれをx座標とy座標として解釈するための異なる電圧を受け取ります。プロセッサには、ジョイスティックのアナログ値をデジタル値に変換し、必要な処理を行うためのADCユニットが必要です。
 
-Arduino boards have six 10-bits ADC channels. It means the Arduino’s reference voltage (5 volts) is divided to 1024 segments. When joystick moves along the x-axis, the ADC value rises from 0 to 1023, with the value 512 in the middle. The image below displays the ADC approximate value based on the joystick position.
+Arduinoボードには10ビットのADCチャネルが6つあります。Arduinoの基準電圧（5V）が1024セグメントに分かれます。ジョイスティックがx軸に沿って動くと、ADCの値は0から1023まで上がり、値512が中央になります。以下の画像は、ジョイスティックの位置に基づいたADCのおおよその値を示しています。
 
 .. image:: img/19_joystick_xy.png
     :width: 400
     :align: center
 
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Gas Sensor(MQ2) * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- ジョイスティックモジュール * 1
+- ジャンパーワイヤー
 
-
-**Circuit Assembly**
+**回路組み立て**
 
 .. image:: img/19_joystick_module_circuit.png
     :width: 600
@@ -42,7 +40,7 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -58,17 +56,17 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-#. Setting up the joystick pins. Here, we define which analog pins the X and Y axes of the joystick are connected to.
+#. ジョイスティックのピン設定。ここでは、ジョイスティックのX軸とY軸が接続されているアナログピンを定義します。
 
    .. code-block:: arduino
 
       const int xPin = A0;
       const int yPin = A1;
 
-#. Initialization in the ``setup()`` function. This section sets up the serial communication, allowing us to send and receive messages from the Arduino through the serial monitor.
+#. ``setup()`` 関数内での初期化。このセクションでは、シリアル通信を設定し、Arduinoとシリアルモニター間でメッセージの送受信を可能にします。
 
    .. code-block:: arduino
 
@@ -76,7 +74,7 @@ Code explanation
         Serial.begin(9600);
       }
 
-#. Reading the joystick values in the ``loop()`` function. Continuously, the Arduino reads the X and Y values from the joystick and prints them to the serial monitor. There's a short delay after each print to make the readings more readable and to avoid overwhelming the serial monitor.
+#. ``loop()`` 関数内でのジョイスティック値の読み取り。Arduinoは継続的にジョイスティックからX値とY値を読み取り、それらをシリアルモニターに出力します。各出力の後に短い遅延があり、これにより読み取りがより読みやすく、シリアルモニターが圧倒されないようにしています。
 
    .. code-block:: arduino
        
@@ -88,9 +86,8 @@ Code explanation
         delay(50);
       }
 
-Additional Ideas
-^^^^^^^^^^^^^^^^^^^^
+さらに多くのプロジェクト
+^^^^^^^^^^^^^^^^^^^^^^^
 
-- Use the joystick values to control a servo motor, making it move in response to joystick movements.
-
+- ジョイスティックの値を用いてサーボモーターを制御し、ジョイスティックの動きに応じて動かします。
 

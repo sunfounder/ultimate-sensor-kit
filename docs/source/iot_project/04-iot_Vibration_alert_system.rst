@@ -1,139 +1,133 @@
-
 .. _iot_Intrusion_alert_system:
 
-Vibration Alert System with IFTTT
+IFTTTを使用した振動警報システム
 =====================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/iot/04-iot_Vibration_alert_system.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザはビデオタグをサポートしていません。
    </video>
 
-This project sets up a vibration detection system using an Arduino board (Uno R4 or R3) with an ESP8266 module and a vibration sensor (SW-420). When a vibration is detected, the system sends an HTTP request to an IFTTT server, potentially triggering various actions such as sending a notification or an email.
+このプロジェクトでは、Arduinoボード（Uno R4またはR3）、ESP8266モジュール、そして振動センサー（SW-420）を使用して振動検出システムを構築します。振動が検出されると、システムはIFTTTサーバーにHTTPリクエストを送信し、通知やメールの送信など、様々なアクションをトリガーすることが可能です。
 
-To avoid excessive alerts within a short timeframe, the system has been programmed to send these HTTP requests at a minimum interval of 2 minutes (120000 milliseconds). This interval could be adjusted based on the user's needs.
+短時間に過度なアラートを防ぐため、システムはHTTPリクエストを最低2分（120000ミリ秒）の間隔で送信するようにプログラムされています。この間隔は、ユーザーのニーズに応じて調整することができます。
 
-
-1. Build the Cirduit
+1. 配線の構築
 -----------------------------
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
-
+    ESP8266モジュールは安定した動作環境を提供するために高い電流が必要ですので、9Vのバッテリーが接続されていることを確認してください。
 
 .. image:: img/04-Wiring_Vibration_alert_system.png
     :width: 90%
-
 
 * :ref:`cpn_uno`
 * :ref:`cpn_esp8266`
 * :ref:`cpn_vibration`
 
-
-2. Configure IFTTT
+2. IFTTTの設定
 -----------------------------
 
-|link_ifttt| is a private commercial company founded in 2011 that runs online digital automation platforms which it offers as a service. Their platforms provide a visual interface for making cross-platform if statements to its users, which, as of 2020, numbered 18 million people. 
+|link_ifttt| は2011年に設立された民間の商業企業で、オンラインのデジタル自動化プラットフォームをサービスとして提供しています。このプラットフォームは、2020年時点で1800万人のユーザーに、多様なプラットフォーム間でif文を作成するための視覚的なインターフェースを提供しています。
 
 .. image:: img/04-ifttt_intro.png
     :width: 100%
 
-IFTTT stands for “If This Then That.” Basically, if certain conditions are met, then something else will happen. The “if this” part is called a trigger, and the “then that” part is called an action. It joins smart home devices, social media, delivery apps, and more so it can perform automated tasks.
+IFTTTは「If This Then That」の略で、特定の条件が満たされた場合に別の何かが起こるという仕組みです。"if this" 部分はトリガーと呼ばれ、"then that" 部分はアクションと呼ばれます。スマートホームデバイス、ソーシャルメディア、配信アプリなどを連携させ、自動化されたタスクを実行します。
 
 .. image:: https://images.contentful.com/mrsnpomeucef/78eXVQ2gXnWkCNCykr7Mdt/8b188790f1fda2ed84ab17afe06cf145/img-welcome-02_x2.jpg
-    :width: 100% 
+    :width: 100%
 
-**2.1 Sign up IFTTT**
+**2.1 IFTTTへのサインアップ**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Type "https://ifttt.com" in your browser and click on the "Get started" button located at the center of the page. Fill out the form with your information to create an account.
+お使いのブラウザで "https://ifttt.com" にアクセスし、ページの中央にある「Get started」ボタンをクリックしてください。アカウントを作成するために必要な情報を入力します。
 
 .. image:: img/04-ifttt_signup.png
     :width: 90%
     :align: center
 
-Click "Back" to exit quickstart, return to the IFTTT homepage, refresh the page and log in again.
+「Back」をクリックしてクイックスタートを終了し、IFTTTのホームページに戻ってページを更新し、再度ログインしてください。
 
 .. image:: img/04-ifttt_signup_2.png
     :width: 90%
     :align: center
 
+**2.2 アプレットの作成**
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**2.2 Creating the Applet**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Click "Create" to start creating the Applet.
+「Create」をクリックしてアプレットの作成を開始します。
 
 .. image:: img/new/04-ifttt_create_applet_1_shadow.png
     :width: 80%
     :align: center
 
 .. raw:: html
-    
+
     <br/>  
 
-**If This trigger**
+**If This トリガー**
 
-Click "Add" next to "If This" to add a trigger.
+「If This」の隣にある「Add」をクリックしてトリガーを追加します。
 
 .. image:: img/new/04-ifttt_create_applet_2_shadow.png
     :width: 80%
     :align: center
 
-Search for "webhook" and click on "Webhooks".
+「webhook」を検索し、「Webhooks」をクリックします。
 
 .. image:: img/new/04-ifttt_create_applet_3_shadow.png
     :width: 80%
     :align: center
 
-Click on "Receive a web request" on the page shown in the following image.
+次に表示されるページで「Receive a web request」をクリックします。
 
 .. image:: img/new/04-ifttt_create_applet_4_shadow.png
     :width: 80%
     :align: center
 
-Set the "Event Name" to "vibration_detected".
+「Event Name」には「vibration_detected」と入力します。
 
 .. image:: img/new/04-ifttt_create_applet_5_shadow.png
     :width: 80%
     :align: center
 
 .. raw:: html
-    
+
     <br/>  
 
-**Then That action**
+**Then That アクション**
 
-Click on "Add" next to "Then That" to add a action.
+「Then That」の隣にある「Add」をクリックしてアクションを追加します。
 
 .. image:: img/new/04-ifttt_create_applet_6_shadow.png
     :width: 80%
     :align: center
 
-Search for "email" and click on "Email".
+「email」と検索し、「Email」をクリックします。
 
 .. image:: img/new/04-ifttt_create_applet_7_shadow.png
     :width: 80%
     :align: center
 
-Click on "Send me a email" on the page shown in the following image.
+次に表示されるページで「Send me a email」をクリックします。
 
 .. image:: img/new/04-ifttt_create_applet_8_shadow.png
     :width: 80%
     :align: center
 
-Set the subject and content of the email to be sent when vibration is detected.
+振動が検出されたときに送信されるメールの件名と内容を設定します。
 
-As a reference, the subject is set to "[ESP-01] Detected vibration!!!", and the content is set to "Detected vibration, please confirm the situation promptly! {{OccurredAt}}". When sending an email, ``{{OccurredAt}}`` will be automatically replaced with the time when the event occurred.
+参考として、件名は「[ESP-01] Detected vibration!!!」、内容は「Detected vibration, please confirm the situation promptly! {{OccurredAt}}」と設定されています。メールを送信する際には、``{{OccurredAt}}`` はイベントが発生した時刻に自動的に置き換えられます。
 
 .. image:: img/new/04-ifttt_create_applet_9_shadow.png
     :width: 80%
     :align: center
 
-According to the following steps, complete the creation of the Applet.
+以下の手順に従って、アプレットの作成を完了します。
 
 .. image:: img/new/04-ifttt_create_applet_10_shadow.png
     :width: 80%
@@ -148,27 +142,28 @@ According to the following steps, complete the creation of the Applet.
     :align: center
 
 .. raw:: html
-    
+
     <br/>  
 
 
-3. Run the Code
+
+3. コードの実行
 -----------------------------
 
-#. Open the ``04-Vibration_alert_system.ino`` file under the path of ``ultimate-sensor-kit\iot_project\wifi\04-Vibration_alert_system``, or copy this code into **Arduino IDE**.
+#. ``ultimate-sensor-kit\iot_project\wifi\04-Vibration_alert_system`` パス内の ``04-Vibration_alert_system.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/dd3eb1dd-b516-4160-9be9-b9f09d6885ff/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. You need to enter the ``mySSID`` and ``myPWD`` of the WiFi you are using. 
+#. 使用しているWiFiの ``mySSID`` と ``myPWD`` を入力する必要があります。
 
    .. code-block:: arduino
 
-    String mySSID = "your_ssid";     // WiFi SSID
-    String myPWD = "your_password";  // WiFi Password
+      String mySSID = "your_ssid";     // WiFiのSSID
+      String myPWD = "your_password";  // WiFiのパスワード
 
-#. You also need to modify the ``URL`` with both the event name you set and your  API key.
+#. イベント名とご自身のAPIキーを設定した ``URL`` も変更する必要があります。
 
    .. code-block:: arduino
     
@@ -182,7 +177,7 @@ According to the following steps, complete the creation of the Applet.
        :width: 80%
        :align: center
 
-   Here you can find **your unique API KEY that you must keep private**. Type in the event name as ``vibration_detected``. Your final URL will appear at the bottom of the webpage. Copy this URL.
+   この場所で **必ず秘密にしておくべき独自のAPIキー** を見つけることができます。イベント名は ``vibration_detected`` として入力します。最終的なURLはウェブページの下部に表示されます。このURLをコピーしてください。
 
    .. image:: img/new/04-ifttt_apikey_3_shadow.png
        :width: 80%
@@ -192,28 +187,29 @@ According to the following steps, complete the creation of the Applet.
        :width: 80%
        :align: center
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. ボードとポートを正しく選択した後、 **書き込み** ボタンをクリックします。
 
-#. Open the Serial monitor(set baudrate to **9600**) and wait for a prompt such as a successful connection to appear.
+#. シリアルモニターを開き（ボーレートは **9600** に設定）、成功した接続などのプロンプトが表示されるまで待ちます。
 
    .. image:: img/new/04-ready_shadow.png
           :width: 95%
 
-4. Code explanation
+
+4. コードの解説
 -----------------------------
 
-The ESP8266 module that comes with the kit is already pre-burned with AT firmware. Therefore, the ESP8266 module can be controlled through AT commands. In this project, we use software serial to enable communication between the Arduino Uno board and the ESP8266 module. The Arduino Uno board sends AT commands to the ESP8266 module for network connection and sending requests. You can refer to |link_esp8266_at|.
+このキットに付属するESP8266モジュールは、すでにATファームウェアが焼き付けられています。そのため、ESP8266はATコマンドによって制御できます。本プロジェクトでは、Arduino UnoボードとESP8266モジュール間の通信を有効にするためにSoftwareSerialを使用します。Arduino Unoボードは、ネットワークへの接続とリクエスト送信のためにESP8266モジュールにATコマンドを送ります。詳細は |link_esp8266_at| を参照してください。
 
-The Uno board reads sensor values and sends AT commands to the ESP8266 module. The ESP8266 module connects to a network and sends requests to IFTTT servers. 
+Unoボードはセンサー値を読み取り、ESP8266モジュールにATコマンドを送信します。ESP8266モジュールはネットワークに接続し、IFTTTサーバーにリクエストを送信します。
 
-#. Include SoftwareSerial library for serial communication between Arduino and ESP8266
+#. ArduinoとESP8266間のシリアル通信のためにSoftwareSerialライブラリをインクルード
 
    .. code-block:: arduino
-   
-     #include <SoftwareSerial.h>      
+
+     #include <SoftwareSerial.h>
      SoftwareSerial espSerial(2, 3);  
 
-#. Configure WiFi credentials and IFTTT server details
+#. WiFiの認証情報とIFTTTサーバーの詳細を設定
 
    .. code-block:: arduino
    
@@ -223,7 +219,7 @@ The Uno board reads sensor values and sends AT commands to the ESP8266 module. T
      String myPORT = "80";
      String URL = "/trigger/xxx/with/key/xxxx";  
 
-#. Define variables for the vibration sensor and alert frequency control
+#. 振動センサーとアラート頻度制御のための変数を定義
 
    .. code-block:: arduino
    
@@ -231,7 +227,7 @@ The Uno board reads sensor values and sends AT commands to the ESP8266 module. T
      const unsigned long postingInterval = 120000L;
      const int sensorPin = 7;
 
-#. In ``setup()``, initialize serial communication, ESP8266 module and connect to WiFi
+#. ``setup()`` 内で、シリアル通信とESP8266モジュールを初期化し、WiFiに接続
 
    .. code-block:: arduino
    
@@ -249,7 +245,7 @@ The Uno board reads sensor values and sends AT commands to the ESP8266 module. T
         }
       }
 
-#. In ``loop()``, detect vibration and send alert if time interval has passed
+#. ``loop()`` 内で、振動を検出し、時間間隔が経過した場合にアラートを送信
 
    .. code-block:: arduino
    
@@ -271,7 +267,7 @@ The Uno board reads sensor values and sends AT commands to the ESP8266 module. T
         delay(500);
       }
 
-#. sendAlert() constructs HTTP request and sends it via ESP8266
+#. ``sendAlert()`` でHTTPリクエストを構築し、ESP8266経由で送信
 
    .. code-block:: arduino
    
@@ -287,9 +283,9 @@ The Uno board reads sensor values and sends AT commands to the ESP8266 module. T
       
      }  
 
-#. Handling AT Commands sendATCommand()
+#. ATコマンドの処理 ``sendATCommand()``
 
-   This function sends AT commands to the ESP8266 and collects responses. 
+   この関数は、ESP8266にATコマンドを送信し、レスポンスを収集します。
    
    .. code-block:: arduino
    
@@ -316,9 +312,7 @@ The Uno board reads sensor values and sends AT commands to the ESP8266 module. T
           Serial.println("--------------------------------------");
         }
 
-
-
-**Reference**
+**参考文献**
 
 * |link_esp8266_at|
 * |link_ifttt_welcome|

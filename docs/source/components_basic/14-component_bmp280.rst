@@ -1,32 +1,31 @@
 .. _cpn_bmp280:
 
-Temperature, Humidity & Pressure Sensor (BMP280)
+温度、湿度、気圧センサー（BMP280）
 ===============================================================
 
 .. image:: img/14_gy_bme280_3.3_module.png
     :width: 300
     :align: center
 
-Introduction
+はじめに
 ---------------------------
-A GY-BMP280-3.3 high precision atmospheric pressure sensor module is a device that can measure the air pressure and temperature with high accuracy. It can help you monitor the weather conditions and create projects that use altitude or barometric pressure data.
+GY-BMP280-3.3高精度気圧センサーモジュールは、大気圧と温度を高精度で測定できるデバイスです。このモジュールにより、気象状況のモニタリングや高度、気圧データを使用したプロジェクトが実現可能です。
 
-Principle
+原理
 ---------------------------
-A GY-BMP280-3.3 high precision atmospheric pressure sensor module works by using a BMP280 sensor from Bosch that can measure both pressure and temperature. The BMP280 sensor has a piezoresistive pressure sensor and a thermistor inside a sealed metal chamber. The piezoresistive sensor changes its resistance according to the pressure applied to the chamber. The thermistor changes its resistance according to the temperature inside the chamber. The module has an integrated circuit that converts the resistance values into digital signals and sends them to the Arduino through either I2C or SPI interface. 
+GY-BMP280-3.3高精度気圧センサーモジュールは、Bosch製のBMP280センサーを使用して圧力と温度の両方を測定します。このBMP280センサーには、密封された金属チャンバー内に圧電抵抗式圧力センサーとサーミスタが搭載されています。圧電抵抗式センサーは、チャンバーに加えられた圧力に応じて抵抗値を変更し、サーミスタはチャンバー内の温度に応じて抵抗値を変更します。このモジュールには、これらの抵抗値をデジタル信号に変換し、ArduinoにI2CまたはSPIインターフェースで送信する集積回路が組み込まれています。
 
-
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Temperature, Humidity & Pressure Sensor(GY-BMP280-3.3) * 1
-- Jumper Wires
+- Arduino Uno R4またはR3ボード * 1
+- 温度、湿度、気圧センサー（GY-BMP280-3.3） * 1
+- ジャンパーワイヤー
 
 
-**Circuit Assembly**
+**回路組み立て**
 
 .. image:: img/14_gy_bme280_3.3_module_circuit.png
     :width: 550
@@ -36,11 +35,11 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
-   To install the library, use the Arduino Library Manager and search for **"Adafruit BMP280"** and install it. 
+   ライブラリをインストールするには、Arduino Library Managerで**"Adafruit BMP280"**と検索してインストールしてください。
 
 .. raw:: html
     
@@ -50,20 +49,20 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/14-component_bmp280.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      ご利用のブラウザはビデオタグに対応していません。
    </video>
    <br/><br/>  
 
-Code explanation
+コード説明
 ^^^^^^^^^^^^^^^^^^^^
 
-1. Including Libraries and Initialization. Necessary libraries are included and the BMP280 sensor is initialized for communication using the I2C interface.
+1. ライブラリのインクルードと初期化。必要なライブラリがインクルードされ、BMP280センサーはI2Cインターフェースを使用して通信のために初期化されます。
 
    .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"Adafruit BMP280"** and install it. 
+      ライブラリをインストールするには、Arduino Library Managerで **"Adafruit BMP280"** と検索してインストールしてください。
 
-   - Adafruit BMP280 Library: This library provides an easy-to-use interface for the BMP280 sensor, allowing the user to read temperature, pressure, and altitude. 
-   - Wire.h: Used for I2C communication.
+   - Adafruit BMP280ライブラリ：このライブラリは、BMP280センサーから温度、圧力、高度を簡単に読み取るためのインターフェースを提供します。
+   - Wire.h：I2C通信に使用されます。
 
    .. raw:: html
     
@@ -76,8 +75,7 @@ Code explanation
       #define BMP280_ADDRESS 0x76
       Adafruit_BMP280 bmp;  // use I2C interface
 
-
-2. The ``setup()`` function initializes the Serial communication, checks for the BMP280 sensor, and sets up the sensor with default settings.
+2. ``setup()`` 関数では、シリアル通信を初期化し、BMP280センサーの存在を確認し、デフォルトの設定でセンサーを設定します。
 
    .. code-block:: arduino
 
@@ -89,7 +87,7 @@ Code explanation
         status = bmp.begin(BMP280_ADDRESS);
         // ... (rest of the setup code)
 
-3. The ``loop()`` function reads data from the BMP280 sensor for temperature, pressure, and altitude. This data is printed to the Serial Monitor.
+3. ``loop()`` 関数では、BMP280センサーから温度、圧力、高度のデータを読み取り、シリアルモニターに表示します。
 
    .. code-block:: arduino
 
@@ -99,12 +97,12 @@ Code explanation
       }
 
 
-Additional Ideas
+追加アイデア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Integrate an LCD display module to show the readings instead of or in addition to the Serial Monitor.
-- Set threshold values for temperature and pressure. Use a buzzer or LED to alert when these thresholds are exceeded.
+- シリアルモニターに加えて、または代わりにLCDディスプレイモジュールを使用して読み取り値を表示します。
+- 温度と圧力の閾値を設定し、これらが超過された場合にブザーまたはLEDで警告します。
 
-More Projects
+その他のプロジェクト
 ---------------------------
 * :ref:`iot_Weather_monitor`

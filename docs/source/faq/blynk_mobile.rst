@@ -1,27 +1,26 @@
 .. _blynk_mobile:
 
-How to use Blynk on mobile device?
-======================================
+モバイルデバイスでBlynkを使う方法
+=======================================
 
 .. note::
 
-    As datastreams can only be created in Blynk on the web, you will need to reference different projects to create datastreams on the web, then follow the tutorial below to create widgets in Blynk on your mobile device.
+    データストリームはBlynkのWeb版でのみ作成可能なため、Webでデータストリームを作成する別のプロジェクトを参照した後、以下のチュートリアルに従ってモバイルデバイス上のBlynkでウィジェットを作成してください。
 
+1. モバイルデバイスでGoogle PlayまたはAPP Storeを開き、「Blynk IoT」（Blynk（legacy）ではない）と検索してダウンロードします。
+2. APPを開いたらログインします。このアカウントはWebクライアントで使用するものと同一である必要があります。
+3. **ダッシュボード** に移動します（まだ作成していない場合は新規作成）。モバイル版とWeb版の **ダッシュボード** は互いに独立しています。
 
-#. Open Google Play or APP Store on your mobile device and search for "Blynk IoT" (not Blynk(legacy)) to download.
-#. After opening the APP, login in, this account should be the same as the account used on the web client.
-#. Then go to **Dashboard** (if you don't have one, create one) and you will see that the **Dashboard** for mobile and web are independent of each other.
+    .. image:: img/new/APP_1_shadow.png
 
-   .. image:: img/new/APP_1_shadow.png
+4. **編集** アイコンをクリックします。
+5. 空白のエリアをクリックします。
+6. Webページで選択したと同じウィジェット、例えば **ジョイスティック** ウィジェットを選択します。
 
-#. Click **Edit** Icon.
-#. Click on the blank area. 
-#. Choose the same widget as on the web page, such as select a **Joystick** widget.
+    .. image:: img/new/APP_2_shadow.png
 
-   .. image:: img/new/APP_2_shadow.png
+7. 空白のエリアに **ジョイスティック** ウィジェットが表示されるので、それをクリックします。
+8. **ジョイスティック** の設定画面が表示されます。Webページで設定した **Xvalue** と **Yvalue** データストリームを選択します。各ウィジェットがそれぞれ異なるプロジェクト内のデータストリームに対応している点に注意してください。
+9. **ダッシュボード** ページに戻って、 **ジョイスティック** を操作できます。
 
-#. Now you will see a **Joystick** widget appear in the blank area, click on it.
-#. **Joystick** Settings will appear, select the **Xvalue** and **Yvalue** datastreams you just set in the web page. Note that each widget corresponds to a different datastream in each project.
-#. Go back to the **Dashboard** page and you can operate the **Joystick** when you want.
-
-   .. image:: img/new/APP_3_shadow.png
+    .. image:: img/new/APP_3_shadow.png

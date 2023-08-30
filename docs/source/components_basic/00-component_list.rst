@@ -1,22 +1,20 @@
-Component Basics
+コンポーネントの基本
 ====================================
 
+パッケージを開いた後、製品説明に記載されている数量のコンポーネントが揃っているか、また、すべてのコンポーネントが良好な状態であるか確認してください。
 
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+* :download:`SunFounder Ultimate Sensor Kit コンポーネントリスト </_static/pdf/sunfounder_ultimate_sensor_kit_components_list.pdf>`
 
-* :download:`SunFounder Ultimate Sensor Kit Components List </_static/pdf/sunfounder_ultimate_sensor_kit_components_list.pdf>`
+以下は、各コンポーネントの紹介です。作動原理と対応するプロジェクトも含まれています。 **各コンポーネントには簡単なコード例があり、すぐに始められるようにしています。**
 
-
-The following is an introduction to each component, including its working principle and corresponding project. **Each component has a simple code example to help you get started quickly.**
-
-**Control Board**
+**コントロールボード**
 
 .. toctree:: 
     :maxdepth: 1
     
     36-component_uno
 
-**Sensor**
+**センサー**
 
 .. toctree::
     :maxdepth: 1
@@ -42,7 +40,7 @@ The following is an introduction to each component, including its working princi
     19-component_joystick
     20-component_VL53L0X
 
-**Display**
+**ディスプレイ**
 
 .. toctree::
     :maxdepth: 1
@@ -52,7 +50,7 @@ The following is an introduction to each component, including its working princi
     23-component_traffic
     24-component_rgb
 
-**Driver**
+**アクチュエータ**
 
 .. toctree::
     :maxdepth: 1
@@ -63,12 +61,10 @@ The following is an introduction to each component, including its working princi
     28-component_pump
     29-component_ttmotor
 
-**Wireless & IoT**
+**無線 & IoT**
 
 .. toctree::
     :maxdepth: 1
 
     37-component_esp8266
     38-component_jdy31
-
-

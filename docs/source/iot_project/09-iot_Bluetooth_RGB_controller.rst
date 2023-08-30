@@ -1,24 +1,22 @@
-
 .. _iot_Bluetooth_RGB_controller:
 
-Bluetooth RGB Controller
+Bluetooth RGB コントローラー
 =============================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/iot/09-iot_Bluetooth_RGB_controller.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザはビデオタグをサポートしていません。
    </video>
 
-This project uses an Android app to control the color of an RGB LED through Bluetooth technology using a smartphone.
+このプロジェクトは、Androidアプリを使用して、スマートフォンを介したBluetooth技術でRGB LEDの色を制御します。
 
-This Android application will be constructed utilizing a complimentary web-based platform known as |link_appinventor|. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone.
+このAndroidアプリケーションは、|link_appinventor| という無料のウェブベースのプラットフォームを活用して構築されます。このプロジェクトは、Arduinoとスマートフォンのインターフェースに慣れる絶好の機会です。
 
-This project control an RGB LED connected to an Arduino Uno via a JDY-31 Bluetooth module. The Android application is used to send various color values to the Arduino Uno board via Bluetooth, based on user operations on the GUI. The program on Uno board receives RGB color values as characters from a serial port over Bluetooth and adjusts the LED's color accordingly.
+このプロジェクトでは、Arduino Unoに接続されたRGB LEDをJDY-31 Bluetoothモジュール経由で制御します。Androidアプリケーションは、GUI上でのユーザー操作に基づいて、Arduino Unoボードに様々な色の値をBluetooth経由で送信します。Unoボード上のプログラムは、Bluetoothを介したシリアルポートからRGB色値を文字として受け取り、LEDの色をそれに応じて調整します。
 
-
-1. Build the Cirduit
+1. 回路を作成する
 -----------------------------
 
 .. image:: img/09-Wiring_Bluetooth_rgb_controller.png
@@ -29,145 +27,145 @@ This project control an RGB LED connected to an Arduino Uno via a JDY-31 Bluetoo
 * :ref:`cpn_rgb`
 
 
-2. Create the Android App
+2. Androidアプリを作成する
 -----------------------------
 
-The Android application will be developed using a free web application known as |link_appinventor|. 
-MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop 
-features allowing for the creation of simplistic applications.
+Androidアプリケーションは、|link_appinventor| という無料のウェブアプリケーションを使用して開発されます。
+MIT App Inventorは、直感的なドラッグアンドドロップ機能を備えているため、Android開発の優れたスタート地点です。
 
-Now, let's begin.
+それでは、始めましょう。
 
-#. Go to |link_appinventor_login|, and click "online tool" to login. You will require a Google account to register with MIT App Inventor.
+#. |link_appinventor_login| にアクセスし、「online tool」をクリックしてログインします。MIT App Inventorで登録するには、Googleアカウントが必要です。
 
    .. image:: img/new/09-ai_signup_shadow.png
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``Control_RGB_LED.aia`` file located in the path ``ultimate-sensor-kit\iot_project\bluetooth\04-Bluetooth_RGB_controller``.
-
-   You can also directly download here: :download:`Control_RGB_LED.aia</_static/other/Control_RGB_LED.aia>`
+#. ログイン後、 **Projects** -> **Import project (.aia) from my computer** に移動します。次に、 ``ultimate-sensor-kit\iot_project\bluetooth\04-Bluetooth_RGB_controller`` のパスにある ``Control_RGB_LED.aia`` ファイルをアップロードします。
 
    .. image:: img/new/09-ai_import_shadow.png
         :align: center
 
-#. Upon uploading the ``.aia`` file, you will see the application on the MIT App Inventor software. This is a pre-configured template. You can modify this template after you have familiarized yourself with MIT App Inventor through the following steps.
+#. ``.aia`` ファイルをアップロードした後、MIT App Inventorソフトウェア上でアプリケーションが表示されます。これは事前に設定されたテンプレートです。以下のステップでMIT App Inventorに慣れた後、このテンプレートを変更することができます。
 
    .. image:: img/new/09-ai_import_2_shadow.png
 
-#. In MIT App Inventor, you have 2 primary sections: the **Designer** and the **Blocks**. You can switch between these two sections in the upper right corner of the page.
+#. MIT App Inventorには、 **Designer** と **Blocks** という2つの主要なセクションがあります。ページの右上隅でこれら2つのセクションを切り替えることができます。
 
    .. image:: img/new/09-ai_intro_1_shadow.png
 
-#. The **Designer** allows you to add buttons, text, screens, and modify the overall aesthetic of your application.
+#. **Designer** では、ボタン、テキスト、画面を追加し、アプリケーションの全体的な見た目を変更できます。
 
    .. image:: img/new/09-ai_intro_2_shadow.png
    
-#. Next, there's the **Blocks** section. This section lets you craft custom functionalities for your app, allowing you to program each component on the app's GUI to achieve desired features.
+#. 次に、 **Blocks** セクションがあります。このセクションでは、アプリのGUIの各コンポーネントをプログラムして、必要な機能を実装できます。
 
    .. image:: img/new/09-ai_intro_3_shadow.png
 
-#. To install the application on a smartphone, navigate to the **Build** tab.
+#. スマートフォンにアプリケーションをインストールするには、 **Build** タブに移動します。
 
    .. image:: img/new/09-ai_intro_4_shadow.png
 
-   * You can generate a ``.apk`` file. After selecting this option, a page will appear allowing you to choose between downloading a ``.apk`` file or scanning a QR code for installation. Follow the installation guide to complete the application installation. 
+   * ``.apk`` ファイルを生成できます。このオプションを選択すると、 ``.apk`` ファイルをダウンロードするか、QRコードをスキャンしてインストールするかを選ぶページが表示されます。インストールガイドに従ってアプリケーションのインストールを完了してください。
 
-     You also download our pre-compiled APK here: :download:`Control_RGB_LED.apk</_static/other/Control_RGB_LED.apk>`
-
-   * If you wish to upload this app to Google Play or another app marketplace, you can generate a ``.aab`` file.
+     こちらからも事前にコンパイルされたAPKをダウンロードできます：:download:`Control_RGB_LED.apk</_static/other/Control_RGB_LED.apk>`
 
 
-3. Upload the Code
+   * Google Playまたは別のアプリマーケットにこのアプリをアップロードしたい場合は、 ``.aab`` ファイルを生成できます。
+
+
+
+3. コードのアップロード
 -----------------------------
 
-#. Open the ``09-Bluetooth_RGB_controller.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\04-Bluetooth_RGB_controller``, or copy this code into **Arduino IDE**.
+#. ``ultimate-sensor-kit\iot_project\bluetooth\04-Bluetooth_RGB_controller`` のパス下にある ``09-Bluetooth_RGB_controller.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/dc140b60-64ed-4ec0-8e50-53c5340c267e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. 適切なボードとポートを選択した後、 **書き込み** ボタンをクリックします。
 
-#. Open the Serial monitor(set baudrate to **9600**) to view debug messages. 
+#. シリアルモニターを開き（ボーレートを **9600** に設定）、デバッグメッセージを確認します。
 
-4. App and Bluetooth moudule Connection
+4. アプリとBluetoothモジュールの接続
 -----------------------------------------------
 
-Ensure that the application created earlier is installed on your smartphone.
+既に作成したアプリがスマートフォンにインストールされていることを確認してください。
 
-#. Initially, turn on **Bluetooth** on your smartphone.
+#. まず、スマートフォンの **Bluetooth** をオンにします。
 
    .. image:: img/new/09-app_1_shadow.png
       :width: 60%
       :align: center
 
-#. Navigate to the **Bluetooth settings** on your smartphone and look for names like **JDY-31-SPP**.
+#. スマートフォンの **Bluetooth設定** に移動し、**JDY-31-SPP** のような名前を探します。
 
    .. image:: img/new/09-app_2_shadow.png
       :width: 60%
       :align: center
 
-#. After clicking it, agree to the **Pair** request in the pop-up window. If prompted for a pairing code, please enter "1234".
+#. クリック後、ポップアップウィンドウで **ペアリング** の要求に同意します。ペアリングコードが求められた場合は「1234」と入力します。
 
    .. image:: img/new/09-app_3_shadow.png
       :width: 60%
       :align: center
 
-#. Now open the newly installed **Control_RGB_LED** APP.
+#. 新しくインストールされた **Control_RGB_LED** アプリを開きます。
 
    .. image:: img/new/09-app_4_shadow.png
       :width: 25%
       :align: center
 
-#. In the APP, click on **Connect Bluetooth** to establish a connection between the APP and Bluetooth module.
+#. アプリ内で **Connect Bluetooth** をクリックし、アプリとBluetoothモジュールとの接続を確立します。
 
    .. image:: img/new/09-app_5_shadow.png
       :width: 60%
       :align: center
 
-#. This page displays a list of all paired Bluetooth devices. Choose the ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` option from the list. The name of each device is listed next to its MAC address.
+#. このページには、すべてのペアリング済みBluetoothデバイスが一覧表示されます。リストから ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` オプションを選択します。各デバイスの名前は、そのMACアドレスの隣に表示されます。
 
    .. image:: img/new/09-app_6_shadow.png
       :width: 60%
       :align: center
 
-#. If you don't see any devices on the page shown above, it could be because this app is not authorized to scan for nearby devices. In such a case, you will need to adjust the settings manually.
+#. 上記のページにデバイスが表示されていない場合、このアプリが周辺のデバイスをスキャンする権限がない可能性があります。その場合は、設定を手動で調整する必要があります。
 
-   * To access the **APP Info** page, long-press the app icon and select it. Alternatively, if you have another method to reach this page, use that instead.
+   * **アプリ情報** ページにアクセスするには、アプリアイコンを長押しして選択します。または、このページに到達する他の方法があれば、それを使用してください。
 
    .. image:: img/new/09-app_8_shadow.png
          :width: 60%
          :align: center
 
-   * Navigate to the **Permissions** page.
+   * **許可** ページに移動します。
 
    .. image:: img/new/09-app_9_shadow.png
          :width: 60%
          :align: center
 
-   * To enable the APP to scan for nearby devices, go to **Nearby devices** and select **Always**.
+   * アプリが周辺のデバイスをスキャンできるようにするには、 **周辺のデバイス** に移動して **常時許可** を選択します。
 
    .. image:: img/new/09-app_10_shadow.png
          :width: 60%
          :align: center
 
-   * Now, restart the APP and repeat steps 5 and 6 to successfully connect to Bluetooth.
+   * その後、アプリを再起動し、ステップ5と6を繰り返して、Bluetoothに成功裏に接続します。
 
-#. After successfully connecting, you will be redirected to the main page where it will show "connected". From there, you can easily modify the RGB values and alter the color of the display by clicking on the **Change Color** button.
+#. 接続が成功すると、メインページにリダイレクトされ、「connected」と表示されます。ここから、 **Change Color** ボタンをクリックして、RGB値を簡単に変更し、ディスプレイの色を変えることができます。
 
    .. image:: img/new/09-app_7_shadow.png
       :width: 60%
       :align: center
 
 
-5. Code explanation
+
+5. コードの説明
 -----------------------------------------------
 
-#. Setting up the Bluetooth module and initializing variables:
+#. Bluetoothモジュールと変数の初期設定:
 
-   The code begins by including the ``SoftwareSerial`` library and initializing the necessary variables. 
-   
+   コードは ``SoftwareSerial`` ライブラリをインクルードし、必要な変数を初期設定するところから始まります。
+
    .. code-block:: arduino
 
       #include <SoftwareSerial.h>
@@ -193,9 +191,9 @@ Ensure that the application created earlier is installed on your smartphone.
       int flag = 0;      
       char currentColor;  
 
-#. setup() function:
+#. setup() 関数について:
 
-   Here, the RGB LED pins are set as output pins, and the serial communication is initialized with a baud rate of 9600 for both the Arduino's main serial and the Bluetooth module.
+   ここでは、RGB LEDの各ピンを出力ピンとして設定し、ArduinoとBluetoothモジュールの両方のシリアル通信をボーレート9600で初期化します。
    
    .. code-block:: arduino
 
@@ -207,15 +205,15 @@ Ensure that the application created earlier is installed on your smartphone.
         bleSerial.begin(9600);
       }
 
-#. Reading and processing the data:
+#. データの読み取りと処理:
 
-   In the main loop, the code continuously checks for incoming data from the Bluetooth module. Upon receiving any data, it processes the characters to identify RGB values and sets the color of the RGB LED accordingly.
+   メインループ内で、Bluetoothモジュールからの着信データを継続的に監視します。データが到着すると、それを解析してRGB値を特定し、RGB LEDの色を適切に設定します。
    
    .. code-block:: arduino
 
       void loop() {
         while (bleSerial.available() > 0) {
-          ... [data reading and processing]
+          ... [データの読み取りと処理]
         }
 
         if (flag == 0) {

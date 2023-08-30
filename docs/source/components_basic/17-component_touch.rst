@@ -1,44 +1,40 @@
 .. _cpn_touch:
 
-Touch Sensor Module
+タッチセンサモジュール
 ==========================
 
 .. image:: img/17_touch_sensor_moudle.png
     :width: 200
     :align: center
 
-Introduction
+概要
 ---------------------------
-The Touch switch sensor (also called touch button or touch switch) is widely used to control devices (e.g. touchable lamp). It has the same functionality as a button. It is used instead of the button on many new devices because it makes the product look neat.
+タッチスイッチセンサ（タッチボタンまたはタッチスイッチとも呼ばれる）は、製品をスッキリと見せるために多くの新しいデバイスでボタンの代わりに使用されています（例：タッチ式のランプ）。
 
-
-Principle
+原理
 ---------------------------
-This module is a capacitive touch switch module based on a touch sensor IC (TTP223B). In the normal state, the module outputs a low level with low power consumption; when a finger touches the corresponding position, the module outputs a high level and becomes low level again after the finger is released.
+このモジュールは、タッチセンサIC（TTP223B）に基づいた静電容量型タッチスイッチモジュールです。通常状態では、モジュールは低消費電力で低レベルを出力し、指が対応する位置に触れると高レベルを出力し、指が離れた後に再び低レベルになります。
 
-Here is how the capacitive touch switch works:
-
-A capacitive touch switch has different layers—top insulating face plate followed by touch plate, another insulating layer and then ground plate.
+静電容量型タッチスイッチの動作原理：
 
 .. image:: img/17_touch_sensor_moudle_principle.jpeg
     :width: 400
     :align: center
 
-In practice, a capacitive sensor can be made on a double-sided PCB by regarding one side as the touch sensor and the opposite side as ground plate of the capacitor. When power is applied across these plates, the two plates get charged. In equilibrium state, the plates have the same voltage as the power source.
+実際には、静電容量型センサは、一方の面をタッチセンサとし、反対側の面をコンデンサの接地板として二層のPCB上に作成できます。電源がこれらのプレートに適用されると、2つのプレートは充電されます。平衡状態では、プレートは電源と同じ電圧を持ちます。
 
-The touch detector circuit has an oscillator whose frequency is dependent on capacitance of the touchpad. When a finger is moved close to the touchpad, additional capacitance causes frequency of this internal oscillator to change. The detector circuit tracks oscillator frequency at timed intervals, and when the shift crosses the threshold change, the circuit triggers a key-press event.
+タッチ検出回路には、タッチパッドの容量に依存する振動子があります。指がタッチパッドに近づくと、追加の容量がこの内部振動子の周波数を変更します。検出回路は、タイムインターバルで振動子の周波数を追跡し、シフトがしきい値の変更を超えると、キープレスイベントをトリガーします。
 
-Usage
+使い方
 ---------------------------
 
-**Hardware components**
+**使用する電子部品**
 
-- Arduino Uno R4 or R3 board * 1
-- Touch Sensor Module * 1
-- Jumper Wires
+- Arduino Uno R4 または R3 ボード * 1
+- タッチセンサモジュール * 1
+- ジャンパワイヤ
 
-
-**Circuit Assembly**
+**回路の組み立て**
 
 .. image:: img/17_touch_sensor_moudle_circuit.png
     :width: 400
@@ -48,13 +44,12 @@ Usage
     
     <br/><br/>   
 
-Code
+コード
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/3a0a411f-7bdc-43f0-82e9-5978e4167dd7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
 
 .. raw:: html
 
@@ -64,16 +59,16 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+コードの説明
 ^^^^^^^^^^^^^^^^^^^^
 
-#. Setting up the necessary variables. We start by defining the pin number where the touch sensor is connected.
+#. タッチセンサが接続されているピン番号を定義して、必要な変数を設定します。
 
    .. code-block:: arduino
 
       const int sensorPin = 7;
 
-#. Initialization in the ``setup()`` function. Here, we specify that the sensor pin will be used for input, the built-in LED will be used for output, and we start the serial communication to allow messages to be sent to the serial monitor.
+#. ``setup()`` 関数内での初期設定。ここでは、センサピンが入力として使用され、内蔵LEDが出力として使用されるよう指定します。また、シリアルモニタにメッセージを送るためのシリアル通信を開始します。
 
    .. code-block:: arduino
 
@@ -83,7 +78,7 @@ Code explanation
         Serial.begin(9600);
       }
 
-#. Continuously, the Arduino checks if the touch sensor is activated. If touched, it turns on the LED and sends a "Touch detected!" message. If not touched, it turns off the LED and sends a "No touch detected..." message. A delay is introduced to prevent the sensor from being read too quickly.
+#. Arduinoは継続的にタッチセンサが活性化されているかどうかを確認します。タッチが検出された場合、LEDを点灯させて「Touch detected!」というメッセージを送ります。タッチが検出されなかった場合は、LEDを消灯して「No touch detected...」というメッセージを送ります。センサが高速で読み取られないように、遅延が導入されます。
 
    .. code-block:: arduino
 
@@ -98,13 +93,12 @@ Code explanation
         delay(100);
       }
 
-Additional Ideas
+追加のアイデア
 ^^^^^^^^^^^^^^^^^^^^
 
-- Use different LED colors to indicate touch
-- The touch sensor could be used to control more complex elements, like a motor or a relay. 
+- タッチを示すために異なるLEDの色を使用する
+- タッチセンサは、モーターやリレーなど、より複雑な要素を制御するために使用できる。
 
-
-More Projects
+さらに多くのプロジェクト
 ---------------------------
 * :ref:`fun_touch_toggle_light`
