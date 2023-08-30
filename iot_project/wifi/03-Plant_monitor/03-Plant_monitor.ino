@@ -12,7 +12,7 @@
 // Template ID, Device Name and Auth Token are provided by the Blynk Cloud
 // See the Device Info tab, or Template settings
 #define BLYNK_TEMPLATE_ID "TMPLxxxxxxxxx"
-#define BLYNK_TEMPLATE_NAME "Plant monitoring"
+#define BLYNK_TEMPLATE_NAME "Plant Monitor"
 #define BLYNK_AUTH_TOKEN "xxxxxxxxxxxx"
 
 //Set debug prints on Serial Monitor

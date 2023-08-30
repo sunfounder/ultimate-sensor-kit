@@ -12,7 +12,7 @@
 // Template ID, Device Name and Auth Token are provided by the Blynk Cloud
 // See the Device Info tab, or Template settings
 #define BLYNK_TEMPLATE_ID "TMPLxxxxxxxxxxxx"
-#define BLYNK_TEMPLATE_NAME "Home intrusion detection"
+#define BLYNK_TEMPLATE_NAME "Intrusion Alert System"
 #define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxxxx"
 
 #define BLYNK_PRINT Serial  // Enables debug prints on Serial Monitor
