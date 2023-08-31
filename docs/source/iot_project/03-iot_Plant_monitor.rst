@@ -116,7 +116,7 @@ At last, remember to save the template.
    .. code-block:: arduino
     
       #define BLYNK_TEMPLATE_ID "TMPxxxxxxx"
-      #define BLYNK_TEMPLATE_NAME "Flame Detection Alert"
+      #define BLYNK_TEMPLATE_NAME "Plant Monitor"
       #define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxx"
 
 
@@ -156,7 +156,7 @@ At last, remember to save the template.
    .. code-block:: arduino
     
       #define BLYNK_TEMPLATE_ID "TMPLxxxxxxx"
-      #define BLYNK_TEMPLATE_NAME "Plant monitoring"
+      #define BLYNK_TEMPLATE_NAME "Plant Monitor"
       #define BLYNK_AUTH_TOKEN "xxxxxxxxxxx"
       #define BLYNK_PRINT Serial
       #include <ESP8266_Lib.h>

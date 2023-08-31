@@ -93,7 +93,7 @@ Configure the Web Dashboard according to the following diagram. Be sure to bind 
    .. code-block:: arduino
     
       #define BLYNK_TEMPLATE_ID "TMPxxxxxxx"
-      #define BLYNK_TEMPLATE_NAME "Flame Detection Alert"
+      #define BLYNK_TEMPLATE_NAME "Remote relay"
       #define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxx"
 
 

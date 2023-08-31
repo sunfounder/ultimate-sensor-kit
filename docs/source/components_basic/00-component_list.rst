@@ -52,7 +52,7 @@ The following is an introduction to each component, including its working princi
     23-component_traffic
     24-component_rgb
 
-**Driver**
+**Actuator**
 
 .. toctree::
     :maxdepth: 1

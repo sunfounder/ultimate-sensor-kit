@@ -28,7 +28,7 @@ Usage
 **Hardware components**
 
 - Arduino Uno R4 or R3 board * 1
-- Gas Sensor(MQ2) * 1
+- Joystick Module * 1
 - Jumper Wires
 
 

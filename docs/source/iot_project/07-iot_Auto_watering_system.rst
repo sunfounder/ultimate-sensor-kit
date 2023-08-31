@@ -100,7 +100,7 @@ Configure the Web Dashboard according to the following diagram. We used widgets 
    .. code-block:: arduino
     
       #define BLYNK_TEMPLATE_ID "TMPxxxxxxx"
-      #define BLYNK_TEMPLATE_NAME "Flame Detection Alert"
+      #define BLYNK_TEMPLATE_NAME "Auto watering system"
       #define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxx"
 
 
@@ -140,7 +140,7 @@ Configure the Web Dashboard according to the following diagram. We used widgets 
    .. code-block:: arduino
          
       #define BLYNK_TEMPLATE_ID "TMPLxxxxxx"
-      #define BLYNK_TEMPLATE_NAME "Auto water"
+      #define BLYNK_TEMPLATE_NAME "Auto watering system"
       #define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxxxx"
       #define BLYNK_PRINT Serial
       #include <ESP8266_Lib.h>

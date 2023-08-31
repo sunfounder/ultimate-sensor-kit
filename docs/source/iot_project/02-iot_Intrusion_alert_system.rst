@@ -149,7 +149,7 @@ At last, remember to save the template.
    .. code-block:: arduino
     
       #define BLYNK_TEMPLATE_ID "TMPxxxxxxx"
-      #define BLYNK_TEMPLATE_NAME "Flame Detection Alert"
+      #define BLYNK_TEMPLATE_NAME "Intrusion Alert System"
       #define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxx"
 
 #. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. 
@@ -188,7 +188,7 @@ At last, remember to save the template.
    .. code-block:: arduino
 
       #define BLYNK_TEMPLATE_ID "TMPxxxx"
-      #define BLYNK_TEMPLATE_NAME "Home intrusion detection"
+      #define BLYNK_TEMPLATE_NAME "Intrusion Alert System"
       #define BLYNK_AUTH_TOKEN "xxxxxx-"
       #define BLYNK_PRINT Serial
 

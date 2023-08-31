@@ -160,7 +160,7 @@ In case you need to edit the template, you can click on the edit button in the u
    .. code-block:: arduino
     
       #define BLYNK_TEMPLATE_ID "TMPxxxxxxx"
-      #define BLYNK_TEMPLATE_NAME "Flame Detection Alert"
+      #define BLYNK_TEMPLATE_NAME "Flame Alert System"
       #define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxx"
    
    .. image:: img/new/01-create_device_1_shadow.png
