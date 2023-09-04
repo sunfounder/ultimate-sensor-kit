@@ -23,39 +23,32 @@ This isn't just about following steps; it’s about understanding, experimenting
 
 Why just be a spectator when you can be a creator? Begin your journey into the captivating world of electronics with the Ultimate Sensor Kit. Your adventure starts here!
 
-If you have any questions or other interesting ideas, feel free to send an email to cs@sunfounder.com.
+If you have any questions or other interesting ideas, feel free to send an email to service@sunfounder.com.
 
-.. * :ref:`About the display language`
-.. * :ref:`Table of contents`
-.. * :ref:`Copyright Notice`
+* :ref:`About the display language`
+* :ref:`Table of contents`
+* :ref:`Copyright Notice`
 
 
-.. About the display language
-.. --------------------------------
+About the display language
+--------------------------------
 
-.. In addition to English, we are working on other languages for this course. Please contact service@sunfounder.com if you are interested in helping, and we will give you a free product in return. 
-.. In the meantime, we recommend using Google Translate to translate English into your desired language.
+.. note::
 
-.. The steps are as follows.
+    In addition to English, we are working on other languages for this course. 
+    Please contact service@sunfounder.com if you are interested in helping, 
+    and we will give you a free product in return. 
 
-.. * In this course page, right-click and select **Translate to xx**. If the current language is not what you want, you can change it later.
 
-.. .. image:: img/new/translate1_shadow.png
-..     :align: center
+Currently the online tutorial supports English, German and Japanese. Please click the **Read the Docs** icon in the lower left corner of the page to change the display language.
 
-.. * There will be a language popup in the upper right corner. Click on the menu button to **choose another language**.
+.. image:: img/translation.png
+    :align: center
 
-.. .. image:: img/new/translate2_shadow.png
-..     :align: center
+.. raw:: html
 
-.. * Select the language from the inverted triangle box, and then click **Done**.
+    <br/>
 
-.. .. image:: img/new/translate3_shadow.png
-..     :align: center
-
-.. .. raw:: html
-    
-..     <br/>   <br/>   
 
 Table of contents
 --------------------------------
