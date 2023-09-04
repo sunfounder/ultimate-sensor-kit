@@ -77,7 +77,7 @@ MIT App Inventorは、直感的なドラッグ&ドロップ機能によってシ
 3. コードのアップロード
 -----------------------------
 
-#. ``ultimate-sensor-kit\iot_project\bluetooth\03-Bluetooth_lock_controller`` のパスにある ``08-Bluetooth_lock_controller.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーアンドペーストします。
+#. ``ultimate-sensor-kit\iot_project\bluetooth\03-Bluetooth_lock_controller`` のパスにある ``03-Bluetooth_lock_controller.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーアンドペーストします。
 
    .. raw:: html
        

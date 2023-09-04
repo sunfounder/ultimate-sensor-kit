@@ -72,7 +72,7 @@ MIT App Inventorは、直感的なドラッグ＆ドロップ機能で簡単な�
 3. コードをアップロードする
 -----------------------------
 
-#. ``ultimate-sensor-kit\iot_project\bluetooth\07-Bluetooth_oled`` のパスにある ``12-Bluetooth_oled.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
+#. ``ultimate-sensor-kit\iot_project\bluetooth\07-Bluetooth_oled`` のパスにある ``07-Bluetooth_oled.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
    .. note:: 
       ライブラリをインストールするには、Arduino Library Managerを使用して **"Adafruit SSD1306"** および **"Adafruit GFX"** を検索し、それをインストールします。

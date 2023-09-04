@@ -81,7 +81,7 @@ MIT App Inventorは、直感的なドラッグアンドドロップ機能を用�
 3. コードをアップロードする
 -----------------------------
 
-#. ``ultimate-sensor-kit\iot_project\bluetooth\08-Bluetooth_remote_relay`` のパスの下で ``13-Bluetooth_remote_relay.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーしてください。
+#. ``ultimate-sensor-kit\iot_project\bluetooth\08-Bluetooth_remote_relay`` のパスの下で ``08-Bluetooth_remote_relay.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーしてください。
 
    .. raw:: html
 

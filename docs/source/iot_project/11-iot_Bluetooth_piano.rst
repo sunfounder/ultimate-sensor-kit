@@ -75,7 +75,7 @@ MIT App Inventorは、直感的なドラッグアンドドロップ機能によ�
 3. コードをアップロードする
 -----------------------------
 
-#. ``ultimate-sensor-kit\iot_project\bluetooth\06-Bluetooth_piano`` パス内の ``11-Bluetooth_piano.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーしてください。
+#. ``ultimate-sensor-kit\iot_project\bluetooth\06-Bluetooth_piano`` パス内の ``06-Bluetooth_piano.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーしてください。
 
    .. raw:: html
        

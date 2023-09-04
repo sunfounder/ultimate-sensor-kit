@@ -28,6 +28,9 @@ ToF 距離モニター
 
 #. ``ultimate-sensor-kit\fun_project\09-ToF_distance_monitor`` のパス内の ``09-ToF_distance_monitor.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
+   .. note:: 
+      ライブラリのインストールには、Arduinoライブラリマネージャで **「Adafruit_VL53L0X」** を検索してインストールします。
+
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/8077aa45-8e0c-4c13-9211-b23926b79462/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
@@ -41,6 +44,9 @@ ToF 距離モニター
 本プロジェクトでは、VL53L0X Time of Flight（ToF）センサーを用いて、光が対象物まで到達して戻ってくるまでの時間を測定し、距離を計算します。測定した距離はミリメートル単位でOLEDディスプレイに表示されます。シリアル通信も利用して、測定値をモニタリングやデバッグのために出力します。OLEDディスプレイとVL53L0Xセンサーは、共にArduinoとI2Cプロトコルで通信します。
 
 #. 必要なライブラリをインクルードし、コンポーネントを初期化
+
+   .. note:: 
+      ライブラリのインストールには、Arduinoライブラリマネージャで **「Adafruit_VL53L0X」** を検索してインストールします。
 
    .. code-block:: arduino
 

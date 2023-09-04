@@ -78,7 +78,7 @@ MIT App Inventorは、直感的なドラッグアンドドロップ機能を備�
 3. コードのアップロード
 -----------------------------
 
-#. ``ultimate-sensor-kit\iot_project\bluetooth\04-Bluetooth_RGB_controller`` のパス下にある ``09-Bluetooth_RGB_controller.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
+#. ``ultimate-sensor-kit\iot_project\bluetooth\04-Bluetooth_RGB_controller`` のパス下にある ``04-Bluetooth_RGB_controller.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
    .. raw:: html
        

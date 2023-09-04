@@ -25,7 +25,7 @@ Bluetooth信号機
 2. コードをアップロード
 -----------------------------
 
-#. ``ultimate-sensor-kit\iot_project\bluetooth\02-Bluetooth_traffic_light`` のパスの下にある ``16-Bluetooth_traffic_light.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
+#. ``ultimate-sensor-kit\iot_project\bluetooth\02-Bluetooth_traffic_light`` のパスの下にある ``02-Bluetooth_traffic_light.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
    .. raw:: html
        

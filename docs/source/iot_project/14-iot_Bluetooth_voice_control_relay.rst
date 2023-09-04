@@ -91,7 +91,7 @@ Bluetoothによる音声制御リレー
 3. コードをアップロードする
 -----------------------------
 
-#. ``ultimate-sensor-kit\iot_project\bluetooth\09-Bluetooth_voice_control_relay`` パス下の ``14-Bluetooth_voice_control_relay.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
+#. ``ultimate-sensor-kit\iot_project\bluetooth\09-Bluetooth_voice_control_relay`` パス下の ``09-Bluetooth_voice_control_relay.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
    .. raw:: html
        

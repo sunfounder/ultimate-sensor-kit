@@ -74,7 +74,7 @@ Androidアプリは、|link_appinventor| という無料のWebアプリケーシ
 3. コードのアップロード
 -----------------------------
 
-#. ``ultimate-sensor-kit\iot_project\bluetooth\05-Bluetooth_environmental_monitor`` のパス下で ``10-Bluetooth_environmental_monitor.ino`` ファイルを開く、またはこのコードを **Arduino IDE** にコピーしてください。
+#. ``ultimate-sensor-kit\iot_project\bluetooth\05-Bluetooth_environmental_monitor`` のパス下で ``05-Bluetooth_environmental_monitor.ino`` ファイルを開く、またはこのコードを **Arduino IDE** にコピーしてください。
 
    .. note:: 
       ライブラリをインストールするには、Arduinoライブラリマネージャーで **"DHT sensor library"** を検索してインストールしてください。

@@ -25,7 +25,7 @@ Bluetooth LCD
 2. コードのアップロード
 -----------------------------
 
-#. ``ultimate-sensor-kit\iot_project\bluetooth\01-Bluetooth_lcd`` のパスにある ``15-Bluetooth_lcd.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーアンドペーストしてください。
+#. ``ultimate-sensor-kit\iot_project\bluetooth\01-Bluetooth_lcd`` のパスにある ``01-Bluetooth_lcd.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーアンドペーストしてください。
 
    .. note:: 
       ライブラリをインストールするには、Arduinoライブラリマネージャーで **"LiquidCrystal I2C"** と検索してインストールしてください。

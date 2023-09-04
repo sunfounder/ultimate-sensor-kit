@@ -28,6 +28,9 @@
 
 #. ``ultimate-sensor-kit\fun_project\06-Heart_rate_monitor`` のパスの下で ``06-Heart_rate_monitor.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーペーストしてください。
 
+   .. note:: 
+      ライブラリをインストールするには、Arduinoライブラリマネージャーで  **"SparkFun MAX3010x"** と検索し、インストールしてください。
+
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/62989671-0ed0-479a-a91c-9c8f37c170ab/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
@@ -41,6 +44,9 @@
 1. **ライブラリのインクルードと初期宣言**:
 
    コードは、OLEDディスプレイ、MAX30102センサー、および心拍数計算に必要なライブラリを含むように始まります。さらに、OLEDディスプレイの設定と心拍数計算の変数が宣言されます。
+
+   .. note:: 
+      ライブラリをインストールするには、Arduinoライブラリマネージャーで  **"SparkFun MAX3010x"** と検索し、インストールしてください。
 
    .. code-block:: arduino
 
