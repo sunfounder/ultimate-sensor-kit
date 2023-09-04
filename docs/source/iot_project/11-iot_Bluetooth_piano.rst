@@ -78,7 +78,7 @@ Now, let's begin.
 3. Upload the Code
 -----------------------------
 
-#. Open the ``11-Bluetooth_piano.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\06-Bluetooth_piano``, or copy this code into **Arduino IDE**.
+#. Open the ``06-Bluetooth_piano.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\06-Bluetooth_piano``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

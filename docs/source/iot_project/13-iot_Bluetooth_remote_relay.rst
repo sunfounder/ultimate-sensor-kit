@@ -83,7 +83,7 @@ Now, let's begin.
 3. Upload the Code
 -----------------------------
 
-#. Open the ``13-Bluetooth_remote_relay.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\08-Bluetooth_remote_relay``, or copy this code into **Arduino IDE**.
+#. Open the ``08-Bluetooth_remote_relay.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\08-Bluetooth_remote_relay``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

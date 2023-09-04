@@ -81,7 +81,7 @@ Now, let's begin.
 3. Upload the Code
 -----------------------------
 
-#. Open the ``09-Bluetooth_RGB_controller.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\04-Bluetooth_RGB_controller``, or copy this code into **Arduino IDE**.
+#. Open the ``04-Bluetooth_RGB_controller.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\04-Bluetooth_RGB_controller``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        

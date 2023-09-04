@@ -3,7 +3,7 @@
 1.4 Connecting the R4 board to Blynk
 --------------------------------------------
 
-#. Reconnect the ESP8266 module and R4 board, here the software serial is used, so TX and RX are connected to pins 2 and 3 of R3 board respectively.
+#. Reconnect the ESP8266 module and R4 board, here the software serial is used, so TX and RX are connected to pins 2 and 3 of R4 board respectively.
 
   .. note::
 

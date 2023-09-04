@@ -97,7 +97,7 @@ Now, let's begin.
 3. Upload the Code
 -----------------------------
 
-#. Open the ``14-Bluetooth_voice_control_relay.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\09-Bluetooth_voice_control_relay``, or copy this code into **Arduino IDE**.
+#. Open the ``09-Bluetooth_voice_control_relay.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\09-Bluetooth_voice_control_relay``, or copy this code into **Arduino IDE**.
 
    .. raw:: html
        
