@@ -28,6 +28,9 @@ This Arduino project aims to build a simple Heart Rate Monitor using a MAX30102 
 
 #. Open the ``06-Heart_rate_monitor.ino`` file under the path of ``ultimate-sensor-kit\fun_project\06-Heart_rate_monitor``, or copy this code into **Arduino IDE**.
 
+   .. note:: 
+      To install the library, use the Arduino Library Manager and search for **"SparkFun MAX3010x"** and install it. 
+
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/62989671-0ed0-479a-a91c-9c8f37c170ab/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
@@ -42,6 +45,9 @@ The main principle behind this project is to capture the pulsation of blood flow
 1. **Library Inclusions and Initial Declarations**:
 
    The code begins by including necessary libraries for the OLED display, MAX30102 sensor, and heart rate calculation. Additionally, the configuration for the OLED display and the variables for heart rate calculation are declared.
+
+   .. note:: 
+      To install the library, use the Arduino Library Manager and search for **"SparkFun MAX3010x"** and install it. 
 
    .. code-block:: arduino
 

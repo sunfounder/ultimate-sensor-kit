@@ -29,6 +29,9 @@ This project is designed to measure and display the distance to an object using 
 
 #. Open the ``09-ToF_distance_monitor.ino`` file under the path of ``ultimate-sensor-kit\fun_project\09-ToF_distance_monitor``, or copy this code into **Arduino IDE**.
 
+   .. note:: 
+   To install the library, use the Arduino Library Manager and search for **"Adafruit_VL53L0X"** and install it.
+
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/8077aa45-8e0c-4c13-9211-b23926b79462/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
@@ -40,6 +43,9 @@ This project is designed to measure and display the distance to an object using 
 This project uses the VL53L0X Time of Flight sensor to measure distances by measuring the time it takes for light to travel to an object and return to the sensor. The OLED display then shows the distance measurement in millimeters. Serial communication is also used to print the measurement values for monitoring and debugging. Both the OLED display and the VL53L0X sensor communicate with the Arduino using the I2C protocol.
 
 #. Include necessary libraries and initialize components
+
+   .. note:: 
+      To install the library, use the Arduino Library Manager and search for **"Adafruit_VL53L0X"** and install it.
 
    .. code-block:: arduino
 
