@@ -1,56 +1,53 @@
 .. _cpn_potentiometer:
 
-Potentiometer Module
+Potentiometer-Modul
 ==========================
 
 .. image:: img/08_potentiomete_module.png
     :width: 300
     :align: center
 
-Introduction
+Einleitung
 ---------------------------
-The potentiometer module is an electronic component that changes its resistance depending on the position of the twist knob.It can be used for various purposes, such as controlling the volume of a speaker, the brightness of a LED, or the speed of a motor.
+Das Potentiometer-Modul ist ein elektronisches Bauelement, dessen Widerstandswert sich je nach Stellung des Drehknopfs ändert. Es findet vielseitige Anwendungsbereiche, wie zum Beispiel die Lautstärkeregelung eines Lautsprechers, die Helligkeitssteuerung einer LED oder die Geschwindigkeitskontrolle eines Motors.
 
-
-Principle
+Funktionsprinzip
 ---------------------------
-Potentiometer is also a resistance component with 3 terminals and its resistance value can be adjusted according to some regular variation.
+Ein Potentiometer ist ebenfalls ein Widerstandsbauelement mit drei Anschlüssen, dessen Widerstandswert gemäß einer bestimmten Regelung angepasst werden kann.
 
-Potentiometers come in various shapes, sizes, and values, but they all have the following things in common:
+Potentiometer gibt es in verschiedenen Formen, Größen und Werten, aber sie haben alle folgende Eigenschaften gemeinsam:
 
-- They have three terminals (or connection points).
-- They have a knob, screw, or slider that can be moved to vary the resistance between the middle terminal and either one of the outer terminals.
-- The resistance between the middle terminal and either one of the outer terminals varies from 0 Ω to the maximum resistance of the pot as the knob, screw, or slider is moved.
+- Sie verfügen über drei Anschlüsse.
+- Sie haben einen Drehknopf, eine Schraube oder einen Schieber, um den Widerstand zwischen dem mittleren und einem der äußeren Anschlüsse zu variieren.
+- Der Widerstand zwischen dem mittleren und einem der äußeren Anschlüsse variiert von 0 Ω bis zum maximalen Widerstand des Potentiometers, wenn der Drehknopf, die Schraube oder der Schieber bewegt wird.
 
-Here is the circuit symbol of potentiometer.
+Hier ist das Schaltungssymbol eines Potentiometers.
 
 .. image:: img/08_potentiometer_symbol_2.png
     :width: 200
     :align: center
 
-The functions of the potentiometer in the circuit are as follows:
+Die Funktionen des Potentiometers im Stromkreis sind wie folgt:
 
-#. Serving as a voltage divider
-    Potentiometer is a continuously adjustable resistor. When you adjust the shaft or sliding handle of the potentiometer, the movable contact will slide on the resistor. At this point, a voltage can be output depending on the voltage applied onto the potentiometer and the angle the movable arm has rotated to or the travel it has made.
+#. Als Spannungsteiler
+    Das Potentiometer ist ein kontinuierlich einstellbarer Widerstand. Wenn man die Welle oder den Schiebegriff des Potentiometers verstellt, bewegt sich der gleitende Kontakt auf dem Widerstandselement. Dabei kann eine Spannung in Abhängigkeit von der am Potentiometer anliegenden Spannung und dem Drehwinkel oder dem Verfahrweg des beweglichen Armes abgegriffen werden.
 
-#. Serving as a rheostat
-    When the potentiometer is used as a rheostat, connect the middle pin and one of the other 2 pins in the circuit. Thus you can get a smoothly and continuously changed resistance value within the travel of the moving contact.
+#. Als Rheostat
+    Wenn das Potentiometer als Rheostat eingesetzt wird, werden der mittlere Pin und einer der anderen beiden Pins im Stromkreis verbunden. So erhält man einen stufenlos und kontinuierlich veränderbaren Widerstandswert innerhalb des Verfahrwegs des gleitenden Kontakts.
 
-#. Serving as a current controller
-    When the potentiometer acts as a current controller, the sliding contact terminal must be connected as one of the output terminals.
+#. Als Stromregler
+    Wenn das Potentiometer als Stromregler fungiert, muss der gleitende Kontakt als einer der Ausgangsanschlüsse verbunden werden.
 
-
-
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Benötigte Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- Potentiometer Module * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Board * 1
+- Potentiometer-Modul * 1
+- Jumper-Kabel
 
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/08_potentiometer_module_circuit.png
     :width: 400
@@ -60,13 +57,12 @@ Usage
     
     <br/><br/>   
 
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/dd4ed045-ccca-48f2-a938-e90bb5257830/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
 
 .. raw:: html
 
@@ -76,16 +72,16 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erläuterung
 ^^^^^^^^^^^^^^^^^^^^
 
-#. This line of code defines the pin number to which the potentiometer is connected on the Arduino board.
+#. Diese Codezeile definiert die Pin-Nummer, an die das Potentiometer am Arduino-Board angeschlossen ist.
 
    .. code-block:: arduino
 
       const int sensorPin = A0;
 
-#. The ``setup()`` function is a special function in Arduino that is executed only once when the Arduino is powered on or reset. In this project, the ``Serial.begin(9600)`` command initiates serial communication at a baud rate of 9600.
+#. Die ``setup()``-Funktion ist eine spezielle Funktion im Arduino-Umfeld, die nur einmal ausgeführt wird, wenn das Arduino-Board eingeschaltet oder zurückgesetzt wird. In diesem Projekt wird die serielle Kommunikation mit ``Serial.begin(9600)`` bei einer Baudrate von 9600 eingeleitet.
 
    .. code-block:: arduino
 
@@ -93,7 +89,7 @@ Code explanation
         Serial.begin(9600);  
       }
 
-#. The ``loop()`` function is the main function where the program runs repeatedly. In this function, the ``analogRead()`` function reads the analog value from the potentiometer and prints it to the serial monitor using ``Serial.println()``. The ``delay(50)`` command makes the program wait for 50 milliseconds before taking the next reading.
+#. Die ``loop()``-Funktion ist die Hauptfunktion, in der das Programm wiederholt ausgeführt wird. In dieser Funktion liest die ``analogRead()``-Funktion den Analogwert vom Potentiometer und gibt ihn mit ``Serial.println()`` im seriellen Monitor aus. Der Befehl ``delay(50)`` lässt das Programm für 50 Millisekunden pausieren, bevor der nächste Wert gelesen wird.
 
    .. code-block:: arduino
 
@@ -102,13 +98,14 @@ Code explanation
         delay(50);
       }
 
-Additional Ideas
-^^^^^^^^^^^^^^^^^^^^
+Weitere Ideen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Control an LED's brightness: The potentiometer's analog value could be used to control the brightness of an LED connected to a PWM-enabled pin on the Arduino.
+- Steuerung der LED-Helligkeit: Der Analogwert des Potentiometers könnte verwendet werden, um die Helligkeit einer an einem PWM-fähigen Pin des Arduino angeschlossenen LED zu steuern.
    
-- Control a Servo Motor's Position: By mapping the analog value to the range of the servo's position (usually 0 to 180 degrees), the potentiometer could be used as a controller for the servo motor.
+- Steuerung der Position eines Servomotors: Durch die Zuordnung des Analogwerts zum Bereich der Position des Servomotors (in der Regel von 0 bis 180 Grad) könnte das Potentiometer als Controller für den Servomotor dienen.
 
-More Projects
+Weitere Projekte
 ---------------------------
 * :ref:`fun_potentiometer_scale_value`
+

@@ -1,45 +1,44 @@
 .. _cpn_soil:
 
-Capacitive Soil Moisture Module
-=====================================
+Kapazitives Bodenfeuchtigkeitsmodul
+===================================
 
 .. image:: img/10_soil_mositure_module.png
     :width: 600
     :align: center
 
-Introduction
----------------------------
+Einführung
+----------
 
-The Soil Moisture Module is a sensor that measures the moisture content of soil. It is used in agriculture to monitor soil moisture levels and help farmers determine when to water their crops.
+Das Bodenfeuchtigkeitsmodul ist ein Sensor zur Messung des Feuchtigkeitsgehalts von Erde. Es findet insbesondere in der Landwirtschaft Anwendung, um den Feuchtigkeitszustand des Bodens zu überwachen und Landwirten eine bessere Bewässerungsplanung zu ermöglichen.
 
-Principle
----------------------------
+Funktionsprinzip
+----------------
 
-This capacitive soil moisture sensor is different from most of the resistive sensors on the market, using the principle of capacitive induction to detect soil moisture. It avoids the problem that resistive sensors are highly susceptible to corrosion and greatly extends its working life.
+Im Gegensatz zu den meisten resistiven Sensoren, die derzeit auf dem Markt erhältlich sind, basiert dieses kapazitive Bodenfeuchtigkeitsmodul auf dem Prinzip der kapazitiven Induktion. Dadurch wird das Problem der Korrosionsanfälligkeit, das bei resistiven Sensoren auftritt, effektiv umgangen, was die Lebensdauer des Sensors erheblich verlängert.
 
-It is made of corrosion-resistant materials and has an excellent service life. Insert it into the soil around plants and monitor real-time soil moisture data. The module includes an on-board voltage regulator that allows it to operate over a voltage range of 3.3 ~ 5.5 V. It is ideal for low-voltage microcontrollers with 3.3 V and 5 V supplies.
+Der Sensor besteht aus korrosionsbeständigen Materialien und bietet eine ausgezeichnete Langlebigkeit. Einfach in die Erde neben den Pflanzen einstecken und die Bodenfeuchtigkeit in Echtzeit überwachen. Das Modul enthält einen integrierten Spannungsregler und arbeitet in einem Spannungsbereich von 3,3 bis 5,5 V, wodurch es für Mikrocontroller mit 3,3 V und 5 V Versorgungsspannung ideal ist.
 
-The hardware schematic of the capacitive soil moisture sensor is shown below.
+Die Hardware-Schaltung des kapazitiven Bodenfeuchtigkeitssensors ist unten dargestellt.
 
 .. image:: img/10_solid_schematic.png
     :width: 500
     :align: center
 
-There is a fixed frequency oscillator, which is built with a 555 timer IC. The generated square wave is then fed to the sensor like a capacitor. However, for the square wave signal, the capacitor has a certain reactance or, for the sake of argument, a resistor with a pure ohmic resistor (10k resistor on pin 3) to form a voltage divider.
+Der Sensor verfügt über einen festfrequenten Oszillator, der mit einem 555-Timer-IC realisiert ist. Das generierte Rechtecksignal wird dem Sensor zugeführt, der als Kondensator wirkt. Das Signal durchläuft eine Reaktanz, die in Kombination mit einem rein ohmschen Widerstand (10k Widerstand am Pin 3) einen Spannungsteiler bildet.
 
-The higher the soil moisture, the higher the capacitance of the sensor. As a result, the square wave has less reactance, which reduces the voltage on the signal line, and the smaller the value of the analog input through the microcontroller.
+Je höher die Bodenfeuchtigkeit, desto größer ist die Kapazität des Sensors. Dadurch verringert sich die Reaktanz des Rechtecksignals, was die Spannung auf der Signalleitung reduziert und den Analogeingangswert am Mikrocontroller entsprechend verkleinert.
 
-Usage
----------------------------
+Anwendungsbeispiele
+--------------------
 
-**Hardware components**
+**Benötigte Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- Soil Moisture Module * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Board * 1
+- Bodenfeuchtigkeitsmodul * 1
+- Jumperkabel
 
-
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/10_soil_mositure_module_circuit.png
     :width: 400
@@ -49,8 +48,8 @@ Usage
     
     <br/><br/>   
 
-Code
-^^^^^^^^^^^^^^^^^^^^
+Programmcode 
+^^^^^^^^^^^^^^^^
 
 .. raw:: html
     
@@ -61,22 +60,22 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/10-component_soil.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
    <br/><br/>  
 
-Code explanation
-^^^^^^^^^^^^^^^^^^^^
+Codeerklärung
+^^^^^^^^^^^^^
 
-1. Defining sensor pin
-In this part of the code, a constant integer named sensorPin is defined and assigned the value A0. A0 is the analog input pin on the Arduino board where the soil moisture sensor is connected.
+1. Definition des Sensorpins:
 
 .. code-block:: arduino
 
     const int sensorPin = A0;
 
-2. Setting up the serial communication
-The ``setup()`` function is called once when the Arduino is powered on or reset. Here, we initialize the Serial library at 9600 baud rate. The baud rate is the rate at which information is transferred. In this case, it's 9600 bits per second (bps).
+In diesem Codeabschnitt wird eine Konstante mit dem Namen `sensorPin` definiert und dem Wert A0 zugewiesen, der dem analogen Eingangspin auf dem Arduino-Board entspricht, an den der Bodenfeuchtigkeitssensor angeschlossen ist.
+
+2. Initialisierung der seriellen Kommunikation:
 
 .. code-block:: arduino
 
@@ -84,8 +83,9 @@ The ``setup()`` function is called once when the Arduino is powered on or reset.
       Serial.begin(9600);
     }
 
-3. Reading data and printing to the serial monitor
-The loop function is where the main logic of the program resides. This function loops indefinitely once the program starts. Inside the loop, we use the ``analogRead()`` function to read the data from the moisture sensor and print it to the Serial Monitor. We then pause the program for 500 milliseconds using the delay function before taking the next reading.
+Die Funktion ``setup()`` wird einmal aufgerufen, wenn der Arduino eingeschaltet oder zurückgesetzt wird. Hier initialisieren wir die serielle Kommunikation mit einer Baudrate von 9600.
+
+3. Daten lesen und auf dem seriellen Monitor ausgeben:
 
 .. code-block:: arduino
 
@@ -94,17 +94,19 @@ The loop function is where the main logic of the program resides. This function 
       delay(500);
     }
 
+In der `loop()`-Funktion wird die Hauptlogik des Programms ausgeführt. Diese Schleife läuft ununterbrochen, sobald das Programm gestartet ist. Wir verwenden die Funktion ``analogRead()``, um die Daten vom Feuchtigkeitssensor zu lesen und sie auf dem seriellen Monitor auszugeben. Anschließend wird das Programm für 500 Millisekunden pausiert, bevor der nächste Wert erfasst wird.
+
 .. note:: 
     
-    The smaller the value, the higher the soil moisture level.
+    Je kleiner der Wert, desto höher ist der Feuchtigkeitsgehalt im Boden.
 
-Additional Ideas
-^^^^^^^^^^^^^^^^^^^^
+Weitere Ideen
+^^^^^^^^^^^^^
 
-- Integrate a buzzer or LED that activates if the moisture level goes below a certain threshold. This way, you'll have a physical alert to water your plants.
-- You could connect a water pump and automate the watering process. When the moisture level drops below a threshold, the Arduino can activate the pump to water the plants.
+- Integration eines Buzzers oder einer LED, die aktiviert wird, wenn der Feuchtigkeitswert unter einen bestimmten Schwellenwert fällt. So erhalten Sie einen physischen Hinweis, wann es Zeit ist, Ihre Pflanzen zu gießen.
+- Automatisierung des Bewässerungsprozesses durch Anschluss einer Wasserpumpe. Fällt die Bodenfeuchtigkeit unter einen bestimmten Wert, kann der Arduino die Pumpe aktivieren, um die Pflanzen zu bewässern.
 
-More Projects
----------------------------
+Weitere Projekte
+----------------
 * :ref:`iot_Plant_monitor`
 * :ref:`iot_Auto_watering_system`

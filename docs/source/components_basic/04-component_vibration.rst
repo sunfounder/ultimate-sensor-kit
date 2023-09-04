@@ -1,31 +1,30 @@
 .. _cpn_vibration:
 
-Vibration Sensor Module (SW-420)
+Vibrationssensor-Modul (SW-420)
 =====================================
 
 .. image:: img/04_sw420_vibration_module.png
     :width: 400
     :align: center
 
-Introduction
+Einführung
 ---------------------------
-SW-420 vibration sensor is a module that can detect vibrations or shocks on a surface. It can be used for various purposes, such as detecting door knocks, machine malfunctions, car collisions, or alarm systems. It operates from 3.3 V to 5 V. The module has three peripherals, two LEDs, one for the power status and the other for the sensor output. In addition, there is a potentiometer that can be further used to control the threshold point of the vibration.
+Das SW-420 Vibrationssensor-Modul ist in der Lage, Vibrationen oder Erschütterungen auf einer Oberfläche zu erfassen. Es kann für verschiedene Zwecke eingesetzt werden, wie z.B. zur Erkennung von Türklopfen, Maschinenfehlern, Autounfällen oder Alarmanlagen. Das Modul arbeitet mit einer Spannung von 3,3 V bis 5 V und verfügt über drei Peripheriegeräte: zwei LEDs, eine für den Betriebsstatus und die andere für den Sensorausgang, sowie ein Potentiometer zur Feineinstellung des Ansprechpunktes für Vibrationen.
 
-
-Principle
+Funktionsprinzip
 ---------------------------
-SW-420 vibration sensor module consists of a SW-420 vibration switch and an LM393 voltage comparator. A SW-420 vibration switch is a device that has a spring and a rod inside a tube. When the switch is exposed to a vibration, the spring touches the rod and closes the circuit. The vibration sensor in the module detects these oscillations and converts them into electrical signals. The LM393 comparator chip then compares these signals with a reference voltage set by the potentiometer. If the amplitude of the signal exceeds this reference voltage, the output of the comparator goes high (1), otherwise it goes low (0).
+Das SW-420 Vibrationssensor-Modul setzt sich aus einem SW-420 Vibrationsschalter und einem LM393 Spannungsvergleicher zusammen. Der SW-420 Vibrationsschalter enthält eine Feder und einen Stab innerhalb eines Rohres. Bei Vibrationen kommt die Feder mit dem Stab in Kontakt und schließt den Stromkreis. Der im Modul integrierte Vibrationssensor erfasst diese Schwingungen und wandelt sie in elektrische Signale um. Der LM393 Vergleicherchip vergleicht diese Signale dann mit einer Referenzspannung, die am Potentiometer eingestellt wird. Überschreitet die Amplitude des Signals diese Referenzspannung, gibt der Vergleicher ein hohes Signal (1) aus, andernfalls ein niedriges (0).
 
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Benötigte Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- Vibration Sensor Module(SW-420) * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Board * 1
+- Vibrationssensor-Modul (SW-420) * 1
+- Jumperkabel
 
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/04_vibration_module_circuit.png
     :width: 400
@@ -35,13 +34,12 @@ Usage
     
     <br/><br/>   
 
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/690d9d6c-1049-48cd-99af-7bc6cd9c1ae4/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
 
 .. raw:: html
 
@@ -51,16 +49,16 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erklärung
 ^^^^^^^^^^^^^^^^^^^^
 
-1. The first line of code is a constant integer declaration for the vibration sensor pin. We use digital pin 7 to read the output from the vibration sensor.
+1. Die erste Zeile des Codes deklariert einen konstanten Integer für den Vibrationssensor-Anschluss. Der digitale Pin 7 wird verwendet, um die Ausgabe des Vibrationssensors zu lesen.
 
    .. code-block:: arduino
    
       const int sensorPin = 7;
 
-2. In the ``setup()`` function, we initialize the serial communication at a baud rate of 9600 to print readings from the vibration sensor to the serial monitor. We also set the vibration sensor pin as an input.
+2. In der ``setup()``-Funktion initialisieren wir die serielle Kommunikation mit einer Baudrate von 9600, um die Messwerte des Vibrationssensors im seriellen Monitor anzuzeigen. Außerdem wird der Vibrationssensor-Anschluss als Eingang definiert.
 
    .. code-block:: arduino
    
@@ -69,7 +67,7 @@ Code explanation
         pinMode(sensorPin, INPUT);  // Set the sensorPin as an input pin
       }
 
-3. The ``loop()`` function is where we continuously check for any vibrations detected by the sensor. If the sensor detects a vibration, it prints "Detected vibration..." to the serial monitor. If no vibration is detected, it prints "...". The loop repeats every 100 milliseconds.
+3. In der ``loop()``-Funktion prüfen wir kontinuierlich, ob vom Sensor Vibrationen erkannt werden. Bei Erkennung einer Vibration wird "Detected vibration..." im seriellen Monitor ausgegeben. Wird keine Vibration erkannt, wird "..." ausgegeben. Die Schleife wiederholt sich alle 100 Millisekunden.
 
    .. code-block:: arduino
    
@@ -84,14 +82,12 @@ Code explanation
         delay(100);
       }
 
-Additional Ideas
-^^^^^^^^^^^^^^^^
+Weitere Ideen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Could connect an LED to turn ON when vibration is detected
-- An alarm sound or buzzer could be triggered on vibration sense 
+- Anschluss einer LED, die bei erkannter Vibration leuchtet
+- Auslösen eines Alarms oder Buzzers bei Vibrationserkennung
 
-More Projects
+Weitere Projekte
 ---------------------------
 * :ref:`iot_Intrusion_alert_system`
-
-

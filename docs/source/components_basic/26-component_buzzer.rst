@@ -1,34 +1,33 @@
 .. _cpn_buzzer:
 
-Passive Buzzer Module
+Passives Summermodul
 ==========================
 
 .. image:: img/26_passive_buzzer_module.png
     :width: 400
     :align: center
 
-Introduction
+Einleitung
 ---------------------------
-A passive buzzer is a device that generates sound when an electrical signal is applied to it. It is called passive because it does not have an internal oscillator to generate sound on its own. Instead, it relies on an external signal from a microcontroller like Arduino to produce sound. The passive buzzer module is a small electronic component that contains a passive buzzer and some additional circuitry that makes it easier to use with Arduino.
+Ein passiver Summer ist ein Bauelement, das Töne erzeugt, sobald ihm ein elektrisches Signal zugeführt wird. Es wird als passiv bezeichnet, da es keinen internen Oszillator besitzt, um eigenständig Töne zu generieren. Stattdessen benötigt es ein externes Signal von einem Mikrocontroller wie dem Arduino. Das passive Summermodul ist eine kompakte elektronische Komponente, die neben dem passiven Summer auch die nötige Schaltungstechnik enthält, um die Anwendung mit dem Arduino zu vereinfachen.
 
-Principle
+Funktionsprinzip
 ---------------------------
-The working principle of the passive buzzer module is based on the piezoelectric effect. When an electrical signal is applied to the buzzer, it causes a piezoelectric crystal inside the buzzer to vibrate at a specific frequency. This vibration produces sound waves that we can hear. The frequency of the sound produced by the buzzer depends on the frequency of the electrical signal applied to it. By changing the frequency of the signal, we can change the pitch of the sound produced by the buzzer.
+Das Arbeitsprinzip des passiven Summermoduls basiert auf dem piezoelektrischen Effekt. Sobald ein elektrisches Signal an den Summer angelegt wird, bringt es einen im Inneren befindlichen piezoelektrischen Kristall zum Schwingen. Diese Schwingungen erzeugen Schallwellen. Die Frequenz des erzeugten Tons hängt von der Frequenz des zugeführten elektrischen Signals ab. Durch Variation der Signal-Frequenz kann die Tonhöhe verändert werden.
 
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- Passive Buzzer Module * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Board * 1
+- Passives Summermodul * 1
+- Jumperkabel
 
-
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/26_passive_buzzer_module_circuit.png
-    :width: 400
+    :width: 80%
     :align: center
 
 .. raw:: html
@@ -42,32 +41,31 @@ Code
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/5b24a3d9-8688-4dc2-ad3a-cce82f6bd3a7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/26-component_buzzer.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erläuterung
 ^^^^^^^^^^^^^^^^^^^^
 
-1. Including the pitches library:
-   This library provides the frequency values for various musical notes, allowing you to use musical notation in your code.
+1. Einbindung der Tonhöhen-Bibliothek:
+   Diese Bibliothek stellt die Frequenzwerte für verschiedene Musiknoten bereit.
 
    .. code-block:: arduino
        
       #include "pitches.h"
 
-2. Defining constants and arrays:
+2. Definition von Konstanten und Arrays:
 
-   * ``buzzerPin`` is the digital pin on the Arduino where the buzzer is connected.
-
-   * ``melody[]`` is an array that stores the sequence of notes to be played.
-
-   * ``noteDurations[]`` is an array that stores the duration of each note in the melody.
+   * ``buzzerPin`` ist der digitale Pin am Arduino, an dem der Summer angeschlossen ist.
+   
+   * ``melody[]`` ist ein Array, das die Reihenfolge der zu spielenden Noten speichert.
+   
+   * ``noteDurations[]`` ist ein Array, das die Dauer jeder Note in der Melodie speichert.
 
    .. code-block:: arduino
    
@@ -79,17 +77,15 @@ Code explanation
         4, 8, 8, 4, 4, 4, 4, 4
       };
 
-3. Playing the melody:
+3. Melodiewiedergabe:
 
-   * The ``for`` loop iterates over each note in the melody.
-
-   * The ``tone()`` function plays a note on the buzzer for a specific duration.
-
-   * A delay is added between notes to distinguish them.
-
-   * The ``noTone()`` function stops the sound.
-
-
+   * Die ``for``-Schleife geht jede Note der Melodie durch.
+   
+   * Die Funktion ``tone()`` spielt eine Note über den Summer für eine bestimmte Dauer ab.
+   
+   * Eine Verzögerung zwischen den Noten sorgt für eine klare Trennung.
+   
+   * Die Funktion ``noTone()`` beendet die Tonausgabe.
 
    .. code-block:: arduino
    
@@ -103,18 +99,18 @@ Code explanation
         }
       }
 
-4. Empty loop function:
-   Since the melody is played only once in the setup, there's no code in the loop function.
+4. Leere Loop-Funktion:
+   Da die Melodie nur einmal im Setup gespielt wird, ist die Loop-Funktion leer.
 
-
-Additional Ideas
+Weitere Ideen
 ^^^^^^^^^^^^^^^^^^^^
 
-- Modify the melody: You can experiment by changing the notes and durations in the ``melody[]`` and ``noteDurations[]`` arrays to create your own tunes. If you are interested, there is a repository (|link_arduino-songs|) on GitHub that provides Arduino code for playing different songs. Although their approach may be different from this project, you can refer to their notes and durations.
-- Add a button: Integrate a push-button to the circuit and modify the code to play the melody when the button is pressed.
+- Melodie ändern: Experimentieren Sie mit anderen Noten und Dauern in den Arrays ``melody[]`` und ``noteDurations[]``, um eigene Melodien zu erzeugen. Es gibt ein GitHub-Repository (|link_arduino-songs|), das Arduino-Codes für verschiedene Lieder bereitstellt. 
+- Schalter integrieren: Fügen Sie einen Taster in die Schaltung ein und passen Sie den Code so an, dass die Melodie nur dann gespielt wird, wenn der Taster gedrückt wird.
 
-More Projects
+Weitere Projekte
 ---------------------------
 * :ref:`fun_doorbell`
 * :ref:`fun_gas_leak_alarm`
 * :ref:`iot_Bluetooth_piano`
+

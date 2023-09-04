@@ -1,31 +1,29 @@
-.. _iot_add_library:
+1.3 Hinzufügen der erforderlichen Bibliotheken
+----------------------------------------------
 
-1.3 Adding the required libraries
----------------------------------------
+Für die Verwendung von Blynk im Arduino IDE müssen die richtigen Bibliotheken hinzugefügt werden.
 
-You need to add the correct libraries for the Arduino IDE to use Blynk.
-
-#. Click |link_blynk_lib|, scroll down to **"Assets"** and download the first ``.zip`` file. 
+#. Klicken Sie auf |link_blynk_lib|, scrollen Sie nach unten zu **"Assets"** und laden Sie die erste ``.zip``-Datei herunter.
 
    .. note::
-    Please note that the version number shown in the image below may be outdated. We highly recommend downloading and installing the latest version available.
+    Bitte beachten Sie, dass die in der untenstehenden Abbildung angezeigte Versionsnummer veraltet sein könnte. Wir empfehlen dringend, die neueste verfügbare Version herunterzuladen und zu installieren.
 
    .. image:: img/new/add_lib_shadow.png
 
-#. Unzip this file and then enter the ``libraries`` folder to see the following folders.
+#. Entpacken Sie diese Datei und gehen Sie in den Ordner ``libraries``, um die folgenden Ordner zu sehen.
 
    .. image:: img/new/add_lib_0_shadow.png
     
-#. Copy them all and add them to the ``libraries`` folder of your sketchbook.
+#. Kopieren Sie alle und fügen Sie sie in den Ordner ``libraries`` Ihres Sketchbooks ein.
 
-   **Step 1:** You can find or change the location of your libraries folder at ``File > Preferences > Sketchbook location``.
+   **Schritt 1:** Sie können den Speicherort Ihres Bibliotheksordners unter ``Datei > Einstellungen > Sketchbook-Speicherort`` finden oder ändern.
 
    .. image:: img/new/add_lib_1_shadow.png
 
-   **Step 2:** Go to the location of your Sketchbook location(find from Arduino IDE). And find ``libraries`` folder, click to open it.
+   **Schritt 2:** Gehen Sie zum Speicherort Ihres Sketchbooks (aus der Arduino IDE auffindbar). Finden Sie den Ordner ``libraries`` und klicken Sie darauf, um ihn zu öffnen.
 
    .. image:: img/new/add_lib_2_shadow.png
 
-   **Step 3:** Paste all the unzipped folders of ``Blynk_Release_vx.x.x\libraries`` into the libraries folder.
+   **Schritt 3:** Fügen Sie alle entpackten Ordner von ``Blynk_Release_vx.x.x\libraries`` in den Bibliotheksordner ein.
 
    .. image:: img/new/add_lib_3_shadow.png

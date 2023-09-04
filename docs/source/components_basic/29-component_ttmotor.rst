@@ -11,31 +11,31 @@ TT Motor
     
     <br/>
 
-Introduction
+Einführung
 ---------------------------
-A TT motor is a type of DC motor that has a gearbox attached to it. The gearbox reduces the speed of the motor and increases its torque. A TT motor is commonly used in applications such as driving wheels, propellers, fans, among others. A TT motor has two wires: a positive wire and a negative wire. The positive wire is usually red and the negative wire is usually black.
+Ein TT-Motor ist eine Art von Gleichstrommotor, an den ein Getriebe angekoppelt ist. Dieses Getriebe reduziert die Geschwindigkeit des Motors und erhöht sein Drehmoment. TT-Motoren werden häufig in Anwendungen wie Antriebsrädern, Propellern, Ventilatoren und ähnlichem eingesetzt. Ein TT-Motor verfügt über zwei Kabel: ein positives und ein negatives. Das positive Kabel ist in der Regel rot und das negative Kabel in der Regel schwarz.
 
-A TT DC gearbox motor with a 1:48 gear ratio is used in the product, it comes with 2 x 200mm wires with 0.1” male connectors that fit into a breadboard. Perfect for plugging into a breadboard or terminal block.
+Im Produkt wird ein TT-Gleichstromgetriebemotor mit einem Übersetzungsverhältnis von 1:48 verwendet. Er ist mit 2 x 200 mm Kabeln mit 0,1"-Steckverbindern ausgestattet, die in ein Steckbrett passen. Ideal zum Einstecken in ein Steckbrett oder eine Anschlussleiste.
 
-You can power these motors with 3 ~ 6VDC, but of course, they will go a little faster at higher voltages.
+Sie können diese Motoren mit 3 ~ 6VDC betreiben, allerdings werden sie bei höheren Spannungen natürlich schneller laufen.
 
 
-Principle
+Funktionsprinzip
 ---------------------------
-A TT motor works by converting electrical energy into mechanical energy. When a voltage is applied to the wires of the motor, it creates a magnetic field that causes the motor to spin. The speed and direction of the motor depend on the voltage and polarity of the power supply. The higher the voltage, the faster the motor spins. Reversing the polarity will cause the motor to spin in the opposite direction.
+Ein TT-Motor funktioniert, indem er elektrische Energie in mechanische Energie umwandelt. Wenn eine Spannung an die Kabel des Motors angelegt wird, entsteht ein Magnetfeld, das den Motor zum Drehen bringt. Die Geschwindigkeit und die Drehrichtung des Motors hängen von der Spannung und der Polarität der Stromquelle ab. Je höher die Spannung, desto schneller dreht der Motor. Umkehren der Polarität bewirkt, dass der Motor in die entgegengesetzte Richtung dreht.
 
 
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
+- Arduino Uno R4 oder R3 Board * 1
 - TT Motor * 1
-- Jumper Wires
+- Jumperkabel
 
 
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/29_tt_motor_circuit.png
     :width: 400
@@ -45,7 +45,7 @@ Usage
     
     <br/><br/>   
 
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -61,18 +61,18 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erklärung
 ^^^^^^^^^^^^^^^^^^^^
 
-1. The first part of the code defines the motor control pins. These are connected to the L9110 motor control board.
+1. Der erste Teil des Codes definiert die Steuerpins des Motors. Diese sind mit der L9110-Motorsteuerplatine verbunden.
 
    .. code-block:: arduino
    
-      // Define the motor pins
+      // Motorpins definieren
       const int motorB_1A = 9;
       const int motorB_2A = 10;
 
-2. The ``setup()`` function initializes the motor control pins as output using the ``pinMode()`` function. Then it uses ``analogWrite()`` to set the speed of the motor. The value passed to ``analogWrite()`` can range from 0 (off) to 255 (full speed). A ``delay()`` function is then used to pause the code for 5000 milliseconds (or 5 seconds), after which the motor speed is set to 0 (off).
+2. Die ``setup()``-Funktion initialisiert die Motorsteuerpins als Ausgang mit der Funktion ``pinMode()``. Anschließend wird mit ``analogWrite()`` die Geschwindigkeit des Motors eingestellt. Der an ``analogWrite()`` übergebene Wert kann zwischen 0 (aus) und 255 (volle Geschwindigkeit) variieren. Danach wird die Funktion ``delay()`` verwendet, um den Code für 5000 Millisekunden (oder 5 Sekunden) anzuhalten, wonach die Motorgeschwindigkeit auf 0 (aus) gesetzt wird.
 
    .. code-block:: arduino
    
@@ -89,10 +89,8 @@ Code explanation
         analogWrite(motorB_2A, 0);
       }
 
-Additional Ideas
+Weitere Ideen
 ^^^^^^^^^^^^^^^^^^^^
 
-- Control Motor Speed with a Potentiometer: Instead of hardcoding the motor speed, you could use a potentiometer to dynamically control the speed of the motor.
-
-
+- Geschwindigkeitssteuerung des Motors mit einem Potentiometer: Anstatt die Motorgeschwindigkeit fest vorzugeben, könnten Sie ein Potentiometer verwenden, um die Geschwindigkeit des Motors dynamisch zu steuern.
 

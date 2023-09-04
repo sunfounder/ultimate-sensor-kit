@@ -1,28 +1,25 @@
-
 .. _iot_Bluetooth_remote_relay:
 
-Bluetooth Remote Relay
+Bluetooth-Fernrelais
 =================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/iot/13-iot_Bluetooth_remote_relay.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
+Dieses Projekt nutzt eine mit MIT App Inventor erstellte Android-App, um ein Relaismodul über das JDY-31 Bluetooth-Modul, welches an einen Arduino Uno angeschlossen ist, fernzusteuern. Wenn in der App ein Button gedrückt wird, sendet sie einen einfachen Befehl ('1' oder '0') an den Arduino. Erhält der Arduino den Befehl '1' via Bluetooth, wird das Relais aktiviert; bei Erhalt des Befehls '0' wird es deaktiviert. Dies bietet eine benutzerfreundliche Schnittstelle auf dem Smartphone zur Steuerung von an das Relais angeschlossenen Geräten.
 
-This project uses an Android app created with MIT App Inventor to remotely control a relay module through the JDY-31 Bluetooth module connected to an Arduino Uno. When the app's buttons are pressed, it sends a simple command ('1' or '0') to the Arduino. When the Arduino receives the command '1' via Bluetooth, it activates the relay, and when it receives '0', it deactivates the relay. This provides a user-friendly interface on a smartphone to control devices connected to the relay.
+Die Android-Anwendung wird auf einer kostenlosen webbasierten Plattform namens |link_appinventor| erstellt. Das Projekt bietet eine hervorragende Gelegenheit, sich mit der Schnittstelle zwischen einem Arduino und einem Smartphone vertraut zu machen.
 
-The Android application will be constructed utilizing a complimentary web-based platform known as |link_appinventor|. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone. 
-
-
-1. Build the Cirduit
+1. Schaltung aufbauen
 -----------------------------
 
 .. warning ::
-    The following example demonstrates using a relay to control an LED module. 
-    **While you can connect the relay to other appliances in actual applications, extreme caution is required when dealing with HIGH AC voltage. Improper or incorrect use can lead to severe injury or even death. Therefore, it is intended for people who are familiar with and knowledgeable about HIGH AC voltage. Always prioritize safety.**
+    Das folgende Beispiel zeigt, wie ein Relais zur Steuerung eines LED-Moduls verwendet wird. 
+    **Obwohl es möglich ist, das Relais in realen Anwendungen mit anderen Geräten zu verbinden, ist bei der Arbeit mit HOHER Wechselspannung äußerste Vorsicht geboten. Unachgemäße oder fehlerhafte Verwendung kann zu schweren Verletzungen oder gar zum Tod führen. Dieses Projekt richtet sich daher an Personen, die sich mit HOHER Wechselspannung auskennen und diese sicher handhaben können. Sicherheit hat immer Vorrang.**
 
 .. image:: img/13-Wiring_Bluetooth_remote_relay.png
     :width: 75%
@@ -33,142 +30,144 @@ The Android application will be constructed utilizing a complimentary web-based 
 * :ref:`cpn_rgb`
 
 
-2. Create the Android App
+2. Android-App erstellen
 -----------------------------
 
-The Android application will be developed using a free web application known as |link_appinventor|. 
-MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop 
-features allowing for the creation of simplistic applications.
+Die Android-Anwendung wird mit einer kostenlosen Webanwendung namens |link_appinventor| entwickelt.
+MIT App Inventor eignet sich hervorragend als Einstieg in die Android-Entwicklung, dank seiner intuitiven Drag-and-Drop-Funktionen zur Erstellung einfacher Applikationen.
 
-Now, let's begin.
+Nun legen wir los.
 
-#. Go to |link_appinventor_login|, and click "online tool" to login. You will require a Google account to register with MIT App Inventor.
+#. Gehen Sie zu |link_appinventor_login| und klicken Sie auf "Online-Tool" zum Einloggen. Ein Google-Konto ist zur Registrierung bei MIT App Inventor erforderlich.
 
    .. image:: img/new/09-ai_signup_shadow.png
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``RemoteRelay.aia`` file located in the path ``ultimate-sensor-kit\iot_project\bluetooth\08-Bluetooth_remote_relay``.
+#. Nach dem Einloggen navigieren Sie zu **Projects** -> **Import project (.aia) from my computer**. Laden Sie anschließend die Datei ``RemoteRelay.aia`` hoch, die im Pfad ``ultimate-sensor-kit\iot_project\bluetooth\08-Bluetooth_remote_relay`` zu finden ist.
 
-   You can also directly download here: :download:`RemoteRelay.aia</_static/other/RemoteRelay.aia>`
+   Direkter Download hier: :download:`RemoteRelay.aia</_static/other/RemoteRelay.aia>`
 
    .. image:: img/new/09-ai_import_shadow.png
         :align: center
 
-#. Upon uploading the ``.aia`` file, you will see the application on the MIT App Inventor software. This is a pre-configured template. You can modify this template after you have familiarized yourself with MIT App Inventor through the following steps.
+#. Nach dem Hochladen der ``.aia``-Datei sehen Sie die Anwendung in der MIT App Inventor-Software. Dies ist eine vorkonfigurierte Vorlage. Nachdem Sie sich mit MIT App Inventor vertraut gemacht haben, können Sie diese Vorlage entsprechend modifizieren.
 
-#. In MIT App Inventor, you have 2 primary sections: the **Designer** and the **Blocks**. You can switch between these two sections in the upper right corner of the page.
+#. In MIT App Inventor gibt es zwei Hauptbereiche: den **Designer** und die **Blocks**. Zwischen diesen beiden Bereichen können Sie oben rechts auf der Seite umschalten.
 
    .. image:: img/new/09-ai_intro_1_shadow.png
 
-#. The **Designer** allows you to add buttons, text, screens, and modify the overall aesthetic of your application.
+#. Der **Designer** ermöglicht das Hinzufügen von Buttons, Texten, Bildschirmen und die allgemeine ästhetische Gestaltung Ihrer Anwendung.
 
    .. image:: img/new/13-ai_intro_2_shadow.png
    
-#. Next, there's the **Blocks** section. This section lets you craft custom functionalities for your app, allowing you to program each component on the app's GUI to achieve desired features.
+#. Als Nächstes gibt es den Bereich **Blocks**. Hier können Sie spezielle Funktionalitäten für Ihre App programmieren und jedes Element in der Benutzeroberfläche der App entsprechend konfigurieren.
 
    .. image:: img/new/13-ai_intro_3_shadow.png
 
-#. To install the application on a smartphone, navigate to the **Build** tab.
+#. Um die Anwendung auf einem Smartphone zu installieren, navigieren Sie zur Registerkarte **Build**.
 
    .. image:: img/new/08-ai_intro_4_shadow.png
 
-   * You can generate a ``.apk`` file. After selecting this option, a page will appear allowing you to choose between downloading a ``.apk`` file or scanning a QR code for installation. Follow the installation guide to complete the application installation. 
+   * Hier können Sie eine ``.apk``-Datei generieren. Nach der Auswahl dieser Option wird eine Seite angezeigt, auf der Sie zwischen dem Herunterladen einer ``.apk``-Datei oder dem Scannen eines QR-Codes zur Installation wählen können. Folgen Sie der Installationsanleitung, um die Installation der Anwendung abzuschließen.
 
-     You also download our pre-compiled APK here: :download:`RemoteRelay.apk</_static/other/RemoteRelay.apk>`
+     Die vorab kompilierte APK können Sie hier herunterladen: :download:`RemoteRelay.apk</_static/other/RemoteRelay.apk>`
 
-   * If you wish to upload this app to Google Play or another app marketplace, you can generate a ``.aab`` file.
+   * Wenn Sie diese App im Google Play Store oder einem anderen App-Marktplatz hochladen möchten, können Sie eine ``.aab``-Datei generieren.
 
 
-3. Upload the Code
+
+3. Den Code hochladen
 -----------------------------
 
-#. Open the ``13-Bluetooth_remote_relay.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\08-Bluetooth_remote_relay``, or copy this code into **Arduino IDE**.
+#. Öffnen Sie die Datei ``13-Bluetooth_remote_relay.ino`` im Pfad ``ultimate-sensor-kit\iot_project\bluetooth\08-Bluetooth_remote_relay`` oder kopieren Sie den Code in die **Arduino IDE**.
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/97039b6d-f77f-481c-a92e-c7667fc2d4cc/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. Nach der Auswahl des richtigen Boards und Ports klicken Sie auf die Schaltfläche **Hochladen**.
 
-#. Open the Serial monitor(set baudrate to **9600**) to view debug messages. 
+#. Öffnen Sie den seriellen Monitor (Baudrate auf **9600** einstellen), um Debug-Meldungen anzuzeigen.
 
-4. App and Bluetooth moudule Connection
------------------------------------------------
 
-Ensure that the application created earlier is installed on your smartphone.
+4. Verbindung zwischen App und Bluetooth-Modul herstellen
+--------------------------------------------------------
 
-#. Initially, turn on **Bluetooth** on your smartphone.
+Vergewissern Sie sich, dass die zuvor erstellte Anwendung auf Ihrem Smartphone installiert ist.
+
+#. Aktivieren Sie zunächst **Bluetooth** auf Ihrem Smartphone.
 
    .. image:: img/new/09-app_1_shadow.png
       :width: 60%
       :align: center
 
-#. Navigate to the **Bluetooth settings** on your smartphone and look for names like **JDY-31-SPP**.
+#. Navigieren Sie zu den **Bluetooth-Einstellungen** auf Ihrem Smartphone und suchen Sie nach Namen wie **JDY-31-SPP**.
 
    .. image:: img/new/09-app_2_shadow.png
       :width: 60%
       :align: center
 
-#. After clicking it, agree to the **Pair** request in the pop-up window. If prompted for a pairing code, please enter "1234".
+#. Klicken Sie darauf und stimmen Sie der **Kopplungsanfrage** im Popup-Fenster zu. Falls ein Kopplungscode erforderlich ist, geben Sie "1234" ein.
 
    .. image:: img/new/09-app_3_shadow.png
       :width: 60%
       :align: center
 
-#. Now open the newly installed **Remote Relay** APP.
+#. Öffnen Sie nun die neu installierte **Remote Relay**-App.
 
    .. image:: img/new/13-app_4_shadow.png
       :width: 25%
       :align: center
 
-#. In the APP, click on **Connect** button to establish a connection between the APP and Bluetooth module.
+#. In der App klicken Sie auf die Schaltfläche **Connect**, um eine Verbindung zwischen der App und dem Bluetooth-Modul herzustellen.
 
    .. image:: img/new/13-app_5_shadow.png
       :width: 60%
       :align: center
 
-#. This page displays a list of all paired Bluetooth devices. Choose the ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` option from the list. The name of each device is listed next to its MAC address.
+#. Diese Seite zeigt eine Liste aller gekoppelten Bluetooth-Geräte an. Wählen Sie die Option ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` aus der Liste aus. Der Name jedes Geräts wird neben seiner MAC-Adresse aufgelistet.
 
    .. image:: img/new/13-app_6_shadow.png
       :width: 60%
       :align: center
 
-#. If you don't see any devices on the page shown above, it could be because this app is not authorized to scan for nearby devices. In such a case, you will need to adjust the settings manually.
+#. Falls Sie auf der oben angezeigten Seite keine Geräte sehen, könnte dies daran liegen, dass der App die Berechtigung zum Scannen von Geräten in der Nähe fehlt. In diesem Fall müssen Sie die Einstellungen manuell anpassen.
 
-   * To access the **APP Info** page, long-press the app icon and select it. Alternatively, if you have another method to reach this page, use that instead.
+   * Um zur Seite **App-Informationen** zu gelangen, halten Sie das App-Symbol lange gedrückt und wählen Sie es aus. Alternativ können Sie jede andere Methode verwenden, um diese Seite zu erreichen.
 
    .. image:: img/new/13-app_8_shadow.png
          :width: 60%
          :align: center
 
-   * Navigate to the **Permissions** page.
+   * Navigieren Sie zur Seite **Berechtigungen**.
 
    .. image:: img/new/08-app_9_shadow.png
          :width: 60%
          :align: center
 
-   * To enable the APP to scan for nearby devices, go to **Nearby devices** and select **Always**.
+   * Um der App das Scannen von Geräten in der Nähe zu ermöglichen, gehen Sie zu **Geräte in der Nähe** und wählen **Immer**.
 
    .. image:: img/new/08-app_10_shadow.png
          :width: 60%
          :align: center
 
-   * Now, restart the APP and repeat steps 5 and 6 to successfully connect to Bluetooth.
+   * Starten Sie nun die App neu und wiederholen Sie die Schritte 5 und 6, um erfolgreich eine Bluetooth-Verbindung herzustellen.
 
-#. After a successful connection, you will be redirected to the main page. Click the "ON" or "OFF" button to turn on or off the relay.
+#. Nach erfolgreicher Verbindung werden Sie zur Hauptseite weitergeleitet. Klicken Sie auf "ON" oder "OFF", um das Relais ein- oder auszuschalten.
 
    .. note ::
-      When the MAC address of Bluetooth contains "1", the relay will be turned on and then quickly turned off after the first successful Bluetooth connection. Because when the Bluetooth is connected, the MAC address will be sent to Arduino. Arduino detects "1" and then opens the relay. After Bluetooth initialization, the app sends 0 to Arduino via Bluetooth to ensure that the initial state of the relay is closed after connection.
+      Wenn die MAC-Adresse des Bluetooth "1" enthält, wird das Relais bei der ersten erfolgreichen Bluetooth-Verbindung eingeschaltet und dann schnell wieder ausgeschaltet. Denn beim Herstellen der Bluetooth-Verbindung wird die MAC-Adresse an den Arduino gesendet. Der Arduino erkennt "1" und schaltet das Relais ein. Nach der Bluetooth-Initialisierung sendet die App eine 0 an den Arduino über Bluetooth, um sicherzustellen, dass der Anfangszustand des Relais nach der Verbindung geschlossen ist.
 
    .. image:: img/new/13-app_7_shadow.png
       :width: 60%
       :align: center
 
-5. Code explanation
+
+5. Code-Erläuterung
 -----------------------------------------------
 
-1. **Library and Global Variable Initialization**
+1. **Bibliothek und globale Variableninitialisierung**
 
    .. code-block:: arduino
    
@@ -180,9 +179,9 @@ Ensure that the application created earlier is installed on your smartphone.
    
        const int relayPin = 8;
 
-   This segment includes the ``SoftwareSerial`` library and sets up the global variables. Pins 3 and 4 are defined for transmitting and receiving data with the Bluetooth module, respectively. Additionally, the relay module is connected to pin 8.
+   Dieses Segment bindet die ``SoftwareSerial``-Bibliothek ein und initialisiert die globalen Variablen. Die Pins 3 und 4 sind für die Datenübertragung und den Datenempfang mit dem Bluetooth-Modul definiert. Zudem ist das Relaismodul an Pin 8 angeschlossen.
 
-2. **setup() Function**
+2. **Funktion setup()**
 
    .. code-block:: arduino
    
@@ -191,10 +190,10 @@ Ensure that the application created earlier is installed on your smartphone.
          bleSerial.begin(9600);
          pinMode(relayPin, OUTPUT);
        }
-   
-   It initiates the Serial monitor and Bluetooth module communication at a baud rate of 9600. It also sets the ``relayPin`` as an OUTPUT pin.
 
-3. **loop() Function**
+   Die Funktion startet den seriellen Monitor und die Kommunikation mit dem Bluetooth-Modul mit einer Baudrate von 9600. Sie legt außerdem den ``relayPin`` als Ausgangspin fest.
+
+3. **Funktion loop()**
 
    .. code-block:: arduino
    
@@ -212,5 +211,6 @@ Ensure that the application created earlier is installed on your smartphone.
            }
          }
        }
-   
-   The ``loop()`` function runs continuously. It checks if there's a message received from the Bluetooth module. If a message is received, it reads the character. Depending on the character ('1' or '0'), it either turns the relay on or off and sends a confirmation message ("On" or "Off") to the Serial monitor.
+
+   Die ``loop()``-Funktion wird fortlaufend ausgeführt. Sie prüft, ob eine Nachricht vom Bluetooth-Modul empfangen wurde. Falls ja, liest sie das Zeichen aus. Abhängig vom empfangenen Zeichen ('1' oder '0') wird das Relais aktiviert oder deaktiviert und eine Bestätigungsnachricht ("Eingeschaltet" oder "Ausgeschaltet") an den seriellen Monitor gesendet.
+

@@ -1,11 +1,11 @@
 Variable
 ========
 
-The variable is one of the most powerful and critical tools in a program. It helps us to store and call data in our programs.
+Eine Variable ist eines der mächtigsten und wichtigsten Werkzeuge in einem Programm. Sie ermöglicht es uns, Daten in unseren Programmen zu speichern und abzurufen.
 
-The following sketch file uses variables. It stores the pin numbers of the on-board LED in the variable ``ledPin`` and a number "500" in the variable ``delayTime``.
+Das folgende Skizzen-File verwendet Variablen. Es speichert die Pin-Nummern der integrierten LED in der Variable ``ledPin`` und die Zahl "500" in der Variable ``delayTime``.
 
-.. code-block:: C
+.. code-block:: arduino
     :emphasize-lines: 1,2
 
     int ledPin = 13;
@@ -22,14 +22,14 @@ The following sketch file uses variables. It stores the pin numbers of the on-bo
         delay(delayTime);
     }
 
-Wait, is this a duplicate of what ``#define`` does? The answer is NO.
+Ist das eine Wiederholung von dem, was ``#define`` macht? Die Antwort ist NEIN.
 
-* The role of ``#define`` is to simply and directly replace text, it is not considered by the compiler as part of the program. 
-* A ``variable``, on the other hand, exists within the program and is used to store and call value. A variable can also modify its value within the program, something that a define cannot do.
+* Die Rolle von ``#define`` ist es lediglich, Text einfach und direkt zu ersetzen; es wird vom Compiler nicht als Bestandteil des Programms angesehen.
+* Eine ``Variable`` hingegen existiert im Programm und wird zum Speichern und Abrufen von Werten verwendet. Sie kann ihren Wert im Programm auch ändern, was ``#define`` nicht kann.
 
-The sketch file below self-adds to the variable and it will cause the on-board LED to blink longer after each blink.
+Im folgenden Skizzen-File addiert sich die Variable selbst, sodass die integrierte LED nach jedem Blinken länger blinkt.
 
-.. code-block:: C
+.. code-block:: arduino
 
     int ledPin = 13;
     int delayTime = 500;
@@ -43,64 +43,60 @@ The sketch file below self-adds to the variable and it will cause the on-board L
         delay(delayTime); 
         digitalWrite(ledPin,LOW); 
         delay(delayTime);
-        delayTime = delayTime+200; //Each execution increments the value by 200
+        delayTime = delayTime + 200; // Jede Ausführung erhöht den Wert um 200
     }
 
-Declare a variable
+Variable deklarieren
 -------------------
 
-Declaring a variable means creating a variable. 
+Eine Variable zu deklarieren bedeutet, eine Variable zu erstellen.
 
-To declare a variable, you need two things: the data type, and the variable name. The data type needs to be separated from the variable by a space, and the variable declaration needs to be terminated by a ``;``.
+Für die Deklaration einer Variable benötigen Sie zwei Dinge: den Datentyp und den Variablennamen. Der Datentyp muss vom Variablennamen durch ein Leerzeichen getrennt und die Variablendeklaration durch ein ``;`` beendet werden.
 
-Let's use this variable as an example.
+Nehmen wir diese Variable als Beispiel.
 
-.. code-block:: C
+.. code-block:: arduino
 
     int delayTime;
 
-**Data Type**
+**Datentyp**
 
-Here ``int`` is a data type called integer type, which can be used to store integers from -32768 to 32766. It can also not be used to store decimals.
+Hier ist ``int`` ein Datentyp namens Integer, der zur Speicherung von Ganzzahlen von -32768 bis 32766 verwendet werden kann. Er kann nicht zur Speicherung von Dezimalzahlen verwendet werden.
 
-Variables can hold different kinds of data other than integers. The Arduino language (which, remember, is C++) has built-in support for a few of them (only the most frequently used and useful are listed here):
+Neben Ganzzahlen können Variablen auch andere Arten von Daten speichern. Die Arduino-Sprache (die, wie man sich erinnern sollte, C++ ist) bietet eingebaute Unterstützung für einige davon (hier sind nur die am häufigsten verwendeten und nützlichsten aufgelistet):
 
-* ``float``: Store a decimal number, for example 3.1415926.
-* ``byte``: Can hold numbers from 0 to 255.
-* ``boolean``: Holds only two possible values, ``True`` or ``False``, even though it occupies a byte in memory.
-* ``char``: Holds a number from -127 to 127. Because it is marked as a ``char`` the compiler will try to match it to a character from the |link_ascii|.
-* ``string``: Can stores a string of characters, e.g. ``Halloween``.
+* ``float``: Speichert eine Dezimalzahl, z.B. 3,1415926.
+* ``byte``: Kann Zahlen von 0 bis 255 halten.
+* ``boolean``: Nimmt nur zwei mögliche Werte an, ``True`` oder ``False``, obwohl es im Speicher ein Byte belegt.
+* ``char``: Speichert eine Zahl von -127 bis 127. Da es als ``char`` markiert ist, versucht der Compiler, es einem Zeichen aus der |link_ascii| zuzuordnen.
+* ``string``: Kann eine Zeichenfolge speichern, z.B. ``Halloween``.
 
+**Variablenname**
 
-**Variable Name**
+Sie können der Variable jeden beliebigen Namen geben, z.B. ``i``, ``apple``, ``Bruce``, ``R2D2``, ``Sectumsempra``, aber es gibt einige Grundregeln.
 
+1. Beschreiben Sie den Verwendungszweck. Hier habe ich die Variable delayTime genannt, damit man leicht versteht, wofür sie dient. Wenn ich sie ``barryAllen`` nenne, verwirrt das die Person, die den Code betrachtet.
 
-You can set the variable to any name you want, such as ``i``, ``apple``, ``Bruce``, ``R2D2``, ``Sectumsempra``, but there are some basic rules to follow.
+2. Verwenden Sie eine gängige Benennung. Wie ich es getan habe, können Sie CamelCase verwenden, wobei das T in ``delayTime`` groß geschrieben ist, sodass man leicht erkennen kann, dass die Variable aus zwei Wörtern besteht. Alternativ können Sie UnderScoreCase verwenden, um die Variable als ``delay_time`` zu schreiben. Das beeinflusst nicht die Ausführung des Programms, erleichtert aber dem Programmierer das Lesen des Codes, wenn Sie die von Ihnen bevorzugte Benennung verwenden.
 
-1. describe what it is used for. Here, I named the variable delayTime, so you can easily understand what it does. It works fine if I name the variable ``barryAllen``, but it confuses the person looking at the code.
+3. Verwenden Sie keine Schlüsselwörter. Ähnlich wie bei der Eingabe von "int" wird die Arduino-IDE es farblich hervorheben, um Sie daran zu erinnern, dass es ein Wort mit einer speziellen Bedeutung ist und nicht als Variablenname verwendet werden kann. Ändern Sie den Namen der Variable, wenn sie farblich hervorgehoben ist.
 
-2. Use regular nomenclature. You can use CamelCase like I did, with the initial T in ``delayTime`` so that it is easy to see that the variable consists of two words. Also, you can use UnderScoreCase to write the variable as ``delay_time``. It doesn't affect the program's running, but it would help the programmer to read the code if you use the nomenclature you prefer.
+4. Spezielle Symbole sind nicht erlaubt. Zum Beispiel Leerzeichen, #, $, /, +, % usw. Die Kombination aus englischen Buchstaben (Groß- und Kleinschreibung), Unterstrichen und Zahlen (aber Zahlen können nicht als erstes Zeichen eines Variablennamens verwendet werden) ist ausreichend vielfältig.
 
-3. Don't use keywords. Similar to what happens when we type "int", the Arduino IDE will color it to remind you that it is a word with a special purpose and cannot be used as a variable name. Change the name of the variable if it is colored. 
+**Einen Wert einer Variable zuweisen**
 
-4. Special symbols are not allowed. For example, space, #, $, /, +, %, etc. The combination of English letters (case sensitive), underscores, and numbers (but numbers cannot be used as the first character of a variable name) is rich enough.
+Nachdem wir die Variable deklariert haben, ist es an der Zeit, die Daten zu speichern. Wir verwenden den Zuweisungsoperator (d.h. ``=``), um den Wert in die Variable zu setzen.
 
+Wir können der Variable Werte zuweisen, sobald wir sie deklariert haben.
 
-**Assign a value to a variable**
-
-Once we have declared the variable, it is time to store the data. We use the assignment operator (i.e. ``=``) to put value into the variable.
-
-We can assign values to the variable as soon as we declare it.
-
-
-.. code-block:: C
+.. code-block:: arduino
 
     int delayTime = 500;
 
-It is also possible to assign a new value to it at some time.
+Es ist auch möglich, ihr später einen neuen Wert zuzuweisen.
 
-.. code-block:: C
+.. code-block:: arduino
 
-    int delayTime; // no value
-    delayTime = 500; // value is 500
-    delayTime = delayTime +200; // value is 700
+    int delayTime; // kein Wert
+    delayTime = 500; // Wert ist 500
+    delayTime = delayTime + 200; // Wert ist 700

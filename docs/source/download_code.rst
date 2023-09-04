@@ -1,9 +1,8 @@
-Download the Code
+Code herunterladen
 ========================
 
-Download the relevant code from the link below.
+Laden Sie den entsprechenden Code über den unten stehenden Link herunter.
 
 * :download:`SunFounder Ultimate Sensor Kit Code <https://codeload.github.com/sunfounder/ultimate-sensor-kit/zip/refs/heads/main>`
 
-* Or check out the code at `SunFounder Ultimate Sensor Kit - GitHub <https://github.com/sunfounder/ultimate-sensor-kit>`_
-
+* Oder schauen Sie sich den Code auf `SunFounder Ultimate Sensor Kit - GitHub <https://github.com/sunfounder/ultimate-sensor-kit>`_ an.

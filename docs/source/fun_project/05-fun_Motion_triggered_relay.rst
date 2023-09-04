@@ -1,24 +1,24 @@
 .. _fun_motion_triggered_relay:
 
-Motion triggered relay
+Bewegungsgesteuertes Relais
 ==========================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/fun/05-fun_Motion_triggered_relay.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This Arduino project aims to control a relay-operated light using a passive infrared (PIR) sensor. When the PIR sensor detects motion, the relay is activated, turning the light on. The light remains on for 5 seconds after the last detected motion.
+Dieses Arduino-Projekt hat zum Ziel, eine mit einem Relais gesteuerte Lampe mithilfe eines passiven Infrarot-(PIR)-Sensors zu steuern. Sobald der PIR-Sensor eine Bewegung erkennt, wird das Relais aktiviert und die Lampe eingeschaltet. Die Lampe bleibt für 5 Sekunden nach der zuletzt erkannten Bewegung eingeschaltet.
 
 .. warning ::
-    As a demonstration, we are using a relay to control an RGB LED module. However, in real-life scenarios, this may not be the most practical approach.
+    Zur Demonstration verwenden wir ein Relais zur Steuerung eines RGB-LED-Moduls. In realen Anwendungsfällen ist diese Herangehensweise jedoch eventuell nicht die praktikabelste.
     
-    **While you can connect the relay to other appliances in actual applications, extreme caution is required when dealing with HIGH AC voltage. Improper or incorrect use can lead to severe injury or even death. Therefore, it is intended for people who are familiar with and knowledgeable about HIGH AC voltage. Always prioritize safety.**
+    **Beim Anschluss des Relais an andere Geräte in realen Anwendungen ist äußerste Vorsicht im Umgang mit HOHER Wechselspannung geboten. Unfachgemäße oder falsche Handhabung kann zu schweren Verletzungen oder sogar zum Tod führen. Daher richtet sich dieses Projekt an Personen, die sich mit HOHER Wechselspannung auskennen. Sicherheit hat stets oberste Priorität.**
 
 
-1. Build the Cirduit
+1. Schaltkreis aufbauen
 -----------------------------
 
 .. image:: img/05-fun_Motion_triggered_relay_circuit.png
@@ -33,21 +33,21 @@ This Arduino project aims to control a relay-operated light using a passive infr
 2. Code
 -----------------------------
 
-#. Open the ``05-Motion_triggered_relay.ino`` file under the path of ``ultimate-sensor-kit\fun_project\05-Motion_triggered_relay``, or copy this code into **Arduino IDE**.
+#. Öffnen Sie die Datei ``05-Motion_triggered_relay.ino`` im Verzeichnis ``ultimate-sensor-kit\fun_project\05-Motion_triggered_relay`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/147bb59d-8127-46e3-b276-a721bcff08df/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-3. Code explanation
+3. Code-Erklärung
 -----------------------------
 
-The project revolves around the PIR motion sensor's capability to detect motion. When motion is detected, a signal is sent to the Arduino, triggering the relay module, which in turn activates a light. The light stays on for a specified duration (in this case, 5 seconds) after the last detected motion, ensuring the area remains illuminated for a short period even if motion ceases.
+Das Projekt basiert auf der Fähigkeit des PIR-Bewegungssensors, Bewegungen zu erkennen. Bei erkannter Bewegung sendet der Sensor ein Signal an den Arduino, der das Relais aktiviert, wodurch wiederum eine Lampe eingeschaltet wird. Die Lampe bleibt für eine festgelegte Zeit (in diesem Fall 5 Sekunden) nach der letzten erkannten Bewegung an, sodass der Bereich kurzzeitig beleuchtet bleibt, auch wenn keine Bewegung mehr erfolgt.
 
-1. **Initial setup and variable declarations**
+1. **Initiale Einrichtung und Variablendeklarationen**
 
-   This segment defines constants and variables that will be used throughout the code. We set up the relay and PIR pins and a delay constant for motion. We also have a variable to keep track of the last detected motion time and a flag to monitor if motion is detected.
+   In diesem Abschnitt werden Konstanten und Variablen definiert, die im gesamten Code verwendet werden. Wir legen die Pins für das Relais und den PIR-Sensor sowie eine Zeitverzögerungskonstante für die Bewegung fest. Außerdem gibt es eine Variable zur Verfolgung des letzten Zeitpunkts einer erkannten Bewegung und ein Flag zur Überwachung, ob eine Bewegung erkannt wurde.
 
    .. code-block:: arduino
    
@@ -65,9 +65,9 @@ The project revolves around the PIR motion sensor's capability to detect motion.
    
    
 
-2. **Configuration of pins in setup() function**
+2. **Konfiguration der Pins in der setup() Funktion**
 
-   In the ``setup()`` function, we configure the pin modes for both the relay and PIR sensor. We also initialize the relay to be off at the start.
+   In der ``setup()`` Funktion konfigurieren wir die Pinmodi für das Relais und den PIR-Sensor und initialisieren das Relais so, dass es zu Beginn ausgeschaltet ist.
 
    .. code-block:: arduino
    
@@ -77,11 +77,11 @@ The project revolves around the PIR motion sensor's capability to detect motion.
         digitalWrite(relayPin, LOW);  // Turn off the relay initially
       }
 
-3. **Main logic in loop() function**
+3. **Hauptlogik in der loop() Funktion**
 
-   The ``loop()`` function contains the primary logic. When the PIR sensor detects motion, it sends a ``HIGH`` signal, turning on the relay and updating the ``lastMotionTime``. If there's no motion for the specified delay (5 seconds in this case), the relay is turned off.
+   Die ``loop()`` Funktion enthält die Hauptlogik. Wenn der PIR-Sensor eine Bewegung erkennt, sendet er ein ``HIGH`` Signal, schaltet das Relais ein und aktualisiert die ``lastMotionTime``. Wenn innerhalb der festgelegten Verzögerung (in diesem Fall 5 Sekunden) keine Bewegung mehr erkannt wird, wird das Relais ausgeschaltet.
    
-   This approach ensures that even if motion is sporadic or brief, the light remains on for at least 5 seconds after the last detected motion, providing a consistent illumination duration.
+   Diese Methode gewährleistet, dass die Lampe auch bei sporadischen oder kurzen Bewegungen für mindestens 5 Sekunden nach der letzten erkannten Bewegung eingeschaltet bleibt und somit eine gleichmäßige Beleuchtungsdauer erreicht wird.
 
    .. code-block:: arduino
    
@@ -98,6 +98,4 @@ The project revolves around the PIR motion sensor's capability to detect motion.
           motionDetected = false;
         }
       }
-   
-   
    

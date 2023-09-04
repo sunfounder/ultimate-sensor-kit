@@ -1,24 +1,23 @@
-
 .. _iot_Bluetooth_RGB_controller:
 
-Bluetooth RGB Controller
+Bluetooth RGB-Controller
 =============================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/iot/09-iot_Bluetooth_RGB_controller.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This project uses an Android app to control the color of an RGB LED through Bluetooth technology using a smartphone.
+Dieses Projekt ermöglicht die Steuerung einer RGB-LED über eine Android-App mittels Bluetooth-Technologie und einem Smartphone.
 
-This Android application will be constructed utilizing a complimentary web-based platform known as |link_appinventor|. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone.
+Für die Android-Anwendung wird eine kostenfreie, webbasierte Plattform namens |link_appinventor| verwendet. Das Projekt bietet eine hervorragende Gelegenheit, die Schnittstelle zwischen einem Arduino und einem Smartphone kennenzulernen.
 
-This project control an RGB LED connected to an Arduino Uno via a JDY-31 Bluetooth module. The Android application is used to send various color values to the Arduino Uno board via Bluetooth, based on user operations on the GUI. The program on Uno board receives RGB color values as characters from a serial port over Bluetooth and adjusts the LED's color accordingly.
+Dieses Projekt steuert eine mit einem Arduino Uno verbundene RGB-LED über ein JDY-31 Bluetooth-Modul. Die Android-App sendet verschiedenfarbige Werte an das Arduino Uno-Board via Bluetooth, abhängig von den Benutzereingaben in der grafischen Oberfläche. Das Programm auf dem Uno-Board empfängt RGB-Farbdaten als Zeichen über eine serielle Schnittstelle via Bluetooth und passt die Farbe der LED entsprechend an.
 
 
-1. Build the Cirduit
+1. Schaltungsaufbau
 -----------------------------
 
 .. image:: img/09-Wiring_Bluetooth_rgb_controller.png
@@ -29,144 +28,143 @@ This project control an RGB LED connected to an Arduino Uno via a JDY-31 Bluetoo
 * :ref:`cpn_rgb`
 
 
-2. Create the Android App
+2. Android-App erstellen
 -----------------------------
 
-The Android application will be developed using a free web application known as |link_appinventor|. 
-MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop 
-features allowing for the creation of simplistic applications.
+Die Android-Anwendung wird mit einer kostenfreien Web-Anwendung namens |link_appinventor| entwickelt. 
+MIT App Inventor dient als ausgezeichneter Einstiegspunkt in die Android-Entwicklung, dank seiner intuitiven Drag-and-Drop-Funktionen für die Erstellung einfacher Anwendungen.
 
-Now, let's begin.
+Beginnen wir nun.
 
-#. Go to |link_appinventor_login|, and click "online tool" to login. You will require a Google account to register with MIT App Inventor.
+#. Besuchen Sie |link_appinventor_login| und klicken Sie auf "Online-Tool" zum Einloggen. Sie benötigen ein Google-Konto, um sich bei MIT App Inventor anzumelden.
 
    .. image:: img/new/09-ai_signup_shadow.png
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``Control_RGB_LED.aia`` file located in the path ``ultimate-sensor-kit\iot_project\bluetooth\04-Bluetooth_RGB_controller``.
+#. Nach dem Einloggen navigieren Sie zu **Projects** -> **Import project (.aia) from my computer**. Anschließend laden Sie die Datei ``Control_RGB_LED.aia`` hoch, die im Pfad ``ultimate-sensor-kit\iot_project\bluetooth\04-Bluetooth_RGB_controller`` zu finden ist.
 
-   You can also directly download here: :download:`Control_RGB_LED.aia</_static/other/Control_RGB_LED.aia>`
+   Sie können sie auch direkt hier herunterladen: :download:`Control_RGB_LED.aia</_static/other/Control_RGB_LED.aia>`
 
    .. image:: img/new/09-ai_import_shadow.png
         :align: center
 
-#. Upon uploading the ``.aia`` file, you will see the application on the MIT App Inventor software. This is a pre-configured template. You can modify this template after you have familiarized yourself with MIT App Inventor through the following steps.
+#. Nach dem Hochladen der ``.aia``-Datei erscheint die Anwendung in der MIT App Inventor-Software. Das ist eine vorkonfigurierte Vorlage, die Sie nach dem Vertrautwerden mit MIT App Inventor anpassen können.
 
    .. image:: img/new/09-ai_import_2_shadow.png
 
-#. In MIT App Inventor, you have 2 primary sections: the **Designer** and the **Blocks**. You can switch between these two sections in the upper right corner of the page.
+#. Im MIT App Inventor gibt es zwei Hauptbereiche: den **Designer** und die **Blocks**. Sie können zwischen diesen beiden Bereichen in der oberen rechten Ecke der Seite wechseln.
 
    .. image:: img/new/09-ai_intro_1_shadow.png
 
-#. The **Designer** allows you to add buttons, text, screens, and modify the overall aesthetic of your application.
+#. Der **Designer** ermöglicht es Ihnen, Buttons, Textfelder, Bildschirme hinzuzufügen und das gesamte Design Ihrer Anwendung zu modifizieren.
 
    .. image:: img/new/09-ai_intro_2_shadow.png
    
-#. Next, there's the **Blocks** section. This section lets you craft custom functionalities for your app, allowing you to program each component on the app's GUI to achieve desired features.
+#. Anschließend gibt es den Bereich **Blocks**. Hier können Sie spezifische Funktionen für Ihre App programmieren, indem Sie jedes Element in der GUI der App programmieren, um gewünschte Funktionen zu erzielen.
 
    .. image:: img/new/09-ai_intro_3_shadow.png
 
-#. To install the application on a smartphone, navigate to the **Build** tab.
+#. Um die Anwendung auf einem Smartphone zu installieren, navigieren Sie zur **Build**-Registerkarte.
 
    .. image:: img/new/09-ai_intro_4_shadow.png
 
-   * You can generate a ``.apk`` file. After selecting this option, a page will appear allowing you to choose between downloading a ``.apk`` file or scanning a QR code for installation. Follow the installation guide to complete the application installation. 
+   * Sie können eine ``.apk``-Datei generieren. Nach der Auswahl erscheint eine Seite, auf der Sie zwischen dem Herunterladen einer ``.apk``-Datei oder dem Scannen eines QR-Codes für die Installation wählen können. Folgen Sie der Installationsanleitung, um die Anwendungsinstallation abzuschließen.
 
-     You also download our pre-compiled APK here: :download:`Control_RGB_LED.apk</_static/other/Control_RGB_LED.apk>`
+     Sie können auch unsere vorab kompilierte APK hier herunterladen: :download:`Control_RGB_LED.apk</_static/other/Control_RGB_LED.apk>`
 
-   * If you wish to upload this app to Google Play or another app marketplace, you can generate a ``.aab`` file.
+   * Falls Sie die App im Google Play Store oder einem anderen App-Marktplatz veröffentlichen möchten, können Sie eine ``.aab``-Datei generieren.
 
-
-3. Upload the Code
+3. Code hochladen
 -----------------------------
 
-#. Open the ``09-Bluetooth_RGB_controller.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\04-Bluetooth_RGB_controller``, or copy this code into **Arduino IDE**.
+#. Öffnen Sie die Datei ``04-Bluetooth_RGB_controller.ino`` im Pfad ``ultimate-sensor-kit\iot_project\bluetooth\04-Bluetooth_RGB_controller``, oder kopieren Sie diesen Code in die **Arduino IDE**.
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/dc140b60-64ed-4ec0-8e50-53c5340c267e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. Nach der Auswahl des korrekten Boards und Ports klicken Sie auf den **Hochladen**-Button.
 
-#. Open the Serial monitor(set baudrate to **9600**) to view debug messages. 
+#. Öffnen Sie den Seriellen Monitor (Baudrate auf **9600** einstellen), um Debug-Nachrichten anzuzeigen. 
 
-4. App and Bluetooth moudule Connection
------------------------------------------------
 
-Ensure that the application created earlier is installed on your smartphone.
+4. Verbindung zwischen App und Bluetooth-Modul herstellen
+-------------------------------------------------------------
 
-#. Initially, turn on **Bluetooth** on your smartphone.
+Stellen Sie sicher, dass die zuvor erstellte Anwendung auf Ihrem Smartphone installiert ist.
+
+#. Aktivieren Sie zunächst **Bluetooth** auf Ihrem Smartphone.
 
    .. image:: img/new/09-app_1_shadow.png
       :width: 60%
       :align: center
 
-#. Navigate to the **Bluetooth settings** on your smartphone and look for names like **JDY-31-SPP**.
+#. Navigieren Sie zu den **Bluetooth-Einstellungen** auf Ihrem Smartphone und suchen Sie nach Bezeichnungen wie **JDY-31-SPP**.
 
    .. image:: img/new/09-app_2_shadow.png
       :width: 60%
       :align: center
 
-#. After clicking it, agree to the **Pair** request in the pop-up window. If prompted for a pairing code, please enter "1234".
+#. Nach dem Anklicken stimmen Sie der **Pairing-Anfrage** im Popup-Fenster zu. Falls nach einem Pairing-Code gefragt wird, geben Sie "1234" ein.
 
    .. image:: img/new/09-app_3_shadow.png
       :width: 60%
       :align: center
 
-#. Now open the newly installed **Control_RGB_LED** APP.
+#. Öffnen Sie nun die neu installierte **Control_RGB_LED** App.
 
    .. image:: img/new/09-app_4_shadow.png
       :width: 25%
       :align: center
 
-#. In the APP, click on **Connect Bluetooth** to establish a connection between the APP and Bluetooth module.
+#. In der App klicken Sie auf **Connect Bluetooth**, um eine Verbindung zwischen der App und dem Bluetooth-Modul herzustellen.
 
    .. image:: img/new/09-app_5_shadow.png
       :width: 60%
       :align: center
 
-#. This page displays a list of all paired Bluetooth devices. Choose the ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` option from the list. The name of each device is listed next to its MAC address.
+#. Diese Seite zeigt eine Liste aller gekoppelten Bluetooth-Geräte. Wählen Sie die Option ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` aus der Liste aus. Der Name jedes Geräts wird neben seiner MAC-Adresse angezeigt.
 
    .. image:: img/new/09-app_6_shadow.png
       :width: 60%
       :align: center
 
-#. If you don't see any devices on the page shown above, it could be because this app is not authorized to scan for nearby devices. In such a case, you will need to adjust the settings manually.
+#. Wenn auf der oben gezeigten Seite keine Geräte angezeigt werden, könnte dies daran liegen, dass dieser App die Berechtigung fehlt, nach nahegelegenen Geräten zu suchen. In diesem Fall müssen Sie die Einstellungen manuell anpassen.
 
-   * To access the **APP Info** page, long-press the app icon and select it. Alternatively, if you have another method to reach this page, use that instead.
+   * Um zur Seite **App-Info** zu gelangen, halten Sie das App-Symbol gedrückt und wählen Sie es aus. Alternativ können Sie jede andere Methode verwenden, um zu dieser Seite zu gelangen.
 
    .. image:: img/new/09-app_8_shadow.png
          :width: 60%
          :align: center
 
-   * Navigate to the **Permissions** page.
+   * Navigieren Sie zur Seite **Berechtigungen**.
 
    .. image:: img/new/09-app_9_shadow.png
          :width: 60%
          :align: center
 
-   * To enable the APP to scan for nearby devices, go to **Nearby devices** and select **Always**.
+   * Um der App das Scannen von nahegelegenen Geräten zu ermöglichen, gehen Sie zu **Nahegelegene Geräte** und wählen Sie **Immer**.
 
    .. image:: img/new/09-app_10_shadow.png
          :width: 60%
          :align: center
 
-   * Now, restart the APP and repeat steps 5 and 6 to successfully connect to Bluetooth.
+   * Starten Sie nun die App neu und wiederholen Sie die Schritte 5 und 6, um erfolgreich eine Bluetooth-Verbindung herzustellen.
 
-#. After successfully connecting, you will be redirected to the main page where it will show "connected". From there, you can easily modify the RGB values and alter the color of the display by clicking on the **Change Color** button.
+#. Nach erfolgreicher Verbindung werden Sie zur Hauptseite weitergeleitet, auf der "connected" angezeigt wird. Von dort aus können Sie problemlos die RGB-Werte ändern und die Displayfarbe durch Klicken auf die Schaltfläche **Change Color** anpassen.
 
    .. image:: img/new/09-app_7_shadow.png
       :width: 60%
       :align: center
 
 
-5. Code explanation
+5. Code-Erklärung
 -----------------------------------------------
 
-#. Setting up the Bluetooth module and initializing variables:
+#. Einrichten des Bluetooth-Moduls und Initialisieren der Variablen:
 
-   The code begins by including the ``SoftwareSerial`` library and initializing the necessary variables. 
+   Der Code beginnt mit dem Einbinden der ``SoftwareSerial``-Bibliothek und der Initialisierung der notwendigen Variablen.
    
    .. code-block:: arduino
 
@@ -193,9 +191,9 @@ Ensure that the application created earlier is installed on your smartphone.
       int flag = 0;      
       char currentColor;  
 
-#. setup() function:
+#. Funktion setup():
 
-   Here, the RGB LED pins are set as output pins, and the serial communication is initialized with a baud rate of 9600 for both the Arduino's main serial and the Bluetooth module.
+   Hier werden die Pins für die RGB-LED als Ausgangspins festgelegt, und die serielle Kommunikation wird mit einer Baudrate von 9600 sowohl für die Hauptserielle Schnittstelle des Arduino als auch für das Bluetooth-Modul initialisiert.
    
    .. code-block:: arduino
 
@@ -207,15 +205,15 @@ Ensure that the application created earlier is installed on your smartphone.
         bleSerial.begin(9600);
       }
 
-#. Reading and processing the data:
+#. Lesen und Verarbeiten der Daten:
 
-   In the main loop, the code continuously checks for incoming data from the Bluetooth module. Upon receiving any data, it processes the characters to identify RGB values and sets the color of the RGB LED accordingly.
+   In der Hauptprogrammschleife prüft der Code kontinuierlich auf eingehende Daten vom Bluetooth-Modul. Bei Empfang von Daten werden die Zeichen verarbeitet, um die RGB-Werte zu identifizieren und die Farbe der RGB-LED entsprechend einzustellen.
    
    .. code-block:: arduino
 
       void loop() {
         while (bleSerial.available() > 0) {
-          ... [data reading and processing]
+          ... [Datenlesen und -verarbeiten]
         }
 
         if (flag == 0) {

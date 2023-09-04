@@ -1,7 +1,7 @@
 .. _fun_soap_dispenser:
 
-Automatic soap dispenser
-==========================
+Automatischer Seifenspender
+===========================
 
 .. raw:: html
 
@@ -10,11 +10,11 @@ Automatic soap dispenser
       Your browser does not support the video tag.
    </video>
 
-The Automatic Soap Dispenser project uses an Arduino Uno board along with an infrared obstacle avoidance sensor and a water pump. The sensor detects the presence of an object such as a hand, which activates the water pump to dispense soap.
+Das Projekt "Automatischer Seifenspender" nutzt ein Arduino Uno Board zusammen mit einem Infrarot-Hindernisvermeidungssensor und einer Wasserpumpe. Der Sensor erkennt die Anwesenheit eines Objekts wie einer Hand, was die Wasserpumpe aktiviert, um Seife zu spenden.
 
 
-1. Build the Cirduit
------------------------------
+1. Schaltkreis aufbauen
+------------------------
 
 .. image:: img/04-fun_Automatic_soap_dispenser_circuit.png
     :width: 90%
@@ -24,25 +24,24 @@ The Automatic Soap Dispenser project uses an Arduino Uno board along with an inf
 * :ref:`cpn_pump`
 
 
-2. Code
------------------------------
+2. Programmcode
+----------------
 
-#. Open the ``04-Automatic_soap_dispenser.ino`` file under the path of ``ultimate-sensor-kit\fun_project\04-Automatic_soap_dispenser``, or copy this code into **Arduino IDE**.
+#. Öffnen Sie die Datei ``04-Automatic_soap_dispenser.ino`` im Pfad ``ultimate-sensor-kit\fun_project\04-Automatic_soap_dispenser`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/0ee4125a-39fe-4493-bbe6-8bef68721896/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+3. Code-Erklärung
+------------------
 
-3. Code explanation
------------------------------
+Die Hauptidee dieses Projekts besteht darin, ein berührungsloses Seifenspendersystem zu schaffen. Der Infrarot-Hindernisvermeidungssensor erkennt, wenn sich ein Objekt (wie eine Hand) nähert. Bei Erkennung eines Objekts sendet der Sensor ein Signal an den Arduino, der daraufhin die Wasserpumpe aktiviert, um Seife zu spenden. Die Pumpe bleibt für eine kurze Zeit aktiv, spendet Seife und schaltet dann ab.
 
-The main idea behind this project is to create a hands-free soap dispensing system. The infrared obstacle avoidance sensor detects when an object (like a hand) is close. Upon detecting an object, the sensor sends a signal to the Arduino, which in turn triggers the water pump to dispense soap. The pump stays active for a brief period, dispensing soap, then turns off.
+#. **Definieren der Pins für den Sensor und die Pumpe**
 
-#. **Defining the pins for the sensor and the pump**
+   In diesem Code-Ausschnitt definieren wir die Arduino-Pins, die mit dem Sensor und der Pumpe verbunden sind. Pin 7 ist als Sensor-Pin definiert und wir verwenden die Variable ``sensorValue``, um die von diesem Sensor gelesenen Daten zu speichern. Für die Wasserpumpe verwenden wir zwei Pins, 9 und 10.
 
-   In this code snippet, we define the Arduino pins that connect to the sensor and pump. We define pin 7 as the sensor pin and we will use the variable ``sensorValue`` to store the data read from this sensor. For the water pump, we use two pins, 9 and 10.
-   
    .. code-block:: arduino
    
       const int sensorPin = 7;
@@ -50,9 +49,9 @@ The main idea behind this project is to create a hands-free soap dispensing syst
       const int pump1A = 9;
       const int pump1B = 10;
 
-#. **Setting up the sensor and pump**
+#. **Einrichten des Sensors und der Pumpe**
 
-   In the ``setup()`` function, we define the modes for the pins we're using. The sensor pin is set to ``INPUT`` as it will be used to receive data from the sensor. The pump pins are set to ``OUTPUT`` as they will send commands to the pump. We ensure that the pin ``pump1B`` starts in a ``LOW`` state (off), and we start the serial communication with a baud rate of 9600.
+   In der Funktion ``setup()`` legen wir die Modi für die verwendeten Pins fest. Der Sensor-Pin ist als ``INPUT`` eingestellt, da er Daten vom Sensor empfangen wird. Die Pumpen-Pins sind als ``OUTPUT`` eingestellt, da sie Befehle an die Pumpe senden werden. Wir stellen sicher, dass der Pin ``pump1B`` in einem ``LOW``-Zustand (aus) startet und beginnen die serielle Kommunikation mit einer Baudrate von 9600.
 
    .. code-block:: arduino
    
@@ -64,9 +63,9 @@ The main idea behind this project is to create a hands-free soap dispensing syst
         Serial.begin(9600);
       }
 
-#. **Continuously checking the sensor and controlling the pump**
+#. **Kontinuierliche Überprüfung des Sensors und Steuerung der Pumpe**
 
-   In the ``loop()`` function, the Arduino constantly reads the value from the sensor using ``digitalRead()`` and assigns it to ``sensorValue()``. It then prints this value to the serial monitor for debugging purposes. If the sensor detects an object, ``sensorValue()`` will be 0. When this happens, ``pump1A`` is set to ``HIGH``, activating the pump, and a delay of 700 milliseconds allows the pump to dispense soap. The pump is then deactivated by setting ``pump1A`` to ``LOW``, and a 1-second delay gives the user time to move their hand away before the cycle repeats.
+   In der Funktion ``loop()`` liest der Arduino ständig den Wert vom Sensor mit ``digitalRead()`` und weist ihn ``sensorValue()`` zu. Dieser Wert wird dann zum Seriellen Monitor für Debugging-Zwecke ausgegeben. Wenn der Sensor ein Objekt erkennt, wird ``sensorValue()`` 0 sein. In diesem Fall wird ``pump1A`` auf ``HIGH`` gesetzt, wodurch die Pumpe aktiviert wird, und eine Verzögerung von 700 Millisekunden ermöglicht es der Pumpe, Seife zu spenden. Die Pumpe wird dann durch Setzen von ``pump1A`` auf ``LOW`` deaktiviert, und eine Verzögerung von 1 Sekunde gibt dem Benutzer Zeit, seine Hand wegzubewegen, bevor der Zyklus sich wiederholt.
 
    .. code-block:: arduino
    
@@ -80,3 +79,4 @@ The main idea behind this project is to create a hands-free soap dispensing syst
           delay(1000);
         }
       }
+   

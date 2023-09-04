@@ -1,24 +1,23 @@
-
 .. _iot_Bluetooth_lock_controller:
 
-Bluetooth Lock Controller
+Bluetooth-Schlosssteuerung
 =============================
 
 .. raw:: html
 
-   <video loop autoplay muted style = "max-width:100%">
-      <source src="../_static/video/iot/08-iot_Bluetooth_lock_controller.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+   <video loop autoplay muted style="max-width:100%">
+      <source src="../_static/video/iot/08-iot_Bluetooth_lock_controller.mp4" type="video/mp4">
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This project uses an Android app created with MIT App Inventor to remotely control a servo motor via Bluetooth, simulating a locking mechanism. Users can command the servo to move to either the "locked" or "unlocked" position by sending specific messages through the app.
+Dieses Projekt nutzt eine mit dem MIT App Inventor erstellte Android-App, um über Bluetooth einen Servomotor aus der Ferne zu steuern und so einen Verriegelungsmechanismus zu simulieren. Benutzer können über die App spezifische Nachrichten senden, um den Servo entweder in die "verriegelte" oder "entriegelte" Position zu bewegen.
 
-The system uses a JDY-31 Bluetooth module to receive these messages and instructs an Arduino Uno board to adjust the servo motor's angle accordingly. The servo transitions to a "locked" position upon receiving the '1' message and to an "unlocked" position upon receipt of the '0' message.
+Das System verwendet ein JDY-31 Bluetooth-Modul, um diese Nachrichten zu empfangen und gibt entsprechende Anweisungen an ein Arduino Uno Board, um den Winkel des Servomotors anzupassen. Bei Empfang der Nachricht '1' bewegt sich der Servo in die "verriegelte" Position und bei Empfang der Nachricht '0' in die "entriegelte" Position.
 
-This Android application will be constructed utilizing a complimentary web-based platform known as |link_appinventor|. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone.
+Diese Android-Anwendung wird mithilfe einer ergänzenden webbasierten Plattform namens |link_appinventor| erstellt. Das Projekt bietet eine hervorragende Gelegenheit, die Schnittstelle zwischen einem Arduino und einem Smartphone kennen zu lernen.
 
 
-1. Build the Cirduit
+1. Schaltungsaufbau
 -----------------------------
 
 .. image:: img/08-Wiring_Bluetooth_lock_controller.png
@@ -29,149 +28,149 @@ This Android application will be constructed utilizing a complimentary web-based
 * :ref:`cpn_servo`
 
 
-2. Create the Android App
+2. Erstellung der Android-App
 -----------------------------
 
-The Android application will be developed using a free web application known as |link_appinventor|. 
-MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop 
-features allowing for the creation of simplistic applications.
+Die Android-Anwendung wird mit einer kostenlosen Webanwendung namens |link_appinventor| entwickelt. 
+Der MIT App Inventor eignet sich hervorragend als Einstiegspunkt für die Android-Entwicklung dank seiner intuitiven Drag-and-Drop-Funktionen, mit denen einfache Anwendungen erstellt werden können.
 
-Now, let's begin.
+Lassen Sie uns beginnen.
 
-#. Go to |link_appinventor_login|, and click "online tool" to login. You will require a Google account to register with MIT App Inventor.
+#. Besuchen Sie |link_appinventor_login| und klicken Sie auf "Online-Tool" zum Einloggen. Zum Registrieren bei MIT App Inventor benötigen Sie ein Google-Konto.
 
    .. image:: img/new/09-ai_signup_shadow.png
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``Bluetooth_controlled_lock.aia`` file located in the path ``ultimate-sensor-kit\iot_project\bluetooth\03-Bluetooth_lock_controller``.
+#. Nach dem Einloggen navigieren Sie zu **Projects** -> **Import project (.aia) from my computer**. Laden Sie anschließend die Datei ``Bluetooth_controlled_lock.aia`` aus dem Pfad ``ultimate-sensor-kit\iot_project\bluetooth\03-Bluetooth_lock_controller`` hoch.
 
-   You can also directly download here: :download:`Bluetooth_controlled_lock.aia</_static/other/Bluetooth_controlled_lock.aia>`
+   Sie können es auch direkt hier herunterladen: :download:`Bluetooth_controlled_lock.aia</_static/other/Bluetooth_controlled_lock.aia>`
 
    .. image:: img/new/09-ai_import_shadow.png
         :align: center
 
-#. Upon uploading the ``.aia`` file, you will see the application on the MIT App Inventor software. This is a pre-configured template. You can modify this template after you have familiarized yourself with MIT App Inventor through the following steps.
+#. Nach dem Hochladen der ``.aia``-Datei wird die Anwendung in der MIT App Inventor Software angezeigt. Dies ist eine vorkonfigurierte Vorlage. Sie können diese Vorlage nach dem Vertrautmachen mit dem MIT App Inventor über die folgenden Schritte anpassen.
 
-#. In MIT App Inventor, you have 2 primary sections: the **Designer** and the **Blocks**. You can switch between these two sections in the upper right corner of the page.
+#. Im MIT App Inventor gibt es zwei Hauptbereiche: den **Designer** und die **Blocks**. Sie können in der oberen rechten Ecke der Seite zwischen diesen beiden Bereichen wechseln.
 
    .. image:: img/new/09-ai_intro_1_shadow.png
 
-#. The **Designer** allows you to add buttons, text, screens, and modify the overall aesthetic of your application.
+#. Mit dem **Designer** können Sie Schaltflächen, Texte, Bildschirme hinzufügen und das gesamte Aussehen Ihrer Anwendung ändern.
 
    .. image:: img/new/08-ai_intro_2_shadow.png
    
-#. Next, there's the **Blocks** section. This section lets you craft custom functionalities for your app, allowing you to program each component on the app's GUI to achieve desired features.
+#. Weiter gibt es den Bereich **Blocks**. Dieser Bereich ermöglicht es Ihnen, benutzerdefinierte Funktionen für Ihre App zu erstellen, sodass Sie jedes Element auf der GUI der App programmieren können, um gewünschte Funktionen zu erreichen.
 
    .. image:: img/new/08-ai_intro_3_shadow.png
 
-#. To install the application on a smartphone, navigate to the **Build** tab.
+#. Um die Anwendung auf einem Smartphone zu installieren, gehen Sie zum Tab **Build**.
 
    .. image:: img/new/08-ai_intro_4_shadow.png
 
-   * You can generate a ``.apk`` file. After selecting this option, a page will appear allowing you to choose between downloading a ``.apk`` file or scanning a QR code for installation. Follow the installation guide to complete the application installation. 
+   * Sie können eine ``.apk``-Datei generieren. Nach Auswahl dieser Option erscheint eine Seite, auf der Sie zwischen dem Herunterladen einer ``.apk``-Datei oder dem Scannen eines QR-Codes zur Installation wählen können. Befolgen Sie die Installationsanleitung, um die Anwendungsinstallation abzuschließen. 
 
-     You also download our pre-compiled APK here: :download:`Bluetooth_controlled_lock.apk</_static/other/Bluetooth_controlled_lock.apk>`
+     Sie können auch unsere vorab kompilierte APK hier herunterladen: :download:`Bluetooth_controlled_lock.apk</_static/other/Bluetooth_controlled_lock.apk>`
 
-   * If you wish to upload this app to Google Play or another app marketplace, you can generate a ``.aab`` file.
+   * Falls Sie die App im Google Play Store oder einem anderen App-Marktplatz veröffentlichen möchten, können Sie eine ``.aab``-Datei generieren.
 
 
-3. Upload the Code
+3. Code hochladen
 -----------------------------
 
-#. Open the ``08-Bluetooth_lock_controller.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\03-Bluetooth_lock_controller``, or copy this code into **Arduino IDE**.
+#. Öffnen Sie die Datei ``03-Bluetooth_lock_controller.ino`` unter dem Pfad ``ultimate-sensor-kit\iot_project\bluetooth\03-Bluetooth_lock_controller`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/b7d14207-953c-479c-89a8-b4a6d8c64e61/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. Wählen Sie das richtige Board und den richtigen Port aus und klicken Sie auf den **Hochladen**-Button.
 
-#. Open the Serial monitor(set baudrate to **9600**) to view debug messages. 
+#. Öffnen Sie den Seriellen Monitor (Baudrate auf **9600** einstellen), um Debug-Nachrichten anzuzeigen. 
 
-4. App and Bluetooth moudule Connection
------------------------------------------------
 
-Ensure that the application created earlier is installed on your smartphone.
+4. Verbindung von App und Bluetooth-Modul
+--------------------------------------------------
 
-#. Initially, turn on **Bluetooth** on your smartphone.
+Vergewissern Sie sich, dass die zuvor erstellte Anwendung auf Ihrem Smartphone installiert ist.
+
+#. Aktivieren Sie zuerst **Bluetooth** auf Ihrem Smartphone.
 
    .. image:: img/new/09-app_1_shadow.png
       :width: 60%
       :align: center
 
-#. Navigate to the **Bluetooth settings** on your smartphone and look for names like **JDY-31-SPP**.
+#. Navigieren Sie zu den **Bluetooth-Einstellungen** auf Ihrem Smartphone und suchen Sie nach Bezeichnungen wie **JDY-31-SPP**.
 
    .. image:: img/new/09-app_2_shadow.png
       :width: 60%
       :align: center
 
-#. After clicking it, agree to the **Pair** request in the pop-up window. If prompted for a pairing code, please enter "1234".
+#. Nach dem Anklicken stimmen Sie der **Kopplungsanfrage** im Popup-Fenster zu. Falls ein Kopplungscode erforderlich ist, geben Sie bitte "1234" ein.
 
    .. image:: img/new/09-app_3_shadow.png
       :width: 60%
       :align: center
 
-#. Now open the newly installed **Control_RGB_LED** APP.
+#. Öffnen Sie nun die neu installierte **Control_RGB_LED**-App.
 
    .. image:: img/new/08-app_4_shadow.png
       :width: 25%
       :align: center
 
-#. In the APP, click on the **lock icon** to establish a connection between the APP and Bluetooth module.
+#. In der App klicken Sie auf das **Schloss-Symbol**, um eine Verbindung zwischen der App und dem Bluetooth-Modul herzustellen.
 
    .. image:: img/new/08-app_5_shadow.png
       :width: 60%
       :align: center
 
-#. This page displays a list of all paired Bluetooth devices. Choose the ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` option from the list. The name of each device is listed next to its MAC address.
+#. Diese Seite zeigt eine Liste aller gekoppelten Bluetooth-Geräte an. Wählen Sie die Option ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` aus der Liste. Der Name jedes Geräts wird neben seiner MAC-Adresse aufgeführt.
 
    .. image:: img/new/08-app_6_shadow.png
       :width: 60%
       :align: center
 
-#. If you don't see any devices on the page shown above, it could be because this app is not authorized to scan for nearby devices. In such a case, you will need to adjust the settings manually.
+#. Falls Sie auf der oben dargestellten Seite keine Geräte sehen, könnte dies daran liegen, dass dieser App die Berechtigung zur Suche nach nahegelegenen Geräten fehlt. In einem solchen Fall müssen Sie die Einstellungen manuell anpassen.
 
-   * To access the **APP Info** page, long-press the app icon and select it. Alternatively, if you have another method to reach this page, use that instead.
+   * Um zur **App-Infoseite** zu gelangen, halten Sie das App-Symbol gedrückt und wählen es aus. Oder nutzen Sie eine andere Methode, um auf diese Seite zu gelangen, falls Ihnen eine bekannt ist.
 
    .. image:: img/new/08-app_8_shadow.png
          :width: 60%
          :align: center
 
-   * Navigate to the **Permissions** page.
+   * Navigieren Sie zur Seite **Berechtigungen**.
 
    .. image:: img/new/08-app_9_shadow.png
          :width: 60%
          :align: center
 
-   * To enable the APP to scan for nearby devices, go to **Nearby devices** and select **Always**.
+   * Um der App das Scannen von nahegelegenen Geräten zu ermöglichen, gehen Sie zu **Nahegelegene Geräte** und wählen **Immer**.
 
    .. image:: img/new/08-app_10_shadow.png
          :width: 60%
          :align: center
 
-   * Now, restart the APP and repeat steps 5 and 6 to successfully connect to Bluetooth.
+   * Starten Sie nun die App neu und wiederholen Sie die Schritte 5 und 6, um eine erfolgreiche Verbindung zu Bluetooth herzustellen.
 
-#. After a successful connection, you will be redirected to the main page where it will display "connected". Then, you can click on either "Unlock" or "Lock" to control the locking mechanism.
+#. Nach einer erfolgreichen Verbindung werden Sie zur Hauptseite weitergeleitet, auf der "connected" angezeigt wird. Nun können Sie entweder auf "Unlock" oder "Lock" klicken, um den Verriegelungsmechanismus zu steuern.
 
    .. image:: img/new/08-app_7_shadow.png
       :width: 60%
       :align: center
 
-5. Code explanation
------------------------------------------------
+5. Code-Erklärung
+--------------------------------------------------
 
-#. Define the communication pins and initialize the SoftwareSerial library
+#. Kommunikationspins definieren und SoftwareSerial-Bibliothek initialisieren
 
    .. code-block:: arduino
 
       const int bluetoothTx = 3;  
-      const int bluetoothRx = 4;   
+      const int bluetoothRx = 4;  
       SoftwareSerial bleSerial(bluetoothTx, bluetoothRx);  
-   
-   The above code defines the transmit (Tx) and receive (Rx) pins used by the JDY-31 Bluetooth module for communication. It then initializes the SoftwareSerial library, which allows the Bluetooth module to communicate with the Arduino board.
 
-#. Define servo-related constants and create a servo object
+   Im obigen Code werden die Sendepins (Tx) und Empfangspins (Rx), die vom JDY-31 Bluetooth-Modul zur Kommunikation genutzt werden, definiert. Anschließend wird die SoftwareSerial-Bibliothek initialisiert, die es dem Bluetooth-Modul ermöglicht, mit dem Arduino-Board zu kommunizieren.
+
+#. Servo-relevante Konstanten definieren und Servo-Objekt erstellen
 
    .. code-block:: arduino
 
@@ -180,9 +179,9 @@ Ensure that the application created earlier is installed on your smartphone.
       const int unlockAngle = 90;
       Servo myservo;
 
-   Here, the pin attached to the servo is defined, along with the angles for "lock" and "unlock" positions. A Servo object ``myservo`` is also created for controlling the servo motor.
+   Hier werden der dem Servo zugeordnete Pin sowie die Winkel für die "verriegelte" und "entriegelte" Position definiert. Ein Servo-Objekt ``myservo`` wird ebenfalls für die Steuerung des Servomotors erstellt.
 
-#. Initialize the servo and serial communications
+#. Servo und serielle Kommunikation initialisieren
 
    .. code-block:: arduino
 
@@ -192,7 +191,7 @@ Ensure that the application created earlier is installed on your smartphone.
         bleSerial.begin(9600);
       }
 
-#. Control servo based on Bluetooth module's input
+#. Servo-Steuerung basierend auf Eingaben des Bluetooth-Moduls
 
    .. code-block:: arduino
 
@@ -210,4 +209,5 @@ Ensure that the application created earlier is installed on your smartphone.
         }
       }
 
-   The ``loop()`` function runs repeatedly. It reads incoming messages from the Bluetooth module. If the message is '1', the servo is moved to the "locked" position, and if the message is '0', the servo is moved to the "unlocked" position. The current status ("Locked" or "Unlocked") is printed to the Serial Monitor.
+   Die ``loop()``-Funktion wird fortlaufend ausgeführt. Sie liest eingehende Nachrichten vom Bluetooth-Modul. Wenn die Nachricht '1' lautet, wird der Servo in die "verriegelte" Position bewegt. Bei der Nachricht '0' wird der Servo in die "entriegelte" Position bewegt. Der aktuelle Status ("Verriegelt" oder "Entriegelt") wird im seriellen Monitor ausgegeben.
+

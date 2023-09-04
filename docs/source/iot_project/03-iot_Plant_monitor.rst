@@ -1,24 +1,23 @@
-
 .. _iot_Plant_monitor:
 
-Plant Monitor with Blynk
+Pflanzenüberwachung mit Blynk
 =============================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/iot/03-iot_Plant_monitor.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This project creates a plant monitoring demo system that detects the current temperature, humidity, light intensity, and soil moisture. The data is then displayed on Blynk along with suggestions based on the soil moisture levels.
+Dieses Projekt realisiert ein Demonstrations-System zur Pflanzenüberwachung, das aktuelle Temperatur, Luftfeuchtigkeit, Lichtintensität und Bodenfeuchtigkeit erfasst. Die Daten werden anschließend in Blynk angezeigt, ergänzt durch Vorschläge, die sich an den Feuchtigkeitswerten des Bodens orientieren.
 
-1. Build the Cirduit
+1. Schaltung aufbauen
 -----------------------------
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
+    Das ESP8266-Modul benötigt einen hohen Stromfluss, um stabil zu funktionieren. Stellen Sie daher sicher, dass die 9V-Batterie angeschlossen ist.
 
 
 .. image:: img/03-Wiring_Plant_monitor.png
@@ -31,46 +30,46 @@ This project creates a plant monitoring demo system that detects the current tem
 * :ref:`cpn_soil`
 
 
-2. Configure Blynk
+2. Blynk konfigurieren
 -----------------------------
 
 .. note::
-    If you are not familiar with Blynk, it is strongly recommended that you read these two tutorials first. :ref:`iot_blynk_start` is a beginner's guide for Blynk, which includes how to configure ESP8266 and register with Blynk. And :ref:`iot_Flame` is a simple example, but the description of the steps will be more detailed.
+    Wenn Sie mit Blynk noch nicht vertraut sind, empfehlen wir dringend, zuerst diese beiden Anleitungen zu lesen. :ref:`iot_blynk_start` ist ein Einsteigerleitfaden für Blynk, der auch die Konfiguration von ESP8266 und die Registrierung bei Blynk enthält. :ref:`iot_Flame` ist ein einfaches Beispiel, aber die Beschreibung der Schritte ist detaillierter.
 
-**2.1 Create template**
+**2.1 Vorlage erstellen**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Firstly, we need to establish a template on Blynk. Create a **"Plant Monitor"** template. 
+Zunächst müssen wir eine Vorlage in Blynk erstellen. Erstellen Sie eine Vorlage namens **"Pflanzenüberwachung"**.
 
-**2.2 Datastream**
+**2.2 Datenstrom**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Create **Datastreams** of type **Virtual Pin** in the **Datastream** page receive data from esp8266 and uno r4 board. 
+Erstellen Sie **Datastreams** vom Typ **Virtual Pin** auf der **Datastreams**-Seite, um Daten von ESP8266 und Uno R4 zu empfangen.
 
-* Create Virtual Pin V0 according to the following diagram: 
-   
-  Set the name of the **Virtual Pin V0** to **temperature**. Set the **DATA TYPE** to **Double** and MIN and MAX to **-100** and **100**. Set the **UNITS** to **Celsius,℃**.
+* Erstellen Sie den **Virtual Pin V0** gemäß folgendem Schema:
+  
+  Benennen Sie den **Virtual Pin V0** in **temperature** um. Setzen Sie den **DATA TYPE** auf **Double** und MIN und MAX auf **-100** und **100**. Setzen Sie die **UNITS** auf **Celsius,℃**.
 
   .. image:: img/new/03-datastream_1_shadow.png
       :width: 90%
 
-* Create Virtual Pin V1 according to the following diagram: 
-   
-  Set the name of the **Virtual Pin V1** to **humidity**. Set the **DATA TYPE** to **Double** and MIN and MAX to **0** and **100**. Set the **UNITS** to **Percentage,%**.
+* Erstellen Sie den **Virtual Pin V1** gemäß folgendem Schema:
+  
+  Benennen Sie den **Virtual Pin V1** in **humidity** um. Setzen Sie den **DATA TYPE** auf **Double** und MIN und MAX auf **0** und **100**. Setzen Sie die **UNITS** auf **Percentage,%**.
 
   .. image:: img/new/03-datastream_2_shadow.png
       :width: 90%
 
-* Create Virtual Pin V2 according to the following diagram: 
-   
-  Set the name of the **Virtual Pin V2** to **soilMoisture**. Set the **DATA TYPE** to **String**.
+* Erstellen Sie den **Virtual Pin V2** gemäß folgendem Schema:
+  
+  Benennen Sie den **Virtual Pin V2** in **soilMoisture** um. Setzen Sie den **DATENTYP** auf **String**.
 
   .. image:: img/new/03-datastream_3_shadow.png
       :width: 90%
 
-* Create Virtual Pin V3 according to the following diagram: 
-   
-  Set the name of the **Virtual Pin V3** to **LED**. Set the **DATA TYPE** to **Integer** and MIN and MAX to **0** and **255**.
+* Erstellen Sie den **Virtual Pin V3** gemäß folgendem Schema:
+  
+  Benennen Sie den **Virtual Pin V3** in **LED** um. Setzen Sie den **DATA TYPE** auf **Integer** und MIN und MAX auf **0** und **255**.
   
   .. image:: img/new/03-datastream_4_shadow.png
       :width: 90%
@@ -80,12 +79,12 @@ Create **Datastreams** of type **Virtual Pin** in the **Datastream** page receiv
     <br/> 
 
 
-**2.3 Web Dashboard**
+**2.3 Web-Dashboard**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We also need to configure the **Web Dashboard** to interact with the Plant monitor.
+Wir müssen auch das **Web-Dashboard** konfigurieren, um mit der Pflanzenüberwachung interagieren zu können.
 
-Configure the Web Dashboard according to the following diagram. We used widgets such as label, gauge, LED, and chart. Be sure to bind each widget to its corresponding virtual pin.
+Konfigurieren Sie das Web-Dashboard gemäß dem folgenden Schema. Wir verwenden Widgets wie Beschriftungen, Anzeigen, LEDs und Diagramme. Achten Sie darauf, jedes Widget an seinen entsprechenden virtuellen Pin zu binden.
 
 .. image:: img/new/03-web_dashboard_1_shadow.png
     :width: 65%
@@ -95,82 +94,82 @@ Configure the Web Dashboard according to the following diagram. We used widgets 
     
     <br/>  
 
-**2.4 Save template**
+**2.4 Vorlage speichern**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-At last, remember to save the template.
+Vergessen Sie nicht, die Vorlage am Ende zu speichern.
 
 
-3. Run the Code
+
+3. Code ausführen
 -----------------------------
 
-#. Open the ``03-Plant_monitor.ino`` file under the path of ``ultimate-sensor-kit\iot_project\wifi\03-Plant_monitor``, or copy this code into **Arduino IDE**.
-
+#. Öffnen Sie die Datei ``03-Plant_monitor.ino`` im Pfad ``ultimate-sensor-kit\iot_project\wifi\03-Plant_monitor`` oder kopieren Sie den Code in die **Arduino IDE**.
 
    .. raw:: html
-       
+
        <iframe src=https://create.arduino.cc/editor/sunfounder01/72257734-f348-4227-af59-aa8422abc376/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Create a Blynk device using the "Plant Monitor" template. Then, replace the ``BLYNK_TEMPLATE_ID``, ``BLYNK_TEMPLATE_NAME``, and ``BLYNK_AUTH_TOKEN`` with your own. 
+#. Erstellen Sie ein Blynk-Gerät mit der Vorlage "Pflanzenüberwachung". Ersetzen Sie dann die Werte für ``BLYNK_TEMPLATE_ID``, ``BLYNK_TEMPLATE_NAME`` und ``BLYNK_AUTH_TOKEN`` durch Ihre eigenen.
 
    .. code-block:: arduino
-    
+
       #define BLYNK_TEMPLATE_ID "TMPxxxxxxx"
       #define BLYNK_TEMPLATE_NAME "Plant Monitor"
       #define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxx"
 
-
-#. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. 
+#. Geben Sie ebenfalls die ``ssid`` und das ``Passwort`` des genutzten WLANs ein.
 
    .. code-block:: arduino
 
-    char ssid[] = "your_ssid";
-    char pass[] = "your_password";
+      char ssid[] = "Ihr_SSID";
+      char pass[] = "Ihr_Passwort";
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. Nach der Auswahl des korrekten Boards und Ports klicken Sie auf den **Hochladen**-Button.
 
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+#. Öffnen Sie den Seriellen Monitor (Baudrate auf 115200 einstellen) und warten Sie auf eine Erfolgsmeldung zur Verbindung.
 
    .. image:: img/new/02-ready_1_shadow.png
-    :width: 80%
-    :align: center
+      :width: 80%
+      :align: center
 
    .. note::
 
-       If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+       Falls die Meldung ``ESP is not responding`` erscheint, gehen Sie bitte wie folgt vor:
 
-       * Make sure the 9V battery is plugged in.
-       * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-       * Press the reset button on the R4 board.
+       * Stellen Sie sicher, dass die 9V-Batterie angeschlossen ist.
+       * Setzen Sie das ESP8266-Modul zurück, indem Sie den RST-Pin für eine Sekunde auf GND legen und dann wieder entfernen.
+       * Drücken Sie den Reset-Knopf auf dem R4-Board.
 
-       Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+       Manchmal müssen Sie die obigen Schritte 3-5 Mal wiederholen. Bitte haben Sie Geduld.
 
 
-4. Code explanation
+
+4. Code-Erklärung
 -----------------------------
 
-#. **Initializing Libraries & Defining Constants**:
-   
-   This segment of code includes necessary libraries and defines certain constants like the Blynk template information and WiFi credentials. 
+#. **Initialisierung von Bibliotheken und Definition von Konstanten**:
+
+   Dieser Codeabschnitt beinhaltet die benötigten Bibliotheken und definiert bestimmte Konstanten, wie die Blynk-Vorlageninformationen und WLAN-Zugangsdaten.
    
    .. code-block:: arduino
     
       #define BLYNK_TEMPLATE_ID "TMPLxxxxxxx"
-      #define BLYNK_TEMPLATE_NAME "Plant Monitor"
+      #define BLYNK_TEMPLATE_NAME "Pflanzenüberwachung"
       #define BLYNK_AUTH_TOKEN "xxxxxxxxxxx"
       #define BLYNK_PRINT Serial
       #include <ESP8266_Lib.h>
       #include <BlynkSimpleShieldEsp8266.h>
-      char ssid[] = "your_ssid";
-      char pass[] = "your_password";
+      char ssid[] = "Ihr_SSID";
+      char pass[] = "Ihr_Passwort";
       #include <SoftwareSerial.h>
       SoftwareSerial EspSerial(2, 3);
       #define ESP8266_BAUD 115200
       ESP8266 wifi(&EspSerial);
 
-#. **Setting up the DHT Sensor**:
+#. **Einrichten des DHT-Sensors**:
 
-   The DHT sensor is initialized and relevant variables for storing temperature and humidity are defined.
+   Der DHT-Sensor wird initialisiert und relevante Variablen zur Speicherung von Temperatur und Luftfeuchtigkeit festgelegt.
 
    .. code-block:: arduino
 
@@ -181,11 +180,11 @@ At last, remember to save the template.
       float temperature;
       float humidity;
 
-#. **Setting up the Soil Moisture Sensor**:
+#. **Einrichten des Bodenfeuchtesensors**:
 
-   Configuration for the soil moisture sensor. Thresholds for wet and dry conditions are defined.
+   Konfiguration des Bodenfeuchtesensors. Grenzwerte für nasse und trockene Bedingungen werden festgelegt.
    
-   You need to measure your own ``wetSoil`` and ``drySoil`` according to the your actual situation. Record the reading of Soil Moisture Module as ``drySoil`` when the soil is dry, and record the reading of Soil Moisture Module within a suitable range that you consider to be the most moist (going beyond this range would be too wet) as ``wetSoil``.
+   Sie müssen Ihre eigenen Werte für ``wetSoil`` und ``drySoil`` gemäß Ihrer konkreten Situation ermitteln. Messen Sie den Wert des Bodenfeuchtemoduls als ``drySoil``, wenn der Boden trocken ist, und den Wert innerhalb eines geeigneten Bereichs, den Sie als am feuchtesten betrachten (jenseits dieses Bereichs wäre zu nass), als ``wetSoil``.
 
    .. code-block:: arduino
 
@@ -195,19 +194,19 @@ At last, remember to save the template.
       int moisture;
       String soilStatus;
 
-#. **Setting up the Timer**:
+#. **Timer-Einrichtung**:
 
-   A timer is configured which will dictate the frequency of data readings and updates.
+   Ein Timer wird konfiguriert, der die Häufigkeit der Datenerfassung und -aktualisierung steuert.
 
    .. code-block:: arduino
 
       BlynkTimer timer;
 
-#. **Initialization in Setup Function**:
+#. **Initialisierung in der Setup-Funktion**:
 
-   This section sets up the serial communication, configures the ESP8266 for WiFi, and begins the DHT sensor.
+   In diesem Abschnitt wird die serielle Kommunikation eingerichtet, das ESP8266 für das WLAN konfiguriert und der DHT-Sensor gestartet.
 
-   - We use ``timer.setInterval(5000L, myTimerEvent)`` to set the timer interval in setup(), here we set to execute the ``myTimerEvent()`` function every **5000ms**. You can modify the first parameter of ``timer.setInterval(1000L, myTimerEvent)`` to change the interval between ``myTimerEvent`` executions.
+   - Mit ``timer.setInterval(5000L, myTimerEvent)`` wird das Timer-Intervall in der Setup()-Funktion festgelegt. Hier haben wir es so eingestellt, dass die Funktion ``myTimerEvent()`` alle **5000 ms** ausgeführt wird. Sie können den ersten Parameter von ``timer.setInterval(1000L, myTimerEvent)`` ändern, um das Intervall zwischen den ``myTimerEvent``-Ausführungen zu ändern.
 
    .. raw:: html
     
@@ -225,9 +224,9 @@ At last, remember to save the template.
          dht.begin();
       }
 
-#. **loop() Function**:
+#. **loop()-Funktion**:
 
-   The main loop runs the Blynk process and timer.
+   Die Hauptschleife führt den Blynk-Prozess und den Timer aus.
 
    .. code-block:: arduino
 
@@ -236,12 +235,12 @@ At last, remember to save the template.
          timer.run();
       }
 
-#. **sendData() Function**:
+#. **sendData()-Funktion**:
 
-   This function reads values from the DHT sensor and soil moisture sensor, determines the soil's status, and sends data to the Blynk app.
+   Diese Funktion liest Werte vom DHT- und Bodenfeuchtesensor, bestimmt den Zustand des Bodens und sendet die Daten an die Blynk-App.
 
-   - Use ``Blynk.virtualWrite(vPin, value)`` to send data to virtual pins on Blynk. Please refer to |link_blynk_virtualWrite|.
-   - Use ``Blynk.setProperty(V3, "color", color)`` to set the color of LED on Blynk. More detail at |link_blynk_LED_color|.
+   - Verwenden Sie ``Blynk.virtualWrite(vPin, value)`` um Daten an virtuelle Pins in Blynk zu senden. Siehe dazu |link_blynk_virtualWrite|.
+   - Verwenden Sie ``Blynk.setProperty(V3, "color", color)`` um die Farbe der LED in Blynk einzustellen. Weitere Details finden Sie unter |link_blynk_LED_color|.
 
    .. raw:: html
     
@@ -258,20 +257,21 @@ At last, remember to save the template.
          Blynk.setProperty(V3, "color", color);  // set blynk LED color
       }
 
-#. **Printing Data to Serial Monitor**:
+#. **Daten auf Serial Monitor ausgeben**:
 
-   This function is useful for debugging and verifying the readings locally on the Arduino IDE's serial monitor.
+   Diese Funktion ist nützlich für Debugging-Zwecke und zur lokalen Überprüfung der Messwerte im seriellen Monitor der Arduino IDE.
 
    .. code-block:: arduino
 
       void printData() {
-         // (code for printing values to serial monitor)
+         // (Code zur Ausgabe der Werte auf den Serial Monitor)
       }
 
 
 
-**Reference**
+**Referenzen**
 
 - |link_blynk_doc|
 - |link_blynk_virtualWrite|
 - |link_blynk_displays|
+

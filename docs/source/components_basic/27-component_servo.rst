@@ -1,21 +1,21 @@
 .. _cpn_servo:
 
-Servo Motor (SG90)
+Servomotor (SG90)
 ==========================
 
 .. image:: img/27_servo.png
     :width: 300
     :align: center
 
-Introduction
+Einleitung
 ---------------------------
-Servo motors are devices that can rotate to a specific angle or position. They can be used to move robotic arms, steering wheels, camera gimbals, etc. Servo motors have three wires: power, ground and signal. The power wire is usually red and should be connected to the 5V pin on the Arduino board. The ground wire is usually black or brown and should be connected to a ground pin on the board. The signal wire is usually yellow or orange and should be connected to a PWM pin on the board.
+Servomotoren sind Geräte, die sich auf einen bestimmten Winkel oder eine bestimmte Position drehen können. Sie kommen beispielsweise in Roboterarmen, Lenkrädern oder Kameragimbals zum Einsatz. Ein Servomotor hat drei Kabel: Stromversorgung, Masse und Signal. Das rote Kabel dient der Stromversorgung und sollte an den 5V-Pin des Arduino-Boards angeschlossen werden. Das schwarze oder braune Kabel ist die Masse und sollte mit einem Ground-Pin des Boards verbunden werden. Das gelbe oder orangefarbene Kabel ist das Signalkabel und sollte an einen PWM-Pin des Boards angeschlossen werden.
 
-Principle
+Funktionsprinzip
 ---------------------------
-A servo is generally composed of the following parts: case, shaft, gear system, potentiometer, DC motor, and embedded board.
+Ein Servo besteht in der Regel aus den folgenden Teilen: Gehäuse, Welle, Getriebesystem, Potenziometer, Gleichstrommotor und einer eingebetteten Platine. 
 
-It works like this: The microcontroller sends out PWM signals to the servo, and then the embedded board in the servo receives the signals through the signal pin and controls the motor inside to turn. As a result, the motor drives the gear system and then rotates the shaft after deceleration. The shaft and potentiometer of the servo are connected together. When the shaft rotates, it drives the potentiometer, so the potentiometer outputs a voltage signal to the embedded board. Then the board determines the direction and speed of rotation based on the current position, so it can stop exactly at the right position as defined and hold there.
+So funktioniert es: Der Mikrocontroller sendet PWM-Signale an den Servo. Die eingebettete Platine im Servo empfängt diese Signale und steuert den internen Motor. Daraufhin treibt der Motor das Getriebesystem an, das die Welle dreht. Die Welle und das Potenziometer des Servos sind miteinander verbunden. Bei einer Drehung der Welle verändert sich die Spannung am Potenziometer, die wiederum an die Platine gesendet wird. Diese steuert dann die Drehrichtung und -geschwindigkeit, sodass der Servo präzise in der definierten Position stoppen und dort verharren kann.
 
 .. image:: img/27_servo_internal.png
     :width: 450
@@ -25,7 +25,8 @@ It works like this: The microcontroller sends out PWM signals to the servo, and 
     
     <br/>
 
-The angle is determined by the duration of a pulse that is applied to the control wire. This is called Pulse width Modulation. The servo expects to see a pulse every 20 ms. The length of the pulse will determine how far the motor turns. For example, a 1.5ms pulse will make the motor turn to the 90 degree position (neutral position). When a pulse is sent to a servo that is less than 1.5 ms, the servo rotates to a position and holds its output shaft some number of degrees counterclockwise from the neutral point. When the pulse is wider than 1.5 ms the opposite occurs. The minimal width and the maximum width of pulse that will command the servo to turn to a valid position are functions of each servo. Generally the minimum pulse will be about 0.5 ms wide and the maximum pulse will be 2.5 ms wide.
+Der Winkel wird durch die Dauer eines Pulses bestimmt, der auf das Steuerkabel aufgebracht wird. Dies wird als Pulsweitenmodulation bezeichnet. Der Servo erwartet alle 20 ms einen Puls. Die Länge des Pulses bestimmt, wie weit sich der Motor dreht. Zum Beispiel wird ein 1,5 ms langer Puls den Motor in die 90-Grad-Position (Neutralstellung) drehen. Wenn ein Puls mit einer Dauer von weniger als 1,5 ms an einen Servo gesendet wird, dreht dieser sich um einige Grade gegen den Uhrzeigersinn von der Neutralstellung weg und hält dort. Ist der Puls länger als 1,5 ms, tritt das Gegenteil ein. Die minimale und maximale Pulslänge, die den Servo zu einer gültigen Position bewegen, sind eigenschaften jedes einzelnen Servos. In der Regel beträgt die minimale Pulslänge etwa 0,5 ms und die maximale Pulslänge etwa 2,5 ms.
+
 
 .. image:: img/27_servo_duty.png
     :width: 500
@@ -35,17 +36,16 @@ The angle is determined by the duration of a pulse that is applied to the contro
     
     <br/>
 
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- Servo Motor * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Board * 1
+- Servomotor * 1
+- Jumperkabel
 
-
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/27_servo_circuit.png
     :width: 400
@@ -55,7 +55,7 @@ Usage
     
     <br/><br/>   
 
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -67,14 +67,14 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/27-component_servo.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erläuterung
 ^^^^^^^^^^^^^^^^^^^^
 
-1. Here, the ``Servo`` library is included which allows for easy control of the servo motor. The pin connected to the servo and the initial angle of the servo are also defined.
+1. Hier wird die ``Servo``-Bibliothek eingebunden, die eine einfache Steuerung des Servomotors ermöglicht. Der Pin, an dem der Servo angeschlossen ist, und der Anfangswinkel werden ebenfalls definiert.
 
    .. code-block:: arduino
 
@@ -83,7 +83,7 @@ Code explanation
       int angle = 0;           // Initialize the angle variable to 0 degrees
       Servo servo;             // Create a servo object
 
-2. The ``setup()`` function runs once when the Arduino starts. The servo is attached to the defined pin using the ``attach()`` function.
+2. Die Funktion ``setup()`` wird einmal ausgeführt, wenn der Arduino startet. Mit der Funktion ``attach()`` wird der Servo am definierten Pin angeschlossen.
 
    .. code-block:: arduino
 
@@ -91,7 +91,7 @@ Code explanation
         servo.attach(servoPin);
       }
 
-3. The main loop has two ``for`` loops. The first loop increases the angle from 0 to 180 degrees, and the second loop decreases the angle from 180 to 0 degrees. The ``servo.write(angle)`` command sets the servo to the specified angle. The ``delay(15)`` causes the servo to wait for 15 milliseconds before moving to the next angle, controlling the speed of the scanning movement.
+3. Die Haupt-Schleife enthält zwei ``for``-Schleifen. Die erste Schleife erhöht den Winkel von 0 bis 180 Grad, und die zweite verringert ihn von 180 bis 0 Grad. Der Befehl ``servo.write(angle)`` setzt den Servo auf den angegebenen Winkel. Die ``delay(15)``-Anweisung bewirkt, dass der Servo 15 Millisekunden wartet, bevor er zum nächsten Winkel übergeht.
 
    .. code-block:: arduino
 
@@ -108,12 +108,12 @@ Code explanation
         }
       }
 
-Additional Ideas
+Weitere Ideen
 ^^^^^^^^^^^^^^^^^^^^
 
-- Control the servo’s motion using a potentiometer. The rotation of the potentiometer could be used to directly control the angle of the servo.
+- Steuerung des Servos über ein Potenziometer. Die Drehung des Potenziometers könnte direkt den Winkel des Servos steuern.
 
-More Projects
+Weitere Projekte
 ---------------------------
 * :ref:`fun_smart_trashcan`
 * :ref:`iot_Bluetooth_lock_controller`

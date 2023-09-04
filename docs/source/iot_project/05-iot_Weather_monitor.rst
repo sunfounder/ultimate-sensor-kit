@@ -1,71 +1,67 @@
+.. _iot_Wetterüberwachung:
 
-.. _iot_Weather_monitor:
-
-Weather Monitor with ThingSpeak
+Wetterüberwachung mit ThingSpeak
 ====================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/iot/05-iot_Weather_monitor.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This project collects temperature and pressure data using an Atmospheric Pressure Sensor. The collected data is then transmitted to the ThingSpeak cloud platform via an ESP8266 module and Wi-Fi network at regular time intervals.
+Dieses Projekt erfasst Temperatur- und Druckdaten mithilfe eines Atmosphärendrucksensors. Die gesammelten Daten werden in regelmäßigen Abständen über ein ESP8266-Modul und ein WLAN-Netzwerk an die ThingSpeak-Cloud-Plattform übertragen.
 
 
-1. Build the Cirduit
+1. Schaltung aufbauen
 -----------------------------
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
-
+    Das ESP8266-Modul benötigt einen hohen Stromfluss, um eine stabile Betriebsumgebung zu gewährleisten. Stellen Sie daher sicher, dass die 9-V-Batterie angeschlossen ist.
 
 .. image:: img/05-Wiring_Weather_monitor.png
     :width: 90%
-
 
 * :ref:`cpn_uno`
 * :ref:`cpn_esp8266`
 * :ref:`cpn_bmp280`
 
 
-2. Configure ThingSpeak
+2. ThingSpeak konfigurieren
 -----------------------------
 
-|link_thingspeak| ™ is an IoT analytics platform service that allows you to aggregate, visualize and analyze live data streams in the cloud. ThingSpeak provides instant visualizations of data posted by your devices to ThingSpeak. With the ability to execute MATLAB® code in ThingSpeak you can perform online analysis and processing of the data as it comes in. ThingSpeak is often used for prototyping and proof of concept IoT systems that require analytics.
+|link_thingspeak| ™ ist eine IoT-Analyseplattform, die die Aggregation, Visualisierung und Analyse von Live-Datenströmen in der Cloud ermöglicht. ThingSpeak bietet sofortige Visualisierungen von Daten, die von Ihren Geräten an ThingSpeak gesendet werden. Mit der Möglichkeit, MATLAB®-Code in ThingSpeak auszuführen, können Sie eine Echtzeitanalyse und -verarbeitung der eingehenden Daten durchführen. ThingSpeak wird häufig für Prototypen und Machbarkeitsnachweise von IoT-Systemen mit Analyseanforderungen eingesetzt.
 
 .. image:: https://thingspeak.com/assets/Signup_TSP_ML_image-3d581d644f5eb1ff9f4999fc55ad04e2530ee7f54be98323d7bb453032353750.svg
-    :width: 80% 
+    :width: 80%
     :align: center
 
 .. raw:: html
     
     <br/>  
 
-**2.1 Creating ThingSpeak Account**
+**2.1 ThingSpeak-Konto erstellen**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The first thing you need to do is to create an account with ThingSpeak. Since the collaboration with MATLAB, you can use your MathWorks credentials to login to |link_thingspeak|.
+Als Erstes müssen Sie ein Konto bei ThingSpeak erstellen. Da es eine Zusammenarbeit mit MATLAB gibt, können Sie sich mit Ihren MathWorks-Anmeldedaten bei |link_thingspeak| anmelden.
 
-If you do not have one, you need to create an account with MathWorks and login to ThingSpeak Application.
+Wenn Sie noch keine haben, müssen Sie ein Konto bei MathWorks erstellen und sich bei der ThingSpeak-Anwendung anmelden.
 
 .. image:: img/new/05-thingspeak_signup_shadow.png
     :width: 50%
     :align: center
 
-
-**2.2 Creating the channel**
+**2.2 Einen Kanal erstellen**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-After logging in, create a new channel to store the data by going to "Channels" > "My Channels" and clicking on "New Channel".
+Nach der Anmeldung erstellen Sie einen neuen Kanal zur Datenspeicherung, indem Sie zu "Channels" > "My Channels" gehen und auf "New Channel" klicken.
 
 .. image:: img/new/05-thingspeak_channel_1_shadow.png
     :width: 95%
     :align: center
 
-For this project, we need to create a channel called "**Weather Monitor**" with two fields: **Field 1** for "**Temperature**" and **Field 2** for "**Atmospheric Pressure**".
+Für dieses Projekt müssen wir einen Kanal namens "**Weather Monitor**" mit zwei Feldern erstellen: **Field 1** für "**Temperature**" und **Field 2** für "**Atmospheric Pressure**".
 
 .. image:: img/new/05-thingspeak_channel_2_shadow.png
     :width: 95%
@@ -76,41 +72,40 @@ For this project, we need to create a channel called "**Weather Monitor**" with 
     <br/>  
 
 
-3. Run the Code
+3. Den Code ausführen
 -----------------------------
 
-#. Open the ``05-Weather_monitor.ino`` file under the path of ``ultimate-sensor-kit\iot_project\wifi\05-Weather_monitor``, or copy this code into **Arduino IDE**.
+#. Öffnen Sie die Datei ``05-Weather_monitor.ino`` im Verzeichnispfad ``ultimate-sensor-kit\iot_project\wifi\05-Weather_monitor`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
    .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"Adafruit BMP280"** and install it. 
+      Um die Bibliothek zu installieren, nutzen Sie den Arduino-Bibliotheksmanager und suchen Sie nach **"Adafruit BMP280"**, um sie zu installieren.
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/195c180e-72fa-4bea-9370-7c75920c7933/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. You need to enter the ``mySSID`` and ``myPWD`` of the WiFi you are using. 
+#. Sie müssen die ``mySSID`` und ``myPWD`` des von Ihnen verwendeten WLANs eingeben.
 
    .. code-block:: arduino
 
-    String mySSID = "your_ssid";     // WiFi SSID
-    String myPWD = "your_password";  // WiFi Password
+    String mySSID = "Ihre_SSID";     // WiFi SSID
+    String myPWD = "Ihr_Passwort";  // WiFi-Passwort
 
-#. You also need to modify the ``myAPI`` with your ThingSpeak Channel API key.
+#. Außerdem müssen Sie die ``myAPI`` mit Ihrem ThingSpeak Channel-API-Schlüssel anpassen.
 
    .. code-block:: arduino
     
-      String myAPI = "xxxxxxxxxxxx";  // API Key
+      String myAPI = "xxxxxxxxxxxx";  // API-Schlüssel
 
    .. image:: img/new/05-thingspeak_api_shadow.png
        :width: 80%
        :align: center
-   
-   
-   Here you can find **your unique API KEY that you must keep private**. 
+  
+   Hier finden Sie **Ihren einzigartigen API-Schlüssel, den Sie geheim halten müssen**.
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. Nach der Auswahl des korrekten Boards und Ports klicken Sie auf die Schaltfläche **Hochladen**.
 
-#. Open the Serial monitor(set baudrate to **9600**) and wait for a prompt such as a successful connection to appear.
+#. Öffnen Sie das serielle Monitor (Baudrate auf **9600** einstellen) und warten Sie auf eine Meldung wie eine erfolgreiche Verbindung.
 
    .. image:: img/new/05-ready_1_shadow.png
           :width: 95%
@@ -119,33 +114,34 @@ For this project, we need to create a channel called "**Weather Monitor**" with 
           :width: 95%
 
 
-4. Code explanation
+
+4. Code-Erklärung
 -----------------------------
 
-The ESP8266 module that comes with the kit is already pre-burned with AT firmware. Therefore, the ESP8266 module can be controlled through AT commands. In this project, we use software serial to enable communication between the Arduino Uno board and the ESP8266 module. The Arduino Uno board sends AT commands to the ESP8266 module for network connection and sending requests. You can refer to |link_esp8266_at|.
+Das im Kit enthaltene ESP8266-Modul ist bereits ab Werk mit einer AT-Firmware vorprogrammiert. Dadurch lässt sich das ESP8266-Modul über AT-Befehle steuern. In diesem Projekt verwenden wir die Software-Seriell-Kommunikation, um die Kommunikation zwischen dem Arduino Uno Board und dem ESP8266-Modul zu ermöglichen. Das Arduino Uno Board sendet AT-Befehle an das ESP8266-Modul, um eine Netzwerkverbindung herzustellen und Anfragen zu senden. Weitere Informationen finden Sie unter |link_esp8266_at|.
 
-The Uno board reads sensor values and sends AT commands to the ESP8266 module. The ESP8266 module connects to a network and sends requests to ThingSpeak servers. 
+Das Uno-Board liest Sensordaten und sendet AT-Befehle an das ESP8266-Modul. Das ESP8266-Modul verbindet sich mit einem Netzwerk und sendet Anfragen an die ThingSpeak-Server.
 
-1. **Setting Up & Global Variables**:
+1. **Einrichtung & Globale Variablen**:
 
-   This section establishes communication with the ESP8266 module and declares necessary global variables.
+   Dieser Abschnitt stellt die Kommunikation mit dem ESP8266-Modul her und deklariert notwendige globale Variablen.
 
    .. code-block:: arduino
 
       #include <SoftwareSerial.h>
       SoftwareSerial espSerial(2, 3);
       #define DEBUG true
-      String mySSID = "your_ssid";
-      String myPWD = "your_password";
+      String mySSID = "Ihre_SSID";
+      String myPWD = "Ihr_Passwort";
       String myAPI = "xxxxxxxxxxxx";
       String myHOST = "api.thingspeak.com";
       String myPORT = "80";
       unsigned long lastConnectionTime = 0;
       const unsigned long postingInterval = 20000L;
 
-2. **BMP280 Sensor Setup**:
+2. **BMP280 Sensor-Konfiguration**:
 
-   This code segment sets up the BMP280 sensor for data reading.
+   Dieses Code-Segment konfiguriert den BMP280-Sensor für die Datenerfassung.
 
    .. code-block:: arduino
 
@@ -157,9 +153,9 @@ The Uno board reads sensor values and sends AT commands to the ESP8266 module. T
       float pressure;
       float temperature;
 
-3. **Initialization (Setup Function)**:
+3. **Initialisierung (Setup-Funktion)**:
 
-   The ``setup()`` function initializes serial communication, connects the ESP8266 module to Wi-Fi, and initializes the BMP280 sensor.
+   Die Funktion ``setup()`` initialisiert die serielle Kommunikation, verbindet das ESP8266-Modul mit dem WLAN und initialisiert den BMP280-Sensor.
 
    .. code-block:: arduino
 
@@ -188,28 +184,28 @@ The Uno board reads sensor values and sends AT commands to the ESP8266 module. T
                         Adafruit_BMP280::STANDBY_MS_500); /* Standby time. */
       }
 
-4. **loop() function**:
+4. **loop()-Funktion**:
 
-   The main loop checks if 20 seconds have passed since the last data transmission. If so, it sends the data. You can modify the value of the ``postingInterval`` variable to adjust the interval at which data is sent.
+   Die Haupt-Schleife prüft, ob seit der letzten Datenübertragung 20 Sekunden vergangen sind. Ist dies der Fall, werden die Daten gesendet. Sie können den Wert der Variable ``postingInterval`` anpassen, um das Intervall der Datenübertragung zu ändern.
 
    .. code-block:: arduino
 
       void loop() {
-        //Send data according to the time interval you set.
+        // Datenübertragung gemäß dem eingestellten Zeitintervall.
         if (millis() - lastConnectionTime > postingInterval) {
           sendData();
         }
       }
 
-5. **Data Transmission**:
+5. **Datenübertragung**:
 
-   This function reads the temperature and pressure, constructs the GET request, and sends data to ThingSpeak.
+   Diese Funktion liest die Temperatur und den Druck, konstruiert die GET-Anfrage und sendet die Daten an ThingSpeak.
 
-   We constructed a GET request in the form of ``GET /update?api_key=xxxxxx&field1=xx&field2=xxxxxx`` and sent three parameters to the ThingSpeak server.
+   Wir haben eine GET-Anfrage in Form von ``GET /update?api_key=xxxxxx&field1=xx&field2=xxxxxx`` erstellt und drei Parameter an den ThingSpeak-Server gesendet.
 
-     - ``api_key``: API key for authentication and permission control
-     - ``field1``: a parameter named "field1" used to record temperature
-     - ``field2``: a parameter named "field2" used to record atmospheric pressure
+     - ``api_key``: API-Schlüssel für Authentifizierung und Zugriffskontrolle
+     - ``field1``: ein Parameter namens "field1" zur Aufzeichnung der Temperatur
+     - ``field2``: ein Parameter namens "field2" zur Aufzeichnung des Luftdrucks
 
    .. code-block:: arduino
 
@@ -245,9 +241,10 @@ The Uno board reads sensor values and sends AT commands to the ESP8266 module. T
         lastConnectionTime = millis();          // Update the last connection time
       }
 
-6. **Helper Functions**:
 
-   These functions assist in sending AT commands to the ESP8266 and print the BMP280 sensor readings.
+6. **Hilfsfunktionen**:
+
+   Diese Funktionen unterstützen beim Senden von AT-Befehlen an das ESP8266-Modul und beim Anzeigen der Messwerte des BMP280-Sensors.
 
    .. code-block:: arduino
 
@@ -260,6 +257,6 @@ The Uno board reads sensor values and sends AT commands to the ESP8266 module. T
       }
 
 
-**Reference**
+**Referenz**
 
 * |link_esp8266_at|

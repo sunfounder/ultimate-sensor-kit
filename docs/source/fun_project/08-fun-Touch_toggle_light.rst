@@ -1,19 +1,19 @@
 .. _fun_touch_toggle_light:
 
-Touch toggle light
+Berührungsaktivierte Ampel
 ==========================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/fun/08-fun-Touch_toggle_light.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-The project involves creating a simple traffic light control mechanism using a touch sensor and a traffic light LED module. When the touch sensor is activated, the LEDs will cycle through the following sequence: Red -> Yellow -> Green.
+Das Projekt beinhaltet die Erstellung einer einfachen Ampelsteuerung mit einem Berührungssensor und einem Ampel-LED-Modul. Wird der Sensor berührt, durchläuft das LED-Modul folgende Sequenz: Rot -> Gelb -> Grün.
 
 
-1. Build the Cirduit
+1. Schaltungsaufbau
 -----------------------------
 
 .. image:: img/08-fun_touch_toggle_light_circuit.png
@@ -27,19 +27,19 @@ The project involves creating a simple traffic light control mechanism using a t
 2. Code
 -----------------------------
 
-#. Open the ``08-Touch_toggle_light.ino`` file under the path of ``ultimate-sensor-kit\fun_project\08-Touch_toggle_light``, or copy this code into **Arduino IDE**.
+#. Öffnen Sie die Datei ``08-Touch_toggle_light.ino`` im Verzeichnis ``ultimate-sensor-kit\fun_project\08-Touch_toggle_light``, oder kopieren Sie diesen Code in die **Arduino IDE**.
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/7e6106dd-6a46-4bbb-8057-5b93d5fa25b5/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-3. Code explanation
+3. Codeerklärung
 -----------------------------
 
-This project operates on a simple principle: when a touch is detected on the touch sensor, the next LED in the sequence (Red -> Yellow -> Green) will light up. The state of which LED is currently active is managed by the variable ``currentLED``.
+Dieses Projekt basiert auf einem einfachen Prinzip: Wird eine Berührung am Sensor erkannt, leuchtet die nächste LED in der Sequenz (Rot -> Gelb -> Grün) auf. Der aktuelle Status der LEDs wird durch die Variable ``currentLED`` verwaltet.
 
-1. Define pins and initial values
+1. Definition der Pins und Anfangswerte
 
    .. code-block:: arduino
    
@@ -53,7 +53,7 @@ This project operates on a simple principle: when a touch is detected on the tou
    
    These lines define the pins that we connect the components to on the Arduino board and initialize the states for touch and LEDs.
 
-2. setup() function
+2. setup() Funktion
 
    .. code-block:: arduino
    
@@ -66,10 +66,10 @@ This project operates on a simple principle: when a touch is detected on the tou
          pinMode(gledPin, OUTPUT);
          currentTouchState = digitalRead(touchSensorPin);
        }
-   
-   This function runs once when the Arduino is powered on or reset. Here, the touch sensor is set as an input (it will read values), while the LEDs are set as outputs (we will set their values). Also, the serial communication is started to allow debugging, and the initial touch state is read.
 
-3. loop() function
+   Diese Funktion wird einmal ausgeführt, wenn der Arduino eingeschaltet oder zurückgesetzt wird. Hier wird der Berührungssensor als Eingang und die LEDs als Ausgänge konfiguriert. Die serielle Kommunikation wird für die Fehlerdiagnose gestartet und der Anfangszustand des Berührungssensors wird gelesen.
+
+3. loop() Funktion
 
    .. code-block:: arduino
    
@@ -97,9 +97,9 @@ This project operates on a simple principle: when a touch is detected on the tou
          }
        }
 
-   In the main loop, the current touch state is read and compared with the previous one. If a touch is detected (transition from LOW to HIGH), all LEDs are turned off, and the next one in the sequence is turned on. 
+   In der Hauptschleife wird der aktuelle Zustand des Berührungssensors gelesen und mit dem vorherigen verglichen. Wird eine Berührung erkannt (Übergang von LOW zu HIGH), werden alle LEDs ausgeschaltet und die nächste in der Sequenz eingeschaltet.
 
-4. Turn off LEDs function
+4. Funktion zum Ausschalten der LEDs
 
    .. code-block:: arduino
       
@@ -109,8 +109,5 @@ This project operates on a simple principle: when a touch is detected on the tou
          digitalWrite(gledPin, LOW);
        }
 
-   This function, when called, will turn off all the LEDs by setting their pins to LOW.
-
-
-
+   Diese Funktion schaltet alle LEDs aus, indem ihre Pins auf LOW gesetzt werden.
 

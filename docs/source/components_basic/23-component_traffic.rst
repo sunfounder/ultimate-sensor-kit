@@ -1,32 +1,31 @@
 .. _cpn_traffic:
 
-Traffic Light Module
+Ampel-Modul
 ==========================
 
 .. image:: img/23_traffic_light.png
     :width: 400
     :align: center
 
-Introduction
+Einführung
 ---------------------------
-The traffic light module is a small device that can display red, yellow and green lights, just like a real traffic light. It can be used to make a traffic light system model or to learn how to control LEDs with Arduino. It is featured with its small size, simple wiring, targeted, and custom installation. It can be connected PWM pin to control the brightness of the LED.
+Das Ampel-Modul ist ein kleines Gerät, das rote, gelbe und grüne Lichter anzeigen kann, genau wie eine echte Ampel. Es eignet sich zur Erstellung eines Modells eines Ampelsystems oder zum Erlernen der Steuerung von LEDs mit Arduino. Es zeichnet sich durch seine kompakte Bauform, einfache Verkabelung, zielgerichtete Anwendung und individuelle Installationsmöglichkeiten aus. Über den PWM-Pin lässt sich die Helligkeit der LED steuern.
 
-Principle
+Funktionsprinzip
 ---------------------------
-The traffic light module can be controlled in two primary ways. The more straightforward method involves using digital inputs from the Arduino, where a HIGH or LOW signal directly turns the corresponding LED on or off. Alternatively, PWM (pulse-width modulation) can be used, especially when varying the brightness of the LED is desired. PWM is a technique where the duty cycle of a digital signal is changed to modulate the brightness of the LED. A duty cycle represents the percentage of time that a signal remains on during a specific period. For instance, a 50% duty cycle implies the signal is active for half the duration and inactive for the remainder. Adjusting the duty cycle allows for the LED's brightness modulation.
+Das Ampel-Modul kann auf zwei Hauptarten gesteuert werden. Die einfachere Methode verwendet digitale Eingänge vom Arduino, bei denen ein HIGH- oder LOW-Signal die entsprechende LED direkt ein- oder ausschaltet. Alternativ kann PWM (Pulsweitenmodulation) verwendet werden, insbesondere wenn die Helligkeit der LED variiert werden soll. PWM ist eine Technik, bei der der Tastgrad eines digitalen Signals verändert wird, um die Helligkeit der LED zu modulieren. Der Tastgrad gibt den prozentualen Anteil der Zeit an, während der ein Signal in einem bestimmten Zeitraum aktiv ist. Ein Tastgrad von 50% bedeutet beispielsweise, dass das Signal für die Hälfte der Zeit aktiv und für den Rest inaktiv ist.
 
-
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- Traffic Light Module * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Board * 1
+- Ampel-Modul * 1
+- Jumperkabel
 
 
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/23_traffic_light_circuit.png
     :width: 600
@@ -36,34 +35,33 @@ Usage
     
     <br/><br/>   
 
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/fb0a9599-5e59-458c-893b-97551f62aea8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/23-component_traffic.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
-   <br/><br/>  
+   <br/><br/>   
 
-Code explanation
+Code-Erklärung
 ^^^^^^^^^^^^^^^^^^^^
 
-1. Before any operations, we define constants for the pins where LEDs are connected. This makes our code easier to read and modify.
+1. Bevor wir mit den Operationen beginnen, definieren wir Konstanten für die Pins, an denen die LEDs angeschlossen sind. Dies macht unseren Code leichter lesbar und modifizierbar.
 
   .. code-block:: arduino
 
-     const int rledPin = 9;  //red
-     const int yledPin = 8;  //yellow
-     const int gledPin = 7;  //green
+     const int rledPin = 9;  //rot
+     const int yledPin = 8;  //gelb
+     const int gledPin = 7;  //grün
 
-2. Here, we specify the pin modes for our LED pins. They are all set to ``OUTPUT`` because we intend to send voltage to them.
+2. Hier legen wir die Pin-Modi für unsere LED-Pins fest. Alle sind auf ``OUTPUT`` gesetzt, da wir vorhaben, Spannung an sie zu senden.
 
   .. code-block:: arduino
 
@@ -73,11 +71,11 @@ Code explanation
        pinMode(gledPin, OUTPUT);
      }
 
-3. This is where our traffic light cycle logic is implemented. The sequence of operations is:
+3. Hier wird die Logik für unseren Ampelzyklus implementiert. Die Abfolge der Operationen lautet:
 
-    * Turn the green LED on for 5 seconds.
-    * Blink the yellow LED three times (each blink lasts for 0.5 seconds).
-    * Turn the red LED on for 5 seconds.
+    * Die grüne LED für 5 Sekunden einschalten.
+    * Die gelbe LED dreimal blinken lassen (jedes Blinken dauert 0,5 Sekunden).
+    * Die rote LED für 5 Sekunden einschalten.
     
   .. code-block:: arduino
 
@@ -104,12 +102,12 @@ Code explanation
        digitalWrite(rledPin, LOW);
      }
 
-Additional Ideas
+Weitere Ideen
 ^^^^^^^^^^^^^^^^^^^^
 
-- Integrate a buzzer to give sound alerts during the change from green to red, helping visually impaired individuals.
+- Integrieren Sie einen Summer, um akustische Signale beim Wechsel von Grün auf Rot zu geben, was für sehbehinderte Personen hilfreich ist.
 
-More Projects
+Weitere Projekte
 ---------------------------
 * :ref:`fun_touch_toggle_light`
 * :ref:`iot_Remote_relay_controller`

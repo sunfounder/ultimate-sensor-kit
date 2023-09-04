@@ -1,34 +1,32 @@
 .. _cpn_raindrop:
 
-Raindrop Detection Module
+Regentropfen-Erkennungsmodul
 ==========================
 
 .. image:: img/11_raindrop_detection_module.jpg
     :width: 300
     :align: center
 
-Introduction
+Einleitung
 ---------------------------
 
-A raindrop sensor, or raindrop detection sensor, is used to detect whether it is raining and also the rainfall. It is widely used in the automatic wiper system, smart lighting system and sunroof system of automobiles.
+Ein Regentropfensensor oder auch Regenfall-Erkennungssensor wird genutzt, um festzustellen, ob es regnet und wie stark der Niederschlag ist. Er findet breite Anwendung in automatischen Scheibenwischersystemen, intelligenten Beleuchtungssystemen und Schiebedachsystemen von Automobilen.
 
-Principle
+Funktionsprinzip
 ---------------------------
 
-Raindrop sensor is basically a board on which nickel is coated in the form of lines. It works on the principal of resistance. When there is no rain drop on board. Resistance is high so we gets high voltage according to V=IR. When rain drop present it reduces the resistance because water is conductor of electricity and presence of water connects nickel lines in parallel so reduced resistance and reduced voltage drop across it. The more intense the rainfall the lower the resistance.
+Der Regentropfensensor besteht im Grunde aus einer Platte, die mit Nickel in Linienform beschichtet ist. Er arbeitet auf dem Prinzip des elektrischen Widerstands. Wenn die Platte trocken ist, ist der Widerstand hoch und dementsprechend ist auch die Spannung nach der Formel V=IR hoch. Bei Kontakt mit Regentropfen sinkt der Widerstand, da Wasser ein elektrischer Leiter ist und die Nickel-Linien parallel schließt, was den Widerstand und den Spannungsabfall reduziert. Je stärker der Regenfall, desto geringer ist der Widerstand.
 
-
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Benötigte Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- Raindrop Detection Module * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Platine * 1
+- Regentropfen-Erkennungsmodul * 1
+- Verbindungskabel
 
-
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/11_raindrop_detection_module_circuit.png
     :width: 400
@@ -50,22 +48,22 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/11-component_raindrop.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erklärung
 ^^^^^^^^^^^^^^^^^^^^
 
-1. Defining sensor pin
-Here, a constant integer named ``sensorPin`` is defined and assigned the value 7. This corresponds to the digital pin on the Arduino board where the raindrops detection sensor is connected.
+1. Sensorpin definieren
+Hier wird eine Konstante des Typs Integer namens ``sensorPin`` definiert und dem Wert 7 zugewiesen. Dies entspricht dem digitalen Pin auf dem Arduino-Board, an den der Regentropfen-Erkennungssensor angeschlossen ist.
 
 .. code-block:: arduino
 
     const int sensorPin = 7;
 
-2. Setting up the pin mode and initiating serial communication
-In the ``setup()`` function, two essential steps are performed. Firstly, ``pinMode()`` is used to set the ``sensorPin`` as an input, enabling us to read digital values from the raindrops sensor. Secondly, serial communication is initialized with a baud rate of 9600.
+2. Pin-Modus einstellen und serielle Kommunikation initiieren
+In der ``setup()``-Funktion werden zwei wesentliche Schritte durchgeführt. Erstens wird mit ``pinMode()`` der ``sensorPin`` als Eingang konfiguriert, damit digitale Werte vom Regentropfensensor gelesen werden können. Zweitens wird die serielle Kommunikation mit einer Baudrate von 9600 initialisiert.
 
 .. code-block:: arduino
 
@@ -74,8 +72,8 @@ In the ``setup()`` function, two essential steps are performed. Firstly, ``pinMo
       Serial.begin(9600);
     }
 
-3. Reading the digital value and sending it to the serial monitor. 
-The ``loop()`` function reads the digital value from the raindrops sensor using ``digitalRead()``. This value (either HIGH or LOW) is printed to the Serial Monitor. The program then waits for 50 milliseconds before the next reading.
+3. Den digitalen Wert lesen und an das serielle Monitor senden.
+Die ``loop()``-Funktion liest den digitalen Wert vom Regentropfensensor mit ``digitalRead()`` aus. Dieser Wert (entweder HIGH oder LOW) wird an das serielle Monitor ausgegeben. Das Programm wartet dann 50 Millisekunden, bevor die nächste Messung erfolgt.
 
 .. code-block:: arduino
 
@@ -84,10 +82,9 @@ The ``loop()`` function reads the digital value from the raindrops sensor using 
       delay(50);
     }
 
-Additional Ideas
-^^^^^^^^^^^^^^^^^^^^
+Weitere Ideen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Add an LED indicator that lights up when rain is detected
-- Connect a buzzer to the Arduino to sound an alert when rain is detected, which can act as an early warning system for events like picnics or outdoor activities.
-
+- Fügen Sie eine LED-Anzeige hinzu, die aufleuchtet, wenn Regen erkannt wird.
+- Verbinden Sie einen Summer mit dem Arduino, um einen Alarmton auszulösen, wenn Regen erkannt wird. Dies könnte als Frühwarnsystem für Veranstaltungen wie Picknicks oder Outdoor-Aktivitäten dienen.
 

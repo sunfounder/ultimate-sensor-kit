@@ -1,6 +1,6 @@
 .. _cpn_pump:
 
-Centrifugal Pump
+Kreiselpumpe
 ==========================
 
 .. image:: img/28_pump.png
@@ -11,28 +11,27 @@ Centrifugal Pump
     
     <br/>
     
-Introduction
+Einleitung
 ---------------------------
-A centrifugal pump is a device that can move liquids from one place to another by using a rotating impeller. It can be used to pump water, oil, chemicals, etc. A centrifugal pump has two main parts: a motor and a pump. The motor provides power to the pump and the pump converts the rotational energy into pressure and flow.
+Eine Kreiselpumpe ist ein Gerät, das Flüssigkeiten mittels eines rotierenden Laufrads von einem Ort zum anderen befördern kann. Sie kann zum Pumpen von Wasser, Öl, Chemikalien usw. verwendet werden. Eine Kreiselpumpe besteht aus zwei Hauptkomponenten: einem Motor und einer Pumpe. Der Motor versorgt die Pumpe mit Energie, und die Pumpe wandelt die Rotationsenergie in Druck und Durchfluss um.
 
 
-Principle
+Funktionsprinzip
+---------------------------
+Die Kreiselpumpe funktioniert mit einem sich drehenden Laufrad, das die Geschwindigkeit der Flüssigkeit erhöht und sie durch ein Einlassrohr in die Pumpe zieht. Sobald die Flüssigkeit den äußeren Rand des Laufrads verlässt, wird sie durch die Zentrifugalkraft durch ein Auslassrohr gedrückt, was zu einem erhöhten Druck führt. Je schneller das Laufrad rotiert, desto höher sind der Druck und der Durchfluss der Flüssigkeit.
+
+
+Anwendungsbeispiele
 ---------------------------
 
-A centrifugal pump operates by using a spinning impeller which increases the velocity of the fluid, drawing it into the pump through an inlet pipe. As the liquid exits the impeller's outer edge, centrifugal force pushes it out through an outlet pipe, resulting in increased pressure. The faster the impeller spins, the higher the pressure and flow of the liquid.
+**Hardware-Komponenten**
+
+- Arduino Uno R4 oder R3 Board * 1
+- Kreiselpumpe * 1
+- Jumperkabel
 
 
-Usage
----------------------------
-
-**Hardware components**
-
-- Arduino Uno R4 or R3 board * 1
-- Centrifugal Pump * 1
-- Jumper Wires
-
-
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/28_pump_circuit.png
     :width: 600
@@ -42,7 +41,7 @@ Usage
     
     <br/><br/>   
 
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -58,47 +57,47 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erklärung
 ^^^^^^^^^^^^^^^^^^^^
 
-1. Two pins are defined for controlling the motor, specifically ``motorB_1A`` and ``motorB_2A``. These pins will connect to the L9110 motor control board to control the direction and speed of the motor.
-  
+1. Zwei Pins werden für die Motorsteuerung definiert, konkret ``motorB_1A`` und ``motorB_2A``. Diese Pins verbinden sich mit der L9110 Motorsteuerplatine, um die Richtung und Geschwindigkeit des Motors zu steuern.
+
    .. code-block:: arduino
-   
+
       const int motorB_1A = 9;
       const int motorB_2A = 10;
 
-2. Configuring the pins and controlling the motor:
+2. Konfiguration der Pins und Steuerung des Motors:
 
-   - The ``setup()`` function initializes the pins as ``OUTPUT`` which means they can send signals to the motor control board.
+   - Die ``setup()``-Funktion initialisiert die Pins als ``OUTPUT``, sodass sie Signale an die Motorsteuerplatine senden können.
 
-   - The ``analogWrite()`` function is used to set the motor speed. Here, setting one pin to ``HIGH`` and the other to ``LOW`` makes the pump spin in one direction. After a 5-second delay, both pins are set to 0, turning off the motor.
+   - Die Funktion ``analogWrite()`` wird verwendet, um die Motorgeschwindigkeit einzustellen. Hier bewirkt das Setzen eines Pins auf ``HIGH`` und des anderen auf ``LOW``, dass sich die Pumpe in eine Richtung dreht. Nach einer Verzögerung von 5 Sekunden werden beide Pins auf 0 gesetzt, um den Motor auszuschalten.
    
    .. code-block:: arduino
-   
+
       void setup() {
-         pinMode(motorB_1A, OUTPUT);  // set pump pin 1 as output
-         pinMode(motorB_2A, OUTPUT);  // set pump pin 2 as output
+         pinMode(motorB_1A, OUTPUT);  // Pin 1 der Pumpe als Ausgang definieren
+         pinMode(motorB_2A, OUTPUT);  // Pin 2 der Pumpe als Ausgang definieren
          analogWrite(motorB_1A, HIGH); 
          analogWrite(motorB_2A, LOW);
-         delay(5000);// wait for 5 seconds
-         analogWrite(motorB_1A, 0);  // turn off the pump
+         delay(5000);  // 5 Sekunden warten
+         analogWrite(motorB_1A, 0);  // Pumpe ausschalten
          analogWrite(motorB_2A, 0);
       }
 
 
-Additional Ideas
+Weitere Ideen
 ^^^^^^^^^^^^^^^^^^^^
 
-- Reverse the pump's direction by switching the ``HIGH`` and ``LOW`` values between the pins.
+- Ändern der Pumpenrichtung durch Vertauschen der ``HIGH`` und ``LOW`` Werte zwischen den Pins.
 
-- Implement a system where the pump toggles its state (on/off) using a button press.
+- Implementieren Sie ein System, bei dem der Pumpenzustand (an/aus) durch einen Tastendruck umgeschaltet wird.
 
-- Implement a potentiometer to control the speed of the pump using PWM.
+- Verwenden Sie ein Potenziometer, um die Geschwindigkeit der Pumpe mittels PWM zu steuern.
 
-- Include sensors to automate the pump's operation based on certain conditions, e.g., turning the pump on/off depending on water level in a tank.
+- Integrieren Sie Sensoren, um den Pumpenbetrieb automatisch auf der Grundlage bestimmter Bedingungen zu steuern, z. B. das Ein- und Ausschalten der Pumpe je nach Wasserstand in einem Tank.
 
-More Projects
+Weitere Projekte
 ---------------------------
 * :ref:`fun_soap_dispenser`
 * :ref:`iot_Auto_watering_system`

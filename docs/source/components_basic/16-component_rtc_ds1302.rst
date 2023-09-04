@@ -1,31 +1,31 @@
 .. _cpn_rtc_ds1302:
 
-Real Time Clock Module (DS1302)
+Echtzeituhr-Modul (DS1302)
 =====================================
 
 .. image:: img/16_DS1302_module.png
     :width: 400
     :align: center
 
-Introduction
+Einleitung
 ---------------------------
-A DS1302 real-time clock module is a device that can keep track of the date and time. It can help you create projects that need accurate timing and scheduling. It can also be used to create a digital clock with Arduino.
+Das DS1302 Echtzeituhr-Modul ist ein Gerät zur präzisen Zeit- und Datumsverwaltung. Es eignet sich hervorragend für Projekte, die genaue Zeitangaben und Planungen erfordern, oder um eine digitale Uhr mit Arduino zu realisieren.
 
-Principle
+Funktionsweise
 ---------------------------
-DS1302 is a trickle charging clock chip, launched by DALLAS in America. With a built-in real-time clock/calendar and a 31-byte static RAM, it can communicate with MCU through simple serial ports. The real-time clock/calendar circuit provides information about second, minute, hour, day, week, month, and year. DS1302 can automatically adjust the number of days per month and days in leap year. You can determine to use a 24-hour or 12-hour system by AM/PM selection. It can simply communicate with MCU in synchronous serial way and only needs to use three port cables: Reset (RST) cable, I/O data (SDA) cable and serial clock (SCL) cable.
+DS1302 ist ein von DALLAS in den USA eingeführter Uhrenbaustein mit Trickle-Ladung. Er verfügt über eine integrierte Echtzeituhr und einen 31-Byte-Statischen RAM. Der Baustein kommuniziert mit dem Mikrocontroller (MCU) über einfache serielle Schnittstellen. Er stellt Informationen zu Sekunde, Minute, Stunde, Tag, Woche, Monat und Jahr bereit. Zudem passt der DS1302 die Anzahl der Tage pro Monat sowie Schaltjahre automatisch an. Ob das 24-Stunden- oder das 12-Stunden-System verwendet wird, lässt sich über eine AM/PM-Auswahl festlegen. Die Kommunikation mit dem MCU erfolgt synchron über nur drei Anschlusskabel: Reset (RST), I/O-Daten (SDA) und serielle Uhr (SCL).
 
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- Real Time Clock Module(DS1302) * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Platine * 1
+- Echtzeituhr-Modul (DS1302) * 1
+- Jumperkabel
 
 
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/16_DS1302_module_circuit.png
     :width: 400
@@ -35,11 +35,11 @@ Usage
     
     <br/><br/>   
 
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
-   To install the library, use the Arduino Library Manager and search for **"Rtc by Makuna"** and install it. 
+   Um die Bibliothek zu installieren, nutzen Sie den Arduino-Bibliotheksmanager und suchen Sie nach **"Rtc by Makuna"**, um sie zu installieren.
 
 .. raw:: html
     
@@ -50,28 +50,28 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/16-component_rtc_ds1302.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erklärung
 ^^^^^^^^^^^^^^^^^^^^
 
-#. Initialization and library inclusion
+#. Initialisierung und Einbindung der Bibliotheken
 
    .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"Rtc by Makuna"** and install it. 
+      Um die Bibliothek zu installieren, nutzen Sie den Arduino-Bibliotheksmanager und suchen Sie nach **"Rtc by Makuna"**, um sie zu installieren. 
 
-   Here, necessary libraries are included for the DS1302 RTC module.
+   Hier werden die erforderlichen Bibliotheken für das DS1302 RTC-Modul eingebunden.
 
    .. code-block:: arduino
 
       #include <ThreeWire.h>
       #include <RtcDS1302.h>
 
-#. Define pins and create RTC instance
+#. Pin-Definitionen und Erstellung der RTC-Instanz
 
-   Pins for communication are defined and an instance of the RTC is created.
+   Die Pins für die Kommunikation werden definiert und eine Instanz des RTC wird erstellt.
 
    .. code-block:: arduino
 
@@ -82,10 +82,9 @@ Code explanation
       ThreeWire myWire(4, 5, 2);  // IO, SCLK, CE
       RtcDS1302<ThreeWire> Rtc(myWire);
 
+#. ``setup()`` Funktion
 
-#. ``setup()`` function
-
-   This function initializes the serial communication and sets up the RTC module. Various checks are made to ensure the RTC is running correctly.
+   Diese Funktion initialisiert die serielle Kommunikation und nimmt die Grundkonfiguration des RTC-Moduls vor. Es werden diverse Prüfungen durchgeführt, um sicherzustellen, dass die RTC korrekt arbeitet.
 
    .. code-block:: arduino
 
@@ -132,10 +131,9 @@ Code explanation
         }
       }
 
+#. ``loop()`` Funktion
 
-#. ``loop()`` function
-
-   This function periodically fetches the current date and time from the RTC and prints it on the serial monitor. It also checks if the RTC is still maintaining a valid date and time.
+   Diese Funktion liest regelmäßig das aktuelle Datum und die aktuelle Uhrzeit vom RTC aus und gibt sie im seriellen Monitor aus. Sie prüft auch, ob die RTC weiterhin eine gültige Zeit und ein gültiges Datum beibehält.
 
    .. code-block:: arduino
 
@@ -154,10 +152,9 @@ Code explanation
         delay(5000);  // five seconds
       }
 
+#. Datum- und Zeitdruckfunktion
 
-#. Date and time printing function
-
-   A helper function that takes a ``RtcDateTime`` object and prints the formatted date and time to the serial monitor.
+   Eine Hilfsfunktion, die ein ``RtcDateTime``-Objekt nimmt und das formatierte Datum und die Uhrzeit im seriellen Monitor ausgibt.
 
    .. code-block:: arduino
 
@@ -176,13 +173,9 @@ Code explanation
         Serial.print(datestring);
       }
 
-
-Additional Ideas
+Weitere Ideen
 ^^^^^^^^^^^^^^^^^^^^
 
-- Display time on LCD or serial monitor
-- Schedule events/alarms at certain times
-
-
-
+- Anzeige der Uhrzeit auf einem LCD oder im seriellen Monitor
+- Planung von Ereignissen/Weckern zu bestimmten Zeiten
 

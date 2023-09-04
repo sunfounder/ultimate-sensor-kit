@@ -7,19 +7,15 @@ I2C LCD 1602
     :width: 600
     :align: center
 
-Introduction
+Einführung
 ---------------------------
-An I2C LCD1602 is a device that can display text and characters on a 16x2 (16 columns and 2 rows) liquid crystal display (LCD) using the I2C protocol. You can use an I2C LCD1602 to show information from your Arduino projects, such as sensor readings, messages, menus, etc. The I2C module has a built-in PCF8574 I2C chip that converts I2C serial data to parallel data for the LCD display.        
+Ein I2C LCD1602 ist ein Gerät, das Text und Zeichen auf einem 16x2 Flüssigkristall-Display (LCD) über das I2C-Protokoll darstellen kann. Es eignet sich hervorragend zur Anzeige von Informationen in Ihren Arduino-Projekten, wie etwa Sensorwerten, Meldungen oder Menüs. Das I2C-Modul enthält einen integrierten PCF8574 I2C-Chip, der serielle I2C-Daten in parallele Daten für das LCD umwandelt.
 
 * |link_PCF8574_Datasheet|
 
-
-
-Principle
+Funktionsprinzip
 ---------------------------
-An I2C LCD1602 consists of a normal LCD1602 and an I2C module that is attached to the back of the LCD. The I2C module is a chip that can expand the I/O ports of the Arduino using the I2C protocol. The I2C protocol is a serial communication protocol that uses two wires: SDA (serial data) and SCL (serial clock). The I2C protocol allows multiple devices to communicate with each other using only two wires and unique addresses.
-
-The I2C module converts the signals from the Arduino into commands for the LCD. The LCD has 16x2 cells that can display characters or symbols. Each cell consists of 5x8 dots that can be turned on or off by applying voltage. The LCD can display different characters or symbols by turning on or off different combinations of dots.
+Das I2C LCD1602 setzt sich aus einem standardmäßigen LCD1602 und einem auf der Rückseite befestigten I2C-Modul zusammen. Dieses Modul ermöglicht die Erweiterung der I/O-Ports des Arduino über das I2C-Protokoll. Dabei kommen lediglich zwei Drähte zum Einsatz: SDA (Serial Data) und SCL (Serial Clock). Der I2C-Chip wandelt die Signale vom Arduino in Befehle für das LCD um. Jede der 16x2 Zellen des LCD kann Zeichen oder Symbole anzeigen. Diese Zellen bestehen aus je 5x8 Punkten, die durch Spannung ein- oder ausgeschaltet werden können. Verschiedene Kombinationen der Punkte erlauben die Darstellung unterschiedlicher Zeichen und Symbole.
 
 .. image:: img/21_ic2_lcd_2.png
     :width: 500
@@ -29,11 +25,11 @@ The I2C module converts the signals from the Arduino into commands for the LCD. 
     
     <br/><br/> 
 
-**I2C Address**
+**I2C-Adresse**
 
-The default address is basically 0x27, in a few cases it may be 0x3F.
+Die Standardadresse ist normalerweise 0x27, in einigen Fällen jedoch auch 0x3F.
 
-Taking the default address of 0x27 as an example, the device address can be modified by shorting the A0/A1/A2 pads; in the default state, A0/A1/A2 is 1, and if the pad is shorted, A0/A1/A2 is 0.
+Wenn wir die Standardadresse von 0x27 als Beispiel nehmen, kann die Geräteadresse durch Kurzschließen der A0/A1/A2-Pads geändert werden. Im Ausgangszustand ist A0/A1/A2 auf 1 gesetzt und wenn das Pad kurzgeschlossen wird, ist A0/A1/A2 auf 0.
 
 .. image:: img/21_i2c_address.jpg
     :width: 600
@@ -43,9 +39,9 @@ Taking the default address of 0x27 as an example, the device address can be modi
     
     <br/>
 
-**Backlight/Contrast**
+**Hintergrundbeleuchtung/Kontrast**
 
-Backlight can be enabled by jumper cap, unplugg the jumper cap to disable the backlight. The blue potentiometer on the back is used to adjust the contrast (the ratio of brightness between the brightest white and the darkest black).
+Die Hintergrundbeleuchtung kann mittels Jumper aktiviert werden; zum Deaktivieren wird dieser entfernt. Das blaue Potentiometer auf der Rückseite dient zur Kontrasteinstellung.
 
 .. image:: img/21_back_lcd1602.jpg
     :width: 600
@@ -55,11 +51,11 @@ Backlight can be enabled by jumper cap, unplugg the jumper cap to disable the ba
     
     <br/> 
 
-* **Shorting Cap**: Backlight can be enabled by this cap，unplugg this cap to disable the backlight.
-* **Potentiometer**: It is used to adjust the contrast (the clarity of the displayed text), which is increased in the clockwise direction and decreased in the counterclockwise direction.
+* **Shorting Cap**: Aktiviert die Hintergrundbeleuchtung; zum Deaktivieren entfernen.
+* **Potentiometer**: Dient zur Kontrastanpassung (Klarheit der Textanzeige), im Uhrzeigersinn erhöht, gegen den Uhrzeigersinn verringert.
 
 .. note::
-    After wiring the LCD, you should turn on the Arduino and adjust the contrast by rotating the potentiometer on the I2C module until the first row of rectangles appear to ensure proper LCD operation.
+    Nach dem Verdrahten des LCD sollte man das Arduino einschalten und den Kontrast mittels Drehen des Potentiometers so einstellen, dass die erste Reihe von Rechtecken erscheint.
 
 .. raw:: html
 
@@ -69,17 +65,17 @@ Backlight can be enabled by jumper cap, unplugg the jumper cap to disable the ba
    </video>
    <br/><br/>  
 
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
+- Arduino Uno R4 oder R3 Platine * 1
 - I2C LCD1602 * 1
-- Jumper Wires
+- Jumperkabel
 
 
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/21_I2C_lcd_circuit.png
     :width: 100%
@@ -89,17 +85,15 @@ Usage
     
     <br/><br/>  
 
-
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
-   To install the library, use the Arduino Library Manager and search for **"LiquidCrystal I2C"** and install it.
+   Um die Bibliothek zu installieren, nutzen Sie den Arduino-Bibliotheksmanager und suchen nach **"LiquidCrystal I2C"**.
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/b19d0aac-7dbd-460c-9634-31dd1c0310f9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
 
 .. raw:: html
 
@@ -109,22 +103,21 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erklärung
 ^^^^^^^^^^^^^^^^^^^^
 
-1. Library Inclusion and LCD Initialization:
-   The LiquidCrystal I2C library is included to provide functions and methods for LCD interfacing. Following that, an LCD object is created using the LiquidCrystal_I2C class, specifying the I2C address, number of columns, and number of rows.
+1. Einbinden der Bibliothek und Initialisierung des LCD:
 
-   .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"LiquidCrystal I2C"** and install it.  
+   Die LiquidCrystal I2C-Bibliothek wird eingebunden, um Funktionen und Methoden für die LCD-Ansteuerung bereitzustellen. Danach wird ein LCD-Objekt der Klasse LiquidCrystal_I2C erstellt, wobei die I2C-Adresse sowie die Anzahl der Zeilen und Spalten angegeben werden.
 
    .. code-block:: arduino
 
       #include <LiquidCrystal_I2C.h>
       LiquidCrystal_I2C lcd(0x27, 16, 2);
 
-2. Setup Function:
-   The ``setup()`` function is executed once when the Arduino starts. In this function, the LCD is initialized, cleared, and the backlight is turned on. Then, two messages are displayed on the LCD.
+2. Setup-Funktion:
+
+   Die ``setup()``-Funktion wird einmalig bei Arduino-Start ausgeführt. Hier wird das LCD initialisiert, der Bildschirm geleert und die Hintergrundbeleuchtung aktiviert. Anschließend werden zwei Nachrichten auf dem LCD angezeigt.
 
    .. code-block:: arduino
 
@@ -141,14 +134,13 @@ Code explanation
         lcd.print("LCD Tutorial");
       }
 
-
-Additional Ideas
+Weitere Ideen
 ^^^^^^^^^^^^^^^^^^^^
 
-- Integrate a temperature sensor and display the current room temperature on the LCD.
+- Integration eines Temperatursensors zur Anzeige der aktuellen Raumtemperatur auf dem LCD.
 
-
-More Projects
+Weitere Projekte
 ---------------------------
 * :ref:`fun_potentiometer_scale_value`
 * :ref:`iot_Bluetooth_lcd`
+

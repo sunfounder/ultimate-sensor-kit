@@ -1,41 +1,40 @@
-.. _cpn_photoresistor:
+.. _cpn_fotowiderstand:
 
-Photoresistor Module
+Fotowiderstands-Modul
 ==========================
 
 .. image:: img/07_photoresistor_module.png
     :width: 400
     :align: center
 
-Introduction
+Einleitung
 ---------------------------
-A photoresistor module is a device that can detect the intensity of light in the environment. It can be used for various purposes, such as adjusting the brightness of a device, detecting day and night, or activating a light switch.
+Ein Fotowiderstands-Modul ist ein Gerät zur Messung der Lichtintensität in der Umgebung. Es kann für verschiedene Zwecke eingesetzt werden, wie etwa zur Anpassung der Helligkeit eines Geräts, zur Erkennung von Tag und Nacht oder zur Aktivierung eines Lichtschalters.
 
-An important component of the photoresistor module is the photoresistor. A photoresistor is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity; in other words, it exhibits photo conductivity.
+Ein wesentlicher Bestandteil des Fotowiderstands-Moduls ist der Fotowiderstand selbst. Ein Fotowiderstand ist ein lichtgesteuerter variabler Widerstand. Mit steigender Lichteinstrahlung verringert sich der Widerstand des Fotowiderstands; er zeigt also eine Foto-Leitfähigkeit.
 
-A photoresistor can be applied in light-sensitive detector circuits and light-activated and dark-activated switching circuits acting as a resistance semiconductor. In the dark, a photoresistor can have a resistance as high as several megaohms (MΩ), while in the light, a photoresistor can have a resistance as low as a few hundred ohms.
+Der Fotowiderstand kann in lichtempfindlichen Detektorschaltungen sowie in licht- und dunkelaktivierten Schaltkreisen als Halbleiterwiderstand eingesetzt werden. Im Dunkeln kann der Widerstand eines Fotowiderstands mehrere Megaohm (MΩ) betragen, während er im Hellen auf nur wenige hundert Ohm sinken kann.
 
-Here is the electronic symbol of photoresistor.
+Hier ist das elektronische Symbol für den Fotowiderstand:
 
 .. image:: img/07_photoresistor_symbol_2.png
     :width: 200
     :align: center
 
-Principle
+Funktionsprinzip
 ---------------------------
-The photoresistor module works on the principle of changing resistance in response to different light intensities. The sensor has a built-in potentiometer that adjusts the sensor's digital output (D0) threshold. When the intensity of light exceeds a certain threshold, the resistance of the sensor changes. This change in resistance is then converted to an electrical signal that can be read by the Arduino board.
+Das Fotowiderstands-Modul arbeitet nach dem Prinzip der Widerstandsveränderung in Abhängigkeit von unterschiedlichen Lichtintensitäten. Der Sensor verfügt über ein integriertes Potentiometer, das den digitalen Ausgang (D0) des Sensors anpasst. Überschreitet die Lichtintensität einen bestimmten Schwellenwert, ändert sich der Widerstand des Sensors. Diese Widerstandsänderung wird dann in ein elektrisches Signal umgewandelt, das vom Arduino-Board ausgelesen werden kann.
 
-
-Usage
+Anwendungsbeispiele 
 ---------------------------
 
-**Hardware components**
+**Benötigte Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- Photoresistor Module * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Board * 1
+- Fotowiderstands-Modul * 1
+- Jumperkabel
 
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/07_photoresistor_module_circuit.png
     :width: 400
@@ -45,7 +44,7 @@ Usage
     
     <br/><br/>   
 
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -61,16 +60,16 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erklärung
 ^^^^^^^^^^^^^^^^^^^^
 
-#. This line of code defines the pin number to which the photoresistance sensor is connected on the Arduino board.
+1. Diese Codezeile definiert die Pin-Nummer, an die der Fotowiderstandssensor auf dem Arduino-Board angeschlossen ist.
 
    .. code-block:: arduino
 
       const int sensorPin = 7;
 
-#. The ``setup()`` function is a special function in Arduino that is executed only once when the Arduino is powered on or reset. In this project, the sensorPin is set as INPUT because we are reading values from it. The Serial.begin(9600) command initiates serial communication at a baud rate of 9600.
+2. Die Funktion ``setup()`` wird nur einmal ausgeführt, wenn das Arduino-Board eingeschaltet oder zurückgesetzt wird. In diesem Projekt wird der sensorPin als INPUT festgelegt, da wir von ihm Werte ablesen. Der Befehl Serial.begin(9600) initiiert die serielle Kommunikation mit einer Baudrate von 9600.
 
    .. code-block:: arduino
 
@@ -79,7 +78,7 @@ Code explanation
         Serial.begin(9600);         
       }
 
-#. The ``loop()`` function is the main function where the program runs repeatedly. In this function, the digitalRead function reads the digital value from the photoresistor sensor and prints it to the serial monitor using Serial.println. The ``delay(50)`` command makes the program wait for 50 milliseconds before taking the next reading.
+3. Die Funktion ``loop()`` ist die Hauptfunktion, in der das Programm fortlaufend abläuft. In dieser Funktion liest die Funktion digitalRead den digitalen Wert vom Fotowiderstandssensor und gibt ihn mit Serial.println auf dem seriellen Monitor aus. Der Befehl ``delay(50)`` sorgt für eine Wartezeit von 50 Millisekunden vor der nächsten Messung.
 
    .. code-block:: arduino
 
@@ -88,15 +87,13 @@ Code explanation
         delay(50);
       }
 
-
-Additional Ideas
+Weitere Ideen
 ^^^^^^^^^^^^^^^^^^^^
 
-- Use the sensor to turn on/off an LED or relay. 
-- Plot the **analog output** instead of just digital HIGH/LOW. Use **AO** pin.
+- Verwenden Sie den Sensor, um eine LED oder ein Relais ein- und auszuschalten.
+- Plotten Sie den **analogen Ausgang** anstelle von einfachem digitalen HIGH/LOW. Verwenden Sie dafür den **AO**-Pin.
 
-
-More Projects
+Weitere Projekte
 ---------------------------
 * :ref:`fun_light_control_switch`
 

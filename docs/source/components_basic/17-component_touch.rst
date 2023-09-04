@@ -1,44 +1,44 @@
+
 .. _cpn_touch:
 
-Touch Sensor Module
+Berührungs-Sensormodul
 ==========================
 
 .. image:: img/17_touch_sensor_moudle.png
     :width: 200
     :align: center
 
-Introduction
+Einführung
 ---------------------------
-The Touch switch sensor (also called touch button or touch switch) is widely used to control devices (e.g. touchable lamp). It has the same functionality as a button. It is used instead of the button on many new devices because it makes the product look neat.
+Der Berührungsschalter (auch Touch-Button oder Touch-Schalter genannt) findet breite Anwendung in verschiedenen Geräten, wie beispielsweise berührungsempfindlichen Lampen. Er übernimmt dieselben Funktionen wie ein herkömmlicher Knopf, verleiht dem Produkt jedoch ein sauberes, modernes Erscheinungsbild.
 
-
-Principle
+Funktionsprinzip
 ---------------------------
-This module is a capacitive touch switch module based on a touch sensor IC (TTP223B). In the normal state, the module outputs a low level with low power consumption; when a finger touches the corresponding position, the module outputs a high level and becomes low level again after the finger is released.
+Das Modul basiert auf einem Berührungssensor-IC (TTP223B) und fungiert als kapazitiver Touch-Schalter. Im Ruhezustand gibt das Modul ein niedriges Signal bei geringem Stromverbrauch aus. Bei Berührung wechselt das Ausgangssignal auf ein hohes Niveau und kehrt nach Loslassen des Fingers wieder auf ein niedriges Niveau zurück.
 
-Here is how the capacitive touch switch works:
+Funktionsweise des kapazitiven Touch-Schalters:
 
-A capacitive touch switch has different layers—top insulating face plate followed by touch plate, another insulating layer and then ground plate.
+Der kapazitive Touch-Schalter besteht aus verschiedenen Schichten – einer oberen Isolierschicht, gefolgt von der Berührungsplatte, einer weiteren Isolierschicht und schließlich einer Erdungsplatte.
 
 .. image:: img/17_touch_sensor_moudle_principle.jpeg
     :width: 400
     :align: center
 
-In practice, a capacitive sensor can be made on a double-sided PCB by regarding one side as the touch sensor and the opposite side as ground plate of the capacitor. When power is applied across these plates, the two plates get charged. In equilibrium state, the plates have the same voltage as the power source.
+In der Praxis kann ein kapazitiver Sensor auf einer doppelseitigen Leiterplatte realisiert werden, wobei eine Seite als Sensorfläche und die gegenüberliegende Seite als Erdungsplatte dient. Bei angelegter Spannung laden sich beide Platten auf. Im Gleichgewicht entspricht die Spannung der Platten der des Stromnetzes.
 
-The touch detector circuit has an oscillator whose frequency is dependent on capacitance of the touchpad. When a finger is moved close to the touchpad, additional capacitance causes frequency of this internal oscillator to change. The detector circuit tracks oscillator frequency at timed intervals, and when the shift crosses the threshold change, the circuit triggers a key-press event.
+Der Detektorschaltkreis beinhaltet einen Oszillator, dessen Frequenz von der Kapazität der Sensorfläche abhängt. Nähert sich ein Finger der Sensorfläche, verändert die zusätzliche Kapazität die Frequenz des internen Oszillators. Der Detektorschaltkreis überwacht in festgelegten Intervallen die Oszillatorfrequenz und löst bei Überschreiten eines bestimmten Schwellenwerts ein Tastendruckereignis aus.
 
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- Touch Sensor Module * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Board * 1
+- Berührungs-Sensormodul * 1
+- Jumperkabel
 
 
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/17_touch_sensor_moudle_circuit.png
     :width: 400
@@ -48,7 +48,7 @@ Usage
     
     <br/><br/>   
 
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -64,16 +64,16 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erklärung
 ^^^^^^^^^^^^^^^^^^^^
 
-#. Setting up the necessary variables. We start by defining the pin number where the touch sensor is connected.
+#. Definition der benötigten Variablen. Zunächst wird die Pinnummer definiert, an die der Berührungssensor angeschlossen ist.
 
    .. code-block:: arduino
 
       const int sensorPin = 7;
 
-#. Initialization in the ``setup()`` function. Here, we specify that the sensor pin will be used for input, the built-in LED will be used for output, and we start the serial communication to allow messages to be sent to the serial monitor.
+#. Initialisierung in der ``setup()``-Funktion. Hier legen wir fest, dass der Sensor-Pin für den Eingang und die integrierte LED für den Ausgang genutzt werden. Zudem wird die serielle Kommunikation gestartet, um Nachrichten an den seriellen Monitor zu senden.
 
    .. code-block:: arduino
 
@@ -83,7 +83,7 @@ Code explanation
         Serial.begin(9600);
       }
 
-#. Continuously, the Arduino checks if the touch sensor is activated. If touched, it turns on the LED and sends a "Touch detected!" message. If not touched, it turns off the LED and sends a "No touch detected..." message. A delay is introduced to prevent the sensor from being read too quickly.
+#. Kontinuierlich überprüft das Arduino, ob der Berührungssensor aktiviert ist. Bei Berührung leuchtet die LED auf und eine Meldung "Touch detected!" wird ausgegeben. Ist keine Berührung vorhanden, wird die LED ausgeschaltet und die Meldung "No touch detected..." erscheint. Eine Verzögerung verhindert, dass der Sensor zu schnell abgefragt wird.
 
    .. code-block:: arduino
 
@@ -98,13 +98,13 @@ Code explanation
         delay(100);
       }
 
-Additional Ideas
+Weitere Ideen
 ^^^^^^^^^^^^^^^^^^^^
 
-- Use different LED colors to indicate touch
-- The touch sensor could be used to control more complex elements, like a motor or a relay. 
+- Verwendung unterschiedlicher LED-Farben zur Anzeige einer Berührung
+- Der Berührungssensor könnte auch zur Steuerung komplexerer Elemente wie einem Motor oder einem Relais verwendet werden.
 
-
-More Projects
+Weitere Projekte
 ---------------------------
 * :ref:`fun_touch_toggle_light`
+

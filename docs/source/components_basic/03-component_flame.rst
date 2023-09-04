@@ -1,31 +1,30 @@
 .. _cpn_flame:
 
-Flame Sensor Module
+Flammen-Sensormodul
 ==========================
 
 .. image:: img/03_flame_module.jpg
     :width: 400
     :align: center
 
-Introduction
+Einleitung
 ---------------------------
-The Flame sensor is a sensor that can detect the presence of fire or flames. It detects fires mainly by sensing infrared radiation emitted by fires or flames. It is widely used in fire detection systems in homes and industries.
+Das Flammen-Sensormodul ist in der Lage, die Anwesenheit von Feuer oder Flammen zu detektieren. Es erkennt Brände hauptsächlich durch die Erfassung der von Flammen oder Feuer emittierten Infrarotstrahlung. Es wird weitgehend in Brandmeldesystemen in Privathaushalten und in der Industrie verwendet.
 
-Principle
+Funktionsprinzip
 ---------------------------
-The Flame sensor works on the principle of infrared (IR) detection. The sensor has an IR receiver that detects the IR radiation emitted by flames. When fire burns it emits a small amount of Infra-red light, this light will be received by the Photodiode (IR receiver) on the sensor module. Then we use an Op-Amp to check for a change in voltage across the IR Receiver, so that if a fire is detected the output pin (DO) will give 0V(LOW), and if the is no fire the output pin will be 5V(HIGH).
+Das Flammen-Sensormodul arbeitet auf Basis der Infrarotdetektion. Der Sensor besitzt einen IR-Empfänger, der die von den Flammen emittierte Infrarotstrahlung erkennt. Wenn Feuer brennt, emittiert es eine geringe Menge an infrarotem Licht, das von der Fotodiode (IR-Empfänger) auf dem Sensor empfangen wird. Mittels eines Operationsverstärkers wird dann die Spannungsänderung am IR-Empfänger überprüft, sodass bei erkanntem Feuer der Ausgangspin (DO) 0V (LOW) liefert und bei Nichterkennung 5V (HIGH).
 
-
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Benötigte Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- Flame Sensor Module * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Board * 1
+- Flammen-Sensormodul * 1
+- Jumperkabel
 
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/03_flame_module_circuit.png
     :width: 400
@@ -35,13 +34,12 @@ Usage
     
     <br/><br/>   
 
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/7529b311-3763-4b62-aa1c-a63e41871856/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
 
 .. raw:: html
 
@@ -51,16 +49,16 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation 
+Code-Erläuterung
 ^^^^^^^^^^^^^^^^^^^^
 
-1. The first line of code is a constant integer declaration for the flame sensor pin. We use the digital pin 7 to read the output from the flame sensor.
+1. Die erste Codezeile definiert eine Konstante für den Pin des Flammen-Sensors. Hier verwenden wir den digitalen Pin 7, um die Ausgabe vom Flammen-Sensor zu lesen.
 
    .. code-block:: arduino
    
       const int sensorPin = 7;
 
-2. The ``setup()`` function initializes the flame sensor pin as an input and the built-in LED pin as an output. It also starts the serial communication at a baud rate of 9600 for printing messages to the serial monitor.
+2. Die ``setup()`` Funktion initialisiert den Pin des Flammen-Sensors als Eingang und den eingebauten LED-Pin als Ausgang. Zudem wird die serielle Kommunikation mit einer Baudrate von 9600 für die Ausgabe von Nachrichten im seriellen Monitor gestartet.
 
    .. code-block:: arduino
    
@@ -70,7 +68,7 @@ Code explanation
         Serial.begin(9600);            // Initialize the serial monitor at a baud rate of 9600
       }
 
-3. The ``loop()`` function is where we continuously check the status of the flame sensor. If the sensor detects a flame, the built-in LED is turned on and a message is printed to the serial monitor. If no flame is detected, the LED is turned off and a different message is printed. The process repeats every 100 milliseconds.
+3. In der ``loop()`` Funktion wird kontinuierlich der Status des Flammen-Sensors überprüft. Erkennt der Sensor eine Flamme, wird die integrierte LED eingeschaltet und eine Nachricht im seriellen Monitor ausgegeben. Wird keine Flamme erkannt, wird die LED ausgeschaltet und eine andere Nachricht ausgegeben. Der Vorgang wiederholt sich alle 100 Millisekunden.
 
    .. code-block:: arduino
    
@@ -86,16 +84,15 @@ Code explanation
         delay(100);
       }
 
-Additional Ideas
-^^^^^^^^^^^^^^^^
+Weitere Ideen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Modify the code to trigger a buzzer or sound an alarm when fire is detected.
+- Den Code so modifizieren, dass ein Summer oder Alarm ausgelöst wird, wenn eine Flamme erkannt wird.
 
-- Incorporate a smoke sensor in addition to the flame sensor to enhance fire detection capabilities.
+- Zusätzlich zum Flammen-Sensor einen Rauchsensor integrieren, um die Branderkennung zu verbessern.
 
-- Plot the **analog output** instead of just digital HIGH/LOW. Use **AO** pin.
+- Den **analogen Ausgang** anstelle des einfachen digitalen HIGH/LOW verwenden. Dazu den **AO** Pin verwenden.
 
-More Projects
+Weitere Projekte
 ---------------------------
 * :ref:`iot_Flame`
-

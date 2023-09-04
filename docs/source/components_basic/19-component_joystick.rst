@@ -1,38 +1,36 @@
 .. _cpn_joystick:
 
-Joystick Module
+Joystick-Modul
 ==========================
 
 .. image:: img/19_joystick.png
     :width: 400
     :align: center
 
-Introduction
+Einführung
 ---------------------------
-A joystick module is a device that can measure the movement of a knob in two directions: horizontal (X-axis) and vertical (Y-axis). A joystick module can be used to control various things such as games, robots, cameras, etc.
+Ein Joystick-Modul ist ein Gerät, das die Bewegungen eines Knüppels in zwei Richtungen messen kann: horizontal (X-Achse) und vertikal (Y-Achse). Es eignet sich zur Steuerung verschiedenster Anwendungen wie Spiele, Roboter, Kameras und mehr.
 
-
-Principle
+Funktionsprinzip
 ---------------------------
-Joystick operates based on the resistance change of two potentiometers (usually 10-kilo ohms). By changing resistance in x and y directions, Arduino receives varying voltages which are interpreted to x and y coordinates. The processor needs an ADC unit to change the joystick’s analog values into digital values and perform necessary processing.
+Ein Joystick funktioniert auf Basis der Widerstandsänderung zweier Potentiometer (üblicherweise 10 Kiloohm). Durch Veränderung des Widerstands in X- und Y-Richtung empfängt das Arduino Board variierende Spannungen, die als X- und Y-Koordinaten interpretiert werden. Der Prozessor benötigt eine ADC-Einheit, um die analogen Werte des Joysticks in digitale Werte umzuwandeln und die erforderliche Verarbeitung durchzuführen.
 
-Arduino boards have six 10-bits ADC channels. It means the Arduino’s reference voltage (5 volts) is divided to 1024 segments. When joystick moves along the x-axis, the ADC value rises from 0 to 1023, with the value 512 in the middle. The image below displays the ADC approximate value based on the joystick position.
+Arduino-Boards verfügen über sechs 10-Bit-ADC-Kanäle, was bedeutet, dass die Referenzspannung (5 Volt) des Arduino in 1024 Segmente unterteilt ist. Bewegt sich der Joystick entlang der X-Achse, steigt der ADC-Wert von 0 auf 1023, wobei der Mittelwert bei 512 liegt. Das untenstehende Bild zeigt den ungefähren ADC-Wert in Abhängigkeit von der Position des Joysticks.
 
 .. image:: img/19_joystick_xy.png
     :width: 400
     :align: center
 
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- Joystick Module * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Board * 1
+- Joystick-Modul * 1
+- Jumperkabel
 
-
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/19_joystick_module_circuit.png
     :width: 600
@@ -42,7 +40,7 @@ Usage
     
     <br/><br/>   
 
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -58,17 +56,17 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erklärung
 ^^^^^^^^^^^^^^^^^^^^
 
-#. Setting up the joystick pins. Here, we define which analog pins the X and Y axes of the joystick are connected to.
+#. Festlegung der Anschlüsse für den Joystick. Hier definieren wir, an welche analogen Pins die X- und Y-Achsen des Joysticks angeschlossen sind.
 
    .. code-block:: arduino
 
       const int xPin = A0;
       const int yPin = A1;
 
-#. Initialization in the ``setup()`` function. This section sets up the serial communication, allowing us to send and receive messages from the Arduino through the serial monitor.
+#. Initialisierung in der ``setup()``-Funktion. In diesem Abschnitt wird die serielle Kommunikation eingerichtet, die es uns ermöglicht, Nachrichten von und zum Arduino über den seriellen Monitor zu senden und zu empfangen.
 
    .. code-block:: arduino
 
@@ -76,7 +74,7 @@ Code explanation
         Serial.begin(9600);
       }
 
-#. Reading the joystick values in the ``loop()`` function. Continuously, the Arduino reads the X and Y values from the joystick and prints them to the serial monitor. There's a short delay after each print to make the readings more readable and to avoid overwhelming the serial monitor.
+#. Auslesen der Joystick-Werte in der ``loop()``-Funktion. Kontinuierlich liest das Arduino die X- und Y-Werte vom Joystick aus und gibt sie auf dem seriellen Monitor aus. Zwischen den einzelnen Ausgaben gibt es eine kurze Verzögerung, um die Lesungen besser lesbar zu machen und den seriellen Monitor nicht zu überlasten.
 
    .. code-block:: arduino
        
@@ -88,9 +86,8 @@ Code explanation
         delay(50);
       }
 
-Additional Ideas
+Weitere Ideen
 ^^^^^^^^^^^^^^^^^^^^
 
-- Use the joystick values to control a servo motor, making it move in response to joystick movements.
-
+- Die Joystick-Werte zur Steuerung eines Servomotors verwenden, der auf die Bewegungen des Joysticks reagiert.
 

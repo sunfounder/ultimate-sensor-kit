@@ -1,6 +1,6 @@
 .. _cpn_button:
 
-Button Module
+Tastenmodul
 ==========================
 
 .. image:: img/06_button.png
@@ -9,36 +9,36 @@ Button Module
 
 .. _btn_intro:
 
-Introduction
+Einführung
 ---------------------------
-The button module is an electronic device that detects the state of a button.They are usually used as switches to connect or break circuits.Buttons are used in many scenarios, such as doorbells, desk lamps, remote controls, elevators, fire alarms, etc.
+Das Tastenmodul ist ein elektronisches Gerät zur Erfassung des Zustands einer Taste. Üblicherweise werden sie als Schalter zum Verbinden oder Unterbrechen von Schaltkreisen eingesetzt. Tasten finden in vielen Anwendungsbereichen Verwendung, etwa bei Türklingeln, Schreibtischlampen, Fernbedienungen, Aufzügen, Brandmeldern usw.
 
-Principle
+Funktionsprinzip
 ---------------------------
-The button module works on the principle of a switch. A switch is an electrical component that can be used to open or close a circuit. 
+Das Tastenmodul funktioniert nach dem Prinzip eines Schalters. Ein Schalter ist ein elektrisches Bauteil, das dazu dient, einen Stromkreis zu öffnen oder zu schließen.
 
-The following is the internal structure of a button. The symbol on the right below is usually used to represent a button in circuits.
+Die nachfolgende Abbildung zeigt den internen Aufbau einer Taste. Das Symbol rechts unten wird meist verwendet, um eine Taste in Schaltungen darzustellen.
 
 .. image:: img/06_button_2.png
     :width: 400
     :align: center
 
-Since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+Da der Pin 1 mit dem Pin 2 und der Pin 3 mit dem Pin 4 verbunden ist, schließt das Drücken der Taste alle 4 Pins und somit den Stromkreis.
 
 .. image:: img/06_button_3.png
     :width: 700
     :align: center
 
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Benötigte Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- Button Module * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Platine * 1
+- Tastenmodul * 1
+- Jumperkabel
 
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/06_button_circuit.png
     :width: 400
@@ -48,7 +48,7 @@ Usage
     
     <br/><br/>   
 
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -60,14 +60,14 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/06-component_button.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erklärung
 ^^^^^^^^^^^^^^^^^^^^
 
-1. **Setting Up**: In this part of the code, we first declare the ``sensorPin`` as a constant integer and assign it the pin number we will connect our button to on the Arduino board. The ``setup()`` function sets the mode of the ``sensorPin`` as ``INPUT``, meaning we'll be receiving data in through this pin from the button. The ``Serial.begin()`` function initiates serial communication at a baud rate of 9600.
+1. **Einrichtung**: Im ersten Abschnitt des Codes deklarieren wir zunächst ``sensorPin`` als eine Konstante vom Typ Integer und weisen ihr die Pin-Nummer zu, an die wir unsere Taste am Arduino-Board anschließen werden. Die Funktion ``setup()`` setzt den Modus von ``sensorPin`` auf ``INPUT``, was bedeutet, dass wir Daten von der Taste über diesen Pin empfangen werden. Die Funktion ``Serial.begin()`` initiiert die serielle Kommunikation mit einer Baudrate von 9600.
 
    .. code-block:: arduino
 
@@ -78,7 +78,7 @@ Code explanation
         Serial.begin(9600);
       }
 
-2. **The Loop**: The ``loop()`` function contains the main logic of the program. It continuously reads the button state and prints it to the serial monitor every 50 milliseconds. The ``digitalRead()`` function reads the state of the button, and the ``Serial.println()`` function prints this value to the serial monitor. The ``delay()`` function then pauses the execution for 50 milliseconds before the next reading. The button outputs a low level when pressed, and a high level when released. 
+2. **Die Schleife**: Die Funktion ``loop()`` enthält die Hauptlogik des Programms. Sie liest kontinuierlich den Zustand der Taste aus und gibt ihn alle 50 Millisekunden im seriellen Monitor aus. Die Funktion ``digitalRead()`` liest den Zustand der Taste, und die Funktion ``Serial.println()`` gibt diesen Wert im seriellen Monitor aus. Die Funktion ``delay()`` pausiert dann die Ausführung für 50 Millisekunden, bevor die nächste Messung erfolgt. Die Taste gibt ein niedriges Signal aus, wenn sie gedrückt wird, und ein hohes, wenn sie losgelassen wird.
 
    .. code-block:: arduino
     
@@ -87,14 +87,12 @@ Code explanation
         delay(50);
       }
 
+Weitere Ideen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+- Verwenden Sie die Taste in Kombination mit if-Anweisungen, um unterschiedliche Szenarien in einem Programm zu steuern.
+- Lassen Sie die Taste eine LED ein- und ausschalten, anstatt nur Ausgaben im seriellen Monitor zu erzeugen.
 
-Additional Ideas
-^^^^^^^^^^^^^^^^^^^^
-
-- Use the button with if statements to control different outcomes in a program.
-- Make the button toggle an LED on and off instead of just printing to serial monitor. 
-
-More Projects
+Weitere Projekte
 ---------------------------
 * :ref:`fun_doorbell`

@@ -1,19 +1,18 @@
 .. _fun_potentiometer_scale_value:
 
-Potentiometer scale value
+Potentiometer-Skalenwert
 ==========================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/fun/10-fun-Potentiometer_scale_value.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This project is designed to read the value from a potentiometer and display the read value on an LCD 1620 with an I2C interface. The value is also sent to the serial monitor for real-time viewing. A unique feature of this project is the visual representation of the potentiometer's value on the LCD, displaying a bar that varies in length corresponding to the value.
+Dieses Projekt wurde entwickelt, um den Wert eines Potentiometers auszulesen und diesen Wert auf einem LCD 1620 mit einer I2C-Schnittstelle anzuzeigen. Der Wert wird auch an den seriellen Monitor gesendet, um ihn in Echtzeit anzusehen. Ein besonderes Merkmal dieses Projekts ist die visuelle Darstellung des Potentiometerwerts auf dem LCD, die einen Balken anzeigt, dessen Länge dem Wert entspricht.
 
-
-1. Build the Cirduit
+1. Schalten Sie die Schaltung
 -----------------------------
 
 .. image:: img/10-fun-Potentiometer_scale_value_circuit.png
@@ -27,19 +26,19 @@ This project is designed to read the value from a potentiometer and display the 
 2. Code
 -----------------------------
 
-#. Open the ``10-Potentiometer_scale_value.ino`` file under the path of ``ultimate-sensor-kit\fun_project\10-Potentiometer_scale_value``, or copy this code into **Arduino IDE**.
+#. Öffnen Sie die Datei ``10-Potentiometer_scale_value.ino`` unter dem Pfad ``ultimate-sensor-kit\fun_project\10-Potentiometer_scale_value``, oder kopieren Sie diesen Code in die **Arduino IDE**.
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/8adabab1-9d8b-4b84-9007-18f86eda247a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-3. Code explanation
+3. Code-Erklärung
 -----------------------------
 
-The project functions by continually reading the value from a connected potentiometer. This value is then mapped to a smaller scale (0-16) and represented both numerically and visually on the LCD. By checking the difference between consecutive readings, the code ensures that only significant changes are reflected on the display, thereby reducing jitter. Reducing jitter helps avoid undesirable visual effects resulting from frequent refreshing of the LCD screen.
+Das Projekt funktioniert, indem es kontinuierlich den Wert von einem angeschlossenen Potentiometer liest. Dieser Wert wird dann auf eine kleinere Skala (0-16) abgebildet und sowohl numerisch als auch visuell auf dem LCD dargestellt. Durch Überprüfung des Unterschieds zwischen aufeinanderfolgenden Messwerten stellt der Code sicher, dass nur signifikante Änderungen auf dem Display widergespiegelt werden, wodurch das Flackern reduziert wird. Dies hilft, unerwünschte visuelle Effekte durch häufiges Aktualisieren des LCD-Bildschirms zu vermeiden.
 
-1. **Library Inclusion and Initialization**:
+1. **Bibliothek einbinden und initialisieren**:
 
    .. code-block:: arduino
    
@@ -47,18 +46,18 @@ The project functions by continually reading the value from a connected potentio
       #include <LiquidCrystal_I2C.h>
       LiquidCrystal_I2C lcd(0x27, 16, 2);
 
-   Here, the required libraries (``Wire`` for I2C communication and ``LiquidCrystal_I2C`` for the LCD) are included. An LCD object is created with the I2C address ``0x27`` and is defined to have ``16`` columns and ``2`` rows.
+   Hier werden die benötigten Bibliotheken (``Wire`` für die I2C-Kommunikation und ``LiquidCrystal_I2C`` für das LCD) eingebunden. Ein LCD-Objekt wird mit der I2C-Adresse ``0x27`` erstellt und ist definiert mit ``16`` Spalten und ``2`` Zeilen.
 
-2. **Variable Declaration**:
+2. **Variablendeklaration**:
 
    .. code-block:: arduino
    
       int lastRead = 0;     // Previous potentiometer value
       int currentRead = 0;  // Current potentiometer value
 
-   ``lastRead`` stores the previously read potentiometer value. ``currentRead`` will store the current reading from the potentiometer.
+   ``lastRead`` speichert den zuletzt gelesenen Potentiometerwert. ``currentRead`` speichert den aktuellen Wert des Potentiometers.
 
-3. **setup() Function**:
+3. **setup() Funktion**:
 
    .. code-block:: arduino
    
@@ -68,9 +67,9 @@ The project functions by continually reading the value from a connected potentio
         Serial.begin(9600);  // Start serial communication at 9600 baud rate
       }
 
-   The LCD is initialized, its backlight is turned on, and serial communication is started at a baud rate of ``9600``.
+   Das LCD wird initialisiert, seine Hintergrundbeleuchtung eingeschaltet und die serielle Kommunikation mit einer Baudrate von ``9600`` gestartet.
 
-4. **Main Loop**:
+4. **Hauptloop**:
 
    .. code-block:: arduino
    
@@ -80,7 +79,7 @@ The project functions by continually reading the value from a connected potentio
         if (abs(lastRead - currentRead) > 2) {
           lcd.clear();
           lcd.setCursor(0, 0);
-          lcd.print("Value:");
+          lcd.print("Wert:");
           lcd.setCursor(7, 0);
           lcd.print(currentRead);
           Serial.println(currentRead);
@@ -93,8 +92,9 @@ The project functions by continually reading the value from a connected potentio
         delay(200);
       }
 
-   * The potentiometer value is read and mapped to a bar length (0-16).
-   * If the difference between the last and current reading is more than ``2``, the LCD is updated.
-   * The value is printed on the first row and a bar (based on the mapped value) on the second row.
-   * The value is also sent to the serial monitor.
-   * Before the next iteration, ``lastRead`` is updated, and a delay of ``200ms`` is introduced for stability.
+   * Der Potentiometerwert wird gelesen und auf eine Balkenlänge (0-16) abgebildet.
+   * Wenn der Unterschied zwischen dem letzten und dem aktuellen Wert größer als ``2`` ist, wird das LCD aktualisiert.
+   * Der Wert wird in der ersten Zeile und ein Balken (basierend auf dem abgebildeten Wert) in der zweiten Zeile angezeigt.
+   * Der Wert wird auch an den seriellen Monitor gesendet.
+   * Vor der nächsten Iteration wird ``lastRead`` aktualisiert, und es wird eine Verzögerung von ``200ms`` für die Stabilität eingeführt.
+

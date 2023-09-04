@@ -1,72 +1,71 @@
-Sketch Writing Rule
+Skizzen-Schreibregeln
 ================================
 
+Wenn du einen Freund bittest, das Licht für dich einzuschalten, kannst du einfach sagen: "Schalte das Licht ein" oder "Mach Licht, Kumpel." Dabei spielt der Tonfall keine Rolle.
 
-If you ask a friend to turn on the lights for you, you can say "Turn on the lights.", or "Lights on, bro.", you can use any tone of voice you want.
+Wenn du jedoch möchtest, dass ein Arduino-Board etwas für dich tut, musst du die Programmschreibregeln von Arduino befolgen.
 
-However, if you want the Arduino board to do something for you, you need to follow the Arduino program writing rules to type in the commands.
+Dieses Kapitel enthält die grundlegenden Regeln der Arduino-Sprache und hilft dir zu verstehen, wie du natürliche Sprache in Code übersetzen kannst.
 
-This chapter contains the basic rules of the Arduino language and will help you understand how to translate natural language into code.
-
-Of course, this is a process that takes time to get familiar with, and it is also the most error-prone part of the process for newbies, so if you make mistakes often, it's okay, just try a few more times.
+Natürlich erfordert dieser Prozess eine gewisse Eingewöhnungszeit und ist gerade für Anfänger am fehleranfälligsten. Wenn du also oft Fehler machst, ist das kein Problem, versuche es einfach noch ein paar Mal.
 
 
-Semicolon ``;``
+Semikolon ``;``
 ---------------
 
-Just like writing a letter, where you write a period at the end of each sentence as the end, the Arduino language requires you to use ``;`` to tell the board the end of the command.
+Genau wie im Briefverkehr, wo am Ende jedes Satzes ein Punkt steht, verlangt die Arduino-Sprache, dass du ``;`` verwendest, um das Board über das Ende eines Befehls zu informieren.
 
-Take the familiar "onboard LED blinking" example. A healthy sketch should look like this.
+Nehmen wir das bekannte Beispiel der "an Bord befindlichen LED-Blinkanzeige". Ein fehlerfreies Skript könnte so aussehen:
 
-Example:
+Beispiel:
 
-.. code-block:: C
+.. code-block:: arduino
 
     void setup() {
-        // put your setup code here, to run once:
-        pinMode(13,OUTPUT); 
+        // Füge hier deinen Setup-Code ein, der einmal ausgeführt wird:
+        pinMode(13, OUTPUT); 
     }
 
     void loop() {
-        // put your main code here, to run repeatedly:
-        digitalWrite(13,HIGH);
+        // Füge hier deinen Hauptcode ein, der wiederholt ausgeführt wird:
+        digitalWrite(13, HIGH);
         delay(500);
-        digitalWrite(13,LOW);
+        digitalWrite(13, LOW);
         delay(500);
     }
 
-Next, let's take a look at the following two sketches and guess if they can be correctly recognized by Arduino before running them.
+Als nächstes betrachten wir die folgenden beiden Skizzen und überlegen, ob sie vom Arduino korrekt erkannt werden, bevor wir sie ausführen.
 
-Sketch A:
+Skizze A:
 
-.. code-block:: C
+.. code-block:: arduino
     :emphasize-lines: 8,9,10,11
 
     void setup() {
-        // put your setup code here, to run once:
-        pinMode(13,OUTPUT); 
+        // Füge hier deinen Setup-Code ein, der einmal ausgeführt wird:
+        pinMode(13, OUTPUT); 
     }
 
     void loop() {
-        // put your main code here, to run repeatedly:
-        digitalWrite(13,HIGH)
+        // Füge hier deinen Hauptcode ein, der wiederholt ausgeführt wird:
+        digitalWrite(13, HIGH)
         delay(500)
-        digitalWrite(13,LOW)
+        digitalWrite(13, LOW)
         delay(500)
     }
 
-Sketch B:
+Skizze B:
 
-.. code-block:: C
+.. code-block:: arduino
     :emphasize-lines: 8,9,10,11,12,13,14,15,16
 
     void setup() {
-        // put your setup code here, to run once:
-        pinMode(13,OUTPUT);
+        // Füge hier deinen Setup-Code ein, der einmal ausgeführt wird:
+        pinMode(13, OUTPUT);
     }
     
     void loop() {
-        // put your main code here, to run repeatedly:
+        // Füge hier deinen Hauptcode ein, der wiederholt ausgeführt wird:
         digitalWrite(13,
     HIGH);  delay
         (500
@@ -78,93 +77,93 @@ Sketch B:
         ;
     }
 
-The result is that **Sketch A** reports an error and **Sketch B** runs.
+Das Ergebnis ist, dass **Skizze A** einen Fehler meldet und **Skizze B** ausgeführt wird.
 
-* The errors in **Sketch A** are missing ``;`` and although it looks normal, the Arduino can't read it.
-* **Sketch B**, looks anti-human, but in fact, indentation, line breaks and spaces in statements are things that do not exist in Arduino programs, so to the Arduino compiler, it looks the same as in the example.
+* Die Fehler in **Skizze A** sind fehlende ``;`` und obwohl die Skizze normal aussieht, kann sie von Arduino nicht gelesen werden.
+* **Skizze B** mag unleserlich erscheinen, aber Einrückungen, Zeilenumbrüche und Leerzeichen in den Anweisungen sind für den Arduino-Compiler irrelevant. Daher sieht die Skizze für ihn genauso aus wie im Beispiel.
 
-However, please don't write your code as **Sketch B**, because it is usually natural people who write and view the code, so don't get yourself into trouble.
+Bitte schreibe deinen Code jedoch nicht wie in **Skizze B**, da es in der Regel Menschen sind, die den Code schreiben und lesen. Erschwere dir also nicht unnötig die Arbeit.
 
 
-Curlybraces ``{}``
+Geschweifte Klammern ``{}``
+---------------------------
+
+Geschweifte Klammern ``{}`` sind ein Hauptbestandteil der Arduino-Programmiersprache und müssen immer paarweise vorkommen.
+Eine gängige Programmierrichtlinie besteht darin, direkt nach dem Tippen der öffnenden geschweiften Klammer auch die schließende geschweifte Klammer einzufügen und den Cursor dann zwischen die Klammern zu setzen, um die Anweisung einzufügen.
+
+
+Kommentare ``//``
 ------------------
 
-``{}`` is the main component of the Arduino programming language, and they must appear in pairs. 
-A better programming convention is to insert a structure that requires curly braces by typing the right curly brace directly after typing the left curly brace, and then moving the cursor between the curly braces to insert the statement.
+Kommentare sind die Teile einer Skizze, die der Compiler ignoriert. Sie dienen in der Regel dazu, anderen zu erklären, wie das Programm funktioniert.
 
+Schreibt man zwei aufeinanderfolgende Schrägstriche in einer Codezeile, wird alles bis zum Ende der Zeile vom Compiler ignoriert.
 
+Wenn wir eine neue Skizze erstellen, enthält sie bereits zwei Kommentare. Entfernen wir diese, hat dies keinen Einfluss auf die Funktionsweise der Skizze.
 
-Commment ``//``
----------------
-
-Commment is the part of the sketch that the compiler ignores. They are usually used to tell others how the program works.
-
-If we write two adjacent slashes in a line of code, the compiler will ignore anything up to the end of the line.
-
-If we create a new sketch, it comes with two comments, and if we remove these two comments, the sketch will not be affected in any way.
-
-.. code-block:: C
+.. code-block:: arduino
     :emphasize-lines: 2,7
 
     void setup() {
-        // put your setup code here, to run once:
+        // Setze hier deinen Initialisierungscode ein, der einmal ausgeführt wird:
 
     }
 
     void loop() {
-        // put your main code here, to run repeatedly:
+        // Setze hier deinen Hauptcode ein, der ständig wiederholt wird:
 
     }
 
+Kommentare sind in der Programmierung sehr nützlich, und einige gängige Anwendungsbeispiele sind nachfolgend aufgelistet.
 
-Comment is very useful in programming, and several common uses are listed below.
+* Anwendungsfall A: Erkläre dir oder anderen, was dieser Codeabschnitt macht.
 
-* Usage A: Tell yourself or others what this section of code does.
-
-.. code-block:: C
+.. code-block:: arduino
 
     void setup() {
-        pinMode(13,OUTPUT); //Set pin 13 to output mode, it controls the onboard LED
+        pinMode(13, OUTPUT); // Setze Pin 13 in den Ausgabemodus, er steuert die onboard LED
     }
 
     void loop() {
-        digitalWrite(13,HIGH); // Activate the onboard LED by setting pin 13 high
-        delay(500); // Status quo for 500 ms
-        digitalWrite(13,LOW); // Turn off the onboard LED
-        delay(500);// Status quo for 500 ms
+        digitalWrite(13, HIGH); // Aktiviere die onboard LED durch Setzen von Pin 13 auf HIGH
+        delay(500); // Halte den Status für 500 ms
+        digitalWrite(13, LOW); // Schalte die onboard LED aus
+        delay(500); // Halte den Status für 500 ms
     }
 
-* Usage B: Temporarily invalidate some statements (without deleting them) and uncomment them when you need to use them, so you don't have to rewrite them. This is very useful when debugging code and trying to locate program errors.
+* Anwendungsfall B: Temporäres Deaktivieren von Anweisungen (ohne sie zu löschen), um sie bei Bedarf wieder zu aktivieren, ohne sie neu schreiben zu müssen. Dies ist beim Debuggen von Code und bei der Fehlersuche sehr hilfreich.
 
-.. code-block:: C
+.. code-block:: arduino
     :emphasize-lines: 3,4,5,6
 
     void setup() {
-        pinMode(13,OUTPUT);
-        // digitalWrite(13,HIGH);
+        pinMode(13, OUTPUT);
+        // digitalWrite(13, HIGH);
         // delay(1000);
-        // digitalWrite(13,LOW);
+        // digitalWrite(13, LOW);
         // delay(1000);
     }
 
     void loop() {
-        digitalWrite(13,HIGH);
+        digitalWrite(13, HIGH);
         delay(200);
-        digitalWrite(13,LOW);
+        digitalWrite(13, LOW);
         delay(200);
     }    
 
 .. note:: 
-    Use the shortcut ``Ctrl+/`` to help you quickly comment or uncomment your code.
+    Verwenden Sie die Tastenkombination ``Strg+/``, um Ihren Code schnell zu kommentieren oder zu dekommentieren.
 
-Commment ``/**/``
+Kommentar ``/**/``
 ------------------
 
-Same as ``//`` for comments. This type of comment can be more than one line long, and once the compiler reads ``/*``, it ignores anything that follows until it encounters ``*/``.
+Gleichwertig zu ``//`` für Kommentare. Diese Art von Kommentar kann über mehrere Zeilen gehen. Sobald der Compiler ``/*`` liest, ignoriert er alles, was darauf folgt, bis er ``*/`` trifft.
+
+
 
 Example 1:
 
-.. code-block:: C
+.. code-block:: arduino
     :emphasize-lines: 1,8,9,10,11
 
     /* Blink */
@@ -188,80 +187,79 @@ Example 1:
 ``#define``
 --------------
 
-This is a useful C++ tool.
+Dies ist ein nützliches Werkzeug in C++.
 
-.. code-block:: C
+.. code-block:: arduino
 
-    #define identifier token-string
+    #define identifier Token-String
 
-The compiler automatically replaces ``identifier`` with ``token-string`` when it reads it, which is usually used for constant definitions.
+Der Compiler ersetzt beim Lesen automatisch den ``identifier`` durch den ``Token-String``, was meist zur Definition von Konstanten verwendet wird.
 
-As an example, here is a sketch that uses define, which improves the readability of the code.
+Hier ein Beispiel für eine Skizze, die `#define` verwendet, um die Lesbarkeit des Codes zu erhöhen.
 
-.. code-block:: C
+.. code-block:: arduino
     :emphasize-lines: 1,2
 
     #define ONBOARD_LED 13
-    #define DELAY_TIME 500
+    #define VERZOEGERUNGSZEIT 500
 
     void setup() {
-        pinMode(ONBOARD_LED,OUTPUT); 
+        pinMode(ONBOARD_LED, OUTPUT); 
     }
 
     void loop() {
-        digitalWrite(ONBOARD_LED,HIGH); 
-        delay(DELAY_TIME); 
-        digitalWrite(ONBOARD_LED,LOW); 
-        delay(DELAY_TIME);
+        digitalWrite(ONBOARD_LED, HIGH); 
+        delay(VERZOEGERUNGSZEIT); 
+        digitalWrite(ONBOARD_LED, LOW); 
+        delay(VERZOEGERUNGSZEIT);
     }
 
-To the compiler, it actually looks like this.
+Aus Sicht des Compilers sieht der Code eigentlich so aus:
 
-.. code-block:: C
+.. code-block:: arduino
 
     void setup() {
-        pinMode(13,OUTPUT); 
+        pinMode(13, OUTPUT); 
     }
 
     void loop() {
-        digitalWrite(13,HIGH); 
+        digitalWrite(13, HIGH); 
         delay(500); 
-        digitalWrite(13,LOW); 
+        digitalWrite(13, LOW); 
         delay(500);
     }
 
-We can see that the ``identifier`` is replaced and does not exist inside the program.
-Therefore, there are several caveats when using it.
+Wie man sehen kann, wird der ``Bezeichner`` ersetzt und existiert nicht im Programm. Daher gibt es einige Vorsichtsmaßnahmen bei der Verwendung.
 
-1. A ``token-string`` can only be modified manually and cannot be converted into other values by arithmetic in the program.
+1. Ein ``Token-String`` kann nur manuell geändert und nicht durch Rechenoperationen im Programm in andere Werte umgewandelt werden.
 
-2. Avoid using symbols such as ``;``. For example.
+2. Vermeiden Sie die Verwendung von Symbolen wie ``;``. Zum Beispiel:
 
-.. code-block:: C
+.. code-block:: arduino
     :emphasize-lines: 1
 
     #define ONBOARD_LED 13;
 
     void setup() {
-        pinMode(ONBOARD_LED,OUTPUT); 
+        pinMode(ONBOARD_LED, OUTPUT); 
     }
 
     void loop() {
-        digitalWrite(ONBOARD_LED,HIGH); 
+        digitalWrite(ONBOARD_LED, HIGH); 
     }
 
-The compiler will recognize it as the following, which is what will be reported as an error.
+Der Compiler wird es wie folgt interpretieren, was zu einem Fehler führen wird:
 
-.. code-block:: C
+.. code-block:: arduino
     :emphasize-lines: 2,6
 
     void setup() {
-        pinMode(13;,OUTPUT); 
+        pinMode(13;, OUTPUT); 
     }
 
     void loop() {
-        digitalWrite(13;,HIGH); 
+        digitalWrite(13;, HIGH); 
     }
 
 .. note:: 
-    A naming convention for ``#define`` is to capitalize ``identifier`` to avoid confusion with variables.
+    Eine Namenskonvention für ``#define`` ist es, den ``identifier`` zu groß zu schreiben, um Verwechslungen mit Variablen zu vermeiden.

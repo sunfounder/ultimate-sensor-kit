@@ -1,16 +1,15 @@
 .. _iot_projects:
 
-IoT Projects
+IoT-Projekte
 ====================
 
-This kit features the ESP8266 Wifi module and the JDY-31 Bluetooth Module. The ESP8266 allows your Arduino to connect to the internet for IoT experiments, while the Bluetooth module facilitates short-range wireless communication.
+Dieses Kit enthält das ESP8266-WLAN-Modul und das JDY-31-Bluetooth-Modul. Mit dem ESP8266 können Sie Ihr Arduino an das Internet anschließen, um IoT-Experimente durchzuführen. Das Bluetooth-Modul ermöglicht hingegen drahtlose Kommunikation auf kurzer Distanz.
 
-With the ESP8266 WiFi module, you'll explore a range of IoT projects that allow you to connect your Arduino to the internet. We provide step-by-step guides to work with platforms like |link_blynk| and |link_thingspeak|, enabling you to set up alert systems, remote controllers, and environmental monitors, among other applications.
+Mithilfe des ESP8266-WLAN-Moduls können Sie eine Vielzahl von IoT-Projekten erkunden, die die Verbindung Ihres Arduino mit dem Internet ermöglichen. Wir bieten Ihnen schrittweise Anleitungen zur Arbeit mit Plattformen wie |link_blynk| und |link_thingspeak| an. Damit können Sie Alarmierungssysteme, Fernbedienungen und Umweltüberwachungssysteme einrichten, um nur einige Anwendungen zu nennen.
 
-On the other hand, the JDY-31 Bluetooth module opens doors to localized wireless communication. We will guide you through pairing your Arduino with smartphones or other Bluetooth-enabled devices for various controls and monitoring tasks. And you can create projects using apps developed with |link_appinventor|.
+Das JDY-31-Bluetooth-Modul eröffnet Ihnen Möglichkeiten für lokale drahtlose Kommunikation. Wir leiten Sie durch die Kopplung Ihres Arduino mit Smartphones oder anderen Bluetooth-fähigen Geräten für unterschiedliche Steuerungs- und Überwachungsaufgaben. Zudem können Sie Projekte mit Apps realisieren, die mit |link_appinventor| entwickelt wurden.
 
-
-**Wi-Fi**
+**WLAN**
 
 .. toctree::
     :maxdepth: 1
@@ -24,7 +23,6 @@ On the other hand, the JDY-31 Bluetooth module opens doors to localized wireless
     04-iot_Vibration_alert_system
     05-iot_Weather_monitor
     
-
 **Bluetooth**
 
 .. toctree::

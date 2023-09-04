@@ -1,7 +1,8 @@
-Thank You
+Vielen Dank
 ====================
 
-Thanks to the evaluators who evaluated our products, the veterans who provided suggestions for the tutorial, and the users who have been following and supporting us.
-Your valuable suggestions to us are our motivation to provide better products!
+Ein herzlicher Dank geht an die Gutachter, die unsere Produkte bewertet haben, an die Experten, die Vorschläge für das Tutorial gemacht haben, und an die Nutzer, die uns kontinuierlich folgen und unterstützen.
+Ihre wertvollen Anregungen sind für uns Ansporn, immer bessere Produkte zu bieten!
 
-If you have any questions or other interesting ideas, feel free to send an email to cs@sunfounder.com.
+Bei Fragen oder weiteren interessanten Ideen können Sie gerne eine E-Mail an service@sunfounder.com.
+

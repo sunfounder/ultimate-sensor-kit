@@ -1,55 +1,54 @@
 .. _cpn_relay:
 
-5V Relay Module
+5V-Relaismodul
 ==========================
 
 .. image:: img/25_relay_module.png
     :width: 400
     :align: center
 
-Introduction
+Einleitung
 ---------------------------
-5V relay modules are devices that can switch high voltage or high current devices on and off using a 5V signal from Arduino. They can be used to control devices such as lights, fans, motors, solenoids, etc. 5V relay has three high voltage terminals (NC, C, and NO) which connect to the device you want to control. The other side has three low voltage pins (Ground, Vcc, and Signal) which connect to the Arduino.
+5V-Relaismodule sind Geräte, die Hochspannungs- oder Hochstromgeräte mit einem 5V-Signal vom Arduino ein- und ausschalten können. Sie eignen sich zur Steuerung von Geräten wie Lampen, Lüftern, Motoren oder Magnetventilen. Ein 5V-Relais verfügt über drei Hochspannungsanschlüsse (NC, C und NO), die an das zu steuernde Gerät angeschlossen werden. Auf der anderen Seite befinden sich drei Niederspannungsanschlüsse (Ground, Vcc und Signal), die mit dem Arduino verbunden werden.
 
-
-Principle
+Funktionsprinzip
 ---------------------------
-A relay is a device which is used to provide connection between two or more points or devices in response to the input signal applied. In other words, relays provide isolation between the controller and devices, which may operate on either AC or DC. However, they receive signals from a microcontroller which works on DC hence requiring a relay to bridge the gap. Relay is extremely useful when you need to control a large amount of current or voltage with small electrical signal.
+Ein Relais ist ein Bauelement, das zur Herstellung einer Verbindung zwischen zwei oder mehr Punkten oder Geräten in Reaktion auf ein eingegebenes Signal verwendet wird. Mit anderen Worten, Relais bieten eine Isolation zwischen dem Controller und den angeschlossenen Geräten, die entweder mit Wechsel- oder Gleichstrom arbeiten können. Da sie Signale von einem Mikrocontroller erhalten, der mit Gleichstrom arbeitet, ist ein Relais erforderlich, um die Lücke zu überbrücken. Relais sind besonders nützlich, wenn man mit einem kleinen elektrischen Signal eine große Menge an Strom oder Spannung steuern möchte.
 
-There are 5 parts in every relay:
+Ein Relais besteht aus fünf Hauptkomponenten:
 
 .. image:: img/25_relay_2.jpeg
     :width: 500
     :align: center
 
-Electromagnet - It consists of an iron core wounded by coil of wires. When electricity is passed through, it becomes magnetic. Therefore, it is called electromagnet.
+Elektromagnet - Er besteht aus einem Eisenkern, um den eine Drahtspule gewickelt ist. Wird Strom durch ihn geleitet, wird er magnetisch.
 
-Armature - The movable magnetic strip is known as armature. When current flows through them, the coil gets energized thus producing a magnetic field which is used to make or break the normally open (N/O) or normally close (N/C) points. And the armature can be moved with direct current (DC) as well as alternating current (AC).
+Anker - Der bewegliche magnetische Streifen wird als Anker bezeichnet. Wenn Strom durch die Spule fließt, wird ein Magnetfeld erzeugt, das dazu dient, die Kontakte entweder zu schließen oder zu öffnen. Der Anker kann sowohl mit Gleich- als auch mit Wechselstrom bewegt werden.
 
-Spring - When no currents flow through the coil on the electromagnet, the spring pulls the armature away so the circuit cannot be completed.
+Feder - Wenn kein Strom durch die Spule des Elektromagneten fließt, zieht die Feder den Anker zurück, sodass der Stromkreis unterbrochen wird.
 
-Set of electrical contacts - There are two contact points:
+Elektrische Kontakte - Es gibt zwei Kontaktstellen:
 
-* Normally open - connected when the relay is activated, and disconnected when it is inactive.
-* Normally closed - not connected when the relay is activated, and connected when it is inactive.
+* Normalerweise offen - geschlossen, wenn das Relais aktiviert ist, und offen, wenn es inaktiv ist.
+* Normalerweise geschlossen - offen, wenn das Relais aktiviert ist, und geschlossen, wenn es inaktiv ist.
 
-Molded frame - This is typically made of plastic and provides structural support and protection for the relay.
+Gehäuse - Dies ist typischerweise aus Kunststoff gefertigt und bietet strukturelle Unterstützung und Schutz für das Relais.
 
-The working principle of relay is simple. When power is supplied to the relay, currents start flowing through the control coil; as a result, the electromagnet starts energizing. Then the armature is attracted to the coil, pulling down the moving contact together thus connecting with the normally open contacts. So the circuit with the load is energized. Then breaking the circuit would be a similar case, as the moving contact will be pulled up to the normally closed contacts under the force of the spring. In this way, the switching on and off of the relay can control the state of a load circuit.
+Die Funktionsweise eines Relais ist einfach. Sobald Strom zugeführt wird, beginnt der Strom durch die Steuerspule zu fließen, und der Elektromagnet wird aktiviert. Dann wird der Anker zum Elektromagneten gezogen, und die Kontakte schließen sich. Dadurch wird der Lastkreis eingeschaltet. Um den Kreislauf zu unterbrechen, wird der Anker durch die Kraft der Feder zurückgezogen. Auf diese Weise kann das Ein- und Ausschalten des Relais den Zustand einer Last steuern.
 
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Hardwarekomponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- 5V Relay Module * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Board * 1
+- 5V-Relaismodul * 1
+- Jumperkabel
 
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/25_relay_module_circuit.png
-    :width: 600
+    :width: 100%
     :align: center
 
 .. raw:: html
@@ -57,16 +56,15 @@ Usage
     <br/><br/>   
 
 .. warning ::
-    The following example demonstrates using a relay to control an LED module. 
-    **While you can connect the relay to other appliances in actual applications, extreme caution is required when dealing with HIGH AC voltage. Improper or incorrect use can lead to severe injury or even death. Therefore, it is intended for people who are familiar with and knowledgeable about HIGH AC voltage. Always prioritize safety.**
+    Das folgende Beispiel zeigt die Verwendung eines Relais zur Steuerung eines LED-Moduls. 
+    **Obwohl das Relais in realen Anwendungen auch für andere Geräte verwendet werden kann, ist bei der Arbeit mit HOHER Wechselspannung äußerste Vorsicht geboten. Unsachgemäßer oder fehlerhafter Gebrauch kann zu schweren Verletzungen oder sogar zum Tod führen. Daher ist es für Personen gedacht, die sich mit HOHER Wechselspannung auskennen. Sicherheit hat immer Vorrang.**
 
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d3f6723d-bd49-4461-96de-84293f2e6d10/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
 
 .. raw:: html
 
@@ -76,18 +74,20 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erklärung
 ^^^^^^^^^^^^^^^^^^^^
 
-#. Setting up the relay pin:
-   - The relay module is connected to pin 6 of the Arduino. This pin is defined as ``relayPin`` for ease of reference in the code.
+#. Einrichten des Relais-Pins:
+
+   - Das Relaismodul ist an Pin 6 des Arduino angeschlossen. Dieser Pin wird im Code als ``relayPin`` bezeichnet.
 
    .. code-block:: arduino
     
       const int relayPin = 6;
 
-#. Configuring the relay pin as an output:
-   - In the ``setup()`` function, the relay pin is set as an OUTPUT using the ``pinMode()`` function. This means the Arduino will send signals (either HIGH or LOW) to this pin.
+#. Konfigurieren des Relais-Pins als Ausgang:
+
+   - In der ``setup()`` Funktion wird der Relais-Pin als OUTPUT festgelegt, um Signale (entweder HIGH oder LOW) an diesen Pin zu senden.
 
    .. code-block:: arduino
 
@@ -95,10 +95,11 @@ Code explanation
         pinMode(relayPin, OUTPUT);
       }
 
-#. Toggling the relay ON and OFF:
-   - In the ``loop()`` function, the relay is first set to the OFF state using ``digitalWrite(relayPin, LOW)``. It remains in this state for 3 seconds (``delay(3000)``).
-   - Then, the relay is set to the ON state using ``digitalWrite(relayPin, HIGH)``. Again, it remains in this state for 3 seconds.
-   - This cycle repeats indefinitely.
+#. Ein- und Ausschalten des Relais:
+
+   - In der ``loop()`` Funktion wird das Relais zunächst auf den OFF-Zustand gesetzt (``digitalWrite(relayPin, LOW)``) und bleibt 3 Sekunden in diesem Zustand (``delay(3000)``).
+   - Anschließend wird das Relais auf den ON-Zustand gesetzt (``digitalWrite(relayPin, HIGH)``) und bleibt ebenfalls 3 Sekunden in diesem Zustand.
+   - Dieser Zyklus wiederholt sich unendlich.
 
    .. code-block:: arduino
 
@@ -110,14 +111,14 @@ Code explanation
         delay(3000);
       }
 
-Additional Ideas
+Weitere Ideen
 ^^^^^^^^^^^^^^^^^^^^
 
-- Introduce a physical button to manually control the relay's state.
+- Einführung eines physischen Schalters zur manuellen Steuerung des Relaiszustands.
 
-- Integrate sensors (like a temperature or light sensor) to trigger the relay based on environmental conditions.
+- Integration von Sensoren (wie Temperatur- oder Lichtsensor) zur Auslösung des Relais abhängig von den Umgebungsbedingungen.
 
-More Projects
+Weitere Projekte
 ---------------------------
 * :ref:`fun_light_control_switch`
 * :ref:`fun_motion_triggered_relay`

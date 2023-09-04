@@ -1,22 +1,20 @@
-Component Basics
+Grundlagen der Komponenten
 ====================================
 
+Nach dem Öffnen der Verpackung überprüfen Sie bitte, ob die Anzahl der Komponenten der Produktbeschreibung entspricht und ob alle Teile einwandfrei sind.
 
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+* :download:`Liste der Komponenten des SunFounder Ultimate Sensor Kits </_static/pdf/sunfounder_ultimate_sensor_kit_components_list.pdf>`
 
-* :download:`SunFounder Ultimate Sensor Kit Components List </_static/pdf/sunfounder_ultimate_sensor_kit_components_list.pdf>`
+Im Folgenden wird eine Einführung zu jeder Komponente gegeben, einschließlich ihres Funktionsprinzips und des zugehörigen Projekts. **Zu jeder Komponente gibt es ein einfaches Code-Beispiel, das Ihnen einen schnellen Einstieg ermöglicht.**
 
+**Steuerplatine**
 
-The following is an introduction to each component, including its working principle and corresponding project. **Each component has a simple code example to help you get started quickly.**
-
-**Control Board**
-
-.. toctree:: 
+.. toctree::
     :maxdepth: 1
     
     36-component_uno
 
-**Sensor**
+**Sensorik**
 
 .. toctree::
     :maxdepth: 1
@@ -42,7 +40,7 @@ The following is an introduction to each component, including its working princi
     19-component_joystick
     20-component_VL53L0X
 
-**Display**
+**Anzeigeelemente**
 
 .. toctree::
     :maxdepth: 1
@@ -52,7 +50,7 @@ The following is an introduction to each component, including its working princi
     23-component_traffic
     24-component_rgb
 
-**Actuator**
+**Aktuatoren**
 
 .. toctree::
     :maxdepth: 1
@@ -63,12 +61,10 @@ The following is an introduction to each component, including its working princi
     28-component_pump
     29-component_ttmotor
 
-**Wireless & IoT**
+**Drahtlose Kommunikation & IoT**
 
 .. toctree::
     :maxdepth: 1
 
     37-component_esp8266
     38-component_jdy31
-
-

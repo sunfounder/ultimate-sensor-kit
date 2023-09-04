@@ -1,32 +1,32 @@
 .. _cpn_gas:
 
-Gas/Smoke Sensor Module (MQ2) 
+Gas-/Rauch-Sensormodul (MQ2)
 =====================================
 
 .. image:: img/02_mq2_gas_module.png
     :width: 350
     :align: center
 
-Introduction
+Einleitung
 ---------------------------
-The MQ-2 sensor is a versatile gas sensor capable of detecting a wide range of gases including alcohol, carbon monoxide, hydrogen, isobutene, liquefied petroleum gas, methane, propane, and smoke. It is popular among beginners due to its low cost and easy-to-use features.
+Der MQ-2-Sensor ist ein vielseitiger Gassensor, der eine breite Palette von Gasen wie Alkohol, Kohlenmonoxid, Wasserstoff, Isobuten, Flüssiggas, Methan, Propan und Rauch erkennen kann. Aufgrund seiner kostengünstigen und benutzerfreundlichen Eigenschaften ist er besonders bei Einsteigern beliebt.
 
-Principle
+Funktionsprinzip
 ---------------------------
-The MQ-2 sensor works on the principle of resistance changes in the presence of different gases. When the target gas comes in contact with the heated MOS(Metal Oxide Semiconductor) material, it undergoes oxidation or reduction reactions that change the resistance of the MOS material. It is noteworthy that the MQ2 gas sensor is capable of detecting multiple gases, but lacks the ability to differentiate between them. This is a common characteristic of most gas sensors. 
+Der MQ-2-Sensor basiert auf dem Prinzip der Widerstandsänderung in Gegenwart verschiedener Gase. Wenn das Zielgas mit dem erhitzten MOS-Material (Metalloxid-Halbleiter) in Kontakt kommt, finden Oxidations- oder Reduktionsreaktionen statt, die den Widerstand des MOS-Materials verändern. Es ist bemerkenswert, dass der MQ-2-Sensor mehrere Gase erkennen kann, jedoch nicht in der Lage ist, zwischen ihnen zu unterscheiden. Dies ist eine übliche Eigenschaft der meisten Gassensoren.
 
-The sensor has a built-in potentiometer that allows you to adjust the sensor digital output (D0) threshold. When the concentration of gas in the air exceeds a certain threshold value, the resistance of the sensor changes. This change in resistance is then converted into an electrical signal that can be read by an Arduino board.
+Der Sensor verfügt über ein integriertes Potentiometer, das es ermöglicht, die digitale Ausgangsschwelle (D0) einzustellen. Überschreitet die Gaskonzentration in der Luft einen bestimmten Schwellenwert, ändert sich der Widerstand des Sensors. Diese Widerstandsänderung wird dann in ein elektrisches Signal umgewandelt, das von einem Arduino-Board ausgelesen werden kann.
 
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Benötigte Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- Gas Sensor Module(MQ2) * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Board * 1
+- Gas-Sensormodul (MQ2) * 1
+- Jumperkabel
 
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/02_mq2_sensor_circuit.png
     :width: 520
@@ -36,12 +36,11 @@ Usage
     
     <br/><br/>   
 
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/1de900bf-d3bf-411a-8f6b-23e53b704bf5/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
 
 .. raw:: html
 
@@ -49,18 +48,18 @@ Code
       <source src="../_static/video/basic/02-component_gas.mp4"  type="video/mp4">
       Your browser does not support the video tag.
    </video>
-   <br/><br/>  
+   <br/><br/>   
 
-Code explanation
+Code-Erläuterung
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. The first line of code is a constant integer declaration for the gas sensor pin. We use the analog pin A0 to read the output from the gas sensor.
+1. Die erste Codezeile ist eine konstante Ganzzahldeklaration für den Sensorpin des Gassensors. Wir verwenden den analogen Pin A0, um die Ausgabe des Gassensors auszulesen.
 
    .. code-block:: arduino
    
       const int sensorPin = A0;
 
-2. The ``setup()`` function is where we initialize our serial communication at a baud rate of 9600. This is necessary to print the readings from the gas sensor to the serial monitor.
+2. In der ``setup()``-Funktion initialisieren wir unsere serielle Kommunikation mit einer Baudrate von 9600. Dies ist notwendig, um die Messwerte des Gassensors im seriellen Monitor anzuzeigen.
 
    .. code-block:: arduino
    
@@ -68,7 +67,7 @@ Code explanation
         Serial.begin(9600);  // Start serial communication at 9600 baud rate
       }
 
-3. The ``loop()`` function is where we continuously read the analog value from the gas sensor and print it to the serial monitor. We use the ``analogRead()`` function to read the analog value from the sensor. We then wait for 50 milliseconds before the next reading. This delay gives some breathing space for the serial monitor to process the data.
+3. In der ``loop()``-Funktion lesen wir kontinuierlich den Analogwert des Gassensors aus und zeigen ihn im seriellen Monitor an. Wir verwenden die Funktion ``analogRead()`` zum Auslesen des Analogwerts. Anschließend warten wir 50 Millisekunden bis zur nächsten Messung. Diese Verzögerung gibt dem seriellen Monitor etwas Zeit zur Datenverarbeitung.
 
    .. code-block:: arduino
    
@@ -80,17 +79,14 @@ Code explanation
 
 .. note:: 
 
-  MQ2 is a heating-driven sensor that usually requires preheating before use. During the preheating period, the sensor typically reads high and gradually decreases until it stabilizes.
+  Der MQ2 ist ein heizgetriebener Sensor, der normalerweise vor der Verwendung eine Vorheizphase benötigt. Während dieser Vorheizphase sind die Sensormesswerte in der Regel hoch und nehmen allmählich ab, bis sie sich stabilisieren.
 
-Additional Ideas
-^^^^^^^^^^^^^^^^
+Weitere Ideen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  add a visual or auditory warning system (using LEDs or a buzzer) that triggers when gas concentrations exceed certain thresholds.
+- Hinzufügen eines visuellen oder akustischen Warnsystems (mittels LEDs oder eines Buzzers), das auslöst, wenn die Gaskonzentration bestimmte Schwellenwerte überschreitet.
 
 
-More Projects
+Weitere Projekte
 ---------------------------
 * :ref:`fun_gas_leak_alarm`
-
-
-

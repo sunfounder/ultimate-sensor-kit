@@ -1,19 +1,18 @@
 .. _fun_smart_trashcan:
 
-Smart trashcan
+Intelligenter Mülleimer
 ==========================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/fun/01-fun_Smart_trashcan.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This project revolves around the concept of a smart trash can. The primary aim is to have the trash can's lid automatically open when an object approaches within a set distance (20cm in this case). The functionality is achieved by using an ultrasonic distance sensor paired with a servo motor. The distance between the object and the sensor is continually measured. If the object is close enough, the servo motor is triggered to open the lid. 
+Dieses Projekt beschäftigt sich mit der Idee eines intelligenten Mülleimers. Das Hauptziel ist, dass sich der Deckel des Mülleimers automatisch öffnet, wenn sich ein Objekt in einem bestimmten Abstand (in diesem Fall 20 cm) nähert. Diese Funktionalität wird durch die Kombination eines Ultraschall-Entfernungssensors mit einem Servomotor erreicht. Die Entfernung zwischen dem Objekt und dem Sensor wird kontinuierlich gemessen. Nähert sich das Objekt ausreichend, wird der Servomotor aktiviert und der Deckel geöffnet.
 
-
-1. Build the Cirduit
+1. Schaltungsaufbau
 -----------------------------
 
 .. image:: img/01-fun_Smart_trashcan_circuit.png
@@ -23,25 +22,23 @@ This project revolves around the concept of a smart trash can. The primary aim i
 * :ref:`cpn_ultrasonic`
 * :ref:`cpn_servo`
 
-
-2. Code
+2. Programmcode
 -----------------------------
 
-#. Open the ``01-Smart_trashcan.ino`` file under the path of ``ultimate-sensor-kit\fun_project\01-Smart_trashcan``, or copy this code into **Arduino IDE**.
+#. Öffnen Sie die Datei ``01-Smart_trashcan.ino`` im Verzeichnis ``ultimate-sensor-kit\fun_project\01-Smart_trashcan``, oder kopieren Sie diesen Code in die **Arduino IDE**.
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/0e371717-97dc-43ad-bdc2-e468589da2a0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-
-3. Code explanation
+3. Code-Erklärung
 -----------------------------
 
-The project is based on real-time monitoring of the distance between an object and a trash can. An ultrasonic sensor continuously measures this distance, and if an object approaches within 20cm, the trash can interprets it as an intention to dispose of waste and automatically opens its lid. This automation adds smartness and convenience to a regular trash can.
+Das Projekt basiert auf der Echtzeitüberwachung der Entfernung zwischen einem Objekt und einem Mülleimer. Ein Ultraschallsensor misst diese Entfernung kontinuierlich. Nähert sich ein Objekt auf weniger als 20 cm, interpretiert der Mülleimer dies als Absicht, Abfall zu entsorgen, und öffnet automatisch seinen Deckel. Diese Automatisierung macht einen herkömmlichen Mülleimer smarter und komfortabler.
 
-#. **Initial Setup and Variable Declaration**
+#. **Erstkonfiguration und Variablendeklaration**
 
-   Here, we're including the ``Servo`` library and defining the constants and variables we'll use. The pins for the servo and the ultrasonic sensor are declared. We also have an array ``averDist`` to hold the three distance measurements.
+   An dieser Stelle binden wir die ``Servo``-Bibliothek ein und definieren die Konstanten und Variablen, die wir verwenden werden. Die Pins für den Servomotor und den Ultraschallsensor werden deklariert. Zudem steht uns ein Array ``averDist`` zur Verfügung, in dem die drei Entfernungsmessungen gespeichert werden.
 
    .. code-block:: arduino
        
@@ -56,9 +53,9 @@ The project is based on real-time monitoring of the distance between an object a
       long averDist[3];
       const int distanceThreshold = 20;
 
-#. setup() Function
+#. setup() Funktion
 
-   The ``setup()`` function initializes serial communication, configures the ultrasonic sensor's pins, and sets the initial position of the servo to the closed position.
+   Die ``setup()``-Funktion initialisiert die serielle Kommunikation, konfiguriert die Pins des Ultraschallsensors und bringt den Servomotor in die geschlossene Position.
 
    .. code-block:: arduino
    
@@ -70,12 +67,11 @@ The project is based on real-time monitoring of the distance between an object a
         servo.write(closeAngle);
         delay(100);
       }
-
    
 
-#. loop() Function
+#. loop() Funktion
 
-   The ``loop()`` function is responsible for continuously measuring the distance, computing its average, and then making a decision whether to open or close the trash can's lid based on this averaged distance.
+   Die ``loop()``-Funktion ist dafür verantwortlich, die Entfernung kontinuierlich zu messen, den Durchschnitt zu berechnen und auf dieser Grundlage zu entscheiden, ob der Deckel des Mülleimers geöffnet oder geschlossen werden soll.
 
    .. code-block:: arduino
    
@@ -95,14 +91,12 @@ The project is based on real-time monitoring of the distance between an object a
           delay(1000);
         }
       }
-   
-   
 
-#. Distance Reading Function
+#. Entfernungslesefunktion
 
-   This function, ``readDistance()``, is what actually interacts with the ultrasonic sensor. It sends a pulse and waits for an echo. The time taken for the echo is then used to calculate the distance between the sensor and any object in front of it.
+   Diese Funktion, ``readDistance()``, interagiert tatsächlich mit dem Ultraschallsensor. Sie sendet einen Impuls aus und wartet auf ein Echo. Die Zeit bis zum Eintreffen des Echos wird verwendet, um die Entfernung zwischen dem Sensor und einem Objekt davor zu berechnen.
 
-   You can refer to the ultrasonic sensor principle in :ref:`cpn_ultrasonic_principle`.
+   Für weitere Informationen zum Prinzip des Ultraschallsensors siehe :ref:`cpn_ultrasonic_principle`.
 
    .. code-block:: arduino
    
@@ -115,10 +109,4 @@ The project is based on real-time monitoring of the distance between an object a
         float distance = pulseIn(echoPin, HIGH) / 58.00;
         return distance;
       }
-   
-
-
-
-
-
 

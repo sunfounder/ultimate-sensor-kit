@@ -1,50 +1,50 @@
 .. _cpn_dht11:
 
-Temperature and Humidity Sensor Moudle (DHT11)
-================================================
+Temperatur- und Feuchtigkeitssensor-Modul (DHT11)
+==================================================
 
 .. image:: img/12_dht11_module.png
     :width: 400
     :align: center
 
-Introduction
+Einführung
 ---------------------------
-The digital temperature and humidity sensor DHT11 is a composite sensor that contains a calibrated digital signal output of temperature and humidity. The technology of a dedicated digital modules collection and the temperature and humidity sensing technology are applied to ensure that the product has high reliability and excellent long-term stability.
+Der digitale Temperatur- und Feuchtigkeitssensor DHT11 ist ein kombinierter Sensor, der kalibrierte digitale Signalausgaben für Temperatur und Feuchtigkeit liefert. Die Verbindung aus spezieller digitaler Modultechnologie und Temperatur- sowie Feuchtigkeitssensorik sorgt für hohe Zuverlässigkeit und langfristige Stabilität des Produkts. 
 
-The sensor includes a resistive sense of wet component and an NTC temperature measurement device, and is connected with a high-performance 8-bit microcontroller.
+Der Sensor setzt sich aus einer resistiven Feuchtigkeitsmesskomponente und einer NTC-Temperaturmesseinheit zusammen, die mit einem leistungsfähigen 8-Bit-Mikrocontroller verbunden sind.
 
-Principle
+Funktionsprinzip
 ---------------------------
-Only three pins are available for use: VCC, GND, and DATA. The communication process begins with the DATA line sending start signals to DHT11, and DHT11 receives the signals and returns an answer signal. Then the host receives the answer signal and begins to receive 40-bit humidity and temperature data (8-bit humidity integer + 8-bit humidity decimal + 8-bit temperature integer + 8-bit temperature decimal + 8-bit checksum).
+Der Sensor hat lediglich drei benutzbare Anschlüsse: VCC, GND und DATA. Der Kommunikationsprozess beginnt mit Startsignalen, die die DATA-Leitung an den DHT11 sendet. Nach dem Empfang der Signale sendet der DHT11 ein Antwortsignal zurück. Anschließend empfängt der Host das Antwortsignal und beginnt mit dem Empfang der 40-Bit-Temperatur- und Feuchtigkeitsdaten (8-Bit Feuchtigkeit Ganzzahl + 8-Bit Feuchtigkeit Dezimal + 8-Bit Temperatur Ganzzahl + 8-Bit Temperatur Dezimal + 8-Bit Prüfsumme).
 
 .. image:: img/12_dht11_module_2.png
     :width: 300
     :align: center
 
-For more information, please refer to the datasheet of DHT11.
+Für weitere Informationen verweisen wir auf das Datenblatt des DHT11.
 
-The schematic diagram
+Schaltungsdiagramm
 
 .. figure:: img/12_dht11_module_3.png
     :width: 400
     :align: center
-    :alt: DHT11 schematic diagram
+    :alt: DHT11 Schaltungsdiagramm
 
 .. raw:: html
     
     <br/><br/>   
 
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Benötigte Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- Temperature and Humidity Sensor Moudle(DHT11) * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Platine * 1
+- Temperatur- und Feuchtigkeitssensor-Modul (DHT11) * 1
+- Jumperkabel
 
 
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/12_dht11_module_circuit.png
     :width: 400
@@ -58,29 +58,28 @@ Code
 ^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
-   To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and install it. 
+   Zur Installation der Bibliothek nutzen Sie den Arduino Library Manager und suchen Sie nach **"DHT sensor library"** und installieren Sie diese. 
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/34796700-4b94-4796-815a-314a25f60638/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/12-component_dht11.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erklärung
 ^^^^^^^^^^^^^^^^^^^^
 
-#. Inclusion of necessary libraries and definition of constants.
-   This part of the code includes the DHT sensor library and defines the pin number and sensor type used in this project.
+1. Einbindung der erforderlichen Bibliotheken und Definition der Konstanten.
+   Dieser Codeabschnitt enthält die DHT-Sensorbibliothek und definiert die verwendete Pinnummer und den Sensortyp für dieses Projekt.
 
    .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and install it. 
+      Zur Installation der Bibliothek nutzen Sie den Arduino Library Manager und suchen Sie nach **"DHT sensor library"** und installieren Sie diese. 
 
    .. code-block:: arduino
     
@@ -88,14 +87,15 @@ Code explanation
       #define DHTPIN 2       // Define the pin used to connect the sensor
       #define DHTTYPE DHT11  // Define the sensor type
 
-#. Creation of DHT object.
-   Here we create a DHT object using the defined pin number and sensor type.
+2. Erstellung eines DHT-Objekts.
+   Hier erstellen wir ein DHT-Objekt mit der definierten Pinnummer und dem definierten Sensortyp.
 
    .. code-block:: arduino
 
       DHT dht(DHTPIN, DHTTYPE);  // Create a DHT object
 
-#. This function is executed once when the Arduino starts. We initialize the serial communication and the DHT sensor in this function.
+3. Initialisierungsfunktion.
+   Diese Funktion wird einmalig beim Start des Arduino ausgeführt. Hier initialisieren wir die serielle Kommunikation und den DHT-Sensor.
 
    .. code-block:: arduino
 
@@ -105,12 +105,12 @@ Code explanation
         dht.begin();  // Initialize the DHT sensor
       }
 
-#. Main loop.
-   The ``loop()`` function runs continuously after the setup function. Here, we read the humidity and temperature values, calculate the heat index, and print these values to the serial monitor.  If the sensor read fails (returns NaN), it prints an error message.
+4. Hauptloop.
+   Die ``loop()``-Funktion läuft kontinuierlich nach der Setup-Funktion. Hier lesen wir die Feuchtigkeits- und Temperaturwerte aus, berechnen den Hitzeindex und geben diese Werte an den seriellen Monitor weiter. Sollte der Sensorauslesevorgang fehlschlagen (NaN zurückgeben), wird eine Fehlermeldung ausgegeben.
 
    .. note::
     
-      The |link_heat_index| is a way to measure how hot it feels outside by combining the air temperature and the humidity. It is also called the "felt air temperature" or "apparent temperature".
+      Der |link_heat_index| ist ein Maß für das gefühlte Außentemperatur, das durch Kombination von Lufttemperatur und Luftfeuchtigkeit ermittelt wird. 
 
    .. code-block:: arduino
 
@@ -138,13 +138,12 @@ Code explanation
         Serial.println(F("°F"));
       }
 
-    
-Additional Ideas
+Weitere Ideen
 ^^^^^^^^^^^^^^^^^^^^
 
-- Display readings on an LCD or OLED display
+- Anzeige der Messwerte auf einem LCD- oder OLED-Display
 
-More Projects
+Weitere Projekte
 ---------------------------
 * :ref:`iot_Plant_monitor`
 * :ref:`iot_Bluetooth_environmental_monitor`

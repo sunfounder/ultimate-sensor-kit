@@ -1,19 +1,19 @@
 .. _fun_doorbell:
 
-Doorbell
+Türklingel
 ==========================
 
 .. raw:: html
 
    <video controls autoplay style = "max-width:100%">
       <source src="../_static/video/fun/07-fun_Doorbell.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-The "doorbell" project aims to simulate the function of a doorbell. When a button is pressed, the Arduino plays a predefined melody using a passive buzzer module.
+Das Projekt "Türklingel" zielt darauf ab, die Funktionalität einer echten Türklingel zu simulieren. Bei Betätigung eines Knopfes spielt der Arduino eine vordefinierte Melodie über ein passives Summermodul ab.
 
 
-1. Build the Cirduit
+1. Schaltungsaufbau
 -----------------------------
 
 .. image:: img/07-fun_Doorbell_circuit.png
@@ -24,22 +24,22 @@ The "doorbell" project aims to simulate the function of a doorbell. When a butto
 * :ref:`cpn_buzzer`
 
 
-2. Code
+2. Programmcode
 -----------------------------
 
-#. Open the ``07-Doorbell.ino`` file under the path of ``ultimate-sensor-kit\fun_project\07-Doorbell``, or copy this code into **Arduino IDE**.
+#. Öffnen Sie die Datei ``07-Doorbell.ino`` im Pfad ``ultimate-sensor-kit\fun_project\07-Doorbell``, oder kopieren Sie diesen Code in die **Arduino IDE**.
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/a6511078-ed6f-49d0-a4a5-2cafc3d63e4e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-3. Code explanation
+3. Code-Erläuterung
 -----------------------------
 
-The main idea behind this project is to use the Arduino Uno board to detect a button press and, in response, play a melody on the passive buzzer. The melody consists of a sequence of notes (defined by their pitches) and their durations.
+Die grundlegende Idee dieses Projekts ist die Verwendung eines Arduino Uno Boards zur Erfassung eines Knopfdrucks, der wiederum eine Melodie auf dem passiven Summer abspielt. Die Melodie besteht aus einer Abfolge von Noten (definiert durch ihre Tonhöhen) und deren Dauer.
 
-#. Setting up necessary libraries and global variables
+#. Einbindung erforderlicher Bibliotheken und globale Variablen
 
    .. code-block:: arduino
    
@@ -52,9 +52,9 @@ The main idea behind this project is to use the Arduino Uno board to detect a bu
       int melody[] = {...};
       int noteDurations[] = {...};
 
-   This segment includes the necessary library for musical notes and sets up the pins for our components. Additionally, the melody and its durations are defined in arrays.
+   In diesem Abschnitt werden die für Musiknoten erforderliche Bibliothek eingebunden und die Pins für unsere Komponenten festgelegt. Zusätzlich werden die Melodie und ihre Dauern in Arrays definiert.
 
-#. Initializing the button and starting serial communication
+#. Initialisierung des Knopfs und Start der seriellen Kommunikation
 
    .. code-block:: arduino
    
@@ -63,9 +63,9 @@ The main idea behind this project is to use the Arduino Uno board to detect a bu
         pinMode(buttonPin, INPUT);    // Set the button pin as an input
       }
 
-   In the ``setup()`` function, we start serial communication and configure the buttonPin to act as an input.
+   In der ``setup()`` Funktion starten wir die serielle Kommunikation und konfigurieren den buttonPin als Eingang.
 
-#. Monitoring the button press to play the melody
+#. Überwachung des Knopfdrucks zur Wiedergabe der Melodie
 
    .. code-block:: arduino
    
@@ -78,9 +78,9 @@ The main idea behind this project is to use the Arduino Uno board to detect a bu
         }
       }
 
-   Here, we continuously check the state of the button in the loop. If pressed, a message is sent to the serial monitor, and the ``buzzer()`` function (which plays the melody) is called.
+   In dieser Schleife überprüfen wir kontinuierlich den Zustand des Knopfs. Bei Betätigung wird eine Nachricht an den seriellen Monitor gesendet und die Funktion ``buzzer()`` aufgerufen, die die Melodie abspielt.
 
-#. The ``buzzer()`` function to play the melody
+#. Die Funktion ``buzzer()`` zur Wiedergabe der Melodie
 
    .. code-block:: arduino
       
@@ -97,8 +97,5 @@ The main idea behind this project is to use the Arduino Uno board to detect a bu
         }
       }
 
-   In the ``buzzer()`` function, the melody's notes are played sequentially. The ``tone()`` function generates a tone on the buzzer for a specified duration. After playing each note, there's a brief pause before playing the next note.
-
-
-
+   In der Funktion ``buzzer()`` werden die Noten der Melodie nacheinander abgespielt. Die ``tone()`` Funktion erzeugt einen Ton auf dem Summer für eine festgelegte Dauer. Nach dem Abspielen jeder Note folgt eine kurze Pause, bevor die nächste Note abgespielt wird.
 

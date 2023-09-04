@@ -1,53 +1,51 @@
 .. _cpn_speed:
 
-Infrared Speed Sensor Module (LM393)
-=====================================
+Infrarot-Geschwindigkeitssensor-Modul (LM393)
+===========================================
 
 .. image:: img/18_LM393_module.png
     :width: 300
     :align: center
 
-Introduction
+Einführung
 ---------------------------
-The LM393 module is an IR counter that has an IR transmitter and receiver. If any obstacle is placed between these sensors, a signal is sent to the microcontroller. The module can be used in association with a microcontroller for motor speed detection, pulse count, position limit, etc.
+Das LM393-Modul ist ein Infrarot-Zähler, der sowohl einen Infrarot-Sender als auch einen Empfänger enthält. Sobald ein Hindernis zwischen diesen Sensoren platziert wird, sendet das Modul ein Signal an den Mikrocontroller. Dieses Modul eignet sich in Kombination mit einem Mikrocontroller für Anwendungen wie Motordrehzahlerkennung, Impulszählung, Positionsbeschränkung und Ähnliches.
 
-
-Principle
+Funktionsprinzip
 ---------------------------
-The LM393 module has 1 H2010 photocell, which consists of a phototransistor and an infrared light emitter packaged in a 10 cm wide black plastic housing.
+Das LM393-Modul enthält eine H2010-Fotodiode, die aus einem Fototransistor und einer Infrarot-Lichtquelle besteht und in einem 10 cm breiten schwarzen Kunststoffgehäuse verpackt ist.
 
 .. image:: img/18_LM393_module_2.png
     :width: 200
     :align: center
 
-When operating, the infrared light-emitting diode continuously emits infrared light (invisible light), and the photosensitive triode will conduct if it receives it.
+Im Betrieb emittiert die Infrarot-Lichtquelle kontinuierlich Infrarot-Licht (unsichtbares Licht), und die lichtempfindliche Triode wird leitfähig, wenn sie dieses Licht empfängt.
 
 .. image:: img/18_LM393_module_3.png
     :width: 900
     :align: center
 
-
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- Infrared Speed Sensor Module * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Board * 1
+- Infrarot-Geschwindigkeitssensor-Modul * 1
+- Verbindungskabel
 
 
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/18_LM393_module_circuit.png
-    :width: 600
+    :width: 100%
     :align: center
 
 .. raw:: html
     
     <br/><br/>   
 
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -63,10 +61,10 @@ Code
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erklärung
 ^^^^^^^^^^^^^^^^^^^^
 
-#. Setting up the pins and initializing variables. Here, we define the pins for the motor and the speed sensor. We also initialize variables that will be used to measure and calculate the speed of the motor.
+#. Einrichtung der Pins und Initialisierung der Variablen. Hier definieren wir die Pins für den Motor und den Geschwindigkeitssensor. Darüber hinaus initialisieren wir die Variablen, die zur Messung und Berechnung der Motordrehzahl verwendet werden.
 
    .. code-block:: arduino
 
@@ -83,7 +81,7 @@ Code explanation
       float temp = 0;
       float rps = 0;
 
-#. Initialization in the ``setup()`` function. This section sets up the serial communication, configures the pins' modes, and sets the initial motor speed.
+#. Initialisierung in der ``setup()``-Funktion. In diesem Abschnitt wird die serielle Kommunikation eingerichtet, die Modi der Pins konfiguriert und die Anfangsgeschwindigkeit des Motors festgelegt.
 
    .. code-block:: arduino
 
@@ -96,9 +94,9 @@ Code explanation
         analogWrite(motorB_2A, 0);
       }
 
-#. Measuring the motor's speed in the ``loop()`` function. In this segment, the motor's steps are measured for a duration of 1 second. These steps are then used to calculate the revolutions per second (rps), which is then printed to the serial monitor.
+#. Messung der Motorgeschwindigkeit in der ``loop()``-Funktion. In diesem Abschnitt werden die Schritte des Motors für eine Dauer von einer Sekunde gemessen. Anhand dieser Schritte wird die Umdrehungszahl pro Sekunde (rps) berechnet und an den seriellen Monitor gesendet.
 
-   ``millis()`` returns the number of milliseconds passed since the Arduino board began running the current program. 
+   ``millis()`` gibt die Anzahl der Millisekunden zurück, die seit dem Start des aktuellen Programms auf dem Arduino-Board vergangen sind.
 
    .. code-block:: arduino
 
@@ -119,8 +117,8 @@ Code explanation
         Serial.println(rps);
       }
 
-Additional Ideas
+Zusätzliche Ideen
 ^^^^^^^^^^^^^^^^^^^^
 
-- Display the rps on an LCD screen for a more user-friendly interface.
+- Anzeige der rps auf einem LCD-Bildschirm für eine benutzerfreundlichere Bedienoberfläche.
 

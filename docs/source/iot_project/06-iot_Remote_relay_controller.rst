@@ -1,29 +1,27 @@
-
 .. _iot_Remote_relay_controller:
 
-Remote Relay Controller with Blynk
-====================================
+Ferngesteuerter Relais-Controller mit Blynk
+============================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/iot/06-iot_Remote_relay_controller.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This project aims to create a remote relay controller that can be operated through a virtual switch in the Blynk app. When the switch is turned on, it sets the digital pin connected to the relay to HIGH, and when it's turned off, it sets the digital pin to LOW. This allows for easy control of the relay from a distance, effectively creating a remote switch.
+Dieses Projekt zielt darauf ab, einen ferngesteuerten Relais-Controller zu entwickeln, der über einen virtuellen Schalter in der Blynk-App bedient werden kann. Wenn der Schalter eingeschaltet wird, wird der mit dem Relais verbundene digitale Pin auf HIGH gesetzt. Wird der Schalter ausgeschaltet, wird der Pin auf LOW gesetzt. Dies ermöglicht eine einfache Fernsteuerung des Relais und fungiert effektiv als Fernschalter.
 
-1. Build the Cirduit
+1. Schaltkreis aufbauen
 -----------------------------
 
 .. warning ::
-    The following example demonstrates using a relay to control an LED module. 
-    **While you can connect the relay to other appliances in actual applications, extreme caution is required when dealing with HIGH AC voltage. Improper or incorrect use can lead to severe injury or even death. Therefore, it is intended for people who are familiar with and knowledgeable about HIGH AC voltage. Always prioritize safety.**
+    Das folgende Beispiel zeigt, wie ein Relais zur Steuerung eines LED-Moduls verwendet wird.
+    **Obwohl Sie das Relais in realen Anwendungen auch an andere Geräte anschließen können, ist bei der Arbeit mit HOCHSPANNUNG-Wechselstrom äußerste Vorsicht geboten. Unsachgemäße oder fehlerhafte Verwendung kann zu schweren Verletzungen oder sogar zum Tod führen. Dies ist daher nur für Personen gedacht, die mit HOCHSPANNUNG vertraut sind und darüber Bescheid wissen. Sicherheit hat immer Vorrang.**
 
 .. note::
 
-    The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in.
-
+    Das ESP8266-Modul benötigt einen hohen Strom, um eine stabile Betriebsumgebung zu gewährleisten. Stellen Sie daher sicher, dass die 9V-Batterie angeschlossen ist.
 
 .. image:: img/06-Wiring_Remote_relay_controller.png
     :width: 100%
@@ -35,25 +33,25 @@ This project aims to create a remote relay controller that can be operated throu
 * :ref:`cpn_traffic`
 
 
-2. Configure Blynk
+2. Blynk konfigurieren
 -----------------------------
 
 .. note::
-    If you are not familiar with Blynk, it is strongly recommended that you read these two tutorials first. :ref:`iot_blynk_start` is a beginner's guide for Blynk, which includes how to configure ESP8266 and register with Blynk. And :ref:`iot_Flame` is a simple example, but the description of the steps will be more detailed.
+    Wenn Sie noch nicht mit Blynk vertraut sind, wird dringend empfohlen, zunächst diese beiden Tutorials zu lesen. :ref:`iot_blynk_start` ist ein Einsteigerleitfaden für Blynk, der auch die Konfiguration des ESP8266 und die Registrierung bei Blynk umfasst. Und :ref:`iot_Flame` ist ein einfaches Beispiel, jedoch werden die Schritte darin ausführlicher beschrieben.
 
-**2.1 Create template**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**2.1 Vorlage erstellen**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Firstly, we need to establish a template on Blynk. Create a **"Remote relay"** template. 
+Zuerst müssen wir eine Vorlage in Blynk erstellen. Erstellen Sie eine **"Ferngesteuertes Relais"**-Vorlage.
 
-**2.2 Datastream**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**2.2 Datenströme**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Create **Datastreams** of type **Virtual Pin** in the **Datastream** page receive data from esp8266 and uno r4 board. 
+Erstellen Sie **Datastreams** vom Typ **Virtual Pin** auf der **Datastreams**-Seite, um Daten vom esp8266 und uno r4 Board zu empfangen.
 
-* Create Virtual Pin V0 according to the following diagram: 
-   
-  Set the name of the **Virtual Pin V0** to **Switch status**. Set the **DATA TYPE** to **Integer** and MIN and MAX to **0** and **1**. Set the **UNITS** to **None**.
+* Erstellen Sie den virtuellen Pin V0 gemäß dem folgenden Diagramm:
+
+  Benennen Sie den **Virtual Pin V0** in **Switch status** um. Setzen Sie den **DATA TYPE** auf **Integer** und MIN und MAX auf **0** und **1**. Setzen Sie die **UNITS** auf **None**.
 
   .. image:: img/new/06-datastream_1_shadow.png
       :width: 90%
@@ -63,32 +61,31 @@ Create **Datastreams** of type **Virtual Pin** in the **Datastream** page receiv
     <br/> 
 
 
-**2.3 Web Dashboard**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**2.3 Web-Dashboard**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We also need to configure the **Web Dashboard** to interact with the Remote relay.
+Das **Web-Dashboard** muss ebenfalls konfiguriert werden, um mit dem ferngesteuerten Relais zu interagieren.
 
-Configure the Web Dashboard according to the following diagram. Be sure to bind each widget to its corresponding virtual pin.
+Konfigurieren Sie das Web-Dashboard entsprechend dem folgenden Diagramm. Stellen Sie sicher, dass jedes Widget an seinen entsprechenden virtuellen Pin gebunden ist.
 
 .. image:: img/new/06-web_dashboard_1_shadow.png
     :width: 65%
     :align: center
 
 .. raw:: html
-    
-    <br/>  
 
 
-3. Run the Code
+
+3. Den Code ausführen
 -----------------------------
 
-#. Open the ``06-Remote_relay_controller.ino`` file under the path of ``ultimate-sensor-kit\iot_project\wifi\06-Remote_relay_controller``, or copy this code into **Arduino IDE**.
+#. Öffnen Sie die Datei ``06-Remote_relay_controller.ino`` unter dem Pfad ``ultimate-sensor-kit\iot_project\wifi\06-Remote_relay_controller``, oder kopieren Sie diesen Code in die **Arduino IDE**.
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/33324acd-40b6-470f-99f4-d86f4d0fb2f8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. Create a Blynk device using the "Remote relay" template. Then, replace the ``BLYNK_TEMPLATE_ID``, ``BLYNK_TEMPLATE_NAME``, and ``BLYNK_AUTH_TOKEN`` with your own. 
+#. Legen Sie ein Blynk-Gerät mit der Vorlage "Ferngesteuertes Relais" an. Ersetzen Sie dann die Werte für ``BLYNK_TEMPLATE_ID``, ``BLYNK_TEMPLATE_NAME`` und ``BLYNK_AUTH_TOKEN`` durch Ihre eigenen.
 
    .. code-block:: arduino
     
@@ -96,17 +93,16 @@ Configure the Web Dashboard according to the following diagram. Be sure to bind 
       #define BLYNK_TEMPLATE_NAME "Remote relay"
       #define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxx"
 
-
-#. You also need to enter the ``ssid`` and ``password`` of the WiFi you are using. 
+#. Geben Sie auch die ``ssid`` und das ``Passwort`` des verwendeten WLANs ein.
 
    .. code-block:: arduino
 
-    char ssid[] = "your_ssid";
-    char pass[] = "your_password";
+    char ssid[] = "Ihre_ssid";
+    char pass[] = "Ihr_Passwort";
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. Nach Auswahl des korrekten Boards und Ports klicken Sie auf die Schaltfläche **Hochladen**.
 
-#. Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.
+#. Öffnen Sie den seriellen Monitor (Baudrate auf 115200 einstellen) und warten Sie auf eine Meldung, die eine erfolgreiche Verbindung anzeigt.
 
    .. image:: img/new/02-ready_1_shadow.png
     :width: 80%
@@ -114,31 +110,32 @@ Configure the Web Dashboard according to the following diagram. Be sure to bind 
 
    .. note::
 
-       If the message ``ESP is not responding`` appears when you connect, please follow these steps.
+       Sollte die Meldung ``ESP is not responding`` erscheinen, befolgen Sie diese Schritte.
 
-       * Make sure the 9V battery is plugged in.
-       * Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it.
-       * Press the reset button on the R4 board.
+       * Stellen Sie sicher, dass die 9V-Batterie angeschlossen ist.
+       * Setzen Sie das ESP8266-Modul zurück, indem Sie den Pin RST für 1 Sekunde mit GND verbinden, dann ziehen Sie den Stecker.
+       * Drücken Sie die Reset-Taste auf dem R4-Board.
 
-       Sometimes, you may need to repeat the above operation 3-5 times, please be patient.
+       Manchmal müssen Sie die oben genannten Schritte 3-5 Mal wiederholen. Bitte haben Sie Geduld.
 
 
-4. Code explanation
+
+4. Code-Erklärung
 -----------------------------
 
-1. Setting up Blynk credentials:
+1. Einrichten der Blynk-Zugangsdaten:
 
-   This section contains settings specific to the Blynk app, such as the template ID, device name, and authentication token.
-   
+   Dieser Abschnitt enthält spezifische Einstellungen für die Blynk-App, wie zum Beispiel die Template-ID, den Gerätenamen und den Authentifizierungstoken.
+
    .. code-block:: arduino
 
       #define BLYNK_TEMPLATE_ID "TMPLxxxxxxxx"
       #define BLYNK_TEMPLATE_NAME "Remote relay"
       #define BLYNK_AUTH_TOKEN "xxxxxxxxxxx"
 
-2. Include necessary libraries:
+2. Einbindung der erforderlichen Bibliotheken:
 
-   We include libraries required for the project, which will allow our Arduino to communicate via WiFi and work with the Blynk app.
+   Hier binden wir die für das Projekt erforderlichen Bibliotheken ein. Diese ermöglichen die Kommunikation unseres Arduino über WiFi und die Interaktion mit der Blynk-App.
    
    .. code-block:: arduino
 
@@ -147,30 +144,30 @@ Configure the Web Dashboard according to the following diagram. Be sure to bind 
       #include <BlynkSimpleShieldEsp8266.h>
       #include <SoftwareSerial.h>
 
-3. Configuring WiFi and Serial settings:
+3. Konfiguration von WiFi und seriellen Einstellungen:
 
-   The WiFi SSID and password are specified. Additionally, pins for software serial communication with ESP01 are declared. ``ESP8266_BAUD`` defines the baud rate for the ESP8266 module.
+   Die SSID und das Passwort für das WiFi werden festgelegt. Darüber hinaus werden die Pins für die Software-Serienkommunikation mit dem ESP01 definiert. ``ESP8266_BAUD`` legt die Baudrate für das ESP8266-Modul fest.
    
    .. code-block:: arduino
 
-      char ssid[] = "your_ssid";
-      char pass[] = "your_password";
+      char ssid[] = "Ihre_ssid";
+      char pass[] = "Ihr_Passwort";
       SoftwareSerial EspSerial(2, 3);  // RX, TX
       #define ESP8266_BAUD 115200
       ESP8266 wifi(&EspSerial);
 
-4. Relay pin definition:
+4. Definition des Relais-Pins:
 
-   We define which digital pin of the Arduino will be used to control the relay. We also initialize a variable ``switchStatus`` to store the state of our virtual switch in the Blynk app.
+   Wir definieren den digitalen Pin des Arduino, der zur Steuerung des Relais dient. Zudem initialisieren wir eine Variable ``switchStatus``, um den Zustand unseres virtuellen Schalters in der Blynk-App zu speichern.
    
    .. code-block:: arduino
 
       const int RelayPin = 6;
       int switchStatus = 0;
 
-5. The setup() function:
+5. Die Funktion setup():
 
-   In this function, we initialize the relay pin as an output, begin serial communication for debugging, and establish the connection to Blynk using the given WiFi credentials.
+   In dieser Funktion initialisieren wir den Relais-Pin als Ausgang, starten die serielle Kommunikation für Debugging-Zwecke und stellen die Verbindung zu Blynk mit den angegebenen WiFi-Zugangsdaten her.
    
    .. code-block:: arduino
 
@@ -183,9 +180,9 @@ Configure the Web Dashboard according to the following diagram. Be sure to bind 
         Blynk.connectWiFi(ssid, pass);
       }
 
-6. The loop() function:
+6. Die Funktion loop():
 
-   It continuously runs two essential functions to keep the connection to Blynk alive and to handle any events (like virtual pin changes).
+   Sie führt kontinuierlich zwei essenzielle Funktionen aus, um die Verbindung zu Blynk aufrechtzuerhalten und Ereignisse (wie Änderungen an virtuellen Pins) zu verarbeiten.
    
    .. code-block:: arduino
 
@@ -194,11 +191,11 @@ Configure the Web Dashboard according to the following diagram. Be sure to bind 
         timer.run();
       }
 
-7. Handling Blynk's virtual pin:
+7. Steuerung des virtuellen Pins in Blynk:
 
-   Here, we read the state of the virtual pin V0 from the Blynk app and control the relay accordingly. If the switch in the app is on (i.e., V0 is 1), the relay pin is set to HIGH, and if it's off, the pin is set to LOW.
+   Hier lesen wir den Status des virtuellen Pins V0 aus der Blynk-App aus und steuern das Relais entsprechend. Ist der Schalter in der App aktiviert (d.h., V0 ist 1), wird der Relais-Pin auf HIGH gesetzt; ist er deaktiviert, wird er auf LOW gesetzt.
 
-   - Whenever the value of a virtual pin on the BLYNK server changes, it will trigger ``BLYNK_WRITE()``. More detials at |link_blynk_write|.
+   - Jedes Mal, wenn der Wert eines virtuellen Pins auf dem BLYNK-Server ändert, wird ``BLYNK_WRITE()`` ausgelöst. Weitere Details unter |link_blynk_write|.
 
    .. raw:: html
     

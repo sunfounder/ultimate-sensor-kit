@@ -1,6 +1,6 @@
 .. _fun_light_control_switch:
 
-Light control switch
+Lichtsteuerungsschalter
 ==========================
 
 .. raw:: html
@@ -10,15 +10,15 @@ Light control switch
       Your browser does not support the video tag.
    </video>
 
-This project is a light control switch system. The main idea is to use a photoresistance sensor module to detect the ambient light level and, based on this detection, control a relay module. If the ambient light is below a certain threshold, the relay is switched on. Conversely, if the ambient light is above the threshold, the relay is switched off.
+Dieses Projekt ist ein System zur Lichtsteuerung mittels Schalter. Der Hauptgedanke ist die Verwendung eines Fotowiderstand-Sensormoduls, um die Umgebungshelligkeit zu erfassen und daraufhin ein Relaismodul zu steuern. Sobald die Umgebungshelligkeit unter einen bestimmten Grenzwert fällt, wird das Relais aktiviert. Liegt die Helligkeit über dem Grenzwert, wird das Relais deaktiviert.
 
 .. warning ::
-    As a demonstration, we are using a relay to control an RGB LED module. However, in real-life scenarios, this may not be the most practical approach.
+    In dieser Demonstration verwenden wir ein Relais, um ein RGB-LED-Modul zu steuern. Für reale Einsatzszenarien ist diese Vorgehensweise jedoch möglicherweise nicht optimal.
     
-    **While you can connect the relay to other appliances in actual applications, extreme caution is required when dealing with HIGH AC voltage. Improper or incorrect use can lead to severe injury or even death. Therefore, it is intended for people who are familiar with and knowledgeable about HIGH AC voltage. Always prioritize safety.**
+    **Während das Relais in tatsächlichen Anwendungen auch zur Steuerung anderer Geräte verwendet werden kann, ist beim Umgang mit HOHER Wechselspannung äußerste Vorsicht geboten. Unachgemäße oder fehlerhafte Anwendung kann zu schweren Verletzungen oder gar zum Tod führen. Dieses Projekt richtet sich daher an Personen, die mit HOHER Wechselspannung vertraut und sachkundig sind. Sicherheit hat immer Vorrang.**
 
 
-1. Build the Cirduit
+1. Schaltungsaufbau
 -----------------------------
 
 .. image:: img/03-fun_Light_control_switch_circuit.png
@@ -33,24 +33,24 @@ This project is a light control switch system. The main idea is to use a photore
 2. Code
 -----------------------------
 
-#. Open the ``03-fun_Light_control_switch.ino`` file under the path of ``ultimate-sensor-kit\fun_project\03-fun_Light_control_switch``, or copy this code into **Arduino IDE**.
+#. Öffnen Sie die Datei ``03-fun_Light_control_switch.ino`` im Verzeichnis ``ultimate-sensor-kit\fun_project\03-fun_Light_control_switch`` oder kopieren Sie den Code in die **Arduino IDE**.
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/ffe65b97-0ce0-4f27-841e-92b792233dd4/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-3. Code explanation
+3. Code-Erklärung
 -----------------------------
 
-The primary principle behind this project is the use of a photoresistance sensor to detect ambient light levels. Photoresistors change their resistance based on the light falling on them. This property is utilized in the sensor module to give a digital output. When the light is below the set threshold, the sensor sends a HIGH signal to the Arduino. This signal is then used to activate a relay, which can control other devices.
+Das Kernprinzip dieses Projekts ist die Verwendung eines Fotowiderstand-Sensormoduls zur Erfassung der Umgebungshelligkeit. Fotowiderstände ändern ihren Widerstand je nach Lichteinfall. Diese Eigenschaft wird im Sensormodul genutzt, um ein digitales Ausgangssignal zu erzeugen. Fällt die Helligkeit unter den eingestellten Grenzwert, sendet der Sensor ein HIGH-Signal an das Arduino, das wiederum das Relais aktiviert.
 
 .. note::
-    The photoresistance sensor has a potentiometer (a small adjustable knob) that sets the threshold for when it outputs HIGH vs. LOW. This threshold might need to be adjusted based on the desired light levels for switching.
+    Der Fotowiderstand-Sensor verfügt über ein Potentiometer, mit dem der Grenzwert für die Ausgabe von HIGH bzw. LOW eingestellt werden kann. Je nach gewünschtem Helligkeitsniveau für die Schaltung muss dieser Wert eventuell angepasst werden.
 
-1. **Setting up constants and defining pins**
+1. **Konstanten und Pins definieren**
 
-   Here, we are defining the pins we will use for the relay and the sensor. We use the ``const`` keyword because these pin numbers won't change throughout the program.
+   An dieser Stelle legen wir die Pins fest, die für das Relais und den Sensor verwendet werden. Wir verwenden das Schlüsselwort ``const``, da diese Pinnummern während der Laufzeit des Programms unverändert bleiben.
 
    .. code-block:: arduino
    
@@ -58,9 +58,9 @@ The primary principle behind this project is the use of a photoresistance sensor
       const int sensorPin = 7;
    
 
-2. **Initialization in the setup() function**
+2. **Initialisierung in der setup()-Funktion**
 
-   The ``setup()`` function is executed once when the program starts. Here, we declare the ``RelayPin`` as an output since we will be sending signals to control the relay. We also start Serial communication at 9600 baud for debugging purposes.
+   Die ``setup()``-Funktion wird einmalig beim Start des Programms ausgeführt. Hier legen wir fest, dass ``RelayPin`` ein Ausgang ist, da wir Signale senden werden, um das Relais zu steuern. Außerdem starten wir die serielle Kommunikation mit einer Baudrate von 9600 für Debugging-Zwecke.
 
    .. code-block:: arduino
    
@@ -73,9 +73,9 @@ The primary principle behind this project is the use of a photoresistance sensor
    
 
 
-3. **Reading Sensor and Controlling Relay**
+3. **Sensordaten lesen und Relais steuern**
 
-   The ``loop()`` function is where the main logic resides. It repeatedly checks the value from the photoresistance sensor. If the sensor reads a value of 1 (indicative of light level below the threshold), the relay is turned on by setting ``RelayPin`` to HIGH. Otherwise, the relay is turned off by setting ``RelayPin`` to LOW.
+   Die Hauptlogik findet in der ``loop()``-Funktion statt. Hier wird der Wert des Fotowiderstand-Sensors wiederholt ausgelesen. Liefert der Sensor einen Wert von 1 (was auf ein Unterschreiten des Helligkeitsgrenzwerts hindeutet), wird das Relais durch Setzen von ``RelayPin`` auf HIGH aktiviert. Andernfalls wird es durch Setzen auf LOW deaktiviert.
 
    .. code-block:: arduino
    
@@ -93,5 +93,3 @@ The primary principle behind this project is the use of a photoresistance sensor
           digitalWrite(RelayPin, LOW);
         }
       }
-   
-

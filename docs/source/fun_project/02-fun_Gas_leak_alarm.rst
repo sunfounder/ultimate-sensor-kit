@@ -1,19 +1,18 @@
 .. _fun_gas_leak_alarm:
 
-Gas leak alarm
+Gasleck-Alarm
 ==========================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/fun/02-fun_Gas_leak_alarm.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This project revolves around simulating a gas leak detection scenario using an Arduino Uno board. By incorporating an MQ-2 gas sensor and an RGB LED, this demonstration continuously reads the gas concentration. If this concentration surpasses a predefined threshold, it activates an alarm (buzzer) and illuminates the RGB LED in red. Conversely, if the concentration remains below this threshold, the alarm remains inactive and the LED shines green. It's crucial to note that this demo is purely illustrative and shouldn't replace real gas leak detection systems.
+Dieses Projekt dreht sich um die Simulation eines Gaslecks mittels eines Arduino Uno Boards. Durch die Integration eines MQ-2 Gassensors und einer RGB-LED erfasst die Demonstration fortlaufend die Gaskonzentration. Überschreitet diese einen voreingestellten Grenzwert, wird ein Alarm (Summer) ausgelöst und die RGB-LED leuchtet rot auf. Bleibt die Konzentration unter dem Grenzwert, bleibt der Alarm inaktiv und die LED zeigt Grün. Es ist wichtig zu betonen, dass diese Demonstration rein illustrativ ist und echte Gasleck-Detektionssysteme nicht ersetzen sollte.
 
-
-1. Build the Cirduit
+1. Schaltungsaufbau
 -----------------------------
 
 .. image:: img/02-fun_Gas_leak_alarm_circuit.png
@@ -27,21 +26,21 @@ This project revolves around simulating a gas leak detection scenario using an A
 2. Code
 -----------------------------
 
-#. Open the ``02-Gas_leak_alarm.ino`` file under the path of ``ultimate-sensor-kit\fun_project\02-Gas_leak_alarm``, or copy this code into **Arduino IDE**.
+#. Öffnen Sie die Datei ``02-Gas_leak_alarm.ino`` im Verzeichnis ``ultimate-sensor-kit\fun_project\02-Gas_leak_alarm`` oder kopieren Sie den Code in die **Arduino IDE**.
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/a8ac24b4-bbab-4d9d-b0ed-a890b764d52d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-3. Code explanation
+3. Code-Erklärung
 -----------------------------
 
-The core principle of the project revolves around continuously monitoring the gas concentration. When the detected gas concentration surpasses a certain threshold, it sets off an alarm and changes the LED's color to red. This serves as a simulated warning mechanism, indicative of potentially hazardous conditions. If the concentration drops below the threshold, the alarm is deactivated and the LED switches to green, indicating a safe environment.
+Das Kernprinzip des Projekts besteht darin, kontinuierlich die Gaskonzentration zu überwachen. Wenn die gemessene Konzentration einen bestimmten Schwellenwert überschreitet, wird der Alarm ausgelöst und die LED wechselt zu Rot. Dies dient als simulierter Warnmechanismus für potenziell gefährliche Zustände. Fällt die Konzentration unter den Schwellenwert, wird der Alarm deaktiviert und die LED wechselt zu Grün, was auf eine sichere Umgebung hinweist.
 
-1. Defining Constants and Variables
+1. Konstanten und Variablen definieren
 
-   These lines declare and initialize the pin numbers for various components. The ``sensorPin`` denotes the analog pin where the MQ-2 gas sensor is connected. ``sensorValue`` is an integer variable storing the sensor's analog output. The ``buzzerPin`` indicates the digital pin to which the buzzer is connected. Finally, the ``RPin`` and ``GPin`` are the pins for the red and green channels of the RGB LED, respectively.
+   Diese Zeilen deklarieren und initialisieren die Pinnummern für verschiedene Komponenten. Der ``sensorPin`` gibt den analogen Pin an, an dem der MQ-2-Gassensor angeschlossen ist. ``sensorValue`` ist eine Ganzzahl, die den analogen Ausgang des Sensors speichert. Der ``buzzerPin`` kennzeichnet den digitalen Pin für den Summer. Schließlich sind ``RPin`` und ``GPin`` die Pins für die roten und grünen Kanäle der RGB-LED.
 
    .. code-block:: arduino
    
@@ -56,10 +55,9 @@ The core principle of the project revolves around continuously monitoring the ga
       const int RPin = 5;  // R channel of RGB LED
       const int GPin = 6;  // G channel of RGB LED
    
+2. Initialisierung in ``setup()``
 
-2. Initialization in ``setup()``
-
-   The ``setup()`` function initializes the required settings. Serial communication begins at a baud rate of 9600, allowing us to view sensor readings on the Serial Monitor. Pins for the buzzer and RGB LED are set as ``OUTPUT``, meaning they'll send signals out to external components.
+   Die Funktion ``setup()`` initialisiert die benötigten Einstellungen. Die serielle Kommunikation beginnt mit einer Baudrate von 9600, was die Anzeige der Sensorwerte im Serial Monitor ermöglicht. Die Pins für Summer und RGB-LED werden als ``OUTPUT`` festgelegt, um Signale an externe Komponenten zu senden.
 
    .. code-block:: arduino
    
@@ -72,15 +70,14 @@ The core principle of the project revolves around continuously monitoring the ga
         pinMode(GPin, OUTPUT);
       }
    
+3. Hauptprogrammschleife: Sensorauslesen und Alarm auslösen
 
-3. Main Loop: Reading Sensor and Triggering Alarm
-
-   The ``loop()`` function continually reads the gas sensor's output. The reading is then displayed on the Serial Monitor for observation. Depending on the sensor value, two scenarios can occur:
+   Die Funktion ``loop()`` liest kontinuierlich den Ausgang des Gassensors aus. Der Wert wird dann im Serial Monitor zur Beobachtung angezeigt. Je nach Sensorwert können zwei Szenarien eintreten:
    
-   - If the value exceeds 300, the buzzer is activated using ``tone()``, and the RGB LED turns red.
-   - If the value is below 300, the buzzer is silenced using ``noTone()``, and the LED turns green.
+   - Überschreitet der Wert 300, wird der Summer mittels ``tone()`` aktiviert und die RGB-LED leuchtet rot.
+   - Liegt der Wert unter 300, wird der Summer mit ``noTone()`` stummgeschaltet und die LED leuchtet grün.
    
-   Lastly, a delay of 50 milliseconds is introduced before the next loop iteration to manage the read frequency and reduce the CPU load.
+   Zuletzt wird eine Verzögerung von 50 Millisekunden eingeführt, bevor die nächste Iteration der Schleife beginnt, um die Auslesefrequenz zu regulieren und die CPU-Last zu verringern.
 
    .. code-block:: arduino
    
@@ -107,5 +104,4 @@ The core principle of the project revolves around continuously monitoring the ga
         // Wait for 50 milliseconds before the next loop iteration
         delay(50);
       }
-   
    

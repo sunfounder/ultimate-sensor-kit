@@ -1,23 +1,20 @@
-
 .. _iot_Bluetooth_environmental_monitor:
 
-Bluetooth Environmental Monitor
+Bluetooth-Umweltmonitor
 =================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/iot/10-iot_Bluetooth_environmental_monitor.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
+Dieses Projekt nutzt eine Android-App, die mit dem MIT App Inventor erstellt wurde, um Umweltdaten von einem Arduino-Board zu empfangen und anzuzeigen. Das Arduino-Board sammelt Daten von einem DHT11-Sensor, um Temperatur und Luftfeuchtigkeit zu messen. Diese Daten werden dann über das JDY-31-Modul via Bluetooth übertragen. Die App zeigt die Daten auf dem Bildschirm an, sobald sie empfangen werden.
 
-This project uses an Android app created with MIT App Inventor to receive and display environmental data from an Arduino board. The Arduino board fetches data from a DHT11 sensor to measure temperature and humidity. Once the data is collected, it's transmitted over Bluetooth using the JDY-31 module.APP will display the data on the screen once it receives it.
+Die Android-Anwendung wird mit einer kostenlosen Webplattform namens |link_appinventor| erstellt. Das Projekt bietet eine hervorragende Gelegenheit, Erfahrungen in der Schnittstellenanbindung eines Arduino-Boards an ein Smartphone zu sammeln.
 
-The Android application will be constructed utilizing a complimentary web-based platform known as |link_appinventor|. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone. 
-
-
-1. Build the Cirduit
+1. Den Schaltkreis aufbauen
 -----------------------------
 
 .. image:: img/10-Wiring_Bluetooth_environmental_monitor.png
@@ -27,143 +24,142 @@ The Android application will be constructed utilizing a complimentary web-based 
 * :ref:`cpn_jdy31`
 * :ref:`cpn_dht11`
 
-
-2. Create the Android App
+2. Die Android-App erstellen
 -----------------------------
 
-The Android application will be developed using a free web application known as |link_appinventor|. 
-MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop 
-features allowing for the creation of simplistic applications.
+Die Android-Anwendung wird mit einer kostenlosen Webanwendung namens |link_appinventor| entwickelt. 
+Der MIT App Inventor ist ein ausgezeichneter Einstiegspunkt für die Android-Entwicklung, da er intuitive Drag-and-Drop-Funktionen für die Erstellung einfacher Anwendungen bietet.
 
-Now, let's begin.
+Jetzt geht's los.
 
-#. Go to |link_appinventor_login|, and click "online tool" to login. You will require a Google account to register with MIT App Inventor.
+#. Besuchen Sie |link_appinventor_login| und klicken Sie auf "Online-Tool", um sich anzumelden. Sie benötigen ein Google-Konto, um sich beim MIT App Inventor zu registrieren.
 
    .. image:: img/new/09-ai_signup_shadow.png
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``Bluetooth_controlled_lock.aia`` file located in the path ``ultimate-sensor-kit\iot_project\bluetooth\05-Bluetooth_environmental_monitor``.
+#. Nach der Anmeldung navigieren Sie zu **Projects** -> **Import project (.aia) from my computer**. Laden Sie anschließend die Datei ``Bluetooth_controlled_lock.aia`` hoch, die im Verzeichnis ``ultimate-sensor-kit\iot_project\bluetooth\05-Bluetooth_environmental_monitor`` zu finden ist.
 
-   You can also directly download here: :download:`Bluetooth_Environmental_Monitor.aia</_static/other/Bluetooth_Environmental_Monitor.aia>`
+   Sie können die Datei auch direkt hier herunterladen: :download:`Bluetooth_Environmental_Monitor.aia</_static/other/Bluetooth_Environmental_Monitor.aia>`
 
    .. image:: img/new/09-ai_import_shadow.png
         :align: center
 
-#. Upon uploading the ``.aia`` file, you will see the application on the MIT App Inventor software. This is a pre-configured template. You can modify this template after you have familiarized yourself with MIT App Inventor through the following steps.
+#. Nach dem Hochladen der ``.aia``-Datei wird die Anwendung im MIT App Inventor angezeigt. Es handelt sich hierbei um eine vorkonfigurierte Vorlage, die Sie nach einer Einarbeitungsphase im MIT App Inventor anpassen können.
 
-#. In MIT App Inventor, you have 2 primary sections: the **Designer** and the **Blocks**. You can switch between these two sections in the upper right corner of the page.
+#. Im MIT App Inventor gibt es zwei Hauptbereiche: den **Designer** und die **Blocks**. Sie können zwischen diesen beiden Bereichen in der oberen rechten Ecke der Seite wechseln.
 
    .. image:: img/new/09-ai_intro_1_shadow.png
 
-#. The **Designer** allows you to add buttons, text, screens, and modify the overall aesthetic of your application.
+#. Der **Designer** ermöglicht das Hinzufügen von Buttons, Texten, Bildschirmen und das Anpassen des Gesamtdesigns Ihrer Anwendung.
 
    .. image:: img/new/10-ai_intro_2_shadow.png
    
-#. Next, there's the **Blocks** section. This section lets you craft custom functionalities for your app, allowing you to program each component on the app's GUI to achieve desired features.
+#. Als Nächstes gibt es den Bereich **Blocks**. Hier können Sie benutzerdefinierte Funktionen für Ihre App erstellen und so jedes Element der Benutzeroberfläche der App programmieren, um gewünschte Funktionen zu erreichen.
 
    .. image:: img/new/10-ai_intro_3_shadow.png
 
-#. To install the application on a smartphone, navigate to the **Build** tab.
+#. Um die Anwendung auf einem Smartphone zu installieren, navigieren Sie zum **Build**-Tab.
 
    .. image:: img/new/08-ai_intro_4_shadow.png
 
-   * You can generate a ``.apk`` file. After selecting this option, a page will appear allowing you to choose between downloading a ``.apk`` file or scanning a QR code for installation. Follow the installation guide to complete the application installation. 
+   * Sie können eine ``.apk``-Datei generieren. Wählen Sie diese Option, erscheint eine Seite, die Ihnen die Wahl lässt, entweder eine ``.apk``-Datei herunterzuladen oder einen QR-Code für die Installation zu scannen. Folgen Sie der Installationsanleitung, um die Installation der Anwendung abzuschließen.
 
-     You also download our pre-compiled APK here: :download:`Bluetooth_Environmental_Monitor.apk</_static/other/Bluetooth_Environmental_Monitor.apk>`
+     Sie können auch unsere bereits kompilierte APK hier herunterladen: :download:`Bluetooth_Environmental_Monitor.apk</_static/other/Bluetooth_Environmental_Monitor.apk>`
 
-   * If you wish to upload this app to Google Play or another app marketplace, you can generate a ``.aab`` file.
+   * Wenn Sie die App im Google Play Store oder einem anderen App-Marktplatz veröffentlichen möchten, können Sie eine ``.aab``-Datei generieren.
 
 
-3. Upload the Code
+
+3. Hochladen des Codes
 -----------------------------
 
-#. Open the ``10-Bluetooth_environmental_monitor.ino`` file under the path of ``ultimate-sensor-kit\iot_project\bluetooth\05-Bluetooth_environmental_monitor``, or copy this code into **Arduino IDE**.
-   
+#. Öffnen Sie die Datei ``10-Bluetooth_environmental_monitor.ino`` im Pfad ``ultimate-sensor-kit\iot_project\bluetooth\05-Bluetooth_environmental_monitor`` oder kopieren Sie den Code in die **Arduino IDE**.
+
    .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and install it. 
+      Um die Bibliothek zu installieren, verwenden Sie den Arduino-Bibliotheksmanager und suchen Sie nach **"DHT sensor library"** und installieren Sie diese.
 
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/97605897-2fae-4e4e-97f3-d254796636a1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. Wählen Sie das korrekte Board und den Port aus und klicken Sie auf die Schaltfläche **Hochladen**.
 
-#. Open the Serial monitor(set baudrate to **9600**) to view debug messages. 
+#. Öffnen Sie den seriellen Monitor (Baudrate auf **9600** einstellen), um Debug-Nachrichten zu sehen.
 
-4. App and Bluetooth moudule Connection
------------------------------------------------
+4. Verbindung der App und des Bluetooth-Moduls
+------------------------------------------------
 
-Ensure that the application created earlier is installed on your smartphone.
+Vergewissern Sie sich, dass die zuvor erstellte Anwendung auf Ihrem Smartphone installiert ist.
 
-#. Initially, turn on **Bluetooth** on your smartphone.
+#. Aktivieren Sie zunächst **Bluetooth** auf Ihrem Smartphone.
 
    .. image:: img/new/09-app_1_shadow.png
       :width: 60%
       :align: center
 
-#. Navigate to the **Bluetooth settings** on your smartphone and look for names like **JDY-31-SPP**.
+#. Navigieren Sie zu den **Bluetooth-Einstellungen** auf Ihrem Smartphone und suchen Sie nach Namen wie **JDY-31-SPP**.
 
    .. image:: img/new/09-app_2_shadow.png
       :width: 60%
       :align: center
 
-#. After clicking it, agree to the **Pair** request in the pop-up window. If prompted for a pairing code, please enter "1234".
+#. Nach dem Anklicken stimmen Sie der **Kopplungsanfrage** im aufspringenden Fenster zu. Falls ein Kopplungscode erforderlich ist, geben Sie "1234" ein.
 
    .. image:: img/new/09-app_3_shadow.png
       :width: 60%
       :align: center
 
-#. Now open the newly installed **Environmental Monitor** APP.
+#. Öffnen Sie nun die neu installierte App **Environmental Monitor**.
 
    .. image:: img/new/10-app_4_shadow.png
       :width: 25%
       :align: center
 
-#. In the APP, click on **Connect** button to establish a connection between the APP and Bluetooth module.
+#. In der App klicken Sie auf die Schaltfläche **Connect**, um eine Verbindung zwischen der App und dem Bluetooth-Modul herzustellen.
 
    .. image:: img/new/10-app_5_shadow.png
       :width: 60%
       :align: center
 
-#. This page displays a list of all paired Bluetooth devices. Choose the ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` option from the list. The name of each device is listed next to its MAC address.
+#. Diese Seite zeigt eine Liste aller gekoppelten Bluetooth-Geräte an. Wählen Sie die Option ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` aus der Liste. Der Name jedes Geräts steht neben seiner MAC-Adresse.
 
    .. image:: img/new/10-app_6_shadow.png
       :width: 60%
       :align: center
 
-#. If you don't see any devices on the page shown above, it could be because this app is not authorized to scan for nearby devices. In such a case, you will need to adjust the settings manually.
+#. Wenn Sie auf der oben gezeigten Seite keine Geräte sehen, könnte das daran liegen, dass der App nicht erlaubt ist, nach nahegelegenen Geräten zu suchen. In diesem Fall müssen Sie die Einstellungen manuell anpassen.
 
-   * To access the **APP Info** page, long-press the app icon and select it. Alternatively, if you have another method to reach this page, use that instead.
+   * Um zur **App-Info-Seite** zu gelangen, halten Sie das App-Symbol gedrückt und wählen Sie es aus. Alternativ können Sie auch eine andere Methode verwenden, um auf diese Seite zu gelangen.
 
    .. image:: img/new/10-app_8_shadow.png
          :width: 60%
          :align: center
 
-   * Navigate to the **Permissions** page.
+   * Navigieren Sie zur Seite **Berechtigungen**.
 
    .. image:: img/new/08-app_9_shadow.png
          :width: 60%
          :align: center
 
-   * To enable the APP to scan for nearby devices, go to **Nearby devices** and select **Always**.
+   * Um der App die Suche nach nahegelegenen Geräten zu ermöglichen, gehen Sie zu **Nahegelegene Geräte** und wählen Sie **Immer**.
 
    .. image:: img/new/08-app_10_shadow.png
          :width: 60%
          :align: center
 
-   * Now, restart the APP and repeat steps 5 and 6 to successfully connect to Bluetooth.
+   * Starten Sie nun die App neu und wiederholen Sie die Schritte 5 und 6, um erfolgreich eine Bluetooth-Verbindung herzustellen.
 
-#. After a successful connection, you will be redirected to the main page where it will display temperature and humidity.
+#. Nach einer erfolgreichen Verbindung werden Sie zur Hauptseite weitergeleitet, auf der Temperatur und Luftfeuchtigkeit angezeigt werden.
 
    .. image:: img/new/10-app_7_shadow.png
       :width: 60%
       :align: center
 
-5. Code explanation
+5. Code-Erläuterung
 -----------------------------------------------
 
-1. Setting up Bluetooth communication and DHT11 sensor.
+1. Einrichtung der Bluetooth-Kommunikation und des DHT11-Sensors.
 
    .. code-block:: arduino
 
@@ -177,9 +173,9 @@ Ensure that the application created earlier is installed on your smartphone.
       #define DHTTYPE DHT11
       DHT dht(DHTPIN, DHTTYPE);
 
-   The code includes necessary libraries and defines pins for the Bluetooth module and DHT11 sensor. It also declares objects for Bluetooth communication and DHT11.
+   Der Code bindet die erforderlichen Bibliotheken ein und definiert die Pins für das Bluetooth-Modul sowie den DHT11-Sensor. Zudem werden Objekte für die Bluetooth-Kommunikation und den DHT11 deklariert.
 
-2. Initialization in setup function.
+2. Initialisierung in der Setup-Funktion.
 
    .. code-block:: arduino
 
@@ -189,9 +185,9 @@ Ensure that the application created earlier is installed on your smartphone.
         dht.begin();
       }
 
-   This segment initializes serial communication for debugging, Bluetooth module, and the DHT sensor.
+   Dieser Abschnitt initialisiert die serielle Kommunikation für Debugging-Zwecke sowie das Bluetooth-Modul und den DHT-Sensor.
 
-3. Reading data and sending via Bluetooth.
+3. Datenerfassung und Übermittlung via Bluetooth.
 
    .. code-block:: arduino
 
@@ -222,4 +218,4 @@ Ensure that the application created earlier is installed on your smartphone.
         bleSerial.println(sensorData);  // Send temperature and humidity values to the Bluetooth module
       }
 
-   This segment reads temperature and humidity from the DHT11 sensor every 2 seconds. If the reading fails, it prints an error message. Otherwise, it prints the readings to the Serial Monitor and sends them via the Bluetooth module in a comma-separated format. When the app receives data in the format of "temperature,humidity", it will parse the information and present it on the user interface.
+   Dieser Abschnitt liest alle 2 Sekunden Temperatur und Luftfeuchtigkeit vom DHT11-Sensor. Bei fehlerhaften Messungen wird eine Fehlermeldung ausgegeben. Ansonsten werden die Messdaten im seriellen Monitor angezeigt und in einem kommagetrennten Format via Bluetooth-Modul gesendet. Die App wertet die im Format "Temperatur,Luftfeuchtigkeit" empfangenen Daten aus und stellt sie in der Benutzeroberfläche dar.

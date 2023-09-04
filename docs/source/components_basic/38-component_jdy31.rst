@@ -1,78 +1,77 @@
 .. _cpn_jdy31:
 
-JDY-31 Bluetooth Module
+JDY-31 Bluetooth-Modul
 =====================================
 
 .. image:: img/38_JDY31_1.jpg
     :align: center
 
 .. warning::
-  This module **does not support Apple device** connections, so tutorials involving this module require an Android phone or tablet.
+  Dieses Modul **unterstützt keine Verbindungen mit Apple-Geräten**, daher sind für Tutorials mit diesem Modul ein Android-Smartphone oder -Tablet erforderlich.
 
-The JDY-31 Bluetooth module is a pin-compatible replacement for the HC-06 Bluetooth module. It is simpler and easier to use than the HC-06 and is often available at a slightly lower cost. 
+Das JDY-31 Bluetooth-Modul dient als pin-kompatibler Ersatz für das HC-06 Bluetooth-Modul. Es ist unkomplizierter und einfacher in der Anwendung als das HC-06 und oft zu einem etwas geringeren Preis erhältlich.
 
-The JDY-31 Bluetooth module is based on Bluetooth 3.0 SPP design and can support Windows, Linux, and Android data transmission. The working frequency of the JDY-31 Bluetooth module is 2.4 GHz with modulation mode GFSK. The maximum transmission power is 8 dB, and the maximum transmission distance is 30 meters. Users can modify the device name through AT command, baud rate, and other instructions.
+Das JDY-31 Bluetooth-Modul basiert auf dem Bluetooth 3.0 SPP-Design und unterstützt die Datenübertragung unter Windows, Linux und Android. Die Betriebsfrequenz des JDY-31 Bluetooth-Moduls beträgt 2,4 GHz mit der Modulationsart GFSK. Die maximale Sendeleistung beträgt 8 dB, und die maximale Übertragungsentfernung liegt bei 30 Metern. Über AT-Befehle können Benutzer den Gerätenamen, die Baudrate und weitere Einstellungen ändern.
 
-Pins of JDY-31 and their functions:
+Pins des JDY-31 und ihre Funktionen:
 
 .. image:: img/38_JDY31_2.jpg
     :align: center
-
 
 .. list-table:: JDY-31 Pins
    :widths: 25 25 100
    :header-rows: 1
 
    * - Pin	
-     - Name	
-     - Description
+     - Bezeichnung	
+     - Beschreibung
    * - 1	
      - STATE
-     - Connection status pin (not connected low level, output high level after connectio) 
+     - Statuspin für die Verbindung (niedriges Niveau bei fehlender Verbindung, hohes Niveau nach Verbindung)
    * - 2	
      - RXD	
-     - Receiver pin, this pin must connect to TX pin of next device.
+     - Empfängerpin, dieser Pin muss mit dem TX-Pin des nächsten Geräts verbunden sein.
    * - 3	
      - TXD
-     - Transmitter pin, this pin must connect to RX pin of next device.
+     - Senderpin, dieser Pin muss mit dem RX-Pin des nächsten Geräts verbunden sein.
    * - 4		
      - GND
-     - GND
+     - Masse (GND)
    * - 5	
      - VCC
-     - Power Supply(1.8-3.6V, 3.3v recommended)
+     - Stromversorgung (1,8-3,6V, empfohlen 3,3V)
    * - 6	
      - EN
-     - enable or disable the module. When this pin is held high, the module is enabled and begins transmitting and receiving data.
+     - Aktiviert oder deaktiviert das Modul. Wird dieser Pin auf hohem Niveau gehalten, ist das Modul aktiv und beginnt mit der Datenübertragung.
 
-patch application: general application only need to connect VCC, GND, RXD, TXD 4 pins, if you need to actively disconnect in the connection state, send AT+DISC in the connection state.
+Patch-Anwendung: Für allgemeine Anwendungen müssen nur die Pins VCC, GND, RXD und TXD verbunden werden. Um die Verbindung aktiv zu trennen, senden Sie im Verbindungsstatus den Befehl AT+DISC.
 
-AT Command Set
+AT-Befehlssatz
 ---------------------------
 
-+------------+-------------------------------------+-------------+
-|   Command  |               Function              |   Default   |
-+============+=====================================+=============+
-| AT+VERSION | Version Number                      | JDY-31-V1.2 |
-+------------+-------------------------------------+-------------+
-| AT+RESET   | Soft reset                          |             |
-+------------+-------------------------------------+-------------+
-| AT+DISC    | Disconnect (valid when connected)   |             |
-+------------+-------------------------------------+-------------+
-| AT+LADDR   | Query the MAC address of the module |             |
-+------------+-------------------------------------+-------------+
-| AT+PIN     | Set or query connection password    | 1234        |
-+------------+-------------------------------------+-------------+
-| AT+BAUD    | Set or query baud rate              | 9600        |
-+------------+-------------------------------------+-------------+
-| AT+NAME    | Set or query broadcast name         | JDY-31-SPP  |
-+------------+-------------------------------------+-------------+
-| AT+DEFAULT | Factory reset                       |             |
-+------------+-------------------------------------+-------------+
-| AT+ENLOG   | Serial port status output           | 1           |
-+------------+-------------------------------------+-------------+
++------------+---------------------------------------------+-------------+
+|   Befehl   |                   Funktion                  |   Standard  |
++============+=============================================+=============+
+| AT+VERSION | Versionsnummer                              | JDY-31-V1.2 |
++------------+---------------------------------------------+-------------+
+| AT+RESET   | Soft-Reset                                  |             |
++------------+---------------------------------------------+-------------+
+| AT+DISC    | Trennen (gültig bei bestehender Verbindung) |             |
++------------+---------------------------------------------+-------------+
+| AT+LADDR   | MAC-Adresse des Moduls abfragen             |             |
++------------+---------------------------------------------+-------------+
+| AT+PIN     | Verbindungspasswort setzen oder abfragen    | 1234        |
++------------+---------------------------------------------+-------------+
+| AT+BAUD    | Baudrate setzen oder abfragen               | 9600        |
++------------+---------------------------------------------+-------------+
+| AT+NAME    | Sendenamen setzen oder abfragen             | JDY-31-SPP  |
++------------+---------------------------------------------+-------------+
+| AT+DEFAULT | Werkseinstellungen wiederherstellen         |             |
++------------+---------------------------------------------+-------------+
+| AT+ENLOG   | Statusausgabe der seriellen Schnittstelle   | 1           |
++------------+---------------------------------------------+-------------+
 
-More Projects
+Weitere Projekte
 ---------------------------
 
 * :ref:`iot_Bluetooth_start`

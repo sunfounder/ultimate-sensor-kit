@@ -1,41 +1,39 @@
 .. _cpn_rgb:
 
-RGB Module
+RGB-Modul
 ==========================
 
 .. image:: img/24_rgb_module.png
     :width: 350
     :align: center
 
-Introduction
+Einführung
 ---------------------------
-The RGB Full Color LED module emits a range of colors by mixing red, green, and blue light. Each color is adjusted by using PWM.It can be used to create colorful lighting effects or to learn how to use PWM (pulse-width modulation) with Arduino.
+Das RGB-Vollfarb-LED-Modul erzeugt durch die Mischung von rotem, grünem und blauem Licht ein Spektrum an Farben. Jede Farbe wird mittels PWM (Pulsweitenmodulation) eingestellt. Das Modul kann für bunte Lichteffekte verwendet oder zum Erlernen der PWM-Steuerung mit Arduino genutzt werden.
 
-Principle
+Funktionsprinzip
 ---------------------------
-The RGB MODULE works by using a full-color LED that uses R, G, and B pins with adjustable PWM voltage input. 
-Colors from the LED can be combined. For example, mix blue light and green light give cyan light, red light and green light give yellow light. This is called "The additive method of color mixing".
+Das RGB-Modul funktioniert mit einer Vollfarb-LED, die über R-, G- und B-Anschlüsse mit einstellbarer PWM-Spannungseingabe verfügt. Die Farben der LED können miteinander kombiniert werden. Zum Beispiel erzeugt die Mischung von blauem und grünem Licht Zyan, die Mischung von rotem und grünem Licht Gelb. Dies wird als "additive Farbmischung" bezeichnet.
 
-* `Additive color - Wikipedia <https://en.wikipedia.org/wiki/Additive_color>`_
+* `Additive Farbe - Wikipedia <https://de.wikipedia.org/wiki/Additive_Farbmischung>`_
 
 .. image:: img/24_rgb_module_2.png
     :width: 200
     :align: center
 
-Based on this method, we can use the three primary colors to mix the visible light of any color according to different proportions. For example, orange can be produced by more red and less green.
-The strength of the primary colors (red, blue, green) is adjusted in order to achieve full color mixing effect.PWM is a technique where the duty cycle of a digital signal is modified, adjusting the percentage of time that the signal remains active within a given period. By changing the duty cycle, we can make the LED appear brighter or dimmer.
+Durch diese Methode können wir die drei Grundfarben in verschiedenen Verhältnissen mischen, um sichtbares Licht jeder gewünschten Farbe zu erzeugen. Beispielsweise kann Orange durch mehr Rot und weniger Grün erzeugt werden. Durch Anpassung der Stärke der Grundfarben (Rot, Blau, Grün) mittels PWM kann eine vollständige Farbmischung erreicht werden.
 
-Usage
+Anwendungsbeispiele
 ---------------------------
 
-**Hardware components**
+**Hardware-Komponenten**
 
-- Arduino Uno R4 or R3 board * 1
-- RGB Module * 1
-- Jumper Wires
+- Arduino Uno R4 oder R3 Board * 1
+- RGB-Modul * 1
+- Jumperkabel
 
 
-**Circuit Assembly**
+**Schaltungsaufbau**
 
 .. image:: img/24_rgb_module_circuit.png
     :width: 400
@@ -45,7 +43,7 @@ Usage
     
     <br/><br/>   
 
-Code
+Programmcode
 ^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -57,14 +55,14 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/video/basic/24-component_rgb.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
    <br/><br/>  
 
-Code explanation
+Code-Erklärung
 ^^^^^^^^^^^^^^^^^^^^
 
-1. The first segment of the code declares and initializes the pins to which each color channel of the RGB LED module is connected.
+1. Im ersten Codeabschnitt werden die Pins deklariert und initialisiert, an die die Farbkanäle der RGB-LED angeschlossen sind.
 
    .. code-block:: arduino
        
@@ -72,7 +70,7 @@ Code explanation
       const int gledPin = 10;   // pin connected to the green color channel
       const int bledPin = 11;  // pin connected to the blue color channel
 
-2. The ``setup()`` function initializes these pins as OUTPUT. This means we are sending signals OUT from these pins to the RGB LED module.
+2. Die Funktion ``setup()`` initialisiert diese Pins als OUTPUT, da wir Signale von diesen Pins zum RGB-LED-Modul senden.
 
    .. code-block:: arduino
    
@@ -82,7 +80,7 @@ Code explanation
         pinMode(bledPin, OUTPUT);
       }
 
-3. In the ``loop()`` function, the ``setColor()`` function is called with different parameters to display different colors. The ``delay()`` function is used after setting each color to pause for 1000 milliseconds (or 1 second) before moving on to the next color.
+3. In der Funktion ``loop()`` wird die Funktion ``setColor()`` mit verschiedenen Parametern aufgerufen, um verschiedene Farben anzuzeigen. Die Funktion ``delay()`` wird nach dem Einstellen jeder Farbe verwendet, um für 1000 Millisekunden (oder 1 Sekunde) zu pausieren, bevor zur nächsten Farbe übergegangen wird.
 
    .. code-block:: arduino
    
@@ -94,7 +92,7 @@ Code explanation
         // The rest of the color sequence...
       }
 
-4. The ``setColor()`` function uses the ``analogWrite()`` function to adjust the brightness of each color channel on the RGB LED module. The ``analogWrite()`` function employs Pulse Width Modulation (PWM) to simulate varying voltage outputs. By controlling the PWM duty cycle (the percentage of time a signal is HIGH within a fixed period), the brightness of each color channel can be controlled, allowing the mixing of various colors.
+4. Die Funktion ``setColor()`` verwendet die Funktion ``analogWrite()``, um die Helligkeit der einzelnen Farbkanäle im RGB-LED-Modul zu steuern. Mit der Funktion ``analogWrite()`` und PWM können verschiedene Spannungsausgänge simuliert werden. Durch Steuerung des PWM-Tastverhältnisses kann die Helligkeit jedes Farbkanals kontrolliert und so die Mischung verschiedener Farben ermöglicht werden.
 
    .. code-block:: arduino
 
@@ -105,16 +103,17 @@ Code explanation
       }
 
 
-Additional Ideas
+Weitere Ideen
 ^^^^^^^^^^^^^^^^^^^^
 
-- Try displaying other colors
-- Integrate the RGB LED with sensors, and display different colors based on the sensor's value.
+- Versuchen Sie, andere Farben anzuzeigen.
+- Integrieren Sie die RGB-LED mit Sensoren und zeigen Sie verschiedene Farben basierend auf dem Sensorwert an.
 
-More Projects
+Weitere Projekte
 ---------------------------
 * :ref:`fun_gas_leak_alarm`
 * :ref:`fun_light_control_switch`
 * :ref:`fun_motion_triggered_relay`
 * :ref:`iot_Bluetooth_RGB_controller`
 * :ref:`iot_Bluetooth_remote_relay`
+
