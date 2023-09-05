@@ -25,7 +25,7 @@ Dieses Projekt dient der Steuerung einer Verkehrsampel (rote, gelbe, grüne LEDs
 2. Code hochladen
 -----------------------------
 
-#. Öffnen Sie die Datei ``16-Bluetooth_traffic_light.ino`` im Pfad ``ultimate-sensor-kit\iot_project\bluetooth\02-Bluetooth_traffic_light`` oder kopieren Sie diesen Code in die **Arduino IDE**.
+#. Öffnen Sie die Datei ``02-Bluetooth_traffic_light.ino`` im Pfad ``ultimate-sensor-kit\iot_project\bluetooth\02-Bluetooth_traffic_light`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
    .. raw:: html
        

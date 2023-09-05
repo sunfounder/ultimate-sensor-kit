@@ -28,6 +28,9 @@ Dieses Arduino-Projekt dient dem Aufbau eines einfachen Herzfrequenzmonitors mit
 
 #. Öffnen Sie die Datei ``06-Heart_rate_monitor.ino`` im Verzeichnis ``ultimate-sensor-kit\fun_project\06-Heart_rate_monitor`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
+   .. note:: 
+      Um die Bibliothek zu installieren, verwenden Sie den Arduino Library Manager und suchen nach **"SparkFun MAX3010x"** und installieren Sie diese.
+
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/62989671-0ed0-479a-a91c-9c8f37c170ab/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
@@ -40,6 +43,9 @@ Der Hauptgedanke dieses Projekts besteht darin, die Pulsation des Blutflusses du
 1. **Einbindung von Bibliotheken und erste Deklarationen**:
 
    Der Code beginnt mit der Einbindung der erforderlichen Bibliotheken für das OLED-Display, den MAX30102-Sensor und die Herzfrequenzberechnung. Zusätzlich werden die Konfiguration für das OLED-Display und die Variablen für die Herzfrequenzberechnung deklariert.
+
+   .. note:: 
+      Um die Bibliothek zu installieren, verwenden Sie den Arduino Library Manager und suchen nach **"SparkFun MAX3010x"** und installieren Sie diese.
 
    .. code-block:: arduino
 

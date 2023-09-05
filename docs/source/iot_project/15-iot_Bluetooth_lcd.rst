@@ -25,7 +25,7 @@ Das Projekt empfängt Nachrichten über ein mit dem UNO-Board verbundenes Blueto
 2. Code hochladen
 -----------------------------
 
-#. Öffnen Sie die Datei ``15-Bluetooth_lcd.ino`` im Verzeichnis ``ultimate-sensor-kit\iot_project\bluetooth\01-Bluetooth_lcd``, oder kopieren Sie diesen Code in die **Arduino IDE**.
+#. Öffnen Sie die Datei ``01-Bluetooth_lcd.ino`` im Verzeichnis ``ultimate-sensor-kit\iot_project\bluetooth\01-Bluetooth_lcd``, oder kopieren Sie diesen Code in die **Arduino IDE**.
 
    .. note:: 
       Um die Bibliothek zu installieren, nutzen Sie den Arduino-Bibliotheksmanager und suchen nach **"LiquidCrystal I2C"**, um es zu installieren.

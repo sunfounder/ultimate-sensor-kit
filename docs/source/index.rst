@@ -24,6 +24,27 @@ Warum nur Zuschauer sein, wenn Sie auch Schöpfer sein können? Beginnen Sie Ihr
 
 Bei Fragen oder weiteren interessanten Ideen können Sie gerne eine E-Mail an service@sunfounder.com senden.
 
+* :ref:`Über die Anzeigesprache`
+* :ref:`Inhaltsverzeichnis`
+* :ref:`Urheberrechtshinweis`
+
+Über die Anzeigesprache
+--------------------------------
+
+.. note::
+
+    Neben Englisch arbeiten wir an weiteren Sprachen für diesen Kurs.
+    Wenn Sie Interesse an einer Mitarbeit haben, kontaktieren Sie bitte service@sunfounder.com,
+    und wir werden Ihnen als Gegenleistung ein kostenloses Produkt zukommen lassen.
+
+Aktuell werden im Online-Tutorial die Sprachen Englisch, Deutsch und Japanisch unterstützt. Um die Anzeigesprache zu ändern, klicken Sie bitte auf das Symbol **Read the Docs** in der unteren linken Ecke der Seite.
+
+.. image:: img/translation.png
+    :align: center
+
+.. raw:: html
+
+    <br/>
 
 Inhaltsverzeichnis
 --------------------------------

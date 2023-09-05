@@ -28,6 +28,9 @@ Dieses Projekt ist darauf ausgelegt, die Entfernung zu einem Objekt mit Hilfe de
 
 #. Öffnen Sie die Datei ``09-ToF_distance_monitor.ino`` im Verzeichnis ``ultimate-sensor-kit\fun_project\09-ToF_distance_monitor`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
+   .. note:: 
+      Verwenden Sie den Arduino-Bibliotheksmanager und suchen Sie nach **"Adafruit_VL53L0X"** und installieren Sie diese.
+
    .. raw:: html
        
        <iframe src=https://create.arduino.cc/editor/sunfounder01/8077aa45-8e0c-4c13-9211-b23926b79462/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
@@ -39,6 +42,9 @@ Dieses Projekt ist darauf ausgelegt, die Entfernung zu einem Objekt mit Hilfe de
 Das Projekt nutzt den VL53L0X Time-of-Flight-Sensor, um Entfernungen durch Messung der Zeit, die das Licht benötigt, um zu einem Objekt und zurück zum Sensor zu gelangen, zu ermitteln. Das OLED-Display zeigt dann die gemessene Entfernung in Millimetern an. Über die serielle Kommunikation werden ebenfalls die Messwerte ausgegeben, was das Monitoring und Debugging erleichtert. Sowohl das OLED-Display als auch der VL53L0X-Sensor kommunizieren mit dem Arduino über das I2C-Protokoll.
 
 #. Einbinden der notwendigen Bibliotheken und Initialisieren der Komponenten
+
+   .. note:: 
+      Verwenden Sie den Arduino-Bibliotheksmanager und suchen Sie nach **"Adafruit_VL53L0X"** und installieren Sie diese.
 
    .. code-block:: arduino
 

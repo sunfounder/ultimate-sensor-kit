@@ -74,7 +74,7 @@ Jetzt geht's los.
 3. Hochladen des Codes
 -----------------------------
 
-#. Öffnen Sie die Datei ``10-Bluetooth_environmental_monitor.ino`` im Pfad ``ultimate-sensor-kit\iot_project\bluetooth\05-Bluetooth_environmental_monitor`` oder kopieren Sie den Code in die **Arduino IDE**.
+#. Öffnen Sie die Datei ``05-Bluetooth_environmental_monitor.ino`` im Pfad ``ultimate-sensor-kit\iot_project\bluetooth\05-Bluetooth_environmental_monitor`` oder kopieren Sie den Code in die **Arduino IDE**.
 
    .. note:: 
       Um die Bibliothek zu installieren, verwenden Sie den Arduino-Bibliotheksmanager und suchen Sie nach **"DHT sensor library"** und installieren Sie diese.
