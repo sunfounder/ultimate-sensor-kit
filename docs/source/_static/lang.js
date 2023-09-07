@@ -1,8 +1,11 @@
 // 获取当前页面的 URL
 var currentURL = window.location.href;
 
-// 判断是否在首页
-if (currentURL === "https://docs.sunfounder.com/projects/ultimate-sensor-kit/en/latest/") {
+// 检查是否有跳转标志在 sessionStorage
+var redirected = sessionStorage.getItem('redirected');
+
+// 判断是否在首页以及是否已经跳转过
+if (currentURL === "https://docs.sunfounder.com/projects/ultimate-sensor-kit/en/latest/" && !redirected) {
     // 获取用户的浏览器语言
     var userLang = navigator.language || navigator.userLanguage;
 
@@ -14,15 +17,20 @@ if (currentURL === "https://docs.sunfounder.com/projects/ultimate-sensor-kit/en/
 
     switch (userLang) {
         case "de": // 德语
-            link = "https://docs.sunfounder.com/projects/ultimate-sensor-kit/ja/latest/";
+            link = "https://docs.sunfounder.com/projects/ultimate-sensor-kit/de/latest/";
             break;
         case "ja": // 日语
-            link = "https://docs.sunfounder.com/projects/ultimate-sensor-kit/de/latest/";
+            link = "https://docs.sunfounder.com/projects/ultimate-sensor-kit/ja/latest/";
             break;
         default: // 默认（英语）
             link = "https://docs.sunfounder.com/projects/ultimate-sensor-kit/en/latest/";
     }
 
-    // 用JavaScript自动跳转到相应的链接
-    window.location.href = link;
+    // 设置跳转标志
+    sessionStorage.setItem('redirected', 'true');
+
+    // 如果不是英语页面或者当前页面不是目标链接，才执行跳转
+    if (userLang !== "en" || currentURL !== link) {
+        window.location.href = link;
+    }
 }
