@@ -55,6 +55,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 html_js_files = [
     'https://ezblock.cc/readDocFile/custom.js',
+    './lang.js',
 ]
 html_css_files = [
     'https://ezblock.cc/readDocFile/custom.css',
