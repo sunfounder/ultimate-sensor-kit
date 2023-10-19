@@ -1,6 +1,8 @@
 # Ultimate-sensor-kit
 
-This repository is for Sunfounder Ultimate sensor kit. you can buy it on [our website](https://www.sunfounder.com/), or search sunfounder in Amazon.
+This repository is for Sunfounder Ultimate sensor kit. 
+
+**You can buy it on [our website](https://www.sunfounder.com/products/sunfounder-ultimate-sensor-kit-with-original-arduino-uno-r4-minima), or search sunfounder in [Amazon](https://www.amazon.com/s?k=sunfounder+ultimate+sensor+kit).**
 
 Quick Links:
 
