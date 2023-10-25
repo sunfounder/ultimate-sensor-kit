@@ -1,6 +1,6 @@
 .. _cpn_speed:
 
-Infrared Speed Sensor Module (LM393)
+Infrared Speed Sensor Module
 =====================================
 
 .. image:: img/18_LM393_module.png
@@ -9,12 +9,12 @@ Infrared Speed Sensor Module (LM393)
 
 Introduction
 ---------------------------
-The LM393 module is an IR counter that has an IR transmitter and receiver. If any obstacle is placed between these sensors, a signal is sent to the microcontroller. The module can be used in association with a microcontroller for motor speed detection, pulse count, position limit, etc.
+The Infrared Speed Sensor Module is an IR counter that has an IR transmitter and receiver. If any obstacle is placed between these sensors, a signal is sent to the microcontroller. The module can be used in association with a microcontroller for motor speed detection, pulse count, position limit, etc.
 
 
 Principle
 ---------------------------
-The LM393 module has 1 H2010 photocell, which consists of a phototransistor and an infrared light emitter packaged in a 10 cm wide black plastic housing.
+The Infrared Speed Sensor Module has 1 H2010 photocell, which consists of a phototransistor and an infrared light emitter packaged in a 10 cm wide black plastic housing.
 
 .. image:: img/18_LM393_module_2.png
     :width: 200
