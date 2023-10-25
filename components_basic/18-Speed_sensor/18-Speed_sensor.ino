@@ -1,9 +1,9 @@
 /*
   This code measures the speed of a motor connected to an Arduino Uno 
-  using a speed sensor (LM393).
+  using a speed sensor module.
 
   Board: Arduino Uno R4 (or R3)
-  Component: Speed Sensor(LM393 )
+  Component: Speed Sensor Module
 */
 
 // Define the sensor and motor pins
