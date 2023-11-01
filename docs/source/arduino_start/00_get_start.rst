@@ -51,4 +51,3 @@ Folgen Sie diesen Schritten, um von Grund auf mit Arduino zu beginnen!
    05_basic_code_struct
    06_basic_further_syntax
    07_basic_variable
-   08_basic_circuit
