@@ -77,7 +77,7 @@ Follow these steps to learn how to use Arduino from zero!
    05_basic_code_struct
    06_basic_further_syntax
    07_basic_variable
-   08_basic_circuit
+
 
    
 
