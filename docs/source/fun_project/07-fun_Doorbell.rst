@@ -13,7 +13,7 @@ Doorbell
 The "doorbell" project aims to simulate the function of a doorbell. When a button is pressed, the Arduino plays a predefined melody using a passive buzzer module.
 
 
-1. Build the Cirduit
+1. Build the Circuit
 -----------------------------
 
 .. image:: img/07-fun_Doorbell_circuit.png

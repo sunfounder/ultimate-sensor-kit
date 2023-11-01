@@ -12,7 +12,7 @@ Heart rate monitor
 
 This Arduino project aims to build a simple Heart Rate Monitor using a MAX30102 pulse oximeter sensor and an SSD1306 OLED Display. The code takes measurements of the heart rate by determining the time between heartbeats. By taking four measurements, it computes their average and presents the resultant average heart rate on an OLED screen. If the sensor doesn't detect a finger, it sends a prompt to the user to position their finger correctly on the sensor.
 
-1. Build the Cirduit
+1. Build the Circuit
 -----------------------------
 
 .. image:: img/06-fun_Heart_rate_monitor_circuit.png

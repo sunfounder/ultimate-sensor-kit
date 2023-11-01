@@ -7,7 +7,7 @@ In this project, we demonstrate how to communicate with a Bluetooth module throu
 
 Firstly, we need to set up the circuit and use software serial communication. Connect the TX pin of the Bluetooth module to pin 3 of the Uno board, and connect the RX pin of the Bluetooth module to pin 4 of the Uno board.
 
-1. Build the Cirduit
+1. Build the Circuit
 -----------------------------
 
 .. image:: img/00-Wiring_Bluetooth.png

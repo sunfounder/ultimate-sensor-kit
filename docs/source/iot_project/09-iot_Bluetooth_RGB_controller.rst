@@ -18,7 +18,7 @@ This Android application will be constructed utilizing a complimentary web-based
 This project control an RGB LED connected to an Arduino Uno via a JDY-31 Bluetooth module. The Android application is used to send various color values to the Arduino Uno board via Bluetooth, based on user operations on the GUI. The program on Uno board receives RGB color values as characters from a serial port over Bluetooth and adjusts the LED's color accordingly.
 
 
-1. Build the Cirduit
+1. Build the Circuit
 -----------------------------
 
 .. image:: img/09-Wiring_Bluetooth_rgb_controller.png

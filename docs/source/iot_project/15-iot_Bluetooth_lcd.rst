@@ -14,7 +14,7 @@ Bluetooth LCD
 The project receives messages through a Bluetooth module connected to the UNO board and displays the received messages on an LCD screen.
 
 
-1. Build the Cirduit
+1. Build the Circuit
 -----------------------------
 
 .. image:: img/15-Wiring_Bluetooth_LCD.png

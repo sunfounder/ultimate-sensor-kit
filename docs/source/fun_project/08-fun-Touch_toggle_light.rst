@@ -13,7 +13,7 @@ Touch toggle light
 The project involves creating a simple traffic light control mechanism using a touch sensor and a traffic light LED module. When the touch sensor is activated, the LEDs will cycle through the following sequence: Red -> Yellow -> Green.
 
 
-1. Build the Cirduit
+1. Build the Circuit
 -----------------------------
 
 .. image:: img/08-fun_touch_toggle_light_circuit.png

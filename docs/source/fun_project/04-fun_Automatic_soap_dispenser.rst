@@ -13,7 +13,7 @@ Automatic soap dispenser
 The Automatic Soap Dispenser project uses an Arduino Uno board along with an infrared obstacle avoidance sensor and a water pump. The sensor detects the presence of an object such as a hand, which activates the water pump to dispense soap.
 
 
-1. Build the Cirduit
+1. Build the Circuit
 -----------------------------
 
 .. image:: img/04-fun_Automatic_soap_dispenser_circuit.png

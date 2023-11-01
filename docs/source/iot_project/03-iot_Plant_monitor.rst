@@ -13,7 +13,7 @@ Plant Monitor with Blynk
 
 This project creates a plant monitoring demo system that detects the current temperature, humidity, light intensity, and soil moisture. The data is then displayed on Blynk along with suggestions based on the soil moisture levels.
 
-1. Build the Cirduit
+1. Build the Circuit
 -----------------------------
 
 .. note::

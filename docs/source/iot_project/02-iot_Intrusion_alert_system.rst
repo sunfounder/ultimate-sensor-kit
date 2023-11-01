@@ -15,7 +15,7 @@ This project demonstrate a simple home intrusion detection system using a passiv
 When the system is set to 'Away' mode through the Blynk app, the PIR sensor monitors for motion.
 Any detected movement triggers a notification on the Blynk app, alerting the user of potential intrusion.
 
-1. Build the Cirduit
+1. Build the Circuit
 -----------------------------
 
 .. note::

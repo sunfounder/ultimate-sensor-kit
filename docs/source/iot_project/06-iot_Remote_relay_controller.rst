@@ -13,7 +13,7 @@ Remote Relay Controller with Blynk
 
 This project aims to create a remote relay controller that can be operated through a virtual switch in the Blynk app. When the switch is turned on, it sets the digital pin connected to the relay to HIGH, and when it's turned off, it sets the digital pin to LOW. This allows for easy control of the relay from a distance, effectively creating a remote switch.
 
-1. Build the Cirduit
+1. Build the Circuit
 -----------------------------
 
 .. warning ::

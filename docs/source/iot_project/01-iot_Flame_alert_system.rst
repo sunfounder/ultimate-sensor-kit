@@ -14,7 +14,7 @@ Flame Alert System with Blynk
 In this chapter, we will guide you through the process of creating a home flame alarm system demo using Blynk. By utilizing a flame sensor, you can detect potential fires in your home. Sending the detected values to Blynk allows for remote monitoring of your home via the internet. In case of a fire, Blynk will promptly notify you via email.
 
 
-1. Build the Cirduit
+1. Build the Circuit
 -----------------------------
 
 

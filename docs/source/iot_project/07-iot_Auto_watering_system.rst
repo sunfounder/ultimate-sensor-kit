@@ -13,7 +13,7 @@ Auto Watering System with Blynk
 
 This project aims to demonstrate an automated irrigation system that utilizes soil moisture sensors and water pumps. The Blynk app is used for user interaction, where it receives the soil moisture data and sends watering threshold and automatic mode status to the system. When the soil moisture drops below the threshold while in automatic mode, the system activates the water pump.
 
-1. Build the Cirduit
+1. Build the Circuit
 -----------------------------
 
 .. note::

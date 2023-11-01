@@ -13,7 +13,7 @@ Potentiometer scale value
 This project is designed to read the value from a potentiometer and display the read value on an LCD 1620 with an I2C interface. The value is also sent to the serial monitor for real-time viewing. A unique feature of this project is the visual representation of the potentiometer's value on the LCD, displaying a bar that varies in length corresponding to the value.
 
 
-1. Build the Cirduit
+1. Build the Circuit
 -----------------------------
 
 .. image:: img/10-fun-Potentiometer_scale_value_circuit.png

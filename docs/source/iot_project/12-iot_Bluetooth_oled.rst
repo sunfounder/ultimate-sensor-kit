@@ -17,7 +17,7 @@ This project uses an Android app created with MIT App Inventor to send messages 
 The Android application will be constructed utilizing a complimentary web-based platform known as |link_appinventor|. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone. 
 
 
-1. Build the Cirduit
+1. Build the Circuit
 -----------------------------
 
 .. image:: img/12-Wiring_oled.png

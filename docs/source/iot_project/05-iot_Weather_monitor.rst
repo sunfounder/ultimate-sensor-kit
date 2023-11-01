@@ -14,7 +14,7 @@ Weather Monitor with ThingSpeak
 This project collects temperature and pressure data using an Atmospheric Pressure Sensor. The collected data is then transmitted to the ThingSpeak cloud platform via an ESP8266 module and Wi-Fi network at regular time intervals.
 
 
-1. Build the Cirduit
+1. Build the Circuit
 -----------------------------
 
 .. note::

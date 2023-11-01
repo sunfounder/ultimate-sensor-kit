@@ -16,7 +16,7 @@ This project sets up a vibration detection system using an Arduino board (Uno R4
 To avoid excessive alerts within a short timeframe, the system has been programmed to send these HTTP requests at a minimum interval of 2 minutes (120000 milliseconds). This interval could be adjusted based on the user's needs.
 
 
-1. Build the Cirduit
+1. Build the Circuit
 -----------------------------
 
 .. note::
