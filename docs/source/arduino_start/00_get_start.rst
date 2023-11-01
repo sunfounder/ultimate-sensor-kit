@@ -49,4 +49,3 @@ Arduinoプロジェクトの構築方法
    05_basic_code_struct
    06_basic_further_syntax
    07_basic_variable
-   08_basic_circuit
