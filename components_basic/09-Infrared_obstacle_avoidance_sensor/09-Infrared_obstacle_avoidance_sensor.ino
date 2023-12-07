@@ -1,6 +1,6 @@
 /*
   This code reads the digital value from a Infrared obstacle avoidance sensor connected to 
-  pin 7 and prints it to the serial monitor every 50 milliseconds.
+  pin 2 and prints it to the serial monitor every 50 milliseconds.
   When the module detects obstacles ahead, the red indicator light on the module will 
   illuminate and the OUT port will continuously output a low-level signal.
 
