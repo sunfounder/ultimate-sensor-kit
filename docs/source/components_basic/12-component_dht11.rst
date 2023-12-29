@@ -21,15 +21,6 @@
     :width: 300
     :align: center
 
-詳細情報はDHT11のデータシートを参照してください。
-
-回路図
-
-.. figure:: img/12_dht11_module_3.png
-    :width: 400
-    :align: center
-    :alt: DHT11回路図
-
 .. raw:: html
     
     <br/><br/>   
