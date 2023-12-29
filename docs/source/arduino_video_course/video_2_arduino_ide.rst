@@ -5,9 +5,9 @@ Explore the fundamentals of Arduino programming and the new features of Arduino 
 
 * **Introduction to Arduino**: Aims to bridge the instructional gap for beginners using the Arduino Uno R4.
 * **Exploring Arduino IDE**: An in-depth look at the features and tools of Arduino IDE version 2, making it accessible for new users.
-* **Programming Basics**: Understanding the structure of Arduino code, including setup and loop functions.
+* **Programming Basics**: Understanding the structure of Arduino code, including ``setup`` and ``loop`` functions.
 * **Onboard LEDs Control**: Practical examples of controlling the Arduino's built-in LEDs to demonstrate basic coding techniques.
-* **Syntax and Functions**: Emphasizing the importance of syntax in programming and introducing essential functions like `pinMode` and `digitalWrite`.
+* **Syntax and Functions**: Emphasizing the importance of syntax in programming and introducing essential functions like ``pinMode`` and ``digitalWrite``.
 
 **Video**
 
