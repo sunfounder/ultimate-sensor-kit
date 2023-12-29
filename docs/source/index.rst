@@ -69,6 +69,7 @@ ESP8266 WiFiモジュールを介してArduinoをBlynkなどのプラットフ�
 
     Ultimate Sensor Kitについて <self>
     arduino_start/00_get_start
+    arduino_video_course/arduino_video_course
     download_code
     components_basic/00-component_list
     iot_project/00-iot_project
