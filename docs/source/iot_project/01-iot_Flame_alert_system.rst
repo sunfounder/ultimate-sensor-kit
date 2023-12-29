@@ -49,7 +49,7 @@ Achten Sie darauf, dass bei **HARDWARE** **ESP8266** und bei **CONNECT TYPE** **
     <br/>  
 
 **2.2 Datenstrom**
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 Erstellen Sie im Bereich **Datastream** einen **Datastream** des Typs **Virtual Pin**, um den Wert des Flammensensors zu erfassen.
 
@@ -68,7 +68,7 @@ Geben Sie dem **Virtual Pin** den Namen ``flame_sensor_value``. Setzen Sie den *
     <br/>  
 
 **2.3 Ereignis**
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 Nun legen wir ein **event** an, das bei Flammenerkennung protokolliert und eine E-Mail-Benachrichtigung verschickt.
 
@@ -96,7 +96,7 @@ Navigieren Sie zur **Notifications**-Seite und konfigurieren Sie die E-Mail-Eins
     <br/>  
 
 **2.4 Web-Dashboard**
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 Wir richten auch das **Web-Dashboard** ein, um die vom Uno-Board übermittelten Sensordaten darzustellen.
 
@@ -121,7 +121,7 @@ In den Einstellungen des **Label-Widgets** wählen Sie als **Datenstrom** **flam
     <br/>  
 
 **2.5 Vorlage speichern**
-^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Vergessen Sie nicht, die Vorlage zum Schluss zu speichern.
 
@@ -260,7 +260,7 @@ Falls Sie die Vorlage nachträglich bearbeiten müssen, können Sie oben rechts 
 
    - Wir verwenden ``timer.setInterval(1000L, myTimerEvent)`` um das Timer-Intervall in setup() festzulegen. Hier setzen wir es so, dass die Funktion ``myTimerEvent()`` alle **1000 ms** ausgeführt wird. Den ersten Parameter von ``timer.setInterval(1000L, myTimerEvent)`` können Sie ändern, um das Intervall zwischen den Ausführungen von ``myTimerEvent`` zu ändern.
 
-      .. raw:: html
+   .. raw:: html
     
     <br/> 
 

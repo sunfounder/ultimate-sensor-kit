@@ -13,6 +13,8 @@ SunFounder is a company focused on STEAM education with products like open sourc
 
 <a id="update"></a>
 ## Update:
+2023-12-29: Add a video course
+
 2023-09-05: Release document version 1.0
 
 <a id="license"></a>

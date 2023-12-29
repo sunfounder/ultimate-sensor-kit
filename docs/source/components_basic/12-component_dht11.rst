@@ -21,15 +21,6 @@ Der Sensor hat lediglich drei benutzbare Anschlüsse: VCC, GND und DATA. Der Kom
     :width: 300
     :align: center
 
-Für weitere Informationen verweisen wir auf das Datenblatt des DHT11.
-
-Schaltungsdiagramm
-
-.. figure:: img/12_dht11_module_3.png
-    :width: 400
-    :align: center
-    :alt: DHT11 Schaltungsdiagramm
-
 .. raw:: html
     
     <br/><br/>   

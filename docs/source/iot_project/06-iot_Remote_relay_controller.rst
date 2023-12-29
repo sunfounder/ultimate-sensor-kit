@@ -73,8 +73,8 @@ Konfigurieren Sie das Web-Dashboard entsprechend dem folgenden Diagramm. Stellen
     :align: center
 
 .. raw:: html
-
-
+    
+    <br/>  
 
 3. Den Code ausführen
 -----------------------------
