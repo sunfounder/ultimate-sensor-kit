@@ -10,11 +10,11 @@ Der |link_video_arduino| wird kontinuierlich aktualisiert, bleiben Sie dran für
 .. toctree::
     :maxdepth: 1
 
-    video_1_instroduction
+    video_1_r4_minima
     video_2_arduino_ide
-    video_3_led_projects
-    video_4_base_numbers
-    video_5_data_types
-    video_6_automated_systems
+    video_3_basic_circuits
+    video_4_variables
+    video_5_digital_inputs
+    video_6_analog
 
 
