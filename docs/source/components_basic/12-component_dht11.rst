@@ -21,15 +21,6 @@ Only three pins are available for use: VCC, GND, and DATA. The communication pro
     :width: 300
     :align: center
 
-For more information, please refer to the datasheet of DHT11.
-
-The schematic diagram
-
-.. figure:: img/12_dht11_module_3.png
-    :width: 400
-    :align: center
-    :alt: DHT11 schematic diagram
-
 .. raw:: html
     
     <br/><br/>   
