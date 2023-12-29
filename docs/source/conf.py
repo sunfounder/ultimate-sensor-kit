@@ -110,6 +110,10 @@ rst_epilog = """
     <a href="https://docs.sunfounder.com/projects/ultimate-sensor-kit/en/latest/" target="_blank">English Online-tutorials</a>
 
 
+.. |link_video_arduino| raw:: html
+
+    <a href="https://www.youtube.com/playlist?list=PLVTsfY7Kr9qhzrfkvEuI1JhbqoOuchmKw" target="_blank">Arduino Video Courses</a>
+    
 
 .. |link_download_arduino| raw:: html
 

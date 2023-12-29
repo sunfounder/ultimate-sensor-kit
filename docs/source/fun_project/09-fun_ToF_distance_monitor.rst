@@ -30,7 +30,8 @@ This project is designed to measure and display the distance to an object using 
 #. Open the ``09-ToF_distance_monitor.ino`` file under the path of ``ultimate-sensor-kit\fun_project\09-ToF_distance_monitor``, or copy this code into **Arduino IDE**.
 
    .. note:: 
-   To install the library, use the Arduino Library Manager and search for **"Adafruit_VL53L0X"** and install it.
+      
+      To install the library, use the Arduino Library Manager and search for **"Adafruit_VL53L0X"** and install it.
 
    .. raw:: html
        
