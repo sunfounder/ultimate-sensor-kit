@@ -3,7 +3,7 @@
   analog pins A0 and A1, respectively, and prints them to the serial monitor.
 
   Board: Arduino Uno R4 (or R3)
-  Component: Josick moudule
+  Component: Joystick module
 */
 
 const int xPin = A0;  //the VRX attach to
