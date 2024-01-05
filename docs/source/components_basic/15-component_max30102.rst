@@ -102,7 +102,7 @@ Code explanation
 
 3. **Reading IR Value & Checking for Heartbeat**:
 
-   The IR value, which is indicative of the blood flow, is fetched from the sensor. The `checkForBeat()` function assesses if a heartbeat is detected based on this value.
+   The IR value, which is indicative of the blood flow, is fetched from the sensor. The ``checkForBeat()`` function assesses if a heartbeat is detected based on this value.
 
    .. code-block:: arduino
 
