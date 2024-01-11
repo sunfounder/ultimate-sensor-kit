@@ -15,6 +15,6 @@ void setup() {
 }
 
 void loop() {
-  Serial.println(analogRead(A0)); // The smaller the value, the higher the soil moisture level
+  Serial.println(analogRead(sensorPin)); // The smaller the value, the higher the soil moisture level
   delay(500);// Wait for 500 milliseconds before taking the next reading
 }
