@@ -90,7 +90,7 @@ The loop function is where the main logic of the program resides. This function 
 .. code-block:: arduino
 
     void loop() {
-      Serial.println(analogRead(A0));
+      Serial.println(analogRead(sensorPin));
       delay(500);
     }
 
