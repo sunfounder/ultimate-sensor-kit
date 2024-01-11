@@ -90,7 +90,7 @@ Die Funktion ``setup()`` wird einmal aufgerufen, wenn der Arduino eingeschaltet 
 .. code-block:: arduino
 
     void loop() {
-      Serial.println(analogRead(A0));
+      Serial.println(analogRead(sensorPin));
       delay(500);
     }
 
