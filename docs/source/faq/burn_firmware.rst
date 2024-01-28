@@ -4,7 +4,7 @@ How to re-burn the firmware for ESP8266 module?
 =====================================================
 
 
-Re-brun the Firmware with R4
+Re-burn the Firmware with R4
 ---------------------------------------
 
 **1. Build the circuit**
@@ -129,7 +129,7 @@ Now you can continue to follow :ref:`config_esp8266` to set the working mode and
 
 
 
-Re-brun the Firmware with R3
+Re-burn the Firmware with R3
 ---------------------------------------
 
 **1. Build the circuit**
