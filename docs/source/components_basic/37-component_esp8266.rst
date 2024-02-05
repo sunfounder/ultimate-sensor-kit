@@ -33,7 +33,7 @@ Pins of ESP8266 and their functions:
      - Description
    * - 1	
      - TXD	
-     - UART_TXD, sending; General Purpose Input/Outpu: GPIO1; Pull-down is not allowed when startup.
+     - UART_TXD, sending; General Purpose Input/Output: GPIO1; Pull-down is not allowed when startup.
    * - 2	
      - GND
      - GND

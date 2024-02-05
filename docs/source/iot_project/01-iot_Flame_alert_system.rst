@@ -105,13 +105,13 @@ Go to the **Notifications** page and configure email settings.
 
 We also need to set up the **Web Dashboard** to display the sensor data sent from the Uno board.
 
-Drag and drop an **Lable widget** on the **Web Dashboard** page.
+Drag and drop an **Label widget** on the **Web Dashboard** page.
 
 .. image:: img/new/01-web_dashboard_1_shadow.png
     :width: 100%
     :align: center
 
-In the settings page of the **Lable widget**, select **Datastream** as **flame_sensor_value(V0)**. Then set the color of **WIDGET BACKGROUND** to change with the value of data. When the displayed value is 1, it will be shown in green. When the value is 0, it will be shown in red.
+In the settings page of the **Label widget**, select **Datastream** as **flame_sensor_value(V0)**. Then set the color of **WIDGET BACKGROUND** to change with the value of data. When the displayed value is 1, it will be shown in green. When the value is 0, it will be shown in red.
 
 .. image:: img/new/01-web_dashboard_2_shadow.png
     :width: 100%

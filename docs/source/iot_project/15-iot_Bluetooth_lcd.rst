@@ -40,7 +40,7 @@ The project receives messages through a Bluetooth module connected to the UNO bo
 
 #. Open the Serial monitor(set baudrate to **9600**) to view debug messages. 
 
-3. App and Bluetooth moudule Connection
+3. App and Bluetooth module Connection
 -----------------------------------------------
 We can use an app called "Serial Bluetooth Terminal" to send messages from the Bluetooth module to Arduino.
 

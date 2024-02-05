@@ -198,7 +198,7 @@ Configure the Web Dashboard according to the following diagram. Be sure to bind 
 
    Here, we read the state of the virtual pin V0 from the Blynk app and control the relay accordingly. If the switch in the app is on (i.e., V0 is 1), the relay pin is set to HIGH, and if it's off, the pin is set to LOW.
 
-   - Whenever the value of a virtual pin on the BLYNK server changes, it will trigger ``BLYNK_WRITE()``. More detials at |link_blynk_write|.
+   - Whenever the value of a virtual pin on the BLYNK server changes, it will trigger ``BLYNK_WRITE()``. More details at |link_blynk_write|.
 
    .. raw:: html
     

@@ -3,7 +3,7 @@
 Touch Sensor Module
 ==========================
 
-.. image:: img/17_touch_sensor_moudle.png
+.. image:: img/17_touch_sensor_module.png
     :width: 200
     :align: center
 
@@ -20,7 +20,7 @@ Here is how the capacitive touch switch works:
 
 A capacitive touch switch has different layers—top insulating face plate followed by touch plate, another insulating layer and then ground plate.
 
-.. image:: img/17_touch_sensor_moudle_principle.jpeg
+.. image:: img/17_touch_sensor_module_principle.jpeg
     :width: 400
     :align: center
 
@@ -40,7 +40,7 @@ Usage
 
 **Circuit Assembly**
 
-.. image:: img/17_touch_sensor_moudle_circuit.png
+.. image:: img/17_touch_sensor_module_circuit.png
     :width: 400
     :align: center
 

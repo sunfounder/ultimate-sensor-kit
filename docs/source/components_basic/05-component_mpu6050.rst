@@ -1,6 +1,6 @@
 .. _cpn_mpu6050:
 
-Accelerometer & Gyroscope Moudle (MPU6050)
+Accelerometer & Gyroscope Module (MPU6050)
 ===============================================================
 
 .. image:: img/05_mpu6050_1.png
@@ -69,7 +69,7 @@ Usage
 **Hardware components**
 
 - Arduino Uno R4 or R3 board * 1
-- Accelerometer & Gyroscope Moudle(MPU6050) * 1
+- Accelerometer & Gyroscope Module(MPU6050) * 1
 - Jumper Wires
 
 **Circuit Assembly**

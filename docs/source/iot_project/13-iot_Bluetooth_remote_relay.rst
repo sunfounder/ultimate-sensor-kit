@@ -93,7 +93,7 @@ Now, let's begin.
 
 #. Open the Serial monitor(set baudrate to **9600**) to view debug messages. 
 
-4. App and Bluetooth moudule Connection
+4. App and Bluetooth module Connection
 -----------------------------------------------
 
 Ensure that the application created earlier is installed on your smartphone.

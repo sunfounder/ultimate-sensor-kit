@@ -1,6 +1,6 @@
 .. _cpn_dht11:
 
-Temperature and Humidity Sensor Moudle (DHT11)
+Temperature and Humidity Sensor Module (DHT11)
 ================================================
 
 .. image:: img/12_dht11_module.png
@@ -31,7 +31,7 @@ Usage
 **Hardware components**
 
 - Arduino Uno R4 or R3 board * 1
-- Temperature and Humidity Sensor Moudle(DHT11) * 1
+- Temperature and Humidity Sensor Module(DHT11) * 1
 - Jumper Wires
 
 
