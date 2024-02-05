@@ -5,7 +5,7 @@
   the message is '0', the relay is turned off.
 
   Board: Arduino Uno R4 or R3
-  Component:  JDY-31 Bluetooth Module and relay moudule
+  Component:  JDY-31 Bluetooth Module and relay module
 */
 
 #include <SoftwareSerial.h>

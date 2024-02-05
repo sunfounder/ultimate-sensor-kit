@@ -5,7 +5,7 @@
   the relay module is switched OFF (RelayPin is set LOW).
 
   Board: Arduino Uno R4 (or R3)
-  Component: Photoresistance Sensor Module and realy Module
+  Component: Photoresistance Sensor Module and relay Module
 */
 
 // Define the pin number for the relay module
