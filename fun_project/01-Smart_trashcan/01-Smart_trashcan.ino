@@ -1,5 +1,5 @@
 /*
-  This is an Arduino code for a smart trash can that automatically opens its lid when an object comes within 30cm of it.
+  This is an Arduino code for a smart trash can that automatically opens its lid when an object comes within 20cm of it.
   
   This Arduino code controls an SG90 servo motor based on readings from an ultrasonic distance sensor. 
   The distance is measured three times, and the average is computed. If the averaged distance is less 
