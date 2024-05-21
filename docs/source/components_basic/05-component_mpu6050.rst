@@ -1,3 +1,17 @@
+.. note::
+
+    Hallo und willkommen in der SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.
+
+    **Warum beitreten?**
+
+    - **Expertenunterstützung**: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.
+    - **Lernen & Teilen**: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.
+    - **Exklusive Vorschauen**: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.
+    - **Spezialrabatte**: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.
+    - **Festliche Aktionen und Gewinnspiele**: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.
+
+    👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [|link_sf_facebook|] und treten Sie heute bei!
+
 .. _cpn_mpu6050:
 
 Beschleunigungssensor & Gyroskop-Modul (MPU6050)
@@ -24,7 +38,7 @@ Legen Sie den MPU6050 flach auf den Tisch, sodass das Etikett nach oben zeigt un
     :align: center
 
 3-achsiger Beschleunigungsmesser
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Der Beschleunigungsmesser funktioniert nach dem Prinzip des piezoelektrischen Effekts, der es bestimmten Materialien ermöglicht, bei mechanischer Belastung eine elektrische Ladung zu erzeugen.
 
 Stellen Sie sich eine quaderförmige Box mit einer kleinen Kugel darin vor, wie im obigen Bild. Die Wände dieser Box bestehen aus piezoelektrischen Kristallen. Wenn Sie die Box neigen, bewegt sich die Kugel aufgrund der Schwerkraft in Richtung der Neigung. Die Wand, gegen die die Kugel stößt, erzeugt kleine piezoelektrische Ströme. Insgesamt gibt es drei gegenüberliegende Wandpaare in einem Quader, die jeweils einer Achse im 3D-Raum entsprechen: den X-, Y- und Z-Achsen. Abhängig von den Strömen, die von den piezoelektrischen Wänden erzeugt werden, können wir die Richtung und das Ausmaß der Neigung bestimmen.

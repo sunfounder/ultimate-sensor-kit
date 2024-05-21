@@ -1,3 +1,17 @@
+.. note::
+
+    Hallo und willkommen in der SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.
+
+    **Warum beitreten?**
+
+    - **Expertenunterstützung**: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.
+    - **Lernen & Teilen**: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.
+    - **Exklusive Vorschauen**: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.
+    - **Spezialrabatte**: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.
+    - **Festliche Aktionen und Gewinnspiele**: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.
+
+    👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [|link_sf_facebook|] und treten Sie heute bei!
+
 .. _cpn_ir_obstacle:
 
 IR-Hindernisvermeidungssensor-Modul
@@ -8,11 +22,11 @@ IR-Hindernisvermeidungssensor-Modul
     :align: center
 
 Einleitung
-----------
+------------
 Ein IR-Hindernisvermeidungssensor funktioniert nach dem Prinzip der Infrarotreflexion, um Hindernisse zu detektieren. Wenn kein Objekt im Weg ist, empfängt der Infrarotempfänger keine Signale. Befindet sich jedoch ein Hindernis im Weg, das das Infrarotlicht reflektiert, dann nimmt der Infrarotempfänger Signale auf.
 
 Funktionsweise
--------------
+----------------
 Ein Hindernisvermeidungssensor setzt sich in der Regel aus einem Infrarotsender, einem Infrarotempfänger und einem Potentiometer zusammen. Je nach Reflektionseigenschaften des Objekts schwächt der ausgesendete Infrarotstrahl mit zunehmender Entfernung ab und verschwindet letztlich. Trifft der Strahl auf ein Hindernis, wird er zurück zum Infrarotempfänger reflektiert. Dieser erkennt das Signal und signalisiert ein Hindernis im Pfad. Die Erfassungsreichweite kann über das integrierte Potentiometer justiert werden.
 
 .. image:: img/09_IR_obstacle_module_1.png
@@ -20,7 +34,7 @@ Ein Hindernisvermeidungssensor setzt sich in der Regel aus einem Infrarotsender,
     :align: center
 
 Anwendungsbeispiele
--------------------
+--------------------
 
 **Benötigte Hardware-Komponenten**
 

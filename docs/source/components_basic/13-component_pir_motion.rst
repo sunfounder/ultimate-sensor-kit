@@ -1,4 +1,18 @@
-.. _cpn_pir_bewegung:
+.. note::
+
+    Hallo und willkommen in der SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.
+
+    **Warum beitreten?**
+
+    - **Expertenunterstützung**: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.
+    - **Lernen & Teilen**: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.
+    - **Exklusive Vorschauen**: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.
+    - **Spezialrabatte**: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.
+    - **Festliche Aktionen und Gewinnspiele**: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.
+
+    👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [|link_sf_facebook|] und treten Sie heute bei!
+
+.. _cpn_pir_motion:
 
 PIR-Bewegungsmelder-Modul (HC-SR501)
 =====================================
@@ -30,15 +44,15 @@ Nach der Verkabelung des Sensormoduls erfolgt eine einminütige Initialisierung.
     <br/><br/> 
 
 Reichweiteneinstellung
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
 Durch Drehen des Potentiometers für die Reichweiteneinstellung im Uhrzeigersinn wird die Erfassungsreichweite erhöht, mit einem Maximalbereich von etwa 0-7 Metern. Dreht man es gegen den Uhrzeigersinn, verringert sich die Reichweite auf etwa 0-3 Meter.
 
 Verzögerungseinstellung
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
 Dreht man das Potentiometer für die Verzögerungseinstellung im Uhrzeigersinn, erhöht sich die Verzögerungszeit. Die maximale Verzögerungszeit kann bis zu 300 Sekunden betragen. In entgegengesetzter Richtung verringert sich die Verzögerung auf ein Minimum von 5 Sekunden.
 
 Zwei Trigger-Modi
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
 Durch Verwendung einer Jumperkappe können verschiedene Modi ausgewählt werden.
 
 * H: Wiederholbarer Trigger-Modus. Nach der Erfassung einer Bewegung gibt das Modul ein hohes Signal aus. Während der anschließenden Verzögerungszeit bleibt das Ausgangssignal bei erneuter Bewegungserkennung hoch.
