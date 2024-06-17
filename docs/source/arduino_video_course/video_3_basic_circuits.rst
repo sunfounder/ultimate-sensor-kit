@@ -1,28 +1,28 @@
 .. note::
 
-    Hallo und willkommen in der SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.
+    Hallo, willkommen in der SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasten-Community auf Facebook! Tauchen Sie tiefer in Raspberry Pi, Arduino und ESP32 ein, zusammen mit anderen Enthusiasten.
 
     **Warum beitreten?**
 
-    - **Expertenunterstützung**: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.
-    - **Lernen & Teilen**: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.
-    - **Exklusive Vorschauen**: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.
-    - **Spezialrabatte**: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.
+    - **Expertenunterstützung**: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Community und unseres Teams.
+    - **Lernen & Teilen**: Tauschen Sie Tipps und Tutorials aus, um Ihre Fähigkeiten zu verbessern.
+    - **Exklusive Vorschauen**: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und Vorab-Blicken.
+    - **Spezielle Rabatte**: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.
     - **Festliche Aktionen und Gewinnspiele**: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.
 
-    👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [|link_sf_facebook|] und treten Sie heute bei!
+    👉 Bereit, mit uns zu entdecken und zu kreieren? Klicken Sie auf [|link_sf_facebook|] und treten Sie noch heute bei!
 
-Video 3: Grundlagen der Schaltkreise und des Breadboardings
-================================================================
+Video 3: Grundlegende Schaltungen und Steckbrett
+======================================================
 
-Ein detailliertes Tutorial zum Aufbau grundlegender Schaltkreise und zur Verwendung eines Steckbretts, mit Fokus auf praktische Anwendungen mit dem Arduino Uno R4 Minima.
+Ein detailliertes Tutorial zum Aufbau grundlegender Schaltungen und zur Verwendung eines Steckbretts, mit Fokus auf praktische Anwendungen mit dem Arduino Uno R4 Minima.
 
-* **Grundlagen der Schaltkreise**: Einführung in die wesentlichen Komponenten eines elektrischen Schaltkreises.
-* **Ohmsches Gesetz**: Erklärung der Beziehung zwischen Strom, Spannung und Widerstand.
-* **Technik des Breadboardings**: Anleitung zur Verwendung eines Steckbretts für den Schaltkreisaufbau.
-* **Reihenschaltungen**: Verständnis der Spannungsteilung und der Prinzipien von Reihenverbindungen.
+* **Grundlagen der Schaltungstechnik**: Einführung in die wesentlichen Komponenten eines elektrischen Schaltkreises.
+* **Ohmsches Gesetz**: Erklärung des Verhältnisses zwischen Strom, Spannung und Widerstand.
+* **Steckbrett-Technik**: Anleitung zur Verwendung eines Steckbretts für den Schaltungsaufbau.
+* **Serienschaltungen**: Verständnis der Spannungsaufteilung und der Prinzipien von Serienschaltungen.
 * **Parallelschaltungen**: Erforschung der Eigenschaften und Vorteile von Parallelschaltungen.
-* **LED-Schaltkreise**: Praktische Tipps zur Auswahl von Widerstandswerten und zum Aufbau von LED-Schaltkreisen mit Arduino.
+* **LED-Schaltungen**: Praktische Tipps zur Auswahl von Widerstandswerten und zum Aufbau von LED-Schaltungen mit Arduino.
 
 **Video**
 
@@ -32,6 +32,6 @@ Ein detailliertes Tutorial zum Aufbau grundlegender Schaltkreise und zur Verwend
 
     <br/><br/>
 
-**Zugehörige Online-Tutorials**
+**Verwandte Online-Tutorials**
 
 * :ref:`cpn_rgb`

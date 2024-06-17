@@ -1,28 +1,28 @@
 .. note::
 
-    Hallo und willkommen in der SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.
+    Hallo, willkommen in der SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasten-Community auf Facebook! Tauchen Sie zusammen mit anderen Enthusiasten tiefer in Raspberry Pi, Arduino und ESP32 ein.
 
     **Warum beitreten?**
 
-    - **Expertenunterstützung**: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.
-    - **Lernen & Teilen**: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.
-    - **Exklusive Vorschauen**: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.
-    - **Spezialrabatte**: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.
+    - **Expertenunterstützung**: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Community und unseres Teams.
+    - **Lernen & Teilen**: Tauschen Sie Tipps und Tutorials aus, um Ihre Fähigkeiten zu verbessern.
+    - **Exklusive Vorschauen**: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und Vorab-Blicken.
+    - **Spezielle Rabatte**: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.
     - **Festliche Aktionen und Gewinnspiele**: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.
 
-    👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [|link_sf_facebook|] und treten Sie heute bei!
+    👉 Bereit, mit uns zu entdecken und zu kreieren? Klicken Sie auf [|link_sf_facebook|] und treten Sie noch heute bei!
 
-Video 6: Analog-Digital-Umwandlung
-========================================
+Video 6: Analog-Digital-Wandlung
+=======================================
 
-Dieses Tutorial vertieft sich in die Analog-Digital-Umwandlung, erläutert Binärzahlen, Bits und Bytes, veranschaulicht durch die Verwendung eines Potentiometers mit Arduino Uno R4 Minima.
+Dieses Tutorial befasst sich mit der Analog-Digital-Wandlung, erläutert Binärzahlen, Bits und Bytes und zeigt dies anhand eines Potentiometers mit dem Arduino Uno R4 Minima.
 
-* **Analog-Digital-Umwandlung**: Demonstration der Umwandlungsprinzipien mit einem Potentiometer.
-* **Digitale Darstellung**: Illustration, wie analoge Signale digitalisiert werden.
-* **Programmierung für die Umwandlung**: Erstellung von Arduino-Sketchen zur Umwandlung von Dezimal- in Binärzahlen.
-* **Bits und Bytes**: Erkundung der Grundlagen von Binärzahlen und deren Bedeutung in der digitalen Datenverarbeitung.
-* ``analogRead()`` **Funktion**: Einsatz dieser Funktion zum Lesen und Umwandeln analoger Signale.
-* **ADC-Auflösung**: Verständnis, wie die Auflösung die Präzision von analogen Eingangsmessungen beeinflusst.
+* **Analog-Digital-Wandlung**: Demonstration der Umwandlungsprinzipien mit einem Potentiometer.
+* **Digitale Darstellung**: Veranschaulichung, wie analoge Signale digitalisiert werden.
+* **Programmierung zur Umwandlung**: Schreiben von Arduino-Skizzen zur Umwandlung von Dezimal- in Binärzahlen.
+* **Bits und Bytes**: Grundlagen der Binärzahlen und ihre Bedeutung in der digitalen Datenverarbeitung.
+* ``analogRead()`` **Funktion**: Verwendung dieser Funktion zum Lesen und Umwandeln von analogen Signalen.
+* **ADC-Auflösung**: Verständnis, wie die Auflösung die Genauigkeit der analogen Eingabemessungen beeinflusst.
 
 **Video**
 
@@ -32,8 +32,7 @@ Dieses Tutorial vertieft sich in die Analog-Digital-Umwandlung, erläutert Binä
 
     <br/><br/>
 
-**Zugehörige Online-Tutorials**
+**Verwandte Online-Tutorials**
 
 * :ref:`cpn_potentiometer`
 * :ref:`fun_potentiometer_scale_value`
-  

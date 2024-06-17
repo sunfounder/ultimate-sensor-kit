@@ -1,28 +1,28 @@
 .. note::
 
-    Hallo und willkommen in der SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.
+    Hallo, willkommen in der SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasten-Community auf Facebook! Tauchen Sie tiefer in Raspberry Pi, Arduino und ESP32 ein, zusammen mit anderen Enthusiasten.
 
     **Warum beitreten?**
 
-    - **Expertenunterstützung**: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.
-    - **Lernen & Teilen**: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.
-    - **Exklusive Vorschauen**: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.
-    - **Spezialrabatte**: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.
+    - **Expertenunterstützung**: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Community und unseres Teams.
+    - **Lernen & Teilen**: Tauschen Sie Tipps und Tutorials aus, um Ihre Fähigkeiten zu verbessern.
+    - **Exklusive Vorschauen**: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und Vorab-Blicken.
+    - **Spezielle Rabatte**: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.
     - **Festliche Aktionen und Gewinnspiele**: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.
 
-    👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [|link_sf_facebook|] und treten Sie heute bei!
+    👉 Bereit, mit uns zu entdecken und zu kreieren? Klicken Sie auf [|link_sf_facebook|] und treten Sie noch heute bei!
 
 Video 1 - Arduino Uno R4 Minima
 ==================================
 
-Eine schrittweise Einführung in Arduino Uno R4 Minima, die dessen Eigenschaften, Einrichtung und ein grundlegendes Programm zum Blinken einer LED umfasst.
+Eine schrittweise Einführung in den Arduino Uno R4 Minima, die seine Funktionen, die Einrichtung und ein einfaches LED-Blinkprogramm abdeckt.
 
-* **Einführung**: Überblick über den Arduino Uno R4 Minima Schulungskurs und seinen Lehrplan.
+* **Einführung**: Überblick über den Arduino Uno R4 Minima Trainingskurs und sein Curriculum.
 * **Arduino Vergleich**: Detaillierte Darstellung der Verbesserungen und Funktionen des Uno R4 Minima im Vergleich zum Uno R3.
-* **Wesentliche Merkmale**: Erforschung der fortgeschrittenen Funktionen und Fähigkeiten des Uno R4 Minima.
-* **Pin-Funktionen**: Umfassender Leitfaden zu den verschiedenen Pinbelegungen und ihren Funktionalitäten.
-* **IDE-Einrichtung**: Anleitung zur Installation und Konfiguration der Arduino IDE für Uno R4 Minima.
-* **Erstes Programm**: Demonstration eines grundlegenden LED-Blinkprogramms als Einführungsprojekt.
+* **Hauptmerkmale**: Erkundung der erweiterten Funktionen und Fähigkeiten des Uno R4 Minima.
+* **Pin-Funktionen**: Umfassender Leitfaden zu den verschiedenen Pinbelegungen und ihren Funktionen.
+* **IDE-Einrichtung**: Anweisungen zur Installation und Konfiguration der Arduino IDE für den Uno R4 Minima.
+* **Erstes Programm**: Vorführung eines einfachen LED-Blinkprogramms als Einführungsprojekt.
 
 **Video**
 
@@ -32,6 +32,7 @@ Eine schrittweise Einführung in Arduino Uno R4 Minima, die dessen Eigenschaften
 
     <br/><br/>
 
-**Zugehörige Online-Tutorials**
+**Verwandte Online-Tutorials**
 
 * :ref:`cpn_uno`
+

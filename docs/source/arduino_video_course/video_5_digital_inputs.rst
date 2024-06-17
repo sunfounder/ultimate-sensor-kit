@@ -1,28 +1,28 @@
 .. note::
 
-    Hallo und willkommen in der SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.
+    Hallo, willkommen in der SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasten-Community auf Facebook! Tauchen Sie tiefer in Raspberry Pi, Arduino und ESP32 ein, zusammen mit anderen Enthusiasten.
 
     **Warum beitreten?**
 
-    - **Expertenunterstützung**: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.
-    - **Lernen & Teilen**: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.
-    - **Exklusive Vorschauen**: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.
-    - **Spezialrabatte**: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.
+    - **Expertenunterstützung**: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Community und unseres Teams.
+    - **Lernen & Teilen**: Tauschen Sie Tipps und Tutorials aus, um Ihre Fähigkeiten zu verbessern.
+    - **Exklusive Vorschauen**: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und Vorab-Blicken.
+    - **Spezielle Rabatte**: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.
     - **Festliche Aktionen und Gewinnspiele**: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.
 
-    👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [|link_sf_facebook|] und treten Sie heute bei!
+    👉 Bereit, mit uns zu entdecken und zu kreieren? Klicken Sie auf [|link_sf_facebook|] und treten Sie noch heute bei!
 
-Video 5: Digitaleingänge und bedingte Logik
-===============================================
+Video 5: Digitale Eingänge und bedingte Logik
+===================================================
 
-Entdecken Sie, wie man digitale Eingänge integriert, schwebende Pins mit Pull-Up-/Down-Widerständen stabilisiert und bedingte Aussagen in Arduino Uno R4 Minima-Projekten anwendet, exemplarisch dargestellt an einer Ampelsimulation.
+Entdecken Sie, wie Sie digitale Eingänge integrieren, schwebende Pins mit Pull-Up/Down-Widerständen stabilisieren und bedingte Anweisungen in Arduino Uno R4 Minima-Projekten anwenden, exemplifiziert durch eine Ampelsimulation.
 
-* **Digitaleingänge**: Erlernen des Anschlusses von Druckknopfschaltern als digitale Eingänge.
-* **Pull-Up-/Down-Widerstände**: Verständnis für die Verwendung von Widerständen zur Stabilisierung schwebender Pins in Digitaleingängen.
-* **Serienmonitor-Werkzeug**: Verwendung des Serienmonitors der Arduino IDE für textuelle Ausgaben vom Arduino-Board.
-* **If-Else-Anweisungen**: Implementierung von If-Else-Logik für Entscheidungsfindungen in Arduino-Sketchen.
-* **Ampelsimulation**: Demonstration der Konzepte mit einer Ampelschaltung unter Verwendung von LEDs und Drucktasten.
-* ``digitalRead()`` **Funktion**: Einsatz dieser Funktion zur Lesung digitaler Eingänge und entsprechenden Steuerung der Ausgänge.
+* **Digitale Eingänge**: Lernen Sie, Drucktaster als digitale Eingänge anzuschließen.
+* **Pull-Up/Down-Widerstände**: Verstehen Sie die Verwendung von Widerständen zur Stabilisierung schwebender Pins bei digitalen Eingängen.
+* **Serieller Monitor**: Verwenden Sie den seriellen Monitor der Arduino IDE für Textausgaben von der Arduino-Platine.
+* **If-Else-Anweisungen**: Implementieren Sie if-else-Logik für Entscheidungsfindungen in Arduino-Skizzen.
+* **Ampelsimulation**: Demonstration der Konzepte mit einem Ampelschaltkreis unter Verwendung von LEDs und Drucktastern.
+* ``digitalRead()`` **Funktion**: Verwenden Sie diese Funktion, um digitale Eingänge zu lesen und Ausgänge entsprechend zu steuern.
 
 **Video**
 
@@ -32,7 +32,7 @@ Entdecken Sie, wie man digitale Eingänge integriert, schwebende Pins mit Pull-U
 
     <br/><br/>
 
-**Zugehörige Online-Tutorials**
+**Verwandte Online-Tutorials**
 
 * :ref:`cpn_button`
 * :ref:`cpn_traffic`
