@@ -1,21 +1,21 @@
 .. note::
 
-    こんにちは、SunFounderのRaspberry Pi & Arduino & ESP32愛好家コミュニティへようこそ！Facebook上でRaspberry Pi、Arduino、ESP32についてもっと深く掘り下げ、他の愛好家と交流しましょう。
+    こんにちは、SunFounderのRaspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebookへようこそ！ 他のエンスージアストと一緒に、Raspberry Pi、Arduino、ESP32についてもっと深く掘り下げましょう。
 
-    **参加する理由は？**
+    **なぜ参加するのか？**
 
-    - **エキスパートサポート**：コミュニティやチームの助けを借りて、販売後の問題や技術的な課題を解決します。
-    - **学び＆共有**：ヒントやチュートリアルを交換してスキルを向上させましょう。
-    - **独占的なプレビュー**：新製品の発表や先行プレビューに早期アクセスしましょう。
-    - **特別割引**：最新製品の独占割引をお楽しみください。
-    - **祭りのプロモーションとギフト**：ギフトや祝日のプロモーションに参加しましょう。
+    - **専門的なサポート**: コミュニティとチームの助けを借りて、販売後の問題や技術的な課題を解決します。
+    - **学びと共有**: スキルを向上させるためのヒントやチュートリアルを交換します。
+    - **限定プレビュー**: 新製品の発表や先行情報に早期アクセスできます。
+    - **特別割引**: 最新製品の専用割引を楽しめます。
+    - **フェスティブプロモーションとギブアウェイ**: ギブアウェイやホリデープロモーションに参加できます。
 
-    👉 私たちと一緒に探索し、創造する準備はできていますか？[|link_sf_facebook|]をクリックして今すぐ参加しましょう！
+    👉 私たちと一緒に探求し、創造する準備はできましたか？ [|link_sf_facebook|] をクリックして、今すぐ参加しましょう！
 
-Arduinoビデオ講座
-======================
+Arduinoビデオコース
+=========================
 
-SunFounderのUltimate Sensor Kitを使用し、Arduinoの世界を体験する充実したArduinoビデオ講座にご招待します。このシリーズは、ArduinoエコシステムとUNO R4 Minimaボードの機能への紹介から始まり、実践的なアプリケーションとプログラミング技術に深く潜ります。LEDの制御基本、シリアル通信の理解、RGB LED、ボタン、ポテンショメーターなどの様々なコンポーネントの操作を学ぶことができます。この講座に一歩ずつ従えば、ただコードをコピー＆ペーストするだけでなく、独自のコードを書き、好きなようにArduinoプロジェクトを実装することができるようになります。
+SunFounderのUltimate Sensor Kitを使用して、包括的なArduinoビデオコースを通じてArduinoの世界を旅しましょう。このシリーズは、ArduinoエコシステムとUNO R4 Minimaボードの機能の紹介から始まり、実践的なアプリケーションやプログラミング技術に深く掘り下げていきます。LEDの制御、シリアル通信の理解、RGB LED、ボタン、ポテンショメータなどの様々なコンポーネントの操作の基本を学びます。コースに従って一歩一歩進めていけば、コードのコピー＆ペーストだけでなく、自分でコードを書き、好きなようにArduinoプロジェクトを実装する方法を習得できます。
 
 |link_video_arduino| は継続的に更新されていますので、お見逃しなく！
 
@@ -30,5 +30,12 @@ SunFounderのUltimate Sensor Kitを使用し、Arduinoの世界を体験する�
     video_4_variables
     video_5_digital_inputs
     video_6_analog
-
-
+    video_7_Understand_Photoresistors
+    video_8_Controlling_RGB_Full_Color_LED
+    video_9_User-Defined_Functions_and_Serial_Input
+    video_10_Play_Musical_Tones
+    video_11_Servo_Motor
+    video_12_millis_Function
+    video_13_Hardware_Interrupts
+    video_14_I2C 16x2_LCD
+    video_15_SSD1306_OLED_Display
