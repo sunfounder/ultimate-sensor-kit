@@ -30,5 +30,12 @@ The |link_video_arduino| is being continuously updated, stay tuned for more!
     video_4_variables
     video_5_digital_inputs
     video_6_analog
-
-
+    video_7_Understand_Photoresistors
+    video_8_Controlling_RGB_Full_Color_LED
+    video_9_User-Defined_Functions_and_Serial_Input
+    video_10_Play_Musical_Tones
+    video_11_Servo_Motor
+    video_12_millis_Function
+    video_13_Hardware_Interrupts
+    video_14_I2C 16x2_LCD
+    video_15_SSD1306_OLED_Display
