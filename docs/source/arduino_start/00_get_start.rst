@@ -58,13 +58,13 @@ Arduino is quite a large system. It has software, hardware, and a very huge onli
 What can Arduino do?
 ---------------------
 
-Speaking of which, you may have doubts about what Arduino can actually do. Suffice it to say, Arduino will solve all your problems.
+Speaking of which, you may have doubts about what Arduino can actually do. 
 
 Technically speaking, Arduino is a programmable logic controller. It is a development board that can be used to create many exciting and creative electronic creations: such as remote-controlled cars, robotic arms, bionic robots, smart homes, etc. 
 
-Arduino boards are straightforward, simple, and powerful, suitable for students, makers and even professional programmers. 
+Arduino boards are straightforward, simple, and powerful, making them suitable for students, makers, and professional programmers alike.
 
-To this day, electronics enthusiasts worldwide continue to develop creative electronic creations based on Arduino development boards.
+To this day, electronics enthusiasts worldwide continue to develop creative projects using Arduino development boards, demonstrating its wide range of applications and capabilities.
 
 .. What is Arduino UNO?
 .. ----------------------
