@@ -30,6 +30,7 @@ The following is an introduction to each component, including its working princi
     
     36-component_uno
     39-component_breadboard
+    40-component_wires
 
 **Sensor**
 
