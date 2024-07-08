@@ -23,12 +23,13 @@ After opening the package, please check whether the quantity of components is co
 
 The following is an introduction to each component, including its working principle and corresponding project. **Each component has a simple code example to help you get started quickly.**
 
-**Control Board**
+**Basic**
 
 .. toctree:: 
     :maxdepth: 1
     
     36-component_uno
+    39-component_breadboard
 
 **Sensor**
 
