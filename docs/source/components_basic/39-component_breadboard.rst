@@ -62,7 +62,7 @@ Most breadboards have numbers, letters, and plus and minus signs on them. These 
 
    <br/>
 
-The sides of the breadboard are usually distinguished by red and blue (or other colors), as well as plus and minus signs, and are usually used to connect to the power supply, known as the power bus. When building a circuit, it is common to connect the negative terminal to the blue (-) column and the positive terminal to the red (+) column.
+Multiple types of jumper wires can be used in a single project. The color of jumper wires varies to help identify the connections between different parts of the circuit, but the colors themselves do not indicate different functions. However, it is common practice to use red wires for positive power connections and black wires for negative power or ground connections.
 
 .. image:: img/39_breadboard_powerbus.jpg
     :width: 100%
