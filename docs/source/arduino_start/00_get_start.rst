@@ -42,7 +42,7 @@ Arduino ist ein weitreichendes System. Es umfasst Software, Hardware und eine se
 Was kann Arduino tun?
 ---------------------
 
-Vielleicht fragen Sie sich, was Arduino eigentlich leisten kann. Kurz gesagt, Arduino wird all Ihre Probleme lösen.
+Vielleicht fragen Sie sich, was Arduino eigentlich leisten kann. 
 
 Technisch betrachtet ist Arduino ein programmierbarer Logikcontroller. Es handelt sich um ein Entwicklungsboard, mit dem sich viele aufregende und kreative elektronische Kreationen realisieren lassen: von ferngesteuerten Autos und Roboterarmen über bionische Roboter bis hin zu intelligenten Haushaltslösungen und mehr.
 
