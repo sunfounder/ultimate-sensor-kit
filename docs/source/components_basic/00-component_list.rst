@@ -21,12 +21,14 @@ Nach dem Öffnen der Verpackung überprüfen Sie bitte, ob die Anzahl der Kompon
 
 Im Folgenden wird eine Einführung zu jeder Komponente gegeben, einschließlich ihres Funktionsprinzips und des zugehörigen Projekts. **Zu jeder Komponente gibt es ein einfaches Code-Beispiel, das Ihnen einen schnellen Einstieg ermöglicht.**
 
-**Steuerplatine**
+**Grundlagen**
 
 .. toctree::
     :maxdepth: 1
     
     36-component_uno
+    39-component_breadboard
+    40-component_wires
 
 **Sensorik**
 
