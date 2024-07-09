@@ -28,6 +28,9 @@ The Infrared Speed Sensor Module is an IR counter that has an IR transmitter and
 
 Principle
 ---------------------------
+
+The speed sensor module is mainly used to detect changes in rotational speed or velocity. When an object passes by the H2010 sensor, it generates a pulse signal. The integrated LM393 comparator inside the module compares this pulse signal with a preset threshold, producing a stable high-level output signal.
+
 The Infrared Speed Sensor Module has 1 H2010 photocell, which consists of a phototransistor and an infrared light emitter packaged in a 10 cm wide black plastic housing.
 
 .. image:: img/18_LM393_module_2.png
@@ -39,6 +42,17 @@ When operating, the infrared light-emitting diode continuously emits infrared li
 .. image:: img/18_LM393_module_3.png
     :width: 900
     :align: center
+
+Module Schematic Diagram
+---------------------------
+
+.. image:: img/18_speed_sensor_module_schematic.png
+    :width: 100%
+    :align: center
+
+.. raw:: html
+
+   <br/>
 
 
 Usage

@@ -21,6 +21,10 @@ Photoresistor Module
     :width: 400
     :align: center
 
+.. raw:: html
+
+   <br/>
+
 Introduction
 ---------------------------
 A photoresistor module is a device that can detect the intensity of light in the environment. It can be used for various purposes, such as adjusting the brightness of a device, detecting day and night, or activating a light switch.
@@ -39,6 +43,16 @@ Principle
 ---------------------------
 The photoresistor module works on the principle of changing resistance in response to different light intensities. The sensor has a built-in potentiometer that adjusts the sensor's digital output (D0) threshold. When the intensity of light exceeds a certain threshold, the resistance of the sensor changes. This change in resistance is then converted to an electrical signal that can be read by the Arduino board.
 
+Module Schematic Diagram
+---------------------------
+
+.. image:: img/07_photoresistor_module_schematic.png
+    :width: 100%
+    :align: center
+
+.. raw:: html
+
+   <br/>
 
 Usage
 ---------------------------

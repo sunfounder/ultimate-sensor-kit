@@ -21,6 +21,10 @@ PIR Motion Module (HC-SR501)
     :width: 300
     :align: center
 
+.. raw:: html
+
+   <br/>
+
 Introduction
 ---------------------------
 The Passive Infrared(PIR) Motion Sensor is a sensor that detects motion. It is commonly used in security systems and automatic lighting systems. The sensor has two slots that detect infrared radiation. When an object, such as a person, passes in front of the sensor, it detects a change in the amount of infrared radiation and triggers an output signal.

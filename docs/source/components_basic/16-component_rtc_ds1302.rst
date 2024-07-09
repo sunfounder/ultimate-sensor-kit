@@ -23,11 +23,22 @@ Real Time Clock Module (DS1302)
 
 Introduction
 ---------------------------
-A DS1302 real-time clock module is a device that can keep track of the date and time. It can help you create projects that need accurate timing and scheduling. It can also be used to create a digital clock with Arduino.
+The DS1302 module is a Real-Time Clock (RTC) module that can track years, months, days, weekdays, hours, minutes, and seconds. It also has the ability to adjust for leap years. It is useful for creating projects requiring precise timing and scheduling.
 
 Principle
 ---------------------------
 DS1302 is a trickle charging clock chip, launched by DALLAS in America. With a built-in real-time clock/calendar and a 31-byte static RAM, it can communicate with MCU through simple serial ports. The real-time clock/calendar circuit provides information about second, minute, hour, day, week, month, and year. DS1302 can automatically adjust the number of days per month and days in leap year. You can determine to use a 24-hour or 12-hour system by AM/PM selection. It can simply communicate with MCU in synchronous serial way and only needs to use three port cables: Reset (RST) cable, I/O data (SDA) cable and serial clock (SCL) cable.
+
+Module Schematic Diagram
+---------------------------
+
+.. image:: img/16_rtc_ds1302_module_schematic.png
+    :width: 100%
+    :align: center
+
+.. raw:: html
+
+   <br/>
 
 Usage
 ---------------------------

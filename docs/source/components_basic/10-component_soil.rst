@@ -21,6 +21,10 @@ Capacitive Soil Moisture Module
     :width: 600
     :align: center
 
+.. raw:: html
+
+   <br/>
+
 Introduction
 ---------------------------
 
@@ -35,9 +39,13 @@ It is made of corrosion-resistant materials and has an excellent service life. I
 
 The hardware schematic of the capacitive soil moisture sensor is shown below.
 
-.. image:: img/10_solid_schematic.png
-    :width: 500
+.. image:: img/10_soil_schematic_2.png
+    :width: 100%
     :align: center
+
+.. raw:: html
+    
+    <br/><br/>   
 
 There is a fixed frequency oscillator, which is built with a 555 timer IC. The generated square wave is then fed to the sensor like a capacitor. However, for the square wave signal, the capacitor has a certain reactance or, for the sake of argument, a resistor with a pure ohmic resistor (10k resistor on pin 3) to form a voltage divider.
 
@@ -83,34 +91,37 @@ Code explanation
 ^^^^^^^^^^^^^^^^^^^^
 
 1. Defining sensor pin
-In this part of the code, a constant integer named sensorPin is defined and assigned the value A0. A0 is the analog input pin on the Arduino board where the soil moisture sensor is connected.
 
-.. code-block:: arduino
-
-    const int sensorPin = A0;
+   In this part of the code, a constant integer named sensorPin is defined and assigned the value A0. A0 is the analog input pin on the Arduino board where the soil moisture sensor is connected.
+   
+   .. code-block:: arduino
+   
+       const int sensorPin = A0;
 
 2. Setting up the serial communication
-The ``setup()`` function is called once when the Arduino is powered on or reset. Here, we initialize the Serial library at 9600 baud rate. The baud rate is the rate at which information is transferred. In this case, it's 9600 bits per second (bps).
 
-.. code-block:: arduino
-
-    void setup() {
-      Serial.begin(9600);
-    }
+   The ``setup()`` function is called once when the Arduino is powered on or reset. Here, we initialize the Serial library at 9600 baud rate. The baud rate is the rate at which information is transferred. In this case, it's 9600 bits per second (bps).
+   
+   .. code-block:: arduino
+   
+       void setup() {
+         Serial.begin(9600);
+       }
 
 3. Reading data and printing to the serial monitor
-The loop function is where the main logic of the program resides. This function loops indefinitely once the program starts. Inside the loop, we use the ``analogRead()`` function to read the data from the moisture sensor and print it to the Serial Monitor. We then pause the program for 500 milliseconds using the delay function before taking the next reading.
 
-.. code-block:: arduino
+   The loop function is where the main logic of the program resides. This function loops indefinitely once the program starts. Inside the loop, we use the ``analogRead()`` function to read the data from the moisture sensor and print it to the Serial Monitor. We then pause the program for 500 milliseconds using the delay function before taking the next reading.
+   
+   .. code-block:: arduino
+   
+       void loop() {
+         Serial.println(analogRead(sensorPin));
+         delay(500);
+       }
 
-    void loop() {
-      Serial.println(analogRead(sensorPin));
-      delay(500);
-    }
-
-.. note:: 
-    
-    The smaller the value, the higher the soil moisture level.
+   .. note:: 
+       
+       The smaller the value, the higher the soil moisture level.
 
 Additional Ideas
 ^^^^^^^^^^^^^^^^^^^^

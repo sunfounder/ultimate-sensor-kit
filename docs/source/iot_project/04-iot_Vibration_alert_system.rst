@@ -13,7 +13,7 @@
 
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
-.. _iot_Intrusion_alert_system:
+.. _iot_Vibration_alert_system:
 
 Vibration Alert System with IFTTT
 =====================================

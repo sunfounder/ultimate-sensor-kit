@@ -21,6 +21,10 @@
     :width: 400
     :align: center
 
+.. raw:: html
+
+   <br/>
+
 Introduction
 ---------------------------
 5V relay modules are devices that can switch high voltage or high current devices on and off using a 5V signal from Arduino. They can be used to control devices such as lights, fans, motors, solenoids, etc. 5V relay has three high voltage terminals (NC, C, and NO) which connect to the device you want to control. The other side has three low voltage pins (Ground, Vcc, and Signal) which connect to the Arduino.
@@ -50,6 +54,17 @@ Set of electrical contacts - There are two contact points:
 Molded frame - This is typically made of plastic and provides structural support and protection for the relay.
 
 The working principle of relay is simple. When power is supplied to the relay, currents start flowing through the control coil; as a result, the electromagnet starts energizing. Then the armature is attracted to the coil, pulling down the moving contact together thus connecting with the normally open contacts. So the circuit with the load is energized. Then breaking the circuit would be a similar case, as the moving contact will be pulled up to the normally closed contacts under the force of the spring. In this way, the switching on and off of the relay can control the state of a load circuit.
+
+Module Schematic Diagram
+---------------------------
+
+.. image:: img/25_relay_module_schematic.png
+    :width: 100%
+    :align: center
+
+.. raw:: html
+
+   <br/>
 
 Usage
 ---------------------------

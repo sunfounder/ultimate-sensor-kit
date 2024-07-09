@@ -31,6 +31,16 @@ Principle
 
 Raindrop sensor is basically a board on which nickel is coated in the form of lines. It works on the principal of resistance. When there is no rain drop on board. Resistance is high so we gets high voltage according to V=IR. When rain drop present it reduces the resistance because water is conductor of electricity and presence of water connects nickel lines in parallel so reduced resistance and reduced voltage drop across it. The more intense the rainfall the lower the resistance.
 
+Module Schematic Diagram
+---------------------------
+
+.. image:: img/11_raindrop_detection_module_schematic.png
+    :width: 100%
+    :align: center
+
+.. raw:: html
+
+   <br/>
 
 Usage
 ---------------------------
@@ -72,31 +82,34 @@ Code explanation
 ^^^^^^^^^^^^^^^^^^^^
 
 1. Defining sensor pin
-Here, a constant integer named ``sensorPin`` is defined and assigned the value 7. This corresponds to the digital pin on the Arduino board where the raindrops detection sensor is connected.
 
-.. code-block:: arduino
-
-    const int sensorPin = 7;
+   Here, a constant integer named ``sensorPin`` is defined and assigned the value 7. This corresponds to the digital pin on the Arduino board where the raindrops detection sensor is connected.
+   
+   .. code-block:: arduino
+   
+       const int sensorPin = 7;
 
 2. Setting up the pin mode and initiating serial communication
-In the ``setup()`` function, two essential steps are performed. Firstly, ``pinMode()`` is used to set the ``sensorPin`` as an input, enabling us to read digital values from the raindrops sensor. Secondly, serial communication is initialized with a baud rate of 9600.
 
-.. code-block:: arduino
-
-    void setup() {
-      pinMode(sensorPin, INPUT);
-      Serial.begin(9600);
-    }
+   In the ``setup()`` function, two essential steps are performed. Firstly, ``pinMode()`` is used to set the ``sensorPin`` as an input, enabling us to read digital values from the raindrops sensor. Secondly, serial communication is initialized with a baud rate of 9600.
+   
+   .. code-block:: arduino
+   
+       void setup() {
+         pinMode(sensorPin, INPUT);
+         Serial.begin(9600);
+       }
 
 3. Reading the digital value and sending it to the serial monitor. 
-The ``loop()`` function reads the digital value from the raindrops sensor using ``digitalRead()``. This value (either HIGH or LOW) is printed to the Serial Monitor. The program then waits for 50 milliseconds before the next reading.
 
-.. code-block:: arduino
-
-    void loop() {
-      Serial.println(digitalRead(sensorPin));
-      delay(50);
-    }
+   The ``loop()`` function reads the digital value from the raindrops sensor using ``digitalRead()``. This value (either HIGH or LOW) is printed to the Serial Monitor. The program then waits for 50 milliseconds before the next reading.
+   
+   .. code-block:: arduino
+   
+       void loop() {
+         Serial.println(digitalRead(sensorPin));
+         delay(50);
+       }
 
 Additional Ideas
 ^^^^^^^^^^^^^^^^^^^^

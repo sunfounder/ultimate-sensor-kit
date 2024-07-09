@@ -38,9 +38,24 @@ A capacitive touch switch has different layers—top insulating face plate follo
     :width: 400
     :align: center
 
+.. raw:: html
+
+   <br/>
+
 In practice, a capacitive sensor can be made on a double-sided PCB by regarding one side as the touch sensor and the opposite side as ground plate of the capacitor. When power is applied across these plates, the two plates get charged. In equilibrium state, the plates have the same voltage as the power source.
 
 The touch detector circuit has an oscillator whose frequency is dependent on capacitance of the touchpad. When a finger is moved close to the touchpad, additional capacitance causes frequency of this internal oscillator to change. The detector circuit tracks oscillator frequency at timed intervals, and when the shift crosses the threshold change, the circuit triggers a key-press event.
+
+Module Schematic Diagram
+---------------------------
+
+.. image:: img/17_touch_sensor_moudle_schematic.png
+    :width: 100%
+    :align: center
+
+.. raw:: html
+
+   <br/>
 
 Usage
 ---------------------------

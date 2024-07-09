@@ -21,6 +21,10 @@ RGB Module
     :width: 350
     :align: center
 
+.. raw:: html
+
+   <br/>
+
 Introduction
 ---------------------------
 The RGB Full Color LED module emits a range of colors by mixing red, green, and blue light. Each color is adjusted by using PWM.It can be used to create colorful lighting effects or to learn how to use PWM (pulse-width modulation) with Arduino.
@@ -38,6 +42,17 @@ Colors from the LED can be combined. For example, mix blue light and green light
 
 Based on this method, we can use the three primary colors to mix the visible light of any color according to different proportions. For example, orange can be produced by more red and less green.
 The strength of the primary colors (red, blue, green) is adjusted in order to achieve full color mixing effect.PWM is a technique where the duty cycle of a digital signal is modified, adjusting the percentage of time that the signal remains active within a given period. By changing the duty cycle, we can make the LED appear brighter or dimmer.
+
+Module Schematic Diagram
+---------------------------
+
+.. image:: img/24_rgb_module_schematic.png
+    :width: 100%
+    :align: center
+
+.. raw:: html
+
+   <br/>
 
 Usage
 ---------------------------

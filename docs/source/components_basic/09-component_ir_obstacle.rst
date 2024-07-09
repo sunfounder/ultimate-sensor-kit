@@ -33,6 +33,21 @@ An obstacle avoidance sensor mainly consists of an infrared transmitter, an infr
     :width: 600
     :align: center
 
+.. raw:: html
+
+   <br/>
+
+Module Schematic Diagram
+---------------------------
+
+.. image:: img/09_ir_obstacle_module_schematic.png
+    :width: 100%
+    :align: center
+
+.. raw:: html
+
+   <br/>
+
 Usage
 ---------------------------
 

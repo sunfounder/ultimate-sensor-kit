@@ -21,6 +21,10 @@ Joystick Module
     :width: 400
     :align: center
 
+.. raw:: html
+
+   <br/>
+
 Introduction
 ---------------------------
 A joystick module is a device that can measure the movement of a knob in two directions: horizontal (X-axis) and vertical (Y-axis). A joystick module can be used to control various things such as games, robots, cameras, etc.
@@ -30,11 +34,22 @@ Principle
 ---------------------------
 Joystick operates based on the resistance change of two potentiometers (usually 10-kilo ohms). By changing resistance in x and y directions, Arduino receives varying voltages which are interpreted to x and y coordinates. The processor needs an ADC unit to change the joystick’s analog values into digital values and perform necessary processing.
 
-Arduino boards have six 10-bits ADC channels. It means the Arduino’s reference voltage (5 volts) is divided to 1024 segments. When joystick moves along the x-axis, the ADC value rises from 0 to 1023, with the value 512 in the middle. The image below displays the ADC approximate value based on the joystick position.
+The default ``analogRead()`` resolution for Arduino Uno boards is 10 bits, which means the Arduino’s reference voltage (5 volts) is divided into 1024 segments. When the joystick moves along the x-axis, the ADC value rises from 0 to 1023, with the value 512 in the middle. The image below displays the ADC approximate value based on the joystick position.
 
 .. image:: img/19_joystick_xy.png
     :width: 400
     :align: center
+
+Module Schematic Diagram
+---------------------------
+
+.. image:: img/19_joystick_schematic.png
+    :width: 100%
+    :align: center
+
+.. raw:: html
+
+   <br/>
 
 Usage
 ---------------------------

@@ -21,11 +21,14 @@ Temperature and Humidity Sensor Module (DHT11)
     :width: 400
     :align: center
 
+.. raw:: html
+
+   <br/>
+
 Introduction
 ---------------------------
 The digital temperature and humidity sensor DHT11 is a composite sensor that contains a calibrated digital signal output of temperature and humidity. The technology of a dedicated digital modules collection and the temperature and humidity sensing technology are applied to ensure that the product has high reliability and excellent long-term stability.
 
-The sensor includes a resistive sense of wet component and an NTC temperature measurement device, and is connected with a high-performance 8-bit microcontroller.
 
 Principle
 ---------------------------
@@ -38,6 +41,18 @@ Only three pins are available for use: VCC, GND, and DATA. The communication pro
 .. raw:: html
     
     <br/><br/>   
+
+
+Module Schematic Diagram
+---------------------------
+
+.. image:: img/12_dht11_module_schematic.png
+    :width: 80%
+    :align: center
+
+.. raw:: html
+
+   <br/>
 
 Usage
 ---------------------------

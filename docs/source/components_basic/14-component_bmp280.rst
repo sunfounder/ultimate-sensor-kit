@@ -23,11 +23,23 @@ Temperature, Humidity & Pressure Sensor (BMP280)
 
 Introduction
 ---------------------------
-A GY-BMP280-3.3 high precision atmospheric pressure sensor module is a device that can measure the air pressure and temperature with high accuracy. It can help you monitor the weather conditions and create projects that use altitude or barometric pressure data.
+The BMP280, developed by Bosch Sensortec, is a high-precision, low-power digital sensor module for measuring barometric pressure and temperature. It is widely used in mobile devices, weather monitoring, altitude estimations, and various other applications that require accurate atmospheric pressure and temperature data due to its small size and superior performance.
 
 Principle
 ---------------------------
-A GY-BMP280-3.3 high precision atmospheric pressure sensor module works by using a BMP280 sensor from Bosch that can measure both pressure and temperature. The BMP280 sensor has a piezoresistive pressure sensor and a thermistor inside a sealed metal chamber. The piezoresistive sensor changes its resistance according to the pressure applied to the chamber. The thermistor changes its resistance according to the temperature inside the chamber. The module has an integrated circuit that converts the resistance values into digital signals and sends them to the Arduino through either I2C or SPI interface. 
+A BMP280 high precision atmospheric pressure sensor module works by using a BMP280 sensor from Bosch that can measure both pressure and temperature. The BMP280 sensor has a piezoresistive pressure sensor and a thermistor inside a sealed metal chamber. The piezoresistive sensor changes its resistance according to the pressure applied to the chamber. The thermistor changes its resistance according to the temperature inside the chamber. The module has an integrated circuit that converts the resistance values into digital signals and sends them to the Arduino through either I2C or SPI interface. 
+
+
+Module Schematic Diagram
+---------------------------
+
+.. image:: img/14_bmp280_module_schematic.png
+    :width: 100%
+    :align: center
+
+.. raw:: html
+
+   <br/>
 
 
 Usage

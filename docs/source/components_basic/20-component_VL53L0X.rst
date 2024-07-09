@@ -26,7 +26,7 @@ Time of Flight Micro-LIDAR Distance Sensor (VL53L0X)
 Introduction
 ---------------------------
 
-The VL53L0X module is a Time of Flight (ToF) ranging sensor that can accurately measure distances up to 2 meters using laser technology. It is a multi-sensor module with an integrated laser emitter, detector, and microcontroller. The module has all required components such as pull-up resistors and capacitors. It can handle about 50 - 1200 mm of range distance.
+The VL53L0X module is a Time of Flight (ToF) ranging sensor that can accurately measure distances using laser technology. It is a multi-sensor module with an integrated laser emitter, detector, and microcontroller. The module has all required components such as pull-up resistors and capacitors. It can handle about 50 - 1200 mm of range distance.
 
 
 Principle

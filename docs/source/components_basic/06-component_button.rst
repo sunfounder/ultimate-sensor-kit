@@ -21,6 +21,10 @@ Button Module
     :width: 350
     :align: center
 
+.. raw:: html
+
+   <br/>
+
 .. _btn_intro:
 
 Introduction
@@ -42,6 +46,17 @@ Since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pr
 .. image:: img/06_button_3.png
     :width: 700
     :align: center
+
+Module Schematic Diagram
+---------------------------
+
+.. image:: img/06_button_module_schematic.png
+    :width: 100%
+    :align: center
+
+.. raw:: html
+
+   <br/>
 
 Usage
 ---------------------------

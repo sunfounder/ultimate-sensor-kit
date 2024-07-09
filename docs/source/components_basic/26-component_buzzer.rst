@@ -21,6 +21,10 @@ Passive Buzzer Module
     :width: 400
     :align: center
 
+.. raw:: html
+
+   <br/>
+
 Introduction
 ---------------------------
 A passive buzzer is a device that generates sound when an electrical signal is applied to it. It is called passive because it does not have an internal oscillator to generate sound on its own. Instead, it relies on an external signal from a microcontroller like Arduino to produce sound. The passive buzzer module is a small electronic component that contains a passive buzzer and some additional circuitry that makes it easier to use with Arduino.
@@ -28,6 +32,17 @@ A passive buzzer is a device that generates sound when an electrical signal is a
 Principle
 ---------------------------
 The working principle of the passive buzzer module is based on the piezoelectric effect. When an electrical signal is applied to the buzzer, it causes a piezoelectric crystal inside the buzzer to vibrate at a specific frequency. This vibration produces sound waves that we can hear. The frequency of the sound produced by the buzzer depends on the frequency of the electrical signal applied to it. By changing the frequency of the signal, we can change the pitch of the sound produced by the buzzer.
+
+Module Schematic Diagram
+---------------------------
+
+.. image:: img/26_passive_buzzer_module_schematic.png
+    :width: 80%
+    :align: center
+
+.. raw:: html
+
+   <br/>
 
 Usage
 ---------------------------
@@ -83,6 +98,10 @@ Code explanation
 
    * ``noteDurations[]`` is an array that stores the duration of each note in the melody.
 
+   .. raw:: html
+
+      <br/>
+
    .. code-block:: arduino
    
       const int buzzerPin = 8;
@@ -103,7 +122,9 @@ Code explanation
 
    * The ``noTone()`` function stops the sound.
 
+   .. raw:: html
 
+      <br/>
 
    .. code-block:: arduino
    
