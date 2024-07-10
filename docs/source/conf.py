@@ -248,6 +248,8 @@ rst_epilog = """
 
     <a href="https://blynk.io/" target="_blank">Blynk</a> 
 
+.. |link_install_arduino_lib| raw:: html
 
+    <a href="https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-installing-a-library" target="_blank"> Installing libraries in Arduino IDE 2</a>
     
 """

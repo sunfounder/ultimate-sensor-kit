@@ -20,4 +20,5 @@ FAQ
 
     blynk_mobile
     burn_firmware
+    09_add_lib
 
