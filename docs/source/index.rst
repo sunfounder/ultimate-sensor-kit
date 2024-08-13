@@ -12,10 +12,12 @@
 
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
-SunFounder Ultimate Sensor Kit
+SunFounder |link_Ultimate_Kit|
 ==================================================
 
-Thanks for choosing our Ultimate Sensor Kit.
+* |link_Ultimate_Sensor_Kit|
+
+Thanks for choosing our |link_Ultimate_Kit|.
 
 .. note::
     This document is available in the following languages.

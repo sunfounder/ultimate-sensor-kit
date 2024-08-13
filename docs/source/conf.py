@@ -251,5 +251,13 @@ rst_epilog = """
 .. |link_install_arduino_lib| raw:: html
 
     <a href="https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-installing-a-library" target="_blank"> Installing libraries in Arduino IDE 2</a>
-    
+
+.. |link_Ultimate_Sensor_Kit| raw:: html
+
+    <a href="https://www.sunfounder.com/products/sunfounder-ultimate-sensor-kit-with-original-arduino-uno-r4-minima?_pos=7&_sid=8489ed41c&_ss=r" target="_blank">Purchase Link for Ultimate Sensor Kit</a>
+
+.. |link_Ultimate_Kit| raw:: html
+
+    <a href="https://www.sunfounder.com/products/sunfounder-ultimate-sensor-kit-with-original-arduino-uno-r4-minima?_pos=7&_sid=8489ed41c&_ss=r" target="_blank">Ultimate Sensor Kit</a>
+
 """
