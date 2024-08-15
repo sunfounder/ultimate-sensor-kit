@@ -249,6 +249,13 @@ rst_epilog = """
 
     <a href="https://blynk.io/" target="_blank">Blynk</a> 
 
+.. |link_Ultimate_Sensor_Kit| raw:: html
+
+    <a href="https://www.sunfounder.com/products/sunfounder-ultimate-sensor-kit-with-original-arduino-uno-r4-minima?_pos=7&_sid=8489ed41c&_ss=r" target="_blank">Kauflink für Ultimate Sensor Kit</a>
+
+.. |link_Ultimate_Kit| raw:: html
+
+    <a href="https://www.sunfounder.com/products/sunfounder-ultimate-sensor-kit-with-original-arduino-uno-r4-minima?_pos=7&_sid=8489ed41c&_ss=r" target="_blank">Ultimate Sensor Kit</a>
 
     
 """
