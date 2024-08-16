@@ -17,7 +17,7 @@ SunFounder |link_Ultimate_Kit|
 
 * |link_Ultimate_Sensor_Kit|
 
-SunFounder |link_Ultimate_Kit|をお選びいただき、ありがとうございます。
+SunFounder Ultimate Sensor Kit をお選びいただき、ありがとうございます。
 
 .. note::
     このドキュメントは以下の言語で利用可能です。
