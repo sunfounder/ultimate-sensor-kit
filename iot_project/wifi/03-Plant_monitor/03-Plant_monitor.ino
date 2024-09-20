@@ -28,7 +28,7 @@ char pass[] = "your_password";  // Set password to "" for open networks.
 // Software Serial on Uno
 #include <SoftwareSerial.h>
 SoftwareSerial EspSerial(2, 3);  // RX, TX
-#define ESP8266_BAUD 9600        // Set the ESP8266 baud rate
+#define ESP8266_BAUD 115200        // Set the ESP8266 baud rate
 ESP8266 wifi(&EspSerial);
 
 // Configure DHT
