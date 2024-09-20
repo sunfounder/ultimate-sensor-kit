@@ -12,13 +12,13 @@
 
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
-1.2 Configuring the Blynk
+1.1 Configuring the Blynk
 ==============================
 
 
 #. Go to the `BLYNK <https://blynk.io/>`_ and click **START FREE**. 
 
-   .. image:: img/sp220607_142551.png
+   .. image:: img/blynk_start_free.png
         :width: 90%
 
    .. raw:: html
@@ -49,9 +49,15 @@
    .. image:: img/sp220607_143244.png
     :width: 90%
 
+   .. note:: if not, please click the swim ring icon in the upper right corner.
+
+      .. image:: img/blynk_start_help.png
+
    .. raw:: html
 
       <br/><br/>
+
+
 
 #. Next, we need to create a template and device with this **Quick Start**, click **Let's go**.
 
@@ -98,16 +104,16 @@
 
       <br/><br/>
 
-#. Click the **Search** button and you will see the new device you just created.
+.. #. Click the **Search** button and you will see the new device you just created.
 
-   .. image:: img/sp20220614174410.png
-    :width: 90%
+..    .. image:: img/sp20220614174410.png
+..     :width: 90%
 
-   .. raw:: html
+..    .. raw:: html
 
-      <br/><br/>
+..       <br/><br/>
 
-#. Go to this **Quickstart Device** and click **Device Info**, you will see ``TEMPLATE_ID``, ``DEVICE_NAME``, and ``AUTH_TOKEN`` on the **Device info** page, and you will need to copy them later.
+.. #. Go to this **Quickstart Device** and click **Device Info**, you will see ``TEMPLATE_ID``, ``DEVICE_NAME``, and ``AUTH_TOKEN`` on the **Device info** page, and you will need to copy them later.
 
-   .. image:: img/sp20220614174721.png
-    :width: 90%
+..    .. image:: img/sp20220614174721.png
+..     :width: 90%

@@ -29,7 +29,6 @@ Follow the steps below, and note that you must do them in order and not skip any
 .. toctree::
     :maxdepth: 2
 
-    01-iot_esp8266_config
     02-iot_blynk_config
     03-iot_add_lib
     04-iot_connect_r4_blynk

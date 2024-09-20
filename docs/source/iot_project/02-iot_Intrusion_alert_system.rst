@@ -82,7 +82,7 @@ Create **Datastreams** of type **Virtual Pin** in the **Datastream** page receiv
 
 Make sure that you have set up two Virtual Pins according to the steps above.
 
-.. image:: img/new/02-datastream_3_shadow.png
+.. image:: img/0914/02-datastream_3_shadow.png
     :width: 100%
 
 
@@ -119,7 +119,7 @@ We also need to configure the **Web Dashboard** to interact with the Intrusion A
 
 Drag and drop a **Switch widget** and a **Label widget** to the **Web Dashboard** page.
 
-.. image:: img/new/02-web_dashboard_1_shadow.png
+.. image:: img/0914/02-web_dashboard_1_shadow.png
     :width: 100%
     :align: center
 
@@ -140,7 +140,7 @@ In the settings page of the **Label widget**, select **Datastream** as **Current
 
 At last, remember to save the template.
 
-.. image:: img/new/02-save_template_shadow.png
+.. image:: img/0914/02-save_template_shadow.png
     :width: 70%
     :align: center
 

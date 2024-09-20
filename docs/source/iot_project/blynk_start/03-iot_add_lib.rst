@@ -14,7 +14,7 @@
 
 .. _iot_add_library:
 
-1.3 Adding the required libraries
+1.2 Adding the required libraries
 =====================================
 
 You need to add the correct libraries for the Arduino IDE to use Blynk.
@@ -24,7 +24,7 @@ You need to add the correct libraries for the Arduino IDE to use Blynk.
    .. note::
     Please note that the version number shown in the image below may be outdated. We highly recommend downloading and installing the latest version available.
 
-   .. image:: img/new/add_lib_shadow.png
+   .. image:: img/blynk_download_lib.png
 
 #. Unzip this file and then enter the ``libraries`` folder to see the following folders.
 

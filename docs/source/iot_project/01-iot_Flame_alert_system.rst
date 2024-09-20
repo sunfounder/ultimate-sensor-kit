@@ -53,7 +53,7 @@ In this chapter, we will guide you through the process of creating a home flame 
 
 Firstly, we need to establish a template on Blynk. Follow the steps below to create a **"Flame Alert System"** template. 
 
-.. image:: img/new/01-create_template_1_shadow.png
+.. image:: img/0914/01-NEW_TEMP.png
     :width: 70%
     :align: center
 
@@ -72,8 +72,11 @@ Ensure that the **HARDWARE** is configured as **ESP8266** and the **CONNECT TYPE
 
 Create a **Datastream** of type **Virtual Pin** in the **Datastream** page to get the value of Flame sensor module. 
 
-.. image:: img/new/01-datastream_1_shadow.png
-    :width: 90%
+
+.. image:: img/0914/01-NEW_DATASTREAM1.png
+    :align: center
+
+.. image:: img/0914/01-NEW_DATASTREAM2.png
     :align: center
 
 Set the name of the **Virtual Pin** to ``flame_sensor_value``. Set the **DATA TYPE** to **Integer** and MIN and MAX to **0** and **1**.
@@ -91,22 +94,25 @@ Set the name of the **Virtual Pin** to ``flame_sensor_value``. Set the **DATA TY
 
 Next, we will create an **event** that logs the detection of flames and sends an email notification.
 
-.. image:: img/new/01-event_1_shadow.png
+.. image:: img/0914/01-CREAT_EVENT_0.png
     :width: 80%
     :align: center
 
 .. note::
     It is recommended to keep it consistent with my settings, otherwise you may need to modify the code to run the project.
 
+
+
 Set **EVENT NAME** to ``flame_detection_alert``. At the same time, you can customize the content of email sent by setting **DESCRIPTION** for event triggering. You can also set frequency limits for event triggering below.
 
-.. image:: img/new/01-event_2_shadow.png
+
+.. image:: img/0914/01-CREAT_EVENT_1.png
     :width: 80%
     :align: center
 
 Go to the **Notifications** page and configure email settings.
 
-.. image:: img/new/01-event_3_shadow.png
+.. image:: img/0914/01-CREAT_EVENT_2.png
     :width: 80%
     :align: center
 
@@ -121,13 +127,14 @@ We also need to set up the **Web Dashboard** to display the sensor data sent fro
 
 Drag and drop an **Label widget** on the **Web Dashboard** page.
 
-.. image:: img/new/01-web_dashboard_1_shadow.png
+.. image:: img/0914/01-DASHBOARD_0.png
     :width: 100%
     :align: center
 
 In the settings page of the **Label widget**, select **Datastream** as **flame_sensor_value(V0)**. Then set the color of **WIDGET BACKGROUND** to change with the value of data. When the displayed value is 1, it will be shown in green. When the value is 0, it will be shown in red.
 
-.. image:: img/new/01-web_dashboard_2_shadow.png
+
+.. image:: img/0914/01-DASHBOARD_1.png
     :width: 100%
     :align: center
 
@@ -144,13 +151,13 @@ In the settings page of the **Label widget**, select **Datastream** as **flame_s
 
 At last, remember to save the template.
 
-.. image:: img/new/01-save_template_shadow.png
+.. image:: img/0914/01-DASHBOARD_3.png
     :width: 70%
     :align: center
 
 In case you need to edit the template, you can click on the edit button in the upper right corner.
 
-.. image:: img/new/01-save_template_2_shadow.png
+.. image:: img/0914/01-DASHBOARD_4.png
     :width: 70%
     :align: center
 
@@ -177,19 +184,20 @@ In case you need to edit the template, you can click on the edit button in the u
       #define BLYNK_TEMPLATE_NAME "Flame Alert System"
       #define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxx"
    
-   .. image:: img/new/01-create_device_1_shadow.png
+
+   .. image:: img/0914/01-DEVICE.png
     :width: 80%
     :align: center
 
-   .. image:: img/new/01-create_device_2_shadow.png
+   .. image:: img/0914/01-DEVICE_2.png
     :width: 80%
     :align: center
 
-   .. image:: img/new/01-create_device_3_shadow.png
+   .. image:: img/0914/01-DEVICE_3.png
     :width: 80%
     :align: center
 
-   .. image:: img/new/01-create_device_4_shadow.png
+   .. image:: img/0914/01-DEVICE_4.png
     :width: 80%
     :align: center
 
@@ -220,9 +228,6 @@ In case you need to edit the template, you can click on the edit button in the u
 
 #. Now, Blynk will show the data read from flame sensor. In the label widget, you can see the value read by the flame sensor. When the displayed value is 1, the background of the label will be shown in green. When the value is 0, the background of the label will be shown in red and Blynk will send you an alert email.
    
-   .. image:: img/new/01-ready_2_shadow.png
-    :width: 80%
-    :align: center
 
 #. If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`.
 
