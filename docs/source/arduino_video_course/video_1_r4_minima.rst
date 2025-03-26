@@ -28,7 +28,14 @@ A step-by-step introduction to Arduino Uno R4 Minima, covering its features, set
 
 .. raw:: html
 
-    <iframe width="600" height="400" src="https://www.youtube.com/embed/qOREtvVVXGE?si=J05Wf4jf8fiG34hG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="100%" 
+        style="aspect-ratio: 16/9; max-width: 100%;"
+        src="https://www.youtube.com/embed/qOREtvVVXGE?si=J05Wf4jf8fiG34hG" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
 
     <br/><br/>
 

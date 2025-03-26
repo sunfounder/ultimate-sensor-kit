@@ -29,7 +29,14 @@ This tutorial dives into the essentials of using an I2C OLED display with Arduin
 
 .. raw:: html
 
-    <iframe width="600" height="400" src="https://www.youtube.com/embed/lKqhyvSyZ8E?si=F8JJOgSi2lYqarfP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="100%" 
+        style="aspect-ratio: 16/9; max-width: 100%;"
+        src="https://www.youtube.com/embed/lKqhyvSyZ8E?si=F8JJOgSi2lYqarfP" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
 
     <br/><br/>
 
