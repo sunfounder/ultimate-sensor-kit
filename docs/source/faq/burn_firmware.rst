@@ -14,12 +14,88 @@
 
 .. _burn_firmware:
 
-How to re-burn the firmware for ESP8266 module?
-=====================================================
+Firmware on the Wireless Module
+==================================
+
+The kit has been shipped in two versions. Which one you have decides whether there is
+anything to flash at all.
+
+
+ESPC2-01 (current version)
+---------------------------------------
+
+**There is nothing to flash.** The module leaves the factory with the ESP-AT firmware
+already burned, and the kit's sketches only send it AT commands. This chapter is here so
+you can *check* the module, not so you can reprogram it.
+
+**1. Check the version**
+
+Wire the module as in :ref:`c201_connect_blynk`, open the **Serial Monitor** at **115200**,
+set the line ending to **Both NL & CR** (or send with Enter) and type:
+
+.. code-block:: text
+
+    AT+GMR
+
+A healthy module answers with four lines and ``OK``:
+
+.. code-block:: text
+
+    AT version:4.1.1.0(ba4dd0e - ESP32C2 - Jul 31 2025 08:37:25)
+    SDK version:v5.4.1-643-g8ad0d3d8f2f-dirty
+    compile time(7c092f9):Oct 22 2026 16:41:44
+    Bin version:v4.1.1.0(ESP32C2-2MB-BLE)
+    OK
+
+.. note::
+
+   The line that tells you this is **our** build is ``compile time(7c092f9)...``.
+   ``Bin version:v4.1.1.0(ESP32C2-2MB-BLE)`` is printed by the official Bluetooth-only
+   build as well, so it is not proof on its own.
+
+**2. Check that the Wi-Fi part is really included**
+
+.. code-block:: text
+
+    AT+CWMODE?
+
+The answer must be:
+
+.. code-block:: text
+
+    +CWMODE:1
+    OK
+
+An ``ERROR`` instead of ``+CWMODE:1`` means the module carries a Bluetooth-only firmware,
+so the Wi-Fi projects of this kit cannot work with it.
+
+**3. If the module does not answer at all**
+
+Go through these in order - nearly every case is one of them:
+
+* the adapter is powered from **5 V**, not 3.3 V;
+* the external power supply (9-12 V) is plugged into the DC jack of the R4 Minima - on
+  USB alone the module browns out while its radio starts;
+* TX of the module goes to RX of the board and RX to TX;
+* IO9 is left **floating** (do not pull it low - that is download mode);
+* press the reset button on the board and try ``AT`` again after about two seconds.
+
+**4. If the firmware is the wrong one**
+
+This cannot be repaired in the field: the module has to be taken out of the adapter,
+put into download mode and flashed with the matching ESP-AT build. Please send the
+``AT+GMR`` output to **service@sunfounder.com** and we will replace the module.
+
+
+ESP-01 (earlier version)
+---------------------------------------
+
+The sections below describe the earlier version of the kit, which uses an ESP-01 module.
+Unlike the ESPC2-01, that module can be re-flashed by the customer.
 
 
 Re-burn the Firmware with R4
----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **1. Build the circuit**
 
@@ -144,7 +220,7 @@ Now you can continue to follow :ref:`config_esp8266` to set the working mode and
 
 
 Re-burn the Firmware with R3
----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **1. Build the circuit**
 

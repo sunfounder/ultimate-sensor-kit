@@ -32,53 +32,20 @@ Thanks for choosing our |link_Ultimate_Kit|.
     :width: 800
 
 
-Ever been disappointed by an online learning kit that came with just a basic guide? Have you dreamed of delving into the world of electronics, but felt overwhelmed by the complexity?
+The **Ultimate Sensor Kit** is built around the Arduino Uno R4 Minima and comes with
+more than 30 modules - ultrasonic, flame, accelerometer and gyroscope, pulse oximeter,
+and many more. Every module is paired with a beginner-friendly example, so you get the
+parts and the know-how.
 
-Seen brilliant electronic projects showcased by enthusiasts and wondered how they got started?
+Work through the course step by step and you will go from blinking an LED to real
+projects: IoT projects that report to **Blynk** over Wi-Fi, Bluetooth projects controlled
+from your phone, and fun builds such as a smart trash can or an automatic soap dispenser.
 
-Introducing: The Ultimate Sensor Kit with Arduino Uno R4 Minima. The answer to all your creative challenges in one compact package.
+If you have any questions or other interesting ideas, feel free to send an email to
+service@sunfounder.com.
 
-Driven by the revolutionary Arduino R4, this kit signifies a new era for open-source enthusiasts. With a powerful 32-bit processor, ample memory, and more, it's designed to seamlessly integrate with both new and existing projects.
+**Table of contents**
 
-Not only does it come with over 30 state-of-the-art modules like the Ultrasonic Sensor, Flame Sensor, Accelerometer & Gyroscope, and even the Pulse Oximeter and Heart Rate Sensor, but each component is paired with a beginner-friendly code example. This ensures you not only possess the tools but also the initial know-how.
-
-Dive deep into the world of IoT with tailored projects that link the Arduino to platforms like Blynk via the ESP8266 WiFi module. Unleash your innovation by designing projects such as the Flame Alert System, Intrusion Alert System, and even a Bluetooth-controlled environmental monitor.
-
-But that's not all; dive into an array of engaging projects! Construct a smart trash can, develop an automatic soap dispenser, or perhaps a motion-triggered relay. The kit expands your horizons, allowing you to translate imagination into tangible creations.
-
-This isn't just about following steps; it’s about understanding, experimenting, and inventing. Instead of merely replicating, you'll be crafting projects that are uniquely yours.
-
-Why just be a spectator when you can be a creator? Begin your journey into the captivating world of electronics with the Ultimate Sensor Kit. Your adventure starts here!
-
-If you have any questions or other interesting ideas, feel free to send an email to service@sunfounder.com.
-
-* :ref:`About the display language`
-* :ref:`Table of contents`
-* :ref:`Copyright Notice`
-
-
-About the display language
---------------------------------
-
-.. note::
-
-    In addition to English, we are working on other languages for this course. 
-    Please contact service@sunfounder.com if you are interested in helping, 
-    and we will give you a free product in return. 
-
-
-Currently the online tutorial supports English, German and Japanese. Please click the **Read the Docs** icon in the lower left corner of the page to change the display language.
-
-.. image:: img/translation.png
-    :align: center
-
-.. raw:: html
-
-    <br/>
-
-
-Table of contents
---------------------------------
 
 .. toctree:: 
     :maxdepth: 2
@@ -88,12 +55,12 @@ Table of contents
     arduino_video_course/arduino_video_course
     download_code
     components_basic/00-component_list
-    iot_project/00-iot_project
+    iot_project
     fun_project/fun_project
     faq/00_faq
     thank-learning
+ 
+**Copyright Notice**
 
-Copyright Notice
------------------------
 
 All contents including but not limited to texts, images, and code in this manual are owned by the SunFounder Company. You should only use it for personal study, investigation, enjoyment, or other non-commercial or nonprofit purposes, under the related regulations and copyrights laws, without infringing the legal rights of the author and relevant right holders. For any individual or organization that uses these for commercial profit without permission, the Company reserves the right to take legal action.

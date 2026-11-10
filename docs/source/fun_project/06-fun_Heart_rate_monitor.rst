@@ -40,7 +40,7 @@ This Arduino project aims to build a simple Heart Rate Monitor using a MAX30102 
 2. Code
 -----------------------------
 
-#. Open the ``06-Heart_rate_monitor.ino`` file under the path of ``ultimate-sensor-kit\fun_project\06-Heart_rate_monitor``, or copy this code into **Arduino IDE**.
+#. Open the ``06-Heart_rate_monitor.ino`` file under the path of ``ultimate-sensor-kit\code\fun_project\06-Heart_rate_monitor``, or copy this code into **Arduino IDE**.
 
    .. note:: 
       To install the library, use the Arduino Library Manager and search for **"SparkFun MAX3010x"** and install it. 

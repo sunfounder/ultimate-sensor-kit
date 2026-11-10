@@ -151,6 +151,10 @@ rst_epilog = """
 
     <a href="../../_static/pdf/esp8266_at_instruction_set_en.pdf" target="_blank">ESP8266 AT Instruction Set</a>
 
+.. |link_esp_at| raw:: html
+
+    <a href="https://docs.espressif.com/projects/esp-at/en/latest/esp32c2/AT_Command_Set/index.html" target="_blank">ESP-AT Command Set for ESP32-C2</a>
+
 .. |link_blynk_lib| raw:: html
 
     <a href="https://github.com/blynkkk/blynk-library/releases" target="_blank">HERE</a>
@@ -277,3 +281,5 @@ rst_epilog = """
     <a href="https://www.sunfounder.com/products/sunfounder-ultimate-sensor-kit-with-original-arduino-uno-r4-minima?_pos=7&_sid=8489ed41c&_ss=r" target="_blank">Ultimate Sensor Kit</a>
 
 """
+
+autosectionlabel_prefix_document = True

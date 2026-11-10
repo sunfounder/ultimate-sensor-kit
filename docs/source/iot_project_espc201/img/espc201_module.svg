@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 388 232" width="388" height="232">
+  <title>ESPC2-01 (ESP8684 / ESP32-C2)</title>
+
+  <!-- PCB -->
+  <rect x="1" y="1" width="386" height="230" rx="4" fill="#141414" stroke="#2c2c2c" stroke-width="2"/>
+
+  <!-- etched antenna, running to the right edge of the board -->
+  <g stroke="#2a2a2a" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 300 30 L 386 30 L 386 62 L 316 62 L 316 94 L 386 94 L 386 126 L 316 126 L 316 158 L 386 158 L 386 190 L 300 190"/>
+  </g>
+
+  <!-- 2x4 pin header with silkscreen outline -->
+  <rect x="12" y="24" width="78" height="152" fill="none" stroke="#f2f2f2" stroke-width="2"/>
+  <g fill="#dcdcdc" stroke="#9a9a9a" stroke-width="1.5">
+    <circle cx="30" cy="40" r="10"/><circle cx="62" cy="40" r="10"/>
+    <circle cx="30" cy="78" r="10"/><circle cx="62" cy="78" r="10"/>
+    <circle cx="30" cy="116" r="10"/><circle cx="62" cy="116" r="10"/>
+    <circle cx="30" cy="154" r="10"/><circle cx="62" cy="154" r="10"/>
+  </g>
+
+  <!-- ESP8684 QFN32 -->
+  <rect x="128" y="74" width="70" height="72" rx="3" fill="#242424" stroke="#4a4a4a" stroke-width="1.5"/>
+  <g fill="#6b6b6b">
+    <rect x="120" y="82" width="8" height="4"/><rect x="120" y="92" width="8" height="4"/>
+    <rect x="120" y="102" width="8" height="4"/><rect x="120" y="112" width="8" height="4"/>
+    <rect x="120" y="122" width="8" height="4"/><rect x="120" y="132" width="8" height="4"/>
+    <rect x="198" y="82" width="8" height="4"/><rect x="198" y="92" width="8" height="4"/>
+    <rect x="198" y="102" width="8" height="4"/><rect x="198" y="112" width="8" height="4"/>
+    <rect x="198" y="122" width="8" height="4"/><rect x="198" y="132" width="8" height="4"/>
+    <rect x="136" y="66" width="4" height="8"/><rect x="146" y="66" width="4" height="8"/>
+    <rect x="156" y="66" width="4" height="8"/><rect x="166" y="66" width="4" height="8"/>
+    <rect x="176" y="66" width="4" height="8"/><rect x="186" y="66" width="4" height="8"/>
+    <rect x="136" y="146" width="4" height="8"/><rect x="146" y="146" width="4" height="8"/>
+    <rect x="156" y="146" width="4" height="8"/><rect x="166" y="146" width="4" height="8"/>
+    <rect x="176" y="146" width="4" height="8"/><rect x="186" y="146" width="4" height="8"/>
+  </g>
+
+  <!-- 26 MHz crystal -->
+  <rect x="236" y="92" width="46" height="44" rx="4" fill="#c2a878" stroke="#8d7018" stroke-width="1.5"/>
+
+  <!-- silkscreen -->
+  <text x="14" y="216" font-family="Consolas, Menlo, monospace" font-size="17" fill="#f0f0f0">ESPC2-01</text>
+</svg>
