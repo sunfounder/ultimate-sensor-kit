@@ -1,0 +1,242 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>変数 &mdash; SunFounder Ultimate Sensor Kit  ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=c033477b"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=4dbe4bdc"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=2c65fa5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="Arduinoビデオコース" href="../arduino_video_course/arduino_video_course.html" />
+    <link rel="prev" title="スケッチの書き方のルール" href="06_basic_further_syntax.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Ultimate Sensor Kitについて</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="00_get_start.html">Arduinoで始めよう</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="00_get_start.html#what-is">Arduinoとは？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="00_get_start.html#what-cando">Arduinoで何ができる？</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="00_get_start.html#id3">Arduinoプロジェクトの構築方法</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="01_install_arduino_ide.html">Arduino IDE 2.0のダウンロードとインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_introduce_ide.html">Arduino IDEの紹介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_create_save.html">スケッチの作成、開く、保存の方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_basic_upload.html">Arduinoボードへのスケッチのアップロード方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_basic_code_struct.html">Arduino プログラムの構造</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_basic_further_syntax.html">スケッチの書き方のルール</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">変数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">変数の宣言</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduinoビデオコース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">コードのダウンロード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">コンポーネントの基本</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iot_project.html">IoT プロジェクト</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">楽しいプロジェクト</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">ありがとうございます</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="00_get_start.html">Arduinoで始めよう</a></li>
+      <li class="breadcrumb-item active">変数</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs-ja/docs/source/arduino_start/07_basic_variable.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>こんにちは、SunFounderのRaspberry Pi &amp; Arduino &amp; ESP32愛好家コミュニティへようこそ！Facebook上でRaspberry Pi、Arduino、ESP32についてもっと深く掘り下げ、他の愛好家と交流しましょう。</p>
+<p><strong>参加する理由は？</strong></p>
+<ul class="simple">
+<li><p><strong>エキスパートサポート</strong>：コミュニティやチームの助けを借りて、販売後の問題や技術的な課題を解決します。</p></li>
+<li><p><strong>学び＆共有</strong>：ヒントやチュートリアルを交換してスキルを向上させましょう。</p></li>
+<li><p><strong>独占的なプレビュー</strong>：新製品の発表や先行プレビューに早期アクセスしましょう。</p></li>
+<li><p><strong>特別割引</strong>：最新製品の独占割引をお楽しみください。</p></li>
+<li><p><strong>祭りのプロモーションとギフト</strong>：ギフトや祝日のプロモーションに参加しましょう。</p></li>
+</ul>
+<p>👉 私たちと一緒に探索し、創造する準備はできていますか？[<a href="https://bit.ly/raphaelkit " target="_blank">ここ</a>]をクリックして今すぐ参加しましょう！</p>
+</div>
+<section id="id1">
+<h1>変数<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p>変数（へんすう、英: variable）は、プログラムにおいて最も強力で重要なツールの一つです。プログラム内でデータを保存し呼び出す手段として働きます。</p>
+<p>以下のスケッチファイルは、変数を使用しています。オンボードLEDのピン番号を変数 <code class="docutils literal notranslate"><span class="pre">ledPin</span></code> に、数値 <code class="docutils literal notranslate"><span class="pre">500</span></code> を変数 <code class="docutils literal notranslate"><span class="pre">delayTime</span></code> に保存しています。</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="kr">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span>
+</span><span class="hll"><span class="kr">int</span><span class="w"> </span><span class="n">delayTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span>
+</span>
+<span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="kr">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="kr">HIGH</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">delay</span><span class="p">(</span><span class="n">delayTime</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="kr">LOW</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">delay</span><span class="p">(</span><span class="n">delayTime</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>ちょっと待って、これは <code class="docutils literal notranslate"><span class="pre">#define</span></code> がやることと同じですか？答えはいいえです。</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">#define</span></code> の役割は単純にテキストを直接置き換えるだけで、コンパイラにはプログラムの一部としては考慮されません。</p></li>
+<li><p>一方で、 <code class="docutils literal notranslate"><span class="pre">変数</span></code> はプログラム内で存在し、値を保存し呼び出すために使用されます。また、変数はプログラム内でその値を変更することも可能で、これはdefineにはできないことです。</p></li>
+</ul>
+<p>以下のスケッチファイルは、変数に自己加算を行い、それにより各点滅後にオンボードLEDの点滅時間が長くなります。</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span>
+<span class="kr">int</span><span class="w"> </span><span class="n">delayTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="kr">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="kr">HIGH</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">delay</span><span class="p">(</span><span class="n">delayTime</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="kr">LOW</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">delay</span><span class="p">(</span><span class="n">delayTime</span><span class="p">);</span>
+<span class="w">    </span><span class="n">delayTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">delayTime</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w"> </span><span class="c1">//実行ごとに値が200増加します</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="id2">
+<h2>変数の宣言<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>変数の宣言とは、変数を作成することです。</p>
+<p>変数を宣言するには、データ型と変数名の2つが必要です。データ型と変数名はスペースで区切られ、変数の宣言は <code class="docutils literal notranslate"><span class="pre">;</span></code> で終了させます。</p>
+<p>以下の変数を例に取ります。</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int</span><span class="w"> </span><span class="n">delayTime</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><strong>データ型</strong></p>
+<p>ここで <code class="docutils literal notranslate"><span class="pre">int</span></code> は整数型と呼ばれるデータ型であり、-32768から32766までの整数を格納することができます。また、小数点数は格納できません。</p>
+<p>変数は整数以外のさまざまな種類のデータも格納できます。Arduino言語（C++を基礎としています）は、以下のようなものに対する組み込みサポートを提供しています（ここには最も頻繁に使用される便利なもののみをリストしています）：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code>：浮動小数点数、例えば3.1415926を格納します。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">byte</span></code>：0から255までの数値を格納します。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boolean</span></code>： <code class="docutils literal notranslate"><span class="pre">True</span></code> または <code class="docutils literal notranslate"><span class="pre">False</span></code> の2つの可能な値のみを格納し、メモリ内で1バイトを占めます。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">char</span></code>：-127から127までの数値を格納します。コンパイラはこれをASCIIテーブルに一致させようとします。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">string</span></code>：文字列、例えば <code class="docutils literal notranslate"><span class="pre">Halloween</span></code> を格納します。</p></li>
+</ul>
+<p><strong>変数名</strong></p>
+<p>変数名は任意の名前を設定できますが、いくつかの基本的なルールがあります。</p>
+<ol class="arabic simple">
+<li><p>用途を明確に示す名前を付けます。この例では、変数名に <code class="docutils literal notranslate"><span class="pre">delayTime</span></code> と名付けたので、その用途が瞬時に理解できます。 <code class="docutils literal notranslate"><span class="pre">barryAllen</span></code> という名前でもプログラムは動きますが、コードを読む人を混乱させます。</p></li>
+<li><p>一般的な命名規則を使用する。私が行ったようにCamelCaseを使用することで、 <code class="docutils literal notranslate"><span class="pre">delayTime</span></code> におけるTの大文字化により、変数が二つの単語から成ることが明確になります。また、UnderScoreCaseを使用して <code class="docutils literal notranslate"><span class="pre">delay_time</span></code> とも書くことができます。これはプログラムの実行に影響を与えませんが、好みの命名規則を使用すると、コードの可読性が高まります。</p></li>
+<li><p>キーワードは使用しない。&quot;int&quot;を入力するとArduino IDEがそれを特別な用途のある単語であると色付けしてくれるのと同様、変数名としては使用できません。もし色が付いていたら、変数名を変更してください。</p></li>
+<li><p>特殊な記号は許可されていません。例えば、スペース、#、$、/、+、%などです。英字（大文字・小文字を区別）、アンダースコア、数字（ただし、変数名の最初の文字としては使用できません）の組み合わせは十分です。</p></li>
+</ol>
+<p><strong>変数に値を代入する</strong></p>
+<p>変数宣言が完了したら、次にデータを保存します。代入演算子（すなわち <code class="docutils literal notranslate"><span class="pre">=</span></code> ）を使用して、変数に値を格納します。</p>
+<p>変数宣言と同時に値を代入することもできます。</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int</span><span class="w"> </span><span class="n">delayTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>また、任意のタイミングで新しい値を代入することも可能です。</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int</span><span class="w"> </span><span class="n">delayTime</span><span class="p">;</span><span class="w"> </span><span class="c1">// 値なし</span>
+<span class="n">delayTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span><span class="w"> </span><span class="c1">// 値は500</span>
+<span class="n">delayTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">delayTime</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w"> </span><span class="c1">// 値は700</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="06_basic_further_syntax.html" class="btn btn-neutral float-left" title="スケッチの書き方のルール" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../arduino_video_course/arduino_video_course.html" class="btn btn-neutral float-right" title="Arduinoビデオコース" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

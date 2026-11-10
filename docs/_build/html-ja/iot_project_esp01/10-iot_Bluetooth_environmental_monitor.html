@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bluetooth環境モニター &mdash; SunFounder Ultimate Sensor Kit  ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=c033477b"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=4dbe4bdc"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=2c65fa5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="Bluetoothピアノ" href="11-iot_Bluetooth_piano.html" />
+    <link rel="prev" title="Bluetooth RGB コントローラー" href="09-iot_Bluetooth_RGB_controller.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Ultimate Sensor Kitについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Arduinoで始めよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduinoビデオコース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">コードのダウンロード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">コンポーネントの基本</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../iot_project.html">IoT プロジェクト</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="00-iot_project_esp01.html">ESP01 と Bluetooth モジュールを使った IoT プロジェクト</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="blynk_start/00-blynk_start.html">Blynkで始める方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01-iot_Flame_alert_system.html">Blynkを使用した炎警報システム</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-iot_Intrusion_alert_system.html">Blynkを使った侵入警報システム</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03-iot_Plant_monitor.html">Blynkを使用した植物モニター</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06-iot_Remote_relay_controller.html">Blynkを用いた遠隔リレーコントローラ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07-iot_Auto_watering_system.html">Blynkを使った自動散水システム</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04-iot_Vibration_alert_system.html">IFTTTを使用した振動警報システム</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05-iot_Weather_monitor.html">ThingSpeakを使用した気象監視</a></li>
+<li class="toctree-l3"><a class="reference internal" href="00-iot_bluetooth_start.html">Bluetoothで始めよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15-iot_Bluetooth_lcd.html">Bluetooth LCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16-iot_Bluetooth_traffic_light.html">Bluetooth信号機</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08-iot_Bluetooth_lock_controller.html">Bluetooth 錠前コントローラー</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09-iot_Bluetooth_RGB_controller.html">Bluetooth RGB コントローラー</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Bluetooth環境モニター</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">1. 回路の作成</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#android">1. Androidアプリの作成</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">3. コードのアップロード</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">4. アプリとBluetoothモジュールの接続</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">5. コードの説明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="11-iot_Bluetooth_piano.html">Bluetoothピアノ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="12-iot_Bluetooth_oled.html">Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="13-iot_Bluetooth_remote_relay.html">Bluetooth リモートリレー</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14-iot_Bluetooth_voice_control_relay.html">Bluetoothによる音声制御リレー</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">楽しいプロジェクト</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">ありがとうございます</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../iot_project.html">IoT プロジェクト</a></li>
+          <li class="breadcrumb-item"><a href="00-iot_project_esp01.html">ESP01 と Bluetooth モジュールを使った IoT プロジェクト</a></li>
+      <li class="breadcrumb-item active">Bluetooth環境モニター</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs-ja/docs/source/iot_project_esp01/10-iot_Bluetooth_environmental_monitor.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>こんにちは、SunFounderのRaspberry Pi &amp; Arduino &amp; ESP32愛好家コミュニティへようこそ！Facebook上でRaspberry Pi、Arduino、ESP32についてもっと深く掘り下げ、他の愛好家と交流しましょう。</p>
+<p><strong>参加する理由は？</strong></p>
+<ul class="simple">
+<li><p><strong>エキスパートサポート</strong>：コミュニティやチームの助けを借りて、販売後の問題や技術的な課題を解決します。</p></li>
+<li><p><strong>学び＆共有</strong>：ヒントやチュートリアルを交換してスキルを向上させましょう。</p></li>
+<li><p><strong>独占的なプレビュー</strong>：新製品の発表や先行プレビューに早期アクセスしましょう。</p></li>
+<li><p><strong>特別割引</strong>：最新製品の独占割引をお楽しみください。</p></li>
+<li><p><strong>祭りのプロモーションとギフト</strong>：ギフトや祝日のプロモーションに参加しましょう。</p></li>
+</ul>
+<p>👉 私たちと一緒に探索し、創造する準備はできていますか？[<a href="https://bit.ly/raphaelkit " target="_blank">ここ</a>]をクリックして今すぐ参加しましょう！</p>
+</div>
+<section id="bluetooth">
+<span id="iot-bluetooth-environmental-monitor"></span><h1>Bluetooth環境モニター<a class="headerlink" href="#bluetooth" title="Link to this heading"></a></h1>
+<video loop autoplay muted style = "max-width:100%">
+   <source src="../_static/video/iot/10-iot_Bluetooth_environmental_monitor.mp4"  type="video/mp4">
+   ご利用のブラウザはビデオタグをサポートしていません。
+</video><p>このプロジェクトでは、MIT App Inventorで作成されたAndroidアプリを使用して、Arduinoボードから環境データを受信・表示します。Arduinoボードは、DHT11センサーから温度と湿度のデータを取得します。データ収集後、JDY-31モジュールを用いてBluetooth経由で送信され、アプリがそれを画面上で表示します。</p>
+<p>Androidアプリは、 <a href="http://appinventor.mit.edu/" target="_blank">MIT App Inventor</a> という無料のWebベースプラットフォームを利用して構築されます。このプロジェクトは、Arduinoとスマートフォンのインターフェースに慣れる絶好の機会です。</p>
+<section id="id1">
+<h2>1. 回路の作成<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>キットには異なるバージョンのDHT11モジュールが含まれている場合があります。お手持ちのモジュールに応じた配線方法を確認してください。</p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>module</p></th>
+<th class="head"><p>diagram</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../_images/10_dht11_module.png"><img alt="dht11_module" src="../_images/10_dht11_module.png" style="width: 100px;" /></a></p></td>
+<td><p><a class="reference internal" href="../_images/10-Wiring_Bluetooth_environmental_monitor.png"><img alt="dht11_module_circuit" src="../_images/10-Wiring_Bluetooth_environmental_monitor.png" style="width: 360px;" /></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../_images/10_dht11_module_withLED.png"><img alt="dht11_module_withLED" src="../_images/10_dht11_module_withLED.png" style="width: 150px;" /></a></p></td>
+<td><p><a class="reference internal" href="../_images/10-Wiring_Bluetooth_environmental_monitor_new.png"><img alt="dht11_module_withLED_circuit" src="../_images/10-Wiring_Bluetooth_environmental_monitor_new.png" style="width: 360px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><a class="reference internal" href="../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima ボード</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/38-component_jdy31.html#cpn-jdy31"><span class="std std-ref">JDY-31 Bluetooth モジュール</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/12-component_dht11.html#cpn-dht11"><span class="std std-ref">温度と湿度センサーモジュール（DHT11）</span></a></p></li>
+</ul>
+</section>
+<section id="android">
+<h2>1. Androidアプリの作成<a class="headerlink" href="#android" title="Link to this heading"></a></h2>
+<p>Androidアプリは、 <a href="http://appinventor.mit.edu/" target="_blank">MIT App Inventor</a> という無料のWebアプリケーションを使用して開発されます。MIT App Inventorは、直感的なドラッグアンドドロップ機能で簡単なアプリケーションを作成できるため、Android開発の優れたスタート地点となります。</p>
+<p>それでは始めましょう。</p>
+<ol class="arabic">
+<li><p><a href="http://appinventor.mit.edu/explore/get-started" target="_blank">Get Started with MIT App Inventor</a> に移動し、「online tool」というボタンをクリックしてログインします。MIT App Inventorに登録するにはGoogleアカウントが必要です。</p>
+<a class="reference internal image-reference" href="../_images/09-ai_signup_shadow.png"><img alt="../_images/09-ai_signup_shadow.png" class="align-center" src="../_images/09-ai_signup_shadow.png" style="width: 90%;" /></a>
+</li>
+<li><p>ログイン後、 <strong>Projects</strong> -&gt; <strong>Import project (.aia) from my computer</strong> へ移動して、 <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\iot_project\bluetooth\05-Bluetooth_environmental_monitor</span></code> 内の <code class="docutils literal notranslate"><span class="pre">Bluetooth_controlled_lock.aia</span></code> ファイルをアップロードします。</p>
+<p>こちらからもダウンロードできます: <a class="reference download internal" download="" href="../_downloads/cd70cda476ae8061ab7978dc5597dc34/Bluetooth_Environmental_Monitor.aia"><code class="xref download docutils literal notranslate"><span class="pre">Bluetooth_Environmental_Monitor.aia</span></code></a></p>
+<img alt="../_images/09-ai_import_shadow.png" class="align-center" src="../_images/09-ai_import_shadow.png" />
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.aia</span></code> ファイルをアップロードした後、MIT App Inventorソフトウェアでアプリが表示されます。これは事前に設定されたテンプレートであり、次のステップでMIT App Inventorに慣れた後に、このテンプレートを変更できます。</p></li>
+<li><p>MIT App Inventorには2つの主要なセクションがあります： <strong>Designer</strong> と <strong>Blocks</strong> です。ページの右上隅でこれらのセクション間を切り替えることができます。</p>
+<img alt="../_images/09-ai_intro_1_shadow.png" src="../_images/09-ai_intro_1_shadow.png" />
+</li>
+<li><p><strong>Designer</strong> では、ボタン、テキスト、画面を追加し、アプリの全体的な見た目を変更できます。</p>
+<img alt="../_images/10-ai_intro_2_shadow.png" src="../_images/10-ai_intro_2_shadow.png" />
+</li>
+<li><p>次に、 <strong>Blocks</strong> セクションがあります。このセクションでは、アプリにカスタム機能を追加でき、アプリのGUI上の各コンポーネントをプログラムして、目的の機能を実現できます。</p>
+<img alt="../_images/10-ai_intro_3_shadow.png" src="../_images/10-ai_intro_3_shadow.png" />
+</li>
+<li><p>スマートフォンにアプリをインストールするには、 <strong>Build</strong> タブに移動します。</p>
+<img alt="../_images/08-ai_intro_4_shadow.png" src="../_images/08-ai_intro_4_shadow.png" />
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">.apk</span></code> ファイルを生成できます。このオプションを選択すると、 <code class="docutils literal notranslate"><span class="pre">.apk</span></code> ファイルをダウンロードするか、QRコードをスキャンしてインストールするかを選ぶページが表示されます。インストールガイドに従ってアプリのインストールを完了してください。</p>
+<p>また、事前にコンパイルされたAPKはこちらからダウンロードできます: <a class="reference download internal" download="" href="../_downloads/a2ea7bca6341f427723dac70d3539ac0/Bluetooth_Environmental_Monitor.apk"><code class="xref download docutils literal notranslate"><span class="pre">Bluetooth_Environmental_Monitor.apk</span></code></a></p>
+</li>
+<li><p>Google Playや他のアプリマーケットにこのアプリをアップロードする場合、 <code class="docutils literal notranslate"><span class="pre">.aab</span></code> ファイルを生成できます。</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id2">
+<h2>3. コードのアップロード<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\iot_project\bluetooth\05-Bluetooth_environmental_monitor</span></code> のパス下で <code class="docutils literal notranslate"><span class="pre">05-Bluetooth_environmental_monitor.ino</span></code> ファイルを開く、またはこのコードを <strong>Arduino IDE</strong> にコピーしてください。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>ライブラリをインストールするには、Arduinoライブラリマネージャーで <strong>&quot;DHT sensor library&quot;</strong> を検索してインストールしてください。</p>
+</div>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/97605897-2fae-4e4e-97f3-d254796636a1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe></li>
+<li><p>ボードとポートを選択した後、 <strong>書き込み</strong> ボタンをクリックしてください。</p></li>
+<li><p>シリアルモニターを開き（ボーレートは <strong>9600</strong> に設定）、デバッグメッセージを確認してください。</p></li>
+</ol>
+</section>
+<section id="id3">
+<h2>4. アプリとBluetoothモジュールの接続<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>スマートフォンに先ほど作成したアプリがインストールされていることを確認してください。</p>
+<ol class="arabic">
+<li><p>まず、スマートフォンの <strong>Bluetooth</strong> をオンにします。</p>
+<a class="reference internal image-reference" href="../_images/09-app_1_shadow.png"><img alt="../_images/09-app_1_shadow.png" class="align-center" src="../_images/09-app_1_shadow.png" style="width: 60%;" /></a>
+</li>
+<li><p>スマートフォンの <strong>Bluetooth設定</strong> に移動し、 <strong>JDY-31-SPP</strong> といった名前を探してください。</p>
+<a class="reference internal image-reference" href="../_images/09-app_2_shadow.png"><img alt="../_images/09-app_2_shadow.png" class="align-center" src="../_images/09-app_2_shadow.png" style="width: 60%;" /></a>
+</li>
+<li><p>クリックした後、ポップアップウィンドウで <strong>ペアリング</strong> のリクエストに同意してください。ペアリングコードが必要な場合は「1234」を入力してください。</p>
+<a class="reference internal image-reference" href="../_images/09-app_3_shadow.png"><img alt="../_images/09-app_3_shadow.png" class="align-center" src="../_images/09-app_3_shadow.png" style="width: 60%;" /></a>
+</li>
+<li><p>新しくインストールされた <strong>Environmental Monitor</strong> アプリを開きます。</p>
+<a class="reference internal image-reference" href="../_images/10-app_4_shadow.png"><img alt="../_images/10-app_4_shadow.png" class="align-center" src="../_images/10-app_4_shadow.png" style="width: 25%;" /></a>
+</li>
+<li><p>アプリ内で <strong>Connect</strong> ボタンをクリックして、アプリとBluetoothモジュールの間に接続を確立します。</p>
+<a class="reference internal image-reference" href="../_images/10-app_5_shadow.png"><img alt="../_images/10-app_5_shadow.png" class="align-center" src="../_images/10-app_5_shadow.png" style="width: 60%;" /></a>
+</li>
+<li><p>このページには、すべてのペアリング済みBluetoothデバイスのリストが表示されます。リストから <code class="docutils literal notranslate"><span class="pre">xx.xx.xx.xx.xx.xx</span> <span class="pre">JDY-31-SPP</span></code> オプションを選択してください。各デバイスの名前は、そのMACアドレスの隣に表示されます。</p>
+<a class="reference internal image-reference" href="../_images/10-app_6_shadow.png"><img alt="../_images/10-app_6_shadow.png" class="align-center" src="../_images/10-app_6_shadow.png" style="width: 60%;" /></a>
+</li>
+<li><p>上記のページにデバイスが表示されない場合、このアプリは近くのデバイスをスキャンする権限がない可能性があります。その場合は、設定を手動で調整する必要があります。</p>
+<ul class="simple">
+<li><p><strong>アプリ情報</strong> ページにアクセスするには、アプリのアイコンを長押しして選択します。別の方法でこのページにアクセスできる場合は、それを使用してください。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/10-app_8_shadow.png"><img alt="../_images/10-app_8_shadow.png" class="align-center" src="../_images/10-app_8_shadow.png" style="width: 60%;" /></a>
+<ul class="simple">
+<li><p><strong>権限</strong> ページに移動します。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/08-app_9_shadow.png"><img alt="../_images/08-app_9_shadow.png" class="align-center" src="../_images/08-app_9_shadow.png" style="width: 60%;" /></a>
+<ul class="simple">
+<li><p>アプリが近くのデバイスをスキャンできるようにするために、 <strong>近くのデバイス</strong> に移動し、 <strong>常に許可</strong> を選択します。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/08-app_10_shadow.png"><img alt="../_images/08-app_10_shadow.png" class="align-center" src="../_images/08-app_10_shadow.png" style="width: 60%;" /></a>
+<ul class="simple">
+<li><p>その後、アプリを再起動し、ステップ5と6を繰り返して、Bluetoothに正常に接続します。</p></li>
+</ul>
+</li>
+<li><p>接続が成功した後、主なページにリダイレクトされ、温度と湿度が表示されます。</p>
+<a class="reference internal image-reference" href="../_images/10-app_7_shadow.png"><img alt="../_images/10-app_7_shadow.png" class="align-center" src="../_images/10-app_7_shadow.png" style="width: 60%;" /></a>
+</li>
+</ol>
+</section>
+<section id="id4">
+<h2>5. コードの説明<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Bluetooth通信とDHT11センサーの設定。</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SoftwareSerial.h&gt;</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">bluetoothTx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">bluetoothRx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="nf">SoftwareSerial</span><span class="w"> </span><span class="nf">bleSerial</span><span class="p">(</span><span class="n">bluetoothTx</span><span class="p">,</span><span class="w"> </span><span class="n">bluetoothRx</span><span class="p">);</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;DHT.h&gt;</span>
+<span class="cp">#define DHTPIN 2</span>
+<span class="cp">#define DHTTYPE DHT11</span>
+<span class="n">DHT</span><span class="w"> </span><span class="nf">dht</span><span class="p">(</span><span class="n">DHTPIN</span><span class="p">,</span><span class="w"> </span><span class="n">DHTTYPE</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>このコードは、必要なライブラリを含め、BluetoothモジュールとDHT11センサーのピンを定義します。また、Bluetooth通信とDHT11用のオブジェクトを宣言しています。</p>
+</li>
+<li><p>setup()関数での初期化。</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="w">  </span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dht</span><span class="p">.</span><span class="nf">begin</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>この部分は、デバッグ用のシリアル通信、Bluetoothモジュール、およびDHTセンサーを初期化します。</p>
+</li>
+<li><p>データの読み取りとBluetooth経由での送信。</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+<span class="w">  </span><span class="kr">float</span><span class="w"> </span><span class="n">humidity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dht</span><span class="p">.</span><span class="n">readHumidity</span><span class="p">();</span>
+<span class="w">  </span><span class="kr">float</span><span class="w"> </span><span class="n">temperature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dht</span><span class="p">.</span><span class="nf">readTemperature</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// Check if any reads failed and exit early (to try again).</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isnan</span><span class="p">(</span><span class="n">humidity</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">isnan</span><span class="p">(</span><span class="n">temperature</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"Failed to read from DHT sensor!"</span><span class="p">));</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// For debug</span>
+<span class="w">  </span><span class="c1">// Print the humidity and temperature to the serial monitor</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"Humidity: "</span><span class="p">));</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">humidity</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"%  Temperature: "</span><span class="p">));</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">temperature</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"°C "</span><span class="p">));</span>
+
+<span class="w">  </span><span class="n">sensorData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">String</span><span class="p">(</span><span class="n">temperature</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">","</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kr">String</span><span class="p">(</span><span class="n">humidity</span><span class="p">);</span><span class="w">  </span><span class="c1">// Concatenate temperature and humidity values</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">"Data to send: "</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">sensorData</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">sensorData</span><span class="p">);</span><span class="w">  </span><span class="c1">// Send temperature and humidity values to the Bluetooth module</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>この部分では、DHT11センサーから2秒ごとに温度と湿度を読み取ります。読み取りに失敗した場合は、エラーメッセージを出力します。それ以外の場合、シリアルモニターに読み取り値を出力し、カンマ区切りの形式でBluetoothモジュール経由で送信します。アプリは「温度,湿度」という形式のデータを受信したら、その情報を解析し、ユーザーインターフェースに表示します。</p>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="09-iot_Bluetooth_RGB_controller.html" class="btn btn-neutral float-left" title="Bluetooth RGB コントローラー" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="11-iot_Bluetooth_piano.html" class="btn btn-neutral float-right" title="Bluetoothピアノ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

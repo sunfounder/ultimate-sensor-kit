@@ -1,0 +1,203 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.3 必要なライブラリの追加 &mdash; SunFounder Ultimate Sensor Kit  ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=c033477b"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../../_static/./lang.js?v=2c65fa5d"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="1.4 R4ボードをBlynkに接続する" href="04-iot_connect_r4_blynk.html" />
+    <link rel="prev" title="1.2 Blynkの設定" href="02-iot_blynk_config.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Ultimate Sensor Kitについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_start/00_get_start.html">Arduinoで始めよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_video_course/arduino_video_course.html">Arduinoビデオコース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download_code.html">コードのダウンロード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components_basic/00-component_list.html">コンポーネントの基本</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../iot_project.html">IoT プロジェクト</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../00-iot_project_esp01.html">ESP01 と Bluetooth モジュールを使った IoT プロジェクト</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="00-blynk_start.html">Blynkで始める方法</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="01-iot_esp8266_config.html">1.1 ESP8266の設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="02-iot_blynk_config.html">1.2 Blynkの設定</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">1.3 必要なライブラリの追加</a></li>
+<li class="toctree-l4"><a class="reference internal" href="04-iot_connect_r4_blynk.html">1.4 R4ボードをBlynkに接続する</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01-iot_Flame_alert_system.html">Blynkを使用した炎警報システム</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02-iot_Intrusion_alert_system.html">Blynkを使った侵入警報システム</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-iot_Plant_monitor.html">Blynkを使用した植物モニター</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../06-iot_Remote_relay_controller.html">Blynkを用いた遠隔リレーコントローラ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../07-iot_Auto_watering_system.html">Blynkを使った自動散水システム</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04-iot_Vibration_alert_system.html">IFTTTを使用した振動警報システム</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../05-iot_Weather_monitor.html">ThingSpeakを使用した気象監視</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../00-iot_bluetooth_start.html">Bluetoothで始めよう</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../15-iot_Bluetooth_lcd.html">Bluetooth LCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../16-iot_Bluetooth_traffic_light.html">Bluetooth信号機</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../08-iot_Bluetooth_lock_controller.html">Bluetooth 錠前コントローラー</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../09-iot_Bluetooth_RGB_controller.html">Bluetooth RGB コントローラー</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../10-iot_Bluetooth_environmental_monitor.html">Bluetooth環境モニター</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../11-iot_Bluetooth_piano.html">Bluetoothピアノ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../12-iot_Bluetooth_oled.html">Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../13-iot_Bluetooth_remote_relay.html">Bluetooth リモートリレー</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../14-iot_Bluetooth_voice_control_relay.html">Bluetoothによる音声制御リレー</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../fun_project/fun_project.html">楽しいプロジェクト</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thank-learning.html">ありがとうございます</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../iot_project.html">IoT プロジェクト</a></li>
+          <li class="breadcrumb-item"><a href="../00-iot_project_esp01.html">ESP01 と Bluetooth モジュールを使った IoT プロジェクト</a></li>
+          <li class="breadcrumb-item"><a href="00-blynk_start.html">Blynkで始める方法</a></li>
+      <li class="breadcrumb-item active">1.3 必要なライブラリの追加</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs-ja/docs/source/iot_project_esp01/blynk_start/03-iot_add_lib.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>こんにちは、SunFounderのRaspberry Pi &amp; Arduino &amp; ESP32愛好家コミュニティへようこそ！Facebook上でRaspberry Pi、Arduino、ESP32についてもっと深く掘り下げ、他の愛好家と交流しましょう。</p>
+<p><strong>参加する理由は？</strong></p>
+<ul class="simple">
+<li><p><strong>エキスパートサポート</strong>：コミュニティやチームの助けを借りて、販売後の問題や技術的な課題を解決します。</p></li>
+<li><p><strong>学び＆共有</strong>：ヒントやチュートリアルを交換してスキルを向上させましょう。</p></li>
+<li><p><strong>独占的なプレビュー</strong>：新製品の発表や先行プレビューに早期アクセスしましょう。</p></li>
+<li><p><strong>特別割引</strong>：最新製品の独占割引をお楽しみください。</p></li>
+<li><p><strong>祭りのプロモーションとギフト</strong>：ギフトや祝日のプロモーションに参加しましょう。</p></li>
+</ul>
+<p>👉 私たちと一緒に探索し、創造する準備はできていますか？[<a href="https://bit.ly/raphaelkit " target="_blank">ここ</a>]をクリックして今すぐ参加しましょう！</p>
+</div>
+<section id="iot-add-library">
+<span id="id1"></span><h1>1.3 必要なライブラリの追加<a class="headerlink" href="#iot-add-library" title="Link to this heading"></a></h1>
+<p>BlynkをArduino IDEで使用するには、適切なライブラリを追加する必要があります。</p>
+<ol class="arabic">
+<li><p><a href="https://github.com/blynkkk/blynk-library/releases" target="_blank">HERE</a> をクリックして、 <strong>&quot;Assets&quot;</strong> までスクロールし、最初の <code class="docutils literal notranslate"><span class="pre">.zip</span></code> ファイルをダウンロードします。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>下の画像に表示されているバージョン番号は古い可能性があります。最新版をダウンロードしてインストールすることを強く推奨します。</p>
+</div>
+<img alt="../../_images/sp220607_154840.png" src="../../_images/sp220607_154840.png" />
+</li>
+<li><p>このファイルを解凍し、 <code class="docutils literal notranslate"><span class="pre">libraries</span></code> フォルダに移動して次のようなフォルダを確認します。</p>
+<blockquote>
+<div><img alt="../../_images/add_lib_0.png" src="../../_images/add_lib_0.png" />
+</div></blockquote>
+</li>
+<li><p>これらを全てコピーし、スケッチブックの <code class="docutils literal notranslate"><span class="pre">libraries</span></code> フォルダに追加します。</p>
+<blockquote>
+<div><p><strong>ステップ1:</strong> <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Preferences</span> <span class="pre">&gt;</span> <span class="pre">Sketchbook</span> <span class="pre">location</span></code> でライブラリフォルダの場所を探す、または変更できます。</p>
+<img alt="../../_images/add_lib_1.png" src="../../_images/add_lib_1.png" />
+<br/><br/><p><strong>ステップ2:</strong> Arduino IDEからスケッチブックの場所を探し、 <code class="docutils literal notranslate"><span class="pre">libraries</span></code> フォルダをクリックして開きます。</p>
+<img alt="../../_images/add_lib_2.png" src="../../_images/add_lib_2.png" />
+<br/><br/><p><strong>ステップ3:</strong> 解凍した <code class="docutils literal notranslate"><span class="pre">Blynk_Release_vx.x.x\libraries</span></code> フォルダ内の全てのフォルダを、librariesフォルダに貼り付けます。</p>
+<img alt="../../_images/add_lib_3.png" src="../../_images/add_lib_3.png" />
+</div></blockquote>
+</li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="02-iot_blynk_config.html" class="btn btn-neutral float-left" title="1.2 Blynkの設定" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="04-iot_connect_r4_blynk.html" class="btn btn-neutral float-right" title="1.4 R4ボードをBlynkに接続する" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

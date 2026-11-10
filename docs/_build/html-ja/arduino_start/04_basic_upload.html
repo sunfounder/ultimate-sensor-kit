@@ -1,0 +1,202 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arduinoボードへのスケッチのアップロード方法 &mdash; SunFounder Ultimate Sensor Kit  ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=c033477b"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=4dbe4bdc"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=2c65fa5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="Arduino プログラムの構造" href="05_basic_code_struct.html" />
+    <link rel="prev" title="スケッチの作成、開く、保存の方法" href="03_create_save.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Ultimate Sensor Kitについて</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="00_get_start.html">Arduinoで始めよう</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="00_get_start.html#what-is">Arduinoとは？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="00_get_start.html#what-cando">Arduinoで何ができる？</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="00_get_start.html#id3">Arduinoプロジェクトの構築方法</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="01_install_arduino_ide.html">Arduino IDE 2.0のダウンロードとインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_introduce_ide.html">Arduino IDEの紹介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_create_save.html">スケッチの作成、開く、保存の方法</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Arduinoボードへのスケッチのアップロード方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_basic_code_struct.html">Arduino プログラムの構造</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_basic_further_syntax.html">スケッチの書き方のルール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_basic_variable.html">変数</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduinoビデオコース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">コードのダウンロード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">コンポーネントの基本</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iot_project.html">IoT プロジェクト</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">楽しいプロジェクト</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">ありがとうございます</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="00_get_start.html">Arduinoで始めよう</a></li>
+      <li class="breadcrumb-item active">Arduinoボードへのスケッチのアップロード方法</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs-ja/docs/source/arduino_start/04_basic_upload.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>こんにちは、SunFounderのRaspberry Pi &amp; Arduino &amp; ESP32愛好家コミュニティへようこそ！Facebook上でRaspberry Pi、Arduino、ESP32についてもっと深く掘り下げ、他の愛好家と交流しましょう。</p>
+<p><strong>参加する理由は？</strong></p>
+<ul class="simple">
+<li><p><strong>エキスパートサポート</strong>：コミュニティやチームの助けを借りて、販売後の問題や技術的な課題を解決します。</p></li>
+<li><p><strong>学び＆共有</strong>：ヒントやチュートリアルを交換してスキルを向上させましょう。</p></li>
+<li><p><strong>独占的なプレビュー</strong>：新製品の発表や先行プレビューに早期アクセスしましょう。</p></li>
+<li><p><strong>特別割引</strong>：最新製品の独占割引をお楽しみください。</p></li>
+<li><p><strong>祭りのプロモーションとギフト</strong>：ギフトや祝日のプロモーションに参加しましょう。</p></li>
+</ul>
+<p>👉 私たちと一緒に探索し、創造する準備はできていますか？[<a href="https://bit.ly/raphaelkit " target="_blank">ここ</a>]をクリックして今すぐ参加しましょう！</p>
+</div>
+<section id="arduino">
+<h1>Arduinoボードへのスケッチのアップロード方法<a class="headerlink" href="#arduino" title="Link to this heading"></a></h1>
+<p>このセクションでは、先ほど作成したスケッチをArduinoボードにアップロードする方法、およびいくつかの注意点について学びます。</p>
+<p><strong>1. ボードとポートの選択</strong></p>
+<p>Arduinoの開発ボードには通常、USBケーブルが付属しています。これを使ってボードをコンピュータに接続します。</p>
+<p>Arduino IDEで正しい <strong>ボード</strong> と <strong>ポート</strong> を選択します。通常、Arduinoボードはコンピュータに自動的に認識され、ポートが割り当てられるので、ここで選べます。</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/board_port.png"><img alt="../_images/board_port.png" src="../_images/board_port.png" style="width: 90%;" /></a>
+</div></blockquote>
+<p>もしボードが既に接続されているが認識されない場合は、 <strong>ボードマネージャ</strong> の <strong>Arduino AVR Boards</strong> セクションで <strong>INSTALLED</strong> ロゴが表示されているか確認します。表示されていなければ、少し下にスクロールして <strong>INSTALL</strong> をクリックしてください。</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/upload1.png"><img alt="../_images/upload1.png" src="../_images/upload1.png" style="width: 90%;" /></a>
+</div></blockquote>
+<p>特にUNO R4の場合は、 <strong>ボードマネージャ</strong> で <strong>&quot;UNO R4&quot;</strong> と検索し、対応するライブラリがインストールされているか確認します。</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/install_uno_r4_lib.png"><img alt="../_images/install_uno_r4_lib.png" src="../_images/install_uno_r4_lib.png" style="width: 90%;" /></a>
+</div></blockquote>
+<p>問題が解消されない場合、Arduino IDEを再開し、Arduinoボードを再接続するとほとんどの問題が解決します。また、 <strong>ツール（Tools）</strong> -&gt; <strong>ボード（Board）</strong> または <strong>ポート（Port）</strong> を選ぶこともできます。</p>
+<p><strong>2. スケッチの確認</strong></p>
+<p>「検証」ボタンをクリックすると、スケッチがエラーがないかコンパイルされます。</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/sp221014_174532.png"><img alt="../_images/sp221014_174532.png" src="../_images/sp221014_174532.png" style="width: 90%;" /></a>
+</div></blockquote>
+<p>文字をいくつか削除したり、誤って数文字入力した場合など、エラーを見つけるためにこの機能を使用できます。メッセージバーから、どの種類のエラーがどこで発生したか確認できます。</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/sp221014_175307.png"><img alt="../_images/sp221014_175307.png" src="../_images/sp221014_175307.png" style="width: 90%;" /></a>
+</div></blockquote>
+<p>エラーがない場合、以下のようなメッセージが表示されます。</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/sp221014_175512.png"><img alt="../_images/sp221014_175512.png" src="../_images/sp221014_175512.png" style="width: 90%;" /></a>
+</div></blockquote>
+<p><strong>3. スケッチのアップロード</strong></p>
+<p>上記の手順が完了したら、「書き込み」ボタンをクリックして、このスケッチをボードにアップロードします。</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/sp221014_175614.png"><img alt="../_images/sp221014_175614.png" src="../_images/sp221014_175614.png" style="width: 90%;" /></a>
+</div></blockquote>
+<p>成功すると、以下のようなプロンプトが表示されます。</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/sp221014_175654.png"><img alt="../_images/sp221014_175654.png" src="../_images/sp221014_175654.png" style="width: 90%;" /></a>
+</div></blockquote>
+<p>同時に、ボード上のLEDが点滅します。</p>
+<a class="reference internal image-reference" href="../_images/1_led.jpg"><img alt="../_images/1_led.jpg" class="align-center" src="../_images/1_led.jpg" style="width: 400px;" /></a>
+<br/><p>スケッチがアップロードされた後、Arduinoボードは電源が供給されると自動的にスケッチを実行します。この実行中のプログラムは、新しいスケッチをアップロードすることで上書きされます。</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="03_create_save.html" class="btn btn-neutral float-left" title="スケッチの作成、開く、保存の方法" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="05_basic_code_struct.html" class="btn btn-neutral float-right" title="Arduino プログラムの構造" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

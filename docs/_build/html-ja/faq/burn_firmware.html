@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESP8266モジュールのファームウェアを再書き込む方法 &mdash; SunFounder Ultimate Sensor Kit  ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=c033477b"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=4dbe4bdc"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=2c65fa5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="ありがとうございます" href="../thank-learning.html" />
+    <link rel="prev" title="モバイルデバイスでBlynkを使う方法" href="blynk_mobile.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Ultimate Sensor Kitについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Arduinoで始めよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduinoビデオコース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">コードのダウンロード</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">コンポーネントの基本</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iot_project.html">IoT プロジェクト</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">楽しいプロジェクト</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="00_faq.html">FAQ</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="blynk_mobile.html">モバイルデバイスでBlynkを使う方法</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ESP8266モジュールのファームウェアを再書き込む方法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#r4">R4でファームウェアを再書き込む</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#r3">R3でファームウェアを再書き込み</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">ありがとうございます</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="00_faq.html">FAQ</a></li>
+      <li class="breadcrumb-item active">ESP8266モジュールのファームウェアを再書き込む方法</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs-ja/docs/source/faq/burn_firmware.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>こんにちは、SunFounderのRaspberry Pi &amp; Arduino &amp; ESP32愛好家コミュニティへようこそ！Facebook上でRaspberry Pi、Arduino、ESP32についてもっと深く掘り下げ、他の愛好家と交流しましょう。</p>
+<p><strong>参加する理由は？</strong></p>
+<ul class="simple">
+<li><p><strong>エキスパートサポート</strong>：コミュニティやチームの助けを借りて、販売後の問題や技術的な課題を解決します。</p></li>
+<li><p><strong>学び＆共有</strong>：ヒントやチュートリアルを交換してスキルを向上させましょう。</p></li>
+<li><p><strong>独占的なプレビュー</strong>：新製品の発表や先行プレビューに早期アクセスしましょう。</p></li>
+<li><p><strong>特別割引</strong>：最新製品の独占割引をお楽しみください。</p></li>
+<li><p><strong>祭りのプロモーションとギフト</strong>：ギフトや祝日のプロモーションに参加しましょう。</p></li>
+</ul>
+<p>👉 私たちと一緒に探索し、創造する準備はできていますか？[<a href="https://bit.ly/raphaelkit " target="_blank">ここ</a>]をクリックして今すぐ参加しましょう！</p>
+</div>
+<section id="esp8266">
+<span id="burn-firmware"></span><h1>ESP8266モジュールのファームウェアを再書き込む方法<a class="headerlink" href="#esp8266" title="Link to this heading"></a></h1>
+<section id="r4">
+<h2>R4でファームウェアを再書き込む<a class="headerlink" href="#r4" title="Link to this heading"></a></h2>
+<p><strong>1. 回路を組む</strong></p>
+<p>ESP8266とArduino UNO R4ボードを接続します。</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/faq_at_burn_bb.jpg"><img alt="../_images/faq_at_burn_bb.jpg" src="../_images/faq_at_burn_bb.jpg" style="width: 100%;" /></a>
+</div></blockquote>
+<p><strong>2. R4に以下のコードをアップロード</strong></p>
+<div class="highlight-Arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial1</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">Serial</span><span class="p">.</span><span class="nf">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">      </span><span class="c1">// If anything comes in Serial (USB),</span>
+<span class="w">        </span><span class="n">Serial1</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nf">Serial</span><span class="p">.</span><span class="nf">read</span><span class="p">());</span><span class="w">   </span><span class="c1">// read it and send it out Serial1 (pins 0 &amp; 1)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Serial1</span><span class="p">.</span><span class="nf">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">     </span><span class="c1">// If anything comes in Serial1 (pins 0 &amp; 1)</span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">Serial1</span><span class="p">.</span><span class="nf">read</span><span class="p">());</span><span class="w">   </span><span class="c1">// read it and send it out Serial (USB)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>3. ファームウェアの書き込み</strong></p>
+<ul>
+<li><p><strong>Windows</strong> を使用している場合は、以下の手順でファームウェアを書き込みます。</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>ファームウェアと書き込みツールをダウンロード。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference download external" download="" href="https://raw.githubusercontent.com/sunfounder/ultimate-sensor-kit/main/iot_project/esp8266_firmware.zip"><code class="xref download docutils literal notranslate"><span class="pre">ESP8266</span> <span class="pre">Firmware</span></code></a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>解凍後、4つのファイルが表示されます。</p>
+<img alt="../_images/bat_firmware.png" src="../_images/bat_firmware.png" />
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BAT_AT_V1.7.1.0_1M.bin</span></code>: ESP8266モジュールに書き込むファームウェア。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">esptool.exe</span></code>: Windows用のコマンドラインユーティリティ。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code>: Windowsシステム用のコマンドパッケージ。このファイルをダブルクリックすると、ファイル内のすべてのコマンドが実行されます。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r4.bat</span></code>: <code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code> と同様ですが、UNO R4ボード専用です。</p></li>
+</ul>
+<br/></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r4.bat</span></code> をダブルクリックしてファームウェアの書き込みを開始します。以下のプロンプトが表示された場合、ファームウェアは正常にインストールされています。</p>
+<img alt="../_images/install_firmware.png" src="../_images/install_firmware.png" />
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>書き込みに失敗した場合は、以下の点を確認してください。</p>
+<ul class="simple">
+<li><p>ESP8266モジュールのRSTをGNDに挿入してから外します。</p></li>
+<li><p>配線が正確であることを確認します。</p></li>
+<li><p>コンピュータがボードを正しく認識しているか、またポートが占有されていないかを確認します。</p></li>
+<li><p>install.batファイルを再度開きます。</p></li>
+</ul>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p><strong>Mac OS</strong> を使用している場合、以下の手順でファームウェアを書き込みます。</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>以下のコマンドでEsptoolをインストールします。EsptoolはPythonベースの、オープンソースでプラットフォームに依存しないEspressifチップのROMブートローダーと通信するユーティリティです。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">esptool</span>
+</pre></div>
+</div>
+</li>
+<li><p>Esptoolが正常にインストールされていれば、 <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">esptool</span></code> を実行すると[usage: esptool]というメッセージが出力されます。</p></li>
+<li><p>ファームウェアをダウンロードします。</p>
+<ul class="simple">
+<li><p><a class="reference download external" download="" href="https://raw.githubusercontent.com/sunfounder/ultimate-sensor-kit/main/iot_project/esp8266_firmware.zip"><code class="xref download docutils literal notranslate"><span class="pre">ESP8266</span> <span class="pre">Firmware</span></code></a></p></li>
+</ul>
+</li>
+<li><p>解凍後、4つのファイルが表示されます。</p>
+<img alt="../_images/bat_firmware.png" src="../_images/bat_firmware.png" />
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BAT_AT_V1.7.1.0_1M.bin</span></code>: ESP8266モジュールに書き込むファームウェア。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">esptool.exe</span></code>: Windows用のコマンドラインユーティリティ。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code>: Windowsシステム用のコマンドパッケージ。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r4.bat</span></code>: <code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code> と同様ですが、UNO R4ボード専用です。</p></li>
+</ul>
+<br/></li>
+<li><p>ターミナルを開き、ダウンロードしたファームウェアのフォルダに移動した後、以下のコマンドを実行して既存のファームウェアを消去し、新しいファームウェアを再書き込みます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">esptool</span> <span class="o">--</span><span class="n">chip</span> <span class="n">esp8266</span> <span class="o">--</span><span class="n">before</span> <span class="n">no_reset_no_sync</span> <span class="n">erase_flash</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">esptool</span> <span class="o">--</span><span class="n">chip</span> <span class="n">esp8266</span> <span class="o">--</span><span class="n">before</span> <span class="n">no_reset_no_sync</span> <span class="n">write_flash</span> <span class="mi">0</span> <span class="s2">"BAT_AT_V1.7.1.0_1M.bin"</span>
+</pre></div>
+</div>
+</li>
+<li><p>以下のプロンプトが表示された場合、ファームウェアは正常にインストールされています。</p>
+<img alt="../_images/install_firmware_macos.png" src="../_images/install_firmware_macos.png" />
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>書き込みに失敗した場合は、以下の点を確認してください。</p>
+<ul class="simple">
+<li><p>ESP8266アダプターのRSTをGNDに挿入してから抜いて、ESP8266モジュールをリセットします。</p></li>
+<li><p>配線が正しいかどうかを確認してください。</p></li>
+<li><p>コンピュータがあなたのボードを適切に認識していること、そしてポートが占有されていないことを確認してください。</p></li>
+<li><p>install.batファイルを再度開きます。</p></li>
+</ul>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>4. テスト</strong></p>
+<ol class="arabic">
+<li><p>元の配線に基づいて、IO1を3V3に接続します。</p>
+<a class="reference internal image-reference" href="../_images/faq_at_burn_check_bb.jpg"><img alt="../_images/faq_at_burn_check_bb.jpg" src="../_images/faq_at_burn_check_bb.jpg" style="width: 800px;" /></a>
+<br/><br/></li>
+<li><p>上部右隅にある虫眼鏡アイコン（シリアルモニター）をクリックし、ボーレートを <strong>115200</strong> に設定すると、ESP8266モジュールに関する情報が表示されます。</p>
+<img alt="../_images/sp20220524113020.png" src="../_images/sp20220524113020.png" />
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ready</span></code> が表示されない場合は、ESP8266モジュールをリセット（RSTをGNDに接続）して、シリアルモニターを再度開きます。</p></li>
+</ul>
+</div>
+</li>
+<li><p><strong>NEWLINE DROPDOWN BOX</strong> をクリックして、ドロップダウンオプションで <code class="docutils literal notranslate"><span class="pre">both</span> <span class="pre">NL</span> <span class="pre">&amp;</span> <span class="pre">CR</span></code> を選択し、 <code class="docutils literal notranslate"><span class="pre">AT</span></code> を入力します。OKが返された場合、ESP8266はR3ボードと正常に接続されたことを意味します。</p>
+<img alt="../_images/sp20220524113702.png" src="../_images/sp20220524113702.png" />
+</li>
+</ol>
+<p>これで、 <a class="reference internal" href="../iot_project_esp01/blynk_start/01-iot_esp8266_config.html#config-esp8266"><span class="std std-ref">1.1 ESP8266の設定</span></a> に従って、ESP8266モジュールの動作モードとボーレートを設定することができます。</p>
+</section>
+<section id="r3">
+<h2>R3でファームウェアを再書き込み<a class="headerlink" href="#r3" title="Link to this heading"></a></h2>
+<p><strong>1. 回路を組む</strong></p>
+<p>ESP8266とSunFounder R3ボードを接続します。</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/connect_esp8266.png"><img alt="../_images/connect_esp8266.png" src="../_images/connect_esp8266.png" style="width: 800px;" /></a>
+</div></blockquote>
+<p><strong>2. ファームウェアの書き込み</strong></p>
+<ul>
+<li><p><strong>Windows</strong> を使用している場合は、以下の手順でファームウェアを書き込みます。</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>ファームウェアと書き込みツールをダウンロードします。</p>
+<ul class="simple">
+<li><p><a class="reference download external" download="" href="https://raw.githubusercontent.com/sunfounder/ultimate-sensor-kit/main/iot_project/esp8266_firmware.zip"><code class="xref download docutils literal notranslate"><span class="pre">ESP8266</span> <span class="pre">Firmware</span></code></a></p></li>
+</ul>
+</li>
+<li><p>解凍した後、4つのファイルが表示されます。</p>
+<img alt="../_images/bat_firmware.png" src="../_images/bat_firmware.png" />
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BAT_AT_V1.7.1.0_1M.bin</span></code>: ESP8266モジュールに書き込むためのファームウェア。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">esptool.exe</span></code>: Windows用のコマンドラインユーティリティ。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code>: Windowsシステム用のコマンドパッケージ。このファイルをダブルクリックすると、ファイル内のすべてのコマンドが実行されます。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r4.bat</span></code>: <code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code> と同じですが、UNO R4ボード専用です。</p></li>
+</ul>
+<br/></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code> をダブルクリックして、ファームウェアの書き込みを開始します。次のプロンプトが表示されたら、ファームウェアのインストールは成功です。</p>
+<img alt="../_images/install_firmware.png" src="../_images/install_firmware.png" />
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>書き込みに失敗した場合は、以下の点を確認してください。</p>
+<ul class="simple">
+<li><p>ESP8266モジュールをリセットします（ESP8266アダプタのRSTをGNDに挿入し、その後抜きます）。</p></li>
+<li><p>配線が正しいか確認します。</p></li>
+<li><p>コンピュータがボードを正しく認識しているか、また、ポートが使用中でないか確認します。</p></li>
+<li><p>install.batファイルを再度開きます。</p></li>
+</ul>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p><strong>Mac OS</strong> システムを使用している場合は、以下の手順でファームウェアを書き込みます。</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Esptoolをインストールするための以下のコマンドを使用します。EsptoolはPythonベースのオープンソース、プラットフォームに依存しないEspressifチップのROMブートローダーと通信するユーティリティです。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">esptool</span>
+</pre></div>
+</div>
+</li>
+<li><p>Esptoolが正しくインストールされた場合、 <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">esptool</span></code> を実行すると[usage: esptool]というメッセージが出力されます。</p></li>
+<li><p>ファームウェアをダウンロードします。</p>
+<ul class="simple">
+<li><p><a class="reference download external" download="" href="https://raw.githubusercontent.com/sunfounder/ultimate-sensor-kit/main/iot_project/esp8266_firmware.zip"><code class="xref download docutils literal notranslate"><span class="pre">ESP8266</span> <span class="pre">Firmware</span></code></a></p></li>
+</ul>
+</li>
+<li><p>解凍すると、3つのファイルが表示されます。</p>
+<img alt="../_images/bat_firmware.png" src="../_images/bat_firmware.png" />
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BAT_AT_V1.7.1.0_1M.bin</span></code>: ESP8266モジュールに書き込むためのファームウェア。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">esptool.exe</span></code>: Windows用のコマンドラインユーティリティ。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code>: Windowsシステム用のコマンドパッケージ。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r4.bat</span></code>: <code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code> と同じですが、UNO R4ボード専用です。</p></li>
+</ul>
+<br/></li>
+<li><p>ターミナルを開き、先ほどダウンロードしたファームウェアフォルダに移動（ <code class="docutils literal notranslate"><span class="pre">cd</span></code> コマンド使用）。次に、以下のコマンドを実行して既存のファームウェアを消去し、新しいファームウェアを書き込みます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">esptool</span> <span class="o">--</span><span class="n">chip</span> <span class="n">esp8266</span> <span class="o">--</span><span class="n">before</span> <span class="n">default_reset</span> <span class="n">erase_flash</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">esptool</span> <span class="o">--</span><span class="n">chip</span> <span class="n">esp8266</span> <span class="o">--</span><span class="n">before</span> <span class="n">default_reset</span> <span class="n">write_flash</span> <span class="mi">0</span> <span class="s2">"BAT_AT_V1.7.1.0_1M.bin"</span>
+</pre></div>
+</div>
+</li>
+<li><p>以下のプロンプトが表示された場合、ファームウェアのインストールは成功です。</p>
+<img alt="../_images/install_firmware_macos.png" src="../_images/install_firmware_macos.png" />
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>書き込みに失敗した場合は、以下の点を確認してください。</p>
+<ul class="simple">
+<li><p>ESP8266モジュールをリセットします（ESP8266アダプタのRSTをGNDに挿入し、その後抜きます）。</p></li>
+<li><p>配線が正しいか確認します。</p></li>
+<li><p>コンピュータがボードを正しく認識しているか、また、ポートが使用中でないか確認します。</p></li>
+<li><p>install.batファイルを再度開きます。</p></li>
+</ul>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>3. テスト</strong></p>
+<ol class="arabic">
+<li><p>元の配線に基づき、IO1を3V3に接続します。</p>
+<a class="reference internal image-reference" href="../_images/connect_esp826612.png"><img alt="../_images/connect_esp826612.png" src="../_images/connect_esp826612.png" style="width: 800px;" /></a>
+<br/><br/></li>
+<li><p>右上隅の虫眼鏡アイコン（シリアルモニター）をクリックし、ボーレートを <strong>115200</strong> に設定すると、ESP8266モジュールに関する情報が表示されます。</p>
+<img alt="../_images/sp20220524113020.png" src="../_images/sp20220524113020.png" />
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ready</span></code> が表示されない場合、ESP8266モジュールをリセットして（RSTをGNDに接続）、シリアルモニターを再度開きます。</p></li>
+</ul>
+</div>
+</li>
+<li><p><strong>NEWLINE DROPDOWN BOX</strong> をクリックし、ドロップダウンオプションで <code class="docutils literal notranslate"><span class="pre">both</span> <span class="pre">NL</span> <span class="pre">&amp;</span> <span class="pre">CR</span></code> を選択します。 <code class="docutils literal notranslate"><span class="pre">AT</span></code> を入力してOKが返された場合、ESP8266はR3ボードと正常に接続されています。</p>
+<img alt="../_images/sp20220524113702.png" src="../_images/sp20220524113702.png" />
+<p>これで、 <a class="reference internal" href="../iot_project_esp01/blynk_start/01-iot_esp8266_config.html#config-esp8266"><span class="std std-ref">1.1 ESP8266の設定</span></a> に従って、ESP8266モジュールの動作モードとボーレートを設定することができます。</p>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="blynk_mobile.html" class="btn btn-neutral float-left" title="モバイルデバイスでBlynkを使う方法" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../thank-learning.html" class="btn btn-neutral float-right" title="ありがとうございます" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

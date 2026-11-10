@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JDY-31 Bluetooth モジュール &mdash; SunFounder Ultimate Sensor Kit  ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=c033477b"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=4dbe4bdc"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=2c65fa5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="IoT プロジェクト" href="../iot_project.html" />
+    <link rel="prev" title="ESP8266モジュール" href="37-component_esp8266.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Ultimate Sensor Kitについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Arduinoで始めよう</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduinoビデオコース</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">コードのダウンロード</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="00-component_list.html">コンポーネントの基本</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="36-component_uno.html">Arduino UNO R4 Minima ボード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="39-component_breadboard.html">ブレッドボード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="40-component_wires.html">ジャンパーワイヤー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-component_ultrasonic_module.html">超音波センサーモジュール（HC-SR04）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-component_gas.html">ガス/煙センサーモジュール（MQ2）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-component_flame.html">炎センサーモジュール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-component_vibration.html">振動センサーモジュール（SW-420）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-component_mpu6050.html">加速度センサー &amp; ジャイロスコープモジュール（MPU6050）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-component_button.html">ボタンモジュール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-component_photoresistor.html">フォトレジスタモジュール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-component_potentiometer.html">ポテンショメータモジュール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-component_ir_obstacle.html">IR 赤外線障害物回避センサーモジュール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-component_soil.html">容量性土壌湿度モジュール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11-component_raindrop.html">雨滴検出モジュール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12-component_dht11.html">温度と湿度センサーモジュール（DHT11）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13-component_pir_motion.html">PIRモーションモジュール（HC-SR501）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14-component_bmp280.html">温度、湿度、気圧センサー（BMP280）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="15-component_max30102.html">脈拍酸素計および心拍数センサー（MAX30102）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="16-component_rtc_ds1302.html">リアルタイムクロックモジュール（DS1302）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="17-component_touch.html">タッチセンサモジュール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="18-component_speed.html">赤外線速度センサモジュール（LM393）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="19-component_joystick.html">ジョイスティックモジュール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="20-component_VL53L0X.html">飛行時間（ToF）マイクロLiDAR距離センサ（VL53L0X）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="21-component_i2c_lcd1602.html">I2C LCD 1602</a></li>
+<li class="toctree-l2"><a class="reference internal" href="22-component_oled.html">OLEDディスプレイモジュール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="23-component_traffic.html">信号機モジュール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="24-component_rgb.html">RGB モジュール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="25-component_relay.html">5V リレーモジュール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="26-component_buzzer.html">パッシブブザーモジュール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="27-component_servo.html">サーボモータ（SG90）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="28-component_pump.html">遠心ポンプ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="29-component_ttmotor.html">TTモーター</a></li>
+<li class="toctree-l2"><a class="reference internal" href="37-component_esp8266.html">ESP8266モジュール</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">JDY-31 Bluetooth モジュール</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#at">ATコマンドセット</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">その他のプロジェクト</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../iot_project.html">IoT プロジェクト</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">楽しいプロジェクト</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">ありがとうございます</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="00-component_list.html">コンポーネントの基本</a></li>
+      <li class="breadcrumb-item active">JDY-31 Bluetooth モジュール</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs-ja/docs/source/components_basic/38-component_jdy31.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>こんにちは、SunFounderのRaspberry Pi &amp; Arduino &amp; ESP32愛好家コミュニティへようこそ！Facebook上でRaspberry Pi、Arduino、ESP32についてもっと深く掘り下げ、他の愛好家と交流しましょう。</p>
+<p><strong>参加する理由は？</strong></p>
+<ul class="simple">
+<li><p><strong>エキスパートサポート</strong>：コミュニティやチームの助けを借りて、販売後の問題や技術的な課題を解決します。</p></li>
+<li><p><strong>学び＆共有</strong>：ヒントやチュートリアルを交換してスキルを向上させましょう。</p></li>
+<li><p><strong>独占的なプレビュー</strong>：新製品の発表や先行プレビューに早期アクセスしましょう。</p></li>
+<li><p><strong>特別割引</strong>：最新製品の独占割引をお楽しみください。</p></li>
+<li><p><strong>祭りのプロモーションとギフト</strong>：ギフトや祝日のプロモーションに参加しましょう。</p></li>
+</ul>
+<p>👉 私たちと一緒に探索し、創造する準備はできていますか？[<a href="https://bit.ly/raphaelkit " target="_blank">ここ</a>]をクリックして今すぐ参加しましょう！</p>
+</div>
+<section id="jdy-31-bluetooth">
+<span id="cpn-jdy31"></span><h1>JDY-31 Bluetooth モジュール<a class="headerlink" href="#jdy-31-bluetooth" title="Link to this heading"></a></h1>
+<img alt="../_images/38_JDY31_1.jpg" class="align-center" src="../_images/38_JDY31_1.jpg" />
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>このモジュールは <strong>Apple製デバイスとの接続はサポートしていません</strong>。したがって、このモジュールを使用したチュートリアルは、Androidのスマートフォンかタブレットが必要です。</p>
+</div>
+<p>JDY-31 Bluetoothモジュールは、HC-06 Bluetoothモジュールとピン互換の交換品です。HC-06よりもシンプルで使いやすく、多少のコスト削減も期待できます。</p>
+<p>このJDY-31 Bluetoothモジュールは、Bluetooth 3.0 SPP設計に基づいており、Windows、Linux、Androidデータ転送に対応しています。動作周波数は2.4 GHzで、変調方式はGFSKです。最大送信電力は8 dBで、最大通信距離は30メートルです。ユーザーはATコマンドを用いてデバイス名、ボーレートなどを変更できます。</p>
+<p>JDY-31のピンとその機能:</p>
+<img alt="../_images/38_JDY31_2.jpg" class="align-center" src="../_images/38_JDY31_2.jpg" />
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">JDY-31 ピン</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ピン</p></th>
+<th class="head"><p>名称</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>STATE</p></td>
+<td><p>接続状態ピン（未接続はローレベル、接続後はハイレベル出力）</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>RXD</p></td>
+<td><p>受信ピン、このピンは次のデバイスのTXピンに接続する必要があります。</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>TXD</p></td>
+<td><p>送信ピン、このピンは次のデバイスのRXピンに接続する必要があります。</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>GND</p></td>
+<td><p>GND</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>VCC</p></td>
+<td><p>電源供給（1.8-3.6V、3.3V推奨）</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>EN</p></td>
+<td><p>モジュールの有効/無効。このピンがハイレベルの場合、モジュールが有効になりデータの送受信を開始します。</p></td>
+</tr>
+</tbody>
+</table>
+<p>一般的な使用法では、VCC、GND、RXD、TXDの4つのピンに接続するだけで十分です。接続状態で積極的に切断する必要がある場合は、接続状態でAT+DISCを送信してください。</p>
+<section id="at">
+<h2>ATコマンドセット<a class="headerlink" href="#at" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>コマンド</p></th>
+<th class="head"><p>機能</p></th>
+<th class="head"><p>デフォルト</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AT+VERSION</p></td>
+<td><p>バージョン番号</p></td>
+<td><p>JDY-31-V1.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>AT+RESET</p></td>
+<td><p>ソフトリセット</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AT+DISC</p></td>
+<td><p>切断（接続時有効）</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>AT+LADDR</p></td>
+<td><p>モジュールのMACアドレスを照会する</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AT+PIN</p></td>
+<td><p>接続パスワードの設定・照会</p></td>
+<td><p>1234</p></td>
+</tr>
+<tr class="row-odd"><td><p>AT+BAUD</p></td>
+<td><p>ボーレートの設定・照会</p></td>
+<td><p>9600</p></td>
+</tr>
+<tr class="row-even"><td><p>AT+NAME</p></td>
+<td><p>ブロードキャスト名の設定・照会</p></td>
+<td><p>JDY-31-SPP</p></td>
+</tr>
+<tr class="row-odd"><td><p>AT+DEFAULT</p></td>
+<td><p>工場出荷状態にリセット</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AT+ENLOG</p></td>
+<td><p>シリアルポートステータス出力</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id1">
+<h2>その他のプロジェクト<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../iot_project_esp01/00-iot_bluetooth_start.html#iot-bluetooth-start"><span class="std std-ref">Bluetoothで始めよう</span></a></p></li>
+<li><p><a class="reference internal" href="../iot_project_esp01/15-iot_Bluetooth_lcd.html#iot-bluetooth-lcd"><span class="std std-ref">Bluetooth LCD</span></a></p></li>
+<li><p><a class="reference internal" href="../iot_project_esp01/16-iot_Bluetooth_traffic_light.html#iot-bluetooth-traffic-light"><span class="std std-ref">Bluetooth信号機</span></a></p></li>
+<li><p><a class="reference internal" href="../iot_project_esp01/08-iot_Bluetooth_lock_controller.html#iot-bluetooth-lock-controller"><span class="std std-ref">Bluetooth 錠前コントローラー</span></a></p></li>
+<li><p><a class="reference internal" href="../iot_project_esp01/09-iot_Bluetooth_RGB_controller.html#iot-bluetooth-rgb-controller"><span class="std std-ref">Bluetooth RGB コントローラー</span></a></p></li>
+<li><p><a class="reference internal" href="../iot_project_esp01/10-iot_Bluetooth_environmental_monitor.html#iot-bluetooth-environmental-monitor"><span class="std std-ref">Bluetooth環境モニター</span></a></p></li>
+<li><p><a class="reference internal" href="../iot_project_esp01/11-iot_Bluetooth_piano.html#iot-bluetooth-piano"><span class="std std-ref">Bluetoothピアノ</span></a></p></li>
+<li><p><a class="reference internal" href="../iot_project_esp01/12-iot_Bluetooth_oled.html#iot-bluetooth-oled"><span class="std std-ref">Bluetooth OLED</span></a></p></li>
+<li><p><a class="reference internal" href="../iot_project_esp01/13-iot_Bluetooth_remote_relay.html#iot-bluetooth-remote-relay"><span class="std std-ref">Bluetooth リモートリレー</span></a></p></li>
+<li><p><a class="reference internal" href="../iot_project_esp01/14-iot_Bluetooth_voice_control_relay.html#iot-bluetooth-voice-control-relay"><span class="std std-ref">Bluetoothによる音声制御リレー</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="37-component_esp8266.html" class="btn btn-neutral float-left" title="ESP8266モジュール" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../iot_project.html" class="btn btn-neutral float-right" title="IoT プロジェクト" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

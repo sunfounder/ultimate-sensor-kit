@@ -88,7 +88,7 @@ ESP8266 WiFiモジュールを介してArduinoをBlynkなどのプラットフ�
     arduino_video_course/arduino_video_course
     download_code
     components_basic/00-component_list
-    iot_project/00-iot_project
+    iot_project
     fun_project/fun_project
     faq/00_faq
     thank-learning
