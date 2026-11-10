@@ -1,0 +1,245 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:4
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:6
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:8
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:9
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:10
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:11
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:12
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:14
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:19
+msgid "Bluetooth Remote Relay"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:29
+msgid "This project uses an Android app created with MIT App Inventor to remotely control a relay module through the JDY-31 Bluetooth module connected to an Arduino Uno. When the app's buttons are pressed, it sends a simple command ('1' or '0') to the Arduino. When the Arduino receives the command '1' via Bluetooth, it activates the relay, and when it receives '0', it deactivates the relay. This provides a user-friendly interface on a smartphone to control devices connected to the relay."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:31
+msgid "The Android application will be constructed utilizing a complimentary web-based platform known as |link_appinventor|. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:35
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:38
+msgid "The following example demonstrates using a relay to control an LED module. **While you can connect the relay to other appliances in actual applications, extreme caution is required when dealing with HIGH AC voltage. Improper or incorrect use can lead to severe injury or even death. Therefore, it is intended for people who are familiar with and knowledgeable about HIGH AC voltage. Always prioritize safety.**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:44
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:45
+msgid ":ref:`cpn_jdy31`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:46
+msgid ":ref:`cpn_relay`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:47
+msgid ":ref:`cpn_rgb`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:51
+msgid "2. Create the Android App"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:53
+msgid "The Android application will be developed using a free web application known as |link_appinventor|. MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop features allowing for the creation of simplistic applications."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:57
+msgid "Now, let's begin."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:59
+msgid "Go to |link_appinventor_login|, and click \"online tool\" to login. You will require a Google account to register with MIT App Inventor."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:65
+msgid "After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``RemoteRelay.aia`` file located in the path ``ultimate-sensor-kit\\code\\iot_project_esp01\\bluetooth\\08-Bluetooth_remote_relay``."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:67
+msgid "You can also directly download here: :download:`RemoteRelay.aia</_static/other/RemoteRelay.aia>`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:72
+msgid "Upon uploading the ``.aia`` file, you will see the application on the MIT App Inventor software. This is a pre-configured template. You can modify this template after you have familiarized yourself with MIT App Inventor through the following steps."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:74
+msgid "In MIT App Inventor, you have 2 primary sections: the **Designer** and the **Blocks**. You can switch between these two sections in the upper right corner of the page."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:78
+msgid "The **Designer** allows you to add buttons, text, screens, and modify the overall aesthetic of your application."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:82
+msgid "Next, there's the **Blocks** section. This section lets you craft custom functionalities for your app, allowing you to program each component on the app's GUI to achieve desired features."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:86
+msgid "To install the application on a smartphone, navigate to the **Build** tab."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:90
+msgid "You can generate a ``.apk`` file. After selecting this option, a page will appear allowing you to choose between downloading a ``.apk`` file or scanning a QR code for installation. Follow the installation guide to complete the application installation."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:92
+msgid "You also download our pre-compiled APK here: :download:`RemoteRelay.apk</_static/other/RemoteRelay.apk>`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:94
+msgid "If you wish to upload this app to Google Play or another app marketplace, you can generate a ``.aab`` file."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:98
+msgid "3. Upload the Code"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:100
+msgid "Open the ``08-Bluetooth_remote_relay.ino`` file under the path of ``ultimate-sensor-kit\\code\\iot_project_esp01\\bluetooth\\08-Bluetooth_remote_relay``, or copy this code into **Arduino IDE**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:106
+msgid "After selecting the correct board and port, click the **Upload** button."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:108
+msgid "Open the Serial monitor(set baudrate to **9600**) to view debug messages."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:111
+msgid "4. App and Bluetooth module Connection"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:113
+msgid "Ensure that the application created earlier is installed on your smartphone."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:115
+msgid "Initially, turn on **Bluetooth** on your smartphone."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:121
+msgid "Navigate to the **Bluetooth settings** on your smartphone and look for names like **JDY-31-SPP**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:127
+msgid "After clicking it, agree to the **Pair** request in the pop-up window. If prompted for a pairing code, please enter \"1234\"."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:133
+msgid "Now open the newly installed **Remote Relay** APP."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:139
+msgid "In the APP, click on **Connect** button to establish a connection between the APP and Bluetooth module."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:145
+msgid "This page displays a list of all paired Bluetooth devices. Choose the ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` option from the list. The name of each device is listed next to its MAC address."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:151
+msgid "If you don't see any devices on the page shown above, it could be because this app is not authorized to scan for nearby devices. In such a case, you will need to adjust the settings manually."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:153
+msgid "To access the **APP Info** page, long-press the app icon and select it. Alternatively, if you have another method to reach this page, use that instead."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:159
+msgid "Navigate to the **Permissions** page."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:165
+msgid "To enable the APP to scan for nearby devices, go to **Nearby devices** and select **Always**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:171
+msgid "Now, restart the APP and repeat steps 5 and 6 to successfully connect to Bluetooth."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:173
+msgid "After a successful connection, you will be redirected to the main page. Click the \"ON\" or \"OFF\" button to turn on or off the relay."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:176
+msgid "When the MAC address of Bluetooth contains \"1\", the relay will be turned on and then quickly turned off after the first successful Bluetooth connection. Because when the Bluetooth is connected, the MAC address will be sent to Arduino. Arduino detects \"1\" and then opens the relay. After Bluetooth initialization, the app sends 0 to Arduino via Bluetooth to ensure that the initial state of the relay is closed after connection."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:183
+msgid "5. Code explanation"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:185
+msgid "**Library and Global Variable Initialization**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:197
+msgid "This segment includes the ``SoftwareSerial`` library and sets up the global variables. Pins 3 and 4 are defined for transmitting and receiving data with the Bluetooth module, respectively. Additionally, the relay module is connected to pin 8."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:199
+msgid "**setup() Function**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:209
+msgid "It initiates the Serial monitor and Bluetooth module communication at a baud rate of 9600. It also sets the ``relayPin`` as an OUTPUT pin."
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:211
+msgid "**loop() Function**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/13-iot_Bluetooth_remote_relay.rst:230
+msgid "The ``loop()`` function runs continuously. It checks if there's a message received from the Bluetooth module. If a message is received, it reads the character. Depending on the character ('1' or '0'), it either turns the relay on or off and sends a confirmation message (\"On\" or \"Off\") to the Serial monitor."
+msgstr ""

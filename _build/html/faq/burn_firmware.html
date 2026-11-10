@@ -1,0 +1,492 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Firmware on the Wireless Module &mdash; SunFounder Ultimate Sensor Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=6e75df5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How to add libraries? (Important)" href="09_add_lib.html" />
+    <link rel="prev" title="How to use Blynk on mobile device?" href="blynk_mobile.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">About Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Get Started with Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Download the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">Component Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iot_project.html">IoT Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">Fun Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="00_faq.html">FAQ</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="blynk_mobile.html">How to use Blynk on mobile device?</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Firmware on the Wireless Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#espc2-01-current-version">ESPC2-01 (current version)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#esp-01-earlier-version">ESP-01 (earlier version)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#re-burn-the-firmware-with-r4">Re-burn the Firmware with R4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#re-burn-the-firmware-with-r3">Re-burn the Firmware with R3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="09_add_lib.html">How to add libraries? (Important)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Thank You</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="00_faq.html">FAQ</a></li>
+      <li class="breadcrumb-item active">Firmware on the Wireless Module</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs/docs/source/faq/burn_firmware.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hello, welcome to the SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.</p>
+<p><strong>Why Join?</strong></p>
+<ul class="simple">
+<li><p><strong>Expert Support</strong>: Solve post-sale issues and technical challenges with help from our community and team.</p></li>
+<li><p><strong>Learn &amp; Share</strong>: Exchange tips and tutorials to enhance your skills.</p></li>
+<li><p><strong>Exclusive Previews</strong>: Get early access to new product announcements and sneak peeks.</p></li>
+<li><p><strong>Special Discounts</strong>: Enjoy exclusive discounts on our newest products.</p></li>
+<li><p><strong>Festive Promotions and Giveaways</strong>: Take part in giveaways and holiday promotions.</p></li>
+</ul>
+<p>👉 Ready to explore and create with us? Click [<a href="https://bit.ly/raphaelkit " target="_blank">here</a>] and join today!</p>
+</div>
+<section id="firmware-on-the-wireless-module">
+<span id="burn-firmware"></span><h1>Firmware on the Wireless Module<a class="headerlink" href="#firmware-on-the-wireless-module" title="Link to this heading"></a></h1>
+<p>The kit has been shipped in two versions. Which one you have decides whether there is
+anything to flash at all.</p>
+<section id="espc2-01-current-version">
+<h2>ESPC2-01 (current version)<a class="headerlink" href="#espc2-01-current-version" title="Link to this heading"></a></h2>
+<p><strong>There is nothing to flash.</strong> The module leaves the factory with the ESP-AT firmware
+already burned, and the kit’s sketches only send it AT commands. This chapter is here so
+you can <em>check</em> the module, not so you can reprogram it.</p>
+<p><strong>1. Check the version</strong></p>
+<p>Wire the module as in <a class="reference internal" href="../iot_project_espc201/wifi_espc201/00-connect_r4_blynk.html#c201-connect-blynk"><span class="std std-ref">1.3 Connecting the R4 board to Blynk</span></a>, open the <strong>Serial Monitor</strong> at <strong>115200</strong>,
+set the line ending to <strong>Both NL &amp; CR</strong> (or send with Enter) and type:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>AT+GMR
+</pre></div>
+</div>
+<p>A healthy module answers with four lines and <code class="docutils literal notranslate"><span class="pre">OK</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>AT version:4.1.1.0(ba4dd0e - ESP32C2 - Jul 31 2025 08:37:25)
+SDK version:v5.4.1-643-g8ad0d3d8f2f-dirty
+compile time(7c092f9):Oct 22 2026 16:41:44
+Bin version:v4.1.1.0(ESP32C2-2MB-BLE)
+OK
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The line that tells you this is <strong>our</strong> build is <code class="docutils literal notranslate"><span class="pre">compile</span> <span class="pre">time(7c092f9)...</span></code>.
+<code class="docutils literal notranslate"><span class="pre">Bin</span> <span class="pre">version:v4.1.1.0(ESP32C2-2MB-BLE)</span></code> is printed by the official Bluetooth-only
+build as well, so it is not proof on its own.</p>
+</div>
+<p><strong>2. Check that the Wi-Fi part is really included</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>AT+CWMODE?
+</pre></div>
+</div>
+<p>The answer must be:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>+CWMODE:1
+OK
+</pre></div>
+</div>
+<p>An <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> instead of <code class="docutils literal notranslate"><span class="pre">+CWMODE:1</span></code> means the module carries a Bluetooth-only firmware,
+so the Wi-Fi projects of this kit cannot work with it.</p>
+<p><strong>3. If the module does not answer at all</strong></p>
+<p>Go through these in order - nearly every case is one of them:</p>
+<ul class="simple">
+<li><p>the adapter is powered from <strong>5 V</strong>, not 3.3 V;</p></li>
+<li><p>the external power supply (9-12 V) is plugged into the DC jack of the R4 Minima - on
+USB alone the module browns out while its radio starts;</p></li>
+<li><p>TX of the module goes to RX of the board and RX to TX;</p></li>
+<li><p>IO9 is left <strong>floating</strong> (do not pull it low - that is download mode);</p></li>
+<li><p>press the reset button on the board and try <code class="docutils literal notranslate"><span class="pre">AT</span></code> again after about two seconds.</p></li>
+</ul>
+<p><strong>4. If the firmware is the wrong one</strong></p>
+<p>This cannot be repaired in the field: the module has to be taken out of the adapter,
+put into download mode and flashed with the matching ESP-AT build. Please send the
+<code class="docutils literal notranslate"><span class="pre">AT+GMR</span></code> output to <strong>service&#64;sunfounder.com</strong> and we will replace the module.</p>
+</section>
+<section id="esp-01-earlier-version">
+<h2>ESP-01 (earlier version)<a class="headerlink" href="#esp-01-earlier-version" title="Link to this heading"></a></h2>
+<p>The sections below describe the earlier version of the kit, which uses an ESP-01 module.
+Unlike the ESPC2-01, that module can be re-flashed by the customer.</p>
+<section id="re-burn-the-firmware-with-r4">
+<h3>Re-burn the Firmware with R4<a class="headerlink" href="#re-burn-the-firmware-with-r4" title="Link to this heading"></a></h3>
+<p><strong>1. Build the circuit</strong></p>
+<p>Connect ESP8266 and Arduino UNO R4 board.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/faq_at_burn_bb.jpg"><img alt="../_images/faq_at_burn_bb.jpg" src="../_images/faq_at_burn_bb.jpg" style="width: 800px;" /></a>
+</div></blockquote>
+<p><strong>2. Upload the Following Code to R4</strong></p>
+<div class="highlight-Arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial1</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">Serial</span><span class="p">.</span><span class="nf">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">      </span><span class="c1">// If anything comes in Serial (USB),</span>
+<span class="w">        </span><span class="n">Serial1</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nf">Serial</span><span class="p">.</span><span class="nf">read</span><span class="p">());</span><span class="w">   </span><span class="c1">// read it and send it out Serial1 (pins 0 &amp; 1)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Serial1</span><span class="p">.</span><span class="nf">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">     </span><span class="c1">// If anything comes in Serial1 (pins 0 &amp; 1)</span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">Serial1</span><span class="p">.</span><span class="nf">read</span><span class="p">());</span><span class="w">   </span><span class="c1">// read it and send it out Serial (USB)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>3. Burning the firmware</strong></p>
+<ul>
+<li><p>Follow the steps below to burn the firmware if you are using <strong>Windows</strong>.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Download firmware and burn-in tool.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference download external" download="" href="https://raw.githubusercontent.com/sunfounder/ultimate-sensor-kit/main/iot_project/esp8266_firmware.zip"><code class="xref download docutils literal notranslate"><span class="pre">ESP8266</span> <span class="pre">Firmware</span></code></a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>After unzipping, you will see 4 files.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BAT_AT_V1.7.1.0_1M.bin</span></code>: The firmware to burn to the ESP8266 module.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">esptool.exe</span></code>: This is a command-line utility for Windows.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code>: This is the command package for Windows system, double click this file will run all the commands inside the file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r4.bat</span></code>: Same as <code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code>, but dedicated to UNO R4 board.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Double click <code class="docutils literal notranslate"><span class="pre">install_r4.bat</span></code> to start the firmware burning. If you see the following prompt, the firmware has been installed successfully.</p>
+<blockquote>
+<div><img alt="../_images/install_firmware.png" src="../_images/install_firmware.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the burn-in fails, please check the following points.</p>
+<ul class="simple">
+<li><p>Reset the ESP8266 module by inserting the RST on the ESP8266 Adapter to GND and then unplugging it.</p></li>
+<li><p>Check if the wiring is correct.</p></li>
+<li><p>Whether the computer has recognized your board properly, and make sure the port is not occupied.</p></li>
+<li><p>Reopen the install.bat file.</p></li>
+</ul>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>To burn the firmware, follow these steps if you are using a <strong>Mac OS</strong> system.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Use the following commands to install Esptool. Esptool is a Python-based, open-source, platform-independent utility to communicate with the ROM bootloader in Espressif chips.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">esptool</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>If esptool is properly installed, it will output a message such as [usage: esptool] if you run <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">esptool</span></code>.</p></li>
+<li><p>Download firmware.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference download external" download="" href="https://raw.githubusercontent.com/sunfounder/ultimate-sensor-kit/main/iot_project/esp8266_firmware.zip"><code class="xref download docutils literal notranslate"><span class="pre">ESP8266</span> <span class="pre">Firmware</span></code></a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>After unzipping, you will see 4 files.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BAT_AT_V1.7.1.0_1M.bin</span></code>: The firmware to burn to the ESP8266 module.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">esptool.exe</span></code>: This is a command-line utility for Windows.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code>: This is the command package for Windows system.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r4.bat</span></code>: Same as <code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code>, but dedicated to UNO R4 board.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Open a terminal and use the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command to go into the firmware folder you just downloaded, then run the following command to erase the existing firmware and re-burn the new firmware.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">esptool</span> <span class="o">--</span><span class="n">chip</span> <span class="n">esp8266</span> <span class="o">--</span><span class="n">before</span> <span class="n">no_reset_no_sync</span> <span class="n">erase_flash</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">esptool</span> <span class="o">--</span><span class="n">chip</span> <span class="n">esp8266</span> <span class="o">--</span><span class="n">before</span> <span class="n">no_reset_no_sync</span> <span class="n">write_flash</span> <span class="mi">0</span> <span class="s2">"BAT_AT_V1.7.1.0_1M.bin"</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>If you see the following prompt, the firmware has been installed successfully.</p>
+<blockquote>
+<div><img alt="../_images/install_firmware_macos.png" src="../_images/install_firmware_macos.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the burn-in fails, please check the following points.</p>
+<ul class="simple">
+<li><p>Reset the ESP8266 module by inserting the RST on the ESP8266 Adapter to GND and then unplugging it.</p></li>
+<li><p>Check if the wiring is correct.</p></li>
+<li><p>Whether the computer has recognized your board properly, and make sure the port is not occupied.</p></li>
+<li><p>Reopen the install.bat file.</p></li>
+</ul>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>4. Test</strong></p>
+<ol class="arabic">
+<li><p>On the basis of the original wiring, connect IO1 to 3V3.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/faq_at_burn_check_bb.jpg"><img alt="../_images/faq_at_burn_check_bb.jpg" src="../_images/faq_at_burn_check_bb.jpg" style="width: 800px;" /></a>
+</div></blockquote>
+</li>
+<li><p>You will be able to see information about the ESP8266 module if you click the magnifying glass icon(Serial Monitor) in the upper right corner and set the baud rate to <strong>115200</strong>.</p>
+<blockquote>
+<div><img alt="../_images/sp20220524113020.png" src="../_images/sp20220524113020.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">ready</span></code> doesn’t appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.</p></li>
+</ul>
+</div>
+</div></blockquote>
+</li>
+<li><p>Click on <strong>NEWLINE DROPDOWN BOX</strong>, select <code class="docutils literal notranslate"><span class="pre">both</span> <span class="pre">NL</span> <span class="pre">&amp;</span> <span class="pre">CR</span></code> in the drop down option, enter <code class="docutils literal notranslate"><span class="pre">AT</span></code>, if it returns OK, it means ESP8266 has successfully established connection with R3 board.</p>
+<blockquote>
+<div><img alt="../_images/sp20220524113702.png" src="../_images/sp20220524113702.png" />
+</div></blockquote>
+</li>
+</ol>
+<p>Now you can continue to follow <a class="reference internal" href="../iot_project_esp01/blynk_start/01-iot_esp8266_config.html#config-esp8266"><span class="std std-ref">1.0 Configuring the ESP8266</span></a> to set the working mode and baud rate of the ESP8266 module.</p>
+</section>
+<section id="re-burn-the-firmware-with-r3">
+<h3>Re-burn the Firmware with R3<a class="headerlink" href="#re-burn-the-firmware-with-r3" title="Link to this heading"></a></h3>
+<p><strong>1. Build the circuit</strong></p>
+<p>Connect ESP8266 and SunFounder R3 board.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/connect_esp8266.png"><img alt="../_images/connect_esp8266.png" src="../_images/connect_esp8266.png" style="width: 800px;" /></a>
+</div></blockquote>
+<p><strong>2. Burning the firmware</strong></p>
+<ul>
+<li><p>Follow the steps below to burn the firmware if you are using <strong>Windows</strong>.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Download firmware and burn-in tool.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference download external" download="" href="https://raw.githubusercontent.com/sunfounder/ultimate-sensor-kit/main/iot_project/esp8266_firmware.zip"><code class="xref download docutils literal notranslate"><span class="pre">ESP8266</span> <span class="pre">Firmware</span></code></a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>After unzipping, you will see 4 files.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BAT_AT_V1.7.1.0_1M.bin</span></code>: The firmware to burn to the ESP8266 module.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">esptool.exe</span></code>: This is a command-line utility for Windows.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code>: This is the command package for Windows system, double click this file will run all the commands inside the file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r4.bat</span></code>: Same as <code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code>, but dedicated to UNO R4 board.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Double click <code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code> to start the firmware burning. If you see the following prompt, the firmware has been installed successfully.</p>
+<blockquote>
+<div><img alt="../_images/install_firmware.png" src="../_images/install_firmware.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the burn-in fails, please check the following points.</p>
+<ul class="simple">
+<li><p>Reset the ESP8266 module by inserting the RST on the ESP8266 Adapter to GND and then unplugging it.</p></li>
+<li><p>Check if the wiring is correct.</p></li>
+<li><p>Whether the computer has recognized your board properly, and make sure the port is not occupied.</p></li>
+<li><p>Reopen the install.bat file.</p></li>
+</ul>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>To burn the firmware, follow these steps if you are using a <strong>Mac OS</strong> system.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Use the following commands to install Esptool. Esptool is a Python-based, open-source, platform-independent utility to communicate with the ROM bootloader in Espressif chips.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">esptool</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>If esptool is properly installed, it will output a message such as [usage: esptool] if you run <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">esptool</span></code>.</p></li>
+<li><p>Download firmware.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference download external" download="" href="https://raw.githubusercontent.com/sunfounder/ultimate-sensor-kit/main/iot_project/esp8266_firmware.zip"><code class="xref download docutils literal notranslate"><span class="pre">ESP8266</span> <span class="pre">Firmware</span></code></a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>After unzipping, you will see 3 files.</p>
+<blockquote>
+<div><img alt="../_images/bat_firmware.png" src="../_images/bat_firmware.png" />
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BAT_AT_V1.7.1.0_1M.bin</span></code>: The firmware to burn to the ESP8266 module.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">esptool.exe</span></code>: This is a command-line utility for Windows.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code>: This is the command package for Windows system.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_r4.bat</span></code>: Same as <code class="docutils literal notranslate"><span class="pre">install_r3.bat</span></code>, but dedicated to UNO R4 board.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Open a terminal and use the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command to go into the firmware folder you just downloaded, then run the following command to erase the existing firmware and re-burn the new firmware.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">esptool</span> <span class="o">--</span><span class="n">chip</span> <span class="n">esp8266</span> <span class="o">--</span><span class="n">before</span> <span class="n">default_reset</span> <span class="n">erase_flash</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">esptool</span> <span class="o">--</span><span class="n">chip</span> <span class="n">esp8266</span> <span class="o">--</span><span class="n">before</span> <span class="n">default_reset</span> <span class="n">write_flash</span> <span class="mi">0</span> <span class="s2">"BAT_AT_V1.7.1.0_1M.bin"</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>If you see the following prompt, the firmware has been installed successfully.</p>
+<blockquote>
+<div><img alt="../_images/install_firmware_macos.png" src="../_images/install_firmware_macos.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the burn-in fails, please check the following points.</p>
+<ul class="simple">
+<li><p>Reset the ESP8266 module by inserting the RST on the ESP8266 Adapter to GND and then unplugging it.</p></li>
+<li><p>Check if the wiring is correct.</p></li>
+<li><p>Whether the computer has recognized your board properly, and make sure the port is not occupied.</p></li>
+<li><p>Reopen the install.bat file.</p></li>
+</ul>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>3. Test</strong></p>
+<ol class="arabic">
+<li><p>On the basis of the original wiring, connect IO1 to 3V3.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/connect_esp826612.png"><img alt="../_images/connect_esp826612.png" src="../_images/connect_esp826612.png" style="width: 800px;" /></a>
+</div></blockquote>
+</li>
+<li><p>You will be able to see information about the ESP8266 module if you click the magnifying glass icon(Serial Monitor) in the upper right corner and set the baud rate to <strong>115200</strong>.</p>
+<blockquote>
+<div><img alt="../_images/sp20220524113020.png" src="../_images/sp20220524113020.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">ready</span></code> doesn’t appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.</p></li>
+</ul>
+</div>
+</div></blockquote>
+</li>
+<li><p>Click on <strong>NEWLINE DROPDOWN BOX</strong>, select <code class="docutils literal notranslate"><span class="pre">both</span> <span class="pre">NL</span> <span class="pre">&amp;</span> <span class="pre">CR</span></code> in the drop down option, enter <code class="docutils literal notranslate"><span class="pre">AT</span></code>, if it returns OK, it means ESP8266 has successfully established connection with R3 board.</p>
+<blockquote>
+<div><img alt="../_images/sp20220524113702.png" src="../_images/sp20220524113702.png" />
+</div></blockquote>
+</li>
+</ol>
+<p>Now you can continue to follow <a class="reference internal" href="../iot_project_esp01/blynk_start/01-iot_esp8266_config.html#config-esp8266"><span class="std std-ref">1.0 Configuring the ESP8266</span></a> to set the working mode and baud rate of the ESP8266 module.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="blynk_mobile.html" class="btn btn-neutral float-left" title="How to use Blynk on mobile device?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="09_add_lib.html" class="btn btn-neutral float-right" title="How to add libraries? (Important)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

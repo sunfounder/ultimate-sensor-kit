@@ -1,0 +1,243 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Potentiometer scale value &mdash; SunFounder Ultimate Sensor Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=6e75df5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FAQ" href="../faq/00_faq.html" />
+    <link rel="prev" title="ToF distance monitor" href="09-fun_ToF_distance_monitor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">About Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Get Started with Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Download the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">Component Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iot_project.html">IoT Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fun_project.html">Fun Projects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01-fun_Smart_trashcan.html">Smart trashcan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-fun_Gas_leak_alarm.html">Gas leak alarm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-fun_Light_control_switch.html">Light control switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-fun_Automatic_soap_dispenser.html">Automatic soap dispenser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-fun_Motion_triggered_relay.html">Motion triggered relay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-fun_Heart_rate_monitor.html">Heart rate monitor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-fun_Doorbell.html">Doorbell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-fun-Touch_toggle_light.html">Touch toggle light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-fun_ToF_distance_monitor.html">ToF distance monitor</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Potentiometer scale value</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#build-the-circuit">1. Build the Circuit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code">2. Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-explanation">3. Code explanation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Thank You</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="fun_project.html">Fun Projects</a></li>
+      <li class="breadcrumb-item active">Potentiometer scale value</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs/docs/source/fun_project/10-fun-Potentiometer_scale_value.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hello, welcome to the SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.</p>
+<p><strong>Why Join?</strong></p>
+<ul class="simple">
+<li><p><strong>Expert Support</strong>: Solve post-sale issues and technical challenges with help from our community and team.</p></li>
+<li><p><strong>Learn &amp; Share</strong>: Exchange tips and tutorials to enhance your skills.</p></li>
+<li><p><strong>Exclusive Previews</strong>: Get early access to new product announcements and sneak peeks.</p></li>
+<li><p><strong>Special Discounts</strong>: Enjoy exclusive discounts on our newest products.</p></li>
+<li><p><strong>Festive Promotions and Giveaways</strong>: Take part in giveaways and holiday promotions.</p></li>
+</ul>
+<p>👉 Ready to explore and create with us? Click [<a href="https://bit.ly/raphaelkit " target="_blank">here</a>] and join today!</p>
+</div>
+<section id="potentiometer-scale-value">
+<span id="fun-potentiometer-scale-value"></span><h1>Potentiometer scale value<a class="headerlink" href="#potentiometer-scale-value" title="Link to this heading"></a></h1>
+<video loop autoplay muted style = "max-width:100%">
+   <source src="../_static/video/fun/10-fun-Potentiometer_scale_value.mp4"  type="video/mp4">
+   Your browser does not support the video tag.
+</video><p>This project is designed to read the value from a potentiometer and display the read value on an LCD 1620 with an I2C interface. The value is also sent to the serial monitor for real-time viewing. A unique feature of this project is the visual representation of the potentiometer’s value on the LCD, displaying a bar that varies in length corresponding to the value.</p>
+<section id="build-the-circuit">
+<h2>1. Build the Circuit<a class="headerlink" href="#build-the-circuit" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/10-fun-Potentiometer_scale_value_circuit.png"><img alt="../_images/10-fun-Potentiometer_scale_value_circuit.png" src="../_images/10-fun-Potentiometer_scale_value_circuit.png" style="width: 100%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima Board</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/08-component_potentiometer.html#cpn-potentiometer"><span class="std std-ref">Potentiometer Module</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/21-component_i2c_lcd1602.html#cpn-i2c-lcd1602"><span class="std std-ref">I2C LCD 1602</span></a></p></li>
+</ul>
+</section>
+<section id="code">
+<h2>2. Code<a class="headerlink" href="#code" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">10-Potentiometer_scale_value.ino</span></code> file under the path of <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\code\fun_project\10-Potentiometer_scale_value</span></code>, or copy this code into <strong>Arduino IDE</strong>.</p>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/8adabab1-9d8b-4b84-9007-18f86eda247a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe></li>
+</ol>
+</section>
+<section id="code-explanation">
+<h2>3. Code explanation<a class="headerlink" href="#code-explanation" title="Link to this heading"></a></h2>
+<p>The project functions by continually reading the value from a connected potentiometer. This value is then mapped to a smaller scale (0-16) and represented both numerically and visually on the LCD. By checking the difference between consecutive readings, the code ensures that only significant changes are reflected on the display, thereby reducing jitter. Reducing jitter helps avoid undesirable visual effects resulting from frequent refreshing of the LCD screen.</p>
+<ol class="arabic">
+<li><p><strong>Library Inclusion and Initialization</strong>:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Wire.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;LiquidCrystal_I2C.h&gt;</span>
+<span class="n">LiquidCrystal_I2C</span><span class="w"> </span><span class="nf">lcd</span><span class="p">(</span><span class="mh">0x27</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Here, the required libraries (<code class="docutils literal notranslate"><span class="pre">Wire</span></code> for I2C communication and <code class="docutils literal notranslate"><span class="pre">LiquidCrystal_I2C</span></code> for the LCD) are included. An LCD object is created with the I2C address <code class="docutils literal notranslate"><span class="pre">0x27</span></code> and is defined to have <code class="docutils literal notranslate"><span class="pre">16</span></code> columns and <code class="docutils literal notranslate"><span class="pre">2</span></code> rows.</p>
+</li>
+<li><p><strong>Variable Declaration</strong>:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int</span><span class="w"> </span><span class="n">lastRead</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">     </span><span class="c1">// Previous potentiometer value</span>
+<span class="kr">int</span><span class="w"> </span><span class="n">currentRead</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// Current potentiometer value</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">lastRead</span></code> stores the previously read potentiometer value. <code class="docutils literal notranslate"><span class="pre">currentRead</span></code> will store the current reading from the potentiometer.</p>
+</li>
+<li><p><strong>setup() Function</strong>:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">lcd</span><span class="p">.</span><span class="n">init</span><span class="p">();</span><span class="w">          </span><span class="c1">// Initialize the LCD</span>
+<span class="w">  </span><span class="n">lcd</span><span class="p">.</span><span class="n">backlight</span><span class="p">();</span><span class="w">     </span><span class="c1">// Turn on the LCD backlight</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w">  </span><span class="c1">// Start serial communication at 9600 baud rate</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The LCD is initialized, its backlight is turned on, and serial communication is started at a baud rate of <code class="docutils literal notranslate"><span class="pre">9600</span></code>.</p>
+</li>
+<li><p><strong>Main Loop</strong>:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">int</span><span class="w"> </span><span class="n">currentRead</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">);</span>
+<span class="w">  </span><span class="kr">int</span><span class="w"> </span><span class="n">barLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">map</span><span class="p">(</span><span class="n">currentRead</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1023</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">lastRead</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">currentRead</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">lcd</span><span class="p">.</span><span class="nf">clear</span><span class="p">();</span>
+<span class="w">    </span><span class="n">lcd</span><span class="p">.</span><span class="nf">setCursor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">lcd</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">"Value:"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">lcd</span><span class="p">.</span><span class="nf">setCursor</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">lcd</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">currentRead</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">currentRead</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">barLength</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">lcd</span><span class="p">.</span><span class="nf">setCursor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">      </span><span class="n">lcd</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="kr">char</span><span class="p">(</span><span class="mi">255</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">lastRead</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentRead</span><span class="p">;</span>
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The potentiometer value is read and mapped to a bar length (0-16).</p></li>
+<li><p>If the difference between the last and current reading is more than <code class="docutils literal notranslate"><span class="pre">2</span></code>, the LCD is updated.</p></li>
+<li><p>The value is printed on the first row and a bar (based on the mapped value) on the second row.</p></li>
+<li><p>The value is also sent to the serial monitor.</p></li>
+<li><p>Before the next iteration, <code class="docutils literal notranslate"><span class="pre">lastRead</span></code> is updated, and a delay of <code class="docutils literal notranslate"><span class="pre">200ms</span></code> is introduced for stability.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="09-fun_ToF_distance_monitor.html" class="btn btn-neutral float-left" title="ToF distance monitor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../faq/00_faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:18
+msgid "Heart rate monitor"
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:27
+msgid "This Arduino project aims to build a simple Heart Rate Monitor using a MAX30102 pulse oximeter sensor and an SSD1306 OLED Display. The code takes measurements of the heart rate by determining the time between heartbeats. By taking four measurements, it computes their average and presents the resultant average heart rate on an OLED screen. If the sensor doesn't detect a finger, it sends a prompt to the user to position their finger correctly on the sensor."
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:30
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:35
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:36
+msgid ":ref:`cpn_max30102`"
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:37
+msgid ":ref:`cpn_olde`"
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:41
+msgid "2. Code"
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:43
+msgid "Open the ``06-Heart_rate_monitor.ino`` file under the path of ``ultimate-sensor-kit\\code\\fun_project\\06-Heart_rate_monitor``, or copy this code into **Arduino IDE**."
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:46
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:64
+msgid "To install the library, use the Arduino Library Manager and search for **\"SparkFun MAX3010x\"** and install it."
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:54
+msgid "3. Code explanation"
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:56
+msgid "The main principle behind this project is to capture the pulsation of blood flow through a finger using the MAX30102 sensor. As blood pumps through the body, it causes tiny changes in the volume of blood in the vessels of the fingertip. By shining light through the finger and measuring the amount of light that gets absorbed or reflected back, the sensor detects these minute volume changes. The time interval between subsequent pulses is then used to calculate the heart rate in beats per minute (BPM). This value is then averaged over four measurements and displayed on the OLED screen."
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:59
+msgid "**Library Inclusions and Initial Declarations**:"
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:61
+msgid "The code begins by including necessary libraries for the OLED display, MAX30102 sensor, and heart rate calculation. Additionally, the configuration for the OLED display and the variables for heart rate calculation are declared."
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:76
+msgid "In this project, we've also whipped up a couple of bitmaps. The ``PROGMEM`` keyword denotes that the array is stored in the program memory of the Arduino microcontroller. Storing data in program memory(PROGMEM) instead of RAM can be helpful for large amounts of data, which would otherwise take up too much space in RAM."
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:85
+msgid "**Setup Function**:"
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:87
+msgid "Initializes I2C communication, starts serial communication, initializes the OLED display, and sets up the MAX30102 sensor."
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:97
+msgid "**Main Loop**:"
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:99
+msgid "The core functionality resides here. The IR value is read from the sensor. If a finger is detected (IR value greater than 50,000), the program checks if a heartbeat is sensed. When a heartbeat is detected, the OLED screen displays the BPM and the time between heartbeats is used to calculate BPM. Otherwise, it prompts the user to place their finger on the sensor."
+msgstr ""
+
+#: ../../source/fun_project/06-fun_Heart_rate_monitor.rst:101
+msgid "We have also prepared two bitmaps with heartbeats, and by switching between these two bitmaps, we can achieve a dynamic visual effect."
+msgstr ""

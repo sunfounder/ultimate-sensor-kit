@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5. Weather Monitor with ThingSpeak &mdash; SunFounder Ultimate Sensor Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../../_static/./lang.js?v=6e75df5d"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="6. Remote Relay Controller with Blynk" href="06-iot_Remote_relay_controller.html" />
+    <link rel="prev" title="4. Vibration Alert System with IFTTT" href="04-iot_Vibration_alert_system.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">About Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_start/00_get_start.html">Get Started with Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_video_course/arduino_video_course.html">Arduino Video Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download_code.html">Download the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components_basic/00-component_list.html">Component Basics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../iot_project.html">IoT Projects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../iot_project_esp01/00-iot_project_esp01.html">IoT Projects with ESP01 &amp; Bluetooth Module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../iot_project_espc201.html">IoT Projects with ESPC201</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="00-blynk_start.html">Get Started with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01-iot_Flame_alert_system.html">1. Flame Alert System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-iot_Intrusion_alert_system.html">2. Intrusion Alert System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03-iot_Plant_monitor.html">3. Plant Monitor with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04-iot_Vibration_alert_system.html">4. Vibration Alert System with IFTTT</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5. Weather Monitor with ThingSpeak</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#build-the-circuit">1. Build the Circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configure-thingspeak">2. Configure ThingSpeak</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-code">3. Run the Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-explanation">4. Code explanation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="06-iot_Remote_relay_controller.html">6. Remote Relay Controller with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07-iot_Auto_watering_system.html">7. Auto Watering System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/00-iot_bluetooth_start.html">Get Started with Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/08-iot_Bluetooth_lcd.html">8. Bluetooth LCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/09-iot_Bluetooth_traffic_light.html">9. Bluetooth Traffic Light</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/10-iot_Bluetooth_environmental_monitor.html">10. Bluetooth Environmental Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/11-iot_Bluetooth_lock_controller.html">11. Bluetooth Lock Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/12-iot_Bluetooth_RGB_controller.html">12. Bluetooth RGB Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/13-iot_Bluetooth_piano.html">13. Bluetooth Piano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/14-iot_Bluetooth_oled.html">14. Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/15-iot_Bluetooth_remote_relay.html">15. Bluetooth Remote Relay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/16-iot_Bluetooth_motion_monitor.html">16. Bluetooth Motion Monitor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../fun_project/fun_project.html">Fun Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thank-learning.html">Thank You</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../iot_project.html">IoT Projects</a></li>
+          <li class="breadcrumb-item"><a href="../iot_project_espc201.html">IoT Projects with ESPC201</a></li>
+      <li class="breadcrumb-item active">5. Weather Monitor with ThingSpeak</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs/docs/source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hello, welcome to the SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.</p>
+<p><strong>Why Join?</strong></p>
+<ul class="simple">
+<li><p><strong>Expert Support</strong>: Solve post-sale issues and technical challenges with help from our community and team.</p></li>
+<li><p><strong>Learn &amp; Share</strong>: Exchange tips and tutorials to enhance your skills.</p></li>
+<li><p><strong>Exclusive Previews</strong>: Get early access to new product announcements and sneak peeks.</p></li>
+<li><p><strong>Special Discounts</strong>: Enjoy exclusive discounts on our newest products.</p></li>
+<li><p><strong>Festive Promotions and Giveaways</strong>: Take part in giveaways and holiday promotions.</p></li>
+</ul>
+<p>👉 Ready to explore and create with us? Click [<a href="https://bit.ly/raphaelkit " target="_blank">here</a>] and join today!</p>
+</div>
+<section id="weather-monitor-with-thingspeak">
+<span id="c201-iot-weather-monitor"></span><h1>5. Weather Monitor with ThingSpeak<a class="headerlink" href="#weather-monitor-with-thingspeak" title="Link to this heading"></a></h1>
+<video loop autoplay muted style = "max-width:100%">
+   <source src="../../_static/video/iot/05-iot_Weather_monitor.mp4"  type="video/mp4">
+   Your browser does not support the video tag.
+</video><p>This project collects temperature and pressure data using an Atmospheric Pressure Sensor. The collected data is then transmitted to the ThingSpeak cloud platform through the ESPC2-01 module and the Wi-Fi network at regular time intervals.</p>
+<section id="build-the-circuit">
+<h2>1. Build the Circuit<a class="headerlink" href="#build-the-circuit" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The module draws a high current at start-up, so make sure the 9 V battery or an external power supply is plugged into the DC jack of the R4 Minima.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/05-Wiring_Weather_monitor_c201.png"><img alt="../../_images/05-Wiring_Weather_monitor_c201.png" src="../../_images/05-Wiring_Weather_monitor_c201.png" style="width: 80%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima Board</span></a></p></li>
+<li><p><a class="reference internal" href="../../components_basic/41-component_espc201.html#cpn-espc201"><span class="std std-ref">ESPC2-01 Module</span></a></p></li>
+<li><p><a class="reference internal" href="../../components_basic/14-component_bmp280.html#cpn-bmp280"><span class="std std-ref">Temperature, Humidity &amp; Pressure Sensor (BMP280)</span></a></p></li>
+</ul>
+</section>
+<section id="configure-thingspeak">
+<h2>2. Configure ThingSpeak<a class="headerlink" href="#configure-thingspeak" title="Link to this heading"></a></h2>
+<p><a href="https://thingspeak.com/" target="_blank">ThingSpeak</a>  ™ is an IoT analytics platform service that allows you to aggregate, visualize and analyze live data streams in the cloud. ThingSpeak provides instant visualizations of data posted by your devices to ThingSpeak. With the ability to execute MATLAB® code in ThingSpeak you can perform online analysis and processing of the data as it comes in. ThingSpeak is often used for prototyping and proof of concept IoT systems that require analytics.</p>
+<a class="reference internal image-reference" href="https://thingspeak.com/assets/Signup_TSP_ML_image-3d581d644f5eb1ff9f4999fc55ad04e2530ee7f54be98323d7bb453032353750.svg"><img alt="https://thingspeak.com/assets/Signup_TSP_ML_image-3d581d644f5eb1ff9f4999fc55ad04e2530ee7f54be98323d7bb453032353750.svg" src="https://thingspeak.com/assets/Signup_TSP_ML_image-3d581d644f5eb1ff9f4999fc55ad04e2530ee7f54be98323d7bb453032353750.svg" width="80%" /></a>
+<br/><section id="creating-thingspeak-account">
+<h3><strong>2.1 Creating ThingSpeak Account</strong><a class="headerlink" href="#creating-thingspeak-account" title="Link to this heading"></a></h3>
+<p>The first thing you need to do is to create an account with ThingSpeak. Since the collaboration with MATLAB, you can use your MathWorks credentials to login to <a href="https://thingspeak.com/" target="_blank">ThingSpeak</a> .</p>
+<p>If you do not have one, you need to create an account with MathWorks and login to ThingSpeak Application.</p>
+<a class="reference internal image-reference" href="../../_images/05-thingspeak_signup_shadow1.png"><img alt="../../_images/05-thingspeak_signup_shadow1.png" src="../../_images/05-thingspeak_signup_shadow1.png" style="width: 70%;" /></a>
+</section>
+<section id="creating-the-channel">
+<h3><strong>2.2 Creating the channel</strong><a class="headerlink" href="#creating-the-channel" title="Link to this heading"></a></h3>
+<p>After logging in, create a new channel to store the data by going to “Channels” &gt; “My Channels” and clicking on “New Channel”.</p>
+<a class="reference internal image-reference" href="../../_images/05-thingspeak_channel_1_shadow1.png"><img alt="../../_images/05-thingspeak_channel_1_shadow1.png" src="../../_images/05-thingspeak_channel_1_shadow1.png" style="width: 80%;" /></a>
+<p>For this project, we need to create a channel called “<strong>Weather Monitor</strong>” with two fields: <strong>Field 1</strong> for “<strong>Temperature</strong>” and <strong>Field 2</strong> for “<strong>Atmospheric Pressure</strong>”.</p>
+<a class="reference internal image-reference" href="../../_images/05-thingspeak_channel_2_shadow1.png"><img alt="../../_images/05-thingspeak_channel_2_shadow1.png" src="../../_images/05-thingspeak_channel_2_shadow1.png" style="width: 80%;" /></a>
+<br/></section>
+</section>
+<section id="run-the-code">
+<h2>3. Run the Code<a class="headerlink" href="#run-the-code" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">05-Weather_monitor.ino</span></code> file under the path of <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\code\iot_project_espc201\wifi\05-Weather_monitor</span></code>, or copy this code into <strong>Arduino IDE</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The sketch needs the <strong>Adafruit BMP280</strong> library. Open the Library Manager, search
+for <code class="docutils literal notranslate"><span class="pre">Adafruit</span> <span class="pre">BMP280</span></code> and install it.</p>
+</div>
+</li>
+<li><p>Type the name and the password of your own Wi-Fi network.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">String</span><span class="w"> </span><span class="n">mySSID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"your_ssid"</span><span class="p">;</span>
+<span class="kr">String</span><span class="w"> </span><span class="n">myPWD</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">"your_password"</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Paste the <strong>Write API Key</strong> of your ThingSpeak channel into <code class="docutils literal notranslate"><span class="pre">myAPI</span></code>.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">String</span><span class="w"> </span><span class="n">myAPI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"xxxxxxxxxxxxxxx"</span><span class="p">;</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/05-thingspeak_api_shadow1.png"><img alt="../../_images/05-thingspeak_api_shadow1.png" src="../../_images/05-thingspeak_api_shadow1.png" style="width: 80%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use the <strong>Write</strong> key of the channel, not the Read key, and not the User key. Keep it
+private: anyone with that key can push data into your channel.</p>
+</div>
+</li>
+<li><p>Select <strong>Arduino UNO R4 Minima</strong> and the right port, then click <strong>Upload</strong>.</p></li>
+<li><p>Open the Serial Monitor at <strong>115200</strong>. After a few seconds you should read:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=== Weather Monitor (ThingSpeak) ===
+module is ready
+joining Wi-Fi ... connected
+BMP280 is ready
+</pre></div>
+</div>
+<p>and then, every 20 seconds:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt; AT+CIPSTART="TCP","api.thingspeak.com",80
+&gt; AT+CIPSEND=96
+update sent to ThingSpeak
+Temperature: 27.31 C.  Pressure: 100842.00 Pa
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you read <code class="docutils literal notranslate"><span class="pre">Could</span> <span class="pre">not</span> <span class="pre">find</span> <span class="pre">a</span> <span class="pre">BMP280,</span> <span class="pre">check</span> <span class="pre">the</span> <span class="pre">wiring</span> <span class="pre">and</span> <span class="pre">the</span> <span class="pre">address</span></code>, run the
+I2C scanner or simply try the other address: some modules answer on <code class="docutils literal notranslate"><span class="pre">0x77</span></code> instead
+of <code class="docutils literal notranslate"><span class="pre">0x76</span></code>. The sketch already tries both, so this message means neither one
+answered - check SDA, SCL, VCC and GND.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/05-ready_1_shadow1.png"><img alt="../../_images/05-ready_1_shadow1.png" src="../../_images/05-ready_1_shadow1.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../../_images/05-ready_2_shadow1.png"><img alt="../../_images/05-ready_2_shadow1.png" src="../../_images/05-ready_2_shadow1.png" style="width: 80%;" /></a>
+</li>
+<li><p>Open your ThingSpeak channel. A new point appears on the graph every 20 seconds.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A free ThingSpeak channel accepts one update every 15 seconds. The sketch waits 20,
+so you never lose a point.</p>
+</div>
+</li>
+</ol>
+</section>
+<section id="code-explanation">
+<h2>4. Code explanation<a class="headerlink" href="#code-explanation" title="Link to this heading"></a></h2>
+<p>This project does not use Blynk. The board talks to ThingSpeak with plain HTTP over the
+AT commands, exactly like a browser asks for a web page - which is why you can watch the
+values in any browser afterwards.</p>
+<ol class="arabic">
+<li><p><strong>What you have to fill in</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">String</span><span class="w"> </span><span class="n">mySSID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"your_ssid"</span><span class="p">;</span>
+<span class="kr">String</span><span class="w"> </span><span class="n">myPWD</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">"your_password"</span><span class="p">;</span>
+<span class="kr">String</span><span class="w"> </span><span class="n">myAPI</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">"xxxxxxxxxxxxxxx"</span><span class="p">;</span>
+<span class="kr">String</span><span class="w"> </span><span class="n">myHOST</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"api.thingspeak.com"</span><span class="p">;</span>
+<span class="kr">String</span><span class="w"> </span><span class="n">myPORT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"80"</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The host and the port never change. Only the API key is personal - it tells ThingSpeak
+which channel the numbers belong to.</p>
+</li>
+<li><p><strong>The serial port that talks to the module</strong></p>
+<p>The ESPC2-01 works as a modem: the sketch sends it AT commands on D0/D1, which is
+<code class="docutils literal notranslate"><span class="pre">Serial1</span></code>, a hardware port, so 115200 works without bit errors.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define EspSerial Serial1</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">espModuleInit()</span></code> waits for the module to finish booting and then sends <code class="docutils literal notranslate"><span class="pre">ATE0</span></code> to
+switch the echo off. Without it the boot log and the echoed commands end up mixed into
+the replies.</p>
+</li>
+<li><p><strong>at() - one AT command, with a time limit</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">String</span><span class="w"> </span><span class="nf">at</span><span class="p">(</span><span class="kr">const</span><span class="w"> </span><span class="kr">String</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">long</span><span class="w"> </span><span class="n">waitMs</span><span class="p">,</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">okMark</span><span class="p">,</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">char</span><span class="o">*</span><span class="w"> </span><span class="n">errMark</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">available</span><span class="p">())</span><span class="w"> </span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">read</span><span class="p">();</span>
+<span class="w">  </span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">cmd</span><span class="p">);</span>
+<span class="w">  </span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\r\n</span><span class="s">"</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">long</span><span class="w"> </span><span class="n">t0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">millis</span><span class="p">();</span>
+<span class="w">  </span><span class="kr">String</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nf">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t0</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">waitMs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">available</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">512</span><span class="p">)</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="kr">char</span><span class="p">)</span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">read</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">okMark</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">indexOf</span><span class="p">(</span><span class="n">okMark</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">errMark</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">indexOf</span><span class="p">(</span><span class="n">errMark</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Every command goes through this one function. It stops as soon as the expected answer
+arrives, and it <strong>always returns</strong>, so a missing <code class="docutils literal notranslate"><span class="pre">OK</span></code> can never freeze the board.</p>
+</li>
+<li><p><strong>joinWiFi()</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">at</span><span class="p">(</span><span class="s">"AT+CWMODE=1"</span><span class="p">,</span><span class="w"> </span><span class="mi">1500</span><span class="p">,</span><span class="w"> </span><span class="s">"OK"</span><span class="p">,</span><span class="w"> </span><span class="s">"ERROR"</span><span class="p">);</span>
+<span class="kr">String</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">at</span><span class="p">(</span><span class="s">"AT+CWJAP=</span><span class="se">\"</span><span class="s">"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mySSID</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myPWD</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"</span><span class="se">\"</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="mi">20000</span><span class="p">,</span>
+<span class="w">             </span><span class="s">"WIFI GOT IP"</span><span class="p">,</span><span class="w"> </span><span class="s">"FAIL"</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">AT+CWJAP</span></code> needs several seconds - the module has to find the access point, exchange
+the keys and get an IP address. That is why it is given 20 seconds while the other
+commands only need one.</p>
+</li>
+<li><p><strong>The BMP280</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">bmp</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">BMP280_ADDRESS</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">bmp</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mh">0x77</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">...</span><span class="w">   </span><span class="c1">// give up, there is nothing to measure</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The chip answers on <code class="docutils literal notranslate"><span class="pre">0x76</span></code> or <code class="docutils literal notranslate"><span class="pre">0x77</span></code> depending on how its SDO pin is wired, so the
+sketch tries both before it gives up.</p>
+</li>
+<li><p><strong>loop() - a timer without delay()</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">lastConnectionTime</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">postingInterval</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">sendData</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">millis()</span></code> counts the milliseconds since power-up. Comparing it with the last update
+is a delay that does <strong>not</strong> stop the program - the board stays free to do anything else.
+A free ThingSpeak channel accepts one update every 15 seconds, so 20 seconds is a safe
+interval.</p>
+</li>
+<li><p><strong>sendData() - build the request and push it out</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">String</span><span class="w"> </span><span class="n">req</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"GET /update?api_key="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myAPI</span><span class="p">;</span>
+<span class="n">req</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">"&amp;field1="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kr">String</span><span class="p">(</span><span class="n">temperature</span><span class="p">);</span>
+<span class="n">req</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">"&amp;field2="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kr">String</span><span class="p">(</span><span class="n">pressure</span><span class="p">);</span>
+<span class="n">req</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">" HTTP/1.1</span><span class="se">\r\n</span><span class="s">Host: api.thingspeak.com</span><span class="se">\r\n</span><span class="s">Connection: close</span><span class="se">\r\n\r\n</span><span class="s">"</span><span class="p">;</span>
+
+<span class="n">at</span><span class="p">(</span><span class="s">"AT+CIPMUX=0"</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="s">"OK"</span><span class="p">,</span><span class="w"> </span><span class="s">"ERROR"</span><span class="p">);</span>
+<span class="n">at</span><span class="p">(</span><span class="s">"AT+CIPSTART=</span><span class="se">\"</span><span class="s">TCP</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myHOST</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"</span><span class="se">\"</span><span class="s">,"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myPORT</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span><span class="w"> </span><span class="s">"OK"</span><span class="p">,</span><span class="w"> </span><span class="s">"ERROR"</span><span class="p">);</span>
+
+<span class="n">EspSerial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">"AT+CIPSEND="</span><span class="p">);</span>
+<span class="n">EspSerial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">req</span><span class="p">.</span><span class="n">length</span><span class="p">());</span>
+<span class="p">...</span>
+<span class="n">EspSerial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">req</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Three AT commands do the work:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">AT+CIPMUX=0</span></code> - one connection at a time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AT+CIPSTART</span></code> - open a TCP connection to <code class="docutils literal notranslate"><span class="pre">api.thingspeak.com:80</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AT+CIPSEND=&lt;length&gt;</span></code> - the module answers with <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, and only then you send the
+request. The length must be the <strong>exact</strong> number of characters of <code class="docutils literal notranslate"><span class="pre">req</span></code>, which is
+why the sketch measures <code class="docutils literal notranslate"><span class="pre">req.length()</span></code> instead of guessing.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">field1</span></code> and <code class="docutils literal notranslate"><span class="pre">field2</span></code> are the two columns of your channel. Whatever you name them
+in ThingSpeak, the numbers land there in that order.</p>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="04-iot_Vibration_alert_system.html" class="btn btn-neutral float-left" title="4. Vibration Alert System with IFTTT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="06-iot_Remote_relay_controller.html" class="btn btn-neutral float-right" title="6. Remote Relay Controller with Blynk" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,425 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:4
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:6
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:8
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:9
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:10
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:11
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:12
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:14
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:19
+msgid "7. Auto Watering System with Blynk"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:28
+msgid "A soil moisture probe goes into the pot and a small pump sits in a glass of water. The board reports how wet the soil is, and - once you allow it - switches the pump on by itself before the plant gets thirsty."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:32
+msgid "From the phone you can watch the moisture, drag a slider to choose how dry the soil may get, and decide whether the kit is allowed to water on its own."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:36
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:40
+msgid "The module draws a high current at start-up, so make sure the 9 V battery or an external power supply is plugged into the DC jack of the R4 Minima."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:47
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:48
+msgid ":ref:`cpn_espc201`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:49
+msgid ":ref:`cpn_soil`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:50
+msgid ":ref:`cpn_pump`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:54
+msgid "2. Configure Blynk"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:58
+msgid "The template and the device were created once in :ref:`c201_iot_blynk_start`. Every project adds its datastreams to that **same** template, so each project occupies its own range of virtual pins. This project uses **V8** to **V10**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:62
+msgid "**What this project sends to the cloud**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:64
+msgid "Three values, and they do different jobs:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:66
+msgid "``moisture_percentage`` - the board writes this, so you can see how wet the soil is."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:67
+msgid "``water_threshold`` - you write this from the slider: the level below which the pump runs."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:68
+msgid "``auto_mode`` - a switch that decides whether the board is allowed to start the pump by itself."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:70
+msgid "**Add the datastreams**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:72
+msgid "Open **Developer Zone** -> **My Templates**, click **Ultimate Sensor Kit**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:77
+msgid "Click **Edit** to open the template."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:82
+msgid "Click **Datastreams**, then **Create New**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:87
+msgid "Create the first datastream - a **Virtual Pin** datastream. Nothing is wired to ``V8``: a virtual pin only exists in the cloud, it is a mailbox the board and the app share."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:90
+msgid "**DATASTREAM NAME**: ``moisture_percentage``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:91
+msgid "**DISPLAY NAME**: ``Moisture Percentage``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:92
+msgid "**VIRTUAL PIN**: ``V8``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:93
+msgid "**DATA TYPE**: **Double**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:94
+msgid "**MIN** ``0``, **MAX** ``100``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:99
+msgid "Set the **UNITS** field to ``Percentage``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:105
+msgid "Create the other **two** Virtual Pin datastreams the same way - click **Create New** twice more:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:112
+msgid "Pin"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:113
+msgid "Datastream name"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:114
+msgid "Display name"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:115
+msgid "Type"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:116
+msgid "Min / Max"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:117
+msgid "Units"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:118
+msgid "V9"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:119
+msgid "``water_threshold``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:120
+msgid "``Water Threshold``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:121
+msgid "**Double**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:122
+msgid "0 / 100"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:123
+msgid "Percent"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:124
+msgid "V10"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:125
+msgid "``auto_mode``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:126
+msgid "``Auto Mode``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:127
+msgid "**Integer**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:128
+msgid "0 / 1"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:129
+msgid "None"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:134
+msgid "**Add the web dashboard**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:136
+msgid "Click **Dashboard**, then **Add Widget**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:141
+msgid "Drag a **Gauge** widget onto the dashboard."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:146
+msgid "Click the three dots in the corner of the **Gauge** and choose **Settings**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:148
+msgid "Set **Datastream** to ``Moisture Percentage (V8)``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:153
+msgid "Drag a **Slider** and a **Switch** onto the dashboard the same way, then bind them:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:159
+msgid "Widget"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:160
+msgid "Datastream"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:161
+msgid "What it is for"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:162
+msgid "Slider"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:163
+msgid "``Water Threshold (V9)``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:164
+msgid "set the level at which watering starts"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:165
+msgid "Switch"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:166
+msgid "``Auto Mode (V10)``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:167
+msgid "allow the board to drive the pump on its own"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:175
+msgid "With **auto_mode** off the pump never runs, whatever the slider says. That is the safe default: you can watch the readings for a while before letting the kit water the plant on its own."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:180
+msgid "Click **Save**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:187
+msgid "3. Run the Code"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:189
+msgid "Open the ``07-Auto_watering_system.ino`` file under the path of ``ultimate-sensor-kit\\code\\iot_project_espc201\\wifi\\07-Auto_watering_system``, or copy this code into **Arduino IDE**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:192
+msgid "The three Blynk lines were copied in the Get Started chapter - leave them as they are."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:200
+msgid "Type the name and the password of your own Wi-Fi network."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:207
+msgid "Select **Arduino UNO R4 Minima** and the right port, then click **Upload**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:209
+msgid "Open the Serial Monitor at **115200**. Every 10 seconds the board reports the soil:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:217
+msgid "The number after ``sensorValue`` is the **raw** reading of the probe. Ignore the percentage for now - it is not calibrated yet."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:220
+msgid "Calibrate the probe, because every probe and every soil is different:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:222
+msgid "Hold the probe **in the air** (dry) and write down the ``sensorValue``, for example ``535``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:224
+msgid "Put the probe **in a glass of water** and write down the second ``sensorValue``, for example ``280``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:226
+msgid "Put both numbers into the sketch:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:233
+msgid "Upload again. Now the percentage really means something: 0 % is as dry as the air, 100 % is as wet as the water."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:238
+msgid "The probe reads **higher when dry and lower when wet** - that is why the two numbers appear in this order in the formula. If you skip the calibration the percentage is still shown, but the gauge may sit at 0 % in damp soil or at 100 % in dry soil."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:247
+msgid "On the dashboard, drag the **slider** to a value above the current moisture (for example 40) and turn **Auto Mode** on. Within 35 seconds the pump starts, and the gauge begins to climb."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:253
+msgid "The pump only ever runs when **Auto Mode** is on. With the switch off you can watch the readings for as long as you like and the pump stays quiet."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:261
+msgid "4. Code explanation"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:263
+msgid "**Blynk account and libraries**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:265
+msgid "The first three lines say which Blynk device this board belongs to. They come from the device page and are identical in every project of this kit."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:276
+msgid "**The serial port that talks to the module**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:278
+msgid "The ESPC2-01 works as a modem: the sketch sends it AT commands on D0/D1, which is ``Serial1``, a hardware port. ``espModuleInit()`` waits for the module to boot and then sends ``ATE0`` so the replies stop carrying a copy of the command."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:288
+msgid "**The pump**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:296
+msgid "The pump runs through an **L9110** driver. Give ``1A`` a HIGH level and the pump turns; ``1B`` stays LOW, it is only needed to reverse a motor. A relay or a simple transistor would work the same way - one pin, on or off."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:300
+msgid "**The probe and its two calibration points**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:308
+msgid "The probe returns a raw number, and - this is the surprising part - **the wetter the soil, the lower the number**. The sketch turns that into a percentage:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:315
+msgid "With the two calibration values this maps \"in water\" to ``1.0`` and \"in air\" to ``0.0``, and everything in between proportionally."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:318
+msgid "**Two timers, two different jobs**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:325
+msgid "Measuring is cheap, so it happens often. Starting a pump is not, so it is checked more slowly - and ``delay()`` is never used, so the Blynk connection keeps running."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:328
+msgid "**BLYNK_CONNECTED() and the two writes**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:340
+msgid "``BLYNK_CONNECTED()`` runs at every connection, including after a power cut, and asks the server for the slider and the switch. Without it a restarted board would water with a threshold of ``0`` - that is, never."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:344
+msgid "**sendData() - report, autoWater() - act**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst:360
+msgid "``sendData()`` only reads and reports - it never touches the pump. ``autoWater()`` is the only place that starts it, and it needs **both** conditions: the automatic mode on, and the soil drier than your slider."
+msgstr ""

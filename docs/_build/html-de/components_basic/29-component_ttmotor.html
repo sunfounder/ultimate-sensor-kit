@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TT Motor &mdash; SunFounder Ultimate Sensor Kit  Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=245627df"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=70a09b52"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=2c65fa5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="ESP8266-Modul" href="37-component_esp8266.html" />
+    <link rel="prev" title="Kreiselpumpe" href="28-component_pump.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">脺ber das Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Einstieg in Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Kurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Code herunterladen</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="00-component_list.html">Grundlagen der Komponenten</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="36-component_uno.html">Arduino UNO R4 Minima-Platine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="39-component_breadboard.html">Steckbrett</a></li>
+<li class="toctree-l2"><a class="reference internal" href="40-component_wires.html">Jumper-Kabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-component_ultrasonic_module.html">Ultraschall-Sensormodul (HC-SR04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-component_gas.html">Gas-/Rauch-Sensormodul (MQ2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-component_flame.html">Flammen-Sensormodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-component_vibration.html">Vibrationssensor-Modul (SW-420)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-component_mpu6050.html">Beschleunigungssensor &amp; Gyroskop-Modul (MPU6050)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-component_button.html">Tastenmodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-component_photoresistor.html">Fotowiderstands-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-component_potentiometer.html">Potentiometer-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-component_ir_obstacle.html">IR-Hindernisvermeidungssensor-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-component_soil.html">Kapazitives Bodenfeuchtigkeitsmodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11-component_raindrop.html">Regentropfen-Erkennungsmodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12-component_dht11.html">Temperatur- und Feuchtigkeitssensor-Modul (DHT11)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13-component_pir_motion.html">PIR-Bewegungsmelder-Modul (HC-SR501)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14-component_bmp280.html">Temperatur-, Feuchtigkeits- &amp; Drucksensor (BMP280)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="15-component_max30102.html">Pulsoximeter und Herzfrequenzsensor (MAX30102)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="16-component_rtc_ds1302.html">Echtzeituhr-Modul (DS1302)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="17-component_touch.html">Berührungs-Sensormodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="18-component_speed.html">Infrarot-Geschwindigkeitssensor-Modul (LM393)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="19-component_joystick.html">Joystick-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="20-component_VL53L0X.html">Time-of-Flight Mikro-LIDAR-Entfernungssensor (VL53L0X)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="21-component_i2c_lcd1602.html">I2C LCD 1602</a></li>
+<li class="toctree-l2"><a class="reference internal" href="22-component_oled.html">OLED-Display-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="23-component_traffic.html">Ampel-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="24-component_rgb.html">RGB-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="25-component_relay.html">5V-Relaismodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="26-component_buzzer.html">Passives Summermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="27-component_servo.html">Servomotor (SG90)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="28-component_pump.html">Kreiselpumpe</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">TT Motor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#einfuhrung">Einführung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funktionsprinzip">Funktionsprinzip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#anwendungsbeispiele">Anwendungsbeispiele</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#programmcode">Programmcode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-erklarung">Code-Erklärung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#weitere-ideen">Weitere Ideen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="37-component_esp8266.html">ESP8266-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="38-component_jdy31.html">JDY-31 Bluetooth-Modul</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../iot_project.html">IoT-Projekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">Spaßprojekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Vielen Dank</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="00-component_list.html">Grundlagen der Komponenten</a></li>
+      <li class="breadcrumb-item active">TT Motor</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs-de/docs/source/components_basic/29-component_ttmotor.rst" class="fa fa-github"> Auf GitHub bearbeiten</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Hallo und willkommen in der SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.</p>
+<p><strong>Warum beitreten?</strong></p>
+<ul class="simple">
+<li><p><strong>Expertenunterstützung</strong>: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.</p></li>
+<li><p><strong>Lernen &amp; Teilen</strong>: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.</p></li>
+<li><p><strong>Exklusive Vorschauen</strong>: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.</p></li>
+<li><p><strong>Spezialrabatte</strong>: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.</p></li>
+<li><p><strong>Festliche Aktionen und Gewinnspiele</strong>: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.</p></li>
+</ul>
+<p>👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [<a href="https://bit.ly/raphaelkit " target="_blank">hier</a>] und treten Sie heute bei!</p>
+</div>
+<section id="tt-motor">
+<span id="cpn-ttmotor"></span><h1>TT Motor<a class="headerlink" href="#tt-motor" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="../_images/29_tt_motor.jpg"><img alt="../_images/29_tt_motor.jpg" class="align-center" src="../_images/29_tt_motor.jpg" style="width: 400px;" /></a>
+<br/><section id="einfuhrung">
+<h2>Einführung<a class="headerlink" href="#einfuhrung" title="Link to this heading"></a></h2>
+<p>Ein TT-Motor ist eine Art von Gleichstrommotor, an den ein Getriebe angekoppelt ist. Dieses Getriebe reduziert die Geschwindigkeit des Motors und erhöht sein Drehmoment. TT-Motoren werden häufig in Anwendungen wie Antriebsrädern, Propellern, Ventilatoren und ähnlichem eingesetzt. Ein TT-Motor verfügt über zwei Kabel: ein positives und ein negatives. Das positive Kabel ist in der Regel rot und das negative Kabel in der Regel schwarz.</p>
+<p>Im Produkt wird ein TT-Gleichstromgetriebemotor mit einem Übersetzungsverhältnis von 1:48 verwendet. Er ist mit 2 x 200 mm Kabeln mit 0,1“-Steckverbindern ausgestattet, die in ein Steckbrett passen. Ideal zum Einstecken in ein Steckbrett oder eine Anschlussleiste.</p>
+<p>Sie können diese Motoren mit 3 ~ 6VDC betreiben, allerdings werden sie bei höheren Spannungen natürlich schneller laufen.</p>
+</section>
+<section id="funktionsprinzip">
+<h2>Funktionsprinzip<a class="headerlink" href="#funktionsprinzip" title="Link to this heading"></a></h2>
+<p>Ein TT-Motor funktioniert, indem er elektrische Energie in mechanische Energie umwandelt. Wenn eine Spannung an die Kabel des Motors angelegt wird, entsteht ein Magnetfeld, das den Motor zum Drehen bringt. Die Geschwindigkeit und die Drehrichtung des Motors hängen von der Spannung und der Polarität der Stromquelle ab. Je höher die Spannung, desto schneller dreht der Motor. Umkehren der Polarität bewirkt, dass der Motor in die entgegengesetzte Richtung dreht.</p>
+</section>
+<section id="anwendungsbeispiele">
+<h2>Anwendungsbeispiele<a class="headerlink" href="#anwendungsbeispiele" title="Link to this heading"></a></h2>
+<p><strong>Hardware-Komponenten</strong></p>
+<ul class="simple">
+<li><p>Arduino Uno R4 oder R3 Board * 1</p></li>
+<li><p>TT Motor * 1</p></li>
+<li><p>Jumperkabel</p></li>
+</ul>
+<p><strong>Schaltungsaufbau</strong></p>
+<a class="reference internal image-reference" href="../_images/29_tt_motor_circuit.png"><img alt="../_images/29_tt_motor_circuit.png" class="align-center" src="../_images/29_tt_motor_circuit.png" style="width: 400px;" /></a>
+<br/><br/><section id="programmcode">
+<h3>Programmcode<a class="headerlink" href="#programmcode" title="Link to this heading"></a></h3>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/045d66e3-280d-4ef8-aa96-a1770ade414f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe><video loop autoplay muted style = "max-width:100%">
+   <source src="../_static/video/basic/29-component_ttmotor.mp4"  type="video/mp4">
+   Your browser does not support the video tag.
+</video>
+<br/><br/></section>
+<section id="code-erklarung">
+<h3>Code-Erklärung<a class="headerlink" href="#code-erklarung" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Der erste Teil des Codes definiert die Steuerpins des Motors. Diese sind mit der L9110-Motorsteuerplatine verbunden.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="c1">// Motorpins definieren</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">motorB_1A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">motorB_2A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Die <code class="docutils literal notranslate"><span class="pre">setup()</span></code>-Funktion initialisiert die Motorsteuerpins als Ausgang mit der Funktion <code class="docutils literal notranslate"><span class="pre">pinMode()</span></code>. Anschließend wird mit <code class="docutils literal notranslate"><span class="pre">analogWrite()</span></code> die Geschwindigkeit des Motors eingestellt. Der an <code class="docutils literal notranslate"><span class="pre">analogWrite()</span></code> übergebene Wert kann zwischen 0 (aus) und 255 (volle Geschwindigkeit) variieren. Danach wird die Funktion <code class="docutils literal notranslate"><span class="pre">delay()</span></code> verwendet, um den Code für 5000 Millisekunden (oder 5 Sekunden) anzuhalten, wonach die Motorgeschwindigkeit auf 0 (aus) gesetzt wird.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">pinMode</span><span class="p">(</span><span class="n">motorB_1A</span><span class="p">,</span><span class="w"> </span><span class="kr">OUTPUT</span><span class="p">);</span><span class="w">  </span><span class="c1">// set motor pin 1 as output</span>
+<span class="w">  </span><span class="nf">pinMode</span><span class="p">(</span><span class="n">motorB_2A</span><span class="p">,</span><span class="w"> </span><span class="kr">OUTPUT</span><span class="p">);</span><span class="w">  </span><span class="c1">// set motor pin 2 as output</span>
+
+<span class="w">  </span><span class="nf">analogWrite</span><span class="p">(</span><span class="n">motorB_1A</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">);</span><span class="w">  </span><span class="c1">// set motor speed (0-255)</span>
+<span class="w">  </span><span class="nf">analogWrite</span><span class="p">(</span><span class="n">motorB_2A</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nf">analogWrite</span><span class="p">(</span><span class="n">motorB_1A</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">analogWrite</span><span class="p">(</span><span class="n">motorB_2A</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="weitere-ideen">
+<h3>Weitere Ideen<a class="headerlink" href="#weitere-ideen" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Geschwindigkeitssteuerung des Motors mit einem Potentiometer: Anstatt die Motorgeschwindigkeit fest vorzugeben, könnten Sie ein Potentiometer verwenden, um die Geschwindigkeit des Motors dynamisch zu steuern.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="28-component_pump.html" class="btn btn-neutral float-left" title="Kreiselpumpe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="37-component_esp8266.html" class="btn btn-neutral float-right" title="ESP8266-Modul" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

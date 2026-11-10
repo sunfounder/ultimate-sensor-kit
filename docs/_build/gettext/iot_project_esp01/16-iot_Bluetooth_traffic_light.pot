@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:4
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:6
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:8
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:9
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:10
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:11
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:12
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:14
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:19
+msgid "Bluetooth Traffic Light"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:28
+msgid "This project is designed to control a traffic light (Red, Yellow, Green LEDs) using Bluetooth communication. The user can send a character ('R', 'Y', or 'G') from a Bluetooth device. When the Arduino receives one of these characters, it lights up the corresponding LED, while ensuring the other two LEDs are turned off."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:32
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:37
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:38
+msgid ":ref:`cpn_jdy31`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:39
+msgid ":ref:`cpn_traffic`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:42
+msgid "2. Upload the Code"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:44
+msgid "Open the ``02-Bluetooth_traffic_light.ino`` file under the path of ``ultimate-sensor-kit\\code\\iot_project_esp01\\bluetooth\\02-Bluetooth_traffic_light``, or copy this code into **Arduino IDE**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:50
+msgid "After selecting the correct board and port, click the **Upload** button."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:52
+msgid "Open the Serial monitor(set baudrate to **9600**) to view debug messages."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:55
+msgid "3. App and Bluetooth module Connection"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:56
+msgid "We can use an app called \"Serial Bluetooth Terminal\" to send messages from the Bluetooth module to Arduino."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:58
+msgid "**Install Serial Bluetooth Terminal**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:60
+msgid "Go to Google Play to download and install |link_serial_bluetooth_terminal| ."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:63
+msgid "**Connect Bluetooth**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:65
+msgid "Initially, turn on **Bluetooth** on your smartphone."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:71
+msgid "Navigate to the **Bluetooth settings** on your smartphone and look for names like **JDY-31-SPP**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:77
+msgid "After clicking it, agree to the **Pair** request in the pop-up window. If prompted for a pairing code, please enter \"1234\"."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:84
+msgid "**Communicate with Bluetooth module**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:86
+msgid "Open the Serial Bluetooth Terminal. Connect to \"JDY-31-SPP\"."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:90
+msgid "**Send command**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:92
+msgid "Use the Serial Bluetooth Terminal app to send commands to Arduino via Bluetooth. Send R to turn on the red light, Y for yellow, and G for green."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:108
+msgid "4. Code explanation"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:110
+msgid "Initialization and Bluetooth setup"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:120
+msgid "We begin by including the SoftwareSerial library to help us with Bluetooth communication. The Bluetooth module's TX and RX pins are then defined and associated with pins 3 and 4 on the Arduino. Finally, we initialize the ``bleSerial`` object for Bluetooth communication."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:122
+msgid "LED Pin Definitions"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:131
+msgid "Here, we're defining which Arduino pins our LEDs are connected to. The red LED is on pin 10, yellow on 11, and green on 12."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:133
+msgid "setup() Function"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:146
+msgid "In the ``setup()`` function, we set the LED pins as ``OUTPUT``. We also start serial communication for both the Bluetooth module and the default serial (connected to the computer) at a baud rate of 9600."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:148
+msgid "Main loop() for Bluetooth Communication"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:167
+msgid "Inside our main ``loop()``, we continuously check if data is available from the Bluetooth module. If we receive data, we read the character and display it in the serial monitor. Depending on the character received (R, Y, or G), we toggle the respective LED using the ``toggleLights()`` function."
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:169
+msgid "Toggle Lights Function"
+msgstr ""
+
+#: ../../source/iot_project_esp01/16-iot_Bluetooth_traffic_light.rst:181
+msgid "This function, ``toggleLights()``, turns off all the LEDs first. After ensuring they are all off, it turns on the specified target LED. This ensures that only one LED is on at a time."
+msgstr ""

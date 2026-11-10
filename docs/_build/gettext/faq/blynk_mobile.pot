@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/faq/blynk_mobile.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:18
+msgid "How to use Blynk on mobile device?"
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:22
+msgid "As datastreams can only be created in Blynk on the web, you will need to reference different projects to create datastreams on the web, then follow the tutorial below to create widgets in Blynk on your mobile device."
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:25
+msgid "Open Google Play or APP Store on your mobile device and search for \"Blynk IoT\" (not Blynk(legacy)) to download."
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:26
+msgid "After opening the APP, login in, this account should be the same as the account used on the web client."
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:27
+msgid "Then go to **Dashboard** (if you don't have one, create one) and you will see that the **Dashboard** for mobile and web are independent of each other."
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:31
+msgid "Click **Edit** Icon."
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:32
+msgid "Click on the blank area."
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:33
+msgid "Choose the same widget as on the web page, such as select a **Joystick** widget."
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:37
+msgid "Now you will see a **Joystick** widget appear in the blank area, click on it."
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:38
+msgid "**Joystick** Settings will appear, select the **Xvalue** and **Yvalue** datastreams you just set in the web page. Note that each widget corresponds to a different datastream in each project."
+msgstr ""
+
+#: ../../source/faq/blynk_mobile.rst:39
+msgid "Go back to the **Dashboard** page and you can operate the **Joystick** when you want."
+msgstr ""

@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:18
+msgid "1.2 Adding the required libraries"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:20
+msgid "You need to add the correct libraries for the Arduino IDE to use Blynk."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:22
+msgid "Click |link_blynk_lib|, scroll down to **\"Assets\"** and download the first ``.zip`` file."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:25
+msgid "Please note that the version number shown in the image below may be outdated. We highly recommend downloading and installing the latest version available."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:29
+msgid "Unzip this file and then enter the ``libraries`` folder to see the following folders."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:33
+msgid "Copy them all and add them to the ``libraries`` folder of your sketchbook."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:35
+msgid "**Step 1:** You can find or change the location of your libraries folder at ``File > Preferences > Sketchbook location``."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:39
+msgid "**Step 2:** Go to the location of your Sketchbook location(find from Arduino IDE). And find ``libraries`` folder, click to open it."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:43
+msgid "**Step 3:** Paste all the unzipped folders of ``Blynk_Release_vx.x.x\\libraries`` into the libraries folder."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:49
+msgid "The release zips of **Blynk 1.4.0 and later** only contain the `Blynk` folder. The Wi-Fi projects in this kit also need `ESP8266_Lib.h`, which ships in a **separate** library called **BlynkESP8266** and is not available in Library Manager. Install it as follows:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:54
+msgid "Open https://github.com/vshymanskyy/BlynkESP8266"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:55
+msgid "Click **Code -> Download ZIP**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:56
+msgid "In the Arduino IDE choose **Sketch -> Include Library -> Add .ZIP Library**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:57
+msgid "Restart the Arduino IDE"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/03-iot_add_lib.rst:59
+msgid "If this library is missing, the sketch stops with::"
+msgstr ""

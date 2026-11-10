@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bluetooth LCD &mdash; SunFounder Ultimate Sensor Kit  Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=245627df"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=70a09b52"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=2c65fa5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Bluetooth-Ampel" href="16-iot_Bluetooth_traffic_light.html" />
+    <link rel="prev" title="Bluetooth-Einstieg" href="00-iot_bluetooth_start.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">脺ber das Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Einstieg in Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Kurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Code herunterladen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">Grundlagen der Komponenten</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../iot_project.html">IoT-Projekte</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="00-iot_project_esp01.html">IoT-Projekte</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="blynk_start/00-blynk_start.html">Einführung in Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01-iot_Flame_alert_system.html">Flammenwarnsystem mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-iot_Intrusion_alert_system.html">Einbruchmeldeanlage mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03-iot_Plant_monitor.html">Pflanzenüberwachung mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06-iot_Remote_relay_controller.html">Ferngesteuerter Relais-Controller mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07-iot_Auto_watering_system.html">Automatisches Bewässerungssystem mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04-iot_Vibration_alert_system.html">Vibrationserkennungssystem mit IFTTT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05-iot_Weather_monitor.html">Wetterüberwachung mit ThingSpeak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="00-iot_bluetooth_start.html">Bluetooth-Einstieg</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Bluetooth LCD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#schaltung-aufbauen">1. Schaltung aufbauen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-hochladen">2. Code hochladen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app-und-bluetooth-modul-verbinden">3. App und Bluetooth-Modul verbinden</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-erlauterung">4. Code-Erläuterung</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="16-iot_Bluetooth_traffic_light.html">Bluetooth-Ampel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08-iot_Bluetooth_lock_controller.html">Bluetooth-Schlosssteuerung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09-iot_Bluetooth_RGB_controller.html">Bluetooth RGB-Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-iot_Bluetooth_environmental_monitor.html">Bluetooth-Umweltmonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-iot_Bluetooth_piano.html">Bluetooth-Klavier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="12-iot_Bluetooth_oled.html">Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="13-iot_Bluetooth_remote_relay.html">Bluetooth-Fernrelais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14-iot_Bluetooth_voice_control_relay.html">Bluetooth Sprachgesteuertes Relais</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">Spaßprojekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Vielen Dank</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../iot_project.html">IoT-Projekte</a></li>
+          <li class="breadcrumb-item"><a href="00-iot_project_esp01.html">IoT-Projekte</a></li>
+      <li class="breadcrumb-item active">Bluetooth LCD</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs-de/docs/source/iot_project_esp01/15-iot_Bluetooth_lcd.rst" class="fa fa-github"> Auf GitHub bearbeiten</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Hallo und willkommen in der SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.</p>
+<p><strong>Warum beitreten?</strong></p>
+<ul class="simple">
+<li><p><strong>Expertenunterstützung</strong>: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.</p></li>
+<li><p><strong>Lernen &amp; Teilen</strong>: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.</p></li>
+<li><p><strong>Exklusive Vorschauen</strong>: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.</p></li>
+<li><p><strong>Spezialrabatte</strong>: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.</p></li>
+<li><p><strong>Festliche Aktionen und Gewinnspiele</strong>: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.</p></li>
+</ul>
+<p>👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [<a href="https://bit.ly/raphaelkit " target="_blank">hier</a>] und treten Sie heute bei!</p>
+</div>
+<section id="bluetooth-lcd">
+<span id="iot-bluetooth-lcd"></span><h1>Bluetooth LCD<a class="headerlink" href="#bluetooth-lcd" title="Link to this heading"></a></h1>
+<video loop autoplay muted style = "max-width:100%">
+   <source src="../_static/video/iot/15-iot_Bluetooth_lcd.mp4"  type="video/mp4">
+   Ihr Browser unterstützt das Video-Tag nicht.
+</video><p>Das Projekt empfängt Nachrichten über ein mit dem UNO-Board verbundenes Bluetooth-Modul und zeigt die empfangenen Nachrichten auf einem LCD-Bildschirm an.</p>
+<section id="schaltung-aufbauen">
+<h2>1. Schaltung aufbauen<a class="headerlink" href="#schaltung-aufbauen" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/15-Wiring_Bluetooth_LCD.png"><img alt="../_images/15-Wiring_Bluetooth_LCD.png" src="../_images/15-Wiring_Bluetooth_LCD.png" style="width: 90%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima-Platine</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/38-component_jdy31.html#cpn-jdy31"><span class="std std-ref">JDY-31 Bluetooth-Modul</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/21-component_i2c_lcd1602.html#cpn-i2c-lcd1602"><span class="std std-ref">I2C LCD 1602</span></a></p></li>
+</ul>
+</section>
+<section id="code-hochladen">
+<h2>2. Code hochladen<a class="headerlink" href="#code-hochladen" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Öffnen Sie die Datei <code class="docutils literal notranslate"><span class="pre">01-Bluetooth_lcd.ino</span></code> im Verzeichnis <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\iot_project\bluetooth\01-Bluetooth_lcd</span></code>, oder kopieren Sie diesen Code in die <strong>Arduino IDE</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Um die Bibliothek zu installieren, nutzen Sie den Arduino-Bibliotheksmanager und suchen nach <strong>„LiquidCrystal I2C“</strong>, um es zu installieren.</p>
+</div>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/9df5fa0e-9a98-40bb-9dd2-e22edb250bfa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe></li>
+<li><p>Wählen Sie das korrekte Board und den passenden Port aus und klicken Sie dann auf den <strong>Upload</strong>-Button.</p></li>
+<li><p>Öffnen Sie den Seriellen Monitor (Baudrate auf <strong>9600</strong> einstellen), um Debug-Nachrichten anzuzeigen.</p></li>
+</ol>
+</section>
+<section id="app-und-bluetooth-modul-verbinden">
+<h2>3. App und Bluetooth-Modul verbinden<a class="headerlink" href="#app-und-bluetooth-modul-verbinden" title="Link to this heading"></a></h2>
+<p>Eine App namens „Serial Bluetooth Terminal“ ermöglicht es, Nachrichten vom Bluetooth-Modul zum Arduino zu senden.</p>
+<ol class="loweralpha">
+<li><p><strong>Serial Bluetooth Terminal installieren</strong></p>
+<p>Laden und installieren Sie <a href="https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal" target="_blank">Serielles Bluetooth-Terminal</a>   aus dem Google Play Store.</p>
+</li>
+<li><p><strong>Bluetooth verbinden</strong></p>
+<p>Aktivieren Sie zuerst <strong>Bluetooth</strong> auf Ihrem Smartphone.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/09-app_1_shadow.png"><img alt="../_images/09-app_1_shadow.png" class="align-center" src="../_images/09-app_1_shadow.png" style="width: 60%;" /></a>
+</div></blockquote>
+<p>Navigieren Sie zu den <strong>Bluetooth-Einstellungen</strong> auf Ihrem Smartphone und suchen Sie nach Namen wie <strong>JDY-31-SPP</strong>.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/09-app_2_shadow.png"><img alt="../_images/09-app_2_shadow.png" class="align-center" src="../_images/09-app_2_shadow.png" style="width: 60%;" /></a>
+</div></blockquote>
+<p>Nach dem Anklicken bestätigen Sie die <strong>Kopplungsanfrage</strong> im Pop-up-Fenster. Falls ein Kopplungscode erforderlich ist, geben Sie „1234“ ein.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/09-app_3_shadow.png"><img alt="../_images/09-app_3_shadow.png" class="align-center" src="../_images/09-app_3_shadow.png" style="width: 60%;" /></a>
+</div></blockquote>
+</li>
+<li><p><strong>Kommunikation mit dem Bluetooth-Modul</strong></p>
+<p>Öffnen Sie das Serial Bluetooth Terminal und verbinden Sie es mit „JDY-31-SPP“.</p>
+<img alt="../_images/00-bluetooth_serial_4_shadow.png" src="../_images/00-bluetooth_serial_4_shadow.png" />
+</li>
+<li><p><strong>Befehle senden</strong></p>
+<p>Verwenden Sie die Serial Bluetooth Terminal App, um Nachrichten über Bluetooth an den Arduino zu senden. Die über Bluetooth gesendete Nachricht wird auf dem LCD angezeigt.</p>
+<a class="reference internal image-reference" href="../_images/15-lcd_shadow.png"><img alt="../_images/15-lcd_shadow.png" class="align-center" src="../_images/15-lcd_shadow.png" style="width: 100%;" /></a>
+</li>
+</ol>
+</section>
+<section id="code-erlauterung">
+<h2>4. Code-Erläuterung<a class="headerlink" href="#code-erlauterung" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Zur Bibliotheksinstallation nutzen Sie den Arduino-Bibliotheksmanager und suchen nach <strong>„LiquidCrystal I2C“</strong>, um die Bibliothek zu installieren.</p>
+</div>
+<ol class="arabic">
+<li><p>Einrichtung des LCDs</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;LiquidCrystal_I2C.h&gt;</span>
+<span class="n">LiquidCrystal_I2C</span><span class="w"> </span><span class="nf">lcd</span><span class="p">(</span><span class="mh">0x27</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Dieses Code-Segment bindet die LiquidCrystal_I2C-Bibliothek ein und initialisiert das LCD-Modul mit der I2C-Adresse <code class="docutils literal notranslate"><span class="pre">0x27</span></code>. Zudem wird festgelegt, dass das LCD <code class="docutils literal notranslate"><span class="pre">16</span></code> Spalten und <code class="docutils literal notranslate"><span class="pre">2</span></code> Zeilen hat.</p>
+</li>
+<li><p>Einrichtung der Bluetooth-Kommunikation</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SoftwareSerial.h&gt;</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">bluetoothTx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">bluetoothRx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="nf">SoftwareSerial</span><span class="w"> </span><span class="nf">bleSerial</span><span class="p">(</span><span class="n">bluetoothTx</span><span class="p">,</span><span class="w"> </span><span class="n">bluetoothRx</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Hier wird die SoftwareSerial-Bibliothek eingebunden, um die Kommunikation zwischen dem JDY-31 Bluetooth-Modul und dem Arduino über die Pins 3 (TX) und 4 (RX) zu ermöglichen.</p>
+</li>
+<li><p>Initialisierung</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">lcd</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="w">   </span><span class="n">lcd</span><span class="p">.</span><span class="nf">clear</span><span class="p">();</span>
+<span class="w">   </span><span class="n">lcd</span><span class="p">.</span><span class="n">backlight</span><span class="p">();</span>
+
+<span class="w">   </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="w">   </span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Die Funktion <code class="docutils literal notranslate"><span class="pre">setup()</span></code> initialisiert das LCD und entfernt etwaigen vorhandenen Inhalt. Auch wird die Hintergrundbeleuchtung des LCDs aktiviert. Die Kommunikation mit dem seriellen Monitor sowie dem Bluetooth-Modul wird bei einer Baudrate von <code class="docutils literal notranslate"><span class="pre">9600</span></code> gestartet.</p>
+</li>
+<li><p>Hauptprogrammschleife</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="kr">String</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+
+<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">data</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">readString</span><span class="p">();</span>
+<span class="w">      </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">      </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+
+<span class="w">      </span><span class="n">lcd</span><span class="p">.</span><span class="nf">clear</span><span class="p">();</span>
+<span class="w">      </span><span class="n">lcd</span><span class="p">.</span><span class="nf">setCursor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">      </span><span class="n">lcd</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+
+<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">Serial</span><span class="p">.</span><span class="nf">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nf">Serial</span><span class="p">.</span><span class="nf">read</span><span class="p">());</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Dies ist die Hauptprogrammschleife des Arduino-Programms. Sie überprüft kontinuierlich den Eingang von Daten sowohl vom Bluetooth-Modul als auch vom seriellen Monitor. Bei Empfang von Daten über das Bluetooth-Gerät werden diese verarbeitet, auf dem seriellen Monitor angezeigt und auf dem LCD dargestellt. Wenn Daten im seriellen Monitor eingegeben werden, werden diese Daten an das Bluetooth-Modul gesendet.</p>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="00-iot_bluetooth_start.html" class="btn btn-neutral float-left" title="Bluetooth-Einstieg" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="16-iot_Bluetooth_traffic_light.html" class="btn btn-neutral float-right" title="Bluetooth-Ampel" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

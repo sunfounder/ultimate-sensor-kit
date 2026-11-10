@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ferngesteuerter Relais-Controller mit Blynk &mdash; SunFounder Ultimate Sensor Kit  Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=245627df"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=70a09b52"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=2c65fa5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Automatisches Bewässerungssystem mit Blynk" href="07-iot_Auto_watering_system.html" />
+    <link rel="prev" title="Pflanzenüberwachung mit Blynk" href="03-iot_Plant_monitor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">脺ber das Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Einstieg in Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Kurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Code herunterladen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">Grundlagen der Komponenten</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../iot_project.html">IoT-Projekte</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="00-iot_project_esp01.html">IoT-Projekte</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="blynk_start/00-blynk_start.html">Einführung in Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01-iot_Flame_alert_system.html">Flammenwarnsystem mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-iot_Intrusion_alert_system.html">Einbruchmeldeanlage mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03-iot_Plant_monitor.html">Pflanzenüberwachung mit Blynk</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Ferngesteuerter Relais-Controller mit Blynk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#schaltkreis-aufbauen">1. Schaltkreis aufbauen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blynk-konfigurieren">2. Blynk konfigurieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#den-code-ausfuhren">3. Den Code ausführen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-erklarung">4. Code-Erklärung</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="07-iot_Auto_watering_system.html">Automatisches Bewässerungssystem mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04-iot_Vibration_alert_system.html">Vibrationserkennungssystem mit IFTTT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05-iot_Weather_monitor.html">Wetterüberwachung mit ThingSpeak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="00-iot_bluetooth_start.html">Bluetooth-Einstieg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15-iot_Bluetooth_lcd.html">Bluetooth LCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16-iot_Bluetooth_traffic_light.html">Bluetooth-Ampel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08-iot_Bluetooth_lock_controller.html">Bluetooth-Schlosssteuerung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09-iot_Bluetooth_RGB_controller.html">Bluetooth RGB-Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-iot_Bluetooth_environmental_monitor.html">Bluetooth-Umweltmonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-iot_Bluetooth_piano.html">Bluetooth-Klavier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="12-iot_Bluetooth_oled.html">Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="13-iot_Bluetooth_remote_relay.html">Bluetooth-Fernrelais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14-iot_Bluetooth_voice_control_relay.html">Bluetooth Sprachgesteuertes Relais</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">Spaßprojekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Vielen Dank</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../iot_project.html">IoT-Projekte</a></li>
+          <li class="breadcrumb-item"><a href="00-iot_project_esp01.html">IoT-Projekte</a></li>
+      <li class="breadcrumb-item active">Ferngesteuerter Relais-Controller mit Blynk</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs-de/docs/source/iot_project_esp01/06-iot_Remote_relay_controller.rst" class="fa fa-github"> Auf GitHub bearbeiten</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Hallo und willkommen in der SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.</p>
+<p><strong>Warum beitreten?</strong></p>
+<ul class="simple">
+<li><p><strong>Expertenunterstützung</strong>: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.</p></li>
+<li><p><strong>Lernen &amp; Teilen</strong>: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.</p></li>
+<li><p><strong>Exklusive Vorschauen</strong>: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.</p></li>
+<li><p><strong>Spezialrabatte</strong>: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.</p></li>
+<li><p><strong>Festliche Aktionen und Gewinnspiele</strong>: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.</p></li>
+</ul>
+<p>👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [<a href="https://bit.ly/raphaelkit " target="_blank">hier</a>] und treten Sie heute bei!</p>
+</div>
+<section id="ferngesteuerter-relais-controller-mit-blynk">
+<span id="iot-remote-relay-controller"></span><h1>Ferngesteuerter Relais-Controller mit Blynk<a class="headerlink" href="#ferngesteuerter-relais-controller-mit-blynk" title="Link to this heading"></a></h1>
+<video loop autoplay muted style = "max-width:100%">
+   <source src="../_static/video/iot/06-iot_Remote_relay_controller.mp4"  type="video/mp4">
+   Ihr Browser unterstützt das Video-Tag nicht.
+</video><p>Dieses Projekt zielt darauf ab, einen ferngesteuerten Relais-Controller zu entwickeln, der über einen virtuellen Schalter in der Blynk-App bedient werden kann. Wenn der Schalter eingeschaltet wird, wird der mit dem Relais verbundene digitale Pin auf HIGH gesetzt. Wird der Schalter ausgeschaltet, wird der Pin auf LOW gesetzt. Dies ermöglicht eine einfache Fernsteuerung des Relais und fungiert effektiv als Fernschalter.</p>
+<section id="schaltkreis-aufbauen">
+<h2>1. Schaltkreis aufbauen<a class="headerlink" href="#schaltkreis-aufbauen" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warnung</p>
+<p>Das folgende Beispiel zeigt, wie ein Relais zur Steuerung eines LED-Moduls verwendet wird.
+<strong>Obwohl Sie das Relais in realen Anwendungen auch an andere Geräte anschließen können, ist bei der Arbeit mit HOCHSPANNUNG-Wechselstrom äußerste Vorsicht geboten. Unsachgemäße oder fehlerhafte Verwendung kann zu schweren Verletzungen oder sogar zum Tod führen. Dies ist daher nur für Personen gedacht, die mit HOCHSPANNUNG vertraut sind und darüber Bescheid wissen. Sicherheit hat immer Vorrang.</strong></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Das ESP8266-Modul benötigt einen hohen Strom, um eine stabile Betriebsumgebung zu gewährleisten. Stellen Sie daher sicher, dass die 9V-Batterie angeschlossen ist.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/06-Wiring_Remote_relay_controller.png"><img alt="../_images/06-Wiring_Remote_relay_controller.png" src="../_images/06-Wiring_Remote_relay_controller.png" style="width: 100%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima-Platine</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/37-component_esp8266.html#cpn-esp8266"><span class="std std-ref">ESP8266-Modul</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/25-component_relay.html#cpn-relay"><span class="std std-ref">5V-Relaismodul</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/23-component_traffic.html#cpn-traffic"><span class="std std-ref">Ampel-Modul</span></a></p></li>
+</ul>
+</section>
+<section id="blynk-konfigurieren">
+<h2>2. Blynk konfigurieren<a class="headerlink" href="#blynk-konfigurieren" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Wenn Sie noch nicht mit Blynk vertraut sind, wird dringend empfohlen, zunächst diese beiden Tutorials zu lesen. <a class="reference internal" href="blynk_start/00-blynk_start.html#iot-blynk-start"><span class="std std-ref">Einführung in Blynk</span></a> ist ein Einsteigerleitfaden für Blynk, der auch die Konfiguration des ESP8266 und die Registrierung bei Blynk umfasst. Und <a class="reference internal" href="01-iot_Flame_alert_system.html#iot-flame"><span class="std std-ref">Flammenwarnsystem mit Blynk</span></a> ist ein einfaches Beispiel, jedoch werden die Schritte darin ausführlicher beschrieben.</p>
+</div>
+<section id="vorlage-erstellen">
+<h3><strong>2.1 Vorlage erstellen</strong><a class="headerlink" href="#vorlage-erstellen" title="Link to this heading"></a></h3>
+<p>Zuerst müssen wir eine Vorlage in Blynk erstellen. Erstellen Sie eine <strong>„Ferngesteuertes Relais“</strong>-Vorlage.</p>
+</section>
+<section id="datenstrome">
+<h3><strong>2.2 Datenströme</strong><a class="headerlink" href="#datenstrome" title="Link to this heading"></a></h3>
+<p>Erstellen Sie <strong>Datastreams</strong> vom Typ <strong>Virtual Pin</strong> auf der <strong>Datastreams</strong>-Seite, um Daten vom esp8266 und uno r4 Board zu empfangen.</p>
+<ul>
+<li><p>Erstellen Sie den virtuellen Pin V0 gemäß dem folgenden Diagramm:</p>
+<p>Benennen Sie den <strong>Virtual Pin V0</strong> in <strong>Switch status</strong> um. Setzen Sie den <strong>DATA TYPE</strong> auf <strong>Integer</strong> und MIN und MAX auf <strong>0</strong> und <strong>1</strong>. Setzen Sie die <strong>UNITS</strong> auf <strong>None</strong>.</p>
+<a class="reference internal image-reference" href="../_images/06-datastream_1_shadow.png"><img alt="../_images/06-datastream_1_shadow.png" src="../_images/06-datastream_1_shadow.png" style="width: 90%;" /></a>
+</li>
+</ul>
+<br/></section>
+<section id="web-dashboard">
+<h3><strong>2.3 Web-Dashboard</strong><a class="headerlink" href="#web-dashboard" title="Link to this heading"></a></h3>
+<p>Das <strong>Web-Dashboard</strong> muss ebenfalls konfiguriert werden, um mit dem ferngesteuerten Relais zu interagieren.</p>
+<p>Konfigurieren Sie das Web-Dashboard entsprechend dem folgenden Diagramm. Stellen Sie sicher, dass jedes Widget an seinen entsprechenden virtuellen Pin gebunden ist.</p>
+<a class="reference internal image-reference" href="../_images/06-web_dashboard_1_shadow.png"><img alt="../_images/06-web_dashboard_1_shadow.png" class="align-center" src="../_images/06-web_dashboard_1_shadow.png" style="width: 65%;" /></a>
+<br/></section>
+</section>
+<section id="den-code-ausfuhren">
+<h2>3. Den Code ausführen<a class="headerlink" href="#den-code-ausfuhren" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Öffnen Sie die Datei <code class="docutils literal notranslate"><span class="pre">06-Remote_relay_controller.ino</span></code> unter dem Pfad <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\iot_project\wifi\06-Remote_relay_controller</span></code>, oder kopieren Sie diesen Code in die <strong>Arduino IDE</strong>.</p>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/33324acd-40b6-470f-99f4-d86f4d0fb2f8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe></li>
+<li><p>Legen Sie ein Blynk-Gerät mit der Vorlage „Ferngesteuertes Relais“ an. Ersetzen Sie dann die Werte für <code class="docutils literal notranslate"><span class="pre">BLYNK_TEMPLATE_ID</span></code>, <code class="docutils literal notranslate"><span class="pre">BLYNK_TEMPLATE_NAME</span></code> und <code class="docutils literal notranslate"><span class="pre">BLYNK_AUTH_TOKEN</span></code> durch Ihre eigenen.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define BLYNK_TEMPLATE_ID "TMPxxxxxxx"</span>
+<span class="cp">#define BLYNK_TEMPLATE_NAME "Remote relay"</span>
+<span class="cp">#define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxx"</span>
+</pre></div>
+</div>
+</li>
+<li><p>Geben Sie auch die <code class="docutils literal notranslate"><span class="pre">ssid</span></code> und das <code class="docutils literal notranslate"><span class="pre">Passwort</span></code> des verwendeten WLANs ein.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">char</span><span class="w"> </span><span class="n">ssid</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ihre_ssid"</span><span class="p">;</span>
+<span class="kr">char</span><span class="w"> </span><span class="n">pass</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ihr_Passwort"</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Nach Auswahl des korrekten Boards und Ports klicken Sie auf die Schaltfläche <strong>Hochladen</strong>.</p></li>
+<li><p>Öffnen Sie den seriellen Monitor (Baudrate auf 115200 einstellen) und warten Sie auf eine Meldung, die eine erfolgreiche Verbindung anzeigt.</p>
+<a class="reference internal image-reference" href="../_images/02-ready_1_shadow.png"><img alt="../_images/02-ready_1_shadow.png" class="align-center" src="../_images/02-ready_1_shadow.png" style="width: 80%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Sollte die Meldung <code class="docutils literal notranslate"><span class="pre">ESP</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">responding</span></code> erscheinen, befolgen Sie diese Schritte.</p>
+<ul class="simple">
+<li><p>Stellen Sie sicher, dass die 9V-Batterie angeschlossen ist.</p></li>
+<li><p>Setzen Sie das ESP8266-Modul zurück, indem Sie den Pin RST für 1 Sekunde mit GND verbinden, dann ziehen Sie den Stecker.</p></li>
+<li><p>Drücken Sie die Reset-Taste auf dem R4-Board.</p></li>
+</ul>
+<p>Manchmal müssen Sie die oben genannten Schritte 3-5 Mal wiederholen. Bitte haben Sie Geduld.</p>
+</div>
+</li>
+</ol>
+</section>
+<section id="code-erklarung">
+<h2>4. Code-Erklärung<a class="headerlink" href="#code-erklarung" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Einrichten der Blynk-Zugangsdaten:</p>
+<p>Dieser Abschnitt enthält spezifische Einstellungen für die Blynk-App, wie zum Beispiel die Template-ID, den Gerätenamen und den Authentifizierungstoken.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define BLYNK_TEMPLATE_ID "TMPLxxxxxxxx"</span>
+<span class="cp">#define BLYNK_TEMPLATE_NAME "Remote relay"</span>
+<span class="cp">#define BLYNK_AUTH_TOKEN "xxxxxxxxxxx"</span>
+</pre></div>
+</div>
+</li>
+<li><p>Einbindung der erforderlichen Bibliotheken:</p>
+<p>Hier binden wir die für das Projekt erforderlichen Bibliotheken ein. Diese ermöglichen die Kommunikation unseres Arduino über WiFi und die Interaktion mit der Blynk-App.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define BLYNK_PRINT Serial</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ESP8266_Lib.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;BlynkSimpleShieldEsp8266.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SoftwareSerial.h&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Konfiguration von WiFi und seriellen Einstellungen:</p>
+<p>Die SSID und das Passwort für das WiFi werden festgelegt. Darüber hinaus werden die Pins für die Software-Serienkommunikation mit dem ESP01 definiert. <code class="docutils literal notranslate"><span class="pre">ESP8266_BAUD</span></code> legt die Baudrate für das ESP8266-Modul fest.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">char</span><span class="w"> </span><span class="n">ssid</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ihre_ssid"</span><span class="p">;</span>
+<span class="kr">char</span><span class="w"> </span><span class="n">pass</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ihr_Passwort"</span><span class="p">;</span>
+<span class="nf">SoftwareSerial</span><span class="w"> </span><span class="nf">EspSerial</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w">  </span><span class="c1">// RX, TX</span>
+<span class="cp">#define ESP8266_BAUD 115200</span>
+<span class="n">ESP8266</span><span class="w"> </span><span class="nf">wifi</span><span class="p">(</span><span class="o">&amp;</span><span class="n">EspSerial</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+<li><p>Definition des Relais-Pins:</p>
+<p>Wir definieren den digitalen Pin des Arduino, der zur Steuerung des Relais dient. Zudem initialisieren wir eine Variable <code class="docutils literal notranslate"><span class="pre">switchStatus</span></code>, um den Zustand unseres virtuellen Schalters in der Blynk-App zu speichern.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">RelayPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+<span class="kr">int</span><span class="w"> </span><span class="n">switchStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Die Funktion setup():</p>
+<p>In dieser Funktion initialisieren wir den Relais-Pin als Ausgang, starten die serielle Kommunikation für Debugging-Zwecke und stellen die Verbindung zu Blynk mit den angegebenen WiFi-Zugangsdaten her.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">pinMode</span><span class="p">(</span><span class="n">RelayPin</span><span class="p">,</span><span class="w"> </span><span class="kr">OUTPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">  </span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">ESP8266_BAUD</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="nf">config</span><span class="p">(</span><span class="n">wifi</span><span class="p">,</span><span class="w"> </span><span class="n">BLYNK_AUTH_TOKEN</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">connectWiFi</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="n">pass</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Die Funktion loop():</p>
+<p>Sie führt kontinuierlich zwei essenzielle Funktionen aus, um die Verbindung zu Blynk aufrechtzuerhalten und Ereignisse (wie Änderungen an virtuellen Pins) zu verarbeiten.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="nf">run</span><span class="p">();</span>
+<span class="w">  </span><span class="n">timer</span><span class="p">.</span><span class="nf">run</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Steuerung des virtuellen Pins in Blynk:</p>
+<p>Hier lesen wir den Status des virtuellen Pins V0 aus der Blynk-App aus und steuern das Relais entsprechend. Ist der Schalter in der App aktiviert (d.h., V0 ist 1), wird der Relais-Pin auf HIGH gesetzt; ist er deaktiviert, wird er auf LOW gesetzt.</p>
+<ul class="simple">
+<li><p>Jedes Mal, wenn der Wert eines virtuellen Pins auf dem BLYNK-Server ändert, wird <code class="docutils literal notranslate"><span class="pre">BLYNK_WRITE()</span></code> ausgelöst. Weitere Details unter <a href="https://docs.blynk.io/en/getting-started/using-virtual-pins-to-control-physical-devices#the-blynk_write-vpin-function" target="_blank">Blynk - BLYNK_WRITE()</a>    .</p></li>
+</ul>
+<br/><div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="c1">// This function is called every time the Virtual Pin 0 state changes</span>
+<span class="n">BLYNK_WRITE</span><span class="p">(</span><span class="n">V0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">switchStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param</span><span class="p">.</span><span class="n">asInt</span><span class="p">();</span><span class="w">  </span><span class="c1">// Set incoming value from pin V0 to a variable</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">switchStatus</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"The switch on Blynk has been turned on."</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="n">RelayPin</span><span class="p">,</span><span class="w"> </span><span class="kr">HIGH</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"The switch on Blynk has been turned off."</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="n">RelayPin</span><span class="p">,</span><span class="w"> </span><span class="kr">LOW</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="03-iot_Plant_monitor.html" class="btn btn-neutral float-left" title="Pflanzenüberwachung mit Blynk" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="07-iot_Auto_watering_system.html" class="btn btn-neutral float-right" title="Automatisches Bewässerungssystem mit Blynk" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

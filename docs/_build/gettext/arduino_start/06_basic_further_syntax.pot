@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:16
+msgid "Sketch Writing Rule"
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:19
+msgid "If you ask a friend to turn on the lights for you, you can say \"Turn on the lights.\", or \"Lights on, bro.\", you can use any tone of voice you want."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:21
+msgid "However, if you want the Arduino board to do something for you, you need to follow the Arduino program writing rules to type in the commands."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:23
+msgid "This chapter contains the basic rules of the Arduino language and will help you understand how to translate natural language into code."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:25
+msgid "Of course, this is a process that takes time to get familiar with, and it is also the most error-prone part of the process for newbies, so if you make mistakes often, it's okay, just try a few more times."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:29
+msgid "Semicolon ``;``"
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:31
+msgid "Just like writing a letter, where you write a period at the end of each sentence as the end, the Arduino language requires you to use ``;`` to tell the board the end of the command."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:33
+msgid "Take the familiar \"onboard LED blinking\" example. A healthy sketch should look like this."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:35
+msgid "Example:"
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:52
+msgid "Next, let's take a look at the following two sketches and guess if they can be correctly recognized by Arduino before running them."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:54
+msgid "Sketch A:"
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:72
+msgid "Sketch B:"
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:95
+msgid "The result is that **Sketch A** reports an error and **Sketch B** runs."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:97
+msgid "The errors in **Sketch A** are missing ``;`` and although it looks normal, the Arduino can't read it."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:98
+msgid "**Sketch B**, looks anti-human, but in fact, indentation, line breaks and spaces in statements are things that do not exist in Arduino programs, so to the Arduino compiler, it looks the same as in the example."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:100
+msgid "However, please don't write your code as **Sketch B**, because it is usually natural people who write and view the code, so don't get yourself into trouble."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:104
+msgid "Curlybraces ``{}``"
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:106
+msgid "``{}`` is the main component of the Arduino programming language, and they must appear in pairs. A better programming convention is to insert a structure that requires curly braces by typing the right curly brace directly after typing the left curly brace, and then moving the cursor between the curly braces to insert the statement."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:112
+msgid "Comment ``//``"
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:114
+msgid "Comment is the part of the sketch that the compiler ignores. They are usually used to tell others how the program works."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:116
+msgid "If we write two adjacent slashes in a line of code, the compiler will ignore anything up to the end of the line."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:118
+msgid "If we create a new sketch, it comes with two comments, and if we remove these two comments, the sketch will not be affected in any way."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:134
+msgid "Comment is very useful in programming, and several common uses are listed below."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:136
+msgid "Usage A: Tell yourself or others what this section of code does."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:151
+msgid "Usage B: Temporarily invalidate some statements (without deleting them) and uncomment them when you need to use them, so you don't have to rewrite them. This is very useful when debugging code and trying to locate program errors."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:172
+msgid "Use the shortcut ``Ctrl+/`` to help you quickly comment or uncomment your code."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:175
+msgid "Comment ``/**/``"
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:177
+msgid "Same as ``//`` for comments. This type of comment can be more than one line long, and once the compiler reads ``/*``, it ignores anything that follows until it encounters ``*/``."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:179
+msgid "Example 1:"
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:203
+msgid "``#define``"
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:205
+msgid "This is a useful C++ tool."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:211
+msgid "The compiler automatically replaces ``identifier`` with ``token-string`` when it reads it, which is usually used for constant definitions."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:213
+msgid "As an example, here is a sketch that uses define, which improves the readability of the code."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:232
+msgid "To the compiler, it actually looks like this."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:247
+msgid "We can see that the ``identifier`` is replaced and does not exist inside the program. Therefore, there are several caveats when using it."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:250
+msgid "A ``token-string`` can only be modified manually and cannot be converted into other values by arithmetic in the program."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:252
+msgid "Avoid using symbols such as ``;``. For example."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:267
+msgid "The compiler will recognize it as the following, which is what will be reported as an error."
+msgstr ""
+
+#: ../../source/arduino_start/06_basic_further_syntax.rst:281
+msgid "A naming convention for ``#define`` is to capitalize ``identifier`` to avoid confusion with variables."
+msgstr ""

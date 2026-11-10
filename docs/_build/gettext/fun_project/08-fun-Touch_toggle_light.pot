@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:18
+msgid "Touch toggle light"
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:27
+msgid "The project involves creating a simple traffic light control mechanism using a touch sensor and a traffic light LED module. When the touch sensor is activated, the LEDs will cycle through the following sequence: Red -> Yellow -> Green."
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:31
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:36
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:37
+msgid ":ref:`cpn_touch`"
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:38
+msgid ":ref:`cpn_traffic`"
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:42
+msgid "2. Code"
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:44
+msgid "Open the ``08-Touch_toggle_light.ino`` file under the path of ``ultimate-sensor-kit\\code\\fun_project\\08-Touch_toggle_light``, or copy this code into **Arduino IDE**."
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:52
+msgid "3. Code explanation"
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:54
+msgid "This project operates on a simple principle: when a touch is detected on the touch sensor, the next LED in the sequence (Red -> Yellow -> Green) will light up. The state of which LED is currently active is managed by the variable ``currentLED``."
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:56
+msgid "Define pins and initial values"
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:68
+msgid "These lines define the pins that we connect the components to on the Arduino board and initialize the states for touch and LEDs."
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:70
+msgid "setup() function"
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:84
+msgid "This function runs once when the Arduino is powered on or reset. Here, the touch sensor is set as an input (it will read values), while the LEDs are set as outputs (we will set their values). Also, the serial communication is started to allow debugging, and the initial touch state is read."
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:86
+msgid "loop() function"
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:114
+msgid "In the main loop, the current touch state is read and compared with the previous one. If a touch is detected (transition from LOW to HIGH), all LEDs are turned off, and the next one in the sequence is turned on."
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:116
+msgid "Turn off LEDs function"
+msgstr ""
+
+#: ../../source/fun_project/08-fun-Touch_toggle_light.rst:126
+msgid "This function, when called, will turn off all the LEDs by setting their pins to LOW."
+msgstr ""

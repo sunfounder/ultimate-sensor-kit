@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/components_basic/19-component_joystick.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:18
+msgid "Joystick Module"
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:29
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:30
+msgid "A joystick module is a device that can measure the movement of a knob in two directions: horizontal (X-axis) and vertical (Y-axis). A joystick module can be used to control various things such as games, robots, cameras, etc."
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:34
+msgid "Principle"
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:35
+msgid "Joystick operates based on the resistance change of two potentiometers (usually 10-kilo ohms). By changing resistance in x and y directions, Arduino receives varying voltages which are interpreted to x and y coordinates. The processor needs an ADC unit to change the joystick’s analog values into digital values and perform necessary processing."
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:37
+msgid "The default ``analogRead()`` resolution for Arduino Uno boards is 10 bits, which means the Arduino’s reference voltage (5 volts) is divided into 1024 segments. When the joystick moves along the x-axis, the ADC value rises from 0 to 1023, with the value 512 in the middle. The image below displays the ADC approximate value based on the joystick position."
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:44
+msgid "Module Schematic Diagram"
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:55
+msgid "Usage"
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:57
+msgid "**Hardware components**"
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:59
+msgid "Arduino Uno R4 or R3 board * 1"
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:60
+msgid "Joystick Module * 1"
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:61
+msgid "Jumper Wires"
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:64
+msgid "**Circuit Assembly**"
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:75
+msgid "Code"
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:91
+msgid "Code explanation"
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:93
+msgid "Setting up the joystick pins. Here, we define which analog pins the X and Y axes of the joystick are connected to."
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:100
+msgid "Initialization in the ``setup()`` function. This section sets up the serial communication, allowing us to send and receive messages from the Arduino through the serial monitor."
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:108
+msgid "Reading the joystick values in the ``loop()`` function. Continuously, the Arduino reads the X and Y values from the joystick and prints them to the serial monitor. There's a short delay after each print to make the readings more readable and to avoid overwhelming the serial monitor."
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:121
+msgid "Additional Ideas"
+msgstr ""
+
+#: ../../source/components_basic/19-component_joystick.rst:123
+msgid "Use the joystick values to control a servo motor, making it move in response to joystick movements."
+msgstr ""

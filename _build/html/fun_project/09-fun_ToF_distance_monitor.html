@@ -1,0 +1,280 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToF distance monitor &mdash; SunFounder Ultimate Sensor Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=6e75df5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Potentiometer scale value" href="10-fun-Potentiometer_scale_value.html" />
+    <link rel="prev" title="Touch toggle light" href="08-fun-Touch_toggle_light.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">About Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Get Started with Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Download the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">Component Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iot_project.html">IoT Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fun_project.html">Fun Projects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01-fun_Smart_trashcan.html">Smart trashcan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-fun_Gas_leak_alarm.html">Gas leak alarm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-fun_Light_control_switch.html">Light control switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-fun_Automatic_soap_dispenser.html">Automatic soap dispenser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-fun_Motion_triggered_relay.html">Motion triggered relay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-fun_Heart_rate_monitor.html">Heart rate monitor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-fun_Doorbell.html">Doorbell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-fun-Touch_toggle_light.html">Touch toggle light</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ToF distance monitor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#build-the-circuit">1. Build the Circuit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code">2. Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-explanation">3. Code explanation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="10-fun-Potentiometer_scale_value.html">Potentiometer scale value</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Thank You</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="fun_project.html">Fun Projects</a></li>
+      <li class="breadcrumb-item active">ToF distance monitor</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs/docs/source/fun_project/09-fun_ToF_distance_monitor.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hello, welcome to the SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.</p>
+<p><strong>Why Join?</strong></p>
+<ul class="simple">
+<li><p><strong>Expert Support</strong>: Solve post-sale issues and technical challenges with help from our community and team.</p></li>
+<li><p><strong>Learn &amp; Share</strong>: Exchange tips and tutorials to enhance your skills.</p></li>
+<li><p><strong>Exclusive Previews</strong>: Get early access to new product announcements and sneak peeks.</p></li>
+<li><p><strong>Special Discounts</strong>: Enjoy exclusive discounts on our newest products.</p></li>
+<li><p><strong>Festive Promotions and Giveaways</strong>: Take part in giveaways and holiday promotions.</p></li>
+</ul>
+<p>👉 Ready to explore and create with us? Click [<a href="https://bit.ly/raphaelkit " target="_blank">here</a>] and join today!</p>
+</div>
+<section id="tof-distance-monitor">
+<span id="fun-tof-distance-monitor"></span><h1>ToF distance monitor<a class="headerlink" href="#tof-distance-monitor" title="Link to this heading"></a></h1>
+<video loop autoplay muted style = "max-width:100%">
+   <source src="../_static/video/fun/09-fun_ToF_distance_monitor.mp4"  type="video/mp4">
+   Your browser does not support the video tag.
+</video><p>This project is designed to measure and display the distance to an object using the VL53L0X Time of Flight (ToF) Micro-LIDAR Distance Sensor. The measured distance in millimeters is displayed on an OLED screen, and the values are also output to the serial monitor. The VL53L0X can measure a range of approximately 50mm to 1200mm.</p>
+<section id="build-the-circuit">
+<h2>1. Build the Circuit<a class="headerlink" href="#build-the-circuit" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/09-fun_ToF_distance_monitor_circuit.png"><img alt="../_images/09-fun_ToF_distance_monitor_circuit.png" src="../_images/09-fun_ToF_distance_monitor_circuit.png" style="width: 90%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima Board</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/20-component_VL53L0X.html#cpn-vl53l0x"><span class="std std-ref">Time of Flight Micro-LIDAR Distance Sensor (VL53L0X)</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/22-component_oled.html#cpn-olde"><span class="std std-ref">OLED Display Module</span></a></p></li>
+</ul>
+</section>
+<section id="code">
+<h2>2. Code<a class="headerlink" href="#code" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">09-ToF_distance_monitor.ino</span></code> file under the path of <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\code\fun_project\09-ToF_distance_monitor</span></code>, or copy this code into <strong>Arduino IDE</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To install the library, use the Arduino Library Manager and search for <strong>“Adafruit_VL53L0X”</strong> and install it.</p>
+</div>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/8077aa45-8e0c-4c13-9211-b23926b79462/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe></li>
+</ol>
+</section>
+<section id="code-explanation">
+<h2>3. Code explanation<a class="headerlink" href="#code-explanation" title="Link to this heading"></a></h2>
+<p>This project uses the VL53L0X Time of Flight sensor to measure distances by measuring the time it takes for light to travel to an object and return to the sensor. The OLED display then shows the distance measurement in millimeters. Serial communication is also used to print the measurement values for monitoring and debugging. Both the OLED display and the VL53L0X sensor communicate with the Arduino using the I2C protocol.</p>
+<ol class="arabic">
+<li><p>Include necessary libraries and initialize components</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To install the library, use the Arduino Library Manager and search for <strong>“Adafruit_VL53L0X”</strong> and install it.</p>
+</div>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Wire.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"Adafruit_VL53L0X.h"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SPI.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Adafruit_GFX.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Adafruit_SSD1306.h&gt;</span>
+
+<span class="c1">// Initialize the OLED display module with a resolution of 128x64</span>
+<span class="n">Adafruit_SSD1306</span><span class="w"> </span><span class="nf">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Adafruit_SSD1306</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nf">Wire</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">);</span>
+
+<span class="c1">// Initialize the VL53L0X distance sensor</span>
+<span class="n">Adafruit_VL53L0X</span><span class="w"> </span><span class="n">lox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Adafruit_VL53L0X</span><span class="p">();</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Necessary libraries for handling I2C communication, the distance sensor, SPI protocol, and the OLED display are included.</p></li>
+<li><p>The OLED display and the VL53L0X distance sensor are initialized.</p></li>
+</ul>
+</li>
+<li><p>Initialize the serial communication and prepare the display as well as the VL53L0X distance sensor.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Start the OLED display with I2C address 0x3C</span>
+<span class="w">  </span><span class="nf">display</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">SSD1306_SWITCHCAPVCC</span><span class="p">,</span><span class="w"> </span><span class="mh">0x3C</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">display</span><span class="p">.</span><span class="nf">display</span><span class="p">();</span>
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Begin I2C communication</span>
+<span class="w">  </span><span class="nf">Wire</span><span class="p">.</span><span class="nf">begin</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// Start the VL53L0X distance sensor, halt if initialization fails</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">lox</span><span class="p">.</span><span class="nf">begin</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"Failed to boot VL53L0X"</span><span class="p">));</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">      </span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Set OLED display text size and color</span>
+<span class="w">  </span><span class="nf">display</span><span class="p">.</span><span class="nf">setTextSize</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">display</span><span class="p">.</span><span class="n">setTextColor</span><span class="p">(</span><span class="n">WHITE</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Start serial communication at 9600 baud.</p></li>
+<li><p>Initialize the OLED display with its I2C address.</p></li>
+<li><p>Begin I2C communication.</p></li>
+<li><p>Check if the VL53L0X distance sensor is initialized properly. If not, an error message is displayed, and the Arduino enters an infinite loop.</p></li>
+<li><p>Set text size and color for the OLED display.</p></li>
+</ul>
+</li>
+<li><p>Main loop() to measure the distance and display the result.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">VL53L0X_RangingMeasurementData_t</span><span class="w"> </span><span class="n">measure</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">lox</span><span class="p">.</span><span class="n">rangingTest</span><span class="p">(</span><span class="o">&amp;</span><span class="n">measure</span><span class="p">,</span><span class="w"> </span><span class="kr">false</span><span class="p">);</span><span class="w">  </span><span class="c1">// pass in 'true' to get debug data printout</span>
+
+<span class="w">  </span><span class="c1">// If there are no phase failures, display the measured distance</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">measure</span><span class="p">.</span><span class="n">RangeStatus</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+<span class="w">    </span><span class="nf">display</span><span class="p">.</span><span class="nf">setCursor</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">display</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">measure</span><span class="p">.</span><span class="n">RangeMilliMeter</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">display</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">"mm"</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">display</span><span class="p">.</span><span class="nf">display</span><span class="p">();</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">();</span>
+<span class="w">    </span><span class="nf">delay</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">display</span><span class="p">.</span><span class="nf">display</span><span class="p">();</span>
+<span class="w">    </span><span class="nf">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Create a variable to store the measurement data.</p></li>
+<li><p>Take a measurement using the VL53L0X sensor.</p></li>
+<li><p>Check if the measurement is valid (i.e., no phase failures).</p></li>
+<li><p>If the measurement is valid, clear the OLED display, set the cursor position, and display the measured distance.</p></li>
+<li><p>Else, refresh the display and clear it for the next reading.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="08-fun-Touch_toggle_light.html" class="btn btn-neutral float-left" title="Touch toggle light" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="10-fun-Potentiometer_scale_value.html" class="btn btn-neutral float-right" title="Potentiometer scale value" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

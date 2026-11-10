@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/components_basic/37-component_esp8266.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:18
+msgid "ESP8266 Module"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:23
+msgid "The ESP8266 is a low-cost Wi-Fi microchip, with built-in TCP/IP networking software, and microcontroller capability, produced by Espressif Systems in Shanghai, China."
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:27
+msgid "The chip first came to the attention of Western makers in August 2014 with the ESP-01 module, made by a third-party manufacturer Ai-Thinker. This small module allows microcontrollers to connect to a Wi-Fi network and make simple TCP/IP connections using Hayes-style commands. However, at first, there was almost no English-language documentation on the chip and the commands it accepted. The very low price and the fact that there were very few external components on the module, which suggested that it could eventually be very inexpensive in volume, attracted many hackers to explore the module, the chip, and the software on it, as well as to translate the Chinese documentation."
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:36
+msgid "Pins of ESP8266 and their functions:"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:41
+msgid "ESP8266-01 Pins"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:45
+msgid "Pin"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:46
+msgid "Name"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:47
+msgid "Description"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:48
+msgid "1"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:49
+msgid "TXD"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:50
+msgid "UART_TXD, sending; General Purpose Input/Output: GPIO1; Pull-down is not allowed when startup."
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:51
+msgid "2"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:52
+#: ../../source/components_basic/37-component_esp8266.rst:53
+msgid "GND"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:54
+msgid "3"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:55
+msgid "CU_PD"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:56
+msgid "Working at high level; Power off when low level is supplied."
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:57
+msgid "4"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:58
+msgid "GPIO2"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:59
+msgid "It should be high level when power on, hardware pull-down is not allowed; Pull-up by default;"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:60
+msgid "5"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:61
+msgid "RST"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:62
+msgid "External Reset signal, reset when low level is supplied; work when high level is supplied (high level by default);"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:63
+msgid "6"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:64
+msgid "GPIO0"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:65
+msgid "WiFi Status indicator; Operation mode selection: Pull-up: Flash Boot, operation mode; Pull-down: UART Download, download mode"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:66
+msgid "7"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:67
+msgid "VCC"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:68
+msgid "Power Supply(3.3V)"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:69
+msgid "8"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:70
+msgid "RXD"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:71
+msgid "UART_RXD，Receiving; General Purpose Input/Output: GPIO3;"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:74
+msgid "`ESP8266 - Espressif <https://www.espressif.com/en/products/socs/esp8266>`_"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:75
+msgid "|link_esp8266_at|"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:78
+msgid "ESP8266 Adapter"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:84
+msgid "The ESP8266 adapter is an expansion board that allows the ESP8266 module to be used on a breadboard."
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:86
+msgid "It perfectly matches the pins of the ESP8266 itself, and also adds a 5V pin to receive the voltage from the Arduino board. The integrated AMS1117 chip is used to drive the ESP8266 module after dropping the voltage to 3.3V."
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:88
+msgid "The schematic diagram is as follows:"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:94
+msgid "More Projects"
+msgstr ""
+
+#: ../../source/components_basic/37-component_esp8266.rst:96
+msgid ":ref:`iot_projects`"
+msgstr ""

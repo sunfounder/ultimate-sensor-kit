@@ -1,0 +1,483 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7. Auto Watering System with Blynk &mdash; SunFounder Ultimate Sensor Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../../_static/./lang.js?v=6e75df5d"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Get Started with Bluetooth" href="../bluetooth_espc201/00-iot_bluetooth_start.html" />
+    <link rel="prev" title="6. Remote Relay Controller with Blynk" href="06-iot_Remote_relay_controller.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">About Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_start/00_get_start.html">Get Started with Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_video_course/arduino_video_course.html">Arduino Video Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download_code.html">Download the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components_basic/00-component_list.html">Component Basics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../iot_project.html">IoT Projects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../iot_project_esp01/00-iot_project_esp01.html">IoT Projects with ESP01 &amp; Bluetooth Module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../iot_project_espc201.html">IoT Projects with ESPC201</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="00-blynk_start.html">Get Started with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01-iot_Flame_alert_system.html">1. Flame Alert System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-iot_Intrusion_alert_system.html">2. Intrusion Alert System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03-iot_Plant_monitor.html">3. Plant Monitor with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04-iot_Vibration_alert_system.html">4. Vibration Alert System with IFTTT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05-iot_Weather_monitor.html">5. Weather Monitor with ThingSpeak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06-iot_Remote_relay_controller.html">6. Remote Relay Controller with Blynk</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">7. Auto Watering System with Blynk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#build-the-circuit">1. Build the Circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configure-blynk">2. Configure Blynk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-code">3. Run the Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-explanation">4. Code explanation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/00-iot_bluetooth_start.html">Get Started with Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/08-iot_Bluetooth_lcd.html">8. Bluetooth LCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/09-iot_Bluetooth_traffic_light.html">9. Bluetooth Traffic Light</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/10-iot_Bluetooth_environmental_monitor.html">10. Bluetooth Environmental Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/11-iot_Bluetooth_lock_controller.html">11. Bluetooth Lock Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/12-iot_Bluetooth_RGB_controller.html">12. Bluetooth RGB Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/13-iot_Bluetooth_piano.html">13. Bluetooth Piano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/14-iot_Bluetooth_oled.html">14. Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/15-iot_Bluetooth_remote_relay.html">15. Bluetooth Remote Relay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/16-iot_Bluetooth_motion_monitor.html">16. Bluetooth Motion Monitor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../fun_project/fun_project.html">Fun Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thank-learning.html">Thank You</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../iot_project.html">IoT Projects</a></li>
+          <li class="breadcrumb-item"><a href="../iot_project_espc201.html">IoT Projects with ESPC201</a></li>
+      <li class="breadcrumb-item active">7. Auto Watering System with Blynk</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs/docs/source/iot_project_espc201/wifi_espc201/07-iot_Auto_watering_system.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hello, welcome to the SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.</p>
+<p><strong>Why Join?</strong></p>
+<ul class="simple">
+<li><p><strong>Expert Support</strong>: Solve post-sale issues and technical challenges with help from our community and team.</p></li>
+<li><p><strong>Learn &amp; Share</strong>: Exchange tips and tutorials to enhance your skills.</p></li>
+<li><p><strong>Exclusive Previews</strong>: Get early access to new product announcements and sneak peeks.</p></li>
+<li><p><strong>Special Discounts</strong>: Enjoy exclusive discounts on our newest products.</p></li>
+<li><p><strong>Festive Promotions and Giveaways</strong>: Take part in giveaways and holiday promotions.</p></li>
+</ul>
+<p>👉 Ready to explore and create with us? Click [<a href="https://bit.ly/raphaelkit " target="_blank">here</a>] and join today!</p>
+</div>
+<section id="auto-watering-system-with-blynk">
+<span id="c201-iot-auto-watering-system"></span><h1>7. Auto Watering System with Blynk<a class="headerlink" href="#auto-watering-system-with-blynk" title="Link to this heading"></a></h1>
+<video loop autoplay muted style = "max-width:100%">
+   <source src="../../_static/video/iot/07-iot_Auto_watering_system.mp4"  type="video/mp4">
+   Your browser does not support the video tag.
+</video><p>A soil moisture probe goes into the pot and a small pump sits in a glass of water.
+The board reports how wet the soil is, and - once you allow it - switches the pump on
+by itself before the plant gets thirsty.</p>
+<p>From the phone you can watch the moisture, drag a slider to choose how dry the soil may
+get, and decide whether the kit is allowed to water on its own.</p>
+<section id="build-the-circuit">
+<h2>1. Build the Circuit<a class="headerlink" href="#build-the-circuit" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The module draws a high current at start-up, so make sure the 9 V battery or an external power supply is plugged into the DC jack of the R4 Minima.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/07-Wiring_Auto_watering_c201.png"><img alt="../../_images/07-Wiring_Auto_watering_c201.png" src="../../_images/07-Wiring_Auto_watering_c201.png" style="width: 80%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima Board</span></a></p></li>
+<li><p><a class="reference internal" href="../../components_basic/41-component_espc201.html#cpn-espc201"><span class="std std-ref">ESPC2-01 Module</span></a></p></li>
+<li><p><a class="reference internal" href="../../components_basic/10-component_soil.html#cpn-soil"><span class="std std-ref">Capacitive Soil Moisture Module</span></a></p></li>
+<li><p><a class="reference internal" href="../../components_basic/28-component_pump.html#cpn-pump"><span class="std std-ref">Centrifugal Pump</span></a></p></li>
+</ul>
+</section>
+<section id="configure-blynk">
+<h2>2. Configure Blynk<a class="headerlink" href="#configure-blynk" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The template and the device were created once in <a class="reference internal" href="00-blynk_start.html#c201-iot-blynk-start"><span class="std std-ref">Get Started with Blynk</span></a>.
+Every project adds its datastreams to that <strong>same</strong> template, so each project
+occupies its own range of virtual pins. This project uses <strong>V8</strong> to <strong>V10</strong>.</p>
+</div>
+<p><strong>What this project sends to the cloud</strong></p>
+<p>Three values, and they do different jobs:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">moisture_percentage</span></code> - the board writes this, so you can see how wet the soil is.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">water_threshold</span></code> - you write this from the slider: the level below which the pump runs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto_mode</span></code> - a switch that decides whether the board is allowed to start the pump by itself.</p></li>
+</ul>
+<p><strong>Add the datastreams</strong></p>
+<ol class="arabic">
+<li><p>Open <strong>Developer Zone</strong> -&gt; <strong>My Templates</strong>, click <strong>Ultimate Sensor Kit</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_template.png"><img alt="../../_images/blynk_template.png" src="../../_images/blynk_template.png" style="width: 80%;" /></a>
+</li>
+<li><p>Click <strong>Edit</strong> to open the template.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_edit.png"><img alt="../../_images/blynk_edit.png" src="../../_images/blynk_edit.png" style="width: 80%;" /></a>
+</li>
+<li><p>Click <strong>Datastreams</strong>, then <strong>Create New</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_new_data.png"><img alt="../../_images/blynk_new_data.png" src="../../_images/blynk_new_data.png" style="width: 80%;" /></a>
+</li>
+<li><p>Create the first datastream - a <strong>Virtual Pin</strong> datastream. Nothing is wired to <code class="docutils literal notranslate"><span class="pre">V8</span></code>:
+a virtual pin only exists in the cloud, it is a mailbox the board and the app share.</p>
+<ul class="simple">
+<li><p><strong>DATASTREAM NAME</strong>: <code class="docutils literal notranslate"><span class="pre">moisture_percentage</span></code></p></li>
+<li><p><strong>DISPLAY NAME</strong>: <code class="docutils literal notranslate"><span class="pre">Moisture</span> <span class="pre">Percentage</span></code></p></li>
+<li><p><strong>VIRTUAL PIN</strong>: <code class="docutils literal notranslate"><span class="pre">V8</span></code></p></li>
+<li><p><strong>DATA TYPE</strong>: <strong>Double</strong></p></li>
+<li><p><strong>MIN</strong> <code class="docutils literal notranslate"><span class="pre">0</span></code>, <strong>MAX</strong> <code class="docutils literal notranslate"><span class="pre">100</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/blynk_water_data_mois.png"><img alt="../../_images/blynk_water_data_mois.png" src="../../_images/blynk_water_data_mois.png" style="width: 80%;" /></a>
+</li>
+<li><p>Set the <strong>UNITS</strong> field to <code class="docutils literal notranslate"><span class="pre">Percentage</span></code>.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_water_data_unit.png"><img alt="../../_images/blynk_water_data_unit.png" src="../../_images/blynk_water_data_unit.png" style="width: 80%;" /></a>
+</li>
+<li><p>Create the other <strong>two</strong> Virtual Pin datastreams the same way - click <strong>Create New</strong>
+twice more:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 26%" />
+<col style="width: 24%" />
+<col style="width: 14%" />
+<col style="width: 16%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Pin</p></th>
+<th class="head"><p>Datastream name</p></th>
+<th class="head"><p>Display name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Min / Max</p></th>
+<th class="head"><p>Units</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>V9</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">water_threshold</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Water</span> <span class="pre">Threshold</span></code></p></td>
+<td><p><strong>Double</strong></p></td>
+<td><p>0 / 100</p></td>
+<td><p>Percent</p></td>
+</tr>
+<tr class="row-odd"><td><p>V10</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">auto_mode</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Auto</span> <span class="pre">Mode</span></code></p></td>
+<td><p><strong>Integer</strong></p></td>
+<td><p>0 / 1</p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/blynk_water_datastreams.png"><img alt="../../_images/blynk_water_datastreams.png" src="../../_images/blynk_water_datastreams.png" style="width: 80%;" /></a>
+</li>
+</ol>
+<p><strong>Add the web dashboard</strong></p>
+<ol class="arabic">
+<li><p>Click <strong>Dashboard</strong>, then <strong>Add Widget</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_dashboard.png"><img alt="../../_images/blynk_dashboard.png" src="../../_images/blynk_dashboard.png" style="width: 80%;" /></a>
+</li>
+<li><p>Drag a <strong>Gauge</strong> widget onto the dashboard.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_dashboard_gauge.png"><img alt="../../_images/blynk_dashboard_gauge.png" src="../../_images/blynk_dashboard_gauge.png" style="width: 80%;" /></a>
+</li>
+<li><p>Click the three dots in the corner of the <strong>Gauge</strong> and choose <strong>Settings</strong>.</p>
+<ul class="simple">
+<li><p>Set <strong>Datastream</strong> to <code class="docutils literal notranslate"><span class="pre">Moisture</span> <span class="pre">Percentage</span> <span class="pre">(V8)</span></code>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/blynk_water_gauge_set.png"><img alt="../../_images/blynk_water_gauge_set.png" src="../../_images/blynk_water_gauge_set.png" style="width: 80%;" /></a>
+</li>
+<li><p>Drag a <strong>Slider</strong> and a <strong>Switch</strong> onto the dashboard the same way, then bind them:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 40%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Widget</p></th>
+<th class="head"><p>Datastream</p></th>
+<th class="head"><p>What it is for</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Slider</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Water</span> <span class="pre">Threshold</span> <span class="pre">(V9)</span></code></p></td>
+<td><p>set the level at which watering starts</p></td>
+</tr>
+<tr class="row-odd"><td><p>Switch</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Auto</span> <span class="pre">Mode</span> <span class="pre">(V10)</span></code></p></td>
+<td><p>allow the board to drive the pump on its own</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/blynk_water_widgets.png"><img alt="../../_images/blynk_water_widgets.png" src="../../_images/blynk_water_widgets.png" style="width: 80%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>With <strong>auto_mode</strong> off the pump never runs, whatever the slider says. That is the
+safe default: you can watch the readings for a while before letting the kit water
+the plant on its own.</p>
+</div>
+</li>
+<li><p>Click <strong>Save</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_save.png"><img alt="../../_images/blynk_save.png" src="../../_images/blynk_save.png" style="width: 40%;" /></a>
+</li>
+</ol>
+</section>
+<section id="run-the-code">
+<h2>3. Run the Code<a class="headerlink" href="#run-the-code" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">07-Auto_watering_system.ino</span></code> file under the path of <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\code\iot_project_espc201\wifi\07-Auto_watering_system</span></code>, or copy this code into <strong>Arduino IDE</strong>.</p></li>
+<li><p>The three Blynk lines were copied in the Get Started chapter - leave them as they are.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define BLYNK_TEMPLATE_ID   "TMPLxxxxxx"</span>
+<span class="cp">#define BLYNK_TEMPLATE_NAME "Ultimate Sensor Kit"</span>
+<span class="cp">#define BLYNK_AUTH_TOKEN    "YourAuthToken"</span>
+</pre></div>
+</div>
+</li>
+<li><p>Type the name and the password of your own Wi-Fi network.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">char</span><span class="w"> </span><span class="n">ssid</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"your_ssid"</span><span class="p">;</span>
+<span class="kr">char</span><span class="w"> </span><span class="n">pass</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"your_password"</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Select <strong>Arduino UNO R4 Minima</strong> and the right port, then click <strong>Upload</strong>.</p></li>
+<li><p>Open the Serial Monitor at <strong>115200</strong>. Every 10 seconds the board reports the soil:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-----------------------------
+Update soil moisture data ...
+sensorValue:453  moisturePercentage:32.16
+</pre></div>
+</div>
+<p>The number after <code class="docutils literal notranslate"><span class="pre">sensorValue</span></code> is the <strong>raw</strong> reading of the probe. Ignore the
+percentage for now - it is not calibrated yet.</p>
+</li>
+<li><p>Calibrate the probe, because every probe and every soil is different:</p>
+<ol class="arabic">
+<li><p>Hold the probe <strong>in the air</strong> (dry) and write down the <code class="docutils literal notranslate"><span class="pre">sensorValue</span></code>, for example
+<code class="docutils literal notranslate"><span class="pre">535</span></code>.</p></li>
+<li><p>Put the probe <strong>in a glass of water</strong> and write down the second <code class="docutils literal notranslate"><span class="pre">sensorValue</span></code>, for
+example <code class="docutils literal notranslate"><span class="pre">280</span></code>.</p></li>
+<li><p>Put both numbers into the sketch:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span><span class="w"> </span><span class="kr">float</span><span class="w"> </span><span class="n">moistureInAir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">535</span><span class="p">;</span><span class="w">     </span><span class="c1">// reading in dry air</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">float</span><span class="w"> </span><span class="n">moistureInWater</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">280</span><span class="p">;</span><span class="w">   </span><span class="c1">// reading in water</span>
+</pre></div>
+</div>
+</li>
+<li><p>Upload again. Now the percentage really means something: 0 % is as dry as the air,
+100 % is as wet as the water.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The probe reads <strong>higher when dry and lower when wet</strong> - that is why the two
+numbers appear in this order in the formula. If you skip the calibration the
+percentage is still shown, but the gauge may sit at 0 % in damp soil or at 100 % in
+dry soil.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/blynk_water_serial.png"><img alt="../../_images/blynk_water_serial.png" src="../../_images/blynk_water_serial.png" style="width: 80%;" /></a>
+</li>
+<li><p>On the dashboard, drag the <strong>slider</strong> to a value above the current moisture (for
+example 40) and turn <strong>Auto Mode</strong> on. Within 35 seconds the pump starts, and the
+gauge begins to climb.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The pump only ever runs when <strong>Auto Mode</strong> is on. With the switch off you can watch
+the readings for as long as you like and the pump stays quiet.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/blynk_water_dashboard.png"><img alt="../../_images/blynk_water_dashboard.png" src="../../_images/blynk_water_dashboard.png" style="width: 80%;" /></a>
+</li>
+</ol>
+</section>
+<section id="code-explanation">
+<h2>4. Code explanation<a class="headerlink" href="#code-explanation" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Blynk account and libraries</strong></p>
+<p>The first three lines say which Blynk device this board belongs to. They come from the
+device page and are identical in every project of this kit.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define BLYNK_TEMPLATE_ID   "TMPL2Ms3WVki8"</span>
+<span class="cp">#define BLYNK_TEMPLATE_NAME "Ultimate Sensor Kit"</span>
+<span class="cp">#define BLYNK_AUTH_TOKEN    "lHSd4Q5pXP7YKUovVfPZYZqC0UHVORY6"</span>
+
+<span class="cp">#define BLYNK_PRINT Serial   </span><span class="c1">// show Blynk's own log on the Serial Monitor</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>The serial port that talks to the module</strong></p>
+<p>The ESPC2-01 works as a modem: the sketch sends it AT commands on D0/D1, which is
+<code class="docutils literal notranslate"><span class="pre">Serial1</span></code>, a hardware port. <code class="docutils literal notranslate"><span class="pre">espModuleInit()</span></code> waits for the module to boot and then
+sends <code class="docutils literal notranslate"><span class="pre">ATE0</span></code> so the replies stop carrying a copy of the command.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define EspSerial Serial1</span>
+<span class="cp">#define ESP8266_BAUD 115200</span>
+<span class="n">ESP8266</span><span class="w"> </span><span class="nf">wifi</span><span class="p">(</span><span class="o">&amp;</span><span class="n">EspSerial</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>The pump</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">pump1A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">pump1B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kr">bool</span><span class="w"> </span><span class="n">pumpStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The pump runs through an <strong>L9110</strong> driver. Give <code class="docutils literal notranslate"><span class="pre">1A</span></code> a HIGH level and the pump turns;
+<code class="docutils literal notranslate"><span class="pre">1B</span></code> stays LOW, it is only needed to reverse a motor. A relay or a simple transistor
+would work the same way - one pin, on or off.</p>
+</li>
+<li><p><strong>The probe and its two calibration points</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span><span class="w"> </span><span class="kr">float</span><span class="w"> </span><span class="n">moistureInAir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">535</span><span class="p">;</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">float</span><span class="w"> </span><span class="n">moistureInWater</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">280</span><span class="p">;</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">sensorPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A0</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The probe returns a raw number, and - this is the surprising part - <strong>the wetter the
+soil, the lower the number</strong>. The sketch turns that into a percentage:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">moisturePercentage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">sensorValue</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">moistureInWater</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">moistureInAir</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">moistureInWater</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>With the two calibration values this maps “in water” to <code class="docutils literal notranslate"><span class="pre">1.0</span></code> and “in air” to
+<code class="docutils literal notranslate"><span class="pre">0.0</span></code>, and everything in between proportionally.</p>
+</li>
+<li><p><strong>Two timers, two different jobs</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">timer</span><span class="p">.</span><span class="n">setInterval</span><span class="p">(</span><span class="mf">10000L</span><span class="p">,</span><span class="w"> </span><span class="n">updateDataTimer</span><span class="p">);</span><span class="w">   </span><span class="c1">// report every 10 s</span>
+<span class="n">timer</span><span class="p">.</span><span class="n">setInterval</span><span class="p">(</span><span class="mf">35000L</span><span class="p">,</span><span class="w"> </span><span class="n">autoWaterTimer</span><span class="p">);</span><span class="w">    </span><span class="c1">// check the pump every 35 s</span>
+</pre></div>
+</div>
+<p>Measuring is cheap, so it happens often. Starting a pump is not, so it is checked more
+slowly - and <code class="docutils literal notranslate"><span class="pre">delay()</span></code> is never used, so the Blynk connection keeps running.</p>
+</li>
+<li><p><strong>BLYNK_CONNECTED() and the two writes</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">BLYNK_CONNECTED</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">syncVirtual</span><span class="p">(</span><span class="n">V9</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">syncVirtual</span><span class="p">(</span><span class="n">V10</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">BLYNK_WRITE</span><span class="p">(</span><span class="n">V9</span><span class="p">)</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="n">waterThreshold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param</span><span class="p">.</span><span class="n">asInt</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="n">BLYNK_WRITE</span><span class="p">(</span><span class="n">V10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">autoMode</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">param</span><span class="p">.</span><span class="n">asInt</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">BLYNK_CONNECTED()</span></code> runs at every connection, including after a power cut, and asks
+the server for the slider and the switch. Without it a restarted board would water with
+a threshold of <code class="docutils literal notranslate"><span class="pre">0</span></code> - that is, never.</p>
+</li>
+<li><p><strong>sendData() - report, autoWater() - act</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nf">sendData</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">sensorValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">analogRead</span><span class="p">(</span><span class="n">sensorPin</span><span class="p">);</span>
+<span class="w">  </span><span class="n">moisturePercentage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">sensorValue</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">moistureInWater</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">moistureInAir</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">moistureInWater</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">virtualWrite</span><span class="p">(</span><span class="n">V8</span><span class="p">,</span><span class="w"> </span><span class="n">moisturePercentage</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nf">autoWater</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">autoMode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">moisturePercentage</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">waterThreshold</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// run the pump for a while</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">sendData()</span></code> only reads and reports - it never touches the pump. <code class="docutils literal notranslate"><span class="pre">autoWater()</span></code> is the
+only place that starts it, and it needs <strong>both</strong> conditions: the automatic mode on, and
+the soil drier than your slider.</p>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="06-iot_Remote_relay_controller.html" class="btn btn-neutral float-left" title="6. Remote Relay Controller with Blynk" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../bluetooth_espc201/00-iot_bluetooth_start.html" class="btn btn-neutral float-right" title="Get Started with Bluetooth" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

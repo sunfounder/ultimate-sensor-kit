@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:4
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:6
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:8
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:9
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:10
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:11
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:12
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:14
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:19
+msgid "Bluetooth LCD"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:28
+msgid "The project receives messages through a Bluetooth module connected to the UNO board and displays the received messages on an LCD screen."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:32
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:37
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:38
+msgid ":ref:`cpn_jdy31`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:39
+msgid ":ref:`cpn_i2c_lcd1602`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:42
+msgid "2. Upload the Code"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:44
+msgid "Open the ``01-Bluetooth_lcd.ino`` file under the path of ``ultimate-sensor-kit\\code\\iot_project_esp01\\bluetooth\\01-Bluetooth_lcd``, or copy this code into **Arduino IDE**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:47
+msgid "To install the library, use the Arduino Library Manager and search for **\"LiquidCrystal I2C\"** and install it."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:53
+msgid "After selecting the correct board and port, click the **Upload** button."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:55
+msgid "Open the Serial monitor(set baudrate to **9600**) to view debug messages."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:58
+msgid "3. App and Bluetooth module Connection"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:59
+msgid "We can use an app called \"Serial Bluetooth Terminal\" to send messages from the Bluetooth module to Arduino."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:61
+msgid "**Install Serial Bluetooth Terminal**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:63
+msgid "Go to Google Play to download and install |link_serial_bluetooth_terminal| ."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:66
+msgid "**Connect Bluetooth**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:68
+msgid "Initially, turn on **Bluetooth** on your smartphone."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:74
+msgid "Navigate to the **Bluetooth settings** on your smartphone and look for names like **JDY-31-SPP**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:80
+msgid "After clicking it, agree to the **Pair** request in the pop-up window. If prompted for a pairing code, please enter \"1234\"."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:87
+msgid "**Communicate with Bluetooth module**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:89
+msgid "Open the Serial Bluetooth Terminal. Connect to \"JDY-31-SPP\"."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:93
+msgid "**Send command**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:95
+msgid "Use the Serial Bluetooth Terminal app to send messages to Arduino via Bluetooth. The message sent to Bluetooth will be displayed on the LCD."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:103
+msgid "4. Code explanation"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:106
+msgid "To install library, use the Arduino Library Manager and search for **\"LiquidCrystal I2C\"** and install the library."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:108
+msgid "Setting up the LCD"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:115
+msgid "This segment of code includes the LiquidCrystal_I2C library and initializes the LCD module with the I2C address as ``0x27`` and specifies that the LCD has ``16`` columns and ``2`` rows."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:117
+msgid "Setting up Bluetooth communication"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:126
+msgid "Here, the SoftwareSerial library is included to allow the JDY-31 Bluetooth module to communicate with the Arduino using pins 3 (TX) and 4 (RX)."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:128
+msgid "Initialization"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:141
+msgid "The ``setup()`` function initializes the LCD and clears any existing content. It also turns on the backlight for the LCD. Communication is started with the serial monitor and the Bluetooth module, both at a baud rate of ``9600``."
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:143
+msgid "Main Loop"
+msgstr ""
+
+#: ../../source/iot_project_esp01/15-iot_Bluetooth_lcd.rst:165
+msgid "This is the main operational loop of the Arduino program. It continually checks for incoming data from both the Bluetooth module and the serial monitor. When data is received from the Bluetooth device, it's processed, displayed on the serial monitor, and shown on the LCD. If data is entered into the serial monitor, this data is sent to the Bluetooth module."
+msgstr ""

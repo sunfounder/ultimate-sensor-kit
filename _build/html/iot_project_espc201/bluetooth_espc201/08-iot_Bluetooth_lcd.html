@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8. Bluetooth LCD &mdash; SunFounder Ultimate Sensor Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../../_static/./lang.js?v=6e75df5d"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="9. Bluetooth Traffic Light" href="09-iot_Bluetooth_traffic_light.html" />
+    <link rel="prev" title="Get Started with Bluetooth" href="00-iot_bluetooth_start.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">About Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_start/00_get_start.html">Get Started with Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_video_course/arduino_video_course.html">Arduino Video Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download_code.html">Download the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components_basic/00-component_list.html">Component Basics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../iot_project.html">IoT Projects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../iot_project_esp01/00-iot_project_esp01.html">IoT Projects with ESP01 &amp; Bluetooth Module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../iot_project_espc201.html">IoT Projects with ESPC201</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/00-blynk_start.html">Get Started with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/01-iot_Flame_alert_system.html">1. Flame Alert System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/02-iot_Intrusion_alert_system.html">2. Intrusion Alert System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/03-iot_Plant_monitor.html">3. Plant Monitor with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/04-iot_Vibration_alert_system.html">4. Vibration Alert System with IFTTT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/05-iot_Weather_monitor.html">5. Weather Monitor with ThingSpeak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/06-iot_Remote_relay_controller.html">6. Remote Relay Controller with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/07-iot_Auto_watering_system.html">7. Auto Watering System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="00-iot_bluetooth_start.html">Get Started with Bluetooth</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">8. Bluetooth LCD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#build-the-circuit">1. Build the Circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#upload-the-code">2. Upload the Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#send-text-with-lightblue">3. Send Text with LightBlue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-explanation">4. Code explanation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="09-iot_Bluetooth_traffic_light.html">9. Bluetooth Traffic Light</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-iot_Bluetooth_environmental_monitor.html">10. Bluetooth Environmental Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-iot_Bluetooth_lock_controller.html">11. Bluetooth Lock Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="12-iot_Bluetooth_RGB_controller.html">12. Bluetooth RGB Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="13-iot_Bluetooth_piano.html">13. Bluetooth Piano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14-iot_Bluetooth_oled.html">14. Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15-iot_Bluetooth_remote_relay.html">15. Bluetooth Remote Relay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16-iot_Bluetooth_motion_monitor.html">16. Bluetooth Motion Monitor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../fun_project/fun_project.html">Fun Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thank-learning.html">Thank You</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../iot_project.html">IoT Projects</a></li>
+          <li class="breadcrumb-item"><a href="../iot_project_espc201.html">IoT Projects with ESPC201</a></li>
+      <li class="breadcrumb-item active">8. Bluetooth LCD</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs/docs/source/iot_project_espc201/bluetooth_espc201/08-iot_Bluetooth_lcd.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hello, welcome to the SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.</p>
+<p><strong>Why Join?</strong></p>
+<ul class="simple">
+<li><p><strong>Expert Support</strong>: Solve real-life coding problems and technical challenges with our community and team.</p></li>
+<li><p><strong>Learn &amp; Share</strong>: Exchange tips, tutorials, and projects to enhance your skills.</p></li>
+<li><p><strong>Exclusive Previews</strong>: Get early access to new product announcements and sneak peeks.</p></li>
+<li><p><strong>Festive Promotions and Giveaways</strong>: Take part in giveaways and holiday promotions.</p></li>
+</ul>
+<p>👉 Ready to explore and create with us? Click [<a href="https://bit.ly/raphaelkit " target="_blank">here</a>] and join today!</p>
+</div>
+<section id="bluetooth-lcd">
+<span id="c201-iot-bluetooth-lcd"></span><h1>8. Bluetooth LCD<a class="headerlink" href="#bluetooth-lcd" title="Link to this heading"></a></h1>
+<p>Type a word on the phone and it appears on the LCD - no cable, no Wi-Fi, no internet.</p>
+<p>The board is the same <strong>SunFounder-C2</strong> module from the previous chapter, used the same
+way: the phone writes text to characteristic <strong>C304</strong> and the sketch reads it.</p>
+<section id="build-the-circuit">
+<h2>1. Build the Circuit<a class="headerlink" href="#build-the-circuit" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The module draws a high current at start-up, so make sure the 9 V battery or an external power supply is plugged into the DC jack of the R4 Minima.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/15-Wiring_Bluetooth_LCD1.png"><img alt="../../_images/15-Wiring_Bluetooth_LCD1.png" src="../../_images/15-Wiring_Bluetooth_LCD1.png" style="width: 100%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima Board</span></a></p></li>
+<li><p><a class="reference internal" href="../../components_basic/41-component_espc201.html#cpn-espc201"><span class="std std-ref">ESPC2-01 Module</span></a></p></li>
+<li><p><a class="reference internal" href="../../components_basic/21-component_i2c_lcd1602.html#cpn-i2c-lcd1602"><span class="std std-ref">I2C LCD 1602</span></a></p></li>
+</ul>
+</section>
+<section id="upload-the-code">
+<h2>2. Upload the Code<a class="headerlink" href="#upload-the-code" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">08-Bluetooth_lcd.ino</span></code> file under the path of <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\code\iot_project_espc201\bluetooth\08-Bluetooth_lcd</span></code>, or copy this code into <strong>Arduino IDE</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The sketch needs the <strong>LiquidCrystal I2C</strong> library. Open the Library Manager,
+search for <code class="docutils literal notranslate"><span class="pre">LiquidCrystal</span> <span class="pre">I2C</span></code> and install it.</p>
+</div>
+</li>
+<li><p>Select <strong>Arduino UNO R4 Minima</strong> and the right port, then click <strong>Upload</strong>.</p></li>
+<li><p>Open the Serial Monitor at <strong>115200</strong>. You should read:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=== ESPC2-01 Bluetooth (BLE) ===
+[OK] BLE is ready - scan for "SunFounder-C2" on your phone
+--------------------------------
+</pre></div>
+</div>
+<p>If you read <code class="docutils literal notranslate"><span class="pre">[!]</span> <span class="pre">no</span> <span class="pre">reply</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">module</span></code>, the module is not answering on D0/D1 -
+check the four wires and the power supply.</p>
+</li>
+</ol>
+</section>
+<section id="send-text-with-lightblue">
+<h2>3. Send Text with LightBlue<a class="headerlink" href="#send-text-with-lightblue" title="Link to this heading"></a></h2>
+<p>Use the same <strong>LightBlue</strong> app as in the Get Started chapter.</p>
+<ol class="arabic">
+<li><p>Open LightBlue, tap <strong>Scan</strong> and connect to <strong>SunFounder-C2</strong>.</p></li>
+<li><p>Expand the service <strong>0xA002</strong> and open the characteristic <strong>C304</strong>. Then tap <strong>Write new value</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/ble_lightblue_write.png"><img alt="../../_images/ble_lightblue_write.png" src="../../_images/ble_lightblue_write.png" style="width: 80%;" /></a>
+</li>
+<li><p>Set the format in the top right corner to <strong>UTF-8 String</strong> and type a short word - for example <code class="docutils literal notranslate"><span class="pre">hello</span></code>. The picture shows the field just before
+sending:</p>
+<a class="reference internal image-reference" href="../../_images/ble_lightblue_hello.png"><img alt="../../_images/ble_lightblue_hello.png" src="../../_images/ble_lightblue_hello.png" style="width: 80%;" /></a>
+</li>
+<li><p>Send it. The word appears on the <strong>LCD</strong> and in the Serial Monitor.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Keep the text short: the LCD has 16 columns and 2 rows, and everything after the
+first 16 characters moves to the second row. A longer word is simply cut off.</p>
+</div>
+</li>
+<li><p>To send text the other way - from the board to the phone - subscribe to <strong>C305</strong> and
+then type in the Serial Monitor. This is the same pair of characteristics you used in
+the Get Started chapter, only one side now drives an LCD.</p></li>
+</ol>
+</section>
+<section id="code-explanation">
+<h2>4. Code explanation<a class="headerlink" href="#code-explanation" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>The LCD on the I2C bus</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;LiquidCrystal_I2C.h&gt;</span>
+<span class="n">LiquidCrystal_I2C</span><span class="w"> </span><span class="nf">lcd</span><span class="p">(</span><span class="mh">0x27</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">0x27</span></code> is the I2C address of the display, <code class="docutils literal notranslate"><span class="pre">16</span></code> is the number of columns and <code class="docutils literal notranslate"><span class="pre">2</span></code>
+the number of rows. Most of these modules answer on <code class="docutils literal notranslate"><span class="pre">0x27</span></code>; a few use <code class="docutils literal notranslate"><span class="pre">0x3F</span></code>.</p>
+</li>
+<li><p><strong>Bluetooth in one line</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">"SunFounder_BLE.h"</span>
+<span class="n">BLEStream</span><span class="w"> </span><span class="n">bleSerial</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">BLEStream</span></code> hides all the AT commands. <code class="docutils literal notranslate"><span class="pre">bleSerial.begin()</span></code> switches Bluetooth on,
+sets the name <strong>SunFounder-C2</strong> and starts advertising; after that the object behaves
+like an ordinary serial port - <code class="docutils literal notranslate"><span class="pre">available()</span></code>, <code class="docutils literal notranslate"><span class="pre">read()</span></code>, <code class="docutils literal notranslate"><span class="pre">write()</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The module talks to the board over D0/D1 (<code class="docutils literal notranslate"><span class="pre">Serial1</span></code>) at <strong>115200</strong>. That is a
+hardware port, so no bit is lost even while the LCD is being updated.</p>
+</div>
+</li>
+<li><p><strong>setup()</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">lcd</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="w">  </span><span class="n">lcd</span><span class="p">.</span><span class="nf">clear</span><span class="p">();</span>
+<span class="w">  </span><span class="n">lcd</span><span class="p">.</span><span class="n">backlight</span><span class="p">();</span>
+
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">  </span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">begin</span><span class="p">();</span>
+<span class="w">  </span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">setTimeout</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">lcd.backlight()</span></code> matters: without it the display works but stays dark. The short
+<code class="docutils literal notranslate"><span class="pre">setTimeout(50)</span></code> stops <code class="docutils literal notranslate"><span class="pre">readString()</span></code> from waiting a full second for more
+characters that will never come.</p>
+</li>
+<li><p><strong>loop() - phone to LCD</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">data</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">readString</span><span class="p">();</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">endsWith</span><span class="p">(</span><span class="s">"</span><span class="se">\r</span><span class="s">"</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">endsWith</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">data</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">lcd</span><span class="p">.</span><span class="nf">clear</span><span class="p">();</span>
+<span class="w">  </span><span class="n">lcd</span><span class="p">.</span><span class="nf">setCursor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="n">lcd</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The phone often adds a line ending to what you type. Only those characters are removed
+- never a real character - and then the text is written to the display.</p>
+</li>
+<li><p><strong>loop() - board to phone</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">Serial</span><span class="p">.</span><span class="nf">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nf">Serial</span><span class="p">.</span><span class="nf">read</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Anything you type in the Serial Monitor is forwarded to <strong>C305</strong>. Subscribe to it in
+LightBlue and the characters appear there, byte by byte.</p>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="00-iot_bluetooth_start.html" class="btn btn-neutral float-left" title="Get Started with Bluetooth" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="09-iot_Bluetooth_traffic_light.html" class="btn btn-neutral float-right" title="9. Bluetooth Traffic Light" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

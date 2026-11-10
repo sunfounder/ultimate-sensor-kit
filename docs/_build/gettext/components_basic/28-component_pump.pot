@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/components_basic/28-component_pump.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:18
+msgid "Centrifugal Pump"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:29
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:30
+msgid "A centrifugal pump is a device that can move liquids from one place to another by using a rotating impeller. It can be used to pump water, oil, chemicals, etc. A centrifugal pump has two main parts: a motor and a pump. The motor provides power to the pump and the pump converts the rotational energy into pressure and flow."
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:34
+msgid "Principle"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:36
+msgid "A centrifugal pump operates by using a spinning impeller which increases the velocity of the fluid, drawing it into the pump through an inlet pipe. As the liquid exits the impeller's outer edge, centrifugal force pushes it out through an outlet pipe, resulting in increased pressure. The faster the impeller spins, the higher the pressure and flow of the liquid."
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:40
+msgid "Usage"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:42
+msgid "**Hardware components**"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:44
+msgid "Arduino Uno R4 or R3 board * 1"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:45
+msgid "Centrifugal Pump * 1"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:46
+msgid "Jumper Wires"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:49
+msgid "**Circuit Assembly**"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:60
+msgid "Code"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:76
+msgid "Code explanation"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:78
+msgid "Two pins are defined for controlling the motor, specifically ``motorB_1A`` and ``motorB_2A``. These pins will connect to the L9110 motor control board to control the direction and speed of the motor."
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:85
+msgid "Configuring the pins and controlling the motor:"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:87
+msgid "The ``setup()`` function initializes the pins as ``OUTPUT`` which means they can send signals to the motor control board."
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:89
+msgid "The ``analogWrite()`` function is used to set the motor speed. Here, setting one pin to ``HIGH`` and the other to ``LOW`` makes the pump spin in one direction. After a 5-second delay, both pins are set to 0, turning off the motor."
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:105
+msgid "Additional Ideas"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:107
+msgid "Reverse the pump's direction by switching the ``HIGH`` and ``LOW`` values between the pins."
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:109
+msgid "Implement a system where the pump toggles its state (on/off) using a button press."
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:111
+msgid "Implement a potentiometer to control the speed of the pump using PWM."
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:113
+msgid "Include sensors to automate the pump's operation based on certain conditions, e.g., turning the pump on/off depending on water level in a tank."
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:116
+msgid "More Projects"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:117
+msgid ":ref:`fun_soap_dispenser`"
+msgstr ""
+
+#: ../../source/components_basic/28-component_pump.rst:118
+msgid ":ref:`iot_Auto_watering_system`"
+msgstr ""

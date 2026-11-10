@@ -1,0 +1,201 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to upload Sketch to the Board? &mdash; SunFounder Ultimate Sensor Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=6e75df5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Arduino Program Structure" href="05_basic_code_struct.html" />
+    <link rel="prev" title="How to create, open or Save the Sketch?" href="03_create_save.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">About Ultimate Sensor Kit</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="00_get_start.html">Get Started with Arduino</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="00_get_start.html#what-is-arduino">What is Arduino?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="00_get_start.html#what-can-arduino-do">What can Arduino do?</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="00_get_start.html#how-to-build-an-arduino-project">How to build an Arduino Project</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="01_install_arduino_ide.html">Download and Install Arduino IDE 2.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_introduce_ide.html">Introduce of Arduino IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_create_save.html">How to create, open or Save the Sketch?</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">How to upload Sketch to the Board?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_basic_code_struct.html">Arduino Program Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_basic_further_syntax.html">Sketch Writing Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_basic_variable.html">Variable</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Download the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">Component Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iot_project.html">IoT Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">Fun Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Thank You</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="00_get_start.html">Get Started with Arduino</a></li>
+      <li class="breadcrumb-item active">How to upload Sketch to the Board?</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs/docs/source/arduino_start/04_basic_upload.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hello, welcome to the SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.</p>
+<p><strong>Why Join?</strong></p>
+<ul class="simple">
+<li><p><strong>Expert Support</strong>: Solve post-sale issues and technical challenges with help from our community and team.</p></li>
+<li><p><strong>Learn &amp; Share</strong>: Exchange tips and tutorials to enhance your skills.</p></li>
+<li><p><strong>Exclusive Previews</strong>: Get early access to new product announcements and sneak peeks.</p></li>
+<li><p><strong>Special Discounts</strong>: Enjoy exclusive discounts on our newest products.</p></li>
+<li><p><strong>Festive Promotions and Giveaways</strong>: Take part in giveaways and holiday promotions.</p></li>
+</ul>
+<p>👉 Ready to explore and create with us? Click [<a href="https://bit.ly/raphaelkit " target="_blank">here</a>] and join today!</p>
+</div>
+<section id="how-to-upload-sketch-to-the-board">
+<h1>How to upload Sketch to the Board?<a class="headerlink" href="#how-to-upload-sketch-to-the-board" title="Link to this heading"></a></h1>
+<p>In this section, you will learn how to upload the sketch created previously to the Arduino board, as well as learn about some considerations.</p>
+<p><strong>1. Choose Board and port</strong></p>
+<p>Arduino development boards usually come with a USB cable. You can use it to connect the board to your computer.</p>
+<p>Select the correct <strong>Board</strong> and <strong>Port</strong> in the Arduino IDE. Normally, Arduino boards are recognized automatically by the computer and assigned a port, so you can select it here.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/board_port.png"><img alt="../_images/board_port.png" src="../_images/board_port.png" style="width: 90%;" /></a>
+</div></blockquote>
+<p>If your board is already plugged in, but not recognized, check if the <strong>INSTALLED</strong> logo appears in the <strong>Arduino AVR Boards</strong> section of the <strong>Boards Manager</strong>, if not, please scroll down a bit and click on <strong>INSTALL</strong>.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/upload1.png"><img alt="../_images/upload1.png" src="../_images/upload1.png" style="width: 90%;" /></a>
+</div></blockquote>
+<p>Specifically, for UNO R4, search <strong>“UNO R4”</strong> in <strong>Boards Manager</strong> and check if the corresponding library is installed.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/install_uno_r4_lib.png"><img alt="../_images/install_uno_r4_lib.png" src="../_images/install_uno_r4_lib.png" style="width: 90%;" /></a>
+</div></blockquote>
+<p>Reopening the Arduino IDE and re-plugging the Arduino board will fix most of the problems. You can also click <strong>Tools</strong> -&gt; <strong>Board</strong> or <strong>Port</strong> to select them.</p>
+<p><strong>2. Verify the Sketch</strong></p>
+<p>After clicking the Verify button, the sketch will be compiled to see if there are any errors.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/sp221014_174532.png"><img alt="../_images/sp221014_174532.png" src="../_images/sp221014_174532.png" style="width: 90%;" /></a>
+</div></blockquote>
+<p>You can use it to find mistakes if you delete some characters or type a few letters by mistake. From the message bar, you can see where and what type of errors occurred.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/sp221014_175307.png"><img alt="../_images/sp221014_175307.png" src="../_images/sp221014_175307.png" style="width: 90%;" /></a>
+</div></blockquote>
+<p>If there are no errors, you will see a message like the one below.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/sp221014_175512.png"><img alt="../_images/sp221014_175512.png" src="../_images/sp221014_175512.png" style="width: 90%;" /></a>
+</div></blockquote>
+<p><strong>3. Upload sketch</strong></p>
+<p>After completing the above steps, click the <strong>Upload</strong> button to upload this sketch to the board.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/sp221014_175614.png"><img alt="../_images/sp221014_175614.png" src="../_images/sp221014_175614.png" style="width: 90%;" /></a>
+</div></blockquote>
+<p>If successful, you will be able to see the following prompt.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/sp221014_175654.png"><img alt="../_images/sp221014_175654.png" src="../_images/sp221014_175654.png" style="width: 90%;" /></a>
+</div></blockquote>
+<p>At the same time, the on-board LED blink.</p>
+<a class="reference internal image-reference" href="../_images/1_led.jpg"><img alt="../_images/1_led.jpg" class="align-center" src="../_images/1_led.jpg" style="width: 400px;" /></a>
+<br/><p>The Arduino board will automatically run the sketch after power is applied after the sketch is uploaded. The running program can be overwritten by uploading a new sketch.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="03_create_save.html" class="btn btn-neutral float-left" title="How to create, open or Save the Sketch?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="05_basic_code_struct.html" class="btn btn-neutral float-right" title="Arduino Program Structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

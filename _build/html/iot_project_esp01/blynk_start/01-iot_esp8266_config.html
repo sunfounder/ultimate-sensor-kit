@@ -1,0 +1,227 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.0 Configuring the ESP8266 &mdash; SunFounder Ultimate Sensor Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../../_static/./lang.js?v=6e75df5d"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.1 Configuring the Blynk" href="02-iot_blynk_config.html" />
+    <link rel="prev" title="Get Started with Blynk" href="00-blynk_start.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">About Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_start/00_get_start.html">Get Started with Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_video_course/arduino_video_course.html">Arduino Video Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download_code.html">Download the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components_basic/00-component_list.html">Component Basics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../iot_project.html">IoT Projects</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../00-iot_project_esp01.html">IoT Projects with ESP01 &amp; Bluetooth Module</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="00-blynk_start.html">Get Started with Blynk</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">1.0 Configuring the ESP8266</a></li>
+<li class="toctree-l4"><a class="reference internal" href="02-iot_blynk_config.html">1.1 Configuring the Blynk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="03-iot_add_lib.html">1.2 Adding the required libraries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="04-iot_connect_r4_blynk.html">1.3 Connecting the R4 board to Blynk</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01-iot_Flame_alert_system.html">Flame Alert System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02-iot_Intrusion_alert_system.html">Intrusion Alert System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-iot_Plant_monitor.html">Plant Monitor with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../06-iot_Remote_relay_controller.html">Remote Relay Controller with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../07-iot_Auto_watering_system.html">Auto Watering System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04-iot_Vibration_alert_system.html">Vibration Alert System with IFTTT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../05-iot_Weather_monitor.html">Weather Monitor with ThingSpeak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../00-iot_bluetooth_start.html">Get Started with Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../15-iot_Bluetooth_lcd.html">Bluetooth LCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../16-iot_Bluetooth_traffic_light.html">Bluetooth Traffic Light</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../08-iot_Bluetooth_lock_controller.html">Bluetooth Lock Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../09-iot_Bluetooth_RGB_controller.html">Bluetooth RGB Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../10-iot_Bluetooth_environmental_monitor.html">Bluetooth Environmental Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../11-iot_Bluetooth_piano.html">Bluetooth Piano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../12-iot_Bluetooth_oled.html">Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../13-iot_Bluetooth_remote_relay.html">Bluetooth Remote Relay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../14-iot_Bluetooth_voice_control_relay.html">Bluetooth Voice-control Relay</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../iot_project_espc201/iot_project_espc201.html">IoT Projects with ESPC201</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../fun_project/fun_project.html">Fun Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thank-learning.html">Thank You</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../iot_project.html">IoT Projects</a></li>
+          <li class="breadcrumb-item"><a href="../00-iot_project_esp01.html">IoT Projects with ESP01 &amp; Bluetooth Module</a></li>
+          <li class="breadcrumb-item"><a href="00-blynk_start.html">Get Started with Blynk</a></li>
+      <li class="breadcrumb-item active">1.0 Configuring the ESP8266</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs/docs/source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hello, welcome to the SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.</p>
+<p><strong>Why Join?</strong></p>
+<ul class="simple">
+<li><p><strong>Expert Support</strong>: Solve post-sale issues and technical challenges with help from our community and team.</p></li>
+<li><p><strong>Learn &amp; Share</strong>: Exchange tips and tutorials to enhance your skills.</p></li>
+<li><p><strong>Exclusive Previews</strong>: Get early access to new product announcements and sneak peeks.</p></li>
+<li><p><strong>Special Discounts</strong>: Enjoy exclusive discounts on our newest products.</p></li>
+<li><p><strong>Festive Promotions and Giveaways</strong>: Take part in giveaways and holiday promotions.</p></li>
+</ul>
+<p>👉 Ready to explore and create with us? Click [<a href="https://bit.ly/raphaelkit " target="_blank">here</a>] and join today!</p>
+</div>
+<section id="configuring-the-esp8266">
+<span id="config-esp8266"></span><h1>1.0 Configuring the ESP8266<a class="headerlink" href="#configuring-the-esp8266" title="Link to this heading"></a></h1>
+<p>The ESP8266 module that comes with the kit is already pre-burned with AT firmware, but you still need to modify its configuration by following the steps below.</p>
+<ol class="arabic">
+<li><p>Build the circuit.</p>
+<a class="reference internal image-reference" href="../../_images/wiring_r4_configure.png"><img alt="../../_images/wiring_r4_configure.png" src="../../_images/wiring_r4_configure.png" style="width: 800px;" /></a>
+</li>
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">00-Set_software_serial.ino</span></code> file under the path of <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\code\iot_project_esp01\wifi\00-Set_software_serial</span></code>. Or copy this code into Arduino IDE. And upload the code.</p>
+<p>The code establishes a software serial communication using Arduino’s SoftwareSerial library, allowing the Arduino to communicate with the ESP8266 module through its digital pins 2 and 3 (as Rx and Tx). It checks for data transfer between them, forwarding received messages from one to the other at a baud rate of 115200. <strong>With this code, you can use the Arduino’s serial monitor to send AT firmware commands to the ESP8266 module and receive its responses.</strong></p>
+<div class="highlight-Arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SoftwareSerial.h&gt;</span>
+<span class="nf">SoftwareSerial</span><span class="w"> </span><span class="nf">espSerial</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="c1">//Rx,Tx</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// put your setup code here, to run once:</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">    </span><span class="n">espSerial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">espSerial</span><span class="p">.</span><span class="nf">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">espSerial</span><span class="p">.</span><span class="nf">read</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">Serial</span><span class="p">.</span><span class="nf">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">espSerial</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nf">Serial</span><span class="p">.</span><span class="nf">read</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Click the magnifying glass icon (Serial Monitor) in the upper right corner and set the baud rate to <strong>115200</strong>. (You may have some printed information like me, or you may not, it doesn’t matter, just go to the next step.)</p>
+<img alt="../../_images/esp01_configurie_1.png" src="../../_images/esp01_configurie_1.png" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">ready</span></code> doesn’t appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor.</p></li>
+<li><p>In addition, if the result is <code class="docutils literal notranslate"><span class="pre">OK</span></code>, you may need to re-burn the firmware, please refer to <a class="reference internal" href="../../faq/burn_firmware.html#burn-firmware"><span class="std std-ref">Firmware on the Wireless Module</span></a> for details. If you still can’t solve it, please take a screenshot of the serial monitor and send it to <a class="reference external" href="mailto:service&#37;&#52;&#48;sunfounder&#46;com">service<span>&#64;</span>sunfounder<span>&#46;</span>com</a>, we will help you solve the problem as soon as possible.</p></li>
+</ul>
+</div>
+</li>
+<li><p>Click on <strong>NEWLINE DROPDOWN BOX</strong>, select <code class="docutils literal notranslate"><span class="pre">both</span> <span class="pre">NL</span> <span class="pre">&amp;</span> <span class="pre">CR</span></code> in the drop down option, enter <code class="docutils literal notranslate"><span class="pre">AT</span></code>, if it returns OK, it means ESP8266 has successfully established connection with R4 board.</p>
+<img alt="../../_images/esp01_configurie_2.png" src="../../_images/esp01_configurie_2.png" />
+<img alt="../../_images/esp01_configurie_3.png" src="../../_images/esp01_configurie_3.png" />
+</li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">AT+CWMODE=3</span></code> and the managed mode will be changed to <strong>Station and AP</strong> coexistence.</p>
+<img alt="../../_images/esp01_configurie_4.png" src="../../_images/esp01_configurie_4.png" />
+</li>
+</ol>
+<p><strong>Reference</strong></p>
+<ul class="simple">
+<li><p><a href="../../_static/pdf/esp8266_at_instruction_set_en.pdf" target="_blank">ESP8266 AT Instruction Set</a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="00-blynk_start.html" class="btn btn-neutral float-left" title="Get Started with Blynk" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="02-iot_blynk_config.html" class="btn btn-neutral float-right" title="1.1 Configuring the Blynk" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

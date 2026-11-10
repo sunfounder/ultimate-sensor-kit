@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accelerometer &amp; Gyroscope Module (MPU6050) &mdash; SunFounder Ultimate Sensor Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=6e75df5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Button Module" href="06-component_button.html" />
+    <link rel="prev" title="Vibration Sensor Module (SW-420)" href="04-component_vibration.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">About Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Get Started with Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Download the Code</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="00-component_list.html">Component Basics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="36-component_uno.html">Arduino UNO R4 Minima Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="39-component_breadboard.html">Breadboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="40-component_wires.html">Jumper Wires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-component_ultrasonic_module.html">Ultrasonic Sensor Module (HC-SR04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-component_gas.html">Gas/Smoke Sensor Module (MQ2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-component_flame.html">Flame Sensor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-component_vibration.html">Vibration Sensor Module (SW-420)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Accelerometer &amp; Gyroscope Module (MPU6050)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#principle">Principle</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#axis-accelerometer">3-axis Accelerometer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axis-gyroscope">3-axis Gyroscope</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#code">Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-explanation">Code explanation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#additional-ideas">Additional Ideas</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="06-component_button.html">Button Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-component_photoresistor.html">Photoresistor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-component_potentiometer.html">Potentiometer Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-component_ir_obstacle.html">IR Obstacle Avoidance Sensor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-component_soil.html">Capacitive Soil Moisture Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11-component_raindrop.html">Raindrop Detection Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12-component_dht11.html">Temperature and Humidity Sensor Module (DHT11)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13-component_pir_motion.html">PIR Motion Module (HC-SR501)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14-component_bmp280.html">Temperature, Humidity &amp; Pressure Sensor (BMP280)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="15-component_max30102.html">Pulse Oximeter and Heart Rate Sensor (MAX30102)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="16-component_rtc_ds1302.html">Real Time Clock Module (DS1302)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="17-component_touch.html">Touch Sensor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="18-component_speed.html">Infrared Speed Sensor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="19-component_joystick.html">Joystick Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="20-component_VL53L0X.html">Time of Flight Micro-LIDAR Distance Sensor (VL53L0X)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="21-component_i2c_lcd1602.html">I2C LCD 1602</a></li>
+<li class="toctree-l2"><a class="reference internal" href="22-component_oled.html">OLED Display Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="23-component_traffic.html">Traffic Light Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="24-component_rgb.html">RGB Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="25-component_relay.html">5V Relay Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="26-component_buzzer.html">Passive Buzzer Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="27-component_servo.html">Servo Motor (SG90)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="28-component_pump.html">Centrifugal Pump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="29-component_ttmotor.html">TT Motor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="37-component_esp8266.html">ESP8266 Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="38-component_jdy31.html">JDY-31 Bluetooth Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="41-component_espc201.html">ESPC2-01 Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../iot_project.html">IoT Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">Fun Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Thank You</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="00-component_list.html">Component Basics</a></li>
+      <li class="breadcrumb-item active">Accelerometer &amp; Gyroscope Module (MPU6050)</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs/docs/source/components_basic/05-component_mpu6050.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hello, welcome to the SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.</p>
+<p><strong>Why Join?</strong></p>
+<ul class="simple">
+<li><p><strong>Expert Support</strong>: Solve post-sale issues and technical challenges with help from our community and team.</p></li>
+<li><p><strong>Learn &amp; Share</strong>: Exchange tips and tutorials to enhance your skills.</p></li>
+<li><p><strong>Exclusive Previews</strong>: Get early access to new product announcements and sneak peeks.</p></li>
+<li><p><strong>Special Discounts</strong>: Enjoy exclusive discounts on our newest products.</p></li>
+<li><p><strong>Festive Promotions and Giveaways</strong>: Take part in giveaways and holiday promotions.</p></li>
+</ul>
+<p>👉 Ready to explore and create with us? Click [<a href="https://bit.ly/raphaelkit " target="_blank">here</a>] and join today!</p>
+</div>
+<section id="accelerometer-gyroscope-module-mpu6050">
+<span id="cpn-mpu6050"></span><h1>Accelerometer &amp; Gyroscope Module (MPU6050)<a class="headerlink" href="#accelerometer-gyroscope-module-mpu6050" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="../_images/05_mpu6050_1.png"><img alt="../_images/05_mpu6050_1.png" class="align-center" src="../_images/05_mpu6050_1.png" style="width: 300px;" /></a>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The MPU-6050 is a 6-axis(combines 3-axis Gyroscope, 3-axis Accelerometer) motion tracking devices.Changes in motion, acceleration and rotation can be detected.It is commonly used in robotics, gaming controllers, and other electronic devices that require motion detection. Its high accuracy and cheap cost make it very popular among the DIY community.</p>
+</section>
+<section id="principle">
+<h2>Principle<a class="headerlink" href="#principle" title="Link to this heading"></a></h2>
+<p>An MPU-650 sensor module consists of a 3-axis accelerometer and a 3-axis gyroscope.</p>
+<p>Its three coordinate systems are defined as follows:</p>
+<p>Put MPU6050 flat on the table, assure that the face with label is upward and a dot on this surface is on the top left corner. Then the upright direction upward is the z-axis of the chip. The direction from left to right is regarded as the X-axis. Accordingly the direction from back to front is defined as the Y-axis.</p>
+<a class="reference internal image-reference" href="../_images/05_mpu_2.png"><img alt="../_images/05_mpu_2.png" class="align-center" src="../_images/05_mpu_2.png" style="width: 300px;" /></a>
+<section id="axis-accelerometer">
+<h3>3-axis Accelerometer<a class="headerlink" href="#axis-accelerometer" title="Link to this heading"></a></h3>
+<p>The accelerometer works on the principle of piezo electric effect, the ability of certain materials to generate an electric charge in response to applied mechanical stress.</p>
+<p>Here, imagine a cuboidal box, having a small ball inside it, like in the picture above. The walls of this box are made with piezo electric crystals. Whenever you tilt the box, the ball is forced to move in the direction of the inclination, due to gravity. The wall with which the ball collides, creates tiny piezo electric currents. There are totally, three pairs of opposite walls in a cuboid. Each pair corresponds to an axis in 3D space: X, Y and Z axes. Depending on the current produced from the piezo electric walls, we can determine the direction of inclination and its magnitude.</p>
+<a class="reference internal image-reference" href="../_images/05_mpu_3.png"><img alt="../_images/05_mpu_3.png" class="align-center" src="../_images/05_mpu_3.png" style="width: 800px;" /></a>
+<p>We can use the MPU6050 to detect its acceleration on each coordinate axis (in the stationary desktop state, the Z-axis acceleration is 1 gravity unit, and the X and Y axes are 0). If it is tilted or in a weightless/overweight condition, the corresponding reading will change.</p>
+<p>There are four kinds of measuring ranges that can be selected programmatically: +/-2g, +/-4g, +/-8g, and +/-16g (2g by default) corresponding to each precision. Values range from -32768 to 32767.</p>
+<p>The reading of accelerometer is converted to an acceleration value by mapping the reading from the reading range to the measuring range.</p>
+<p>Acceleration = (Accelerometer axis raw data / 65536 * full scale Acceleration range) g</p>
+<p>Take the X-axis as an example, when Accelerometer X axis raw data is 16384 and the range is selected as +/-2g:</p>
+<p>Acceleration along the X axis = (16384 / 65536 * 4) g =1g</p>
+</section>
+<section id="axis-gyroscope">
+<h3>3-axis Gyroscope<a class="headerlink" href="#axis-gyroscope" title="Link to this heading"></a></h3>
+<p>Gyroscopes work on the principle of Coriolis acceleration. Imagine that there is a fork like structure, that is in constant back and forth motion. It is held in place using piezo electric crystals. Whenever, you try to tilt this arrangement, the crystals experience a force in the direction of inclination. This is caused as a result of the inertia of the moving fork. The crystals thus produce a current in consensus with the piezo electric effect, and this current is amplified.</p>
+<a class="reference internal image-reference" href="../_images/05_mpu_4.png"><img alt="../_images/05_mpu_4.png" class="align-center" src="../_images/05_mpu_4.png" style="width: 800px;" /></a>
+<p>The Gyroscope also has four kinds of measuring ranges: +/- 250, +/- 500, +/- 1000, +/- 2000. The calculation method and Acceleration are basically consistent.</p>
+<p>The formula for converting the reading into angular velocity is as follows:</p>
+<p>Angular velocity = (Gyroscope axis raw data / 65536 * full scale Gyroscope range) °/s</p>
+<p>The X axis, for example, the Accelerometer X axis raw data is 16384 and ranges + / - 250°/ s:</p>
+<p>Angular velocity along the X axis = (16384 / 65536 * 500)°/s =125°/s</p>
+</section>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p><strong>Hardware components</strong></p>
+<ul class="simple">
+<li><p>Arduino Uno R4 or R3 board * 1</p></li>
+<li><p>Accelerometer &amp; Gyroscope Module(MPU6050) * 1</p></li>
+<li><p>Jumper Wires</p></li>
+</ul>
+<p><strong>Circuit Assembly</strong></p>
+<a class="reference internal image-reference" href="../_images/05_mpu6050_circuit.png"><img alt="../_images/05_mpu6050_circuit.png" class="align-center" src="../_images/05_mpu6050_circuit.png" style="width: 400px;" /></a>
+<br/><br/><section id="code">
+<h3>Code<a class="headerlink" href="#code" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To install the library, use the Arduino Library Manager and search for <strong>“Adafruit MPU6050”</strong> and install it.</p>
+</div>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/e5160412-ce6c-4742-a0f3-0aa259bb9770/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe><video loop autoplay muted style = "max-width:100%">
+   <source src="../_static/video/basic/05-component_mpu6050.mp4"  type="video/mp4">
+   Your browser does not support the video tag.
+</video>
+<br/><br/></section>
+<section id="code-explanation">
+<h3>Code explanation<a class="headerlink" href="#code-explanation" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p>The code starts by including the necessary libraries and creating an object for the MPU6050 sensor. This code uses the Adafruit_MPU6050 library, Adafruit_Sensor library, and Wire library. The <code class="docutils literal notranslate"><span class="pre">Adafruit_MPU6050</span></code> library is used to interact with the MPU6050 sensor and retrieve acceleration, rotation, and temperature data. The <code class="docutils literal notranslate"><span class="pre">Adafruit_Sensor</span></code> library provides a common interface for various types of sensors. The <code class="docutils literal notranslate"><span class="pre">Wire</span></code> library is used for I2C communication, which is necessary to communicate with the MPU6050 sensor.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To install the library, use the Arduino Library Manager and search for <strong>“Adafruit MPU6050”</strong> and install it.</p>
+</div>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Adafruit_MPU6050.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Adafruit_Sensor.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Wire.h&gt;</span>
+<span class="n">Adafruit_MPU6050</span><span class="w"> </span><span class="n">mpu</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">setup()</span></code> function initializes the serial communication and checks if the sensor is detected. If the sensor is not found, the Arduino enters an infinite loop with a “Failed to find MPU6050 chip” message. If found, the accelerometer range, gyro range, and filter bandwidth are set, and a delay is added for stability.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">(</span><span class="kr">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Initialize the serial communication</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Check if the MPU6050 sensor is detected</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">mpu</span><span class="p">.</span><span class="nf">begin</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"Failed to find MPU6050 chip"</span><span class="p">);</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nf">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"MPU6050 Found!"</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// set accelerometer range to +-8G</span>
+<span class="w">  </span><span class="n">mpu</span><span class="p">.</span><span class="n">setAccelerometerRange</span><span class="p">(</span><span class="n">MPU6050_RANGE_8_G</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// set gyro range to +- 500 deg/s</span>
+<span class="w">  </span><span class="n">mpu</span><span class="p">.</span><span class="n">setGyroRange</span><span class="p">(</span><span class="n">MPU6050_RANGE_500_DEG</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// set filter bandwidth to 21 Hz</span>
+<span class="w">  </span><span class="n">mpu</span><span class="p">.</span><span class="n">setFilterBandwidth</span><span class="p">(</span><span class="n">MPU6050_BAND_21_HZ</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Add a delay for stability</span>
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">loop()</span></code> function, the program creates events to store the sensor readings and then retrieves the readings. The acceleration, rotation, and temperature values are then printed to the serial monitor.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Get new sensor events with the readings</span>
+<span class="w">  </span><span class="n">sensors_event_t</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+<span class="w">  </span><span class="n">mpu</span><span class="p">.</span><span class="n">getEvent</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">temp</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Print out the acceleration, rotation, and temperature readings</span>
+<span class="w">  </span><span class="c1">// ...</span>
+
+<span class="w">  </span><span class="c1">// Add a delay to avoid flooding the serial monitor</span>
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="additional-ideas">
+<h3>Additional Ideas<a class="headerlink" href="#additional-ideas" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Visualize sensor data in graphical format on an LCD or OLED</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="04-component_vibration.html" class="btn btn-neutral float-left" title="Vibration Sensor Module (SW-420)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="06-component_button.html" class="btn btn-neutral float-right" title="Button Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

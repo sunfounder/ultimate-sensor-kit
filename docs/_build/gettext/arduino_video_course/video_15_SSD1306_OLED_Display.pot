@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:16
+msgid "Video 15: SSD1306 OLED Display | Text, Graphics, and Animation"
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:18
+msgid "This tutorial dives into the essentials of using an I2C OLED display with Arduino, demonstrated through reading temperature and humidity values and displaying them."
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:20
+msgid "**I2C OLED Display**: Guides through connecting and initializing an SSD1306 I2C OLED display with the Arduino, highlighting the advantages of OLED technology, such as self-illumination and low power consumption."
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:21
+msgid "**Connecting the DHT11 Sensor**: Explains how to connect a DHT11 sensor to the Arduino to read temperature and humidity values."
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:22
+msgid "**Library Installation**: Demonstrates how to install the necessary libraries for the SSD1306 OLED display and the DHT11 sensor from the Arduino Library Manager."
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:23
+msgid "**Coding for OLED Display and DHT11**: Provides a step-by-step guide on writing code to read data from the DHT11 sensor and display it on the OLED. It includes checking for valid sensor readings and handling errors."
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:24
+msgid "**Displaying Text and Graphics**: Shows how to display text, graphics, and even animations on the OLED. The tutorial explains setting text size, color, cursor position, and using functions like drawCircle and drawBitmap for custom graphics."
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:25
+msgid "**Challenge Activity**: Encourages further learning by adding another image adjacent to the humidity readings and including a simple animation when the program starts before displaying the humidity and temperature readings."
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:28
+msgid "**Video**"
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:43
+msgid "**Related On-line Tutorials**"
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:45
+msgid ":ref:`cpn_potentiometer`"
+msgstr ""
+
+#: ../../source/arduino_video_course/video_15_SSD1306_OLED_Display.rst:46
+msgid ":ref:`fun_potentiometer_scale_value`"
+msgstr ""

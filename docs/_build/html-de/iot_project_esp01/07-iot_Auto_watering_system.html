@@ -1,0 +1,456 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automatisches Bewässerungssystem mit Blynk &mdash; SunFounder Ultimate Sensor Kit  Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=245627df"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=70a09b52"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=2c65fa5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Vibrationserkennungssystem mit IFTTT" href="04-iot_Vibration_alert_system.html" />
+    <link rel="prev" title="Ferngesteuerter Relais-Controller mit Blynk" href="06-iot_Remote_relay_controller.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">脺ber das Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Einstieg in Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Kurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Code herunterladen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">Grundlagen der Komponenten</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../iot_project.html">IoT-Projekte</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="00-iot_project_esp01.html">IoT-Projekte</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="blynk_start/00-blynk_start.html">Einführung in Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01-iot_Flame_alert_system.html">Flammenwarnsystem mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-iot_Intrusion_alert_system.html">Einbruchmeldeanlage mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03-iot_Plant_monitor.html">Pflanzenüberwachung mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06-iot_Remote_relay_controller.html">Ferngesteuerter Relais-Controller mit Blynk</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Automatisches Bewässerungssystem mit Blynk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#schaltung-aufbauen">1. Schaltung aufbauen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blynk-konfigurieren">2. Blynk konfigurieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#den-code-ausfuhren">3. Den Code ausführen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-erlauterung">4. Code-Erläuterung</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="04-iot_Vibration_alert_system.html">Vibrationserkennungssystem mit IFTTT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05-iot_Weather_monitor.html">Wetterüberwachung mit ThingSpeak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="00-iot_bluetooth_start.html">Bluetooth-Einstieg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15-iot_Bluetooth_lcd.html">Bluetooth LCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16-iot_Bluetooth_traffic_light.html">Bluetooth-Ampel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08-iot_Bluetooth_lock_controller.html">Bluetooth-Schlosssteuerung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09-iot_Bluetooth_RGB_controller.html">Bluetooth RGB-Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-iot_Bluetooth_environmental_monitor.html">Bluetooth-Umweltmonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-iot_Bluetooth_piano.html">Bluetooth-Klavier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="12-iot_Bluetooth_oled.html">Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="13-iot_Bluetooth_remote_relay.html">Bluetooth-Fernrelais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14-iot_Bluetooth_voice_control_relay.html">Bluetooth Sprachgesteuertes Relais</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">Spaßprojekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Vielen Dank</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../iot_project.html">IoT-Projekte</a></li>
+          <li class="breadcrumb-item"><a href="00-iot_project_esp01.html">IoT-Projekte</a></li>
+      <li class="breadcrumb-item active">Automatisches Bewässerungssystem mit Blynk</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs-de/docs/source/iot_project_esp01/07-iot_Auto_watering_system.rst" class="fa fa-github"> Auf GitHub bearbeiten</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Hallo und willkommen in der SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.</p>
+<p><strong>Warum beitreten?</strong></p>
+<ul class="simple">
+<li><p><strong>Expertenunterstützung</strong>: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.</p></li>
+<li><p><strong>Lernen &amp; Teilen</strong>: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.</p></li>
+<li><p><strong>Exklusive Vorschauen</strong>: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.</p></li>
+<li><p><strong>Spezialrabatte</strong>: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.</p></li>
+<li><p><strong>Festliche Aktionen und Gewinnspiele</strong>: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.</p></li>
+</ul>
+<p>👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [<a href="https://bit.ly/raphaelkit " target="_blank">hier</a>] und treten Sie heute bei!</p>
+</div>
+<section id="automatisches-bewasserungssystem-mit-blynk">
+<span id="iot-auto-watering-system"></span><h1>Automatisches Bewässerungssystem mit Blynk<a class="headerlink" href="#automatisches-bewasserungssystem-mit-blynk" title="Link to this heading"></a></h1>
+<video loop autoplay muted style = "max-width:100%">
+   <source src="../_static/video/iot/07-iot_Auto_watering_system.mp4"  type="video/mp4">
+   Ihr Browser unterstützt das Video-Tag nicht.
+</video><p>Dieses Projekt demonstriert ein automatisiertes Bewässerungssystem, das Bodenfeuchtesensoren und Wasserpumpen nutzt. Die Blynk-App dient der Benutzerinteraktion und empfängt Daten zur Bodenfeuchte, während sie den Bewässerungsschwellenwert und den Status des Automatikmodus an das System sendet. Wenn die Bodenfeuchte unter den eingestellten Schwellenwert im Automatikmodus fällt, aktiviert das System die Wasserpumpe.</p>
+<section id="schaltung-aufbauen">
+<h2>1. Schaltung aufbauen<a class="headerlink" href="#schaltung-aufbauen" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Das ESP8266-Modul benötigt einen hohen Stromfluss für einen stabilen Betrieb. Stellen Sie daher sicher, dass die 9V-Batterie angeschlossen ist.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/07-Wiring_Auto_watering.png"><img alt="../_images/07-Wiring_Auto_watering.png" src="../_images/07-Wiring_Auto_watering.png" style="width: 100%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima-Platine</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/37-component_esp8266.html#cpn-esp8266"><span class="std std-ref">ESP8266-Modul</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/10-component_soil.html#cpn-soil"><span class="std std-ref">Kapazitives Bodenfeuchtigkeitsmodul</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/28-component_pump.html#cpn-pump"><span class="std std-ref">Kreiselpumpe</span></a></p></li>
+</ul>
+</section>
+<section id="blynk-konfigurieren">
+<h2>2. Blynk konfigurieren<a class="headerlink" href="#blynk-konfigurieren" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Wenn Sie mit Blynk noch nicht vertraut sind, empfehlen wir dringend, zunächst diese beiden Tutorials zu lesen. <a class="reference internal" href="blynk_start/00-blynk_start.html#iot-blynk-start"><span class="std std-ref">Einführung in Blynk</span></a> ist ein Einsteigerleitfaden zu Blynk, der auch die Konfiguration des ESP8266 und die Registrierung bei Blynk beinhaltet. <a class="reference internal" href="01-iot_Flame_alert_system.html#iot-flame"><span class="std std-ref">Flammenwarnsystem mit Blynk</span></a> ist ein einfaches Beispiel, aber die Schritterklärungen sind detaillierter.</p>
+</div>
+<section id="vorlage-erstellen">
+<h3><strong>2.1 Vorlage erstellen</strong><a class="headerlink" href="#vorlage-erstellen" title="Link to this heading"></a></h3>
+<p>Zuerst müssen wir eine Vorlage in Blynk erstellen. Legen Sie eine <strong>„Auto watering system“</strong> Vorlage an.</p>
+</section>
+<section id="datenstrome">
+<h3><strong>2.2 Datenströme</strong><a class="headerlink" href="#datenstrome" title="Link to this heading"></a></h3>
+<p>Erstellen Sie <strong>Datastreams</strong> vom Typ <strong>Virtual Pin</strong> auf der <strong>Datastreams</strong>-Seite, um Daten vom ESP8266 und dem Uno R4 Board zu empfangen.</p>
+<ul>
+<li><p>Virtuellen Pin V0 nach folgendem Schema erstellen:</p>
+<p>Benennen Sie den <strong>Virtual Pin V0</strong> in <strong>Moisture Percentage</strong> um. Setzen Sie den <strong>DATA TYPE</strong> auf <strong>Double</strong> und MIN und MAX auf <strong>0</strong> und <strong>100</strong>. Die <strong>UNITS</strong> sollen <strong>Percentage,%</strong> sein.</p>
+<a class="reference internal image-reference" href="../_images/07-datastream_1_shadow.png"><img alt="../_images/07-datastream_1_shadow.png" src="../_images/07-datastream_1_shadow.png" style="width: 90%;" /></a>
+</li>
+<li><p>Virtuellen Pin V1 nach folgendem Schema erstellen:</p>
+<p>Benennen Sie den <strong>Virtual Pin V1</strong> in <strong>Water Threshold</strong> um. Setzen Sie den <strong>DATA TYPE</strong> auf <strong>Double</strong> und MIN und MAX auf <strong>0</strong> und <strong>100</strong>. Die <strong>UNITS</strong> sollen <strong>Percentage,%</strong> sein.</p>
+<a class="reference internal image-reference" href="../_images/07-datastream_2_shadow.png"><img alt="../_images/07-datastream_2_shadow.png" src="../_images/07-datastream_2_shadow.png" style="width: 90%;" /></a>
+</li>
+<li><p>Virtuellen Pin V2 nach folgendem Schema erstellen:</p>
+<p>Benennen Sie den <strong>Virtual Pin V2</strong> in <strong>Auto Mode</strong> um. Setzen Sie den <strong>DATA TYPE</strong> auf <strong>Integer</strong> und MIN und MAX auf <strong>0</strong> und <strong>1</strong>.</p>
+<a class="reference internal image-reference" href="../_images/07-datastream_3_shadow.png"><img alt="../_images/07-datastream_3_shadow.png" src="../_images/07-datastream_3_shadow.png" style="width: 90%;" /></a>
+</li>
+</ul>
+</section>
+<section id="web-dashboard">
+<h3><strong>2.3 Web-Dashboard</strong><a class="headerlink" href="#web-dashboard" title="Link to this heading"></a></h3>
+<p>Wir müssen auch das <strong>Web-Dashboard</strong> konfigurieren, um mit dem automatischen Bewässerungssystem interagieren zu können.</p>
+<p>Richten Sie das Web-Dashboard entsprechend dem folgenden Schema ein. Wir verwenden Widgets wie Beschriftungen, Anzeigen, Schalter, Schieberegler und Diagramme. Achten Sie darauf, jedes Widget seinem entsprechenden virtuellen Pin zuzuordnen.</p>
+<a class="reference internal image-reference" href="../_images/07-web_dashboard_1_shadow.png"><img alt="../_images/07-web_dashboard_1_shadow.png" class="align-center" src="../_images/07-web_dashboard_1_shadow.png" style="width: 55%;" /></a>
+<br/></section>
+</section>
+<section id="den-code-ausfuhren">
+<h2>3. Den Code ausführen<a class="headerlink" href="#den-code-ausfuhren" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Öffnen Sie die Datei <code class="docutils literal notranslate"><span class="pre">07-Auto_watering_system.ino</span></code> im Pfad <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\iot_project\wifi\07-Auto_watering_system</span></code>, oder kopieren Sie diesen Code in die <strong>Arduino IDE</strong>.</p>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/5132407f-90f9-4a0d-8446-60af041d0d3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe></li>
+<li><p>Legen Sie ein Blynk-Gerät mit der Vorlage „Auto watering system“ an. Anschließend ersetzen Sie die Werte für <code class="docutils literal notranslate"><span class="pre">BLYNK_TEMPLATE_ID</span></code>, <code class="docutils literal notranslate"><span class="pre">BLYNK_TEMPLATE_NAME</span></code> und <code class="docutils literal notranslate"><span class="pre">BLYNK_AUTH_TOKEN</span></code> durch Ihre eigenen.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define BLYNK_TEMPLATE_ID "TMPxxxxxxx"</span>
+<span class="cp">#define BLYNK_TEMPLATE_NAME "Auto watering system"</span>
+<span class="cp">#define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxx"</span>
+</pre></div>
+</div>
+</li>
+<li><p>Sie müssen auch die <code class="docutils literal notranslate"><span class="pre">ssid</span></code> und das <code class="docutils literal notranslate"><span class="pre">Passwort</span></code> des von Ihnen verwendeten WLANs eingeben.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">char</span><span class="w"> </span><span class="n">ssid</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ihr_SSID"</span><span class="p">;</span>
+<span class="kr">char</span><span class="w"> </span><span class="n">pass</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ihr_Passwort"</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Nach der Auswahl des richtigen Boards und Ports klicken Sie auf den <strong>Hochladen</strong>-Button.</p></li>
+<li><p>Öffnen Sie den seriellen Monitor (Baudrate auf 115200 einstellen) und warten Sie auf eine Meldung, die eine erfolgreiche Verbindung anzeigt.</p>
+<a class="reference internal image-reference" href="../_images/02-ready_1_shadow.png"><img alt="../_images/02-ready_1_shadow.png" class="align-center" src="../_images/02-ready_1_shadow.png" style="width: 80%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Falls die Meldung <code class="docutils literal notranslate"><span class="pre">ESP</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">responding</span></code> erscheint, befolgen Sie bitte diese Schritte.</p>
+<ul class="simple">
+<li><p>Stellen Sie sicher, dass die 9V-Batterie angeschlossen ist.</p></li>
+<li><p>Setzen Sie das ESP8266-Modul zurück, indem Sie den Pin RST für 1 Sekunde mit GND verbinden und dann wieder trennen.</p></li>
+<li><p>Drücken Sie den Reset-Knopf auf dem R4-Board.</p></li>
+</ul>
+<p>Manchmal müssen Sie die oben genannten Schritte 3-5 Mal wiederholen. Bitte haben Sie Geduld.</p>
+</div>
+</li>
+</ol>
+</section>
+<section id="code-erlauterung">
+<h2>4. Code-Erläuterung<a class="headerlink" href="#code-erlauterung" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Einrichtung der Blynk-Cloud und Import der Bibliotheken</strong></p>
+<p>In diesen Zeilen werden die eindeutigen IDs und Tokens festgelegt, die zur Identifizierung und Authentifizierung Ihres Arduino-Geräts mit der Blynk-Cloud notwendig sind. Zusätzlich werden wichtige Bibliotheken für die Verwendung des ESP8266-WiFi-Moduls, Blynk-Funktionalitäten und Software-Serienschnittstelle eingebunden.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define BLYNK_TEMPLATE_ID "TMPLxxxxxx"</span>
+<span class="cp">#define BLYNK_TEMPLATE_NAME "Auto watering system"</span>
+<span class="cp">#define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxxxx"</span>
+<span class="cp">#define BLYNK_PRINT Serial</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ESP8266_Lib.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;BlynkSimpleShieldEsp8266.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SoftwareSerial.h&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>WiFi- und Hardware-Konfiguration</strong></p>
+<p>Hier werden die WLAN-Zugangsdaten (<code class="docutils literal notranslate"><span class="pre">ssid</span></code> und <code class="docutils literal notranslate"><span class="pre">pass</span></code>) definiert. Die Pins <code class="docutils literal notranslate"><span class="pre">2</span></code> (RX) und <code class="docutils literal notranslate"><span class="pre">3</span></code> (TX) sind für die Software-Serienschnittstelle zwischen dem Arduino und dem ESP8266 konfiguriert. Die Baudrate für diese Kommunikation ist auf <code class="docutils literal notranslate"><span class="pre">115200</span></code> festgelegt.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">char</span><span class="w"> </span><span class="n">ssid</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ihr_WLAN-Name"</span><span class="p">;</span>
+<span class="kr">char</span><span class="w"> </span><span class="n">pass</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ihr_Passwort"</span><span class="p">;</span>
+<span class="nf">SoftwareSerial</span><span class="w"> </span><span class="nf">EspSerial</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<span class="cp">#define ESP8266_BAUD 115200</span>
+<span class="n">ESP8266</span><span class="w"> </span><span class="nf">wifi</span><span class="p">(</span><span class="o">&amp;</span><span class="n">EspSerial</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Definition von Pins und globalen Variablen</strong></p>
+<p>Die Pins für die Steuerung der Wasserpumpe und des Bodenfeuchtesensors werden hier zusammen mit globalen Variablen für Sensorwerte, Schwellenwerte und Betriebsmodi festgelegt.</p>
+<p>Sie sollten Ihre eigenen Werte für <code class="docutils literal notranslate"><span class="pre">moistureInAir</span></code> und <code class="docutils literal notranslate"><span class="pre">moistureInWater</span></code> anhand Ihrer tatsächlichen Bedingungen messen. Um zu verhindern, dass der berechnete <code class="docutils literal notranslate"><span class="pre">moisturePercentage</span></code> den Bereich von 0-100% überschreitet, korrigieren Sie den Wert für <code class="docutils literal notranslate"><span class="pre">moistureInAir</span></code> nach oben und den Wert für <code class="docutils literal notranslate"><span class="pre">moistureInWater</span></code> nach unten, um für Sensorabweichungen zu kompensieren.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="c1">// Define pin configurations for the water pump</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">pump1A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">pump1B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="kr">bool</span><span class="w"> </span><span class="n">pumpStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 0 indicates OFF, 1 indicates ON</span>
+
+<span class="c1">// Define the soil moisture sensor</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">float</span><span class="w"> </span><span class="n">moistureInAir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">535</span><span class="p">;</span><span class="w">    </span><span class="c1">// Measure by placing the sensor in air</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">float</span><span class="w"> </span><span class="n">moistureInWater</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">280</span><span class="p">;</span><span class="w">  </span><span class="c1">// Measure by immersing the sensor in water</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">sensorPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A0</span><span class="p">;</span>
+<span class="kr">int</span><span class="w"> </span><span class="n">sensorValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// Stores the raw sensor value</span>
+
+<span class="kr">int</span><span class="w"> </span><span class="n">autoMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kr">int</span><span class="w"> </span><span class="n">waterThreshold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">        </span><span class="c1">// The soil moisture percentage threshold to activate watering</span>
+<span class="kr">float</span><span class="w"> </span><span class="n">moisturePercentage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// The calculated soil moisture percentage</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Anfangskonfigurationen in der setup()-Funktion</strong></p>
+<p>Hier werden zwei Timer konfiguriert:</p>
+<ul class="simple">
+<li><p>Mit <code class="docutils literal notranslate"><span class="pre">timer.setInterval(10000L,</span> <span class="pre">updateDataTimer)</span></code> wird das Zeitintervall für die Funktion <code class="docutils literal notranslate"><span class="pre">updateDataTimer()</span></code> auf alle <strong>10000ms</strong> eingestellt. Sie können den ersten Parameter anpassen, um das Intervall zwischen den Ausführungen von <code class="docutils literal notranslate"><span class="pre">updateDataTimer()</span></code> zu ändern.</p></li>
+<li><p>Mit <code class="docutils literal notranslate"><span class="pre">timer.setInterval(35000L,</span> <span class="pre">autoWaterTimer)</span></code> wird das Zeitintervall für die Funktion <code class="docutils literal notranslate"><span class="pre">autoWaterTimer()</span></code> auf alle <strong>35000ms</strong> eingestellt. Auch hier können Sie den ersten Parameter anpassen.</p></li>
+</ul>
+<br/><div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">pinMode</span><span class="p">(</span><span class="n">pump1A</span><span class="p">,</span><span class="w"> </span><span class="kr">OUTPUT</span><span class="p">);</span><span class="w">    </span><span class="c1">// set pump1A as output</span>
+<span class="w">  </span><span class="nf">pinMode</span><span class="p">(</span><span class="n">pump1B</span><span class="p">,</span><span class="w"> </span><span class="kr">OUTPUT</span><span class="p">);</span><span class="w">    </span><span class="c1">// set pump1B as output</span>
+<span class="w">  </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="n">pump1B</span><span class="p">,</span><span class="w"> </span><span class="kr">LOW</span><span class="p">);</span><span class="w">  </span><span class="c1">// Keep pump1B low</span>
+
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w">           </span><span class="c1">// Start serial communication at 115200 baud rate for debugging</span>
+<span class="w">  </span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">ESP8266_BAUD</span><span class="p">);</span><span class="w">  </span><span class="c1">// Set ESP8266 baud rate</span>
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Configure Blynk and connect to WiFi</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="nf">config</span><span class="p">(</span><span class="n">wifi</span><span class="p">,</span><span class="w"> </span><span class="n">BLYNK_AUTH_TOKEN</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">connectWiFi</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="n">pass</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Configure timer events</span>
+<span class="w">  </span><span class="n">timer</span><span class="p">.</span><span class="n">setInterval</span><span class="p">(</span><span class="mf">10000L</span><span class="p">,</span><span class="w"> </span><span class="n">updateDataTimer</span><span class="p">);</span><span class="w">  </span><span class="c1">// Update sensor data every 10 seconds</span>
+<span class="w">  </span><span class="n">timer</span><span class="p">.</span><span class="n">setInterval</span><span class="p">(</span><span class="mf">35000L</span><span class="p">,</span><span class="w"> </span><span class="n">autoWaterTimer</span><span class="p">);</span><span class="w">   </span><span class="c1">// Check watering conditions every 35 seconds</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>loop() Funktion</strong></p>
+<p>Diese kontinuierlich laufende Schleife ermöglicht es der Blynk-Bibliothek, nach Aktualisierungen zu suchen und die definierten Zeitereignisse zu verarbeiten.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">Blynk</span><span class="p">.</span><span class="nf">run</span><span class="p">();</span>
+<span class="w">   </span><span class="n">timer</span><span class="p">.</span><span class="nf">run</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Interaktion mit der Blynk-App</strong></p>
+<p>Diese Funktionen werden durch bestimmte Interaktionen mit der Blynk-App ausgelöst:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BLYNK_CONNECTED()</span></code>: Wird aufgerufen, wenn das Gerät eine Verbindung zu Blynk herstellt. Synchronisiert die Anfangszustände der virtuellen Pins.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BLYNK_WRITE(V1)</span></code>: Wird ausgelöst, wenn sich der virtuelle Pin 1 ändert (Wasserschwellwert).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BLYNK_WRITE(V2)</span></code>: Wird ausgelöst, wenn sich der virtuelle Pin 2 ändert (Automatik-Modus Status).</p></li>
+</ul>
+<br/><div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="c1">// This function is called every time the device is connected to the Blynk.Cloud</span>
+<span class="n">BLYNK_CONNECTED</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">syncVirtual</span><span class="p">(</span><span class="n">V1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Sync water threshold</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">syncVirtual</span><span class="p">(</span><span class="n">V2</span><span class="p">);</span><span class="w">  </span><span class="c1">// Sync auto mode status</span>
+<span class="p">}</span>
+
+<span class="c1">// This function is called every time the Virtual Pin 1 state changes</span>
+<span class="n">BLYNK_WRITE</span><span class="p">(</span><span class="n">V1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">waterThreshold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param</span><span class="p">.</span><span class="n">asInt</span><span class="p">();</span><span class="w">  </span><span class="c1">// Update watering threshold</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">"Received threshold.   waterThreshold:"</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">waterThreshold</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// This function is called every time the Virtual Pin 2 state changes</span>
+<span class="n">BLYNK_WRITE</span><span class="p">(</span><span class="n">V2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">autoMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param</span><span class="p">.</span><span class="n">asInt</span><span class="p">();</span><span class="w">  </span><span class="c1">// Update auto mode status</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">autoMode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"The switch on Blynk has been turned on."</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"The switch on Blynk has been turned off."</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Timer-Callbacks und automatische Bewässerungslogik</strong></p>
+<p>Diese Funktionen steuern die Aufgaben, die von den Timern ausgeführt werden:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">updateDataTimer()</span></code>: Ruft <code class="docutils literal notranslate"><span class="pre">sendData()</span></code> auf, um aktuelle Feuchtigkeitsdaten an Blynk zu senden.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoWaterTimer()</span></code>: Ruft <code class="docutils literal notranslate"><span class="pre">autoWater()</span></code> auf, um zu prüfen, ob Bewässerung erforderlich ist.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sendData()</span></code>: Berechnet den Bodenfeuchtigkeitsprozentsatz, protokolliert ihn und sendet ihn an die Blynk-App.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoWater()</span></code>: Überprüft, ob der Boden auf Basis des festgelegten Schwellwerts und des Automatik-Modus bewässert werden muss.</p></li>
+</ul>
+<br/><div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nf">updateDataTimer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">sendData</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nf">autoWaterTimer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">autoWater</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// Function to send sensor data to Blynk app</span>
+<span class="kr">void</span><span class="w"> </span><span class="nf">sendData</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Calculate soil moisture percentage</span>
+<span class="w">  </span><span class="n">sensorValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">analogRead</span><span class="p">(</span><span class="n">sensorPin</span><span class="p">);</span>
+<span class="w">  </span><span class="n">moisturePercentage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">sensorValue</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">moistureInWater</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">moistureInAir</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">moistureInWater</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"-----------------------------"</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"Update soil moisture data ..."</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">"sensorValue:"</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">sensorValue</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">"  moisturePercentage:"</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">moisturePercentage</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Send moisture percentage to Blynk app</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">virtualWrite</span><span class="p">(</span><span class="n">V0</span><span class="p">,</span><span class="w"> </span><span class="n">moisturePercentage</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Function to control automatic watering based on soil moisture and user settings</span>
+<span class="kr">void</span><span class="w"> </span><span class="nf">autoWater</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">autoMode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">moisturePercentage</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">waterThreshold</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">pumpStatus</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">turnOnPump</span><span class="p">();</span>
+<span class="w">      </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"-----------------------------"</span><span class="p">);</span>
+<span class="w">      </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"Watering..."</span><span class="p">);</span>
+
+<span class="w">      </span><span class="c1">// Turn off pump after 2 seconds</span>
+<span class="w">      </span><span class="n">timer</span><span class="p">.</span><span class="nf">setTimeout</span><span class="p">(</span><span class="mf">2000L</span><span class="p">,</span><span class="w"> </span><span class="n">turnOffPump</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Pumpensteuerungsfunktionen</strong></p>
+<p>These functions directly control the operation of the water pump:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">turnOnPump()</span></code>: Activates the pump.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">turnOffPump()</span></code>: Deactivates the pump.</p></li>
+</ul>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="c1">// Function to turn on the water pump</span>
+<span class="kr">void</span><span class="w"> </span><span class="nf">turnOnPump</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="n">pump1A</span><span class="p">,</span><span class="w"> </span><span class="kr">HIGH</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pumpStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Function to turn off the water pump</span>
+<span class="kr">void</span><span class="w"> </span><span class="nf">turnOffPump</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="n">pump1A</span><span class="p">,</span><span class="w"> </span><span class="kr">LOW</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pumpStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p><strong>Referenzen</strong></p>
+<ul class="simple">
+<li><p><a href="https://docs.blynk.io/" target="_blank">Blynk Dokumentation</a> </p></li>
+<li><p><a href="https://docs.blynk.io/en/blynk-library-firmware-api/blynk-timer" target="_blank">Blynk - Timers</a>  </p></li>
+<li><p><a href="https://docs.blynk.io/en/blynk-library-firmware-api/state-syncing#for-hardware" target="_blank">Blynk - State Syncing</a> </p></li>
+<li><p><a href="https://docs.blynk.io/en/getting-started/using-virtual-pins-to-control-physical-devices#the-blynk_write-vpin-function" target="_blank">Blynk - BLYNK_WRITE()</a>    </p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="06-iot_Remote_relay_controller.html" class="btn btn-neutral float-left" title="Ferngesteuerter Relais-Controller mit Blynk" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="04-iot_Vibration_alert_system.html" class="btn btn-neutral float-right" title="Vibrationserkennungssystem mit IFTTT" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

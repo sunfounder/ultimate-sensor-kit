@@ -1,0 +1,351 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bluetooth Sprachgesteuertes Relais &mdash; SunFounder Ultimate Sensor Kit  Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=245627df"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=70a09b52"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=2c65fa5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Spaßprojekte" href="../fun_project/fun_project.html" />
+    <link rel="prev" title="Bluetooth-Fernrelais" href="13-iot_Bluetooth_remote_relay.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">脺ber das Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Einstieg in Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Kurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Code herunterladen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">Grundlagen der Komponenten</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../iot_project.html">IoT-Projekte</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="00-iot_project_esp01.html">IoT-Projekte</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="blynk_start/00-blynk_start.html">Einführung in Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01-iot_Flame_alert_system.html">Flammenwarnsystem mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-iot_Intrusion_alert_system.html">Einbruchmeldeanlage mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03-iot_Plant_monitor.html">Pflanzenüberwachung mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06-iot_Remote_relay_controller.html">Ferngesteuerter Relais-Controller mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07-iot_Auto_watering_system.html">Automatisches Bewässerungssystem mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04-iot_Vibration_alert_system.html">Vibrationserkennungssystem mit IFTTT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05-iot_Weather_monitor.html">Wetterüberwachung mit ThingSpeak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="00-iot_bluetooth_start.html">Bluetooth-Einstieg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15-iot_Bluetooth_lcd.html">Bluetooth LCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16-iot_Bluetooth_traffic_light.html">Bluetooth-Ampel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08-iot_Bluetooth_lock_controller.html">Bluetooth-Schlosssteuerung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09-iot_Bluetooth_RGB_controller.html">Bluetooth RGB-Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-iot_Bluetooth_environmental_monitor.html">Bluetooth-Umweltmonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-iot_Bluetooth_piano.html">Bluetooth-Klavier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="12-iot_Bluetooth_oled.html">Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="13-iot_Bluetooth_remote_relay.html">Bluetooth-Fernrelais</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Bluetooth Sprachgesteuertes Relais</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#schaltung-aufbauen">1. Schaltung aufbauen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#android-app-erstellen">2. Android-App erstellen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#den-code-hochladen">3. Den Code hochladen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#verbindung-der-app-mit-dem-bluetooth-modul">4. Verbindung der App mit dem Bluetooth-Modul</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-erlauterung">5. Code-Erläuterung</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">Spaßprojekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Vielen Dank</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../iot_project.html">IoT-Projekte</a></li>
+          <li class="breadcrumb-item"><a href="00-iot_project_esp01.html">IoT-Projekte</a></li>
+      <li class="breadcrumb-item active">Bluetooth Sprachgesteuertes Relais</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs-de/docs/source/iot_project_esp01/14-iot_Bluetooth_voice_control_relay.rst" class="fa fa-github"> Auf GitHub bearbeiten</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Hallo und willkommen in der SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.</p>
+<p><strong>Warum beitreten?</strong></p>
+<ul class="simple">
+<li><p><strong>Expertenunterstützung</strong>: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.</p></li>
+<li><p><strong>Lernen &amp; Teilen</strong>: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.</p></li>
+<li><p><strong>Exklusive Vorschauen</strong>: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.</p></li>
+<li><p><strong>Spezialrabatte</strong>: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.</p></li>
+<li><p><strong>Festliche Aktionen und Gewinnspiele</strong>: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.</p></li>
+</ul>
+<p>👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [<a href="https://bit.ly/raphaelkit " target="_blank">hier</a>] und treten Sie heute bei!</p>
+</div>
+<section id="bluetooth-sprachgesteuertes-relais">
+<span id="iot-bluetooth-voice-control-relay"></span><h1>Bluetooth Sprachgesteuertes Relais<a class="headerlink" href="#bluetooth-sprachgesteuertes-relais" title="Link to this heading"></a></h1>
+<video controls style="max-width:100%">
+   <source src="../_static/video/iot/14-iot_Bluetooth_voice_control_relay.mp4" type="video/mp4">
+   Ihr Browser unterstützt das Video-Tag nicht.
+</video><p>Dieses Projekt kombiniert eine Android-App, die mit dem MIT App Inventor entwickelt wurde, mit einem Arduino Uno Board. Die App bietet eine Spracheingabefunktion. Wenn die Spracheingabe des Benutzers das Wort „an“ enthält, sendet die App eine „1“-Nachricht über Bluetooth an den Arduino, um das Relais einzuschalten. Enthält die Spracheingabe hingegen das Wort „aus“, wird eine „0“-Nachricht gesendet, die den Arduino anweist, das Relais auszuschalten. Nach Erhalt dieser Nachrichten verarbeitet der Arduino sie entsprechend und schaltet das Relais ein oder aus.</p>
+<p>Die Android-Anwendung wird mithilfe einer kostenlosen webbasierten Plattform namens <a href="http://appinventor.mit.edu/" target="_blank">MIT App Inventor</a> erstellt. Dieses Projekt bietet eine hervorragende Möglichkeit, sich mit der Schnittstelle zwischen einem Arduino und einem Smartphone vertraut zu machen.</p>
+<section id="schaltung-aufbauen">
+<h2>1. Schaltung aufbauen<a class="headerlink" href="#schaltung-aufbauen" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warnung</p>
+<p>Im folgenden Beispiel wird gezeigt, wie ein Relais zur Steuerung eines Verkehrslichtmoduls verwendet wird.
+<strong>Sie können das Relais in realen Anwendungen auch mit anderen Geräten verbinden. Dabei ist jedoch äußerste Vorsicht im Umgang mit HOHER Wechselspannung geboten. Unsachgemäße oder fehlerhafte Verwendung kann zu schweren Verletzungen oder gar zum Tod führen. Das Projekt ist daher nur für Personen geeignet, die sich mit HOHER Wechselspannung auskennen. Sicherheit hat immer Vorrang.</strong></p>
+</div>
+<a class="reference internal image-reference" href="../_images/14-Wiring_Bluetooth_voice_control_relay.png"><img alt="../_images/14-Wiring_Bluetooth_voice_control_relay.png" src="../_images/14-Wiring_Bluetooth_voice_control_relay.png" style="width: 75%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima-Platine</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/38-component_jdy31.html#cpn-jdy31"><span class="std std-ref">JDY-31 Bluetooth-Modul</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/25-component_relay.html#cpn-relay"><span class="std std-ref">5V-Relaismodul</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/23-component_traffic.html#cpn-traffic"><span class="std std-ref">Ampel-Modul</span></a></p></li>
+</ul>
+</section>
+<section id="android-app-erstellen">
+<h2>2. Android-App erstellen<a class="headerlink" href="#android-app-erstellen" title="Link to this heading"></a></h2>
+<p>Die Android-Anwendung wird mit einer kostenlosen Webanwendung namens <a href="http://appinventor.mit.edu/" target="_blank">MIT App Inventor</a> entwickelt.
+Der MIT App Inventor dient als hervorragender Einstieg in die Android-Entwicklung dank seiner intuitiven Drag-and-Drop-Funktionen, die die Erstellung einfacher Anwendungen ermöglichen.</p>
+<p>Jetzt geht’s los.</p>
+<ol class="arabic">
+<li><p>Öffnen Sie <a href="http://appinventor.mit.edu/explore/get-started" target="_blank">Get Started with MIT App Inventor</a> und klicken Sie auf „Online-Tool“, um sich anzumelden. Für die Registrierung bei MIT App Inventor benötigen Sie ein Google-Konto.</p>
+<a class="reference internal image-reference" href="../_images/09-ai_signup_shadow.png"><img alt="../_images/09-ai_signup_shadow.png" class="align-center" src="../_images/09-ai_signup_shadow.png" style="width: 90%;" /></a>
+</li>
+<li><p>Nach dem Login navigieren Sie zu <strong>Projects</strong> -&gt; <strong>Import project (.aia) from my computer</strong>. Laden Sie dann die <code class="docutils literal notranslate"><span class="pre">VoiceControl.aia</span></code>-Datei hoch, die im Pfad <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\iot_project\bluetooth\09-Bluetooth_voice_control_relay</span></code> zu finden ist.</p>
+<p>Hier können Sie auch direkt herunterladen: <a class="reference download internal" download="" href="../_downloads/25800237ab5d4ae1d5990c0d21f83a35/VoiceControl.aia"><code class="xref download docutils literal notranslate"><span class="pre">VoiceControl.aia</span></code></a></p>
+<img alt="../_images/09-ai_import_shadow.png" class="align-center" src="../_images/09-ai_import_shadow.png" />
+</li>
+<li><p>Nach dem Hochladen der <code class="docutils literal notranslate"><span class="pre">.aia</span></code>-Datei erscheint die Anwendung in der MIT App Inventor-Software. Dies ist eine vorkonfigurierte Vorlage, die Sie nach dem Kennenlernen des MIT App Inventors nach Ihren Wünschen anpassen können.</p></li>
+<li><p>Im MIT App Inventor gibt es zwei Hauptbereiche: den <strong>Designer</strong> und die <strong>Blocks</strong>. Sie können oben rechts auf der Seite zwischen diesen beiden Bereichen wechseln.</p>
+<img alt="../_images/09-ai_intro_1_shadow.png" src="../_images/09-ai_intro_1_shadow.png" />
+</li>
+<li><p>Der <strong>Designer</strong> ermöglicht Ihnen, Schaltflächen, Text, Bildschirme und das allgemeine Erscheinungsbild Ihrer Anwendung zu gestalten.</p>
+<img alt="../_images/14-ai_intro_2_shadow.png" src="../_images/14-ai_intro_2_shadow.png" />
+</li>
+<li><p>Als nächstes kommt der Bereich <strong>Blocks</strong>. Hier können Sie individuelle Funktionen für Ihre App erstellen und jedes Element auf der Benutzeroberfläche der App programmieren, um die gewünschten Funktionen zu erreichen.</p>
+<img alt="../_images/14-ai_intro_3_shadow.png" src="../_images/14-ai_intro_3_shadow.png" />
+<p>In diesem Projekt verwenden wir Englisch als Beispiel für die Spracherkennung. Wenn Sie eine Erkennung in einer anderen Sprache wünschen, müssen Sie den unten stehenden Codeblock anpassen und die APK selbst kompilieren.</p>
+<p>Zunächst müssen Sie <code class="docutils literal notranslate"><span class="pre">SpeechRecognizer1.Language</span></code> auf den <strong>Sprachcode</strong> der gewünschten Sprache setzen. Sprachen werden durch einen Sprachcode mit einer optionalen Regionskennung angegeben, wie zum Beispiel <code class="docutils literal notranslate"><span class="pre">en</span></code>, <code class="docutils literal notranslate"><span class="pre">de</span></code> oder <code class="docutils literal notranslate"><span class="pre">ja</span></code>. Der Sprachcode kann unter <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank">List of ISO 639-1 codes</a>   gefunden werden.</p>
+<a class="reference internal image-reference" href="../_images/14-ai_intro_3-1_shadow.png"><img alt="../_images/14-ai_intro_3-1_shadow.png" class="align-center" src="../_images/14-ai_intro_3-1_shadow.png" style="width: 80%;" /></a>
+<p>Danach müssen Sie die entsprechende Bedingung anpassen. Der durch den Pfeil im folgenden Bild gekennzeichnete Teil.</p>
+<a class="reference internal image-reference" href="../_images/14-ai_intro_3-2_shadow.png"><img alt="../_images/14-ai_intro_3-2_shadow.png" class="align-center" src="../_images/14-ai_intro_3-2_shadow.png" style="width: 80%;" /></a>
+</li>
+<li><p>Um die Anwendung auf einem Smartphone zu installieren, wechseln Sie zur Registerkarte <strong>Buildn</strong>.</p>
+<img alt="../_images/08-ai_intro_4_shadow.png" src="../_images/08-ai_intro_4_shadow.png" />
+<ul>
+<li><p>Sie können eine <code class="docutils literal notranslate"><span class="pre">.apk</span></code>-Datei generieren. Nachdem Sie diese Option ausgewählt haben, erscheint eine Seite, auf der Sie zwischen dem Herunterladen einer <code class="docutils literal notranslate"><span class="pre">.apk</span></code>-Datei oder dem Scannen eines QR-Codes für die Installation wählen können. Befolgen Sie die Installationsanleitung, um die Installation der Anwendung abzuschließen.</p>
+<p>Sie können auch unsere vorkompilierte APK hier herunterladen: <a class="reference download internal" download="" href="../_downloads/51430bae9e6b1ccf5e82701591caa8a7/VoiceControl.apk"><code class="xref download docutils literal notranslate"><span class="pre">VoiceControl.apk</span></code></a></p>
+</li>
+<li><p>Wenn Sie diese App im Google Play Store oder einem anderen App-Marktplatz veröffentlichen möchten, können Sie eine <code class="docutils literal notranslate"><span class="pre">.aab</span></code>-Datei generieren.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="den-code-hochladen">
+<h2>3. Den Code hochladen<a class="headerlink" href="#den-code-hochladen" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Öffnen Sie die Datei <code class="docutils literal notranslate"><span class="pre">09-Bluetooth_voice_control_relay.ino</span></code> im Verzeichnis <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\iot_project\bluetooth\09-Bluetooth_voice_control_relay</span></code> oder fügen Sie den Code in die <strong>Arduino IDE</strong> ein.</p>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/ab5f8fca-dd25-4e32-bf61-d5dc109bb6cd/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe></li>
+<li><p>Wählen Sie das passende Board und den entsprechenden Port aus und klicken Sie anschließend auf die Schaltfläche <strong>Hochladen</strong>.</p></li>
+<li><p>Öffnen Sie den Seriellen Monitor und setzen Sie die Baudrate auf <strong>9600</strong>, um Debug-Meldungen einzusehen.</p></li>
+</ol>
+</section>
+<section id="verbindung-der-app-mit-dem-bluetooth-modul">
+<h2>4. Verbindung der App mit dem Bluetooth-Modul<a class="headerlink" href="#verbindung-der-app-mit-dem-bluetooth-modul" title="Link to this heading"></a></h2>
+<p>Stellen Sie sicher, dass die zuvor erstellte App auf Ihrem Smartphone installiert ist.</p>
+<ol class="arabic">
+<li><p>Aktivieren Sie zunächst <strong>Bluetooth</strong> auf Ihrem Smartphone.</p>
+<a class="reference internal image-reference" href="../_images/09-app_1_shadow.png"><img alt="../_images/09-app_1_shadow.png" class="align-center" src="../_images/09-app_1_shadow.png" style="width: 60%;" /></a>
+</li>
+<li><p>Navigieren Sie zu den <strong>Bluetooth-Einstellungen</strong> auf Ihrem Smartphone und suchen Sie nach Gerätenamen wie <strong>JDY-31-SPP</strong>.</p>
+<a class="reference internal image-reference" href="../_images/09-app_2_shadow.png"><img alt="../_images/09-app_2_shadow.png" class="align-center" src="../_images/09-app_2_shadow.png" style="width: 60%;" /></a>
+</li>
+<li><p>Nach dem Anklicken bestätigen Sie die <strong>Kopplungsanfrage</strong> im aufpoppenden Fenster. Falls ein Kopplungscode erforderlich ist, geben Sie „1234“ ein.</p>
+<a class="reference internal image-reference" href="../_images/09-app_3_shadow.png"><img alt="../_images/09-app_3_shadow.png" class="align-center" src="../_images/09-app_3_shadow.png" style="width: 60%;" /></a>
+</li>
+<li><p>Öffnen Sie nun die frisch installierte <strong>Voice-Controlled Relay</strong>-App.</p>
+<a class="reference internal image-reference" href="../_images/14-app_4_shadow.png"><img alt="../_images/14-app_4_shadow.png" class="align-center" src="../_images/14-app_4_shadow.png" style="width: 25%;" /></a>
+</li>
+<li><p>In der App klicken Sie auf die Schaltfläche <strong>Connect</strong>, um die Verbindung zwischen der App und dem Bluetooth-Modul herzustellen.</p>
+<a class="reference internal image-reference" href="../_images/14-app_5_shadow.png"><img alt="../_images/14-app_5_shadow.png" class="align-center" src="../_images/14-app_5_shadow.png" style="width: 60%;" /></a>
+</li>
+<li><p>Diese Seite zeigt eine Liste aller gekoppelten Bluetooth-Geräte. Wählen Sie die Option <code class="docutils literal notranslate"><span class="pre">xx.xx.xx.xx.xx.xx</span> <span class="pre">JDY-31-SPP</span></code> aus der Liste. Der Gerätename wird neben der jeweiligen MAC-Adresse angezeigt.</p>
+<a class="reference internal image-reference" href="../_images/14-app_6_shadow.png"><img alt="../_images/14-app_6_shadow.png" class="align-center" src="../_images/14-app_6_shadow.png" style="width: 60%;" /></a>
+</li>
+<li><p>Sollten keine Geräte angezeigt werden, könnte dies daran liegen, dass der App die nötigen Berechtigungen fehlen. In diesem Fall müssen Sie die Einstellungen manuell anpassen.</p>
+<ul class="simple">
+<li><p>Um zur Seite <strong>App-Informationen</strong> zu gelangen, halten Sie das App-Symbol gedrückt und wählen es aus.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/14-app_8_shadow.png"><img alt="../_images/14-app_8_shadow.png" class="align-center" src="../_images/14-app_8_shadow.png" style="width: 60%;" /></a>
+<ul class="simple">
+<li><p>Navigieren Sie zur <strong>Berechtigungsseite</strong>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/08-app_9_shadow.png"><img alt="../_images/08-app_9_shadow.png" class="align-center" src="../_images/08-app_9_shadow.png" style="width: 60%;" /></a>
+<ul class="simple">
+<li><p>Aktivieren Sie unter <strong>Nahegelegene Geräte</strong> die Option <strong>Immer</strong>, damit die App nach Geräten in der Umgebung suchen kann.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/08-app_10_shadow.png"><img alt="../_images/08-app_10_shadow.png" class="align-center" src="../_images/08-app_10_shadow.png" style="width: 60%;" /></a>
+<ul class="simple">
+<li><p>Starten Sie die App neu und wiederholen Sie die Schritte 5 und 6 für eine erfolgreiche Bluetooth-Verbindung.</p></li>
+</ul>
+</li>
+<li><p>Nach erfolgreicher Verbindung gelangen Sie zur Hauptseite. Dort können Sie das Relais über die Schaltflächen „ON“ oder „OFF“ steuern.</p>
+<a class="reference internal image-reference" href="../_images/14-app_7_shadow.png"><img alt="../_images/14-app_7_shadow.png" class="align-center" src="../_images/14-app_7_shadow.png" style="width: 60%;" /></a>
+<p>Zwar können Sie das Relais auch mit kurzen Sprachbefehlen wie „on“ oder „off“ steuern, empfehlenswert sind jedoch vollständige Sätze wie „turn on the light“, um Fehlinterpretationen zu vermeiden.</p>
+<p>Die Spracherkennung basiert auf Googles Spracherkennungsmotor. Daher könnte es notwendig sein, <a href="https://play.google.com/store/apps/details?id=com.google.android.tts" target="_blank">Speech Recognition & Synthesis</a>   im Voraus zu installieren. Bei den meisten Android-Smartphones ist diese Funktion jedoch bereits vorinstalliert.</p>
+<a class="reference internal image-reference" href="../_images/14-app_7-1_shadow.png"><img alt="../_images/14-app_7-1_shadow.png" class="align-center" src="../_images/14-app_7-1_shadow.png" style="width: 60%;" /></a>
+</li>
+</ol>
+</section>
+<section id="code-erlauterung">
+<h2>5. Code-Erläuterung<a class="headerlink" href="#code-erlauterung" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Kommunikation mit dem Bluetooth-Modul einrichten</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SoftwareSerial.h&gt;</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">bluetoothTx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">                           </span><span class="c1">// bluetooth tx to 3 pin</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">bluetoothRx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">                           </span><span class="c1">// bluetooth rx to 4 pin</span>
+<span class="nf">SoftwareSerial</span><span class="w"> </span><span class="nf">bleSerial</span><span class="p">(</span><span class="n">bluetoothTx</span><span class="p">,</span><span class="w"> </span><span class="n">bluetoothRx</span><span class="p">);</span><span class="w">  </span><span class="c1">// Declare SoftwareSerial object for Bluetooth communication</span>
+</pre></div>
+</div>
+<p>Dieser Abschnitt initialisiert die Bluetooth-Kommunikation mit Hilfe der SoftwareSerial-Bibliothek. Diese Bibliothek ermöglicht dem Arduino, einen zusätzlichen seriellen Port zu nutzen. Der „TX“-Pin des Bluetooth-Moduls ist mit Pin 3 und der „RX“-Pin mit Pin 4 des Arduino verbunden.</p>
+</li>
+<li><p>Variablen und Steuer-Pin für das Relais definieren</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">char</span><span class="w"> </span><span class="n">character</span><span class="p">;</span><span class="w">  </span><span class="c1">// Character received from Bluetooth serial</span>
+<span class="kr">String</span><span class="w"> </span><span class="n">message</span><span class="p">;</span><span class="w">  </span><span class="c1">// Stores the complete message from Bluetooth</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">relayPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>In diesem Abschnitt deklarieren wir Variablen, um einzelne Zeichen (<code class="docutils literal notranslate"><span class="pre">character</span></code>) und die komplette Nachricht (<code class="docutils literal notranslate"><span class="pre">message</span></code>) vom Bluetooth zu speichern. Der <code class="docutils literal notranslate"><span class="pre">relayPin</span></code> wird auf Pin 8 initialisiert, der zur Steuerung des Relais verwendet wird.</p>
+</li>
+<li><p>Serielle Kommunikation initialisieren und den Modus des Relais-Pins festlegen</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="w">  </span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">pinMode</span><span class="p">(</span><span class="n">relayPin</span><span class="p">,</span><span class="w"> </span><span class="kr">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In der <code class="docutils literal notranslate"><span class="pre">setup()</span></code>-Funktion initialisieren wir den Standard-Seriell-Port und den Bluetooth-Seriell-Port mit einer Baudrate von 9600. Zudem setzen wir den <code class="docutils literal notranslate"><span class="pre">relayPin</span></code> als Ausgang.</p>
+</li>
+<li><p>Bluetooth-Nachrichten lesen und das Relais steuern</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">available</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">character</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">read</span><span class="p">();</span>
+<span class="w">    </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">character</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">'#'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">      </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">();</span>
+<span class="w">      </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">"DEBUG:"</span><span class="p">);</span>
+<span class="w">      </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"1"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="n">relayPin</span><span class="p">,</span><span class="w"> </span><span class="kr">HIGH</span><span class="p">);</span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"On"</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"0"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="n">relayPin</span><span class="p">,</span><span class="w"> </span><span class="kr">LOW</span><span class="p">);</span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"Off"</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">;</span>
+<span class="w">      </span><span class="nf">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Die <code class="docutils literal notranslate"><span class="pre">loop()</span></code>-Funktion überprüft kontinuierlich auf eingehende Nachrichten von Bluetooth. Bei Erhalt einer Nachricht wird jedes Zeichen zur <code class="docutils literal notranslate"><span class="pre">message</span></code>-Zeichenfolge hinzugefügt. Sobald das Zeichen <code class="docutils literal notranslate"><span class="pre">#</span></code> erkannt wird, gilt die Nachricht als vollständig. Wir entfernen dann das <code class="docutils literal notranslate"><span class="pre">#</span></code>, geben eine Debug-Nachricht aus und prüfen den Inhalt. Wenn dieser „1“ lautet, wird das Relais eingeschaltet; bei „0“ wird es ausgeschaltet. Anschließend wird die <code class="docutils literal notranslate"><span class="pre">message</span></code>-Zeichenfolge geleert und kurz gewartet, bevor nach der nächsten Nachricht gesucht wird.</p>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="13-iot_Bluetooth_remote_relay.html" class="btn btn-neutral float-left" title="Bluetooth-Fernrelais" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="../fun_project/fun_project.html" class="btn btn-neutral float-right" title="Spaßprojekte" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

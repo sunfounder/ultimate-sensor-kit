@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/components_basic/25-component_relay.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:18
+msgid "5V Relay Module"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:29
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:30
+msgid "5V relay modules are devices that can switch high voltage or high current devices on and off using a 5V signal from Arduino. They can be used to control devices such as lights, fans, motors, solenoids, etc. 5V relay has three high voltage terminals (NC, C, and NO) which connect to the device you want to control. The other side has three low voltage pins (Ground, Vcc, and Signal) which connect to the Arduino."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:34
+msgid "Principle"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:35
+msgid "A relay is a device which is used to provide connection between two or more points or devices in response to the input signal applied. In other words, relays provide isolation between the controller and devices, which may operate on either AC or DC. However, they receive signals from a microcontroller which works on DC hence requiring a relay to bridge the gap. Relay is extremely useful when you need to control a large amount of current or voltage with small electrical signal."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:37
+msgid "There are 5 parts in every relay:"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:43
+msgid "Electromagnet - It consists of an iron core wounded by coil of wires. When electricity is passed through, it becomes magnetic. Therefore, it is called electromagnet."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:45
+msgid "Armature - The movable magnetic strip is known as armature. When current flows through them, the coil gets energized thus producing a magnetic field which is used to make or break the normally open (N/O) or normally close (N/C) points. And the armature can be moved with direct current (DC) as well as alternating current (AC)."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:47
+msgid "Spring - When no currents flow through the coil on the electromagnet, the spring pulls the armature away so the circuit cannot be completed."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:49
+msgid "Set of electrical contacts - There are two contact points:"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:51
+msgid "Normally open - connected when the relay is activated, and disconnected when it is inactive."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:52
+msgid "Normally closed - not connected when the relay is activated, and connected when it is inactive."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:54
+msgid "Molded frame - This is typically made of plastic and provides structural support and protection for the relay."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:56
+msgid "The working principle of relay is simple. When power is supplied to the relay, currents start flowing through the control coil; as a result, the electromagnet starts energizing. Then the armature is attracted to the coil, pulling down the moving contact together thus connecting with the normally open contacts. So the circuit with the load is energized. Then breaking the circuit would be a similar case, as the moving contact will be pulled up to the normally closed contacts under the force of the spring. In this way, the switching on and off of the relay can control the state of a load circuit."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:59
+msgid "Module Schematic Diagram"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:70
+msgid "Usage"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:72
+msgid "**Hardware components**"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:74
+msgid "Arduino Uno R4 or R3 board * 1"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:75
+msgid "5V Relay Module * 1"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:76
+msgid "Jumper Wires"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:78
+msgid "**Circuit Assembly**"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:89
+msgid "The following example demonstrates using a relay to control an LED module. **While you can connect the relay to other appliances in actual applications, extreme caution is required when dealing with HIGH AC voltage. Improper or incorrect use can lead to severe injury or even death. Therefore, it is intended for people who are familiar with and knowledgeable about HIGH AC voltage. Always prioritize safety.**"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:93
+msgid "Code"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:109
+msgid "Code explanation"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:111
+msgid "Setting up the relay pin: - The relay module is connected to pin 6 of the Arduino. This pin is defined as ``relayPin`` for ease of reference in the code."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:118
+msgid "Configuring the relay pin as an output: - In the ``setup()`` function, the relay pin is set as an OUTPUT using the ``pinMode()`` function. This means the Arduino will send signals (either HIGH or LOW) to this pin."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:127
+msgid "Toggling the relay ON and OFF: - In the ``loop()`` function, the relay is first set to the OFF state using ``digitalWrite(relayPin, LOW)``. It remains in this state for 3 seconds (``delay(3000)``). - Then, the relay is set to the ON state using ``digitalWrite(relayPin, HIGH)``. Again, it remains in this state for 3 seconds. - This cycle repeats indefinitely."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:143
+msgid "Additional Ideas"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:145
+msgid "Introduce a physical button to manually control the relay's state."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:147
+msgid "Integrate sensors (like a temperature or light sensor) to trigger the relay based on environmental conditions."
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:150
+msgid "More Projects"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:151
+msgid ":ref:`fun_light_control_switch`"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:152
+msgid ":ref:`fun_motion_triggered_relay`"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:153
+msgid ":ref:`iot_Remote_relay_controller`"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:154
+msgid ":ref:`iot_Bluetooth_remote_relay`"
+msgstr ""
+
+#: ../../source/components_basic/25-component_relay.rst:155
+msgid ":ref:`iot_Bluetooth_voice_control_relay`"
+msgstr ""

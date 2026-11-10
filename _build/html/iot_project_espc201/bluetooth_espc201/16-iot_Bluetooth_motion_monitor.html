@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>16. Bluetooth Motion Monitor &mdash; SunFounder Ultimate Sensor Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../../_static/./lang.js?v=6e75df5d"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Fun Projects" href="../../fun_project/fun_project.html" />
+    <link rel="prev" title="15. Bluetooth Remote Relay" href="15-iot_Bluetooth_remote_relay.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">About Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_start/00_get_start.html">Get Started with Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_video_course/arduino_video_course.html">Arduino Video Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download_code.html">Download the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components_basic/00-component_list.html">Component Basics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../iot_project.html">IoT Projects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../iot_project_esp01/00-iot_project_esp01.html">IoT Projects with ESP01 &amp; Bluetooth Module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../iot_project_espc201.html">IoT Projects with ESPC201</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/00-blynk_start.html">Get Started with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/01-iot_Flame_alert_system.html">1. Flame Alert System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/02-iot_Intrusion_alert_system.html">2. Intrusion Alert System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/03-iot_Plant_monitor.html">3. Plant Monitor with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/04-iot_Vibration_alert_system.html">4. Vibration Alert System with IFTTT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/05-iot_Weather_monitor.html">5. Weather Monitor with ThingSpeak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/06-iot_Remote_relay_controller.html">6. Remote Relay Controller with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/07-iot_Auto_watering_system.html">7. Auto Watering System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="00-iot_bluetooth_start.html">Get Started with Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08-iot_Bluetooth_lcd.html">8. Bluetooth LCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09-iot_Bluetooth_traffic_light.html">9. Bluetooth Traffic Light</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-iot_Bluetooth_environmental_monitor.html">10. Bluetooth Environmental Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-iot_Bluetooth_lock_controller.html">11. Bluetooth Lock Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="12-iot_Bluetooth_RGB_controller.html">12. Bluetooth RGB Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="13-iot_Bluetooth_piano.html">13. Bluetooth Piano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14-iot_Bluetooth_oled.html">14. Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15-iot_Bluetooth_remote_relay.html">15. Bluetooth Remote Relay</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">16. Bluetooth Motion Monitor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#build-the-circuit">1. Build the Circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#upload-the-code">2. Upload the Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#watch-and-control-at-the-same-time">3. Watch and Control at the Same Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-explanation">4. Code explanation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../fun_project/fun_project.html">Fun Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thank-learning.html">Thank You</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../iot_project.html">IoT Projects</a></li>
+          <li class="breadcrumb-item"><a href="../iot_project_espc201.html">IoT Projects with ESPC201</a></li>
+      <li class="breadcrumb-item active">16. Bluetooth Motion Monitor</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs/docs/source/iot_project_espc201/bluetooth_espc201/16-iot_Bluetooth_motion_monitor.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hello, welcome to the SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.</p>
+<p><strong>Why Join?</strong></p>
+<ul class="simple">
+<li><p><strong>Expert Support</strong>: Solve real-life coding problems and technical challenges with our community and team.</p></li>
+<li><p><strong>Learn &amp; Share</strong>: Exchange tips, tutorials, and projects to enhance your skills.</p></li>
+<li><p><strong>Exclusive Previews</strong>: Get early access to new product announcements and sneak peeks.</p></li>
+<li><p><strong>Festive Promotions and Giveaways</strong>: Take part in giveaways and holiday promotions.</p></li>
+</ul>
+<p>👉 Ready to explore and create with us? Click [<a href="https://bit.ly/raphaelkit " target="_blank">here</a>] and join today!</p>
+</div>
+<section id="bluetooth-motion-monitor">
+<span id="c201-iot-bluetooth-motion-monitor"></span><h1>16. Bluetooth Motion Monitor<a class="headerlink" href="#bluetooth-motion-monitor" title="Link to this heading"></a></h1>
+<p>This last project is the only one that talks <strong>both ways at the same time</strong>.</p>
+<ul class="simple">
+<li><p>The board streams the tilt of an <strong>MPU6050</strong> to the phone - a notification on <strong>C305</strong>,
+twice per second.</p></li>
+<li><p>The phone can <strong>stop and restart</strong> that stream by writing <code class="docutils literal notranslate"><span class="pre">P</span></code> or <code class="docutils literal notranslate"><span class="pre">S</span></code> to <strong>C304</strong>.</p></li>
+</ul>
+<p>Every other chapter used one direction only. Here you watch both, and you can see the
+difference between the two characteristics clearly: one carries data <strong>to</strong> you, the other
+carries your command <strong>back</strong>.</p>
+<section id="build-the-circuit">
+<h2>1. Build the Circuit<a class="headerlink" href="#build-the-circuit" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The module draws a high current at start-up, so make sure the 9 V battery or an external power supply is plugged into the DC jack of the R4 Minima.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/16-Wiring_Bluetooth_motion_monitor.png"><img alt="../../_images/16-Wiring_Bluetooth_motion_monitor.png" src="../../_images/16-Wiring_Bluetooth_motion_monitor.png" style="width: 80%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima Board</span></a></p></li>
+<li><p><a class="reference internal" href="../../components_basic/41-component_espc201.html#cpn-espc201"><span class="std std-ref">ESPC2-01 Module</span></a></p></li>
+<li><p><a class="reference internal" href="../../components_basic/05-component_mpu6050.html#cpn-mpu6050"><span class="std std-ref">Accelerometer &amp; Gyroscope Module (MPU6050)</span></a></p></li>
+</ul>
+</section>
+<section id="upload-the-code">
+<h2>2. Upload the Code<a class="headerlink" href="#upload-the-code" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">16-Bluetooth_motion_monitor.ino</span></code> file under the path of <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\code\iot_project_espc201\bluetooth\16-Bluetooth_motion_monitor</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Install <strong>Adafruit MPU6050</strong> and <strong>Adafruit Unified Sensor</strong> from the Library Manager.</p>
+</div>
+</li>
+<li><p>Select <strong>Arduino UNO R4 Minima</strong> and the right port, then click <strong>Upload</strong>.</p></li>
+<li><p>Open the Serial Monitor at <strong>115200</strong>. You should read:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=== ESPC2-01 Bluetooth (BLE) ===
+[OK] BLE is ready - scan for "SunFounder-C2" on your phone
+--------------------------------
+[OK] MPU6050 is ready
+Keep the board flat and still - measuring the zero point ...
+zero: X=-1.0 Y=-3.0
+Send S on C304 to start, P to pause
+</pre></div>
+</div>
+<p>If you read <code class="docutils literal notranslate"><span class="pre">[!]</span> <span class="pre">no</span> <span class="pre">MPU6050</span> <span class="pre">found</span></code>, the sensor is not answering on A4/A5 - check SDA,
+SCL, VCC and GND before going any further.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Leave the board flat and still while it powers up.</strong> The sketch takes ten readings
+in the first second and stores that position as the zero point, so a board lying on
+the table shows <code class="docutils literal notranslate"><span class="pre">X:0.0</span> <span class="pre">Y:0.0</span></code> instead of the few degrees that every sensor has of
+its own. The two numbers printed on the <code class="docutils literal notranslate"><span class="pre">zero:</span></code> line are what it measured.</p>
+</div>
+</li>
+</ol>
+</section>
+<section id="watch-and-control-at-the-same-time">
+<h2>3. Watch and Control at the Same Time<a class="headerlink" href="#watch-and-control-at-the-same-time" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Open LightBlue, tap <strong>Scan</strong> and connect to <strong>SunFounder-C2</strong>.</p></li>
+<li><p>Expand the service <strong>0xA002</strong> and open the characteristic <strong>C305</strong>, then tap
+<strong>Subscribe</strong>. Lines start to arrive twice per second:</p>
+<a class="reference internal image-reference" href="../../_images/ble_lightblue_subs.png"><img alt="../../_images/ble_lightblue_subs.png" src="../../_images/ble_lightblue_subs.png" style="width: 80%;" /></a>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>X:1.2 Y:-0.4
+X:8.7 Y:-3.1
+</pre></div>
+</div>
+<p><strong>The numbers are degrees.</strong> <code class="docutils literal notranslate"><span class="pre">0</span></code> means the board lies flat, <code class="docutils literal notranslate"><span class="pre">90</span></code> means it stands on
+its edge, and the sign tells you which way it leans.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 82%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>What it is</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">X</span></code></p></td>
+<td><p>tilt <strong>around the X axis</strong> - the board leans left or right</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Y</span></code></p></td>
+<td><p>tilt <strong>around the Y axis</strong> - the board leans forward or backward</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On a real board you will see <code class="docutils literal notranslate"><span class="pre">X:-1.0</span> <span class="pre">Y:-3.0</span></code> rather than <code class="docutils literal notranslate"><span class="pre">0.0</span> <span class="pre">0.0</span></code>. That is not
+a fault: every MPU6050 is soldered at a very small angle and has a small offset of
+its own. A few degrees while lying flat is normal, and it does not change what you
+see when you tilt the board.</p>
+<p>Close to vertical the two numbers influence each other a little - tilt towards
+<code class="docutils literal notranslate"><span class="pre">Y:80</span></code> and <code class="docutils literal notranslate"><span class="pre">X</span></code> starts to move as well. That is how this kind of angle is
+calculated, not a wiring problem.</p>
+</div>
+</li>
+<li><p>Now go back to the service list and open <strong>C304</strong>. Write <code class="docutils literal notranslate"><span class="pre">P</span></code> - the stream stops at
+once and the Serial Monitor prints <code class="docutils literal notranslate"><span class="pre">Streaming</span> <span class="pre">paused</span></code>.</p>
+<a class="reference internal image-reference" href="../../_images/ble_lightblue_write.png"><img alt="../../_images/ble_lightblue_write.png" src="../../_images/ble_lightblue_write.png" style="width: 80%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the interesting part: <strong>the subscription on C305 is still open</strong>, but nothing
+arrives any more, because the board stopped sending. Data only flows when the sketch
+decides to send it.</p>
+</div>
+</li>
+<li><p>Write <code class="docutils literal notranslate"><span class="pre">S</span></code> to start again - the lines come back.</p></li>
+</ol>
+</section>
+<section id="code-explanation">
+<h2>4. Code explanation<a class="headerlink" href="#code-explanation" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Two directions in one loop</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">available</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">          </span><span class="c1">// phone -&gt; board</span>
+<span class="w">  </span><span class="kr">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kr">char</span><span class="p">)</span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">read</span><span class="p">();</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">'S'</span><span class="p">)</span><span class="w"> </span><span class="n">streaming</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">true</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">'P'</span><span class="p">)</span><span class="w"> </span><span class="n">streaming</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">streaming</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nf">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">lastSend</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">interval</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// board -&gt; phone</span>
+<span class="w">  </span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="nf">line</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The first block <strong>reads</strong>, the second <strong>writes</strong>. Both run in the same <code class="docutils literal notranslate"><span class="pre">loop()</span></code> and
+neither blocks the other - that is why the stream keeps flowing while the phone can
+still send a command at any moment.</p>
+</li>
+<li><p><strong>Tilt instead of raw acceleration</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">float</span><span class="w"> </span><span class="n">tiltX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atan2</span><span class="p">(</span><span class="n">ay</span><span class="p">,</span><span class="w"> </span><span class="n">az</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">180.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">PI</span><span class="p">;</span>
+<span class="kr">float</span><span class="w"> </span><span class="n">tiltY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atan2</span><span class="p">(</span><span class="o">-</span><span class="n">ax</span><span class="p">,</span><span class="w"> </span><span class="nf">sqrt</span><span class="p">(</span><span class="n">ay</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ay</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">az</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">az</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">180.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">PI</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The sensor reports acceleration in <code class="docutils literal notranslate"><span class="pre">m/s^2</span></code>, which is hard to read. <code class="docutils literal notranslate"><span class="pre">atan2</span></code> turns it
+into an angle in degrees: <code class="docutils literal notranslate"><span class="pre">0</span></code> flat, <code class="docutils literal notranslate"><span class="pre">90</span></code> standing on its side.</p>
+</li>
+<li><p><strong>The zero point</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">float</span><span class="w"> </span><span class="n">sumX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">sumY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">float</span><span class="w"> </span><span class="n">tx</span><span class="p">,</span><span class="w"> </span><span class="n">ty</span><span class="p">;</span>
+<span class="w">  </span><span class="n">readTilt</span><span class="p">(</span><span class="n">tx</span><span class="p">,</span><span class="w"> </span><span class="n">ty</span><span class="p">);</span>
+<span class="w">  </span><span class="n">sumX</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">tx</span><span class="p">;</span>
+<span class="w">  </span><span class="n">sumY</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">ty</span><span class="p">;</span>
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">zeroX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumX</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">10.0</span><span class="p">;</span>
+<span class="n">zeroY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumY</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">10.0</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Ten readings are averaged because a single one jumps around by a degree or two. The
+average is then subtracted from every later reading:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">float</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tiltX</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zeroX</span><span class="p">;</span>
+<span class="kr">float</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tiltY</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zeroY</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Without this step a board lying flat would show <code class="docutils literal notranslate"><span class="pre">X:-1.0</span> <span class="pre">Y:-3.0</span></code> and a student would
+think something is wrong. With it, <code class="docutils literal notranslate"><span class="pre">0.0</span></code> really means flat - and that is also how a
+real product does it (usually with a button to re-zero whenever you like).</p>
+</li>
+<li><p><strong>Half a second between lines</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span><span class="w"> </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">long</span><span class="w"> </span><span class="n">interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">streaming</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nf">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">lastSend</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">interval</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>BLE cannot carry an endless stream; a line every 500 ms is smooth on screen and still
+leaves the module time for the command channel. Sending every loop would flood the
+buffer and make <code class="docutils literal notranslate"><span class="pre">P</span></code> arrive late.</p>
+</li>
+<li><p><strong>Why the pause is a flag and not a stop</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">bool</span><span class="w"> </span><span class="n">streaming</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">true</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Nothing in the BLE connection is closed when you send <code class="docutils literal notranslate"><span class="pre">P</span></code> - the sketch simply stops
+writing. The connection, the subscription and the characteristic all stay alive, which
+is why <code class="docutils literal notranslate"><span class="pre">S</span></code> works instantly afterwards.</p>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="15-iot_Bluetooth_remote_relay.html" class="btn btn-neutral float-left" title="15. Bluetooth Remote Relay" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../fun_project/fun_project.html" class="btn btn-neutral float-right" title="Fun Projects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

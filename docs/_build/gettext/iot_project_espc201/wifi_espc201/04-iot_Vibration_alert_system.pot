@@ -1,0 +1,325 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:4
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:6
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:8
+msgid "**Expert Support**: Solve real-life coding problems and technical challenges with our community and team."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:9
+msgid "**Learn & Share**: Exchange tips, tutorials, and projects to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:10
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:18
+msgid "4. Vibration Alert System with IFTTT"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:27
+msgid "A vibration switch (SW-420) sits on the desk. When the desk is knocked, the board tells IFTTT what happened, and IFTTT sends you an email."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:30
+msgid "This project does **not** use Blynk. It sends a plain HTTP request straight to IFTTT, so you can see what the module really does with an AT command such as ``AT+CIPSEND`` - the same thing your browser does when you open a web page."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:34
+msgid "To keep your inbox calm, two alerts are always at least **two minutes** apart."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:38
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:42
+msgid "The module draws a high current at start-up, so make sure the 9 V battery or an external power supply is plugged into the DC jack of the R4 Minima."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:49
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:50
+msgid ":ref:`cpn_espc201`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:51
+msgid ":ref:`cpn_vibration`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:55
+msgid "2. Configure IFTTT"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:57
+msgid "|link_ifttt| is a free service that connects apps together with a simple rule:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:59
+msgid "> **If This happens, Then That happens.**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:61
+msgid "Here we need two parts:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:63
+msgid "**If This** - someone shakes the sensor. IFTTT gives us a private web address that we can call from the board."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:65
+msgid "**Then That** - send an email. That is the action."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:74
+msgid "**2.1 Sign up for IFTTT**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:76
+msgid "Open https://ifttt.com in your browser and click **Start building**. Fill in the form to create an account."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:83
+msgid "Click **start building**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:89
+msgid "Choose the **Classic** mode."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:97
+msgid "**2.2 If This - the trigger**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:99
+msgid "Click **Add** next to **If This**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:105
+msgid "Search for **webhook** and click **Webhooks**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:111
+msgid "Click **Receive a web request**. This is the service the board will call."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:117
+msgid "Set the **Event Name** to **vibration_detected**, then click **Create trigger**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:121
+msgid "This name becomes part of the address, so it has to match the ``URL`` in the sketch. If you use another name here, change it there too."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:130
+msgid "**2.3 Then That - the action**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:132
+msgid "Click **Add** next to **Then That** to add an action."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:138
+msgid "Search for **email** and click **Email**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:144
+msgid "Click **Send me an email**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:150
+msgid "Write the subject and the body of the email."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:152
+msgid "For example:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:154
+msgid "**Subject**: ``Detected vibration!!!``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:155
+msgid "**Body**: ``Detected vibration, please confirm the situation promptly! {{OccurredAt}}``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:157
+msgid "``{{OccurredAt}}`` is replaced by IFTTT with the exact time the event happened, which is handy when you look at the mail the next morning."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:164
+msgid "Finish the wizard by following the screens below."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:175
+msgid "3. Run the Code"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:177
+msgid "Open the ``04-Vibration_alert_system.ino`` file under the path of ``ultimate-sensor-kit\\code\\iot_project_espc201\\wifi\\04-Vibration_alert_system``, or copy this code into **Arduino IDE**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:180
+msgid "Type the name and password of your own Wi-Fi network."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:187
+msgid "Open the **My Applets** page of IFTTT and click the applet you just created."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:192
+msgid "Copy your webhook URL."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:199
+msgid "Paste the whole address IFTTT shows you into ``URL`` - **https:// and all**, exactly as you copied it."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:206
+msgid "You do not have to cut anything off. The sketch keeps only the part after the host name before it sends the request, because the module talks plain TCP to port 80."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:211
+msgid "Select **Arduino UNO R4 Minima** and the right port, then click **Upload**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:213
+msgid "Open the Serial Monitor at **115200**. After a few seconds you should read:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:222
+msgid "If it says ``FAILED (check ssid and password)``, the board cannot join your network - check the Wi-Fi name and password, and remember that the ESPC2-01 only works on **2.4 GHz** networks."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:230
+msgid "Tap the sensor. The monitor answers with"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:240
+msgid "and an email arrives within a few seconds."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:244
+msgid "Knock it twice in a row: the second time only prints ``An alert was sent recently, so this one is skipped.`` That is the two-minute rule at work, not a fault."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:249
+msgid "4. Code explanation"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:251
+msgid "**The serial port that talks to the module**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:253
+msgid "The ESPC2-01 is not running this sketch - it works as a modem. The board sends it AT commands on D0/D1, which is ``Serial1``, a hardware port, so 115200 works without bit errors."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:261
+msgid "**What you have to fill in**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:272
+msgid "You copy the address the way IFTTT shows it, **https:// and all**, and the sketch converts it:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:285
+msgid "``myHOST`` and ``myPORT`` never change: IFTTT always answers on port 80 of ``maker.ifttt.com``. Only the path is personal, because it carries your key."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:290
+msgid "Why not send ``https://`` straight to the module? HTTPS means TLS: the module would have to open a secure connection with certificates, which is a much longer AT sequence. IFTTT accepts the same request on plain **port 80**, so the short way is enough here."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:294
+msgid "**Vibration pin and the two-minute rule**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:303
+msgid "The SW-420 gives a simple level: it goes **HIGH while it shakes**. Without the two-minute rule a single knock would fire dozens of emails."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:306
+msgid "**espModuleInit() - wake the module up first**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:308
+msgid "The module needs about a second to boot and prints its start-up log on the same wire. This function waits for the word ``ready`` and then sends ``ATE0`` so the replies stop carrying a copy of the command you just sent."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:330
+msgid "The ``buf.length() < 512`` guard matters: without it a module that keeps talking would keep the inner loop busy for ever and the sketch would never reach ``setup()``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:333
+msgid "**at() - one AT command, with a time limit**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:352
+msgid "Every command goes through this one function: it sends, collects the reply, and stops as soon as the expected answer - or an error - shows up. It **always returns**, so the board can never freeze on a missing ``OK``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:356
+msgid "**setup() and loop()**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:377
+msgid "If the Wi-Fi is down at start-up, the sketch does not give up: it tries again every 30 seconds. That is why you can start the board before the router is ready."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:380
+msgid "**sendAlert() - one HTTP request**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:396
+msgid "Three AT commands do the job:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:398
+msgid "``AT+CIPMUX=0`` - one connection at a time."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:399
+msgid "``AT+CIPSTART`` - open a TCP connection to ``maker.ifttt.com:80``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:400
+msgid "``AT+CIPSEND=<length>`` - the module answers with ``>``, and only then you send the text of the request. The length must be the exact number of characters, which is why the sketch measures ``req.length()`` instead of guessing."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/04-iot_Vibration_alert_system.rst:404
+msgid "The request itself is the same thing your browser sends: a line with the method and the path, one header, an empty line, and nothing else. IFTTT fires the applet as soon as it reads the path."
+msgstr ""

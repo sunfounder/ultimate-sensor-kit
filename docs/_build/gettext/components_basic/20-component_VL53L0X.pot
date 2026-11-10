@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:18
+msgid "Time of Flight Micro-LIDAR Distance Sensor (VL53L0X)"
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:27
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:29
+msgid "The VL53L0X module is a Time of Flight (ToF) ranging sensor that can accurately measure distances using laser technology. It is a multi-sensor module with an integrated laser emitter, detector, and microcontroller. The module has all required components such as pull-up resistors and capacitors. It can handle about 50 - 1200 mm of range distance."
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:33
+msgid "Principle"
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:34
+msgid "The VL53L0X module works on the principle of Time of Flight (ToF). It sends out a laser pulse and measures the time it takes for the pulse to bounce back. The time it takes for the pulse to return is proportional to the distance between the sensor and the object. The module uses a single photon avalanche diode (SPAD) array to detect the reflected light from the object. The SPAD array is capable of detecting even a single photon of light. The module also has an integrated microcontroller that processes the data from the SPAD array and calculates the distance between the sensor and the object."
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:38
+msgid "Usage"
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:40
+msgid "**Hardware components**"
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:42
+msgid "Arduino Uno R4 or R3 board * 1"
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:43
+msgid "Time of Flight Micro-LIDAR Distance Sensor * 1"
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:44
+msgid "Jumper Wires"
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:47
+msgid "**Circuit Assembly**"
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:58
+msgid "Code"
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:61
+#: ../../source/components_basic/20-component_VL53L0X.rst:82
+msgid "To install the library, use the Arduino Library Manager and search for **\"Adafruit_VL53L0X\"** and install it."
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:77
+msgid "Code explanation"
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:79
+msgid "Including the necessary library and initializing the sensor object. We start by including the library for the VL53L0X sensor and creating an instance of the Adafruit_VL53L0X class."
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:89
+msgid "Initialization in the ``setup()`` function. Here, we set up serial communication and initialize the distance sensor. If the sensor can't be initialized, the program halts."
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:107
+msgid "Capturing and displaying the measurements in the ``loop()`` function. Continuously, the Arduino captures a distance measurement using the ``rangingTest()`` method. If the measurement is valid, it's printed to the serial monitor."
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:125
+msgid "Additional Ideas"
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:127
+msgid "Integrate the sensor with a display (like an OLED) to show the distance measurements."
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:128
+msgid "Use the distance data to trigger other components, such as LEDs or buzzers, when an object comes within a specific range."
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:132
+msgid "More Projects"
+msgstr ""
+
+#: ../../source/components_basic/20-component_VL53L0X.rst:133
+msgid ":ref:`fun_tof_distance_monitor`"
+msgstr ""

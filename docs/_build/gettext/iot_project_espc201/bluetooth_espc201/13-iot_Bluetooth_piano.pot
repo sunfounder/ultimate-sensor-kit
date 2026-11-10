@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:7
+msgid "**Expert Support**: Solve real-life coding problems and technical challenges with our community and team."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:8
+msgid "**Learn & Share**: Exchange tips, tutorials, and projects to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:10
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:12
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:17
+msgid "13. Bluetooth Piano"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:26
+msgid "A buzzer becomes a piano. Send ``NOTE_C4*`` and it plays a C for a fifth of a second."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:28
+msgid "The interesting part is the star: it marks the **end** of a message, so the sketch knows when a whole note name has arrived and does not try to play ``NOTE_C`` before the rest of the name is there."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:34
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:38
+msgid "The module draws a high current at start-up, so make sure the 9 V battery or an external power supply is plugged into the DC jack of the R4 Minima."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:44
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:45
+msgid ":ref:`cpn_espc201`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:46
+msgid ":ref:`cpn_buzzer`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:50
+msgid "2. Upload the Code"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:52
+msgid "Open the ``13-Bluetooth_piano.ino`` file under the path of ``ultimate-sensor-kit\\code\\iot_project_espc201\\bluetooth\\13-Bluetooth_piano``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:54
+msgid "Select **Arduino UNO R4 Minima** and the right port, then click **Upload**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:56
+msgid "Open the Serial Monitor at **115200**. You should read:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:64
+msgid "If you read ``[!] no reply from the module``, the module is not answering on D0/D1 - check the four wires and the power supply."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:69
+msgid "3. Play a Note from the Phone"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:71
+msgid "Open LightBlue, tap **Scan** and connect to **SunFounder-C2**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:73
+msgid "Expand the service **0xA002** and open the characteristic **C304**. Then tap **Write new value** button."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:78
+msgid "Set the format in the top right corner to **UTF-8 String** and type ``NOTE_C4*``. The picture shows the field just before sending:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:83
+msgid "Send it. The buzzer sounds a C for about 0.2 seconds and the Serial Monitor prints ``NOTE_C4`` - the star is used and then removed."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:86
+msgid "These eight notes are available:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:92
+msgid "Send this"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:93
+msgid "Note"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:94
+msgid "``NOTE_C4*``, ``NOTE_D4*``, ``NOTE_E4*``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:95
+msgid "low C, D, E"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:96
+msgid "``NOTE_F4*``, ``NOTE_G4*``, ``NOTE_A4*``, ``NOTE_B4*``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:97
+msgid "F, G, A, B"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:98
+msgid "``NOTE_C5*``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:99
+msgid "C one octave higher"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:103
+msgid "**Do not forget the star.** Without it the sketch keeps waiting for the end of the message, nothing is played and the Serial Monitor prints nothing either."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:108
+msgid "4. Code explanation"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:110
+msgid "**The buzzer**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:118
+msgid "``tone(pin, frequency)`` starts a square wave at that frequency - a plain piezo buzzer then plays it. ``NOTE_C4`` is not a pin number but a frequency defined by the Arduino core."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:122
+msgid "**Collecting characters until the star**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:136
+msgid "Characters are collected one by one. The star is both the trigger to act **and** the thing to remove: ``substring(0, length()-1)`` drops the last character, so ``NOTE_C4*`` becomes ``NOTE_C4``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:140
+msgid "**Comparing text**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:147
+msgid "Text is compared with the double-quote form and with ``==``. A single ``=`` would assign instead of compare and the code would compile but never work."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:150
+msgid "**Reset after every note**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/13-iot_Bluetooth_piano.rst:158
+msgid "Clearing ``noteType`` is essential: without it the next note would be appended to the previous one and no comparison would ever match again."
+msgstr ""

@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wetterüberwachung mit ThingSpeak &mdash; SunFounder Ultimate Sensor Kit  Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=245627df"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=70a09b52"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=2c65fa5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Bluetooth-Einstieg" href="00-iot_bluetooth_start.html" />
+    <link rel="prev" title="Vibrationserkennungssystem mit IFTTT" href="04-iot_Vibration_alert_system.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">脺ber das Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Einstieg in Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Kurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Code herunterladen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">Grundlagen der Komponenten</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../iot_project.html">IoT-Projekte</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="00-iot_project_esp01.html">IoT-Projekte</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="blynk_start/00-blynk_start.html">Einführung in Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01-iot_Flame_alert_system.html">Flammenwarnsystem mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-iot_Intrusion_alert_system.html">Einbruchmeldeanlage mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03-iot_Plant_monitor.html">Pflanzenüberwachung mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06-iot_Remote_relay_controller.html">Ferngesteuerter Relais-Controller mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07-iot_Auto_watering_system.html">Automatisches Bewässerungssystem mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04-iot_Vibration_alert_system.html">Vibrationserkennungssystem mit IFTTT</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Wetterüberwachung mit ThingSpeak</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#schaltung-aufbauen">1. Schaltung aufbauen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#thingspeak-konfigurieren">2. ThingSpeak konfigurieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#den-code-ausfuhren">3. Den Code ausführen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-erklarung">4. Code-Erklärung</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="00-iot_bluetooth_start.html">Bluetooth-Einstieg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15-iot_Bluetooth_lcd.html">Bluetooth LCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16-iot_Bluetooth_traffic_light.html">Bluetooth-Ampel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08-iot_Bluetooth_lock_controller.html">Bluetooth-Schlosssteuerung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09-iot_Bluetooth_RGB_controller.html">Bluetooth RGB-Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-iot_Bluetooth_environmental_monitor.html">Bluetooth-Umweltmonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-iot_Bluetooth_piano.html">Bluetooth-Klavier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="12-iot_Bluetooth_oled.html">Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="13-iot_Bluetooth_remote_relay.html">Bluetooth-Fernrelais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14-iot_Bluetooth_voice_control_relay.html">Bluetooth Sprachgesteuertes Relais</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">Spaßprojekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Vielen Dank</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../iot_project.html">IoT-Projekte</a></li>
+          <li class="breadcrumb-item"><a href="00-iot_project_esp01.html">IoT-Projekte</a></li>
+      <li class="breadcrumb-item active">Wetterüberwachung mit ThingSpeak</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs-de/docs/source/iot_project_esp01/05-iot_Weather_monitor.rst" class="fa fa-github"> Auf GitHub bearbeiten</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Hallo und willkommen in der SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.</p>
+<p><strong>Warum beitreten?</strong></p>
+<ul class="simple">
+<li><p><strong>Expertenunterstützung</strong>: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.</p></li>
+<li><p><strong>Lernen &amp; Teilen</strong>: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.</p></li>
+<li><p><strong>Exklusive Vorschauen</strong>: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.</p></li>
+<li><p><strong>Spezialrabatte</strong>: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.</p></li>
+<li><p><strong>Festliche Aktionen und Gewinnspiele</strong>: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.</p></li>
+</ul>
+<p>👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [<a href="https://bit.ly/raphaelkit " target="_blank">hier</a>] und treten Sie heute bei!</p>
+</div>
+<section id="wetteruberwachung-mit-thingspeak">
+<span id="iot-weather-monitor"></span><h1>Wetterüberwachung mit ThingSpeak<a class="headerlink" href="#wetteruberwachung-mit-thingspeak" title="Link to this heading"></a></h1>
+<video loop autoplay muted style = "max-width:100%">
+   <source src="../_static/video/iot/05-iot_Weather_monitor.mp4"  type="video/mp4">
+   Ihr Browser unterstützt das Video-Tag nicht.
+</video><p>Dieses Projekt erfasst Temperatur- und Druckdaten mithilfe eines Atmosphärendrucksensors. Die gesammelten Daten werden in regelmäßigen Abständen über ein ESP8266-Modul und ein WLAN-Netzwerk an die ThingSpeak-Cloud-Plattform übertragen.</p>
+<section id="schaltung-aufbauen">
+<h2>1. Schaltung aufbauen<a class="headerlink" href="#schaltung-aufbauen" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Das ESP8266-Modul benötigt einen hohen Stromfluss, um eine stabile Betriebsumgebung zu gewährleisten. Stellen Sie daher sicher, dass die 9-V-Batterie angeschlossen ist.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/05-Wiring_Weather_monitor.png"><img alt="../_images/05-Wiring_Weather_monitor.png" src="../_images/05-Wiring_Weather_monitor.png" style="width: 90%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima-Platine</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/37-component_esp8266.html#cpn-esp8266"><span class="std std-ref">ESP8266-Modul</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/14-component_bmp280.html#cpn-bmp280"><span class="std std-ref">Temperatur-, Feuchtigkeits- &amp; Drucksensor (BMP280)</span></a></p></li>
+</ul>
+</section>
+<section id="thingspeak-konfigurieren">
+<h2>2. ThingSpeak konfigurieren<a class="headerlink" href="#thingspeak-konfigurieren" title="Link to this heading"></a></h2>
+<p><a href="https://thingspeak.com/" target="_blank">ThingSpeak</a>  ™ ist eine IoT-Analyseplattform, die die Aggregation, Visualisierung und Analyse von Live-Datenströmen in der Cloud ermöglicht. ThingSpeak bietet sofortige Visualisierungen von Daten, die von Ihren Geräten an ThingSpeak gesendet werden. Mit der Möglichkeit, MATLAB®-Code in ThingSpeak auszuführen, können Sie eine Echtzeitanalyse und -verarbeitung der eingehenden Daten durchführen. ThingSpeak wird häufig für Prototypen und Machbarkeitsnachweise von IoT-Systemen mit Analyseanforderungen eingesetzt.</p>
+<a class="reference internal image-reference" href="https://thingspeak.com/assets/Signup_TSP_ML_image-3d581d644f5eb1ff9f4999fc55ad04e2530ee7f54be98323d7bb453032353750.svg"><img alt="https://thingspeak.com/assets/Signup_TSP_ML_image-3d581d644f5eb1ff9f4999fc55ad04e2530ee7f54be98323d7bb453032353750.svg" class="align-center" src="https://thingspeak.com/assets/Signup_TSP_ML_image-3d581d644f5eb1ff9f4999fc55ad04e2530ee7f54be98323d7bb453032353750.svg" width="80%" /></a>
+<br/><section id="thingspeak-konto-erstellen">
+<h3><strong>2.1 ThingSpeak-Konto erstellen</strong><a class="headerlink" href="#thingspeak-konto-erstellen" title="Link to this heading"></a></h3>
+<p>Als Erstes müssen Sie ein Konto bei ThingSpeak erstellen. Da es eine Zusammenarbeit mit MATLAB gibt, können Sie sich mit Ihren MathWorks-Anmeldedaten bei <a href="https://thingspeak.com/" target="_blank">ThingSpeak</a>  anmelden.</p>
+<p>Wenn Sie noch keine haben, müssen Sie ein Konto bei MathWorks erstellen und sich bei der ThingSpeak-Anwendung anmelden.</p>
+<a class="reference internal image-reference" href="../_images/05-thingspeak_signup_shadow.png"><img alt="../_images/05-thingspeak_signup_shadow.png" class="align-center" src="../_images/05-thingspeak_signup_shadow.png" style="width: 50%;" /></a>
+</section>
+<section id="einen-kanal-erstellen">
+<h3><strong>2.2 Einen Kanal erstellen</strong><a class="headerlink" href="#einen-kanal-erstellen" title="Link to this heading"></a></h3>
+<p>Nach der Anmeldung erstellen Sie einen neuen Kanal zur Datenspeicherung, indem Sie zu „Channels“ &gt; „My Channels“ gehen und auf „New Channel“ klicken.</p>
+<a class="reference internal image-reference" href="../_images/05-thingspeak_channel_1_shadow.png"><img alt="../_images/05-thingspeak_channel_1_shadow.png" class="align-center" src="../_images/05-thingspeak_channel_1_shadow.png" style="width: 95%;" /></a>
+<p>Für dieses Projekt müssen wir einen Kanal namens „<strong>Weather Monitor</strong>“ mit zwei Feldern erstellen: <strong>Field 1</strong> für „<strong>Temperature</strong>“ und <strong>Field 2</strong> für „<strong>Atmospheric Pressure</strong>“.</p>
+<a class="reference internal image-reference" href="../_images/05-thingspeak_channel_2_shadow.png"><img alt="../_images/05-thingspeak_channel_2_shadow.png" class="align-center" src="../_images/05-thingspeak_channel_2_shadow.png" style="width: 95%;" /></a>
+<br/></section>
+</section>
+<section id="den-code-ausfuhren">
+<h2>3. Den Code ausführen<a class="headerlink" href="#den-code-ausfuhren" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Öffnen Sie die Datei <code class="docutils literal notranslate"><span class="pre">05-Weather_monitor.ino</span></code> im Verzeichnispfad <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\iot_project\wifi\05-Weather_monitor</span></code> oder kopieren Sie diesen Code in die <strong>Arduino IDE</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Um die Bibliothek zu installieren, nutzen Sie den Arduino-Bibliotheksmanager und suchen Sie nach <strong>„Adafruit BMP280“</strong>, um sie zu installieren.</p>
+</div>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/195c180e-72fa-4bea-9370-7c75920c7933/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe></li>
+<li><p>Sie müssen die <code class="docutils literal notranslate"><span class="pre">mySSID</span></code> und <code class="docutils literal notranslate"><span class="pre">myPWD</span></code> des von Ihnen verwendeten WLANs eingeben.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">String</span><span class="w"> </span><span class="n">mySSID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ihre_SSID"</span><span class="p">;</span><span class="w">     </span><span class="c1">// WiFi SSID</span>
+<span class="kr">String</span><span class="w"> </span><span class="n">myPWD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ihr_Passwort"</span><span class="p">;</span><span class="w">  </span><span class="c1">// WiFi-Passwort</span>
+</pre></div>
+</div>
+</li>
+<li><p>Außerdem müssen Sie die <code class="docutils literal notranslate"><span class="pre">myAPI</span></code> mit Ihrem ThingSpeak Channel-API-Schlüssel anpassen.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">String</span><span class="w"> </span><span class="n">myAPI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"xxxxxxxxxxxx"</span><span class="p">;</span><span class="w">  </span><span class="c1">// API-Schlüssel</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/05-thingspeak_api_shadow.png"><img alt="../_images/05-thingspeak_api_shadow.png" class="align-center" src="../_images/05-thingspeak_api_shadow.png" style="width: 80%;" /></a>
+<p>Hier finden Sie <strong>Ihren einzigartigen API-Schlüssel, den Sie geheim halten müssen</strong>.</p>
+</li>
+<li><p>Nach der Auswahl des korrekten Boards und Ports klicken Sie auf die Schaltfläche <strong>Hochladen</strong>.</p></li>
+<li><p>Öffnen Sie das serielle Monitor (Baudrate auf <strong>9600</strong> einstellen) und warten Sie auf eine Meldung wie eine erfolgreiche Verbindung.</p>
+<a class="reference internal image-reference" href="../_images/05-ready_1_shadow.png"><img alt="../_images/05-ready_1_shadow.png" src="../_images/05-ready_1_shadow.png" style="width: 95%;" /></a>
+<a class="reference internal image-reference" href="../_images/05-ready_2_shadow.png"><img alt="../_images/05-ready_2_shadow.png" src="../_images/05-ready_2_shadow.png" style="width: 95%;" /></a>
+</li>
+</ol>
+</section>
+<section id="code-erklarung">
+<h2>4. Code-Erklärung<a class="headerlink" href="#code-erklarung" title="Link to this heading"></a></h2>
+<p>Das im Kit enthaltene ESP8266-Modul ist bereits ab Werk mit einer AT-Firmware vorprogrammiert. Dadurch lässt sich das ESP8266-Modul über AT-Befehle steuern. In diesem Projekt verwenden wir die Software-Seriell-Kommunikation, um die Kommunikation zwischen dem Arduino Uno Board und dem ESP8266-Modul zu ermöglichen. Das Arduino Uno Board sendet AT-Befehle an das ESP8266-Modul, um eine Netzwerkverbindung herzustellen und Anfragen zu senden. Weitere Informationen finden Sie unter <a href="../_static/pdf/esp8266_at_instruction_set_en.pdf" target="_blank">ESP8266 AT Instruction Set</a>.</p>
+<p>Das Uno-Board liest Sensordaten und sendet AT-Befehle an das ESP8266-Modul. Das ESP8266-Modul verbindet sich mit einem Netzwerk und sendet Anfragen an die ThingSpeak-Server.</p>
+<ol class="arabic">
+<li><p><strong>Einrichtung &amp; Globale Variablen</strong>:</p>
+<p>Dieser Abschnitt stellt die Kommunikation mit dem ESP8266-Modul her und deklariert notwendige globale Variablen.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SoftwareSerial.h&gt;</span>
+<span class="nf">SoftwareSerial</span><span class="w"> </span><span class="nf">espSerial</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<span class="cp">#define DEBUG true</span>
+<span class="kr">String</span><span class="w"> </span><span class="n">mySSID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ihre_SSID"</span><span class="p">;</span>
+<span class="kr">String</span><span class="w"> </span><span class="n">myPWD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ihr_Passwort"</span><span class="p">;</span>
+<span class="kr">String</span><span class="w"> </span><span class="n">myAPI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"xxxxxxxxxxxx"</span><span class="p">;</span>
+<span class="kr">String</span><span class="w"> </span><span class="n">myHOST</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"api.thingspeak.com"</span><span class="p">;</span>
+<span class="kr">String</span><span class="w"> </span><span class="n">myPORT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"80"</span><span class="p">;</span>
+<span class="kr">unsigned</span><span class="w"> </span><span class="kr">long</span><span class="w"> </span><span class="n">lastConnectionTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">long</span><span class="w"> </span><span class="n">postingInterval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20000L</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>BMP280 Sensor-Konfiguration</strong>:</p>
+<p>Dieses Code-Segment konfiguriert den BMP280-Sensor für die Datenerfassung.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Wire.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Adafruit_BMP280.h&gt;</span>
+<span class="cp">#define BMP280_ADDRESS 0x76</span>
+<span class="n">Adafruit_BMP280</span><span class="w"> </span><span class="n">bmp</span><span class="p">;</span>
+<span class="kr">unsigned</span><span class="w"> </span><span class="n">bmpStatus</span><span class="p">;</span>
+<span class="kr">float</span><span class="w"> </span><span class="n">pressure</span><span class="p">;</span>
+<span class="kr">float</span><span class="w"> </span><span class="n">temperature</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Initialisierung (Setup-Funktion)</strong>:</p>
+<p>Die Funktion <code class="docutils literal notranslate"><span class="pre">setup()</span></code> initialisiert die serielle Kommunikation, verbindet das ESP8266-Modul mit dem WLAN und initialisiert den BMP280-Sensor.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="w">  </span><span class="n">espSerial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Initialize the ESP8266 module</span>
+<span class="w">  </span><span class="n">sendATCommand</span><span class="p">(</span><span class="s">"AT+RST"</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="n">DEBUG</span><span class="p">);</span><span class="w">                                         </span><span class="c1">//Reset the ESP8266 module</span>
+<span class="w">  </span><span class="n">sendATCommand</span><span class="p">(</span><span class="s">"AT+CWMODE=1"</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="n">DEBUG</span><span class="p">);</span><span class="w">                                    </span><span class="c1">//Set the ESP mode as station mode</span>
+<span class="w">  </span><span class="n">sendATCommand</span><span class="p">(</span><span class="s">"AT+CWJAP=</span><span class="se">\"</span><span class="s">"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mySSID</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myPWD</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"</span><span class="se">\"</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="n">DEBUG</span><span class="p">);</span><span class="w">  </span><span class="c1">//Connect to WiFi network</span>
+
+<span class="w">  </span><span class="c1">// Initialize the bmp280 sensor</span>
+<span class="w">  </span><span class="n">bmpStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bmp</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">BMP280_ADDRESS</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">bmpStatus</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"Could not find a valid BMP280 sensor, check wiring or "</span>
+<span class="w">                     </span><span class="s">"try a different address!"</span><span class="p">));</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="nf">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w">  </span><span class="c1">// Stop code execution if the sensor is not found.</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="cm">/* Default settings from datasheet. */</span>
+<span class="w">  </span><span class="n">bmp</span><span class="p">.</span><span class="n">setSampling</span><span class="p">(</span><span class="n">Adafruit_BMP280</span><span class="o">::</span><span class="n">MODE_NORMAL</span><span class="p">,</span><span class="w">     </span><span class="cm">/* Operating Mode. */</span>
+<span class="w">                  </span><span class="n">Adafruit_BMP280</span><span class="o">::</span><span class="n">SAMPLING_X2</span><span class="p">,</span><span class="w">     </span><span class="cm">/* Temp. oversampling */</span>
+<span class="w">                  </span><span class="n">Adafruit_BMP280</span><span class="o">::</span><span class="n">SAMPLING_X16</span><span class="p">,</span><span class="w">    </span><span class="cm">/* Pressure oversampling */</span>
+<span class="w">                  </span><span class="n">Adafruit_BMP280</span><span class="o">::</span><span class="n">FILTER_X16</span><span class="p">,</span><span class="w">      </span><span class="cm">/* Filtering. */</span>
+<span class="w">                  </span><span class="n">Adafruit_BMP280</span><span class="o">::</span><span class="n">STANDBY_MS_500</span><span class="p">);</span><span class="w"> </span><span class="cm">/* Standby time. */</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>loop()-Funktion</strong>:</p>
+<p>Die Haupt-Schleife prüft, ob seit der letzten Datenübertragung 20 Sekunden vergangen sind. Ist dies der Fall, werden die Daten gesendet. Sie können den Wert der Variable <code class="docutils literal notranslate"><span class="pre">postingInterval</span></code> anpassen, um das Intervall der Datenübertragung zu ändern.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Datenübertragung gemäß dem eingestellten Zeitintervall.</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">lastConnectionTime</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">postingInterval</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sendData</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Datenübertragung</strong>:</p>
+<p>Diese Funktion liest die Temperatur und den Druck, konstruiert die GET-Anfrage und sendet die Daten an ThingSpeak.</p>
+<p>Wir haben eine GET-Anfrage in Form von <code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/update?api_key=xxxxxx&amp;field1=xx&amp;field2=xxxxxx</span></code> erstellt und drei Parameter an den ThingSpeak-Server gesendet.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">api_key</span></code>: API-Schlüssel für Authentifizierung und Zugriffskontrolle</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">field1</span></code>: ein Parameter namens „field1“ zur Aufzeichnung der Temperatur</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">field2</span></code>: ein Parameter namens „field2“ zur Aufzeichnung des Luftdrucks</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nf">sendData</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Read the temperature and pressure from the BMP280 sensor</span>
+<span class="w">  </span><span class="n">pressure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bmp</span><span class="p">.</span><span class="n">readPressure</span><span class="p">();</span>
+<span class="w">  </span><span class="n">temperature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bmp</span><span class="p">.</span><span class="nf">readTemperature</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// If the data is invalid, print an error message and stop sending it</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isnan</span><span class="p">(</span><span class="n">pressure</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">isnan</span><span class="p">(</span><span class="n">temperature</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"Failed to read from BMP sensor!"</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Construct the GET request for ThingSpeak</span>
+<span class="w">  </span><span class="kr">String</span><span class="w"> </span><span class="n">sendData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"GET /update?api_key="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myAPI</span><span class="p">;</span>
+<span class="w">  </span><span class="n">sendData</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">"&amp;field1="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kr">String</span><span class="p">(</span><span class="n">temperature</span><span class="p">);</span>
+<span class="w">  </span><span class="n">sendData</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">"&amp;field2="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kr">String</span><span class="p">(</span><span class="n">pressure</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Send the GET request to ThingSpeak via the ESP8266</span>
+<span class="w">  </span><span class="n">sendATCommand</span><span class="p">(</span><span class="s">"AT+CIPMUX=1"</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="n">DEBUG</span><span class="p">);</span><span class="w">  </span><span class="c1">//Allow multiple connections</span>
+<span class="w">  </span><span class="n">sendATCommand</span><span class="p">(</span><span class="s">"AT+CIPSTART=0,</span><span class="se">\"</span><span class="s">TCP</span><span class="se">\"</span><span class="s">,</span><span class="se">\"</span><span class="s">"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myHOST</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"</span><span class="se">\"</span><span class="s">,"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myPORT</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="n">DEBUG</span><span class="p">);</span><span class="w">  </span><span class="c1">// Start a TCP connection to ThingSpeak</span>
+<span class="w">  </span><span class="n">sendATCommand</span><span class="p">(</span><span class="s">"AT+CIPSEND=0,"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kr">String</span><span class="p">(</span><span class="n">sendData</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">4</span><span class="p">),</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="n">DEBUG</span><span class="p">);</span><span class="w">       </span><span class="c1">// Send the GET request</span>
+<span class="w">  </span><span class="n">espSerial</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="s">"&gt;"</span><span class="p">);</span><span class="w">    </span><span class="c1">// Wait for the "&gt;" character from the ESP8266</span>
+<span class="w">  </span><span class="n">espSerial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">sendData</span><span class="p">);</span><span class="w">    </span><span class="c1">// Send the GET request</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">sendData</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Print the values</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">"Value to be sent: "</span><span class="p">);</span>
+<span class="w">  </span><span class="n">printBMP</span><span class="p">();</span><span class="w">  </span><span class="c1">// Call the printBMP function to print the temperature and pressure</span>
+
+<span class="w">  </span><span class="n">sendATCommand</span><span class="p">(</span><span class="s">"AT+CIPCLOSE=0"</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="n">DEBUG</span><span class="p">);</span><span class="w">  </span><span class="c1">// Close the TCP connection</span>
+<span class="w">  </span><span class="n">lastConnectionTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">millis</span><span class="p">();</span><span class="w">          </span><span class="c1">// Update the last connection time</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Hilfsfunktionen</strong>:</p>
+<p>Diese Funktionen unterstützen beim Senden von AT-Befehlen an das ESP8266-Modul und beim Anzeigen der Messwerte des BMP280-Sensors.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nf">sendATCommand</span><span class="p">(</span><span class="kr">String</span><span class="w"> </span><span class="n">command</span><span class="p">,</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">timeout</span><span class="p">,</span><span class="w"> </span><span class="kr">boolean</span><span class="w"> </span><span class="n">debug</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="p">...</span><span class="w"> </span><span class="c1">// (refer to the provided code for the full sendATCommand function)</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nf">printBMP</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="p">...</span><span class="w"> </span><span class="c1">// (refer to the provided code for the full printBMP function)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p><strong>Referenz</strong></p>
+<ul class="simple">
+<li><p><a href="../_static/pdf/esp8266_at_instruction_set_en.pdf" target="_blank">ESP8266 AT Instruction Set</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="04-iot_Vibration_alert_system.html" class="btn btn-neutral float-left" title="Vibrationserkennungssystem mit IFTTT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="00-iot_bluetooth_start.html" class="btn btn-neutral float-right" title="Bluetooth-Einstieg" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

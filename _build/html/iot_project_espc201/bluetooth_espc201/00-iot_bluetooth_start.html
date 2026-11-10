@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Started with Bluetooth &mdash; SunFounder Ultimate Sensor Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../../_static/./lang.js?v=6e75df5d"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="8. Bluetooth LCD" href="08-iot_Bluetooth_lcd.html" />
+    <link rel="prev" title="7. Auto Watering System with Blynk" href="../wifi_espc201/07-iot_Auto_watering_system.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">About Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_start/00_get_start.html">Get Started with Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_video_course/arduino_video_course.html">Arduino Video Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download_code.html">Download the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components_basic/00-component_list.html">Component Basics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../iot_project.html">IoT Projects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../iot_project_esp01/00-iot_project_esp01.html">IoT Projects with ESP01 &amp; Bluetooth Module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../iot_project_espc201.html">IoT Projects with ESPC201</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/00-blynk_start.html">Get Started with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/01-iot_Flame_alert_system.html">1. Flame Alert System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/02-iot_Intrusion_alert_system.html">2. Intrusion Alert System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/03-iot_Plant_monitor.html">3. Plant Monitor with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/04-iot_Vibration_alert_system.html">4. Vibration Alert System with IFTTT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/05-iot_Weather_monitor.html">5. Weather Monitor with ThingSpeak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/06-iot_Remote_relay_controller.html">6. Remote Relay Controller with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wifi_espc201/07-iot_Auto_watering_system.html">7. Auto Watering System with Blynk</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Get Started with Bluetooth</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#connect-the-module">1. Connect the Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#upload-the-sketch">2. Upload the Sketch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#find-the-module-with-your-phone">3. Find the Module with Your Phone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#send-text-from-the-phone-to-the-board">4. Send Text from the Phone to the Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#send-text-from-the-board-to-the-phone">5. Send Text from the Board to the Phone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-you-just-learned">6. What You Just Learned</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="08-iot_Bluetooth_lcd.html">8. Bluetooth LCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09-iot_Bluetooth_traffic_light.html">9. Bluetooth Traffic Light</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-iot_Bluetooth_environmental_monitor.html">10. Bluetooth Environmental Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-iot_Bluetooth_lock_controller.html">11. Bluetooth Lock Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="12-iot_Bluetooth_RGB_controller.html">12. Bluetooth RGB Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="13-iot_Bluetooth_piano.html">13. Bluetooth Piano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14-iot_Bluetooth_oled.html">14. Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15-iot_Bluetooth_remote_relay.html">15. Bluetooth Remote Relay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16-iot_Bluetooth_motion_monitor.html">16. Bluetooth Motion Monitor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../fun_project/fun_project.html">Fun Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thank-learning.html">Thank You</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../iot_project.html">IoT Projects</a></li>
+          <li class="breadcrumb-item"><a href="../iot_project_espc201.html">IoT Projects with ESPC201</a></li>
+      <li class="breadcrumb-item active">Get Started with Bluetooth</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs/docs/source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hello, welcome to the SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.</p>
+<p><strong>Why Join?</strong></p>
+<ul class="simple">
+<li><p><strong>Expert Support</strong>: Solve real-life coding problems and technical challenges with our community and team.</p></li>
+<li><p><strong>Learn &amp; Share</strong>: Exchange tips and tutorials to enhance your skills.</p></li>
+<li><p><strong>Exclusive Previews</strong>: Get early access to new product announcements and sneak peeks.</p></li>
+<li><p><strong>Festive Promotions and Giveaways</strong>: Take part in giveaways and holiday promotions.</p></li>
+</ul>
+<p>👉 Ready to explore and create with us? Click [<a href="https://bit.ly/raphaelkit " target="_blank">here</a>] and join today!</p>
+</div>
+<section id="get-started-with-bluetooth">
+<span id="c201-iot-bluetooth-start"></span><h1>Get Started with Bluetooth<a class="headerlink" href="#get-started-with-bluetooth" title="Link to this heading"></a></h1>
+<p>The ESPC2-01 gives you <strong>Wi-Fi and Bluetooth in the same module</strong>, so the kit needs no
+second Bluetooth chip. The Bluetooth projects use exactly the module you already have.</p>
+<p>In the Wi-Fi projects the board talked to Blynk through the cloud. Here the phone talks
+to the module <strong>directly</strong> - no router, no internet, no account. That is what makes
+Bluetooth so useful for a remote control or a small display.</p>
+<p>By the end of this chapter you will have:</p>
+<ul class="simple">
+<li><p>The module advertising itself as <strong>SunFounder-C2</strong>,</p></li>
+<li><p>Text typed on the phone arriving on the board, and</p></li>
+<li><p>Text typed on the board appearing on the phone.</p></li>
+</ul>
+<section id="connect-the-module">
+<h2>1. Connect the Module<a class="headerlink" href="#connect-the-module" title="Link to this heading"></a></h2>
+<p>Wire the module to the R4 Minima the same way as in the Wi-Fi projects:
+<strong>5V, GND, TX, RX</strong> - four wires, nothing else.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The module draws a high current at start-up, so make sure the 9 V battery or an external power supply is plugged into the DC jack of the R4 Minima.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/wiring_r4_espc201.png"><img alt="../../_images/wiring_r4_espc201.png" src="../../_images/wiring_r4_espc201.png" style="width: 80%;" /></a>
+</section>
+<section id="upload-the-sketch">
+<h2>2. Upload the Sketch<a class="headerlink" href="#upload-the-sketch" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">00-Bluetooth_start.ino</span></code> under the path of <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\code\iot_project_espc201\bluetooth\00-Bluetooth_start</span></code>.</p></li>
+<li><p>Select <strong>Arduino UNO R4 Minima</strong> and the right port, then click <strong>Upload</strong>.</p>
+<p>The sketch does three things:</p>
+<ul class="simple">
+<li><p>It includes <code class="docutils literal notranslate"><span class="pre">SunFounder_BLE.h</span></code>, a small wrapper around the module’s Bluetooth
+commands - this is why the rest of the code only needs <code class="docutils literal notranslate"><span class="pre">bleSerial.print()</span></code> and
+<code class="docutils literal notranslate"><span class="pre">bleSerial.read()</span></code>;</p></li>
+<li><p>At start-up the wrapper switches Bluetooth on, sets the name to <strong>SunFounder-C2</strong>
+and starts advertising, so a phone can find it;</p></li>
+<li><p>After that the sketch simply passes text in both directions.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/ble_start_code.png"><img alt="../../_images/ble_start_code.png" src="../../_images/ble_start_code.png" style="width: 80%;" /></a>
+</li>
+<li><p>Open the Serial Monitor at <strong>115200</strong>. You should read:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=== ESPC2-01 Bluetooth (BLE) ===
+[OK] BLE is ready - scan for "SunFounder-C2" on your phone
+--------------------------------
+Type here and press Enter: the text is sent to the phone (C305)
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/ble_start_serial.png"><img alt="../../_images/ble_start_serial.png" src="../../_images/ble_start_serial.png" style="width: 80%;" /></a>
+<p>If you read <code class="docutils literal notranslate"><span class="pre">[!]</span> <span class="pre">no</span> <span class="pre">reply</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">module</span></code> instead, the module is not answering on
+D0/D1 - check the four wires and the power supply, then press the reset button on the
+board.</p>
+</li>
+</ol>
+</section>
+<section id="find-the-module-with-your-phone">
+<h2>3. Find the Module with Your Phone<a class="headerlink" href="#find-the-module-with-your-phone" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Install <strong>LightBlue</strong> on your phone - it is free on iOS and Android. Any Bluetooth
+scanner works, but the screens below use LightBlue.</p>
+<a class="reference internal image-reference" href="../../_images/ble_lightblue_app.png"><img alt="../../_images/ble_lightblue_app.png" src="../../_images/ble_lightblue_app.png" style="width: 20%;" /></a>
+</li>
+<li><p>Open LightBlue and tap <strong>Scan</strong>. The module appears as <strong>SunFounder-C2</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The name comes from the sketch. If you change it there, the new name is what appears
+on the phone - handy when several kits are in the same room.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Do not pair the module in the Bluetooth settings of the phone.</strong> This is BLE, so
+there is nothing to pair: LightBlue opens the connection itself. If you tap
+<strong>SunFounder-C2</strong> under <em>Settings &gt; Bluetooth</em>, Android or iOS starts the older
+pairing procedure and asks for a PIN code - and the module has no code to give, so
+the box can never be filled in correctly.</p>
+<p>If you already tried: open <em>Settings &gt; Bluetooth</em>, choose <strong>Forget this device</strong>
+(or <em>Unpair</em>), switch Bluetooth off and on again, then connect from LightBlue.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/ble_lightblue_scan.png"><img alt="../../_images/ble_lightblue_scan.png" src="../../_images/ble_lightblue_scan.png" style="width: 80%;" /></a>
+</li>
+<li><p>Tap <strong>SunFounder-C2</strong> to connect. The service list opens.</p></li>
+<li><p>Expand the service <strong>0xA002</strong>. It holds the characteristics <strong>C300</strong> to <strong>C307</strong>.
+The three used in this chapter are:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 26%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Characteristic</p></th>
+<th class="head"><p>Direction</p></th>
+<th class="head"><p>What it is for</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>C304</strong></p></td>
+<td><p>phone -&gt; board</p></td>
+<td><p>the phone writes text here and the board reads it</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>C305</strong></p></td>
+<td><p>board -&gt; phone</p></td>
+<td><p>the board pushes text here; the phone has to <strong>Subscribe</strong> first</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>C300</strong></p></td>
+<td><p>board -&gt; phone</p></td>
+<td><p>one stored value the phone can <strong>Read</strong> at any time</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/ble_lightblue_expand.png"><img alt="../../_images/ble_lightblue_expand.png" src="../../_images/ble_lightblue_expand.png" style="width: 80%;" /></a>
+</li>
+</ol>
+</section>
+<section id="send-text-from-the-phone-to-the-board">
+<h2>4. Send Text from the Phone to the Board<a class="headerlink" href="#send-text-from-the-phone-to-the-board" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Open <strong>0xC304</strong> and tap <strong>Write new value</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/ble_lightblue_write.png"><img alt="../../_images/ble_lightblue_write.png" src="../../_images/ble_lightblue_write.png" style="width: 80%;" /></a>
+</li>
+<li><p>Change the format - the button in the top right corner - to <strong>UTF-8 String</strong>,
+then type a word, for example <code class="docutils literal notranslate"><span class="pre">hello</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This step is easy to forget. In the default hex format the board receives the
+numbers <code class="docutils literal notranslate"><span class="pre">68</span> <span class="pre">65</span> <span class="pre">6C</span> <span class="pre">6C</span> <span class="pre">6F</span></code> instead of the word <code class="docutils literal notranslate"><span class="pre">hello</span></code>.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/ble_lightblue_hello.png"><img alt="../../_images/ble_lightblue_hello.png" src="../../_images/ble_lightblue_hello.png" style="width: 80%;" /></a>
+</li>
+<li><p>Look at the Serial Monitor: your text appears there, and the board sends it straight
+back so you can see that the link works both ways.</p>
+<a class="reference internal image-reference" href="../../_images/ble_lightblue_serial.png"><img alt="../../_images/ble_lightblue_serial.png" src="../../_images/ble_lightblue_serial.png" style="width: 80%;" /></a>
+</li>
+</ol>
+</section>
+<section id="send-text-from-the-board-to-the-phone">
+<h2>5. Send Text from the Board to the Phone<a class="headerlink" href="#send-text-from-the-board-to-the-phone" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Open <strong>0xC305</strong> and tap <strong>Subscribe</strong>.</p>
+<p><strong>Subscribe</strong> means “keep this open and show me everything that arrives”. Without it
+the phone silently drops anything the board sends.</p>
+<a class="reference internal image-reference" href="../../_images/ble_lightblue_subs.png"><img alt="../../_images/ble_lightblue_subs.png" src="../../_images/ble_lightblue_subs.png" style="width: 80%;" /></a>
+</li>
+<li><p>In the Serial Monitor, type a word and press <strong>Enter</strong>. The sketch forwards it to
+C305, so it shows up in LightBlue.</p>
+<a class="reference internal image-reference" href="../../_images/ble_ide_send.png"><img alt="../../_images/ble_ide_send.png" src="../../_images/ble_ide_send.png" style="width: 80%;" /></a>
+</li>
+<li><p>If you see hex numbers in LightBlue instead of your text, set the format in the top
+right corner to <strong>UTF-8 String</strong> - the same setting as in step 4.</p>
+<a class="reference internal image-reference" href="../../_images/ble_ide_receive.png"><img alt="../../_images/ble_ide_receive.png" src="../../_images/ble_ide_receive.png" style="width: 80%;" /></a>
+</li>
+</ol>
+</section>
+<section id="what-you-just-learned">
+<h2>6. What You Just Learned<a class="headerlink" href="#what-you-just-learned" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Write</strong> (C304) - the phone sends data to the board.</p></li>
+<li><p><strong>Subscribe</strong> (C305) - the board sends data to the phone, and the phone listens.</p></li>
+<li><p><strong>Read</strong> (C300) - the phone asks for a value whenever it likes.</p></li>
+</ul>
+<p>The next chapters use exactly these three, only the text and the hardware change: an LCD
+that shows what you type, a lock that opens, an RGB lamp that changes colour.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../wifi_espc201/07-iot_Auto_watering_system.html" class="btn btn-neutral float-left" title="7. Auto Watering System with Blynk" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="08-iot_Bluetooth_lcd.html" class="btn btn-neutral float-right" title="8. Bluetooth LCD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

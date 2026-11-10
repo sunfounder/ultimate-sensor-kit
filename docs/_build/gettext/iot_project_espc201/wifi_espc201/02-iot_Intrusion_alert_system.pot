@@ -1,0 +1,353 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:18
+msgid "2. Intrusion Alert System with Blynk"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:28
+msgid "This project demonstrate a simple home intrusion detection system using a passive infrared (PIR) sensor (HC-SR501). When the system is set to 'Away' mode through the Blynk app, the PIR sensor monitors for motion. Any detected movement triggers a notification on the Blynk app, alerting the user of potential intrusion."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:33
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:37
+msgid "The module draws a high current at start-up, so make sure the 9 V battery or an external power supply is plugged into the DC jack of the R4 Minima."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:44
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:45
+msgid ":ref:`cpn_espc201`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:46
+msgid ":ref:`cpn_pir_motion`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:50
+msgid "2. Configure Blynk"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:54
+msgid "The template and the device were created once in :ref:`c201_iot_blynk_start`. Every project adds its datastreams to that **same** template, so each project occupies its own range of virtual pins. This project uses **V1** and **V2**. Nothing here changes the device token, so the sketch keeps working as it is."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:59
+msgid "**There are two things to tell the cloud, and one of them is worth two datastreams.**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:61
+msgid "``away_mode`` - the switch you flip on your way out of the house."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:62
+msgid "``current_status`` - a line of text the board writes back, so you can see what it is doing."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:64
+msgid "**Add the datastreams**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:66
+msgid "Open **Developer Zone** -> **My Templates**, click **Ultimate Sensor Kit**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:71
+msgid "Click **Edit** to open the template."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:76
+msgid "Click **Datastreams**, then **Create New**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:81
+msgid "Create the first datastream:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:83
+msgid "**DATASTREAM NAME**: ``away_mode``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:84
+msgid "**DISPLAY NAME**: ``Away Mode``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:85
+msgid "**VIRTUAL PIN**: ``V1``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:86
+msgid "**DATA TYPE**: **Integer**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:87
+msgid "**MIN** ``0``, **MAX** ``1``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:91
+msgid "An integer with a range of 0..1 is the usual way to model a switch: ``1`` means the alarm is armed, ``0`` means it is off."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:97
+msgid "Click **Create New** again for the second datastream:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:99
+msgid "**DATASTREAM NAME**: ``current_status``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:100
+msgid "**DISPLAY NAME**: ``Current Status``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:101
+msgid "**VIRTUAL PIN**: ``V2``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:102
+msgid "**DATA TYPE**: **String**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:106
+msgid "A **String** holds text. The board sends lines such as ``Detecting signs of intrusion...`` or ``Somebody in your house!``, which a Label widget can show as is."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:112
+msgid "The list now shows both datastreams."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:117
+msgid "**Add the event**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:119
+msgid "An event is what turns a sensor reading into a notification on your phone. Without it the alarm only changes a label - nobody notices."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:122
+msgid "Open **Events & notifications**, then click **Create Event**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:127
+msgid "Set **EVENT CODE** to ``intrusion_detected``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:131
+msgid "Type it exactly like this. The sketch calls ``Blynk.logEvent(\"intrusion_detected\")``, and any other spelling silently does nothing."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:137
+msgid "Turn the notification on and choose where it should go."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:142
+msgid "**Add the web dashboard**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:144
+msgid "The dashboard is the part you look at. Two widgets are enough here."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:146
+msgid "Click **Dashboard**, then **Add Widget**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:151
+msgid "Drag a **Label** widget onto the dashboard."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:156
+msgid "Add a **Switch** widget."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:161
+msgid "Click the three dots in the corner of the **Label** and choose **Settings**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:163
+msgid "Set **Datastream** to ``Current Status (V2)``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:169
+msgid "Do the same for the **Switch**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:171
+msgid "Set **Datastream** to ``Away Mode (V1)``, **ON LABEL** ``away home`` and **OFF LABEL** ``at home``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:176
+msgid "Click **Save**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:183
+msgid "3. Run the Code"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:185
+msgid "Open the ``02-Intrusion_alert_system.ino`` file under the path of ``ultimate-sensor-kit\\code\\iot_project_espc201\\wifi\\02-Intrusion_alert_system``, or copy this code into **Arduino IDE**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:187
+msgid "The three Blynk lines are the ones you copied in the Get Started chapter. Leave them as they are - the device is already created, so only the Wi-Fi settings differ between projects."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:197
+msgid "Type the name and the password of your own Wi-Fi network."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:204
+msgid "Select **Arduino UNO R4 Minima** and the right port, then click **Upload**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:206
+msgid "Open the Serial Monitor at **115200**. When the board reaches the cloud the log ends with ``Ready``. Every time you flip the switch in the app, a line appears here - that is how you know the two are talking."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:213
+msgid "Now flip the switch to **away home** and wave your hand in front of the PIR sensor. The label on the dashboard changes to ``Somebody in your house! Please check!`` and your phone shows a notification."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:220
+msgid "To use Blynk on a phone, see :ref:`blynk_mobile`."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:223
+msgid "4. Code explanation"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:225
+msgid "**Blynk account and libraries**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:227
+msgid "The first three lines say which Blynk device this board belongs to. They come from the device page and are identical in every project of the kit."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:241
+msgid "**The serial port that talks to the module**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:243
+msgid "The ESPC2-01 is not running your sketch - it works as a modem that answers AT commands. On the R4 it sits on D0/D1, which is ``Serial1``, a hardware port, so 115200 works without bit errors."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:253
+msgid "**PIR pin and the two state variables**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:264
+msgid "``state`` is what makes the next section possible: comparing the new reading with the old one tells you the moment somebody walks past, instead of \"there is a person\" a hundred times. ``awayHomeMode`` is the answer to \"am I at home or not\" - the alarm only reacts when it is ``1``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:269
+msgid "**espModuleInit() - wake the module up first**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:271
+msgid "The module needs about a second to boot, and it prints its start-up log on the very wire the sketch is about to use. Send commands too early and the replies get tangled with that log. This function waits for the word ``ready``, then sends ``ATE0``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:292
+msgid "``ATE0`` turns the echo off. With echo on, every reply starts with the command you just sent, and Blynk reads that line as garbage."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:295
+msgid "**setup()**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:313
+msgid "``timer.setInterval(1000L, myTimerEvent)`` calls the function once per second. Change that number to check the sensor more or less often."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:316
+msgid "**loop()**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:325
+msgid "``Blynk.run()`` keeps the connection alive, ``timer.run()`` fires the scheduled function. Nothing here may block, or the cloud drops the device."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:328
+msgid "**BLYNK_CONNECTED() and BLYNK_WRITE(V1)**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:341
+msgid "``BLYNK_CONNECTED()`` runs every time the board reaches the server - including after a power cut. ``Blynk.syncVirtual(V1)`` asks for the current switch position, so a board that restarted at midnight still knows that you left the house."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:345
+msgid "``BLYNK_WRITE(V1)`` runs whenever the switch in the app is moved. ``param.asInt()`` is the new value, ``1`` or ``0``, and the reply goes straight back to the label on datastream **V2**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:349
+msgid "**sendData() - react to the edge, not the level**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:365
+msgid "``rising`` is true only on the step from ``LOW`` to ``HIGH`` - the moment the sensor reacts. Without it the sketch would send a message every second for as long as someone stands there, which burns through the Blynk quota in minutes."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:368
+msgid "``millis() - lastAlert > 5000`` keeps two alerts at least five seconds apart."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:369
+msgid "``Blynk.virtualWrite(V2, ...)`` writes the text the label widget displays."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst:370
+msgid "``Blynk.logEvent(\"intrusion_detected\")`` sends the event that pops the notification up. The name must match the **EVENT CODE** you created, character for character."
+msgstr ""

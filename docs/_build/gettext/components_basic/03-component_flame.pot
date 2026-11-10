@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/components_basic/03-component_flame.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:18
+msgid "Flame Sensor Module"
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:29
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:30
+msgid "The Flame sensor is a sensor that can detect the presence of fire or flames. It detects fires mainly by sensing infrared radiation emitted by fires or flames. It is widely used in fire detection systems in homes and industries."
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:33
+msgid "**Notice**: Due to a production error, some of the flame sensors included in our kits may be the 3-pin version, which lacks the AO (Analog Output). This version is suitable for most projects and does not impact general usage. If you still require the 4-pin version, please contact our customer service at service@sunfounder.com. We will provide a free replacement to meet your needs."
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:36
+msgid "Principle"
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:37
+msgid "The Flame sensor works on the principle of infrared (IR) detection. The sensor has an IR receiver that detects the IR radiation emitted by flames. When fire burns it emits a small amount of Infra-red light, this light will be received by the Photodiode (IR receiver) on the sensor module. Then we use an Op-Amp to check for a change in voltage across the IR Receiver, so that if a fire is detected the output pin (DO) will give 0V(LOW), and if the is no fire the output pin will be 5V(HIGH)."
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:40
+msgid "Module Schematic Diagram"
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:51
+msgid "Usage"
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:53
+msgid "**Hardware components**"
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:55
+msgid "Arduino Uno R4 or R3 board * 1"
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:56
+msgid "Flame Sensor Module * 1"
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:57
+msgid "Jumper Wires"
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:59
+msgid "**Circuit Assembly**"
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:70
+msgid "Code"
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:86
+msgid "Code explanation"
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:88
+msgid "The first line of code is a constant integer declaration for the flame sensor pin. We use the digital pin 7 to read the output from the flame sensor."
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:94
+msgid "The ``setup()`` function initializes the flame sensor pin as an input and the built-in LED pin as an output. It also starts the serial communication at a baud rate of 9600 for printing messages to the serial monitor."
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:104
+msgid "The ``loop()`` function is where we continuously check the status of the flame sensor. If the sensor detects a flame, the built-in LED is turned on and a message is printed to the serial monitor. If no flame is detected, the LED is turned off and a different message is printed. The process repeats every 100 milliseconds."
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:121
+msgid "Additional Ideas"
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:123
+msgid "Modify the code to trigger a buzzer or sound an alarm when fire is detected."
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:125
+msgid "Incorporate a smoke sensor in addition to the flame sensor to enhance fire detection capabilities."
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:127
+msgid "Plot the **analog output** instead of just digital HIGH/LOW. Use **AO** pin."
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:130
+msgid "More Projects"
+msgstr ""
+
+#: ../../source/components_basic/03-component_flame.rst:131
+msgid ":ref:`iot_Flame`"
+msgstr ""

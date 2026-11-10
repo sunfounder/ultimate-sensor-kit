@@ -1,0 +1,264 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arduino UNO R4 Minima Board &mdash; SunFounder Ultimate Sensor Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=6e75df5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Breadboard" href="39-component_breadboard.html" />
+    <link rel="prev" title="Component Basics" href="00-component_list.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">About Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Get Started with Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Download the Code</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="00-component_list.html">Component Basics</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Arduino UNO R4 Minima Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="39-component_breadboard.html">Breadboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="40-component_wires.html">Jumper Wires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-component_ultrasonic_module.html">Ultrasonic Sensor Module (HC-SR04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-component_gas.html">Gas/Smoke Sensor Module (MQ2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-component_flame.html">Flame Sensor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-component_vibration.html">Vibration Sensor Module (SW-420)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-component_mpu6050.html">Accelerometer &amp; Gyroscope Module (MPU6050)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-component_button.html">Button Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-component_photoresistor.html">Photoresistor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-component_potentiometer.html">Potentiometer Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-component_ir_obstacle.html">IR Obstacle Avoidance Sensor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-component_soil.html">Capacitive Soil Moisture Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11-component_raindrop.html">Raindrop Detection Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12-component_dht11.html">Temperature and Humidity Sensor Module (DHT11)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13-component_pir_motion.html">PIR Motion Module (HC-SR501)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14-component_bmp280.html">Temperature, Humidity &amp; Pressure Sensor (BMP280)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="15-component_max30102.html">Pulse Oximeter and Heart Rate Sensor (MAX30102)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="16-component_rtc_ds1302.html">Real Time Clock Module (DS1302)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="17-component_touch.html">Touch Sensor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="18-component_speed.html">Infrared Speed Sensor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="19-component_joystick.html">Joystick Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="20-component_VL53L0X.html">Time of Flight Micro-LIDAR Distance Sensor (VL53L0X)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="21-component_i2c_lcd1602.html">I2C LCD 1602</a></li>
+<li class="toctree-l2"><a class="reference internal" href="22-component_oled.html">OLED Display Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="23-component_traffic.html">Traffic Light Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="24-component_rgb.html">RGB Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="25-component_relay.html">5V Relay Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="26-component_buzzer.html">Passive Buzzer Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="27-component_servo.html">Servo Motor (SG90)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="28-component_pump.html">Centrifugal Pump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="29-component_ttmotor.html">TT Motor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="37-component_esp8266.html">ESP8266 Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="38-component_jdy31.html">JDY-31 Bluetooth Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="41-component_espc201.html">ESPC2-01 Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../iot_project.html">IoT Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">Fun Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Thank You</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="00-component_list.html">Component Basics</a></li>
+      <li class="breadcrumb-item active">Arduino UNO R4 Minima Board</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs/docs/source/components_basic/36-component_uno.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hello, welcome to the SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.</p>
+<p><strong>Why Join?</strong></p>
+<ul class="simple">
+<li><p><strong>Expert Support</strong>: Solve post-sale issues and technical challenges with help from our community and team.</p></li>
+<li><p><strong>Learn &amp; Share</strong>: Exchange tips and tutorials to enhance your skills.</p></li>
+<li><p><strong>Exclusive Previews</strong>: Get early access to new product announcements and sneak peeks.</p></li>
+<li><p><strong>Special Discounts</strong>: Enjoy exclusive discounts on our newest products.</p></li>
+<li><p><strong>Festive Promotions and Giveaways</strong>: Take part in giveaways and holiday promotions.</p></li>
+</ul>
+<p>👉 Ready to explore and create with us? Click [<a href="https://bit.ly/raphaelkit " target="_blank">here</a>] and join today!</p>
+</div>
+<section id="arduino-uno-r4-minima-board">
+<span id="cpn-uno"></span><h1>Arduino UNO R4 Minima Board<a class="headerlink" href="#arduino-uno-r4-minima-board" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="../_images/36_uno_r4.webp"><img alt="../_images/36_uno_r4.webp" class="align-center" src="../_images/36_uno_r4.webp" style="width: 600px;" /></a>
+<p>The <strong>Arduino UNO R4 Minima</strong> is a development board with the classic UNO form factor, based on the RA4M1(<a href="https://docs.arduino.cc/resources/datasheets/ra4m1-datasheet.pdf" target="_blank">Renesas RA4M1 Group Datasheet</a> ) microcontroller from Renesas. It is faster and has more memory than the previous versions of the board. It has a number of built-in features such as a DAC, RTC and HID. The UNO R4 Minima is a <strong>5 V only board</strong>. It has 14 digital I/O, 6 analog inputs with up to 14-bit resolution, a clock speed of 48 MHz, and 32 kB SRAM, 256 kB flash memory &amp; 8 kB of EEPROM.</p>
+<p><strong>Technical Parameters</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Board</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Arduino® UNO R4 Minima</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Microcontroller</p></td>
+<td colspan="2"><p>Renesas RA4M1 (Arm® Cortex®-M4)</p></td>
+</tr>
+<tr class="row-odd"><td><p>USB</p></td>
+<td><p>USB-C®</p></td>
+<td><p>Programming Port</p></td>
+</tr>
+<tr class="row-even"><td><p>Pins</p></td>
+<td><p>Digital I/O Pins</p></td>
+<td><p>14</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="3"><p>Pins</p></td>
+<td><p>Analog input pins</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>DAC</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>PWM pins</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td rowspan="4"><p>Communication</p></td>
+<td><p>UART</p></td>
+<td><p>Yes, 1x</p></td>
+</tr>
+<tr class="row-odd"><td><p>I2C</p></td>
+<td><p>Yes, 1x</p></td>
+</tr>
+<tr class="row-even"><td><p>SPI</p></td>
+<td><p>Yes, 1x</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAN</p></td>
+<td><p>Yes 1 CAN Bus</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>Power</p></td>
+<td><p>Circuit operating voltage</p></td>
+<td><p>5 V</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input voltage (VIN)</p></td>
+<td><p>6-24 V</p></td>
+</tr>
+<tr class="row-even"><td><p>DC Current per I/O Pin</p></td>
+<td><p>8 mA</p></td>
+</tr>
+<tr class="row-odd"><td><p>Clock speed</p></td>
+<td><p>Main core</p></td>
+<td><p>48 MHz</p></td>
+</tr>
+<tr class="row-even"><td><p>Memory</p></td>
+<td><p>RA4M1</p></td>
+<td><p>256 kB Flash, 32 kB RAM</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>Dimensions</p></td>
+<td><p>Width</p></td>
+<td><p>68.85 mm</p></td>
+</tr>
+<tr class="row-even"><td><p>Length</p></td>
+<td><p>53.34 mm</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>What’s More</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.arduino.cc/en/software">Arduino IDE</a></p></li>
+<li><p><a class="reference internal" href="../arduino_start/01_install_arduino_ide.html#install-arduino"><span class="std std-ref">Download and Install Arduino IDE 2.0</span></a></p></li>
+<li><p><a class="reference external" href="https://www.arduino.cc/reference/en/">Arduino Programming Language Reference</a></p></li>
+<li><p><a href="https://docs.arduino.cc/hardware/uno-r4-minima" target="_blank">Arduino UNO R4 Minima</a> </p></li>
+<li><p><a href="https://docs.arduino.cc/resources/datasheets/ABX00080-datasheet.pdf" target="_blank">Arduino UNO R4 Minima Datasheet</a> </p></li>
+<li><p><a href="https://docs.arduino.cc/resources/datasheets/ra4m1-datasheet.pdf" target="_blank">Renesas RA4M1 Group Datasheet</a> </p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="00-component_list.html" class="btn btn-neutral float-left" title="Component Basics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="39-component_breadboard.html" class="btn btn-neutral float-right" title="Breadboard" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

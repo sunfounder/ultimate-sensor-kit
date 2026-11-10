@@ -1,0 +1,210 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/components_basic/12-component_dht11.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:18
+msgid "Temperature and Humidity Sensor Module (DHT11)"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:29
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:30
+msgid "The digital temperature and humidity sensor DHT11 is a composite sensor that contains a calibrated digital signal output of temperature and humidity. The technology of a dedicated digital modules collection and the temperature and humidity sensing technology are applied to ensure that the product has high reliability and excellent long-term stability."
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:34
+msgid "Principle"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:35
+msgid "Only three pins are available for use: VCC, GND, and DATA. The communication process begins with the DATA line sending start signals to DHT11, and DHT11 receives the signals and returns an answer signal. Then the host receives the answer signal and begins to receive 40-bit humidity and temperature data (8-bit humidity integer + 8-bit humidity decimal + 8-bit temperature integer + 8-bit temperature decimal + 8-bit checksum)."
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:47
+msgid "Module Schematic Diagram"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:1
+msgid "|dht11_module|"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:89
+msgid "dht11_module"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:1
+msgid "|dht11_module_schematic|"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:56
+msgid "dht11_module_schematic"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:1
+msgid "|dht11_module_withLED|"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:95
+msgid "dht11_module_withLED"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:1
+msgid "|dht11_module_withLED_schematic|"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:59
+msgid "dht11_module_withLED_schematic"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:67
+msgid "Usage"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:69
+msgid "**Hardware components**"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:71
+msgid "Arduino Uno R4 or R3 board * 1"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:72
+msgid "Temperature and Humidity Sensor Module(DHT11) * 1"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:73
+msgid "Jumper Wires"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:76
+msgid "**Circuit Assembly**"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:79
+msgid "The kit may contain different versions of the DHT11 module. Please confirm the wiring method according to the module you have."
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:1
+msgid "module"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:1
+msgid "diagram"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:1
+msgid "|dht11_module_circuit|"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:92
+msgid "dht11_module_circuit"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:1
+msgid "|dht11_module_withLED_circuit|"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:98
+msgid "dht11_module_withLED_circuit"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:109
+msgid "Code"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:112
+#: ../../source/components_basic/12-component_dht11.rst:134
+msgid "To install the library, use the Arduino Library Manager and search for **\"DHT sensor library\"** and install it."
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:128
+msgid "Code explanation"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:130
+msgid "Inclusion of necessary libraries and definition of constants. This part of the code includes the DHT sensor library and defines the pin number and sensor type used in this project."
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:142
+msgid "Creation of DHT object. Here we create a DHT object using the defined pin number and sensor type."
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:149
+msgid "This function is executed once when the Arduino starts. We initialize the serial communication and the DHT sensor in this function."
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:159
+msgid "Main loop. The ``loop()`` function runs continuously after the setup function. Here, we read the humidity and temperature values, calculate the heat index, and print these values to the serial monitor.  If the sensor read fails (returns NaN), it prints an error message."
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:164
+msgid "The |link_heat_index| is a way to measure how hot it feels outside by combining the air temperature and the humidity. It is also called the \"felt air temperature\" or \"apparent temperature\"."
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:194
+msgid "Additional Ideas"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:196
+msgid "Display readings on an LCD or OLED display"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:199
+msgid "More Projects"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:200
+msgid ":ref:`iot_Plant_monitor`"
+msgstr ""
+
+#: ../../source/components_basic/12-component_dht11.rst:201
+msgid ":ref:`iot_Bluetooth_environmental_monitor`"
+msgstr ""

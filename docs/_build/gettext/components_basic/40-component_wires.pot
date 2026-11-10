@@ -1,0 +1,69 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/components_basic/40-component_wires.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/components_basic/40-component_wires.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/components_basic/40-component_wires.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/components_basic/40-component_wires.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/components_basic/40-component_wires.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/components_basic/40-component_wires.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/components_basic/40-component_wires.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/components_basic/40-component_wires.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/components_basic/40-component_wires.rst:18
+msgid "Jumper Wires"
+msgstr ""
+
+#: ../../source/components_basic/40-component_wires.rst:20
+msgid "Wires that connect two terminals are called jumper wires. There are various kinds of jumper wires. Here we focus on jumper wires used in breadboards. They are primarily used to transfer electrical signals from anywhere on the breadboard to the input/output pins of a microcontroller."
+msgstr ""
+
+#: ../../source/components_basic/40-component_wires.rst:22
+msgid "Jumper wires are fitted by inserting their \"end connectors\" into the slots on the breadboard. Beneath the surface of the breadboard, parallel plates connect the slots in rows or columns. The \"end connectors\" are inserted into the specific slots required for the prototype without soldering."
+msgstr ""
+
+#: ../../source/components_basic/40-component_wires.rst:24
+msgid "There are three types of jumper wires: Female-to-Female, Male-to-Male, and Male-to-Female. Male-to-Female wires have a protruding pin on one end and a recessed socket on the other. Male-to-Male wires have pins on both ends, while Female-to-Female wires have sockets on both ends."
+msgstr ""
+
+#: ../../source/components_basic/40-component_wires.rst:28
+msgid "Multiple types of jumper wires can be used in a single project. The color of jumper wires varies to help identify the connections between different parts of the circuit, but the colors themselves do not indicate different functions. However, it is common practice to use red wires for positive power connections and black wires for negative power or ground connections."
+msgstr ""

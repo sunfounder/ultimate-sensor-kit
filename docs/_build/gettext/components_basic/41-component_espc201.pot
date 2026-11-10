@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/components_basic/41-component_espc201.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:7
+msgid "**Expert Support**: Solve real-life coding problems and technical challenges with our community and team."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:8
+msgid "**Learn & Share**: Exchange tips, tutorials, and projects to enhance your skills."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:10
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:12
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:17
+msgid "ESPC2-01 Module"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:23
+msgid "The ESPC2-01 is a Wi-Fi and Bluetooth LE module built around the **ESP32-C2** chip (also sold as ESP8684), made by Espressif Systems. A single module provides both the Wi-Fi connection and the Bluetooth LE link used by the projects in this kit."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:27
+msgid "Internally the module runs the Espressif **ESP-AT** firmware, so it is driven with plain AT commands over a serial port."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:30
+msgid "The module **plugs directly into the Wi-Fi adapter supplied with the kit** - no jumper wires are needed. The adapter carries the 3.3 V regulator and the level conversion between the 5 V board and the 3.3 V module."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:34
+msgid "Pins of the ESPC2-01 and their functions:"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:36
+msgid "ESPC2-01 Pins"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:40
+msgid "Name"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:41
+msgid "Description"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:42
+msgid "3V3"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:43
+msgid "Power supply, **3.3 V only**."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:44
+msgid "GND"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:45
+msgid "Ground."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:46
+msgid "EN"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:47
+msgid "Chip enable, pulled up on the module. Pull to GND to reset the chip."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:48
+msgid "TX0"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:49
+msgid "UART0 transmit, GPIO20. Data from the module to the board."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:50
+msgid "RX0"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:51
+msgid "UART0 receive, GPIO19. Data from the board to the module."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:52
+msgid "IO9"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:53
+msgid "Boot mode select. Pull to GND **at power-up** to enter download mode."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:54
+msgid "IO2"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:55
+#: ../../source/components_basic/41-component_espc201.rst:57
+msgid "General purpose IO, not used in this kit."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:56
+msgid "IO3"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:60
+msgid "Features and specifications"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:62
+msgid "Chip: **ESP32-C2** (ESP8684H2), single core 32-bit RISC-V"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:63
+msgid "Wi-Fi: 802.11 b/g/n (Wi-Fi 4), **2.4 GHz only**"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:64
+msgid "Bluetooth: **Bluetooth LE 5.0** - Classic Bluetooth is not supported"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:65
+msgid "Flash: **2 MB**"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:66
+msgid "SRAM: 272 KB"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:67
+msgid "Firmware: **ESP-AT v4.1.1.0**, custom build that contains both the Wi-Fi AT and the BLE AT command sets"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:68
+msgid "Serial port: **115200**, 8 data bits, no parity, 1 stop bit, no flow control"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:69
+msgid "Module UART pins: TX0 = GPIO20, RX0 = GPIO19"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:70
+msgid "Supply voltage: **3.3 V** (there is no 5 V pin)"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:71
+msgid "Peak current: **more than 400 mA** during Wi-Fi / Bluetooth start-up"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:72
+msgid "Logic level: **3.3 V** - the pins are **not 5 V tolerant** (absolute maximum 3.6 V)"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:73
+msgid "Antenna: PCB antenna"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:74
+msgid "Dimensions: **24 mm x 14 mm x 1.6 mm** (about 12 mm high with the header soldered)"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:78
+msgid "The module runs at **3.3 V** and its pins are **not 5 V tolerant** (absolute maximum 3.6 V). The adapter supplied with the kit performs the level conversion, so the module can be plugged straight into it - never wire the module to a 5 V signal without that adapter."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:83
+msgid "The kit also needs the **9V battery** (or a 6.5 - 12 V DC supply). Powered from USB alone the 3.3 V rail collapses when the module starts, and it never answers AT commands."
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:87
+msgid "`ESP32-C2 Series - Espressif <https://www.espressif.com/en/products/socs/esp32-c2>`_"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:88
+msgid "|link_esp_at|"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:91
+msgid "More Projects"
+msgstr ""
+
+#: ../../source/components_basic/41-component_espc201.rst:93
+msgid ":ref:`c201_iot_blynk_start`"
+msgstr ""

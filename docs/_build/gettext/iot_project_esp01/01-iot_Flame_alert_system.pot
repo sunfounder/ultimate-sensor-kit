@@ -1,0 +1,293 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:4
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:6
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:8
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:9
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:10
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:11
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:12
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:14
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:19
+msgid "Flame Alert System with Blynk"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:28
+msgid "In this chapter, we will guide you through the process of creating a home flame alarm system demo using Blynk. By utilizing a flame sensor, you can detect potential fires in your home. Sending the detected values to Blynk allows for remote monitoring of your home via the internet. In case of a fire, Blynk will promptly notify you via email."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:32
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:37
+msgid "The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:43
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:44
+msgid ":ref:`cpn_flame`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:45
+msgid ":ref:`cpn_esp8266`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:49
+msgid "2. Configure Blynk"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:52
+msgid "**2.1 Create template**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:54
+msgid "Firstly, we need to establish a template on Blynk. Follow the steps below to create a **\"Flame Alert System\"** template."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:60
+msgid "Ensure that the **HARDWARE** is configured as **ESP8266** and the **CONNECT TYPE** is set to **WiFi**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:71
+msgid "**2.2 Datastream**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:73
+msgid "Create a **Datastream** of type **Virtual Pin** in the **Datastream** page to get the value of Flame sensor module."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:82
+msgid "Set the name of the **Virtual Pin** to ``flame_sensor_value``. Set the **DATA TYPE** to **Integer** and MIN and MAX to **0** and **1**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:93
+msgid "**2.3 Event**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:95
+msgid "Next, we will create an **event** that logs the detection of flames and sends an email notification."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:102
+msgid "It is recommended to keep it consistent with my settings, otherwise you may need to modify the code to run the project."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:106
+msgid "Set **EVENT NAME** to ``flame_detection_alert``. At the same time, you can customize the content of email sent by setting **DESCRIPTION** for event triggering. You can also set frequency limits for event triggering below."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:113
+msgid "Go to the **Notifications** page and configure email settings."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:124
+msgid "**2.4 Web Dashboard**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:126
+msgid "We also need to set up the **Web Dashboard** to display the sensor data sent from the Uno board."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:128
+msgid "Drag and drop an **Label widget** on the **Web Dashboard** page."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:134
+msgid "In the settings page of the **Label widget**, select **Datastream** as **flame_sensor_value(V0)**. Then set the color of **WIDGET BACKGROUND** to change with the value of data. When the displayed value is 1, it will be shown in green. When the value is 0, it will be shown in red."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:150
+msgid "**2.5 Save template**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:152
+msgid "At last, remember to save the template."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:158
+msgid "In case you need to edit the template, you can click on the edit button in the upper right corner."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:169
+msgid "3. Run the Code"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:171
+msgid "Open the ``01-Flame_alert_system.ino`` file under the path of ``ultimate-sensor-kit\\code\\iot_project_esp01\\wifi\\01-Flame_alert_system``, or copy this code into **Arduino IDE**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:179
+msgid "Create a Blynk device using the Flame Detection Alert template. Then, replace the ``BLYNK_TEMPLATE_ID``, ``BLYNK_TEMPLATE_NAME``, and ``BLYNK_AUTH_TOKEN`` with your own."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:204
+msgid "You also need to enter the ``ssid`` and ``password`` of the WiFi you are using."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:211
+msgid "After selecting the correct board and port, click the **Upload** button."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:213
+msgid "Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:221
+msgid "If the message ``ESP is not responding`` appears when you connect, please follow these steps."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:223
+msgid "Make sure the 9V battery is plugged in."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:224
+msgid "Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:225
+msgid "Press the reset button on the R4 board."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:227
+msgid "Sometimes, you may need to repeat the above operation 3-5 times, please be patient."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:229
+msgid "Now, Blynk will show the data read from flame sensor. In the label widget, you can see the value read by the flame sensor. When the displayed value is 1, the background of the label will be shown in green. When the value is 0, the background of the label will be shown in red and Blynk will send you an alert email."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:232
+msgid "If you want to use Blynk on mobile devices, please refer to :ref:`blynk_mobile`."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:237
+msgid "4. Code explanation"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:239
+msgid "**Library Initialization**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:241
+msgid "Before we start, it's crucial to set up the necessary libraries and settings for communication between the Arduino, ESP8266 WiFi module, and Blynk app. This code sets up the required libraries and configures a software serial connection between the Arduino and ESP8266 module, with the appropriate baud rate for data transmission."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:257
+msgid "**Blynk and WiFi configuration**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:259
+msgid "For the project to communicate with the Blynk app, it needs to connect to a Wi-Fi network. The credentials need to specified here."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:274
+msgid "**Sensor Pin & Timer Declaration**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:276
+msgid "Define the pin number for the flame. Blynk library provides a built-in timer, and we create a timer object. More about |link_blynk_timer_intro|"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:284
+msgid "**setup() Function**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:286
+msgid "Initial configurations such as setting the pin mode for the sensorPin, initiating serial communication, setting the BlynkTimer, and connecting to the Blynk app are done in this function."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:288
+msgid "We use ``timer.setInterval(1000L, myTimerEvent)`` to set the timer interval in setup(), here we set to execute the ``myTimerEvent()`` function every **1000ms**. You can modify the first parameter of ``timer.setInterval(1000L, myTimerEvent)`` to change the interval between ``myTimerEvent`` executions."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:306
+msgid "**loop() Function**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:308
+msgid "The main loop runs the Blynk and Timer services continuously."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:317
+msgid "**myTimerEvent() & sendData() Function**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:328
+msgid "The ``sendData()`` function reads the value from the flame sensor and sends it to Blynk. If it detects a flame (value 0), it sends ``flame_detection_alert`` event to the Blynk app."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:330
+msgid "Use ``Blynk.virtualWrite(vPin, value)`` to send data to virtual pin V0 on Blynk. More about |link_blynk_virtualWrite|."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:332
+msgid "Use ``Blynk.logEvent(\"event_code\")`` to log event to Blynk. More about |link_blynk_logEvent|."
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:350
+msgid "**Reference**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:352
+msgid "|link_blynk_doc|"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:353
+msgid "|link_blynk_quickstart|"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:354
+msgid "|link_blynk_virtualWrite|"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:355
+msgid "|link_blynk_logEvent|"
+msgstr ""
+
+#: ../../source/iot_project_esp01/01-iot_Flame_alert_system.rst:356
+msgid "|link_blynk_timer_intro|"
+msgstr ""

@@ -1,0 +1,237 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:4
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:6
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:8
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:9
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:10
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:11
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:12
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:14
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:19
+msgid "Bluetooth RGB Controller"
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:28
+msgid "This project uses an Android app to control the color of an RGB LED through Bluetooth technology using a smartphone."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:30
+msgid "This Android application will be constructed utilizing a complimentary web-based platform known as |link_appinventor|. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:32
+msgid "This project control an RGB LED connected to an Arduino Uno via a JDY-31 Bluetooth module. The Android application is used to send various color values to the Arduino Uno board via Bluetooth, based on user operations on the GUI. The program on Uno board receives RGB color values as characters from a serial port over Bluetooth and adjusts the LED's color accordingly."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:36
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:41
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:42
+msgid ":ref:`cpn_jdy31`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:43
+msgid ":ref:`cpn_rgb`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:47
+msgid "2. Create the Android App"
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:49
+msgid "The Android application will be developed using a free web application known as |link_appinventor|. MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop features allowing for the creation of simplistic applications."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:53
+msgid "Now, let's begin."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:55
+msgid "Go to |link_appinventor_login|, and click \"online tool\" to login. You will require a Google account to register with MIT App Inventor."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:61
+msgid "After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``Control_RGB_LED.aia`` file located in the path ``ultimate-sensor-kit\\code\\iot_project_esp01\\bluetooth\\04-Bluetooth_RGB_controller``."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:63
+msgid "You can also directly download here: :download:`Control_RGB_LED.aia</_static/other/Control_RGB_LED.aia>`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:68
+msgid "Upon uploading the ``.aia`` file, you will see the application on the MIT App Inventor software. This is a pre-configured template. You can modify this template after you have familiarized yourself with MIT App Inventor through the following steps."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:72
+msgid "In MIT App Inventor, you have 2 primary sections: the **Designer** and the **Blocks**. You can switch between these two sections in the upper right corner of the page."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:76
+msgid "The **Designer** allows you to add buttons, text, screens, and modify the overall aesthetic of your application."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:80
+msgid "Next, there's the **Blocks** section. This section lets you craft custom functionalities for your app, allowing you to program each component on the app's GUI to achieve desired features."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:84
+msgid "To install the application on a smartphone, navigate to the **Build** tab."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:88
+msgid "You can generate a ``.apk`` file. After selecting this option, a page will appear allowing you to choose between downloading a ``.apk`` file or scanning a QR code for installation. Follow the installation guide to complete the application installation."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:90
+msgid "You also download our pre-compiled APK here: :download:`Control_RGB_LED.apk</_static/other/Control_RGB_LED.apk>`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:92
+msgid "If you wish to upload this app to Google Play or another app marketplace, you can generate a ``.aab`` file."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:96
+msgid "3. Upload the Code"
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:98
+msgid "Open the ``04-Bluetooth_RGB_controller.ino`` file under the path of ``ultimate-sensor-kit\\code\\iot_project_esp01\\bluetooth\\04-Bluetooth_RGB_controller``, or copy this code into **Arduino IDE**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:104
+msgid "After selecting the correct board and port, click the **Upload** button."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:106
+msgid "Open the Serial monitor(set baudrate to **9600**) to view debug messages."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:109
+msgid "4. App and Bluetooth module Connection"
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:111
+msgid "Ensure that the application created earlier is installed on your smartphone."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:113
+msgid "Initially, turn on **Bluetooth** on your smartphone."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:119
+msgid "Navigate to the **Bluetooth settings** on your smartphone and look for names like **JDY-31-SPP**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:125
+msgid "After clicking it, agree to the **Pair** request in the pop-up window. If prompted for a pairing code, please enter \"1234\"."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:131
+msgid "Now open the newly installed **Control_RGB_LED** APP."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:137
+msgid "In the APP, click on **Connect Bluetooth** to establish a connection between the APP and Bluetooth module."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:143
+msgid "This page displays a list of all paired Bluetooth devices. Choose the ``xx.xx.xx.xx.xx.xx JDY-31-SPP`` option from the list. The name of each device is listed next to its MAC address."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:149
+msgid "If you don't see any devices on the page shown above, it could be because this app is not authorized to scan for nearby devices. In such a case, you will need to adjust the settings manually."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:151
+msgid "To access the **APP Info** page, long-press the app icon and select it. Alternatively, if you have another method to reach this page, use that instead."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:157
+msgid "Navigate to the **Permissions** page."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:163
+msgid "To enable the APP to scan for nearby devices, go to **Nearby devices** and select **Always**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:169
+msgid "Now, restart the APP and repeat steps 5 and 6 to successfully connect to Bluetooth."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:171
+msgid "After successfully connecting, you will be redirected to the main page where it will show \"connected\". From there, you can easily modify the RGB values and alter the color of the display by clicking on the **Change Color** button."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:179
+msgid "5. Code explanation"
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:181
+msgid "Setting up the Bluetooth module and initializing variables:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:183
+msgid "The code begins by including the ``SoftwareSerial`` library and initializing the necessary variables."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:210
+msgid "setup() function:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:212
+msgid "Here, the RGB LED pins are set as output pins, and the serial communication is initialized with a baud rate of 9600 for both the Arduino's main serial and the Bluetooth module."
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:224
+msgid "Reading and processing the data:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/09-iot_Bluetooth_RGB_controller.rst:226
+msgid "In the main loop, the code continuously checks for incoming data from the Bluetooth module. Upon receiving any data, it processes the characters to identify RGB values and sets the color of the RGB LED accordingly."
+msgstr ""

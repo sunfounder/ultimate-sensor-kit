@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/components_basic/22-component_oled.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:18
+msgid "OLED Display Module"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:25
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:26
+msgid "An OLED (Organic Light-Emitting Diode) display module is a device that can display text, graphics and images on a thin and flexible screen using organic materials that emit light when electric current is applied."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:28
+msgid "The SSD1306 I2C OLED display module operates by controlling an OLED (Organic Light-Emitting Diode) display using the powerful single-chip CMOS OLED driver controller, the SSD1306. This controller manages all RAM buffering and demands minimal effort from the connected microcontroller, such as an Arduino. OLED displays are renowned for their extremely light and potentially flexible nature, producing brighter and crisper images compared to traditional displays due to being almost paper-thin."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:30
+msgid "The main advantage of an OLED Display is that it emits its own light and doesn’t need another source of backlight. Due to this, OLED Displays often have better contrast, brightness and viewing angles when compared to LCD displays."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:32
+msgid "Another important feature of OLED Displays is deep black levels. Since each pixel emits its own light in an OLED Display, to produce black color, the individual pixel can be turned OFF."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:34
+msgid "Due to lower power consumption (only pixels which are lit up draw current), OLED displays are also popular in battery operated devices like Smart Watches, Health Trackers and other wearables."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:37
+msgid "Principle"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:38
+msgid "An OLED display module consists of an OLED panel and an OLED driver chip that is mounted on the back of the module. The OLED panel is made of many tiny pixels that can produce different colors of light. Each pixel consists of several layers of organic materials sandwiched between two electrodes (anode and cathode). When electric current flows through the electrodes, the organic materials emit light of different wavelengths depending on their composition."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:40
+msgid "The OLED driver chip is a chip that can control the pixels of the OLED panel using a serial communication protocol called I2C (Inter-Integrated Circuit)."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:42
+msgid "The OLED driver chip converts the signals from the Arduino into commands for the OLED panel. The Arduino can send data to the OLED driver chip using a library that can control the I2C protocol. One such library is the Adafruit SSD1306 library1. With this library, you can initialize the OLED display module, set the brightness level, print text, graphics or images, etc."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:45
+msgid "Usage"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:47
+msgid "**Hardware components**"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:49
+msgid "Arduino Uno R4 or R3 board * 1"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:50
+msgid "OLED Display Module * 1"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:51
+msgid "Jumper Wires"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:54
+msgid "**Circuit Assembly**"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:65
+msgid "Code"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:68
+#: ../../source/components_basic/22-component_oled.rst:94
+msgid "To install the library, use the Arduino Library Manager and search for **\"Adafruit SSD1306\"** and **\"Adafruit GFX\"** and install it."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:84
+msgid "Code explanation"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:86
+msgid "**Library Inclusion and Initial Definitions**: The necessary libraries for interfacing with the OLED are included. Following that, definitions regarding the OLED's dimensions and I2C address are provided."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:90
+msgid "**Adafruit SSD1306**: This library is designed to help with the interfacing of the SSD1306 OLED display. It provides methods to initialize the display, control its settings, and display content."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:91
+msgid "**Adafruit GFX Library**: This is a core graphics library for displaying text, producing colors, drawing shapes, etc., on various screens including OLEDs."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:109
+msgid "**Bitmap Data**: Bitmap data for displaying a custom icon on the OLED screen. This data represents an image in a format that the OLED can interpret."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:112
+msgid "You can use this online tool called |link_image2cpp| that can turn your image into an array."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:114
+msgid "The ``PROGMEM`` keyword denotes that the array is stored in the program memory of the Arduino microcontroller. Storing data in program memory(PROGMEM) instead of RAM can be helpful for large amounts of data, which would otherwise take up too much space in RAM."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:120
+msgid "**Setup Function (Initialization and Display)**: The ``setup()`` function initializes the OLED and displays a series of patterns, texts, and animations."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:132
+msgid "Additional Ideas"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:134
+msgid "Use buttons to change the displayed messages or toggle between different patterns and animations."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:136
+msgid "Display sensor readings (like temperature or humidity) on the OLED in real-time."
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:139
+msgid "More Projects"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:140
+msgid ":ref:`fun_heartrate_monitor`"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:141
+msgid ":ref:`fun_tof_distance_monitor`"
+msgstr ""
+
+#: ../../source/components_basic/22-component_oled.rst:142
+msgid ":ref:`iot_Bluetooth_oled`"
+msgstr ""

@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:18
+msgid "Smart trashcan"
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:27
+msgid "This project revolves around the concept of a smart trash can. The primary aim is to have the trash can's lid automatically open when an object approaches within a set distance (20cm in this case). The functionality is achieved by using an ultrasonic distance sensor paired with a servo motor. The distance between the object and the sensor is continually measured. If the object is close enough, the servo motor is triggered to open the lid."
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:31
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:36
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:37
+msgid ":ref:`cpn_ultrasonic`"
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:38
+msgid ":ref:`cpn_servo`"
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:42
+msgid "2. Code"
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:44
+msgid "Open the ``01-Smart_trashcan.ino`` file under the path of ``ultimate-sensor-kit\\code\\fun_project\\01-Smart_trashcan``, or copy this code into **Arduino IDE**."
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:52
+msgid "3. Code explanation"
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:54
+msgid "The project is based on real-time monitoring of the distance between an object and a trash can. An ultrasonic sensor continuously measures this distance, and if an object approaches within 20cm, the trash can interprets it as an intention to dispose of waste and automatically opens its lid. This automation adds smartness and convenience to a regular trash can."
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:56
+msgid "**Initial Setup and Variable Declaration**"
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:58
+msgid "Here, we're including the ``Servo`` library and defining the constants and variables we'll use. The pins for the servo and the ultrasonic sensor are declared. We also have an array ``averDist`` to hold the three distance measurements."
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:73
+msgid "setup() Function"
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:75
+msgid "The ``setup()`` function initializes serial communication, configures the ultrasonic sensor's pins, and sets the initial position of the servo to the closed position."
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:90
+msgid "loop() Function"
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:92
+msgid "The ``loop()`` function is responsible for continuously measuring the distance, computing its average, and then making a decision whether to open or close the trash can's lid based on this averaged distance."
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:115
+msgid "Distance Reading Function"
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:117
+msgid "This function, ``readDistance()``, is what actually interacts with the ultrasonic sensor. It sends a pulse and waits for an echo. The time taken for the echo is then used to calculate the distance between the sensor and any object in front of it."
+msgstr ""
+
+#: ../../source/fun_project/01-fun_Smart_trashcan.rst:119
+msgid "You can refer to the ultrasonic sensor principle in :ref:`cpn_ultrasonic_principle`."
+msgstr ""

@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/components_basic/27-component_servo.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:18
+msgid "Servo Motor (SG90)"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:25
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:26
+msgid "Servo motors are devices that can rotate to a specific angle or position. They can be used to move robotic arms, steering wheels, camera gimbals, etc. Servo motors have three wires: power, ground and signal. The power wire is usually red and should be connected to the 5V pin on the Arduino board. The ground wire is usually black or brown and should be connected to a ground pin on the board. The signal wire is usually yellow or orange and should be connected to a PWM pin on the board."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:29
+msgid "Principle"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:30
+msgid "A servo is generally composed of the following parts: case, shaft, gear system, potentiometer, DC motor, and embedded board."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:32
+msgid "It works like this:"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:34
+msgid "The microcontroller sends out PWM signals to the servo, and then the embedded board in the servo receives the signals through the signal pin and controls the motor inside to turn."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:35
+msgid "As a result, the motor drives the gear system and then motivates the shaft after deceleration."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:36
+msgid "The shaft and potentiometer of the servo are connected together."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:37
+msgid "When the shaft rotates, it drives the potentiometer, so the potentiometer outputs a voltage signal to the embedded board."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:38
+msgid "Then the board determines the direction and speed of rotation based on the current position, so it can stop exactly at the right position as defined and hold there."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:48
+msgid "**Work Pulse**"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:50
+msgid "The angle is determined by the duration of a pulse that is applied to the control wire. This is called Pulse width Modulation."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:52
+msgid "The servo expects to see a pulse every 20 ms. The length of the pulse will determine how far the servo turns."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:53
+msgid "For example, a 1.5ms pulse will make the servo turn to the 90 degree position (neutral position)."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:54
+msgid "When a pulse is sent to a servo that is less than 1.5 ms, the servo rotates to a position and holds its output shaft some number of degrees counterclockwise from the neutral point."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:55
+msgid "When the pulse is wider than 1.5 ms the opposite occurs."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:56
+msgid "The minimal width and the maximum width of pulse that will command the servo to turn to a valid position are functions of each servo."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:57
+msgid "Generally the pulse will be about 0.5 ms ~ 2.5 ms wide."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:68
+msgid "Usage"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:70
+msgid "**Hardware components**"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:72
+msgid "Arduino Uno R4 or R3 board * 1"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:73
+msgid "Servo Motor * 1"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:74
+msgid "Jumper Wires"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:77
+msgid "**Circuit Assembly**"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:88
+msgid "Code"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:104
+msgid "Code explanation"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:106
+msgid "Here, the ``Servo`` library is included which allows for easy control of the servo motor. The pin connected to the servo and the initial angle of the servo are also defined."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:115
+msgid "The ``setup()`` function runs once when the Arduino starts. The servo is attached to the defined pin using the ``attach()`` function."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:123
+msgid "The main loop has two ``for`` loops. The first loop increases the angle from 0 to 180 degrees, and the second loop decreases the angle from 180 to 0 degrees. The ``servo.write(angle)`` command sets the servo to the specified angle. The ``delay(15)`` causes the servo to wait for 15 milliseconds before moving to the next angle, controlling the speed of the scanning movement."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:141
+msgid "Additional Ideas"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:143
+msgid "Control the servo’s motion using a potentiometer. The rotation of the potentiometer could be used to directly control the angle of the servo."
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:146
+msgid "More Projects"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:147
+msgid ":ref:`fun_smart_trashcan`"
+msgstr ""
+
+#: ../../source/components_basic/27-component_servo.rst:148
+msgid ":ref:`iot_Bluetooth_lock_controller`"
+msgstr ""

@@ -1,0 +1,321 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:18
+msgid "Intrusion Alert System with Blynk"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:28
+msgid "This project demonstrate a simple home intrusion detection system using a passive infrared (PIR) sensor (HC-SR501). When the system is set to 'Away' mode through the Blynk app, the PIR sensor monitors for motion. Any detected movement triggers a notification on the Blynk app, alerting the user of potential intrusion."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:33
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:37
+msgid "The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:44
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:45
+msgid ":ref:`cpn_esp8266`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:46
+msgid ":ref:`cpn_pir_motion`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:50
+msgid "2. Configure Blynk"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:53
+msgid "If you are not familiar with Blynk, it is strongly recommended that you read these two tutorials first. :ref:`iot_blynk_start` is a beginner's guide for Blynk, which includes how to configure ESP8266 and register with Blynk. And :ref:`iot_Flame` is a simple example, but the description of the steps will be more detailed."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:56
+msgid "**2.1 Create template**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:58
+msgid "Firstly, we need to establish a template on Blynk. Follow the steps below to create a **\"Intrusion Alert System\"** template."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:65
+msgid "**2.2 Datastream**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:67
+msgid "Create **Datastreams** of type **Virtual Pin** in the **Datastream** page receive data from esp8266 and uno r4 board."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:69
+msgid "Create Virtual Pin V0 according to the following diagram:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:71
+msgid "Set the name of the **Virtual Pin V0** to **AwayMode**. Set the **DATA TYPE** to **Integer** and MIN and MAX to **0** and **1**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:76
+msgid "Create Virtual Pin V1 according to the following diagram:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:78
+msgid "Set the name of the **Virtual Pin V1** to **Current status**. Set the **DATA TYPE** to **String**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:83
+msgid "Make sure that you have set up two Virtual Pins according to the steps above."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:94
+msgid "**2.3 Event**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:96
+msgid "Next, we will create an **event** that logs the detection of intrusion and sends an email notification."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:99
+msgid "It is recommended to keep it consistent with my settings, otherwise you may need to modify the code to run the project. Make sure that the **EVENT CODE** is set as ``intrusion_detected``."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:105
+msgid "Go to the **Notifications** page and configure email settings."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:116
+msgid "**2.4 Web Dashboard**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:118
+msgid "We also need to configure the **Web Dashboard** to interact with the Intrusion Alert System."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:120
+msgid "Drag and drop a **Switch widget** and a **Label widget** to the **Web Dashboard** page."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:126
+msgid "In the settings page of the **Switch widget**, select **Datastream** as **AwayMode(V0)**. Set **ONLABEL** and **OFFLABEL** to display \"away home\" when the switch is turned on, and \"at home\" when the switch is turned off."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:132
+msgid "In the settings page of the **Label widget**, select **Datastream** as **Current status(V1)**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:139
+msgid "**2.5 Save template**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:141
+msgid "At last, remember to save the template."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:152
+msgid "3. Run the Code"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:154
+msgid "Open the ``02-Intrusion_alert_system.ino`` file under the path of ``ultimate-sensor-kit\\code\\iot_project_esp01\\wifi\\02-Intrusion_alert_system``, or copy this code into **Arduino IDE**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:161
+msgid "Create a Blynk device using the \"Intrusion Alert System\" template. Then, replace the ``BLYNK_TEMPLATE_ID``, ``BLYNK_TEMPLATE_NAME``, and ``BLYNK_AUTH_TOKEN`` with your own."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:169
+msgid "You also need to enter the ``ssid`` and ``password`` of the WiFi you are using."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:176
+msgid "After selecting the correct board and port, click the **Upload** button."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:178
+msgid "Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:186
+msgid "If the message ``ESP is not responding`` appears when you connect, please follow these steps."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:188
+msgid "Make sure the 9V battery is plugged in."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:189
+msgid "Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:190
+msgid "Press the reset button on the R4 board."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:192
+msgid "Sometimes, you may need to repeat the above operation 3-5 times, please be patient."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:196
+msgid "4. Code explanation"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:198
+msgid "**Configuration & Libraries**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:200
+msgid "Here, constants and credentials for Blynk are set up. Necessary libraries for the ESP8266 WiFi module and Blynk are included."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:212
+msgid "**WiFi Setup**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:214
+msgid "Configure WiFi credentials and set up software serial communication with the ESP01 module."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:225
+msgid "**PIR Sensor Configuration**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:227
+msgid "Define the pin where the PIR sensor is connected and initialize state variables."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:236
+msgid "**setup() Function**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:238
+msgid "This initializes the PIR sensor as an input, sets up serial communication, connects to WiFi, and configures Blynk."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:240
+msgid "We use ``timer.setInterval(1000L, myTimerEvent)`` to set the timer interval in setup(), here we set to execute the ``myTimerEvent()`` function every **1000ms**. You can modify the first parameter of ``timer.setInterval(1000L, myTimerEvent)`` to change the interval between ``myTimerEvent`` executions."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:258
+msgid "**loop() Function**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:260
+msgid "The loop function repeatedly runs Blynk and the Blynk timer functions."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:269
+msgid "**Blynk App Interaction**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:271
+msgid "These functions are called when the device connects to Blynk and when there's a change in the state of the virtual pin V0 on the Blynk app."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:273
+msgid "Every time the device connects to the Blynk server, or reconnects due to poor network conditions, the ``BLYNK_CONNECTED()`` function is called. The ``Blynk.syncVirtual()`` command request a single Virtual Pin value. The specified Virtual Pin will perform ``BLYNK_WRITE()`` call. Please refer to |link_blynk_syncing| for more details."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:275
+msgid "Whenever the value of a virtual pin on the BLYNK server changes, it will trigger ``BLYNK_WRITE()``. More details at |link_blynk_write|."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:294
+msgid "**Data Handling**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:296
+msgid "Every second, the ``myTimerEvent()`` function calls ``sendData()``. If the away mode is enabled on Blynk, it checks the PIR sensor and sends a notification to Blynk if motion is detected."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:298
+msgid "We use ``Blynk.virtualWrite(V1, \"Somebody in your house! Please check!\");`` to change the text of a label."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:300
+msgid "Use ``Blynk.logEvent(\"intrusion_detected\");`` to log event to Blynk."
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:329
+msgid "**Reference**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:331
+msgid "|link_blynk_doc|"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:332
+msgid "|link_blynk_quickstart|"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:333
+msgid "|link_blynk_virtualWrite|"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:334
+msgid "|link_blynk_logEvent|"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:335
+msgid "|link_blynk_timer_intro|"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:336
+msgid "|link_blynk_syncing|"
+msgstr ""
+
+#: ../../source/iot_project_esp01/02-iot_Intrusion_alert_system.rst:337
+msgid "|link_blynk_write|"
+msgstr ""

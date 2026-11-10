@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/arduino_start/03_create_save.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/arduino_start/03_create_save.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/arduino_start/03_create_save.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/arduino_start/03_create_save.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/arduino_start/03_create_save.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/arduino_start/03_create_save.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/arduino_start/03_create_save.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/arduino_start/03_create_save.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/arduino_start/03_create_save.rst:16
+msgid "How to create, open or Save the Sketch?"
+msgstr ""
+
+#: ../../source/arduino_start/03_create_save.rst:19
+msgid "When you open the Arduino IDE for the first time or create a new sketch, you will see a page like this, where the Arduino IDE creates a new file for you, which is called a \"sketch\"."
+msgstr ""
+
+#: ../../source/arduino_start/03_create_save.rst:23
+msgid "These sketch files have a regular temporary name, from which you can tell the date the file was created. ``sketch_oct14a.ino`` means October 14th first sketch, ``.ino`` is the file format of this sketch."
+msgstr ""
+
+#: ../../source/arduino_start/03_create_save.rst:25
+msgid "Now let's try to create a new sketch. Copy the following code into the Arduino IDE to replace the original code."
+msgstr ""
+
+#: ../../source/arduino_start/03_create_save.rst:45
+msgid "Press ``Ctrl+S`` or click **File** -> **Save**. The Sketch is saved in: ``C:\\Users\\{your_user}\\Documents\\Arduino`` by default, you can rename it or find a new path to save it."
+msgstr ""
+
+#: ../../source/arduino_start/03_create_save.rst:49
+msgid "After successful saving, you will see that the name in the Arduino IDE has been updated."
+msgstr ""
+
+#: ../../source/arduino_start/03_create_save.rst:53
+msgid "Please continue with the next section to learn how to upload this created sketch to your Arduino board."
+msgstr ""

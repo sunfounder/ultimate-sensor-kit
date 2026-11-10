@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flammenwarnsystem mit Blynk &mdash; SunFounder Ultimate Sensor Kit  Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=245627df"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=70a09b52"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=2c65fa5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Einbruchmeldeanlage mit Blynk" href="02-iot_Intrusion_alert_system.html" />
+    <link rel="prev" title="1.4 Verbindung des R4-Boards mit Blynk herstellen" href="blynk_start/04-iot_connect_r4_blynk.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">脺ber das Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Einstieg in Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Kurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Code herunterladen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">Grundlagen der Komponenten</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../iot_project.html">IoT-Projekte</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="00-iot_project_esp01.html">IoT-Projekte</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="blynk_start/00-blynk_start.html">Einführung in Blynk</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Flammenwarnsystem mit Blynk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#schaltung-aufbauen">1. Schaltung aufbauen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blynk-konfigurieren">2. Blynk konfigurieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-ausfuhren">3. Code ausführen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-erklarung">4. Code-Erklärung</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="02-iot_Intrusion_alert_system.html">Einbruchmeldeanlage mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03-iot_Plant_monitor.html">Pflanzenüberwachung mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06-iot_Remote_relay_controller.html">Ferngesteuerter Relais-Controller mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07-iot_Auto_watering_system.html">Automatisches Bewässerungssystem mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04-iot_Vibration_alert_system.html">Vibrationserkennungssystem mit IFTTT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05-iot_Weather_monitor.html">Wetterüberwachung mit ThingSpeak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="00-iot_bluetooth_start.html">Bluetooth-Einstieg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15-iot_Bluetooth_lcd.html">Bluetooth LCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16-iot_Bluetooth_traffic_light.html">Bluetooth-Ampel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08-iot_Bluetooth_lock_controller.html">Bluetooth-Schlosssteuerung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09-iot_Bluetooth_RGB_controller.html">Bluetooth RGB-Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-iot_Bluetooth_environmental_monitor.html">Bluetooth-Umweltmonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-iot_Bluetooth_piano.html">Bluetooth-Klavier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="12-iot_Bluetooth_oled.html">Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="13-iot_Bluetooth_remote_relay.html">Bluetooth-Fernrelais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14-iot_Bluetooth_voice_control_relay.html">Bluetooth Sprachgesteuertes Relais</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">Spaßprojekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Vielen Dank</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../iot_project.html">IoT-Projekte</a></li>
+          <li class="breadcrumb-item"><a href="00-iot_project_esp01.html">IoT-Projekte</a></li>
+      <li class="breadcrumb-item active">Flammenwarnsystem mit Blynk</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs-de/docs/source/iot_project_esp01/01-iot_Flame_alert_system.rst" class="fa fa-github"> Auf GitHub bearbeiten</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Hallo und willkommen in der SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.</p>
+<p><strong>Warum beitreten?</strong></p>
+<ul class="simple">
+<li><p><strong>Expertenunterstützung</strong>: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.</p></li>
+<li><p><strong>Lernen &amp; Teilen</strong>: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.</p></li>
+<li><p><strong>Exklusive Vorschauen</strong>: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.</p></li>
+<li><p><strong>Spezialrabatte</strong>: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.</p></li>
+<li><p><strong>Festliche Aktionen und Gewinnspiele</strong>: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.</p></li>
+</ul>
+<p>👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [<a href="https://bit.ly/raphaelkit " target="_blank">hier</a>] und treten Sie heute bei!</p>
+</div>
+<section id="flammenwarnsystem-mit-blynk">
+<span id="iot-flame"></span><h1>Flammenwarnsystem mit Blynk<a class="headerlink" href="#flammenwarnsystem-mit-blynk" title="Link to this heading"></a></h1>
+<video loop autoplay muted style="max-width:100%">
+   <source src="../_static/video/iot/01-iot_Flame_alert_system.mp4"  type="video/mp4">
+   Ihr Browser unterstützt das Video-Tag nicht.
+</video><p>In diesem Kapitel zeigen wir Ihnen, wie Sie mit Blynk ein Flammenalarmsystem für Ihr Zuhause einrichten können. Mit einem Flammensensor können Sie potenzielle Brände in Ihren vier Wänden frühzeitig erkennen. Über Blynk können Sie die erfassten Daten im Internet überwachen. Im Falle eines Feuers erhalten Sie umgehend eine E-Mail-Benachrichtigung.</p>
+<section id="schaltung-aufbauen">
+<h2>1. Schaltung aufbauen<a class="headerlink" href="#schaltung-aufbauen" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Das ESP8266-Modul benötigt eine hohe Stromstärke für einen stabilen Betrieb. Achten Sie daher darauf, dass die 9V-Batterie angeschlossen ist.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/01-Wiring_flame_alert_system.png"><img alt="../_images/01-Wiring_flame_alert_system.png" src="../_images/01-Wiring_flame_alert_system.png" style="width: 90%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima-Platine</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/03-component_flame.html#cpn-flame"><span class="std std-ref">Flammen-Sensormodul</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/37-component_esp8266.html#cpn-esp8266"><span class="std std-ref">ESP8266-Modul</span></a></p></li>
+</ul>
+</section>
+<section id="blynk-konfigurieren">
+<h2>2. Blynk konfigurieren<a class="headerlink" href="#blynk-konfigurieren" title="Link to this heading"></a></h2>
+<section id="vorlage-erstellen">
+<h3><strong>2.1 Vorlage erstellen</strong><a class="headerlink" href="#vorlage-erstellen" title="Link to this heading"></a></h3>
+<p>Zuerst erstellen wir in Blynk eine Vorlage für das <strong>„Flame Alert System“</strong>.</p>
+<a class="reference internal image-reference" href="../_images/01-create_template_1_shadow.png"><img alt="../_images/01-create_template_1_shadow.png" class="align-center" src="../_images/01-create_template_1_shadow.png" style="width: 70%;" /></a>
+<p>Achten Sie darauf, dass bei <strong>HARDWARE</strong> <strong>ESP8266</strong> und bei <strong>CONNECT TYPE</strong> <strong>WiFi</strong> eingestellt ist.</p>
+<a class="reference internal image-reference" href="../_images/01-create_template_2_shadow.png"><img alt="../_images/01-create_template_2_shadow.png" class="align-center" src="../_images/01-create_template_2_shadow.png" style="width: 70%;" /></a>
+<br/></section>
+<section id="datenstrom">
+<h3><strong>2.2 Datenstrom</strong><a class="headerlink" href="#datenstrom" title="Link to this heading"></a></h3>
+<p>Erstellen Sie im Bereich <strong>Datastream</strong> einen <strong>Datastream</strong> des Typs <strong>Virtual Pin</strong>, um den Wert des Flammensensors zu erfassen.</p>
+<a class="reference internal image-reference" href="../_images/01-datastream_1_shadow.png"><img alt="../_images/01-datastream_1_shadow.png" class="align-center" src="../_images/01-datastream_1_shadow.png" style="width: 90%;" /></a>
+<p>Geben Sie dem <strong>Virtual Pin</strong> den Namen <code class="docutils literal notranslate"><span class="pre">flame_sensor_value</span></code>. Setzen Sie den <strong>DATA TYPE</strong> auf <strong>Integer</strong> und MIN und MAX auf <strong>0</strong> und <strong>1</strong>.</p>
+<a class="reference internal image-reference" href="../_images/01-datastream_2_shadow.png"><img alt="../_images/01-datastream_2_shadow.png" class="align-center" src="../_images/01-datastream_2_shadow.png" style="width: 90%;" /></a>
+<br/></section>
+<section id="ereignis">
+<h3><strong>2.3 Ereignis</strong><a class="headerlink" href="#ereignis" title="Link to this heading"></a></h3>
+<p>Nun legen wir ein <strong>event</strong> an, das bei Flammenerkennung protokolliert und eine E-Mail-Benachrichtigung verschickt.</p>
+<a class="reference internal image-reference" href="../_images/01-event_1_shadow.png"><img alt="../_images/01-event_1_shadow.png" class="align-center" src="../_images/01-event_1_shadow.png" style="width: 80%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Es wird empfohlen, die Einstellungen beizubehalten, um den Code ohne weitere Anpassungen verwenden zu können.</p>
+</div>
+<p>Legen Sie den <strong>EVENT NAME</strong> auf <code class="docutils literal notranslate"><span class="pre">flame_detection_alert</span></code> fest. Sie können den Inhalt der versendeten E-Mail anpassen, indem Sie eine <strong>DESCRIPTION</strong> für die Auslösung des Ereignisses festlegen. Darunter können Sie auch die Häufigkeitsbeschränkungen für die Ereignisauslösung einstellen.</p>
+<a class="reference internal image-reference" href="../_images/01-event_2_shadow.png"><img alt="../_images/01-event_2_shadow.png" class="align-center" src="../_images/01-event_2_shadow.png" style="width: 80%;" /></a>
+<p>Navigieren Sie zur <strong>Notifications</strong>-Seite und konfigurieren Sie die E-Mail-Einstellungen.</p>
+<a class="reference internal image-reference" href="../_images/01-event_3_shadow.png"><img alt="../_images/01-event_3_shadow.png" class="align-center" src="../_images/01-event_3_shadow.png" style="width: 80%;" /></a>
+<br/></section>
+<section id="web-dashboard">
+<h3><strong>2.4 Web-Dashboard</strong><a class="headerlink" href="#web-dashboard" title="Link to this heading"></a></h3>
+<p>Wir richten auch das <strong>Web-Dashboard</strong> ein, um die vom Uno-Board übermittelten Sensordaten darzustellen.</p>
+<p>Fügen Sie auf der <strong>Web-Dashboard</strong>-Seite ein <strong>Label-Widget</strong> hinzu.</p>
+<a class="reference internal image-reference" href="../_images/01-web_dashboard_1_shadow.png"><img alt="../_images/01-web_dashboard_1_shadow.png" class="align-center" src="../_images/01-web_dashboard_1_shadow.png" style="width: 100%;" /></a>
+<p>In den Einstellungen des <strong>Label-Widgets</strong> wählen Sie als <strong>Datenstrom</strong> <strong>flame_sensor_value(V0)</strong> aus. Legen Sie dann die Farbe des <strong>WIDGET BACKGROUND</strong> so fest, dass sie sich mit dem Datenwert ändert. Bei einem Wert von 1 wird der Hintergrund grün, bei einem Wert von 0 rot dargestellt.</p>
+<a class="reference internal image-reference" href="../_images/01-web_dashboard_2_shadow.png"><img alt="../_images/01-web_dashboard_2_shadow.png" class="align-center" src="../_images/01-web_dashboard_2_shadow.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="../_images/01-web_dashboard_3_shadow.png"><img alt="../_images/01-web_dashboard_3_shadow.png" class="align-center" src="../_images/01-web_dashboard_3_shadow.png" style="width: 100%;" /></a>
+<br/></section>
+<section id="vorlage-speichern">
+<h3><strong>2.5 Vorlage speichern</strong><a class="headerlink" href="#vorlage-speichern" title="Link to this heading"></a></h3>
+<p>Vergessen Sie nicht, die Vorlage zum Schluss zu speichern.</p>
+<a class="reference internal image-reference" href="../_images/01-save_template_shadow.png"><img alt="../_images/01-save_template_shadow.png" class="align-center" src="../_images/01-save_template_shadow.png" style="width: 70%;" /></a>
+<p>Falls Sie die Vorlage nachträglich bearbeiten müssen, können Sie oben rechts auf das Bearbeitungssymbol klicken.</p>
+<a class="reference internal image-reference" href="../_images/01-save_template_2_shadow.png"><img alt="../_images/01-save_template_2_shadow.png" class="align-center" src="../_images/01-save_template_2_shadow.png" style="width: 70%;" /></a>
+<br/></section>
+</section>
+<section id="code-ausfuhren">
+<h2>3. Code ausführen<a class="headerlink" href="#code-ausfuhren" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Öffnen Sie die Datei <code class="docutils literal notranslate"><span class="pre">01-Flame_alert_system.ino</span></code> im Verzeichnis <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\iot_project\wifi\01-Flame_alert_system</span></code>, oder kopieren Sie diesen Code in die <strong>Arduino IDE</strong>.</p>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/85d6f0ed-9bff-4b44-9e3e-9e954b0bbc5a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe></li>
+<li><p>Legen Sie ein Blynk-Gerät mit der Vorlage für die Flammenerkennung an. Anschließend ersetzen Sie <code class="docutils literal notranslate"><span class="pre">BLYNK_TEMPLATE_ID</span></code>, <code class="docutils literal notranslate"><span class="pre">BLYNK_TEMPLATE_NAME</span></code> und <code class="docutils literal notranslate"><span class="pre">BLYNK_AUTH_TOKEN</span></code> durch Ihre eigenen Angaben.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define BLYNK_TEMPLATE_ID "TMPxxxxxxx"</span>
+<span class="cp">#define BLYNK_TEMPLATE_NAME "Flame Alert System"</span>
+<span class="cp">#define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxx"</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/01-create_device_1_shadow.png"><img alt="../_images/01-create_device_1_shadow.png" class="align-center" src="../_images/01-create_device_1_shadow.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../_images/01-create_device_2_shadow.png"><img alt="../_images/01-create_device_2_shadow.png" class="align-center" src="../_images/01-create_device_2_shadow.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../_images/01-create_device_3_shadow.png"><img alt="../_images/01-create_device_3_shadow.png" class="align-center" src="../_images/01-create_device_3_shadow.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../_images/01-create_device_4_shadow.png"><img alt="../_images/01-create_device_4_shadow.png" class="align-center" src="../_images/01-create_device_4_shadow.png" style="width: 80%;" /></a>
+</li>
+<li><p>Geben Sie auch die <code class="docutils literal notranslate"><span class="pre">SSID</span></code> und das <code class="docutils literal notranslate"><span class="pre">Passwort</span></code> Ihres WLANs ein.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">char</span><span class="w"> </span><span class="n">ssid</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"your_ssid"</span><span class="p">;</span>
+<span class="kr">char</span><span class="w"> </span><span class="n">pass</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"your_password"</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Wählen Sie das korrekte Board und den Port aus und klicken Sie auf die Schaltfläche <strong>Hochladen</strong>.</p></li>
+<li><p>Öffnen Sie den seriellen Monitor (Baudrate auf 115200 einstellen) und warten Sie auf eine erfolgreiche Verbindungsmeldung.</p>
+<a class="reference internal image-reference" href="../_images/01-ready_1_shadow.png"><img alt="../_images/01-ready_1_shadow.png" class="align-center" src="../_images/01-ready_1_shadow.png" style="width: 80%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Falls die Meldung <code class="docutils literal notranslate"><span class="pre">ESP</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">responding</span></code> erscheint, befolgen Sie bitte diese Schritte:</p>
+<ul class="simple">
+<li><p>Stellen Sie sicher, dass die 9V-Batterie angeschlossen ist.</p></li>
+<li><p>Setzen Sie das ESP8266-Modul zurück, indem Sie den Pin RST für 1 Sekunde mit GND verbinden und dann wieder trennen.</p></li>
+<li><p>Drücken Sie die Reset-Taste auf dem R4-Board.</p></li>
+</ul>
+<p>Manchmal müssen Sie diese Schritte 3-5 Mal wiederholen. Bitte haben Sie Geduld.</p>
+</div>
+</li>
+<li><p>Blynk zeigt jetzt die vom Flammensensor gelesenen Daten an. Im Label-Widget sehen Sie den vom Flammensensor gelesenen Wert. Bei einem angezeigten Wert von 1 wird der Hintergrund des Labels grün, bei einem Wert von 0 rot angezeigt, und Blynk sendet Ihnen eine Warn-E-Mail.</p>
+<a class="reference internal image-reference" href="../_images/01-ready_2_shadow.png"><img alt="../_images/01-ready_2_shadow.png" class="align-center" src="../_images/01-ready_2_shadow.png" style="width: 80%;" /></a>
+</li>
+<li><p>Wenn Sie Blynk auf mobilen Geräten verwenden möchten, beachten Sie bitte <a class="reference internal" href="../faq/blynk_mobile.html#blynk-mobile"><span class="std std-ref">Wie verwendet man Blynk auf dem Mobilgerät?</span></a>.</p></li>
+</ol>
+</section>
+<section id="code-erklarung">
+<h2>4. Code-Erklärung<a class="headerlink" href="#code-erklarung" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Bibliotheksinitialisierung</strong></p>
+<p>Bevor wir beginnen, ist es wichtig, die erforderlichen Bibliotheken und Einstellungen für die Kommunikation zwischen Arduino, dem ESP8266-WLAN-Modul und der Blynk-App einzurichten. Dieser Code setzt die benötigten Bibliotheken auf und konfiguriert eine Software-Serielle Verbindung zwischen Arduino und ESP8266-Modul mit der passenden Baudrate für die Datenübertragung.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="c1">//Set debug prints on Serial Monitor</span>
+<span class="cp">#define BLYNK_PRINT Serial</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ESP8266_Lib.h&gt;</span><span class="w">               </span><span class="c1">// Library for ESP8266</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;BlynkSimpleShieldEsp8266.h&gt;</span><span class="w">  </span><span class="c1">// Library for Blynk</span>
+
+<span class="c1">// Software Serial on Uno</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SoftwareSerial.h&gt;</span>
+<span class="nf">SoftwareSerial</span><span class="w"> </span><span class="nf">EspSerial</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w">  </span><span class="c1">// RX, TX</span>
+<span class="cp">#define ESP8266_BAUD 115200      </span><span class="c1">// Set the ESP8266 baud rate</span>
+<span class="n">ESP8266</span><span class="w"> </span><span class="nf">wifi</span><span class="p">(</span><span class="o">&amp;</span><span class="n">EspSerial</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Blynk- und WLAN-Konfiguration</strong></p>
+<p>Damit das Projekt mit der Blynk-App kommunizieren kann, muss es sich mit einem WLAN-Netzwerk verbinden. Die Anmeldeinformationen werden hier angegeben.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="c1">// Template ID, Device Name and Auth Token are provided by the Blynk Cloud</span>
+<span class="c1">// See the Device Info tab, or Template settings</span>
+<span class="cp">#define BLYNK_TEMPLATE_ID "TMPxxxxxx"</span>
+<span class="cp">#define BLYNK_TEMPLATE_NAME "Flame Alert System"</span>
+<span class="cp">#define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxxxx"</span>
+
+<span class="c1">// Your WiFi credentials.</span>
+<span class="c1">// Set password to "" for open networks.</span>
+<span class="kr">char</span><span class="w"> </span><span class="n">ssid</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"your_ssid"</span><span class="p">;</span>
+<span class="kr">char</span><span class="w"> </span><span class="n">pass</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"your_password"</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Sensor-Pin &amp; Timer-Deklaration</strong></p>
+<p>Definieren Sie die Pin-Nummer für die Flamme.
+Die Blynk-Bibliothek bietet einen integrierten Timer, und wir erstellen ein Timer-Objekt. Bitte beachten Sie <a href="https://docs.blynk.io/en/legacy-platform/legacy-articles/keep-your-void-loop-clean" target="_blank">Warum verwenden wir den Blynk-Timer?</a> .</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">sensorPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+<span class="n">BlynkTimer</span><span class="w"> </span><span class="n">timer</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>setup()-Funktion</strong></p>
+<p>Hier werden anfängliche Konfigurationen wie das Setzen des Pin-Modus für sensorPin, die Initiierung der seriellen Kommunikation, die Einstellung des BlynkTimers und die Verbindung zur Blynk-App durchgeführt.</p>
+<ul class="simple">
+<li><p>Wir verwenden <code class="docutils literal notranslate"><span class="pre">timer.setInterval(1000L,</span> <span class="pre">myTimerEvent)</span></code> um das Timer-Intervall in setup() festzulegen. Hier setzen wir es so, dass die Funktion <code class="docutils literal notranslate"><span class="pre">myTimerEvent()</span></code> alle <strong>1000 ms</strong> ausgeführt wird. Den ersten Parameter von <code class="docutils literal notranslate"><span class="pre">timer.setInterval(1000L,</span> <span class="pre">myTimerEvent)</span></code> können Sie ändern, um das Intervall zwischen den Ausführungen von <code class="docutils literal notranslate"><span class="pre">myTimerEvent</span></code> zu ändern.</p></li>
+</ul>
+<br/><div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">pinMode</span><span class="p">(</span><span class="n">sensorPin</span><span class="p">,</span><span class="w"> </span><span class="kr">INPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">  </span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">ESP8266_BAUD</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">  </span><span class="n">timer</span><span class="p">.</span><span class="n">setInterval</span><span class="p">(</span><span class="mf">1000L</span><span class="p">,</span><span class="w"> </span><span class="n">myTimerEvent</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="nf">config</span><span class="p">(</span><span class="n">wifi</span><span class="p">,</span><span class="w"> </span><span class="n">BLYNK_AUTH_TOKEN</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">connectWiFi</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="n">pass</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>loop()-Funktion</strong></p>
+<p>Die Hauptloop führt die Blynk- und Timer-Dienste kontinuierlich aus.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="nf">run</span><span class="p">();</span>
+<span class="w">  </span><span class="n">timer</span><span class="p">.</span><span class="nf">run</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>myTimerEvent() &amp; sendData()-Funktion</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nf">myTimerEvent</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Please don't send more that 10 values per second.</span>
+<span class="w">  </span><span class="n">sendData</span><span class="p">();</span><span class="w">  </span><span class="c1">// Call function to send sensor data to Blynk app</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Die Funktion <code class="docutils literal notranslate"><span class="pre">sendData()</span></code> liest den Wert vom Flammensensor und sendet ihn an Blynk. Wenn eine Flamme erkannt wird (Wert 0), sendet sie ein <code class="docutils literal notranslate"><span class="pre">Flammenerkennungsalarm</span></code>-Ereignis an die Blynk-App.</p>
+<ul class="simple">
+<li><p>Verwenden Sie <code class="docutils literal notranslate"><span class="pre">Blynk.virtualWrite(vPin,</span> <span class="pre">Wert)</span></code> um Daten an den virtuellen Pin V0 in Blynk zu senden. Mehr dazu unter <a href="https://docs.blynk.io/en/blynk-library-firmware-api/virtual-pins#blynk.virtualwrite-vpin-value" target="_blank">Blynk.virtualWrite()</a> .</p></li>
+<li><p>Nutzen Sie <code class="docutils literal notranslate"><span class="pre">Blynk.logEvent(&quot;Ereigniscode&quot;)</span></code> um ein Ereignis in Blynk zu protokollieren. Mehr dazu unter <a href="https://docs.blynk.io/en/getting-started/events-tutorial#use-blynk.logevent-firmware-api" target="_blank">Blynk.logEvent()</a> .</p></li>
+</ul>
+<blockquote>
+<div><br/></div></blockquote>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nf">sendData</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">int</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">digitalRead</span><span class="p">(</span><span class="n">sensorPin</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">virtualWrite</span><span class="p">(</span><span class="n">V0</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">);</span><span class="w">  </span><span class="c1">// send data to virtual pin V0 on Blynk</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">"flame:"</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w">  </span><span class="c1">// Print flame status on Serial Monitor</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Blynk</span><span class="p">.</span><span class="n">logEvent</span><span class="p">(</span><span class="s">"flame_alert"</span><span class="p">);</span><span class="w">  </span><span class="c1">// log flame alert event if sensor detects flame</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p><strong>Referenzen</strong></p>
+<ul class="simple">
+<li><p><a href="https://docs.blynk.io/" target="_blank">Blynk Dokumentation</a> </p></li>
+<li><p><a href="https://docs.blynk.io/en/getting-started/what-do-i-need-to-blynk/quickstart-device-code-overview" target="_blank">Blynk Schnellstart</a> </p></li>
+<li><p><a href="https://docs.blynk.io/en/blynk-library-firmware-api/virtual-pins#blynk.virtualwrite-vpin-value" target="_blank">Blynk.virtualWrite()</a> </p></li>
+<li><p><a href="https://docs.blynk.io/en/getting-started/events-tutorial#use-blynk.logevent-firmware-api" target="_blank">Blynk.logEvent()</a> </p></li>
+<li><p><a href="https://docs.blynk.io/en/legacy-platform/legacy-articles/keep-your-void-loop-clean" target="_blank">Warum verwenden wir den Blynk-Timer?</a> </p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="blynk_start/04-iot_connect_r4_blynk.html" class="btn btn-neutral float-left" title="1.4 Verbindung des R4-Boards mit Blynk herstellen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="02-iot_Intrusion_alert_system.html" class="btn btn-neutral float-right" title="Einbruchmeldeanlage mit Blynk" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

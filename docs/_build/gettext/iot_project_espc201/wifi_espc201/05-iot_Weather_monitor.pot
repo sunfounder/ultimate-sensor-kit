@@ -1,0 +1,241 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:4
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:6
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:8
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:9
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:10
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:11
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:12
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:14
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:19
+msgid "5. Weather Monitor with ThingSpeak"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:28
+msgid "This project collects temperature and pressure data using an Atmospheric Pressure Sensor. The collected data is then transmitted to the ThingSpeak cloud platform through the ESPC2-01 module and the Wi-Fi network at regular time intervals."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:32
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:36
+msgid "The module draws a high current at start-up, so make sure the 9 V battery or an external power supply is plugged into the DC jack of the R4 Minima."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:43
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:44
+msgid ":ref:`cpn_espc201`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:45
+msgid ":ref:`cpn_bmp280`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:49
+msgid "2. Configure ThingSpeak"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:51
+msgid "|link_thingspeak| ™ is an IoT analytics platform service that allows you to aggregate, visualize and analyze live data streams in the cloud. ThingSpeak provides instant visualizations of data posted by your devices to ThingSpeak. With the ability to execute MATLAB® code in ThingSpeak you can perform online analysis and processing of the data as it comes in. ThingSpeak is often used for prototyping and proof of concept IoT systems that require analytics."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:61
+msgid "**2.1 Creating ThingSpeak Account**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:63
+msgid "The first thing you need to do is to create an account with ThingSpeak. Since the collaboration with MATLAB, you can use your MathWorks credentials to login to |link_thingspeak|."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:65
+msgid "If you do not have one, you need to create an account with MathWorks and login to ThingSpeak Application."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:72
+msgid "**2.2 Creating the channel**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:74
+msgid "After logging in, create a new channel to store the data by going to \"Channels\" > \"My Channels\" and clicking on \"New Channel\"."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:79
+msgid "For this project, we need to create a channel called \"**Weather Monitor**\" with two fields: **Field 1** for \"**Temperature**\" and **Field 2** for \"**Atmospheric Pressure**\"."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:90
+msgid "3. Run the Code"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:92
+msgid "Open the ``05-Weather_monitor.ino`` file under the path of ``ultimate-sensor-kit\\code\\iot_project_espc201\\wifi\\05-Weather_monitor``, or copy this code into **Arduino IDE**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:96
+msgid "The sketch needs the **Adafruit BMP280** library. Open the Library Manager, search for ``Adafruit BMP280`` and install it."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:100
+msgid "Type the name and the password of your own Wi-Fi network."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:107
+msgid "Paste the **Write API Key** of your ThingSpeak channel into ``myAPI``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:118
+msgid "Use the **Write** key of the channel, not the Read key, and not the User key. Keep it private: anyone with that key can push data into your channel."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:121
+msgid "Select **Arduino UNO R4 Minima** and the right port, then click **Upload**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:123
+msgid "Open the Serial Monitor at **115200**. After a few seconds you should read:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:132
+msgid "and then, every 20 seconds:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:143
+msgid "If you read ``Could not find a BMP280, check the wiring and the address``, run the I2C scanner or simply try the other address: some modules answer on ``0x77`` instead of ``0x76``. The sketch already tries both, so this message means neither one answered - check SDA, SCL, VCC and GND."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:154
+msgid "Open your ThingSpeak channel. A new point appears on the graph every 20 seconds."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:158
+msgid "A free ThingSpeak channel accepts one update every 15 seconds. The sketch waits 20, so you never lose a point."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:163
+msgid "4. Code explanation"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:165
+msgid "This project does not use Blynk. The board talks to ThingSpeak with plain HTTP over the AT commands, exactly like a browser asks for a web page - which is why you can watch the values in any browser afterwards."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:169
+msgid "**What you have to fill in**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:179
+msgid "The host and the port never change. Only the API key is personal - it tells ThingSpeak which channel the numbers belong to."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:182
+msgid "**The serial port that talks to the module**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:184
+msgid "The ESPC2-01 works as a modem: the sketch sends it AT commands on D0/D1, which is ``Serial1``, a hardware port, so 115200 works without bit errors."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:191
+msgid "``espModuleInit()`` waits for the module to finish booting and then sends ``ATE0`` to switch the echo off. Without it the boot log and the echoed commands end up mixed into the replies."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:195
+msgid "**at() - one AT command, with a time limit**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:214
+msgid "Every command goes through this one function. It stops as soon as the expected answer arrives, and it **always returns**, so a missing ``OK`` can never freeze the board."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:217
+msgid "**joinWiFi()**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:225
+msgid "``AT+CWJAP`` needs several seconds - the module has to find the access point, exchange the keys and get an IP address. That is why it is given 20 seconds while the other commands only need one."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:229
+msgid "**The BMP280**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:239
+msgid "The chip answers on ``0x76`` or ``0x77`` depending on how its SDO pin is wired, so the sketch tries both before it gives up."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:242
+msgid "**loop() - a timer without delay()**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:250
+msgid "``millis()`` counts the milliseconds since power-up. Comparing it with the last update is a delay that does **not** stop the program - the board stays free to do anything else. A free ThingSpeak channel accepts one update every 15 seconds, so 20 seconds is a safe interval."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:255
+msgid "**sendData() - build the request and push it out**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:272
+msgid "Three AT commands do the work:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:274
+msgid "``AT+CIPMUX=0`` - one connection at a time."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:275
+msgid "``AT+CIPSTART`` - open a TCP connection to ``api.thingspeak.com:80``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:276
+msgid "``AT+CIPSEND=<length>`` - the module answers with ``>``, and only then you send the request. The length must be the **exact** number of characters of ``req``, which is why the sketch measures ``req.length()`` instead of guessing."
+msgstr ""
+
+#: ../../source/iot_project_espc201/wifi_espc201/05-iot_Weather_monitor.rst:280
+msgid "``field1`` and ``field2`` are the two columns of your channel. Whatever you name them in ThingSpeak, the numbers land there in that order."
+msgstr ""

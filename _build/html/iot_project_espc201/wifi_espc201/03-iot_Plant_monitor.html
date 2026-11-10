@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Plant Monitor with Blynk &mdash; SunFounder Ultimate Sensor Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../../_static/./lang.js?v=6e75df5d"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="4. Vibration Alert System with IFTTT" href="04-iot_Vibration_alert_system.html" />
+    <link rel="prev" title="2. Intrusion Alert System with Blynk" href="02-iot_Intrusion_alert_system.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">About Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_start/00_get_start.html">Get Started with Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_video_course/arduino_video_course.html">Arduino Video Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download_code.html">Download the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components_basic/00-component_list.html">Component Basics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../iot_project.html">IoT Projects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../iot_project_esp01/00-iot_project_esp01.html">IoT Projects with ESP01 &amp; Bluetooth Module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../iot_project_espc201.html">IoT Projects with ESPC201</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="00-blynk_start.html">Get Started with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01-iot_Flame_alert_system.html">1. Flame Alert System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-iot_Intrusion_alert_system.html">2. Intrusion Alert System with Blynk</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3. Plant Monitor with Blynk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#build-the-circuit">1. Build the Circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configure-blynk">2. Configure Blynk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-code">3. Run the Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-explanation">4. Code explanation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="04-iot_Vibration_alert_system.html">4. Vibration Alert System with IFTTT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05-iot_Weather_monitor.html">5. Weather Monitor with ThingSpeak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06-iot_Remote_relay_controller.html">6. Remote Relay Controller with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07-iot_Auto_watering_system.html">7. Auto Watering System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/00-iot_bluetooth_start.html">Get Started with Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/08-iot_Bluetooth_lcd.html">8. Bluetooth LCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/09-iot_Bluetooth_traffic_light.html">9. Bluetooth Traffic Light</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/10-iot_Bluetooth_environmental_monitor.html">10. Bluetooth Environmental Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/11-iot_Bluetooth_lock_controller.html">11. Bluetooth Lock Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/12-iot_Bluetooth_RGB_controller.html">12. Bluetooth RGB Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/13-iot_Bluetooth_piano.html">13. Bluetooth Piano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/14-iot_Bluetooth_oled.html">14. Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/15-iot_Bluetooth_remote_relay.html">15. Bluetooth Remote Relay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/16-iot_Bluetooth_motion_monitor.html">16. Bluetooth Motion Monitor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../fun_project/fun_project.html">Fun Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thank-learning.html">Thank You</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../iot_project.html">IoT Projects</a></li>
+          <li class="breadcrumb-item"><a href="../iot_project_espc201.html">IoT Projects with ESPC201</a></li>
+      <li class="breadcrumb-item active">3. Plant Monitor with Blynk</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs/docs/source/iot_project_espc201/wifi_espc201/03-iot_Plant_monitor.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hello, welcome to the SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.</p>
+<p><strong>Why Join?</strong></p>
+<ul class="simple">
+<li><p><strong>Expert Support</strong>: Solve post-sale issues and technical challenges with help from our community and team.</p></li>
+<li><p><strong>Learn &amp; Share</strong>: Exchange tips and tutorials to enhance your skills.</p></li>
+<li><p><strong>Exclusive Previews</strong>: Get early access to new product announcements and sneak peeks.</p></li>
+<li><p><strong>Special Discounts</strong>: Enjoy exclusive discounts on our newest products.</p></li>
+<li><p><strong>Festive Promotions and Giveaways</strong>: Take part in giveaways and holiday promotions.</p></li>
+</ul>
+<p>👉 Ready to explore and create with us? Click [<a href="https://bit.ly/raphaelkit " target="_blank">here</a>] and join today!</p>
+</div>
+<section id="plant-monitor-with-blynk">
+<span id="c201-iot-plant-monitor"></span><h1>3. Plant Monitor with Blynk<a class="headerlink" href="#plant-monitor-with-blynk" title="Link to this heading"></a></h1>
+<video loop autoplay muted style = "max-width:100%">
+   <source src="../../_static/video/iot/03-iot_Plant_monitor.mp4"  type="video/mp4">
+   Your browser does not support the video tag.
+</video><p>This project creates a plant monitoring demo system that detects the current temperature, humidity, light intensity, and soil moisture. The data is then displayed on Blynk along with suggestions based on the soil moisture levels.</p>
+<section id="build-the-circuit">
+<h2>1. Build the Circuit<a class="headerlink" href="#build-the-circuit" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The module draws a high current at start-up, so make sure the 9 V battery or an external power supply is plugged into the DC jack of the R4 Minima.</p>
+<p><strong>The kit may contain different versions of the DHT11 module. Please confirm the wiring method according to the module you have.</strong></p>
+</div>
+<a class="reference internal image-reference" href="../../_images/03-Wiring_Plant_monitor_c201.png"><img alt="../../_images/03-Wiring_Plant_monitor_c201.png" src="../../_images/03-Wiring_Plant_monitor_c201.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../../_images/03-Wiring_Plant_monitor_new_c201.png"><img alt="../../_images/03-Wiring_Plant_monitor_new_c201.png" src="../../_images/03-Wiring_Plant_monitor_new_c201.png" style="width: 80%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima Board</span></a></p></li>
+<li><p><a class="reference internal" href="../../components_basic/41-component_espc201.html#cpn-espc201"><span class="std std-ref">ESPC2-01 Module</span></a></p></li>
+<li><p><a class="reference internal" href="../../components_basic/12-component_dht11.html#cpn-dht11"><span class="std std-ref">Temperature and Humidity Sensor Module (DHT11)</span></a></p></li>
+<li><p><a class="reference internal" href="../../components_basic/10-component_soil.html#cpn-soil"><span class="std std-ref">Capacitive Soil Moisture Module</span></a></p></li>
+</ul>
+</section>
+<section id="configure-blynk">
+<h2>2. Configure Blynk<a class="headerlink" href="#configure-blynk" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The template and the device were created once in <a class="reference internal" href="00-blynk_start.html#c201-iot-blynk-start"><span class="std std-ref">Get Started with Blynk</span></a>.
+Every project adds its datastreams to that <strong>same</strong> template, so each project
+occupies its own range of virtual pins. This project uses <strong>V3</strong> to <strong>V6</strong>.</p>
+</div>
+<p><strong>What this project sends to the cloud</strong></p>
+<p>Four values, and the type of each one matters - it decides how Blynk can display it:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">temperature</span></code> - a decimal number, so <strong>Double</strong>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">humidity</span></code> - a decimal number, so <strong>Double</strong>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">soil_moisture</span></code> - a word such as <code class="docutils literal notranslate"><span class="pre">dry</span></code> / <code class="docutils literal notranslate"><span class="pre">wet</span></code>, so <strong>String</strong>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">led_status</span></code> - brightness 0..255 for the lamp on the dashboard, so <strong>Integer</strong>. The
+sketch always sends 255 and only the colour changes.</p></li>
+</ul>
+<p><strong>Add the datastreams</strong></p>
+<ol class="arabic">
+<li><p>Open <strong>Developer Zone</strong> -&gt; <strong>My Templates</strong>, click <strong>Ultimate Sensor Kit</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_template.png"><img alt="../../_images/blynk_template.png" src="../../_images/blynk_template.png" style="width: 80%;" /></a>
+</li>
+<li><p>Click <strong>Edit</strong> to open the template.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_edit.png"><img alt="../../_images/blynk_edit.png" src="../../_images/blynk_edit.png" style="width: 80%;" /></a>
+</li>
+<li><p>Click <strong>Datastreams</strong>, then <strong>Create New</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_new_data.png"><img alt="../../_images/blynk_new_data.png" src="../../_images/blynk_new_data.png" style="width: 80%;" /></a>
+</li>
+<li><p>Create the first datastream:</p>
+<ul class="simple">
+<li><p><strong>DATASTREAM NAME</strong>: <code class="docutils literal notranslate"><span class="pre">temperature</span></code></p></li>
+<li><p><strong>DISPLAY NAME</strong>: <code class="docutils literal notranslate"><span class="pre">Temperature</span></code></p></li>
+<li><p><strong>VIRTUAL PIN</strong>: <code class="docutils literal notranslate"><span class="pre">V3</span></code></p></li>
+<li><p><strong>DATA TYPE</strong>: <strong>Integer</strong></p></li>
+<li><p><strong>MIN</strong> <code class="docutils literal notranslate"><span class="pre">-100</span></code>, <strong>MAX</strong> <code class="docutils literal notranslate"><span class="pre">100</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/blynk_plant_data_tem.png"><img alt="../../_images/blynk_plant_data_tem.png" src="../../_images/blynk_plant_data_tem.png" style="width: 80%;" /></a>
+</li>
+<li><p>Set the <strong>UNITS</strong> field to <code class="docutils literal notranslate"><span class="pre">Celsius</span></code>.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_plant_data_unit.png"><img alt="../../_images/blynk_plant_data_unit.png" src="../../_images/blynk_plant_data_unit.png" style="width: 80%;" /></a>
+</li>
+<li><p>Create the other three datastreams the same way, with these values:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 26%" />
+<col style="width: 14%" />
+<col style="width: 20%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Pin</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Min / Max</p></th>
+<th class="head"><p>Units</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>V4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">humidity</span></code></p></td>
+<td><p>Double</p></td>
+<td><p>0 / 100</p></td>
+<td><p>Percent</p></td>
+</tr>
+<tr class="row-odd"><td><p>V5</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">soil_moisture</span></code></p></td>
+<td><p>String</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>V6</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">led_status</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>0 / 255</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/blynk_plant_datastreams.png"><img alt="../../_images/blynk_plant_datastreams.png" src="../../_images/blynk_plant_datastreams.png" style="width: 80%;" /></a>
+</li>
+</ol>
+<p><strong>Add the web dashboard</strong></p>
+<ol class="arabic">
+<li><p>Click <strong>Dashboard</strong>, then <strong>Add Widget</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_dashboard.png"><img alt="../../_images/blynk_dashboard.png" src="../../_images/blynk_dashboard.png" style="width: 80%;" /></a>
+</li>
+<li><p>Drag a <strong>Gauge</strong> widget onto the dashboard.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_dashboard_gauge.png"><img alt="../../_images/blynk_dashboard_gauge.png" src="../../_images/blynk_dashboard_gauge.png" style="width: 80%;" /></a>
+</li>
+<li><p>Click the three dots in the corner of the <strong>Gauge</strong> and choose <strong>Settings</strong>.</p>
+<ul class="simple">
+<li><p>Set <strong>Datastream</strong> to <code class="docutils literal notranslate"><span class="pre">Temperature</span> <span class="pre">(V3)</span></code>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/blynk_plant_gauge_set.png"><img alt="../../_images/blynk_plant_gauge_set.png" src="../../_images/blynk_plant_gauge_set.png" style="width: 80%;" /></a>
+</li>
+<li><p>Drag the other widgets onto the dashboard the same way - one more <strong>Gauge</strong>, one <strong>Label</strong> and one <strong>LED</strong> - then bind them:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 40%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Widget</p></th>
+<th class="head"><p>Datastream</p></th>
+<th class="head"><p>What it shows</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Gauge</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Humidity</span> <span class="pre">(V4)</span></code></p></td>
+<td><p>how damp the air is</p></td>
+</tr>
+<tr class="row-odd"><td><p>Label</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Soil</span> <span class="pre">Moisture</span> <span class="pre">(V5)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dry</span></code> or <code class="docutils literal notranslate"><span class="pre">wet</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>LED</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Led</span> <span class="pre">Status</span> <span class="pre">(V6)</span></code></p></td>
+<td><p>a status lamp on the dashboard: green when the soil is fine, red when it is not</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/blynk_plant_widgets.png"><img alt="../../_images/blynk_plant_widgets.png" src="../../_images/blynk_plant_widgets.png" style="width: 80%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <strong>LED</strong> widget is a <strong>lamp on the dashboard</strong>. The
+sketch always writes <code class="docutils literal notranslate"><span class="pre">255</span></code> for full brightness and only changes the colour: green
+when the soil moisture is in the right range, red when it is too wet or too dry.
+So you can read the state of the plant from across the room.</p>
+</div>
+</li>
+<li><p>Click <strong>Save</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_save.png"><img alt="../../_images/blynk_save.png" src="../../_images/blynk_save.png" style="width: 40%;" /></a>
+</li>
+</ol>
+</section>
+<section id="run-the-code">
+<h2>3. Run the Code<a class="headerlink" href="#run-the-code" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">03-Plant_monitor.ino</span></code> file under the path of <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\code\iot_project_espc201\wifi\03-Plant_monitor</span></code>, or copy this code into <strong>Arduino IDE</strong>.</p></li>
+<li><p>The three Blynk lines were copied in <a class="reference internal" href="00-blynk_start.html#c201-iot-blynk-start"><span class="std std-ref">Get Started with Blynk</span></a>. Every project of
+this kit uses the same device, so they never have to be changed - only the Wi-Fi
+settings below are project specific.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define BLYNK_TEMPLATE_ID   "TMPLxxxxxx"</span>
+<span class="cp">#define BLYNK_TEMPLATE_NAME "Ultimate Sensor Kit"</span>
+<span class="cp">#define BLYNK_AUTH_TOKEN    "YourAuthToken"</span>
+</pre></div>
+</div>
+</li>
+<li><p>You also need to enter the <code class="docutils literal notranslate"><span class="pre">ssid</span></code> and <code class="docutils literal notranslate"><span class="pre">password</span></code> of the WiFi you are using.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">char</span><span class="w"> </span><span class="n">ssid</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"your_ssid"</span><span class="p">;</span>
+<span class="kr">char</span><span class="w"> </span><span class="n">pass</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"your_password"</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>After selecting the correct board and port, click the <strong>Upload</strong> button.</p></li>
+<li><p>Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_plant_serial.png"><img alt="../../_images/blynk_plant_serial.png" src="../../_images/blynk_plant_serial.png" style="width: 80%;" /></a>
+</li>
+<li><p>You will also see the same values on the Blynk dashboard.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_plant_dashboard.png"><img alt="../../_images/blynk_plant_dashboard.png" src="../../_images/blynk_plant_dashboard.png" style="width: 80%;" /></a>
+</li>
+</ol>
+</section>
+<section id="code-explanation">
+<h2>4. Code explanation<a class="headerlink" href="#code-explanation" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Blynk account and libraries</strong></p>
+<p>The first three lines say which Blynk device this board belongs to. They come from the
+device page and are identical in every project of this kit.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define BLYNK_TEMPLATE_ID   "TMPL2Ms3WVki8"</span>
+<span class="cp">#define BLYNK_TEMPLATE_NAME "Ultimate Sensor Kit"</span>
+<span class="cp">#define BLYNK_AUTH_TOKEN    "lHSd4Q5pXP7YKUovVfPZYZqC0UHVORY6"</span>
+
+<span class="cp">#define BLYNK_PRINT Serial   </span><span class="c1">// show Blynk's own log on the Serial Monitor</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ESP8266_Lib.h&gt;</span><span class="w">               </span><span class="c1">// sends the AT commands</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;BlynkSimpleShieldEsp8266.h&gt;</span><span class="w">  </span><span class="c1">// Blynk on top of them</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>The serial port that talks to the module</strong></p>
+<p>The ESPC2-01 works as a modem: the sketch sends it AT commands. On the R4 it is wired
+to D0/D1, which is <code class="docutils literal notranslate"><span class="pre">Serial1</span></code>, a hardware port, so 115200 works without bit errors.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define EspSerial Serial1</span>
+<span class="cp">#define ESP8266_BAUD 115200</span>
+<span class="n">ESP8266</span><span class="w"> </span><span class="nf">wifi</span><span class="p">(</span><span class="o">&amp;</span><span class="n">EspSerial</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">espModuleInit()</span></code> waits for the module to finish booting and then sends
+<code class="docutils literal notranslate"><span class="pre">ATE0</span></code> to switch the echo off. Without it the module’s start-up log and the echoed
+commands end up mixed with the replies, and Blynk cannot read them.</p>
+</li>
+<li><p><strong>The DHT11 sensor</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;DHT.h&gt;</span>
+<span class="cp">#define DHTPIN 8</span>
+<span class="cp">#define DHTTYPE DHT11</span>
+<span class="n">DHT</span><span class="w"> </span><span class="nf">dht</span><span class="p">(</span><span class="n">DHTPIN</span><span class="p">,</span><span class="w"> </span><span class="n">DHTTYPE</span><span class="p">);</span>
+
+<span class="kr">float</span><span class="w"> </span><span class="n">temperature</span><span class="p">;</span>
+<span class="kr">float</span><span class="w"> </span><span class="n">humidity</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>A DHT11 returns whole degrees and whole percent, so a <code class="docutils literal notranslate"><span class="pre">float</span></code> is more precision than
+the sensor really has - but it keeps the code simple and the same for a DHT22 later.</p>
+</li>
+<li><p><strong>The soil moisture sensor and the two thresholds</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define wetSoil 320</span>
+<span class="cp">#define drySoil 400</span>
+
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">moistureSensorPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A0</span><span class="p">;</span>
+<span class="kr">int</span><span class="w"> </span><span class="n">moisture</span><span class="p">;</span>
+<span class="kr">String</span><span class="w"> </span><span class="n">soilStatus</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The probe returns an analogue value between 0 and 1023, and <strong>the wetter the soil, the
+lower the number</strong>. That is why the sketch says “below <code class="docutils literal notranslate"><span class="pre">wetSoil</span></code> = too wet”.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Measure the two numbers yourself. Push the probe into a glass of water and read the
+value: that is roughly your <code class="docutils literal notranslate"><span class="pre">wetSoil</span></code>. Then read it in dry soil: that is
+<code class="docutils literal notranslate"><span class="pre">drySoil</span></code>. The defaults 320 / 400 only fit the soil of the developer.</p>
+</div>
+</li>
+<li><p><strong>setup()</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">  </span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">ESP8266_BAUD</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">espModuleInit</span><span class="p">();</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="nf">config</span><span class="p">(</span><span class="n">wifi</span><span class="p">,</span><span class="w"> </span><span class="n">BLYNK_AUTH_TOKEN</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">connectWiFi</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="n">pass</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">timer</span><span class="p">.</span><span class="n">setInterval</span><span class="p">(</span><span class="mf">5000L</span><span class="p">,</span><span class="w"> </span><span class="n">myTimerEvent</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">dht</span><span class="p">.</span><span class="nf">begin</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">timer.setInterval(5000L,</span> <span class="pre">myTimerEvent)</span></code> measures once every five seconds. A DHT11
+cannot do better than one reading per second anyway, and plants do not change faster
+than that.</p>
+</li>
+<li><p><strong>loop()</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="nf">run</span><span class="p">();</span>
+<span class="w">  </span><span class="n">timer</span><span class="p">.</span><span class="nf">run</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Blynk.run()</span></code> keeps the connection alive, <code class="docutils literal notranslate"><span class="pre">timer.run()</span></code> fires the measurement.
+Nothing here may block, or the cloud drops the device.</p>
+</li>
+<li><p><strong>sendData() - measure, judge, report</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nf">sendData</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">humidity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dht</span><span class="p">.</span><span class="n">readHumidity</span><span class="p">();</span>
+<span class="w">  </span><span class="n">temperature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dht</span><span class="p">.</span><span class="nf">readTemperature</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isnan</span><span class="p">(</span><span class="n">humidity</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">isnan</span><span class="p">(</span><span class="n">temperature</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"Failed to read from DHT sensor!"</span><span class="p">));</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span><span class="w">                                  </span><span class="c1">// skip this round</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">moisture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">analogRead</span><span class="p">(</span><span class="n">moistureSensorPin</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kr">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">moisture</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">wetSoil</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">soilStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Soil is too wet"</span><span class="p">;</span>
+<span class="w">    </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"#D3435C"</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">moisture</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">wetSoil</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">moisture</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">drySoil</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">soilStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Soil moisture is perfect"</span><span class="p">;</span>
+<span class="w">    </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"#00FF00"</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">soilStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Soil is too dry - time to water!"</span><span class="p">;</span>
+<span class="w">    </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"#D3435C"</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">virtualWrite</span><span class="p">(</span><span class="n">V3</span><span class="p">,</span><span class="w"> </span><span class="n">temperature</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">virtualWrite</span><span class="p">(</span><span class="n">V4</span><span class="p">,</span><span class="w"> </span><span class="n">humidity</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">virtualWrite</span><span class="p">(</span><span class="n">V5</span><span class="p">,</span><span class="w"> </span><span class="n">soilStatus</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">virtualWrite</span><span class="p">(</span><span class="n">V6</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">setProperty</span><span class="p">(</span><span class="n">V6</span><span class="p">,</span><span class="w"> </span><span class="s">"color"</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">return</span></code> on a failed DHT reading leaves the dashboard showing the last good value
+instead of overwriting it with <code class="docutils literal notranslate"><span class="pre">nan</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Blynk.virtualWrite(V3,</span> <span class="pre">...)</span></code> and friends push the four values to the datastreams.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Blynk.virtualWrite(V6,</span> <span class="pre">255)</span></code> turns the <strong>LED widget on the dashboard</strong> fully on;
+<code class="docutils literal notranslate"><span class="pre">Blynk.setProperty(V6,</span> <span class="pre">&quot;color&quot;,</span> <span class="pre">color)</span></code> then paints it green or red. The real LED
+marked <strong>L</strong> on the board is not used by this project.</p></li>
+</ul>
+</li>
+<li><p><strong>printData()</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nf">printData</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"Humidity: "</span><span class="p">));</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">humidity</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"%  Temperature: "</span><span class="p">));</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">temperature</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"°C "</span><span class="p">));</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">"("</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">moisture</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">") "</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">soilStatus</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The same numbers, but on the Serial Monitor. When something looks wrong on the phone,
+this is where you check whether the sensor or the cloud is to blame.</p>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="02-iot_Intrusion_alert_system.html" class="btn btn-neutral float-left" title="2. Intrusion Alert System with Blynk" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="04-iot_Vibration_alert_system.html" class="btn btn-neutral float-right" title="4. Vibration Alert System with IFTTT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

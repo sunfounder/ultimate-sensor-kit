@@ -1,0 +1,242 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Variable &mdash; SunFounder Ultimate Sensor Kit  Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=245627df"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=70a09b52"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=2c65fa5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Arduino Video Kurs" href="../arduino_video_course/arduino_video_course.html" />
+    <link rel="prev" title="Skizzen-Schreibregeln" href="06_basic_further_syntax.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">脺ber das Ultimate Sensor Kit</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="00_get_start.html">Einstieg in Arduino</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="00_get_start.html#was-ist-arduino">Was ist Arduino?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="00_get_start.html#was-kann-arduino-tun">Was kann Arduino tun?</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="00_get_start.html#wie-erstelle-ich-ein-arduino-projekt">Wie erstelle ich ein Arduino-Projekt?</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="01_install_arduino_ide.html">Download und Installation der Arduino IDE 2.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_introduce_ide.html">Einführung in die Arduino IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_create_save.html">So erstellen, öffnen oder speichern Sie eine Skizze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_basic_upload.html">So laden Sie eine Skizze auf das Board hoch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_basic_code_struct.html">Struktur eines Arduino-Programms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_basic_further_syntax.html">Skizzen-Schreibregeln</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Variable</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#variable-deklarieren">Variable deklarieren</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Kurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Code herunterladen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">Grundlagen der Komponenten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iot_project.html">IoT-Projekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">Spaßprojekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Vielen Dank</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="00_get_start.html">Einstieg in Arduino</a></li>
+      <li class="breadcrumb-item active">Variable</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs-de/docs/source/arduino_start/07_basic_variable.rst" class="fa fa-github"> Auf GitHub bearbeiten</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Hallo und willkommen in der SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.</p>
+<p><strong>Warum beitreten?</strong></p>
+<ul class="simple">
+<li><p><strong>Expertenunterstützung</strong>: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.</p></li>
+<li><p><strong>Lernen &amp; Teilen</strong>: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.</p></li>
+<li><p><strong>Exklusive Vorschauen</strong>: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.</p></li>
+<li><p><strong>Spezialrabatte</strong>: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.</p></li>
+<li><p><strong>Festliche Aktionen und Gewinnspiele</strong>: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.</p></li>
+</ul>
+<p>👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [<a href="https://bit.ly/raphaelkit " target="_blank">hier</a>] und treten Sie heute bei!</p>
+</div>
+<section id="variable">
+<h1>Variable<a class="headerlink" href="#variable" title="Link to this heading"></a></h1>
+<p>Eine Variable ist eines der mächtigsten und wichtigsten Werkzeuge in einem Programm. Sie ermöglicht es uns, Daten in unseren Programmen zu speichern und abzurufen.</p>
+<p>Das folgende Skizzen-File verwendet Variablen. Es speichert die Pin-Nummern der integrierten LED in der Variable <code class="docutils literal notranslate"><span class="pre">ledPin</span></code> und die Zahl „500“ in der Variable <code class="docutils literal notranslate"><span class="pre">delayTime</span></code>.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="kr">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span>
+</span><span class="hll"><span class="kr">int</span><span class="w"> </span><span class="n">delayTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span>
+</span>
+<span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="kr">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="kr">HIGH</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">delay</span><span class="p">(</span><span class="n">delayTime</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="kr">LOW</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">delay</span><span class="p">(</span><span class="n">delayTime</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Ist das eine Wiederholung von dem, was <code class="docutils literal notranslate"><span class="pre">#define</span></code> macht? Die Antwort ist NEIN.</p>
+<ul class="simple">
+<li><p>Die Rolle von <code class="docutils literal notranslate"><span class="pre">#define</span></code> ist es lediglich, Text einfach und direkt zu ersetzen; es wird vom Compiler nicht als Bestandteil des Programms angesehen.</p></li>
+<li><p>Eine <code class="docutils literal notranslate"><span class="pre">Variable</span></code> hingegen existiert im Programm und wird zum Speichern und Abrufen von Werten verwendet. Sie kann ihren Wert im Programm auch ändern, was <code class="docutils literal notranslate"><span class="pre">#define</span></code> nicht kann.</p></li>
+</ul>
+<p>Im folgenden Skizzen-File addiert sich die Variable selbst, sodass die integrierte LED nach jedem Blinken länger blinkt.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span>
+<span class="kr">int</span><span class="w"> </span><span class="n">delayTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="kr">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="kr">HIGH</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">delay</span><span class="p">(</span><span class="n">delayTime</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="kr">LOW</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">delay</span><span class="p">(</span><span class="n">delayTime</span><span class="p">);</span>
+<span class="w">    </span><span class="n">delayTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">delayTime</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w"> </span><span class="c1">// Jede Ausführung erhöht den Wert um 200</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="variable-deklarieren">
+<h2>Variable deklarieren<a class="headerlink" href="#variable-deklarieren" title="Link to this heading"></a></h2>
+<p>Eine Variable zu deklarieren bedeutet, eine Variable zu erstellen.</p>
+<p>Für die Deklaration einer Variable benötigen Sie zwei Dinge: den Datentyp und den Variablennamen. Der Datentyp muss vom Variablennamen durch ein Leerzeichen getrennt und die Variablendeklaration durch ein <code class="docutils literal notranslate"><span class="pre">;</span></code> beendet werden.</p>
+<p>Nehmen wir diese Variable als Beispiel.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int</span><span class="w"> </span><span class="n">delayTime</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><strong>Datentyp</strong></p>
+<p>Hier ist <code class="docutils literal notranslate"><span class="pre">int</span></code> ein Datentyp namens Integer, der zur Speicherung von Ganzzahlen von -32768 bis 32766 verwendet werden kann. Er kann nicht zur Speicherung von Dezimalzahlen verwendet werden.</p>
+<p>Neben Ganzzahlen können Variablen auch andere Arten von Daten speichern. Die Arduino-Sprache (die, wie man sich erinnern sollte, C++ ist) bietet eingebaute Unterstützung für einige davon (hier sind nur die am häufigsten verwendeten und nützlichsten aufgelistet):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code>: Speichert eine Dezimalzahl, z.B. 3,1415926.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">byte</span></code>: Kann Zahlen von 0 bis 255 halten.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boolean</span></code>: Nimmt nur zwei mögliche Werte an, <code class="docutils literal notranslate"><span class="pre">True</span></code> oder <code class="docutils literal notranslate"><span class="pre">False</span></code>, obwohl es im Speicher ein Byte belegt.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">char</span></code>: Speichert eine Zahl von -127 bis 127. Da es als <code class="docutils literal notranslate"><span class="pre">char</span></code> markiert ist, versucht der Compiler, es einem Zeichen aus der <a href="https://www.asciitable.com/" target="_blank">ASCII table of characters</a> zuzuordnen.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">string</span></code>: Kann eine Zeichenfolge speichern, z.B. <code class="docutils literal notranslate"><span class="pre">Halloween</span></code>.</p></li>
+</ul>
+<p><strong>Variablenname</strong></p>
+<p>Sie können der Variable jeden beliebigen Namen geben, z.B. <code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">apple</span></code>, <code class="docutils literal notranslate"><span class="pre">Bruce</span></code>, <code class="docutils literal notranslate"><span class="pre">R2D2</span></code>, <code class="docutils literal notranslate"><span class="pre">Sectumsempra</span></code>, aber es gibt einige Grundregeln.</p>
+<ol class="arabic simple">
+<li><p>Beschreiben Sie den Verwendungszweck. Hier habe ich die Variable delayTime genannt, damit man leicht versteht, wofür sie dient. Wenn ich sie <code class="docutils literal notranslate"><span class="pre">barryAllen</span></code> nenne, verwirrt das die Person, die den Code betrachtet.</p></li>
+<li><p>Verwenden Sie eine gängige Benennung. Wie ich es getan habe, können Sie CamelCase verwenden, wobei das T in <code class="docutils literal notranslate"><span class="pre">delayTime</span></code> groß geschrieben ist, sodass man leicht erkennen kann, dass die Variable aus zwei Wörtern besteht. Alternativ können Sie UnderScoreCase verwenden, um die Variable als <code class="docutils literal notranslate"><span class="pre">delay_time</span></code> zu schreiben. Das beeinflusst nicht die Ausführung des Programms, erleichtert aber dem Programmierer das Lesen des Codes, wenn Sie die von Ihnen bevorzugte Benennung verwenden.</p></li>
+<li><p>Verwenden Sie keine Schlüsselwörter. Ähnlich wie bei der Eingabe von „int“ wird die Arduino-IDE es farblich hervorheben, um Sie daran zu erinnern, dass es ein Wort mit einer speziellen Bedeutung ist und nicht als Variablenname verwendet werden kann. Ändern Sie den Namen der Variable, wenn sie farblich hervorgehoben ist.</p></li>
+<li><p>Spezielle Symbole sind nicht erlaubt. Zum Beispiel Leerzeichen, #, $, /, +, % usw. Die Kombination aus englischen Buchstaben (Groß- und Kleinschreibung), Unterstrichen und Zahlen (aber Zahlen können nicht als erstes Zeichen eines Variablennamens verwendet werden) ist ausreichend vielfältig.</p></li>
+</ol>
+<p><strong>Einen Wert einer Variable zuweisen</strong></p>
+<p>Nachdem wir die Variable deklariert haben, ist es an der Zeit, die Daten zu speichern. Wir verwenden den Zuweisungsoperator (d.h. <code class="docutils literal notranslate"><span class="pre">=</span></code>), um den Wert in die Variable zu setzen.</p>
+<p>Wir können der Variable Werte zuweisen, sobald wir sie deklariert haben.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int</span><span class="w"> </span><span class="n">delayTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Es ist auch möglich, ihr später einen neuen Wert zuzuweisen.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int</span><span class="w"> </span><span class="n">delayTime</span><span class="p">;</span><span class="w"> </span><span class="c1">// kein Wert</span>
+<span class="n">delayTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span><span class="w"> </span><span class="c1">// Wert ist 500</span>
+<span class="n">delayTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">delayTime</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w"> </span><span class="c1">// Wert ist 700</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="06_basic_further_syntax.html" class="btn btn-neutral float-left" title="Skizzen-Schreibregeln" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="../arduino_video_course/arduino_video_course.html" class="btn btn-neutral float-right" title="Arduino Video Kurs" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

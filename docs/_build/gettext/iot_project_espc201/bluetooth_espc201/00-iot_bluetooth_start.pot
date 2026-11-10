@@ -1,0 +1,258 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:7
+msgid "**Expert Support**: Solve real-life coding problems and technical challenges with our community and team."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:10
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:12
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:17
+msgid "Get Started with Bluetooth"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:19
+msgid "The ESPC2-01 gives you **Wi-Fi and Bluetooth in the same module**, so the kit needs no second Bluetooth chip. The Bluetooth projects use exactly the module you already have."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:22
+msgid "In the Wi-Fi projects the board talked to Blynk through the cloud. Here the phone talks to the module **directly** - no router, no internet, no account. That is what makes Bluetooth so useful for a remote control or a small display."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:26
+msgid "By the end of this chapter you will have:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:28
+msgid "The module advertising itself as **SunFounder-C2**,"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:29
+msgid "Text typed on the phone arriving on the board, and"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:30
+msgid "Text typed on the board appearing on the phone."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:34
+msgid "1. Connect the Module"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:36
+msgid "Wire the module to the R4 Minima the same way as in the Wi-Fi projects: **5V, GND, TX, RX** - four wires, nothing else."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:41
+msgid "The module draws a high current at start-up, so make sure the 9 V battery or an external power supply is plugged into the DC jack of the R4 Minima."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:50
+msgid "2. Upload the Sketch"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:52
+msgid "Open ``00-Bluetooth_start.ino`` under the path of ``ultimate-sensor-kit\\code\\iot_project_espc201\\bluetooth\\00-Bluetooth_start``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:54
+msgid "Select **Arduino UNO R4 Minima** and the right port, then click **Upload**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:56
+msgid "The sketch does three things:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:58
+msgid "It includes ``SunFounder_BLE.h``, a small wrapper around the module's Bluetooth commands - this is why the rest of the code only needs ``bleSerial.print()`` and ``bleSerial.read()``;"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:61
+msgid "At start-up the wrapper switches Bluetooth on, sets the name to **SunFounder-C2** and starts advertising, so a phone can find it;"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:63
+msgid "After that the sketch simply passes text in both directions."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:71
+msgid "Open the Serial Monitor at **115200**. You should read:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:83
+msgid "If you read ``[!] no reply from the module`` instead, the module is not answering on D0/D1 - check the four wires and the power supply, then press the reset button on the board."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:89
+msgid "3. Find the Module with Your Phone"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:91
+msgid "Install **LightBlue** on your phone - it is free on iOS and Android. Any Bluetooth scanner works, but the screens below use LightBlue."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:100
+msgid "Open LightBlue and tap **Scan**. The module appears as **SunFounder-C2**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:104
+msgid "The name comes from the sketch. If you change it there, the new name is what appears on the phone - handy when several kits are in the same room."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:109
+msgid "**Do not pair the module in the Bluetooth settings of the phone.** This is BLE, so there is nothing to pair: LightBlue opens the connection itself. If you tap **SunFounder-C2** under *Settings > Bluetooth*, Android or iOS starts the older pairing procedure and asks for a PIN code - and the module has no code to give, so the box can never be filled in correctly."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:115
+msgid "If you already tried: open *Settings > Bluetooth*, choose **Forget this device** (or *Unpair*), switch Bluetooth off and on again, then connect from LightBlue."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:124
+msgid "Tap **SunFounder-C2** to connect. The service list opens."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:126
+msgid "Expand the service **0xA002**. It holds the characteristics **C300** to **C307**. The three used in this chapter are:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:133
+msgid "Characteristic"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:134
+msgid "Direction"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:135
+msgid "What it is for"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:136
+msgid "**C304**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:137
+msgid "phone -> board"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:138
+msgid "the phone writes text here and the board reads it"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:139
+msgid "**C305**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:140
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:143
+msgid "board -> phone"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:141
+msgid "the board pushes text here; the phone has to **Subscribe** first"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:142
+msgid "**C300**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:144
+msgid "one stored value the phone can **Read** at any time"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:153
+msgid "4. Send Text from the Phone to the Board"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:155
+msgid "Open **0xC304** and tap **Write new value**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:163
+msgid "Change the format - the button in the top right corner - to **UTF-8 String**, then type a word, for example ``hello``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:168
+msgid "This step is easy to forget. In the default hex format the board receives the numbers ``68 65 6C 6C 6F`` instead of the word ``hello``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:177
+msgid "Look at the Serial Monitor: your text appears there, and the board sends it straight back so you can see that the link works both ways."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:187
+msgid "5. Send Text from the Board to the Phone"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:189
+msgid "Open **0xC305** and tap **Subscribe**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:191
+msgid "**Subscribe** means \"keep this open and show me everything that arrives\". Without it the phone silently drops anything the board sends."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:200
+msgid "In the Serial Monitor, type a word and press **Enter**. The sketch forwards it to C305, so it shows up in LightBlue."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:209
+msgid "If you see hex numbers in LightBlue instead of your text, set the format in the top right corner to **UTF-8 String** - the same setting as in step 4."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:219
+msgid "6. What You Just Learned"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:221
+msgid "**Write** (C304) - the phone sends data to the board."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:222
+msgid "**Subscribe** (C305) - the board sends data to the phone, and the phone listens."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:223
+msgid "**Read** (C300) - the phone asks for a value whenever it likes."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/00-iot_bluetooth_start.rst:225
+msgid "The next chapters use exactly these three, only the text and the hardware change: an LCD that shows what you type, a lock that opens, an RGB lamp that changes colour."
+msgstr ""

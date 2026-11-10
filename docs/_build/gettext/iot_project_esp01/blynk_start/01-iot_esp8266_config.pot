@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:18
+msgid "1.0 Configuring the ESP8266"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:20
+msgid "The ESP8266 module that comes with the kit is already pre-burned with AT firmware, but you still need to modify its configuration by following the steps below."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:23
+msgid "Build the circuit."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:28
+msgid "Open the ``00-Set_software_serial.ino`` file under the path of ``ultimate-sensor-kit\\code\\iot_project_esp01\\wifi\\00-Set_software_serial``. Or copy this code into Arduino IDE. And upload the code."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:30
+msgid "The code establishes a software serial communication using Arduino's SoftwareSerial library, allowing the Arduino to communicate with the ESP8266 module through its digital pins 2 and 3 (as Rx and Tx). It checks for data transfer between them, forwarding received messages from one to the other at a baud rate of 115200. **With this code, you can use the Arduino's serial monitor to send AT firmware commands to the ESP8266 module and receive its responses.**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:53
+msgid "Click the magnifying glass icon (Serial Monitor) in the upper right corner and set the baud rate to **115200**. (You may have some printed information like me, or you may not, it doesn’t matter, just go to the next step.)"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:59
+msgid "If ``ready`` doesn't appear, you can try to reset the ESP8266 module(connect RST to GND) and re-open the Serial Monitor."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:61
+msgid "In addition, if the result is ``OK``, you may need to re-burn the firmware, please refer to :ref:`burn_firmware` for details. If you still can't solve it, please take a screenshot of the serial monitor and send it to service@sunfounder.com, we will help you solve the problem as soon as possible."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:63
+msgid "Click on **NEWLINE DROPDOWN BOX**, select ``both NL & CR`` in the drop down option, enter ``AT``, if it returns OK, it means ESP8266 has successfully established connection with R4 board."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:69
+msgid "Enter ``AT+CWMODE=3`` and the managed mode will be changed to **Station and AP** coexistence."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:78
+msgid "**Reference**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/01-iot_esp8266_config.rst:80
+msgid "|link_esp8266_at|"
+msgstr ""

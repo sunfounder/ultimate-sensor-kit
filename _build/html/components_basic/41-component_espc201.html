@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESPC2-01 Module &mdash; SunFounder Ultimate Sensor Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=6e75df5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="IoT Projects" href="../iot_project.html" />
+    <link rel="prev" title="JDY-31 Bluetooth Module" href="38-component_jdy31.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">About Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Get Started with Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Download the Code</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="00-component_list.html">Component Basics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="36-component_uno.html">Arduino UNO R4 Minima Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="39-component_breadboard.html">Breadboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="40-component_wires.html">Jumper Wires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-component_ultrasonic_module.html">Ultrasonic Sensor Module (HC-SR04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-component_gas.html">Gas/Smoke Sensor Module (MQ2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-component_flame.html">Flame Sensor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-component_vibration.html">Vibration Sensor Module (SW-420)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-component_mpu6050.html">Accelerometer &amp; Gyroscope Module (MPU6050)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-component_button.html">Button Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-component_photoresistor.html">Photoresistor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-component_potentiometer.html">Potentiometer Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-component_ir_obstacle.html">IR Obstacle Avoidance Sensor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-component_soil.html">Capacitive Soil Moisture Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11-component_raindrop.html">Raindrop Detection Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12-component_dht11.html">Temperature and Humidity Sensor Module (DHT11)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13-component_pir_motion.html">PIR Motion Module (HC-SR501)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14-component_bmp280.html">Temperature, Humidity &amp; Pressure Sensor (BMP280)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="15-component_max30102.html">Pulse Oximeter and Heart Rate Sensor (MAX30102)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="16-component_rtc_ds1302.html">Real Time Clock Module (DS1302)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="17-component_touch.html">Touch Sensor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="18-component_speed.html">Infrared Speed Sensor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="19-component_joystick.html">Joystick Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="20-component_VL53L0X.html">Time of Flight Micro-LIDAR Distance Sensor (VL53L0X)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="21-component_i2c_lcd1602.html">I2C LCD 1602</a></li>
+<li class="toctree-l2"><a class="reference internal" href="22-component_oled.html">OLED Display Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="23-component_traffic.html">Traffic Light Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="24-component_rgb.html">RGB Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="25-component_relay.html">5V Relay Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="26-component_buzzer.html">Passive Buzzer Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="27-component_servo.html">Servo Motor (SG90)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="28-component_pump.html">Centrifugal Pump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="29-component_ttmotor.html">TT Motor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="37-component_esp8266.html">ESP8266 Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="38-component_jdy31.html">JDY-31 Bluetooth Module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ESPC2-01 Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#features-and-specifications">Features and specifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#more-projects">More Projects</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../iot_project.html">IoT Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">Fun Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Thank You</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="00-component_list.html">Component Basics</a></li>
+      <li class="breadcrumb-item active">ESPC2-01 Module</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs/docs/source/components_basic/41-component_espc201.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hello, welcome to the SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.</p>
+<p><strong>Why Join?</strong></p>
+<ul class="simple">
+<li><p><strong>Expert Support</strong>: Solve real-life coding problems and technical challenges with our community and team.</p></li>
+<li><p><strong>Learn &amp; Share</strong>: Exchange tips, tutorials, and projects to enhance your skills.</p></li>
+<li><p><strong>Exclusive Previews</strong>: Get early access to new product announcements and sneak peeks.</p></li>
+<li><p><strong>Festive Promotions and Giveaways</strong>: Take part in giveaways and holiday promotions.</p></li>
+</ul>
+<p>👉 Ready to explore and create with us? Click [<a href="https://bit.ly/raphaelkit " target="_blank">here</a>] and join today!</p>
+</div>
+<section id="espc2-01-module">
+<span id="cpn-espc201"></span><h1>ESPC2-01 Module<a class="headerlink" href="#espc2-01-module" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="../_images/41_espc201.jpg"><img alt="../_images/41_espc201.jpg" class="align-center" src="../_images/41_espc201.jpg" style="width: 400px;" /></a>
+<p>The ESPC2-01 is a Wi-Fi and Bluetooth LE module built around the <strong>ESP32-C2</strong> chip
+(also sold as ESP8684), made by Espressif Systems. A single module provides both the
+Wi-Fi connection and the Bluetooth LE link used by the projects in this kit.</p>
+<p>Internally the module runs the Espressif <strong>ESP-AT</strong> firmware, so it is driven with
+plain AT commands over a serial port.</p>
+<p>The module <strong>plugs directly into the Wi-Fi adapter supplied with the kit</strong> - no
+jumper wires are needed. The adapter carries the 3.3 V regulator and the level
+conversion between the 5 V board and the 3.3 V module.</p>
+<p>Pins of the ESPC2-01 and their functions:</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">ESPC2-01 Pins</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>3V3</p></td>
+<td><p>Power supply, <strong>3.3 V only</strong>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>GND</p></td>
+<td><p>Ground.</p></td>
+</tr>
+<tr class="row-even"><td><p>EN</p></td>
+<td><p>Chip enable, pulled up on the module. Pull to GND to reset the chip.</p></td>
+</tr>
+<tr class="row-odd"><td><p>TX0</p></td>
+<td><p>UART0 transmit, GPIO20. Data from the module to the board.</p></td>
+</tr>
+<tr class="row-even"><td><p>RX0</p></td>
+<td><p>UART0 receive, GPIO19. Data from the board to the module.</p></td>
+</tr>
+<tr class="row-odd"><td><p>IO9</p></td>
+<td><p>Boot mode select. Pull to GND <strong>at power-up</strong> to enter download mode.</p></td>
+</tr>
+<tr class="row-even"><td><p>IO2</p></td>
+<td><p>General purpose IO, not used in this kit.</p></td>
+</tr>
+<tr class="row-odd"><td><p>IO3</p></td>
+<td><p>General purpose IO, not used in this kit.</p></td>
+</tr>
+</tbody>
+</table>
+<section id="features-and-specifications">
+<h2>Features and specifications<a class="headerlink" href="#features-and-specifications" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Chip: <strong>ESP32-C2</strong> (ESP8684H2), single core 32-bit RISC-V</p></li>
+<li><p>Wi-Fi: 802.11 b/g/n (Wi-Fi 4), <strong>2.4 GHz only</strong></p></li>
+<li><p>Bluetooth: <strong>Bluetooth LE 5.0</strong> - Classic Bluetooth is not supported</p></li>
+<li><p>Flash: <strong>2 MB</strong></p></li>
+<li><p>SRAM: 272 KB</p></li>
+<li><p>Firmware: <strong>ESP-AT v4.1.1.0</strong>, custom build that contains both the Wi-Fi AT and the BLE AT command sets</p></li>
+<li><p>Serial port: <strong>115200</strong>, 8 data bits, no parity, 1 stop bit, no flow control</p></li>
+<li><p>Module UART pins: TX0 = GPIO20, RX0 = GPIO19</p></li>
+<li><p>Supply voltage: <strong>3.3 V</strong> (there is no 5 V pin)</p></li>
+<li><p>Peak current: <strong>more than 400 mA</strong> during Wi-Fi / Bluetooth start-up</p></li>
+<li><p>Logic level: <strong>3.3 V</strong> - the pins are <strong>not 5 V tolerant</strong> (absolute maximum 3.6 V)</p></li>
+<li><p>Antenna: PCB antenna</p></li>
+<li><p>Dimensions: <strong>24 mm x 14 mm x 1.6 mm</strong> (about 12 mm high with the header soldered)</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The module runs at <strong>3.3 V</strong> and its pins are <strong>not 5 V tolerant</strong> (absolute
+maximum 3.6 V). The adapter supplied with the kit performs the level conversion,
+so the module can be plugged straight into it - never wire the module to a 5 V
+signal without that adapter.</p>
+<p>The kit also needs the <strong>9V battery</strong> (or a 6.5 - 12 V DC supply). Powered from
+USB alone the 3.3 V rail collapses when the module starts, and it never answers
+AT commands.</p>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.espressif.com/en/products/socs/esp32-c2">ESP32-C2 Series - Espressif</a></p></li>
+<li><p><a href="https://docs.espressif.com/projects/esp-at/en/latest/esp32c2/AT_Command_Set/index.html" target="_blank">ESP-AT Command Set for ESP32-C2</a></p></li>
+</ul>
+</section>
+<section id="more-projects">
+<h2>More Projects<a class="headerlink" href="#more-projects" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../iot_project_espc201/wifi_espc201/00-blynk_start.html#c201-iot-blynk-start"><span class="std std-ref">Get Started with Blynk</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="38-component_jdy31.html" class="btn btn-neutral float-left" title="JDY-31 Bluetooth Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../iot_project.html" class="btn btn-neutral float-right" title="IoT Projects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

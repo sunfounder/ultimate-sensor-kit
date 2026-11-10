@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bluetooth-Klavier &mdash; SunFounder Ultimate Sensor Kit  Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=245627df"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=70a09b52"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=2c65fa5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Bluetooth OLED" href="12-iot_Bluetooth_oled.html" />
+    <link rel="prev" title="Bluetooth-Umweltmonitor" href="10-iot_Bluetooth_environmental_monitor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">脺ber das Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Einstieg in Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Kurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Code herunterladen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">Grundlagen der Komponenten</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../iot_project.html">IoT-Projekte</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="00-iot_project_esp01.html">IoT-Projekte</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="blynk_start/00-blynk_start.html">Einführung in Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01-iot_Flame_alert_system.html">Flammenwarnsystem mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-iot_Intrusion_alert_system.html">Einbruchmeldeanlage mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03-iot_Plant_monitor.html">Pflanzenüberwachung mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06-iot_Remote_relay_controller.html">Ferngesteuerter Relais-Controller mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07-iot_Auto_watering_system.html">Automatisches Bewässerungssystem mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04-iot_Vibration_alert_system.html">Vibrationserkennungssystem mit IFTTT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05-iot_Weather_monitor.html">Wetterüberwachung mit ThingSpeak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="00-iot_bluetooth_start.html">Bluetooth-Einstieg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15-iot_Bluetooth_lcd.html">Bluetooth LCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16-iot_Bluetooth_traffic_light.html">Bluetooth-Ampel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08-iot_Bluetooth_lock_controller.html">Bluetooth-Schlosssteuerung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09-iot_Bluetooth_RGB_controller.html">Bluetooth RGB-Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-iot_Bluetooth_environmental_monitor.html">Bluetooth-Umweltmonitor</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Bluetooth-Klavier</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#schaltung-aufbauen">1. Schaltung aufbauen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#android-app-erstellen">2. Android-App erstellen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#den-code-hochladen">3. Den Code hochladen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app-und-bluetooth-modul-verbinden">4. App und Bluetooth-Modul verbinden</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-erklarung">5. Code-Erklärung</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="12-iot_Bluetooth_oled.html">Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="13-iot_Bluetooth_remote_relay.html">Bluetooth-Fernrelais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14-iot_Bluetooth_voice_control_relay.html">Bluetooth Sprachgesteuertes Relais</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">Spaßprojekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Vielen Dank</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../iot_project.html">IoT-Projekte</a></li>
+          <li class="breadcrumb-item"><a href="00-iot_project_esp01.html">IoT-Projekte</a></li>
+      <li class="breadcrumb-item active">Bluetooth-Klavier</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs-de/docs/source/iot_project_esp01/11-iot_Bluetooth_piano.rst" class="fa fa-github"> Auf GitHub bearbeiten</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Hallo und willkommen in der SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.</p>
+<p><strong>Warum beitreten?</strong></p>
+<ul class="simple">
+<li><p><strong>Expertenunterstützung</strong>: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.</p></li>
+<li><p><strong>Lernen &amp; Teilen</strong>: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.</p></li>
+<li><p><strong>Exklusive Vorschauen</strong>: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.</p></li>
+<li><p><strong>Spezialrabatte</strong>: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.</p></li>
+<li><p><strong>Festliche Aktionen und Gewinnspiele</strong>: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.</p></li>
+</ul>
+<p>👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [<a href="https://bit.ly/raphaelkit " target="_blank">hier</a>] und treten Sie heute bei!</p>
+</div>
+<section id="bluetooth-klavier">
+<span id="iot-bluetooth-piano"></span><h1>Bluetooth-Klavier<a class="headerlink" href="#bluetooth-klavier" title="Link to this heading"></a></h1>
+<video controls style = "max-width:100%">
+   <source src="../_static/video/iot/11-iot_Bluetooth_piano.mp4"  type="video/mp4">
+   Ihr Browser unterstützt das Video-Tag nicht.
+</video>
+<br/><br/><p>Dieses Projekt nutzt eine mit dem MIT App Inventor erstellte Android-App, um eine einfache „Klavier“-Funktion mittels eines JDY-31 Bluetooth-Moduls und eines passiven Summer-Moduls zu ermöglichen. Das Bluetooth-Klavier-Projekt erlaubt den Nutzern, verschiedene Musiknoten auf einem passiven Summer-Modul mithilfe eines JDY-31 Bluetooth-Moduls zu spielen. Durch das Senden spezifischer Notenanweisungen via Bluetooth an den Arduino können Nutzer die entsprechenden Töne auf dem Summer erzeugen.</p>
+<p>Die Android-Anwendung wird mithilfe einer kostenlosen, webbasierten Plattform namens <a href="http://appinventor.mit.edu/" target="_blank">MIT App Inventor</a> erstellt. Das Projekt bietet eine hervorragende Möglichkeit, Erfahrung im Umgang mit der Schnittstelle zwischen einem Arduino und einem Smartphone zu sammeln.</p>
+<section id="schaltung-aufbauen">
+<h2>1. Schaltung aufbauen<a class="headerlink" href="#schaltung-aufbauen" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/11-Wiring_Bluetooth_piano.png"><img alt="../_images/11-Wiring_Bluetooth_piano.png" src="../_images/11-Wiring_Bluetooth_piano.png" style="width: 75%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima-Platine</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/38-component_jdy31.html#cpn-jdy31"><span class="std std-ref">JDY-31 Bluetooth-Modul</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/26-component_buzzer.html#cpn-buzzer"><span class="std std-ref">Passives Summermodul</span></a></p></li>
+</ul>
+</section>
+<section id="android-app-erstellen">
+<h2>2. Android-App erstellen<a class="headerlink" href="#android-app-erstellen" title="Link to this heading"></a></h2>
+<p>Die Android-Anwendung wird mit einer kostenlosen Webanwendung namens <a href="http://appinventor.mit.edu/" target="_blank">MIT App Inventor</a> entwickelt.
+Der MIT App Inventor dient als ausgezeichneter Einstieg in die Android-Entwicklung, dank seiner intuitiven Drag-and-Drop-Funktionen zur Erstellung einfacher Anwendungen.</p>
+<p>Jetzt geht’s los.</p>
+<ol class="arabic">
+<li><p>Rufen Sie <a href="http://appinventor.mit.edu/explore/get-started" target="_blank">Get Started with MIT App Inventor</a> auf und klicken Sie auf „Online-Tool“, um sich anzumelden. Sie benötigen ein Google-Konto, um sich beim MIT App Inventor zu registrieren.</p>
+<a class="reference internal image-reference" href="../_images/09-ai_signup_shadow.png"><img alt="../_images/09-ai_signup_shadow.png" class="align-center" src="../_images/09-ai_signup_shadow.png" style="width: 90%;" /></a>
+</li>
+<li><p>Nach dem Login navigieren Sie zu <strong>Projects</strong> -&gt; <strong>Import project (.aia) from my computer</strong>. Laden Sie anschließend die Datei <code class="docutils literal notranslate"><span class="pre">piano.aia</span></code> hoch, die sich im Pfad <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\iot_project\bluetooth\06-Bluetooth_piano</span></code> befindet.</p>
+<p>Direkter Download hier möglich: <a class="reference download internal" download="" href="../_downloads/511db0e5751e6c24b51756251bf7dc0e/piano.aia"><code class="xref download docutils literal notranslate"><span class="pre">piano.aia</span></code></a></p>
+<img alt="../_images/09-ai_import_shadow.png" class="align-center" src="../_images/09-ai_import_shadow.png" />
+</li>
+<li><p>Nach dem Hochladen der <code class="docutils literal notranslate"><span class="pre">.aia</span></code>-Datei erscheint die Anwendung in der Software des MIT App Inventors. Dies ist eine vorkonfigurierte Vorlage, die Sie nach dem Kennenlernen des MIT App Inventors modifizieren können.</p></li>
+<li><p>Im MIT App Inventor gibt es zwei Hauptbereiche: den <strong>Designer</strong> und die <strong>Blocks</strong>. Sie können in der oberen rechten Ecke der Seite zwischen diesen beiden Bereichen wechseln.</p>
+<img alt="../_images/09-ai_intro_1_shadow.png" src="../_images/09-ai_intro_1_shadow.png" />
+</li>
+<li><p>Der <strong>Designer</strong> ermöglicht das Hinzufügen von Buttons, Texten, Bildschirmen und die Anpassung des Gesamtdesigns Ihrer Anwendung.</p>
+<img alt="../_images/11-ai_intro_2_shadow.png" src="../_images/11-ai_intro_2_shadow.png" />
+</li>
+<li><p>Als Nächstes gibt es den Bereich <strong>Blocks</strong>. In diesem Abschnitt können Sie individuelle Funktionen für Ihre App programmieren und so jedes Element in der GUI der App nach Ihren Wünschen gestalten.</p>
+<img alt="../_images/11-ai_intro_3_shadow.png" src="../_images/11-ai_intro_3_shadow.png" />
+</li>
+<li><p>Um die Anwendung auf einem Smartphone zu installieren, navigieren Sie zum <strong>Build</strong>-Tab.</p>
+<img alt="../_images/08-ai_intro_4_shadow.png" src="../_images/08-ai_intro_4_shadow.png" />
+<ul>
+<li><p>Sie können eine <code class="docutils literal notranslate"><span class="pre">.apk</span></code>-Datei generieren. Nach der Auswahl dieser Option erscheint eine Seite, auf der Sie wählen können, ob Sie eine <code class="docutils literal notranslate"><span class="pre">.apk</span></code>-Datei herunterladen oder einen QR-Code zum Installieren scannen möchten. Folgen Sie dem Installationsleitfaden, um die Installation der Anwendung abzuschließen.</p>
+<p>Unsere vorab kompilierte APK können Sie auch hier herunterladen: <a class="reference download internal" download="" href="../_downloads/0023e465aff093bb942d8973dbd6eaa2/piano.apk"><code class="xref download docutils literal notranslate"><span class="pre">piano.apk</span></code></a></p>
+</li>
+<li><p>Falls Sie diese App im Google Play Store oder einem anderen App-Marktplatz veröffentlichen möchten, können Sie eine <code class="docutils literal notranslate"><span class="pre">.aab</span></code>-Datei generieren.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="den-code-hochladen">
+<h2>3. Den Code hochladen<a class="headerlink" href="#den-code-hochladen" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Öffnen Sie die Datei <code class="docutils literal notranslate"><span class="pre">06-Bluetooth_piano.ino</span></code> unter dem Pfad <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\iot_project\bluetooth\06-Bluetooth_piano</span></code> oder kopieren Sie diesen Code in die <strong>Arduino IDE</strong>.</p>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/a9d0b7bf-0927-4a10-88b9-bbc4a9abc5c8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe></li>
+<li><p>Nach der Auswahl des richtigen Boards und Ports, klicken Sie auf die <strong>Hochladen</strong>-Schaltfläche.</p></li>
+<li><p>Öffnen Sie den seriellen Monitor (Baudrate auf <strong>9600</strong> einstellen), um Debug-Nachrichten anzuzeigen.</p></li>
+</ol>
+</section>
+<section id="app-und-bluetooth-modul-verbinden">
+<h2>4. App und Bluetooth-Modul verbinden<a class="headerlink" href="#app-und-bluetooth-modul-verbinden" title="Link to this heading"></a></h2>
+<p>Stellen Sie sicher, dass die zuvor erstellte Anwendung auf Ihrem Smartphone installiert ist.</p>
+<ol class="arabic">
+<li><p>Aktivieren Sie zunächst <strong>Bluetooth</strong> auf Ihrem Smartphone.</p>
+<a class="reference internal image-reference" href="../_images/09-app_1_shadow.png"><img alt="../_images/09-app_1_shadow.png" class="align-center" src="../_images/09-app_1_shadow.png" style="width: 60%;" /></a>
+</li>
+<li><p>Navigieren Sie zu den <strong>Bluetooth-Einstellungen</strong> auf Ihrem Smartphone und suchen Sie nach Namen wie <strong>JDY-31-SPP</strong>.</p>
+<a class="reference internal image-reference" href="../_images/09-app_2_shadow.png"><img alt="../_images/09-app_2_shadow.png" class="align-center" src="../_images/09-app_2_shadow.png" style="width: 60%;" /></a>
+</li>
+<li><p>Klicken Sie darauf und bestätigen Sie die <strong>Kopplungsanfrage</strong> im aufpoppenden Fenster. Falls ein Kopplungscode erforderlich ist, geben Sie „1234“ ein.</p>
+<a class="reference internal image-reference" href="../_images/09-app_3_shadow.png"><img alt="../_images/09-app_3_shadow.png" class="align-center" src="../_images/09-app_3_shadow.png" style="width: 60%;" /></a>
+</li>
+<li><p>Öffnen Sie nun die neu installierte <strong>Piano</strong>-App.</p>
+<a class="reference internal image-reference" href="../_images/11-app_4_shadow.png"><img alt="../_images/11-app_4_shadow.png" class="align-center" src="../_images/11-app_4_shadow.png" style="width: 25%;" /></a>
+</li>
+<li><p>In der App klicken Sie auf die <strong>Verbinden</strong>-Schaltfläche, um eine Verbindung zwischen der App und dem Bluetooth-Modul herzustellen.</p>
+<a class="reference internal image-reference" href="../_images/11-app_5_shadow.png"><img alt="../_images/11-app_5_shadow.png" class="align-center" src="../_images/11-app_5_shadow.png" style="width: 85%;" /></a>
+</li>
+<li><p>Diese Seite zeigt eine Liste aller gekoppelten Bluetooth-Geräte an. Wählen Sie die Option <code class="docutils literal notranslate"><span class="pre">xx.xx.xx.xx.xx.xx</span> <span class="pre">JDY-31-SPP</span></code> aus der Liste aus. Der Name jedes Geräts ist neben seiner MAC-Adresse aufgeführt.</p>
+<a class="reference internal image-reference" href="../_images/11-app_6_shadow.png"><img alt="../_images/11-app_6_shadow.png" class="align-center" src="../_images/11-app_6_shadow.png" style="width: 60%;" /></a>
+</li>
+<li><p>Falls Sie auf der oben gezeigten Seite keine Geräte sehen, könnte dies daran liegen, dass der App die Berechtigung zur Suche nach nahegelegenen Geräten fehlt. In diesem Fall müssen Sie die Einstellungen manuell anpassen.</p>
+<ul class="simple">
+<li><p>Um zur <strong>App-Info</strong>-Seite zu gelangen, halten Sie das App-Symbol gedrückt und wählen Sie es aus. Alternativ können Sie auch eine andere Methode verwenden, um diese Seite zu erreichen.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/11-app_8_shadow.png"><img alt="../_images/11-app_8_shadow.png" class="align-center" src="../_images/11-app_8_shadow.png" style="width: 60%;" /></a>
+<ul class="simple">
+<li><p>Navigieren Sie zur <strong>Berechtigungen</strong>-Seite.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/08-app_9_shadow.png"><img alt="../_images/08-app_9_shadow.png" class="align-center" src="../_images/08-app_9_shadow.png" style="width: 60%;" /></a>
+<ul class="simple">
+<li><p>Um der App das Scannen nach nahegelegenen Geräten zu ermöglichen, gehen Sie zu <strong>Nahegelegene Geräte</strong> und wählen <strong>Immer</strong> aus.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/08-app_10_shadow.png"><img alt="../_images/08-app_10_shadow.png" class="align-center" src="../_images/08-app_10_shadow.png" style="width: 60%;" /></a>
+<ul class="simple">
+<li><p>Starten Sie nun die App neu und wiederholen Sie die Schritte 5 und 6, um erfolgreich eine Bluetooth-Verbindung herzustellen.</p></li>
+</ul>
+</li>
+<li><p>Nach einer erfolgreichen Verbindung können Sie in der App auf die Tasten klicken, um verschiedene Noten zu spielen, und sogar einige einfache Lieder ausführen.</p>
+<a class="reference internal image-reference" href="../_images/11-app_7_shadow.png"><img alt="../_images/11-app_7_shadow.png" class="align-center" src="../_images/11-app_7_shadow.png" style="width: 85%;" /></a>
+</li>
+</ol>
+</section>
+<section id="code-erklarung">
+<h2>5. Code-Erklärung<a class="headerlink" href="#code-erklarung" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Bibliotheken und Pins einrichten</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">"pitches.h"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SoftwareSerial.h&gt;</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">bluetoothTx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">bluetoothRx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="nf">SoftwareSerial</span><span class="w"> </span><span class="nf">bleSerial</span><span class="p">(</span><span class="n">bluetoothTx</span><span class="p">,</span><span class="w"> </span><span class="n">bluetoothRx</span><span class="p">);</span>
+<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">buzzerPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pitches.h</span></code>: Diese Datei enthält die Frequenzwerte für musikalische Noten.</p></li>
+</ul>
+<br/></li>
+<li><p><strong>Variablendeklaration zur Speicherung von Bluetooth-Daten</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">char</span><span class="w"> </span><span class="n">character</span><span class="p">;</span>
+<span class="kr">String</span><span class="w"> </span><span class="n">noteType</span><span class="p">;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">character</span></code>: Speichert einzelne Zeichen, die über Bluetooth empfangen werden.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noteType</span></code>: Fasst die Zeichen zusammen, um die vollständige Notenanweisung zu bilden.</p></li>
+</ul>
+<br/></li>
+<li><p><strong>Setup-Funktion - Initialisierung der seriellen Kommunikation</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="w">  </span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Initialisiert die serielle Kommunikation mit einer Baudrate von 9600.</p></li>
+<li><p>Die Standard-<code class="docutils literal notranslate"><span class="pre">Serial</span></code> dient zur Fehlersuche, während <code class="docutils literal notranslate"><span class="pre">bleSerial</span></code> speziell für die Bluetooth-Kommunikation vorgesehen ist.</p></li>
+</ul>
+</li>
+<li><p><strong>Hauptschleife - Lesen von Bluetooth-Daten und Abspielen entsprechender Noten</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">available</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">character</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bleSerial</span><span class="p">.</span><span class="nf">read</span><span class="p">();</span>
+<span class="w">    </span><span class="n">noteType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">noteType</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">character</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">'*'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">noteType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">noteType</span><span class="p">.</span><span class="n">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">noteType</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">      </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">noteType</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">noteType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"NOTE_C4"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nf">tone</span><span class="p">(</span><span class="n">buzzerPin</span><span class="p">,</span><span class="w"> </span><span class="n">NOTE_C4</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="c1">// ... weitere Noten werden ähnlich überprüft ...</span>
+<span class="w">      </span><span class="n">noteType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">;</span>
+<span class="w">      </span><span class="nf">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="w">      </span><span class="nf">noTone</span><span class="p">(</span><span class="n">buzzerPin</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Liest Zeichen von Bluetooth und bildet den <code class="docutils literal notranslate"><span class="pre">noteType</span></code>.</p></li>
+<li><p>Wenn ein Sternchen (‚*‘) erkannt wird, signalisiert dies das Ende der Notenanweisung. Die Note wird dann abgespielt, kurz verzögert und dann gestoppt.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="10-iot_Bluetooth_environmental_monitor.html" class="btn btn-neutral float-left" title="Bluetooth-Umweltmonitor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="12-iot_Bluetooth_oled.html" class="btn btn-neutral float-right" title="Bluetooth OLED" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/components_basic/39-component_breadboard.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/components_basic/39-component_breadboard.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/components_basic/39-component_breadboard.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/components_basic/39-component_breadboard.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/components_basic/39-component_breadboard.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/components_basic/39-component_breadboard.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/components_basic/39-component_breadboard.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/components_basic/39-component_breadboard.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/components_basic/39-component_breadboard.rst:18
+msgid "Breadboard"
+msgstr ""
+
+#: ../../source/components_basic/39-component_breadboard.rst:23
+msgid "A breadboard is a construction base for prototyping of electronics. Originally the word referred to a literal bread board, a polished piece of wood used for slicing bread. In the 1970s the solderless breadboard (a.k.a. plugboard, a terminal array board) became available and nowadays the term \"breadboard\" is commonly used to refer to these."
+msgstr ""
+
+#: ../../source/components_basic/39-component_breadboard.rst:25
+msgid "It is used to build and test circuits quickly before finishing any circuit design. And it has many holes into which components mentioned above can be inserted like ICs and resistors as well as jumper wires. The breadboard allows you to plug in and remove components easily."
+msgstr ""
+
+#: ../../source/components_basic/39-component_breadboard.rst:32
+msgid "The picture shows the internal structure of a breadboard. Although the holes on the breadboard appear to be independent, they are actually connected internally by metal strips."
+msgstr ""
+
+#: ../../source/components_basic/39-component_breadboard.rst:43
+msgid "Inside the breadboard, hidden behind its plastic surface, are rows of metal strips. Each strip has small metal clips with teeth that grip the legs of the components. These clips ensure a secure electrical connection between components inserted into the same row. The power rails on the sides have longer strips to provide connections for power supply."
+msgstr ""
+
+#: ../../source/components_basic/39-component_breadboard.rst:54
+msgid "Most breadboards have numbers, letters, and plus and minus signs on them. These labels help you find the corresponding holes quickly when building your circuit. The row numbers and column letters help you precisely locate the holes on the breadboard. For example, hole \"C15\" is where column C intersects row 15."
+msgstr ""
+
+#: ../../source/components_basic/39-component_breadboard.rst:65
+msgid "Multiple types of jumper wires can be used in a single project. The color of jumper wires varies to help identify the connections between different parts of the circuit, but the colors themselves do not indicate different functions. However, it is common practice to use red wires for positive power connections and black wires for negative power or ground connections."
+msgstr ""

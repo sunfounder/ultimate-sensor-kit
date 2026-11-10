@@ -1,0 +1,307 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/components_basic/38-component_jdy31.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:18
+msgid "JDY-31 Bluetooth Module"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:24
+msgid "This module **does not support Apple device** connections, so tutorials involving this module require an Android phone or tablet."
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:26
+msgid "The JDY-31 Bluetooth module is a pin-compatible replacement for the HC-06 Bluetooth module. It is simpler and easier to use than the HC-06 and is often available at a slightly lower cost."
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:28
+msgid "The JDY-31 Bluetooth module is based on Bluetooth 3.0 SPP design and can support Windows, Linux, and Android data transmission. The working frequency of the JDY-31 Bluetooth module is 2.4 GHz with modulation mode GFSK. The maximum transmission power is 8 dB, and the maximum transmission distance is 30 meters. Users can modify the device name through AT command, baud rate, and other instructions."
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:30
+msgid "Pins of JDY-31 and their functions:"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:36
+msgid "JDY-31 Pins"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:40
+msgid "Pin"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:41
+msgid "Name"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:42
+msgid "Description"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:43
+#: ../../source/components_basic/38-component_jdy31.rst:86
+msgid "1"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:44
+msgid "STATE"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:45
+msgid "Connection status pin (not connected low level, output high level after connectio)"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:46
+msgid "2"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:47
+msgid "RXD"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:48
+msgid "Receiver pin, this pin must connect to TX pin of next device."
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:49
+msgid "3"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:50
+msgid "TXD"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:51
+msgid "Transmitter pin, this pin must connect to RX pin of next device."
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:52
+msgid "4"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:53
+#: ../../source/components_basic/38-component_jdy31.rst:54
+msgid "GND"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:55
+msgid "5"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:56
+msgid "VCC"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:57
+msgid "Power Supply(1.8-3.6V, 3.3v recommended)"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:58
+msgid "6"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:59
+msgid "EN"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:60
+msgid "enable or disable the module. When this pin is held high, the module is enabled and begins transmitting and receiving data."
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:62
+msgid "patch application: general application only need to connect VCC, GND, RXD, TXD 4 pins, if you need to actively disconnect in the connection state, send AT+DISC in the connection state."
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:65
+msgid "AT Command Set"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:68
+msgid "Command"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:68
+msgid "Function"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:68
+msgid "Default"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:70
+msgid "AT+VERSION"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:70
+msgid "Version Number"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:70
+msgid "JDY-31-V1.2"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:72
+msgid "AT+RESET"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:72
+msgid "Soft reset"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:74
+msgid "AT+DISC"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:74
+msgid "Disconnect (valid when connected)"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:76
+msgid "AT+LADDR"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:76
+msgid "Query the MAC address of the module"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:78
+msgid "AT+PIN"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:78
+msgid "Set or query connection password"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:78
+msgid "1234"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:80
+msgid "AT+BAUD"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:80
+msgid "Set or query baud rate"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:80
+msgid "9600"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:82
+msgid "AT+NAME"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:82
+msgid "Set or query broadcast name"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:82
+msgid "JDY-31-SPP"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:84
+msgid "AT+DEFAULT"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:84
+msgid "Factory reset"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:86
+msgid "AT+ENLOG"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:86
+msgid "Serial port status output"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:90
+msgid "More Projects"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:92
+msgid ":ref:`iot_Bluetooth_start`"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:93
+msgid ":ref:`iot_Bluetooth_lcd`"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:94
+msgid ":ref:`iot_Bluetooth_traffic_light`"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:95
+msgid ":ref:`iot_Bluetooth_lock_controller`"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:96
+msgid ":ref:`iot_Bluetooth_RGB_controller`"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:97
+msgid ":ref:`iot_Bluetooth_environmental_monitor`"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:98
+msgid ":ref:`iot_Bluetooth_piano`"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:99
+msgid ":ref:`iot_Bluetooth_oled`"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:100
+msgid ":ref:`iot_Bluetooth_remote_relay`"
+msgstr ""
+
+#: ../../source/components_basic/38-component_jdy31.rst:101
+msgid ":ref:`iot_Bluetooth_voice_control_relay`"
+msgstr ""

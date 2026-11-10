@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heart rate monitor &mdash; SunFounder Ultimate Sensor Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=6e75df5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Doorbell" href="07-fun_Doorbell.html" />
+    <link rel="prev" title="Motion triggered relay" href="05-fun_Motion_triggered_relay.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">About Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Get Started with Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Download the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">Component Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iot_project.html">IoT Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="fun_project.html">Fun Projects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01-fun_Smart_trashcan.html">Smart trashcan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-fun_Gas_leak_alarm.html">Gas leak alarm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-fun_Light_control_switch.html">Light control switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-fun_Automatic_soap_dispenser.html">Automatic soap dispenser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-fun_Motion_triggered_relay.html">Motion triggered relay</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Heart rate monitor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#build-the-circuit">1. Build the Circuit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code">2. Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-explanation">3. Code explanation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="07-fun_Doorbell.html">Doorbell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-fun-Touch_toggle_light.html">Touch toggle light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-fun_ToF_distance_monitor.html">ToF distance monitor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-fun-Potentiometer_scale_value.html">Potentiometer scale value</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Thank You</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="fun_project.html">Fun Projects</a></li>
+      <li class="breadcrumb-item active">Heart rate monitor</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs/docs/source/fun_project/06-fun_Heart_rate_monitor.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hello, welcome to the SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.</p>
+<p><strong>Why Join?</strong></p>
+<ul class="simple">
+<li><p><strong>Expert Support</strong>: Solve post-sale issues and technical challenges with help from our community and team.</p></li>
+<li><p><strong>Learn &amp; Share</strong>: Exchange tips and tutorials to enhance your skills.</p></li>
+<li><p><strong>Exclusive Previews</strong>: Get early access to new product announcements and sneak peeks.</p></li>
+<li><p><strong>Special Discounts</strong>: Enjoy exclusive discounts on our newest products.</p></li>
+<li><p><strong>Festive Promotions and Giveaways</strong>: Take part in giveaways and holiday promotions.</p></li>
+</ul>
+<p>👉 Ready to explore and create with us? Click [<a href="https://bit.ly/raphaelkit " target="_blank">here</a>] and join today!</p>
+</div>
+<section id="heart-rate-monitor">
+<span id="fun-heartrate-monitor"></span><h1>Heart rate monitor<a class="headerlink" href="#heart-rate-monitor" title="Link to this heading"></a></h1>
+<video loop autoplay muted style = "max-width:100%">
+   <source src="../_static/video/fun/06-fun_Heart_rate_monitor.mp4"  type="video/mp4">
+   Your browser does not support the video tag.
+</video><p>This Arduino project aims to build a simple Heart Rate Monitor using a MAX30102 pulse oximeter sensor and an SSD1306 OLED Display. The code takes measurements of the heart rate by determining the time between heartbeats. By taking four measurements, it computes their average and presents the resultant average heart rate on an OLED screen. If the sensor doesn’t detect a finger, it sends a prompt to the user to position their finger correctly on the sensor.</p>
+<section id="build-the-circuit">
+<h2>1. Build the Circuit<a class="headerlink" href="#build-the-circuit" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/06-fun_Heart_rate_monitor_circuit.png"><img alt="../_images/06-fun_Heart_rate_monitor_circuit.png" src="../_images/06-fun_Heart_rate_monitor_circuit.png" style="width: 65%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima Board</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/15-component_max30102.html#cpn-max30102"><span class="std std-ref">Pulse Oximeter and Heart Rate Sensor (MAX30102)</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/22-component_oled.html#cpn-olde"><span class="std std-ref">OLED Display Module</span></a></p></li>
+</ul>
+</section>
+<section id="code">
+<h2>2. Code<a class="headerlink" href="#code" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">06-Heart_rate_monitor.ino</span></code> file under the path of <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\code\fun_project\06-Heart_rate_monitor</span></code>, or copy this code into <strong>Arduino IDE</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To install the library, use the Arduino Library Manager and search for <strong>“SparkFun MAX3010x”</strong> and install it.</p>
+</div>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/62989671-0ed0-479a-a91c-9c8f37c170ab/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe></li>
+</ol>
+</section>
+<section id="code-explanation">
+<h2>3. Code explanation<a class="headerlink" href="#code-explanation" title="Link to this heading"></a></h2>
+<p>The main principle behind this project is to capture the pulsation of blood flow through a finger using the MAX30102 sensor. As blood pumps through the body, it causes tiny changes in the volume of blood in the vessels of the fingertip. By shining light through the finger and measuring the amount of light that gets absorbed or reflected back, the sensor detects these minute volume changes. The time interval between subsequent pulses is then used to calculate the heart rate in beats per minute (BPM). This value is then averaged over four measurements and displayed on the OLED screen.</p>
+<ol class="arabic">
+<li><p><strong>Library Inclusions and Initial Declarations</strong>:</p>
+<p>The code begins by including necessary libraries for the OLED display, MAX30102 sensor, and heart rate calculation. Additionally, the configuration for the OLED display and the variables for heart rate calculation are declared.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To install the library, use the Arduino Library Manager and search for <strong>“SparkFun MAX3010x”</strong> and install it.</p>
+</div>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Adafruit_GFX.h&gt;</span><span class="w">  </span><span class="c1">// OLED  libraries</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Adafruit_SSD1306.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Wire.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"MAX30105.h"</span><span class="w">   </span><span class="c1">// MAX3010x library</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"heartRate.h"</span><span class="w">  </span><span class="c1">// Heart rate  calculating algorithm</span>
+
+<span class="c1">// ... Variables and OLED configuration</span>
+</pre></div>
+</div>
+<p>In this project, we’ve also whipped up a couple of bitmaps. The <code class="docutils literal notranslate"><span class="pre">PROGMEM</span></code> keyword denotes that the array is stored in the program memory of the Arduino microcontroller. Storing data in program memory(PROGMEM) instead of RAM can be helpful for large amounts of data, which would otherwise take up too much space in RAM.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">static</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="kr">PROGMEM</span><span class="w"> </span><span class="n">beat1_bmp</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{...}</span>
+
+<span class="kr">static</span><span class="w"> </span><span class="kr">const</span><span class="w"> </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="kr">PROGMEM</span><span class="w"> </span><span class="n">beat2_bmp</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{...}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Setup Function</strong>:</p>
+<p>Initializes I2C communication, starts serial communication, initializes the OLED display, and sets up the MAX30102 sensor.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">Wire</span><span class="p">.</span><span class="n">setClock</span><span class="p">(</span><span class="mi">400000</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">display</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">SSD1306_SWITCHCAPVCC</span><span class="p">,</span><span class="w"> </span><span class="n">SCREEN_ADDRESS</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// ... Rest of the setup code</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Main Loop</strong>:</p>
+<p>The core functionality resides here. The IR value is read from the sensor. If a finger is detected (IR value greater than 50,000), the program checks if a heartbeat is sensed. When a heartbeat is detected, the OLED screen displays the BPM and the time between heartbeats is used to calculate BPM. Otherwise, it prompts the user to place their finger on the sensor.</p>
+<p>We have also prepared two bitmaps with heartbeats, and by switching between these two bitmaps, we can achieve a dynamic visual effect.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Get IR value from sensor</span>
+<span class="w">  </span><span class="kr">long</span><span class="w"> </span><span class="n">irValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">particleSensor</span><span class="p">.</span><span class="n">getIR</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">//If a finger is detected</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">irValue</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">50000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// Check if a beat is detected</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">checkForBeat</span><span class="p">(</span><span class="n">irValue</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kr">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">      </span><span class="c1">// Update OLED display</span>
+<span class="w">      </span><span class="c1">// Calculate the BPM</span>
+
+<span class="w">      </span><span class="c1">// Calculate the average BPM</span>
+<span class="w">      </span><span class="c1">//Print the IR value, current BPM value, and average BPM value to the serial monitor</span>
+
+<span class="w">      </span><span class="c1">// Update OLED display</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ... Prompt to place the finger on the sensor</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="05-fun_Motion_triggered_relay.html" class="btn btn-neutral float-left" title="Motion triggered relay" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="07-fun_Doorbell.html" class="btn btn-neutral float-right" title="Doorbell" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

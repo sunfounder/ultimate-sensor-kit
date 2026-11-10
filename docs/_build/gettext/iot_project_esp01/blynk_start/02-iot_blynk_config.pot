@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:9
+msgid "**Exclusive Previews**: Enjoy exclusive access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:10
+msgid "**Special Discounts**: Enjoy discounts on our newest products."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:18
+msgid "1.1 Configuring the Blynk"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:20
+msgid "In this chapter we create a Blynk account, a template and a device, and then copy the three lines that go at the top of every project sketch."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:25
+msgid "The Blynk.Console interface is updated from time to time. The screenshots below were taken in 2026. If a button has moved, look for the **field name** (such as `AUTH TOKEN`) instead of the exact button position."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:30
+msgid "1. Create an account"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:32
+msgid "Go to `BLYNK <https://blynk.io/>`_ and click **Sign Up** in the upper right corner."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:42
+msgid "Enter your email address, tick the agreement box and click **Sign Up**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:52
+msgid "Open the activation link in your mailbox, then create a password."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:63
+msgid "2. Enable Developer Mode"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:65
+msgid "Blynk has to know that you are the person **building** the device and not the end user. Only a user in **Developer Mode** can create templates, dashboards and devices, which is everything this kit needs."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:69
+msgid "Click **My Profile** in the upper right corner of the Blynk.Console."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:71
+msgid "Make sure the **Developer Mode** switch is set to **ON**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:73
+msgid "The first account of an organization is a developer by default, but on some accounts the switch has to be turned on by hand."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:78
+msgid "If the sidebar has no **Developer Zone** and no **+ New Template** button, the **Developer Mode** switch is still off. Turn it on and the menu items appear - no need to sign out or create another account."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:84
+msgid "**Developer Mode** is a setting of your account, not a paid feature. The free plan already allows it. What the free plan limits is the number of devices and the number of messages per day, so for a classroom it is usually enough to create one template and reuse it for every board."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:90
+msgid "3. Create a template"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:92
+msgid "After signing in you will see the **Blynk.Console**. Open **Developer Zone** in the left sidebar, then **My Templates**, and click **+ New Template**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:107
+msgid "Fill in the template form:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:109
+msgid "**NAME**: `Ultimate Sensor`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:110
+msgid "**HARDWARE**: **ESP32**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:111
+msgid "**CONNECTION TYPE**: **WiFi**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:119
+msgid "**HARDWARE** is only a label that Blynk uses to suggest example code. Both **ESP32** and **ESP8266** work with the projects in this kit; the screenshot above uses **ESP32**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:123
+msgid "Click **Done** when finished."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:130
+msgid "4. Create a device"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:132
+msgid "A template on its own has **no** auth token - a device has. Every device you create gets its own token."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:135
+msgid "In the left sidebar click **Devices**, then **+ New Device**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:145
+msgid "Choose **Create New**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:155
+msgid "Select the template you just created, give the device a name, and click **Create**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:165
+msgid "A **New Device Created!** window pops up with the three lines you need."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:173
+msgid "If you close that window, the same information is always available in **Devices** -> your device -> **Developer Tools**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:181
+msgid "5. Put them at the top of the sketch"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:191
+msgid "Copy them **exactly**. A single wrong character and the board will never connect."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:194
+msgid "6. Install the Blynk library"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:196
+msgid "In the Arduino IDE open **Library Manager**, search for `blynk` and install **Blynk 1.4.0**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:205
+msgid "The sketches in this kit use `BlynkSimpleShieldEsp8266`, which needs a **second** library called **BlynkESP8266** (it provides `ESP8266_Lib.h`). It is **not** in Library Manager and has to be installed manually:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:209
+msgid "Open https://github.com/vshymanskyy/BlynkESP8266"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:210
+msgid "Click **Code -> Download ZIP**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:211
+msgid "In the Arduino IDE choose **Sketch -> Include Library -> Add .ZIP Library**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:212
+msgid "Restart the IDE"
+msgstr ""
+
+#: ../../source/iot_project_esp01/blynk_start/02-iot_blynk_config.rst:214
+msgid "See :doc:`03-iot_add_lib` for more details."
+msgstr ""

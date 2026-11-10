@@ -1,0 +1,473 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. Intrusion Alert System with Blynk &mdash; SunFounder Ultimate Sensor Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../../_static/./lang.js?v=6e75df5d"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3. Plant Monitor with Blynk" href="03-iot_Plant_monitor.html" />
+    <link rel="prev" title="1. Flame Alert System with Blynk" href="01-iot_Flame_alert_system.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">About Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_start/00_get_start.html">Get Started with Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arduino_video_course/arduino_video_course.html">Arduino Video Course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download_code.html">Download the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components_basic/00-component_list.html">Component Basics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../iot_project.html">IoT Projects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../iot_project_esp01/00-iot_project_esp01.html">IoT Projects with ESP01 &amp; Bluetooth Module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../iot_project_espc201.html">IoT Projects with ESPC201</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="00-blynk_start.html">Get Started with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01-iot_Flame_alert_system.html">1. Flame Alert System with Blynk</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2. Intrusion Alert System with Blynk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#build-the-circuit">1. Build the Circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configure-blynk">2. Configure Blynk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-code">3. Run the Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-explanation">4. Code explanation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="03-iot_Plant_monitor.html">3. Plant Monitor with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04-iot_Vibration_alert_system.html">4. Vibration Alert System with IFTTT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05-iot_Weather_monitor.html">5. Weather Monitor with ThingSpeak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06-iot_Remote_relay_controller.html">6. Remote Relay Controller with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07-iot_Auto_watering_system.html">7. Auto Watering System with Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/00-iot_bluetooth_start.html">Get Started with Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/08-iot_Bluetooth_lcd.html">8. Bluetooth LCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/09-iot_Bluetooth_traffic_light.html">9. Bluetooth Traffic Light</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/10-iot_Bluetooth_environmental_monitor.html">10. Bluetooth Environmental Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/11-iot_Bluetooth_lock_controller.html">11. Bluetooth Lock Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/12-iot_Bluetooth_RGB_controller.html">12. Bluetooth RGB Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/13-iot_Bluetooth_piano.html">13. Bluetooth Piano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/14-iot_Bluetooth_oled.html">14. Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/15-iot_Bluetooth_remote_relay.html">15. Bluetooth Remote Relay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bluetooth_espc201/16-iot_Bluetooth_motion_monitor.html">16. Bluetooth Motion Monitor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../fun_project/fun_project.html">Fun Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thank-learning.html">Thank You</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../iot_project.html">IoT Projects</a></li>
+          <li class="breadcrumb-item"><a href="../iot_project_espc201.html">IoT Projects with ESPC201</a></li>
+      <li class="breadcrumb-item active">2. Intrusion Alert System with Blynk</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs/docs/source/iot_project_espc201/wifi_espc201/02-iot_Intrusion_alert_system.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hello, welcome to the SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.</p>
+<p><strong>Why Join?</strong></p>
+<ul class="simple">
+<li><p><strong>Expert Support</strong>: Solve post-sale issues and technical challenges with help from our community and team.</p></li>
+<li><p><strong>Learn &amp; Share</strong>: Exchange tips and tutorials to enhance your skills.</p></li>
+<li><p><strong>Exclusive Previews</strong>: Get early access to new product announcements and sneak peeks.</p></li>
+<li><p><strong>Special Discounts</strong>: Enjoy exclusive discounts on our newest products.</p></li>
+<li><p><strong>Festive Promotions and Giveaways</strong>: Take part in giveaways and holiday promotions.</p></li>
+</ul>
+<p>👉 Ready to explore and create with us? Click [<a href="https://bit.ly/raphaelkit " target="_blank">here</a>] and join today!</p>
+</div>
+<section id="intrusion-alert-system-with-blynk">
+<span id="c201-iot-intrusion-alert-system"></span><h1>2. Intrusion Alert System with Blynk<a class="headerlink" href="#intrusion-alert-system-with-blynk" title="Link to this heading"></a></h1>
+<video loop autoplay muted style = "max-width:100%">
+   <source src="../../_static/video/iot/02-iot_Intrusion_alert_system.mp4
+    "  type="video/mp4">
+   Your browser does not support the video tag.
+</video><p>This project demonstrate a simple home intrusion detection system using a passive infrared (PIR) sensor (HC-SR501).
+When the system is set to ‘Away’ mode through the Blynk app, the PIR sensor monitors for motion.
+Any detected movement triggers a notification on the Blynk app, alerting the user of potential intrusion.</p>
+<section id="build-the-circuit">
+<h2>1. Build the Circuit<a class="headerlink" href="#build-the-circuit" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The module draws a high current at start-up, so make sure the 9 V battery or an external power supply is plugged into the DC jack of the R4 Minima.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/02-Wiring_intrusion_alert_system_c201.png"><img alt="../../_images/02-Wiring_intrusion_alert_system_c201.png" src="../../_images/02-Wiring_intrusion_alert_system_c201.png" style="width: 80%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima Board</span></a></p></li>
+<li><p><a class="reference internal" href="../../components_basic/41-component_espc201.html#cpn-espc201"><span class="std std-ref">ESPC2-01 Module</span></a></p></li>
+<li><p><a class="reference internal" href="../../components_basic/13-component_pir_motion.html#cpn-pir-motion"><span class="std std-ref">PIR Motion Module (HC-SR501)</span></a></p></li>
+</ul>
+</section>
+<section id="configure-blynk">
+<h2>2. Configure Blynk<a class="headerlink" href="#configure-blynk" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The template and the device were created once in <a class="reference internal" href="00-blynk_start.html#c201-iot-blynk-start"><span class="std std-ref">Get Started with Blynk</span></a>.
+Every project adds its datastreams to that <strong>same</strong> template, so each project
+occupies its own range of virtual pins. This project uses <strong>V1</strong> and <strong>V2</strong>.
+Nothing here changes the device token, so the sketch keeps working as it is.</p>
+</div>
+<p><strong>There are two things to tell the cloud, and one of them is worth two datastreams.</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">away_mode</span></code> - the switch you flip on your way out of the house.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">current_status</span></code> - a line of text the board writes back, so you can see what it is doing.</p></li>
+</ul>
+<p><strong>Add the datastreams</strong></p>
+<ol class="arabic">
+<li><p>Open <strong>Developer Zone</strong> -&gt; <strong>My Templates</strong>, click <strong>Ultimate Sensor Kit</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_template.png"><img alt="../../_images/blynk_template.png" src="../../_images/blynk_template.png" style="width: 80%;" /></a>
+</li>
+<li><p>Click <strong>Edit</strong> to open the template.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_edit.png"><img alt="../../_images/blynk_edit.png" src="../../_images/blynk_edit.png" style="width: 80%;" /></a>
+</li>
+<li><p>Click <strong>Datastreams</strong>, then <strong>Create New</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_new_data.png"><img alt="../../_images/blynk_new_data.png" src="../../_images/blynk_new_data.png" style="width: 80%;" /></a>
+</li>
+<li><p>Create the first datastream:</p>
+<ul class="simple">
+<li><p><strong>DATASTREAM NAME</strong>: <code class="docutils literal notranslate"><span class="pre">away_mode</span></code></p></li>
+<li><p><strong>DISPLAY NAME</strong>: <code class="docutils literal notranslate"><span class="pre">Away</span> <span class="pre">Mode</span></code></p></li>
+<li><p><strong>VIRTUAL PIN</strong>: <code class="docutils literal notranslate"><span class="pre">V1</span></code></p></li>
+<li><p><strong>DATA TYPE</strong>: <strong>Integer</strong></p></li>
+<li><p><strong>MIN</strong> <code class="docutils literal notranslate"><span class="pre">0</span></code>, <strong>MAX</strong> <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>An integer with a range of 0..1 is the usual way to model a switch: <code class="docutils literal notranslate"><span class="pre">1</span></code> means
+the alarm is armed, <code class="docutils literal notranslate"><span class="pre">0</span></code> means it is off.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/blynk_intrusion_dataset.png"><img alt="../../_images/blynk_intrusion_dataset.png" src="../../_images/blynk_intrusion_dataset.png" style="width: 80%;" /></a>
+</li>
+<li><p>Click <strong>Create New</strong> again for the second datastream:</p>
+<ul class="simple">
+<li><p><strong>DATASTREAM NAME</strong>: <code class="docutils literal notranslate"><span class="pre">current_status</span></code></p></li>
+<li><p><strong>DISPLAY NAME</strong>: <code class="docutils literal notranslate"><span class="pre">Current</span> <span class="pre">Status</span></code></p></li>
+<li><p><strong>VIRTUAL PIN</strong>: <code class="docutils literal notranslate"><span class="pre">V2</span></code></p></li>
+<li><p><strong>DATA TYPE</strong>: <strong>String</strong></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A <strong>String</strong> holds text. The board sends lines such as <code class="docutils literal notranslate"><span class="pre">Detecting</span> <span class="pre">signs</span> <span class="pre">of</span>
+<span class="pre">intrusion...</span></code> or <code class="docutils literal notranslate"><span class="pre">Somebody</span> <span class="pre">in</span> <span class="pre">your</span> <span class="pre">house!</span></code>, which a Label widget can show as is.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/blynk_intrusion_v2set.png"><img alt="../../_images/blynk_intrusion_v2set.png" src="../../_images/blynk_intrusion_v2set.png" style="width: 80%;" /></a>
+</li>
+<li><p>The list now shows both datastreams.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_intrusion_2data.png"><img alt="../../_images/blynk_intrusion_2data.png" src="../../_images/blynk_intrusion_2data.png" style="width: 80%;" /></a>
+</li>
+</ol>
+<p><strong>Add the event</strong></p>
+<p>An event is what turns a sensor reading into a notification on your phone. Without it
+the alarm only changes a label - nobody notices.</p>
+<ol class="arabic">
+<li><p>Open <strong>Events &amp; notifications</strong>, then click <strong>Create Event</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_intrusion_new_events.png"><img alt="../../_images/blynk_intrusion_new_events.png" src="../../_images/blynk_intrusion_new_events.png" style="width: 80%;" /></a>
+</li>
+<li><p>Set <strong>EVENT CODE</strong> to <code class="docutils literal notranslate"><span class="pre">intrusion_detected</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Type it exactly like this. The sketch calls <code class="docutils literal notranslate"><span class="pre">Blynk.logEvent(&quot;intrusion_detected&quot;)</span></code>,
+and any other spelling silently does nothing.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/blynk_intrusion_event_code.png"><img alt="../../_images/blynk_intrusion_event_code.png" src="../../_images/blynk_intrusion_event_code.png" style="width: 80%;" /></a>
+</li>
+<li><p>Turn the notification on and choose where it should go.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_intrusion_event_noti.png"><img alt="../../_images/blynk_intrusion_event_noti.png" src="../../_images/blynk_intrusion_event_noti.png" style="width: 80%;" /></a>
+</li>
+</ol>
+<p><strong>Add the web dashboard</strong></p>
+<p>The dashboard is the part you look at. Two widgets are enough here.</p>
+<ol class="arabic">
+<li><p>Click <strong>Dashboard</strong>, then <strong>Add Widget</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_dashboard.png"><img alt="../../_images/blynk_dashboard.png" src="../../_images/blynk_dashboard.png" style="width: 80%;" /></a>
+</li>
+<li><p>Drag a <strong>Label</strong> widget onto the dashboard.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_dashboard_label.png"><img alt="../../_images/blynk_dashboard_label.png" src="../../_images/blynk_dashboard_label.png" style="width: 80%;" /></a>
+</li>
+<li><p>Add a <strong>Switch</strong> widget.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_intrusion_switch.png"><img alt="../../_images/blynk_intrusion_switch.png" src="../../_images/blynk_intrusion_switch.png" style="width: 80%;" /></a>
+</li>
+<li><p>Click the three dots in the corner of the <strong>Label</strong> and choose <strong>Settings</strong>.</p>
+<ul class="simple">
+<li><p>Set <strong>Datastream</strong> to <code class="docutils literal notranslate"><span class="pre">Current</span> <span class="pre">Status</span> <span class="pre">(V2)</span></code>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/blynk_intrusion_label_set.png"><img alt="../../_images/blynk_intrusion_label_set.png" src="../../_images/blynk_intrusion_label_set.png" style="width: 80%;" /></a>
+</li>
+<li><p>Do the same for the <strong>Switch</strong>.</p>
+<ul class="simple">
+<li><p>Set <strong>Datastream</strong> to <code class="docutils literal notranslate"><span class="pre">Away</span> <span class="pre">Mode</span> <span class="pre">(V1)</span></code>, <strong>ON LABEL</strong> <code class="docutils literal notranslate"><span class="pre">away</span> <span class="pre">home</span></code> and <strong>OFF LABEL</strong> <code class="docutils literal notranslate"><span class="pre">at</span> <span class="pre">home</span></code>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/blynk_intrusion_switch_set.png"><img alt="../../_images/blynk_intrusion_switch_set.png" src="../../_images/blynk_intrusion_switch_set.png" style="width: 80%;" /></a>
+</li>
+<li><p>Click <strong>Save</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_save.png"><img alt="../../_images/blynk_save.png" src="../../_images/blynk_save.png" style="width: 40%;" /></a>
+</li>
+</ol>
+</section>
+<section id="run-the-code">
+<h2>3. Run the Code<a class="headerlink" href="#run-the-code" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">02-Intrusion_alert_system.ino</span></code> file under the path of <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\code\iot_project_espc201\wifi\02-Intrusion_alert_system</span></code>, or copy this code into <strong>Arduino IDE</strong>.</p></li>
+<li><p>The three Blynk lines are the ones you copied in the Get Started chapter. Leave them
+as they are - the device is already created, so only the Wi-Fi settings differ between
+projects.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define BLYNK_TEMPLATE_ID   "TMPLxxxxxx"</span>
+<span class="cp">#define BLYNK_TEMPLATE_NAME "Ultimate Sensor Kit"</span>
+<span class="cp">#define BLYNK_AUTH_TOKEN    "YourAuthToken"</span>
+</pre></div>
+</div>
+</li>
+<li><p>Type the name and the password of your own Wi-Fi network.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">char</span><span class="w"> </span><span class="n">ssid</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"your_ssid"</span><span class="p">;</span>
+<span class="kr">char</span><span class="w"> </span><span class="n">pass</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"your_password"</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Select <strong>Arduino UNO R4 Minima</strong> and the right port, then click <strong>Upload</strong>.</p></li>
+<li><p>Open the Serial Monitor at <strong>115200</strong>. When the board reaches the cloud the log ends
+with <code class="docutils literal notranslate"><span class="pre">Ready</span></code>. Every time you flip the switch in the app, a line appears here - that
+is how you know the two are talking.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_flame_serial.png"><img alt="../../_images/blynk_flame_serial.png" src="../../_images/blynk_flame_serial.png" style="width: 80%;" /></a>
+</li>
+<li><p>Now flip the switch to <strong>away home</strong> and wave your hand in front of the PIR sensor.
+The label on the dashboard changes to <code class="docutils literal notranslate"><span class="pre">Somebody</span> <span class="pre">in</span> <span class="pre">your</span> <span class="pre">house!</span> <span class="pre">Please</span> <span class="pre">check!</span></code> and
+your phone shows a notification.</p>
+<a class="reference internal image-reference" href="../../_images/blynk_intrusion_dashboard.png"><img alt="../../_images/blynk_intrusion_dashboard.png" src="../../_images/blynk_intrusion_dashboard.png" style="width: 80%;" /></a>
+</li>
+<li><p>To use Blynk on a phone, see <a class="reference internal" href="../../faq/blynk_mobile.html#blynk-mobile"><span class="std std-ref">How to use Blynk on mobile device?</span></a>.</p></li>
+</ol>
+</section>
+<section id="code-explanation">
+<h2>4. Code explanation<a class="headerlink" href="#code-explanation" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Blynk account and libraries</strong></p>
+<p>The first three lines say which Blynk device this board belongs to. They come from the
+device page and are identical in every project of the kit.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define BLYNK_TEMPLATE_ID   "TMPL2Ms3WVki8"</span>
+<span class="cp">#define BLYNK_TEMPLATE_NAME "Ultimate Sensor Kit"</span>
+<span class="cp">#define BLYNK_AUTH_TOKEN    "lHSd4Q5pXP7YKUovVfPZYZqC0UHVORY6"</span>
+
+<span class="cp">#define BLYNK_PRINT Serial   </span><span class="c1">// show Blynk's own log on the Serial Monitor</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ESP8266_Lib.h&gt;</span><span class="w">               </span><span class="c1">// sends the AT commands</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;BlynkSimpleShieldEsp8266.h&gt;</span><span class="w">  </span><span class="c1">// Blynk on top of them</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>The serial port that talks to the module</strong></p>
+<p>The ESPC2-01 is not running your sketch - it works as a modem that answers AT
+commands. On the R4 it sits on D0/D1, which is <code class="docutils literal notranslate"><span class="pre">Serial1</span></code>, a hardware port, so
+115200 works without bit errors.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#define EspSerial Serial1</span>
+<span class="cp">#define ESP8266_BAUD 115200</span>
+<span class="n">ESP8266</span><span class="w"> </span><span class="nf">wifi</span><span class="p">(</span><span class="o">&amp;</span><span class="n">EspSerial</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>PIR pin and the two state variables</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">sensorPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w">   </span><span class="c1">// PIR output: HIGH = movement, LOW = quiet</span>
+
+<span class="kr">int</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">           </span><span class="c1">// last reading of the pin</span>
+<span class="kr">int</span><span class="w"> </span><span class="n">awayHomeMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">    </span><span class="c1">// 1 = the switch in the app is on, so the alarm is armed</span>
+
+<span class="n">BlynkTimer</span><span class="w"> </span><span class="n">timer</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">state</span></code> is what makes the next section possible: comparing the new reading with the
+old one tells you the moment somebody walks past, instead of “there is a person” a
+hundred times. <code class="docutils literal notranslate"><span class="pre">awayHomeMode</span></code> is the answer to “am I at home or not” - the alarm only
+reacts when it is <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+</li>
+<li><p><strong>espModuleInit() - wake the module up first</strong></p>
+<p>The module needs about a second to boot, and it prints its start-up log on the very
+wire the sketch is about to use. Send commands too early and the replies get tangled
+with that log. This function waits for the word <code class="docutils literal notranslate"><span class="pre">ready</span></code>, then sends <code class="docutils literal notranslate"><span class="pre">ATE0</span></code>.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nf">espModuleInit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">long</span><span class="w"> </span><span class="n">t0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">millis</span><span class="p">();</span>
+<span class="w">  </span><span class="kr">String</span><span class="w"> </span><span class="n">buf</span><span class="p">;</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nf">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t0</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">available</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">buf</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="kr">char</span><span class="p">)</span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">read</span><span class="p">();</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">buf</span><span class="p">.</span><span class="n">indexOf</span><span class="p">(</span><span class="s">"</span><span class="nf">ready</span><span class="s">"</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">t0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">5000</span><span class="p">;</span><span class="w">   </span><span class="c1">// leave the loop</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">available</span><span class="p">())</span><span class="w"> </span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">read</span><span class="p">();</span>
+<span class="w">  </span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">"ATE0</span><span class="se">\r\n</span><span class="s">"</span><span class="p">);</span><span class="w">   </span><span class="c1">// echo off</span>
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">300</span><span class="p">);</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">available</span><span class="p">())</span><span class="w"> </span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">read</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">ATE0</span></code> turns the echo off. With echo on, every reply starts with the command you
+just sent, and Blynk reads that line as garbage.</p>
+</li>
+<li><p><strong>setup()</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">pinMode</span><span class="p">(</span><span class="n">sensorPin</span><span class="p">,</span><span class="w"> </span><span class="kr">INPUT</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">  </span><span class="n">EspSerial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">ESP8266_BAUD</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">espModuleInit</span><span class="p">();</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="nf">config</span><span class="p">(</span><span class="n">wifi</span><span class="p">,</span><span class="w"> </span><span class="n">BLYNK_AUTH_TOKEN</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">connectWiFi</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="n">pass</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">timer</span><span class="p">.</span><span class="n">setInterval</span><span class="p">(</span><span class="mf">1000L</span><span class="p">,</span><span class="w"> </span><span class="n">myTimerEvent</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">timer.setInterval(1000L,</span> <span class="pre">myTimerEvent)</span></code> calls the function once per second. Change
+that number to check the sensor more or less often.</p>
+</li>
+<li><p><strong>loop()</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="nf">run</span><span class="p">();</span>
+<span class="w">  </span><span class="n">timer</span><span class="p">.</span><span class="nf">run</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Blynk.run()</span></code> keeps the connection alive, <code class="docutils literal notranslate"><span class="pre">timer.run()</span></code> fires the scheduled
+function. Nothing here may block, or the cloud drops the device.</p>
+</li>
+<li><p><strong>BLYNK_CONNECTED() and BLYNK_WRITE(V1)</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">BLYNK_CONNECTED</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Blynk</span><span class="p">.</span><span class="n">syncVirtual</span><span class="p">(</span><span class="n">V1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">BLYNK_WRITE</span><span class="p">(</span><span class="n">V1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">awayHomeMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param</span><span class="p">.</span><span class="n">asInt</span><span class="p">();</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">BLYNK_CONNECTED()</span></code> runs every time the board reaches the server - including after a
+power cut. <code class="docutils literal notranslate"><span class="pre">Blynk.syncVirtual(V1)</span></code> asks for the current switch position, so a board
+that restarted at midnight still knows that you left the house.</p>
+<p><code class="docutils literal notranslate"><span class="pre">BLYNK_WRITE(V1)</span></code> runs whenever the switch in the app is moved. <code class="docutils literal notranslate"><span class="pre">param.asInt()</span></code> is
+the new value, <code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">0</span></code>, and the reply goes straight back to the label on
+datastream <strong>V2</strong>.</p>
+</li>
+<li><p><strong>sendData() - react to the edge, not the level</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span><span class="w"> </span><span class="nf">sendData</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">int</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">digitalRead</span><span class="p">(</span><span class="n">sensorPin</span><span class="p">);</span>
+<span class="w">  </span><span class="kr">bool</span><span class="w"> </span><span class="n">rising</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">now</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kr">HIGH</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kr">LOW</span><span class="p">);</span>
+<span class="w">  </span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">now</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">awayHomeMode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">rising</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nf">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">lastAlert</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">lastAlert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">millis</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Blynk</span><span class="p">.</span><span class="n">virtualWrite</span><span class="p">(</span><span class="n">V2</span><span class="p">,</span><span class="w"> </span><span class="s">"Somebody in your house! Please check!"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Blynk</span><span class="p">.</span><span class="n">logEvent</span><span class="p">(</span><span class="s">"intrusion_detected"</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rising</span></code> is true only on the step from <code class="docutils literal notranslate"><span class="pre">LOW</span></code> to <code class="docutils literal notranslate"><span class="pre">HIGH</span></code> - the moment the sensor
+reacts. Without it the sketch would send a message every second for as long as
+someone stands there, which burns through the Blynk quota in minutes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">millis()</span> <span class="pre">-</span> <span class="pre">lastAlert</span> <span class="pre">&gt;</span> <span class="pre">5000</span></code> keeps two alerts at least five seconds apart.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Blynk.virtualWrite(V2,</span> <span class="pre">...)</span></code> writes the text the label widget displays.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Blynk.logEvent(&quot;intrusion_detected&quot;)</span></code> sends the event that pops the notification
+up. The name must match the <strong>EVENT CODE</strong> you created, character for character.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="01-iot_Flame_alert_system.html" class="btn btn-neutral float-left" title="1. Flame Alert System with Blynk" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="03-iot_Plant_monitor.html" class="btn btn-neutral float-right" title="3. Plant Monitor with Blynk" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

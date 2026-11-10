@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:7
+msgid "**Expert Support**: Solve real-life coding problems and technical challenges with our community and team."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:8
+msgid "**Learn & Share**: Exchange tips, tutorials, and projects to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:10
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:12
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:17
+msgid "12. Bluetooth RGB Controller"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:26
+msgid "One message carries three numbers: how much red, how much green, how much blue. Send ``R255G128B0`` and the LED turns orange."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:29
+msgid "This is the first **structured** message in the Bluetooth part - the sketch has to split it into three parts before it can use it, a small job you will meet everywhere."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:34
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:38
+msgid "The module draws a high current at start-up, so make sure the 9 V battery or an external power supply is plugged into the DC jack of the R4 Minima."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:44
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:45
+msgid ":ref:`cpn_espc201`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:46
+msgid ":ref:`cpn_rgb`"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:50
+msgid "2. Upload the Code"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:52
+msgid "Open the ``12-Bluetooth_RGB_controller.ino`` file under the path of ``ultimate-sensor-kit\\code\\iot_project_espc201\\bluetooth\\12-Bluetooth_RGB_controller``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:54
+msgid "Select **Arduino UNO R4 Minima** and the right port, then click **Upload**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:56
+msgid "Open the Serial Monitor at **115200**. You should read:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:64
+msgid "If you read ``[!] no reply from the module``, the module is not answering on D0/D1 - check the four wires and the power supply."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:69
+msgid "3. Change the Colour from the Phone"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:71
+msgid "Open LightBlue, tap **Scan** and connect to **SunFounder-C2**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:73
+msgid "Expand the service **0xA002** and open the characteristic **C304**. Then tap **Write new value**."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:78
+msgid "Set the format in the top right corner to **UTF-8 String** and type ``R255G128B0``. The picture shows the field just before sending:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:83
+msgid "Send it. The LED turns orange and the Serial Monitor prints ``colour: R255G128B0``."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:87
+msgid "The sketch does not react to every single character. A BLE write can be split into several pieces on its way, so the sketch waits until the message is complete - a ``#`` at the end, or **120 ms** of silence - and only then sets the colour. If it acted on each piece, the LED would flash through the wrong colours on every send."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:92
+msgid "Try a few more - the field stays open, so you can send again right away:"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:98
+msgid "Send this"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:99
+msgid "What happens"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:100
+msgid "``R255G0B0``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:101
+msgid "red"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:102
+msgid "``R0G255B0``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:103
+msgid "green"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:104
+msgid "``R0G0B255``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:105
+msgid "blue"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:106
+msgid "``R255G255B255``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:107
+msgid "white, all three channels at full"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:108
+msgid "``R0G0B0``"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:109
+msgid "off"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:113
+msgid "The numbers are **0 to 255**, not percentages. ``R128G0B0`` is a darker red than ``R255G0B0``, because the pin is switched on for only half of the time."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:116
+msgid "The whole message has to stay under **12 characters**, which is why there are no separators."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:121
+msgid "4. Code explanation"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:123
+msgid "**Three pins, one colour**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:131
+msgid "``analogWrite(pin, 0..255)`` uses PWM, so the LED can show many colours - not just the three primary ones."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:134
+msgid "**Splitting the message**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:144
+msgid "The letter **R**, **G** or **B** marks where a number starts. Every character after a marker is added to that colour until the next marker arrives. That is why the order ``R...G...B...`` matters and why no brackets are needed."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:148
+msgid "**From text to number**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:156
+msgid "``toInt()`` converts the text ``\"255\"`` into the number 255. Forgetting it is a classic mistake - ``analogWrite`` would then act on garbage."
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:159
+msgid "**The 12 character limit**"
+msgstr ""
+
+#: ../../source/iot_project_espc201/bluetooth_espc201/12-iot_Bluetooth_RGB_controller.rst:165
+msgid "One BLE write carries at most 20 bytes and this sketch keeps a little headroom. ``R255G255B255`` is 12 characters - the longest useful message."
+msgstr ""

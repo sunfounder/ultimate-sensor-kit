@@ -1,0 +1,305 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:4
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:6
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:8
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:9
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:10
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:11
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:12
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:14
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:19
+msgid "Plant Monitor with Blynk"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:28
+msgid "This project creates a plant monitoring demo system that detects the current temperature, humidity, light intensity, and soil moisture. The data is then displayed on Blynk along with suggestions based on the soil moisture levels."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:31
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:35
+msgid "The ESP8266 module requires a high current to provide a stable operating environment, so make sure the 9V battery is plugged in."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:37
+msgid "**The kit may contain different versions of the DHT11 module. Please confirm the wiring method according to the module you have.**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:47
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:48
+msgid ":ref:`cpn_esp8266`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:49
+msgid ":ref:`cpn_dht11`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:50
+msgid ":ref:`cpn_soil`"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:54
+msgid "2. Configure Blynk"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:57
+msgid "If you are not familiar with Blynk, it is strongly recommended that you read these two tutorials first. :ref:`iot_blynk_start` is a beginner's guide for Blynk, which includes how to configure ESP8266 and register with Blynk. And :ref:`iot_Flame` is a simple example, but the description of the steps will be more detailed."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:60
+msgid "**2.1 Create template**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:62
+msgid "Firstly, we need to establish a template on Blynk. Create a **\"Plant Monitor\"** template."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:65
+msgid "**2.2 Datastream**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:67
+msgid "Create **Datastreams** of type **Virtual Pin** in the **Datastream** page receive data from esp8266 and uno r4 board."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:69
+msgid "Create Virtual Pin V0 according to the following diagram:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:71
+msgid "Set the name of the **Virtual Pin V0** to **temperature**. Set the **DATA TYPE** to **Double** and MIN and MAX to **-100** and **100**. Set the **UNITS** to **Celsius,℃**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:76
+msgid "Create Virtual Pin V1 according to the following diagram:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:78
+msgid "Set the name of the **Virtual Pin V1** to **humidity**. Set the **DATA TYPE** to **Double** and MIN and MAX to **0** and **100**. Set the **UNITS** to **Percentage,%**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:83
+msgid "Create Virtual Pin V2 according to the following diagram:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:85
+msgid "Set the name of the **Virtual Pin V2** to **soilMoisture**. Set the **DATA TYPE** to **String**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:90
+msgid "Create Virtual Pin V3 according to the following diagram:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:92
+msgid "Set the name of the **Virtual Pin V3** to **LED**. Set the **DATA TYPE** to **Integer** and MIN and MAX to **0** and **255**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:103
+msgid "**2.3 Web Dashboard**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:105
+msgid "We also need to configure the **Web Dashboard** to interact with the Plant monitor."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:107
+msgid "Configure the Web Dashboard according to the following diagram. We used widgets such as label, gauge, LED, and chart. Be sure to bind each widget to its corresponding virtual pin."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:118
+msgid "**2.4 Save template**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:120
+msgid "At last, remember to save the template."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:124
+msgid "3. Run the Code"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:126
+msgid "Open the ``03-Plant_monitor.ino`` file under the path of ``ultimate-sensor-kit\\code\\iot_project_esp01\\wifi\\03-Plant_monitor``, or copy this code into **Arduino IDE**."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:133
+msgid "Create a Blynk device using the \"Plant Monitor\" template. Then, replace the ``BLYNK_TEMPLATE_ID``, ``BLYNK_TEMPLATE_NAME``, and ``BLYNK_AUTH_TOKEN`` with your own."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:142
+msgid "You also need to enter the ``ssid`` and ``password`` of the WiFi you are using."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:149
+msgid "After selecting the correct board and port, click the **Upload** button."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:151
+msgid "Open the Serial monitor(set baudrate to 115200) and wait for a prompt such as a successful connection to appear."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:159
+msgid "If the message ``ESP is not responding`` appears when you connect, please follow these steps."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:161
+msgid "Make sure the 9V battery is plugged in."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:162
+msgid "Reset the ESP8266 module by connecting the pin RST to GND for 1 second, then unplug it."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:163
+msgid "Press the reset button on the R4 board."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:165
+msgid "Sometimes, you may need to repeat the above operation 3-5 times, please be patient."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:169
+msgid "4. Code explanation"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:171
+msgid "**Initializing Libraries & Defining Constants**:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:173
+msgid "This segment of code includes necessary libraries and defines certain constants like the Blynk template information and WiFi credentials."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:190
+msgid "**Setting up the DHT Sensor**:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:192
+msgid "The DHT sensor is initialized and relevant variables for storing temperature and humidity are defined."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:203
+msgid "**Setting up the Soil Moisture Sensor**:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:205
+msgid "Configuration for the soil moisture sensor. Thresholds for wet and dry conditions are defined."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:207
+msgid "You need to measure your own ``wetSoil`` and ``drySoil`` according to the your actual situation. Record the reading of Soil Moisture Module as ``drySoil`` when the soil is dry, and record the reading of Soil Moisture Module within a suitable range that you consider to be the most moist (going beyond this range would be too wet) as ``wetSoil``."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:217
+msgid "**Setting up the Timer**:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:219
+msgid "A timer is configured which will dictate the frequency of data readings and updates."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:225
+msgid "**Initialization in Setup Function**:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:227
+msgid "This section sets up the serial communication, configures the ESP8266 for WiFi, and begins the DHT sensor."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:229
+msgid "We use ``timer.setInterval(5000L, myTimerEvent)`` to set the timer interval in setup(), here we set to execute the ``myTimerEvent()`` function every **5000ms**. You can modify the first parameter of ``timer.setInterval(1000L, myTimerEvent)`` to change the interval between ``myTimerEvent`` executions."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:247
+msgid "**loop() Function**:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:249
+msgid "The main loop runs the Blynk process and timer."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:258
+msgid "**sendData() Function**:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:260
+msgid "This function reads values from the DHT sensor and soil moisture sensor, determines the soil's status, and sends data to the Blynk app."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:262
+msgid "Use ``Blynk.virtualWrite(vPin, value)`` to send data to virtual pins on Blynk. Please refer to |link_blynk_virtualWrite|."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:263
+msgid "Use ``Blynk.setProperty(V3, \"color\", color)`` to set the color of LED on Blynk. More detail at |link_blynk_LED_color|."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:280
+msgid "**Printing Data to Serial Monitor**:"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:282
+msgid "This function is useful for debugging and verifying the readings locally on the Arduino IDE's serial monitor."
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:292
+msgid "**Reference**"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:294
+msgid "|link_blynk_doc|"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:295
+msgid "|link_blynk_virtualWrite|"
+msgstr ""
+
+#: ../../source/iot_project_esp01/03-iot_Plant_monitor.rst:296
+msgid "|link_blynk_displays|"
+msgstr ""

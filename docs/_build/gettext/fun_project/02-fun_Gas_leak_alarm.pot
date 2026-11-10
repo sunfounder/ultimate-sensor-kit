@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:18
+msgid "Gas leak alarm"
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:27
+msgid "This project revolves around simulating a gas leak detection scenario using an Arduino Uno board. By incorporating an MQ-2 gas sensor and an RGB LED, this demonstration continuously reads the gas concentration. If this concentration surpasses a predefined threshold, it activates an alarm (buzzer) and illuminates the RGB LED in red. Conversely, if the concentration remains below this threshold, the alarm remains inactive and the LED shines green. It's crucial to note that this demo is purely illustrative and shouldn't replace real gas leak detection systems."
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:31
+msgid "1. Build the Circuit"
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:36
+msgid ":ref:`cpn_uno`"
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:37
+msgid ":ref:`cpn_gas`"
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:38
+msgid ":ref:`cpn_rgb`"
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:39
+msgid ":ref:`cpn_buzzer`"
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:42
+msgid "2. Code"
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:44
+msgid "Open the ``02-Gas_leak_alarm.ino`` file under the path of ``ultimate-sensor-kit\\code\\fun_project\\02-Gas_leak_alarm``, or copy this code into **Arduino IDE**."
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:52
+msgid "3. Code explanation"
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:54
+msgid "The core principle of the project revolves around continuously monitoring the gas concentration. When the detected gas concentration surpasses a certain threshold, it sets off an alarm and changes the LED's color to red. This serves as a simulated warning mechanism, indicative of potentially hazardous conditions. If the concentration drops below the threshold, the alarm is deactivated and the LED switches to green, indicating a safe environment."
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:56
+msgid "Defining Constants and Variables"
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:58
+msgid "These lines declare and initialize the pin numbers for various components. The ``sensorPin`` denotes the analog pin where the MQ-2 gas sensor is connected. ``sensorValue`` is an integer variable storing the sensor's analog output. The ``buzzerPin`` indicates the digital pin to which the buzzer is connected. Finally, the ``RPin`` and ``GPin`` are the pins for the red and green channels of the RGB LED, respectively."
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:74
+msgid "Initialization in ``setup()``"
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:76
+msgid "The ``setup()`` function initializes the required settings. Serial communication begins at a baud rate of 9600, allowing us to view sensor readings on the Serial Monitor. Pins for the buzzer and RGB LED are set as ``OUTPUT``, meaning they'll send signals out to external components."
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:90
+msgid "Main Loop: Reading Sensor and Triggering Alarm"
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:92
+msgid "The ``loop()`` function continually reads the gas sensor's output. The reading is then displayed on the Serial Monitor for observation. Depending on the sensor value, two scenarios can occur:"
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:94
+msgid "If the value exceeds 300, the buzzer is activated using ``tone()``, and the RGB LED turns red."
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:95
+msgid "If the value is below 300, the buzzer is silenced using ``noTone()``, and the LED turns green."
+msgstr ""
+
+#: ../../source/fun_project/02-fun_Gas_leak_alarm.rst:97
+msgid "Lastly, a delay of 50 milliseconds is introduced before the next loop iteration to manage the read frequency and reduce the CPU load."
+msgstr ""

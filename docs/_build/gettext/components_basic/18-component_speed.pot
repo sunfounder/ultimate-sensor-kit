@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, SunFounder
+# This file is distributed under the same license as the SunFounder Ultimate Sensor Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SunFounder Ultimate Sensor Kit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 17:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/components_basic/18-component_speed.rst:3
+msgid "Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts."
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:5
+msgid "**Why Join?**"
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:7
+msgid "**Expert Support**: Solve post-sale issues and technical challenges with help from our community and team."
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:8
+msgid "**Learn & Share**: Exchange tips and tutorials to enhance your skills."
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:9
+msgid "**Exclusive Previews**: Get early access to new product announcements and sneak peeks."
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:10
+msgid "**Special Discounts**: Enjoy exclusive discounts on our newest products."
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:11
+msgid "**Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions."
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:13
+msgid "👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!"
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:18
+msgid "Infrared Speed Sensor Module"
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:25
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:26
+msgid "The Infrared Speed Sensor Module is an IR counter that has an IR transmitter and receiver. If any obstacle is placed between these sensors, a signal is sent to the microcontroller. The module can be used in association with a microcontroller for motor speed detection, pulse count, position limit, etc."
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:30
+msgid "Principle"
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:32
+msgid "The speed sensor module is mainly used to detect changes in rotational speed or velocity. When an object passes by the H2010 sensor, it generates a pulse signal. The integrated LM393 comparator inside the module compares this pulse signal with a preset threshold, producing a stable high-level output signal."
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:34
+msgid "The Infrared Speed Sensor Module has 1 H2010 photocell, which consists of a phototransistor and an infrared light emitter packaged in a 10 cm wide black plastic housing."
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:40
+msgid "When operating, the infrared light-emitting diode continuously emits infrared light (invisible light), and the photosensitive triode will conduct if it receives it."
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:47
+msgid "Module Schematic Diagram"
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:59
+msgid "Usage"
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:61
+msgid "**Hardware components**"
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:63
+msgid "Arduino Uno R4 or R3 board * 1"
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:64
+msgid "Infrared Speed Sensor Module * 1"
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:65
+msgid "Jumper Wires"
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:68
+msgid "**Circuit Assembly**"
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:79
+msgid "Code"
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:95
+msgid "Code explanation"
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:97
+msgid "Setting up the pins and initializing variables. Here, we define the pins for the motor and the speed sensor. We also initialize variables that will be used to measure and calculate the speed of the motor."
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:114
+msgid "Initialization in the ``setup()`` function. This section sets up the serial communication, configures the pins' modes, and sets the initial motor speed."
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:127
+msgid "Measuring the motor's speed in the ``loop()`` function. In this segment, the motor's steps are measured for a duration of 1 second. These steps are then used to calculate the revolutions per second (rps), which is then printed to the serial monitor."
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:129
+msgid "``millis()`` returns the number of milliseconds passed since the Arduino board began running the current program."
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:151
+msgid "Additional Ideas"
+msgstr ""
+
+#: ../../source/components_basic/18-component_speed.rst:153
+msgid "Display the rps on an LCD screen for a more user-friendly interface."
+msgstr ""

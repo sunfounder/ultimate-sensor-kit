@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bluetooth-Einstieg &mdash; SunFounder Ultimate Sensor Kit  Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="https://ezblock.cc/readDocFile/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=245627df"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=70a09b52"></script>
+      <script src="https://ezblock.cc/readDocFile/custom.js"></script>
+      <script src="../_static/./lang.js?v=2c65fa5d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Bluetooth LCD" href="15-iot_Bluetooth_lcd.html" />
+    <link rel="prev" title="Wetterüberwachung mit ThingSpeak" href="05-iot_Weather_monitor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<nav id="nav-bar">
+  <ul class="nav-bar-items" id="nav-bar-items">
+    <li class="nav-bar-logo">
+      <a href="https://sunfounder.com">
+        <img class="logo-img" src="https://ezblock.cc/readDocFile/sunfounder_LOGO_160x@2x.png"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SunFounder Ultimate Sensor Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">脺ber das Ultimate Sensor Kit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_start/00_get_start.html">Einstieg in Arduino</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../arduino_video_course/arduino_video_course.html">Arduino Video Kurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_code.html">Code herunterladen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components_basic/00-component_list.html">Grundlagen der Komponenten</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../iot_project.html">IoT-Projekte</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="00-iot_project_esp01.html">IoT-Projekte</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="blynk_start/00-blynk_start.html">Einführung in Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01-iot_Flame_alert_system.html">Flammenwarnsystem mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02-iot_Intrusion_alert_system.html">Einbruchmeldeanlage mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03-iot_Plant_monitor.html">Pflanzenüberwachung mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06-iot_Remote_relay_controller.html">Ferngesteuerter Relais-Controller mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07-iot_Auto_watering_system.html">Automatisches Bewässerungssystem mit Blynk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04-iot_Vibration_alert_system.html">Vibrationserkennungssystem mit IFTTT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05-iot_Weather_monitor.html">Wetterüberwachung mit ThingSpeak</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Bluetooth-Einstieg</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#schaltungsaufbau">1. Schaltungsaufbau</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-hochladen">2. Code hochladen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bluetooth-modul-konfigurieren">3. Bluetooth-Modul konfigurieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kommunikation-uber-bluetooth-debugging-tools-auf-mobiltelefonen">4. Kommunikation über Bluetooth-Debugging-Tools auf Mobiltelefonen</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="15-iot_Bluetooth_lcd.html">Bluetooth LCD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16-iot_Bluetooth_traffic_light.html">Bluetooth-Ampel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08-iot_Bluetooth_lock_controller.html">Bluetooth-Schlosssteuerung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09-iot_Bluetooth_RGB_controller.html">Bluetooth RGB-Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-iot_Bluetooth_environmental_monitor.html">Bluetooth-Umweltmonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11-iot_Bluetooth_piano.html">Bluetooth-Klavier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="12-iot_Bluetooth_oled.html">Bluetooth OLED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="13-iot_Bluetooth_remote_relay.html">Bluetooth-Fernrelais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14-iot_Bluetooth_voice_control_relay.html">Bluetooth Sprachgesteuertes Relais</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fun_project/fun_project.html">Spaßprojekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/00_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thank-learning.html">Vielen Dank</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SunFounder Ultimate Sensor Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../iot_project.html">IoT-Projekte</a></li>
+          <li class="breadcrumb-item"><a href="00-iot_project_esp01.html">IoT-Projekte</a></li>
+      <li class="breadcrumb-item active">Bluetooth-Einstieg</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/sunfounder/ultimate-sensor-kit/blob/docs-de/docs/source/iot_project_esp01/00-iot_bluetooth_start.rst" class="fa fa-github"> Auf GitHub bearbeiten</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Hallo und willkommen in der SunFounder Raspberry Pi &amp; Arduino &amp; ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.</p>
+<p><strong>Warum beitreten?</strong></p>
+<ul class="simple">
+<li><p><strong>Expertenunterstützung</strong>: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.</p></li>
+<li><p><strong>Lernen &amp; Teilen</strong>: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.</p></li>
+<li><p><strong>Exklusive Vorschauen</strong>: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.</p></li>
+<li><p><strong>Spezialrabatte</strong>: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.</p></li>
+<li><p><strong>Festliche Aktionen und Gewinnspiele</strong>: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.</p></li>
+</ul>
+<p>👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [<a href="https://bit.ly/raphaelkit " target="_blank">hier</a>] und treten Sie heute bei!</p>
+</div>
+<section id="bluetooth-einstieg">
+<span id="iot-bluetooth-start"></span><h1>Bluetooth-Einstieg<a class="headerlink" href="#bluetooth-einstieg" title="Link to this heading"></a></h1>
+<p>In diesem Projekt zeigen wir, wie eine Kommunikation mit einem Bluetooth-Modul über Arduino erfolgen kann.</p>
+<p>Zunächst müssen wir die Schaltung aufbauen und die serielle Kommunikation über Software nutzen. Verbinden Sie den TX-Pin des Bluetooth-Moduls mit Pin 3 des Uno-Boards und den RX-Pin des Bluetooth-Moduls mit Pin 4 des Uno-Boards.</p>
+<section id="schaltungsaufbau">
+<h2>1. Schaltungsaufbau<a class="headerlink" href="#schaltungsaufbau" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/00-Wiring_Bluetooth.png"><img alt="../_images/00-Wiring_Bluetooth.png" src="../_images/00-Wiring_Bluetooth.png" style="width: 70%;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../components_basic/36-component_uno.html#cpn-uno"><span class="std std-ref">Arduino UNO R4 Minima-Platine</span></a></p></li>
+<li><p><a class="reference internal" href="../components_basic/38-component_jdy31.html#cpn-jdy31"><span class="std std-ref">JDY-31 Bluetooth-Modul</span></a></p></li>
+</ul>
+</section>
+<section id="code-hochladen">
+<h2>2. Code hochladen<a class="headerlink" href="#code-hochladen" title="Link to this heading"></a></h2>
+<p>Öffnen Sie die Datei <code class="docutils literal notranslate"><span class="pre">00-Bluetooth_start.ino</span></code> im Pfad <code class="docutils literal notranslate"><span class="pre">ultimate-sensor-kit\iot_project\bluetooth\00-Bluetooth_start</span></code> oder kopieren Sie diesen Code in die <strong>Arduino IDE</strong>.</p>
+<p>Der Code stellt eine serielle Kommunikation über die SoftwareSerial-Bibliothek von Arduino her. Dadurch kann das Arduino mit dem JDY-31 Bluetooth-Modul über die digitalen Pins 3 und 4 (als Rx und Tx) kommunizieren. Es überprüft den Datentransfer zwischen beiden und leitet empfangene Nachrichten mit einer Baudrate von 9600 weiter. <strong>Mit diesem Code können Sie AT-Befehle an das JDY-31 Bluetooth-Modul senden und dessen Antworten empfangen</strong>.</p>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/d95650c4-ae16-42a2-bd4e-c43849b61941/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe></section>
+<section id="bluetooth-modul-konfigurieren">
+<h2>3. Bluetooth-Modul konfigurieren<a class="headerlink" href="#bluetooth-modul-konfigurieren" title="Link to this heading"></a></h2>
+<p>Klicken Sie auf das Lupensymbol (Serieller Monitor) in der oberen rechten Ecke und stellen Sie die Baudrate auf <code class="docutils literal notranslate"><span class="pre">9600</span></code> ein. Wählen Sie dann <code class="docutils literal notranslate"><span class="pre">both</span> <span class="pre">NL</span> <span class="pre">&amp;</span> <span class="pre">CR</span></code> aus dem Drop-down-Menü für die <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Line</span></code>.</p>
+<img alt="../_images/00-bluetooth_serial_1_shadow.png" src="../_images/00-bluetooth_serial_1_shadow.png" />
+<p>Im Folgenden finden Sie einige Beispiele für die Verwendung von AT-Befehlen zur Konfiguration von Bluetooth-Modulen: Geben Sie <code class="docutils literal notranslate"><span class="pre">AT+NAME</span></code> ein, um den Namen des Bluetooth-Geräts zu erfahren. Wenn Sie den Bluetooth-Namen ändern möchten, fügen Sie nach <code class="docutils literal notranslate"><span class="pre">AT+NAME</span></code> einen neuen Namen hinzu.</p>
+<ul>
+<li><p><strong>Bluetooth-Gerätenamen abfragen:</strong> <code class="docutils literal notranslate"><span class="pre">AT+NAME</span></code></p>
+<img alt="../_images/00-bluetooth_serial_2.gif" src="../_images/00-bluetooth_serial_2.gif" />
+</li>
+<li><p><strong>Bluetooth-Gerätenamen festlegen:</strong> <code class="docutils literal notranslate"><span class="pre">AT+NAME</span></code> (gefolgt vom neuen Namen). <code class="docutils literal notranslate"><span class="pre">+OK</span></code> bedeutet, dass die Einstellung erfolgreich war. Sie können <code class="docutils literal notranslate"><span class="pre">AT+NAME</span></code> erneut senden, um dies zu überprüfen.</p>
+<img alt="../_images/00-bluetooth_serial_3.gif" src="../_images/00-bluetooth_serial_3.gif" />
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Um ein konsistentes Lernerlebnis zu gewährleisten, wird empfohlen, die Standard-Baudrate des Bluetooth-Moduls nicht zu ändern und <strong>sie auf ihrem Standardwert von 4 (d. h. 9600 Baud) zu belassen</strong>. In relevanten Kursen kommunizieren wir mit einer Baudrate von 9600 über Bluetooth.</p>
+</div>
+<ul>
+<li><p><strong>Bluetooth-Baudrate einstellen:</strong> <code class="docutils literal notranslate"><span class="pre">AT+BAUD</span></code> (gefolgt von der Zahl, die die Baudrate angibt).</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>4 == 9600</p></li>
+<li><p>5 == 19200</p></li>
+<li><p>6 == 38400</p></li>
+<li><p>7 == 57600</p></li>
+<li><p>8 == 115200</p></li>
+<li><p>9 == 128000</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Weitere AT-Befehle finden Sie in der folgenden Tabelle.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Befehl</p></th>
+<th class="head"><p>Funktion</p></th>
+<th class="head"><p>Standard</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AT+VERSION</p></td>
+<td><p>Versionsnummer</p></td>
+<td><p>JDY-31-V1.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>AT+RESET</p></td>
+<td><p>Soft-Reset</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AT+DISC</p></td>
+<td><p>Trennen (gültig bei Verbindung)</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>AT+LADDR</p></td>
+<td><p>MAC-Adresse des Moduls abfragen</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AT+PIN</p></td>
+<td><p>Verbindungspasswort setzen oder abfragen</p></td>
+<td><p>1234</p></td>
+</tr>
+<tr class="row-odd"><td><p>AT+BAUD</p></td>
+<td><p>Baudrate setzen oder abfragen</p></td>
+<td><p>9600</p></td>
+</tr>
+<tr class="row-even"><td><p>AT+NAME</p></td>
+<td><p>Sendenamen setzen oder abfragen</p></td>
+<td><p>JDY-31-SPP</p></td>
+</tr>
+<tr class="row-odd"><td><p>AT+DEFAULT</p></td>
+<td><p>Werkseinstellungen wiederherstellen</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AT+ENLOG</p></td>
+<td><p>Serieller Port Statusausgabe</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="kommunikation-uber-bluetooth-debugging-tools-auf-mobiltelefonen">
+<h2>4. Kommunikation über Bluetooth-Debugging-Tools auf Mobiltelefonen<a class="headerlink" href="#kommunikation-uber-bluetooth-debugging-tools-auf-mobiltelefonen" title="Link to this heading"></a></h2>
+<p>Mit einer App namens „Serial Bluetooth Terminal“ können wir Nachrichten vom Bluetooth-Modul an Arduino senden, um den Vorgang der Bluetooth-Interaktion zu simulieren. Das Bluetooth-Modul sendet empfangene Nachrichten über die serielle Schnittstelle an Arduino. Ebenso kann Arduino Nachrichten über die serielle Schnittstelle an das Bluetooth-Modul senden.</p>
+<ol class="loweralpha">
+<li><p><strong>Serial Bluetooth Terminal installieren</strong></p>
+<p>Laden Sie die App <a href="https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal" target="_blank">Serielles Bluetooth-Terminal</a>   im Google Play Store herunter und installieren Sie sie.</p>
+</li>
+<li><p><strong>Bluetooth verbinden</strong></p>
+<p>Aktivieren Sie zunächst <strong>Bluetooth</strong> auf Ihrem Smartphone.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/09-app_1_shadow.png"><img alt="../_images/09-app_1_shadow.png" class="align-center" src="../_images/09-app_1_shadow.png" style="width: 60%;" /></a>
+</div></blockquote>
+<p>Navigieren Sie zu den <strong>Bluetooth-Einstellungen</strong> auf Ihrem Smartphone und suchen Sie nach Namen wie <strong>JDY-31-SPP</strong>.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/09-app_2_shadow.png"><img alt="../_images/09-app_2_shadow.png" class="align-center" src="../_images/09-app_2_shadow.png" style="width: 60%;" /></a>
+</div></blockquote>
+<p>Nach dem Anklicken stimmen Sie der <strong>Pairing-Anfrage</strong> im Popup-Fenster zu. Wenn nach einem Pairing-Code gefragt wird, geben Sie „1234“ ein.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/09-app_3_shadow.png"><img alt="../_images/09-app_3_shadow.png" class="align-center" src="../_images/09-app_3_shadow.png" style="width: 60%;" /></a>
+</div></blockquote>
+</li>
+<li><p><strong>Mit dem Bluetooth-Modul kommunizieren</strong></p>
+<p>Öffnen Sie das Serial Bluetooth Terminal und verbinden Sie sich mit „JDY-31-SPP“.</p>
+<blockquote>
+<div><img alt="../_images/00-bluetooth_serial_4_shadow.png" src="../_images/00-bluetooth_serial_4_shadow.png" />
+</div></blockquote>
+<p>Nach erfolgreicher Verbindung wird im seriellen Monitor eine Erfolgsmeldung angezeigt.</p>
+<blockquote>
+<div><img alt="../_images/00-bluetooth_serial_5_shadow.png" src="../_images/00-bluetooth_serial_5_shadow.png" />
+</div></blockquote>
+<p>Geben Sie die Nachricht im seriellen Monitor ein und senden Sie sie an das Bluetooth-Modul.</p>
+<blockquote>
+<div><img alt="../_images/00-bluetooth_serial_6_shadow.png" src="../_images/00-bluetooth_serial_6_shadow.png" />
+</div></blockquote>
+<p>Nach dem Senden sehen Sie diese Nachricht in der Serial Bluetooth Terminal-App. Ebenso können Daten über die <strong>Serial Bluetooth Terminal</strong>-App per Bluetooth an Arduino gesendet werden.</p>
+<blockquote>
+<div><img alt="../_images/00-bluetooth_serial_7_shadow.png" src="../_images/00-bluetooth_serial_7_shadow.png" />
+</div></blockquote>
+<p>Diese Nachricht vom Bluetooth-Gerät ist im seriellen Monitor sichtbar.</p>
+<blockquote>
+<div><img alt="../_images/00-bluetooth_serial_8_shadow.png" src="../_images/00-bluetooth_serial_8_shadow.png" />
+</div></blockquote>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="05-iot_Weather_monitor.html" class="btn btn-neutral float-left" title="Wetterüberwachung mit ThingSpeak" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="15-iot_Bluetooth_lcd.html" class="btn btn-neutral float-right" title="Bluetooth LCD" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, SunFounder.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
