@@ -26,16 +26,15 @@ IoT プロジェクト
      :width: 600
 
 * **現在のバージョン**: Wi-Fi と Bluetooth を 1 つの ESPC2-01 モジュールでまかないます。
+  チュートリアルはこちら: :ref:`iot_projects_espc201`
 
   .. image:: img/espc201_module.png
      :width: 200
 
-.. note::
-
-   現在のバージョンのチュートリアルは翻訳中です。それまでは英語版のドキュメントをご覧ください。
 
 .. toctree::
     :maxdepth: 1
     :hidden:
 
     iot_project_esp01/00-iot_project_esp01
+    iot_project_espc201/iot_project_espc201
