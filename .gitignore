@@ -2,3 +2,4 @@ build*
 *demo.rst
 deprecated
 _build*/
+_build/
