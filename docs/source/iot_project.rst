@@ -33,11 +33,12 @@ Dieses Kit wurde in zwei Versionen ausgeliefert, weil der Chip zwischenzeitlich 
 
 .. note::
 
-   Die Anleitungen für die aktuelle Version werden derzeit übersetzt. Bis dahin finden Sie
-   sie vollständig in der englischen Dokumentation.
+   Die Anleitungen für die aktuelle Version werden derzeit übersetzt. Das erste Kapitel
+   (Erste Schritte mit Blynk) ist bereits auf Deutsch verfügbar.
 
 .. toctree::
     :maxdepth: 1
     :hidden:
 
     iot_project_esp01/00-iot_project_esp01
+    iot_project_espc201/iot_project_espc201
