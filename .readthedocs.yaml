@@ -19,8 +19,12 @@ build:
 sphinx:
    configuration: docs/source/conf.py
 
-# Optionally build your docs in additional formats such as PDF and ePub
-formats: all
+# Additional formats (PDF / ePub) are intentionally NOT built.
+# Read the Docs dumps the LaTeX sources - and every figure - into the pdf
+# output directory and then refuses to upload it because it contains more
+# than one file. HTML is what the site serves, so we build only that.
+# To get a PDF again, build it locally:
+#   python -m sphinx -b latex docs/source _latex && make -C _latex
 
 # Optional but recommended, declare the Python requirements required
 # to build your documentation
